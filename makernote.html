@@ -1,0 +1,375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Exiv2 - Image metadata library and tools</title>
+
+  <!-- Doxygen styles -->
+  <link href="doc/doxygen.css" rel="stylesheet" type="text/css">
+  <link href="doc/customdoxygen.css" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="include/exiv2.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img alt="Exiv2" src="include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="getting-started.html">Getting started</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="whatsnew.html">What's New</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+        <li class="active"><a href="makernote.html">Makernote</a></li>
+        <li><a href="doc/examples.html">Examples</a></li>
+        <li><a href="doc/index.html">API</a></li>
+        <li><a href="manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+	    <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="page-header">
+    <h1>Makernotes</h1>
+  <p>
+    The Makernote is tag 0x927c in the Exif IFD, <code>Exif.Photo.MakerNote</code>. According to
+    the <a title="The Exif 2.2 standard (PDF)" href="Exif2-2.PDF">Exif 2.2 standard</a>, the makernote
+    is <i>"a tag for manufacturers of Exif writers to record any desired information. The contents are
+    up to the manufacturer, but this tag should not be used for any other than its intended purpose."</i>
+  </p>
+</div><!-- /.container -->
+
+<p>Most vendors do not publish their makernote specifications. Most of the
+<a href="#R0">specifications available on the Internet</a>
+were reverse-engineered. Judging from the size of many makernote
+fields, manufacturers store a lot of information there and from the
+available specifications, some of this is certainly quite
+interesting. For example, makernotes may contain information about the
+lens used, contrast, saturation and sharpness settings, image quality
+settings, etc. For some more advanced camera settings, the Exif
+standard doesn't define a standard tag, so camera vendors have to
+resort to using the makernote. Unfortunately, in some cases, camera
+vendors store important information only in proprietary makernote
+fields, instead of using available Exif standard tags. The most
+infamous example for this is Nikon's ISO settings tag.</p>
+
+<p>Most vendors write the makernote in TIFF format, i.e., in the same
+format as the rest of the Exif information is encoded. This appears to
+be a sensible thing at first glance. Unfortunately, in general it
+means that <i>any</i> change of an Exif tag, which moves the
+makernote field, will corrupt it. It is an inherent problem of the
+TIFF format that a writer must know the format and all extensions
+used, in order to be able to write changes correctly; unknown tags are
+potentially corrupted when they are moved (rearranged). But since
+makernotes are usually proprietary, Exif writers often don't know
+these details. The reason to write to the Exif data could be as simple
+as to add copyright information, an Exif comment, etc. Some camera
+manufacturers seem to have recognized this problem and now use a
+modified TIFF format with offsets relative to somewhere at the
+beginning of the makernote field for the makernote IFD to address the
+issue.</p>
+
+<p>The following table summarizes the structures of the makernote
+field used by some vendors. Please let me know if you have additional
+information.</p>
+
+<table class="table table-striped">
+  <colgroup>
+    <col>
+    <col>
+    <col>
+    <col>
+    <col>
+    <col align="center">
+    <col>
+  </colgroup>
+  <thead>
+   <tr> 
+    <th>Make</th>
+    <th>Format</th>
+    <th>Header</th>
+    <th>Endian <sup>1)</sup></th>
+    <th>Offsets <sup>2)</sup></th>
+    <th>Ref</th>
+    <th>Remarks</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td>Canon</td>
+    <td>IFD</td>
+    <td>None</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="#R2">[2]</a></td>
+    <td>Some CR2 images have a non-zero next-IFD pointer</td>
+   </tr>
+   <tr>
+    <td>CASIO</td>
+    <td>IFD</td>
+    <td>None</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="#R4">[4]</a></td>
+    <td>&nbsp;</td>
+   </tr>
+   <tr>
+    <td>CASIO</td>
+    <td>IFD, at offset 6</td>
+    <td>"QVC\0\0\0"</td>
+    <td>Big-endian (MM)</td>
+    <td>Relative to the beginning of the makernote</td>
+    <td><a href="#R4">[4]</a></td>
+    <td>&nbsp;</td>
+   </tr>
+   <tr>
+    <td>FUJI</td>
+    <td>IFD, usually at offset 12</td>
+    <td>Starts with the string &quot;FUJI&quot; 
+    and a 4 byte pointer to the IFD</td>
+    <td>Little-endian (II)</td>
+    <td>Relative to the beginning of the makernote</td>
+    <td><a href="#R1">[1]</a></td>
+    <td>Exif data uses big-endian (MM) byte order</td>
+   </tr>
+   <tr>
+    <td>Minolta, KONICA&nbsp;MINOLTA</td>
+    <td>IFD</td>
+    <td>None</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="#R5">[5]</a></td>
+    <td>Camera settings tag is encoded in big-endian (MM) style, regardless of
+    the encoding style of the Exif data</td>
+   </tr>
+   <tr> 
+    <td>NIKON</td>
+    <td>IFD</td>
+    <td>None</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="#R3">[3]</a></td>
+    <td>Models using this makernote include E990, D1</td>
+   </tr>
+   <tr> 
+    <td>NIKON</td>
+    <td>IFD, at offset 8</td>
+    <td>&quot;Nikon\0&quot; followed by two bytes of unknown meaning</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="#R1">[1]</a></td>
+    <td>Models using this makernote include E700, E800, E900, E900S, E910, E950</td>
+   </tr>
+   <tr> 
+    <td>NIKON</td>
+    <td>IFD, usually at offset 18</td>
+    <td>&quot;Nikon\0&quot; followed by 4 bytes which look like a version code 
+    and a TIFF header</td>
+    <td>From makernote TIFF header</td>
+    <td>Relative to the start of the makernote TIFF header</td>
+    <td>&nbsp;</td>
+    <td>Models using this makernote include E5400, SQ, D2H, D70, D100, D200. 
+    Makernote IFD of the D200 has no next-IFD pointer. (Is this a bug?)</td>
+   </tr>
+   <tr> 
+    <td>OLYMPUS</td>
+    <td>IFD, at offset 8</td>
+    <td>&quot;OLYMP\0&quot; followed by two bytes of unknown meaning</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="#R1">[1]</a></td>
+    <td>&nbsp;</td>
+   </tr>
+   <tr> 
+    <td>OLYMPUS</td>
+    <td>IFD, at offset 12</td>
+    <td>&quot;OLYMPUS\0II&quot; followed by two bytes of unknown meaning</td>
+    <td>&nbsp;</td>
+    <td>Relative to the beginning of the makernote</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+   </tr>
+   <tr> 
+    <td>Panasonic</td>
+    <td>IFD without a next-IFD pointer at offset 12</td>
+    <td>&quot;Panasonic\0\0\0&quot;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="#R8">[8]</a></td>
+    <td>&nbsp;</td>
+   </tr>
+   <tr> 
+    <td>PENTAX</td>
+    <td>IFD at offset 6</td>
+    <td>&quot;AOC\0&quot; followed by two bytes of unknown meaning</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="#R11">[11]</a></td>
+    <td>&nbsp;</td>
+   </tr>
+   <tr> 
+    <td>SAMSUNG</td>
+    <td>IFD</td>
+    <td>None</td>
+    <td>&nbsp;</td>
+    <td>Relative to the beginning of the makernote</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+   </tr>
+   <tr> 
+    <td>Sanyo</td>
+    <td>IFD</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td><a href="#R6">[6]</a></td>
+    <td>Not supported by Exiv2 yet</td>
+   </tr>
+   <tr> 
+    <td>SIGMA, FOVEON</td>
+    <td>IFD, at offset 10</td>
+    <td>&quot;SIGMA\0\0\0&quot; or &quot;FOVEON\0\0&quot; followed by two bytes 
+    of unknown meaning</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><a href="#R7">[7]</a></td>
+    <td>&nbsp;</td>
+   </tr>
+   <tr> 
+    <td>SONY</td>
+    <td>IFD without a next-IFD pointer at offset 12</td>
+    <td>&quot;SONY DSC \0\0\0&quot;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>Seen in Jpeg images, e.g., from DSC-W7, DSC-R1</td>
+   </tr>
+   <tr> 
+    <td>SONY</td>
+    <td>IFD</td>
+    <td>None</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>Seen in SR2 images, e.g., from DSC-R1</td>
+   </tr>
+  </tbody>
+</table>
+
+<p>
+ <small>
+  <sup>1)</sup> If not specified, the byte order of the Exif data is applicable.<br>
+  <sup>2)</sup> If not specified, offsets are relative to the start of the TIFF header.
+ </small>
+</p>
+
+
+<p><a href="http://www.exif.org/">Exif.org</a> has another table with similar
+  info and sample pictures: <a href="http://www.exif.org/samples.html">Digital
+  Camera Sample Images</a>. According to this source, (at least some) Ricoh and
+  Kodak cameras do not write the makernote in IFD format.</p>
+<h2><a name="R0">References</a></h2>
+<p><a name="R1">[1]</a> <a href="http://park2.wakwak.com/%7Etsuruzoh/Computer/Digicams/exif-e.html">Exif
+  file format</a> by TsuruZoh Tachibanaya<br>
+  <a name="R2">[2]</a> <a href="http://www.burren.cx/david/canon.html">EXIF Makernote
+  of Canon</a> by David Burren<br>
+  <a name="R3">[3]</a> <a href="http://www.tawbaware.com/990exif.htm">Makernote
+  EXIF Tag of the Nikon 990</a> by Max Lyons<br>
+  <a name="R4">[4]</a> <a href="http://www.dicasoft.de/casiomn.htm">&quot;Makernote&quot;
+  Exif tag of Casio</a> by Eckhard Henkel<br>
+  <a name="R5">[5]</a> <a href="http://www.dalibor.cz/minolta/makernote.htm">Minolta
+  MakerNote</a> by Dalibor Jelinek<br>
+  <a name="R6">[6]</a> <a href="http://www.exif.org/makernotes/SanyoMakerNote.html">Sanyo
+  MakerNote</a> by John Hawkins<br>
+  <a name="R7">[7]</a> <a href="http://www.x3f.info/technotes/FileDocs/MakerNoteDoc.html">
+  SIGMA and FOVEON EXIF MakerNote Documentation</a> by Foveon<br>
+  <a name="R8">[8]</a> <a href="http://www.compton.nu/panasonic.html">Panasonic
+  MakerNote Information</a> by Tom Hughes<br>
+  <a name="R9">[9]</a> <a href="http://www.ozhiker.com/electronics/pjmt/jpeg_info/makernotes.html">
+  Various Makernote specifications</a> from the <a href="http://www.ozhiker.com/electronics/pjmt/index.html">
+  PHP JPEG Metadata Toolkit</a> by Evan Hunter<br>
+  <a name="R10">[10]</a> <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">ExifTool</a>, the most complete and up-to-date tool for reading and writing meta information in image files, by Phil Harvey</p>
+  <a name="R11">[11]</a> <a href="http://www.gvsoft.homedns.org/exif/makernote-pentax-type3.html">EXIF: Pentax type3 Makernotes</a> by Ger Vermeulen</p>
+  <a name="R12">[12]</a> <a href="http://www.gvsoft.homedns.org/exif/makernote-casio-type1.html">Casio MakerNote Information</a>
+
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>

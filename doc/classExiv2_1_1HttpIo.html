@@ -1,0 +1,301 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceExiv2.html">Exiv2</a></li><li class="navelem"><a class="el" href="classExiv2_1_1HttpIo.html">HttpIo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="classExiv2_1_1HttpIo-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Exiv2::HttpIo Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Provides the http read/write access for the <a class="el" href="classExiv2_1_1RemoteIo.html" title="Provides remote binary file IO by implementing the BasicIo interface. This is an abstract class....">RemoteIo</a>.  
+ <a href="classExiv2_1_1HttpIo.html#details">More...</a></p>
+
+<p><code>#include &lt;basicio.hpp&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Exiv2::HttpIo:</div>
+<div class="dyncontent">
+<div class="center"><img src="classExiv2_1_1HttpIo__inherit__graph.png" border="0" usemap="#Exiv2_1_1HttpIo_inherit__map" alt="Inheritance graph"/></div>
+<map name="Exiv2_1_1HttpIo_inherit__map" id="Exiv2_1_1HttpIo_inherit__map">
+<area shape="rect" title="Provides the http read/write access for the RemoteIo." alt="" coords="17,155,123,181"/>
+<area shape="rect" href="classExiv2_1_1RemoteIo.html" title="Provides remote binary file IO by implementing the BasicIo interface. This is an abstract class...." alt="" coords="5,80,135,107"/>
+<area shape="rect" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO." alt="" coords="13,5,127,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Creators</h2></td></tr>
+<tr class="memitem:aa6eda32636069f5ecba554fc25213ec6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1HttpIo.html#aa6eda32636069f5ecba554fc25213ec6">HttpIo</a> (const std::string &amp;url, size_t blockSize=1024)</td></tr>
+<tr class="memdesc:aa6eda32636069f5ecba554fc25213ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that accepts the http URL on which IO will be performed. The constructor does not open the file, and therefore never failes.  <a href="classExiv2_1_1HttpIo.html#aa6eda32636069f5ecba554fc25213ec6">More...</a><br /></td></tr>
+<tr class="separator:aa6eda32636069f5ecba554fc25213ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91ca419ba5b0940ea0f8b7465eaead1"><td class="memItemLeft" align="right" valign="top"><a id="af91ca419ba5b0940ea0f8b7465eaead1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1HttpIo.html#af91ca419ba5b0940ea0f8b7465eaead1">HttpIo</a> (<a class="el" href="classExiv2_1_1HttpIo.html">HttpIo</a> &amp;rhs)</td></tr>
+<tr class="memdesc:af91ca419ba5b0940ea0f8b7465eaead1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. <br /></td></tr>
+<tr class="separator:af91ca419ba5b0940ea0f8b7465eaead1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa018be555ba313f7013b5abc9ca0e5ac"><td class="memItemLeft" align="right" valign="top"><a id="aa018be555ba313f7013b5abc9ca0e5ac"></a>
+<a class="el" href="classExiv2_1_1HttpIo.html">HttpIo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1HttpIo.html#aa018be555ba313f7013b5abc9ca0e5ac">operator=</a> (const <a class="el" href="classExiv2_1_1HttpIo.html">HttpIo</a> &amp;rhs)</td></tr>
+<tr class="memdesc:aa018be555ba313f7013b5abc9ca0e5ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator. <br /></td></tr>
+<tr class="separator:aa018be555ba313f7013b5abc9ca0e5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a083f7bda0fa73e026abe4bf01e78e1fd"><td class="memItemLeft" align="right" valign="top"><a id="a083f7bda0fa73e026abe4bf01e78e1fd"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1HttpIo.html#a083f7bda0fa73e026abe4bf01e78e1fd">~HttpIo</a> ()</td></tr>
+<tr class="memdesc:a083f7bda0fa73e026abe4bf01e78e1fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Destructor. <br /></td></tr>
+<tr class="separator:a083f7bda0fa73e026abe4bf01e78e1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classExiv2_1_1BasicIo"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classExiv2_1_1BasicIo')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td></tr>
+<tr class="memitem:a1d23c3bf7618f2ee6ebb5cf033b10911 inherit pub_types_classExiv2_1_1BasicIo"><td class="memItemLeft" align="right" valign="top"><a id="a1d23c3bf7618f2ee6ebb5cf033b10911"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicIo.html#a1d23c3bf7618f2ee6ebb5cf033b10911">Position</a> { <b>beg</b>, 
+<b>cur</b>, 
+<b>end</b>
+ }</td></tr>
+<tr class="memdesc:a1d23c3bf7618f2ee6ebb5cf033b10911"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seek starting positions. <br /></td></tr>
+<tr class="separator:a1d23c3bf7618f2ee6ebb5cf033b10911 inherit pub_types_classExiv2_1_1BasicIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8f989522925b884d8c9d3a257265fa1 inherit pub_types_classExiv2_1_1BasicIo"><td class="memItemLeft" align="right" valign="top"><a id="af8f989522925b884d8c9d3a257265fa1"></a>
+typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicIo.html#af8f989522925b884d8c9d3a257265fa1">AutoPtr</a></td></tr>
+<tr class="memdesc:af8f989522925b884d8c9d3a257265fa1 inherit pub_types_classExiv2_1_1BasicIo"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> auto_ptr type. <br /></td></tr>
+<tr class="separator:af8f989522925b884d8c9d3a257265fa1 inherit pub_types_classExiv2_1_1BasicIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classExiv2_1_1RemoteIo"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classExiv2_1_1RemoteIo')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classExiv2_1_1RemoteIo.html">Exiv2::RemoteIo</a></td></tr>
+<tr class="memitem:ab530f35acbfe4adfbd6a358f64c66b3f inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top"><a id="ab530f35acbfe4adfbd6a358f64c66b3f"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#ab530f35acbfe4adfbd6a358f64c66b3f">~RemoteIo</a> ()</td></tr>
+<tr class="memdesc:ab530f35acbfe4adfbd6a358f64c66b3f inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. Releases all managed memory. <br /></td></tr>
+<tr class="separator:ab530f35acbfe4adfbd6a358f64c66b3f inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b221258751bb18f475ebc292db4bfab inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#a6b221258751bb18f475ebc292db4bfab">open</a> ()</td></tr>
+<tr class="memdesc:a6b221258751bb18f475ebc292db4bfab inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect to the remote server, get the size of the remote file and allocate the array of blocksMap.  <a href="classExiv2_1_1RemoteIo.html#a6b221258751bb18f475ebc292db4bfab">More...</a><br /></td></tr>
+<tr class="separator:a6b221258751bb18f475ebc292db4bfab inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25946992e549cfaeeef57a64b9a6a7dc inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#a25946992e549cfaeeef57a64b9a6a7dc">close</a> ()</td></tr>
+<tr class="memdesc:a25946992e549cfaeeef57a64b9a6a7dc inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the IO position to the start. It does not release the data.  <a href="classExiv2_1_1RemoteIo.html#a25946992e549cfaeeef57a64b9a6a7dc">More...</a><br /></td></tr>
+<tr class="separator:a25946992e549cfaeeef57a64b9a6a7dc inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a862db1de87a1e04b02a8a76735298355 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#a862db1de87a1e04b02a8a76735298355">write</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *data, long wcount)</td></tr>
+<tr class="memdesc:a862db1de87a1e04b02a8a76735298355 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not support this method.  <a href="classExiv2_1_1RemoteIo.html#a862db1de87a1e04b02a8a76735298355">More...</a><br /></td></tr>
+<tr class="separator:a862db1de87a1e04b02a8a76735298355 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153db363453675811f786ca2883f9ccd inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#a153db363453675811f786ca2883f9ccd">write</a> (<a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;src)</td></tr>
+<tr class="memdesc:a153db363453675811f786ca2883f9ccd inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data that is read from another <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> instance to the remote file.  <a href="classExiv2_1_1RemoteIo.html#a153db363453675811f786ca2883f9ccd">More...</a><br /></td></tr>
+<tr class="separator:a153db363453675811f786ca2883f9ccd inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abee0119e40b9dcfce5fa520cb29f4622 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#abee0119e40b9dcfce5fa520cb29f4622">putb</a> (<a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> data)</td></tr>
+<tr class="memdesc:abee0119e40b9dcfce5fa520cb29f4622 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not support.  <a href="classExiv2_1_1RemoteIo.html#abee0119e40b9dcfce5fa520cb29f4622">More...</a><br /></td></tr>
+<tr class="separator:abee0119e40b9dcfce5fa520cb29f4622 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2034c4015f8956e20c0d05d9bc5ae2a inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#ae2034c4015f8956e20c0d05d9bc5ae2a">read</a> (long rcount)</td></tr>
+<tr class="memdesc:ae2034c4015f8956e20c0d05d9bc5ae2a inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from the memory blocks. Reading starts at the current IO position and the position is advanced by the number of bytes read. If the memory blocks are not populated (False), it will connect to server and populate the data to memory blocks.  <a href="classExiv2_1_1RemoteIo.html#ae2034c4015f8956e20c0d05d9bc5ae2a">More...</a><br /></td></tr>
+<tr class="separator:ae2034c4015f8956e20c0d05d9bc5ae2a inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ab1ce1978cc8d3f0a523f7edc5f771f inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#a3ab1ce1978cc8d3f0a523f7edc5f771f">read</a> (<a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *buf, long rcount)</td></tr>
+<tr class="memdesc:a3ab1ce1978cc8d3f0a523f7edc5f771f inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from the the memory blocks. Reading starts at the current IO position and the position is advanced by the number of bytes read. If the memory blocks are not populated (!= bMemory), it will connect to server and populate the data to memory blocks.  <a href="classExiv2_1_1RemoteIo.html#a3ab1ce1978cc8d3f0a523f7edc5f771f">More...</a><br /></td></tr>
+<tr class="separator:a3ab1ce1978cc8d3f0a523f7edc5f771f inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75913e47007095413e588dc1a0b3b0bc inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#a75913e47007095413e588dc1a0b3b0bc">getb</a> ()</td></tr>
+<tr class="memdesc:a75913e47007095413e588dc1a0b3b0bc inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read one byte from the memory blocks. The IO position is advanced by one byte. If the memory block is not populated (!= bMemory), it will connect to server and populate the data to the memory block.  <a href="classExiv2_1_1RemoteIo.html#a75913e47007095413e588dc1a0b3b0bc">More...</a><br /></td></tr>
+<tr class="separator:a75913e47007095413e588dc1a0b3b0bc inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f388cb8f4a74986a57d4099923157d7 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#a7f388cb8f4a74986a57d4099923157d7">transfer</a> (<a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;src)</td></tr>
+<tr class="memdesc:a7f388cb8f4a74986a57d4099923157d7 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the contents of the file and then transfer data from the <em>src</em> <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> object into the empty file.  <a href="classExiv2_1_1RemoteIo.html#a7f388cb8f4a74986a57d4099923157d7">More...</a><br /></td></tr>
+<tr class="separator:a7f388cb8f4a74986a57d4099923157d7 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeda4981ccdf1fa9394fd9f7e60f90f86 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#aeda4981ccdf1fa9394fd9f7e60f90f86">seek</a> (long offset, <a class="el" href="classExiv2_1_1BasicIo.html#a1d23c3bf7618f2ee6ebb5cf033b10911">Position</a> pos)</td></tr>
+<tr class="memdesc:aeda4981ccdf1fa9394fd9f7e60f90f86 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the current IO position.  <a href="classExiv2_1_1RemoteIo.html#aeda4981ccdf1fa9394fd9f7e60f90f86">More...</a><br /></td></tr>
+<tr class="separator:aeda4981ccdf1fa9394fd9f7e60f90f86 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac53ffb02ed23e0c1fd15cd8090a9f5b inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#aac53ffb02ed23e0c1fd15cd8090a9f5b">mmap</a> (bool=false)</td></tr>
+<tr class="memdesc:aac53ffb02ed23e0c1fd15cd8090a9f5b inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not support.  <a href="classExiv2_1_1RemoteIo.html#aac53ffb02ed23e0c1fd15cd8090a9f5b">More...</a><br /></td></tr>
+<tr class="separator:aac53ffb02ed23e0c1fd15cd8090a9f5b inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cba7708f2bdf134906f8357f05f42e7 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#a3cba7708f2bdf134906f8357f05f42e7">munmap</a> ()</td></tr>
+<tr class="memdesc:a3cba7708f2bdf134906f8357f05f42e7 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not support.  <a href="classExiv2_1_1RemoteIo.html#a3cba7708f2bdf134906f8357f05f42e7">More...</a><br /></td></tr>
+<tr class="separator:a3cba7708f2bdf134906f8357f05f42e7 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae65f38ae59d6e31f123d7c7bdb9c7e2d inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#ae65f38ae59d6e31f123d7c7bdb9c7e2d">tell</a> () const</td></tr>
+<tr class="memdesc:ae65f38ae59d6e31f123d7c7bdb9c7e2d inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current IO position.  <a href="classExiv2_1_1RemoteIo.html#ae65f38ae59d6e31f123d7c7bdb9c7e2d">More...</a><br /></td></tr>
+<tr class="separator:ae65f38ae59d6e31f123d7c7bdb9c7e2d inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dd02d5ac89c8b1c2bcd711e9b459b9e inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#a9dd02d5ac89c8b1c2bcd711e9b459b9e">size</a> () const</td></tr>
+<tr class="memdesc:a9dd02d5ac89c8b1c2bcd711e9b459b9e inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current memory buffer size in bytes.  <a href="classExiv2_1_1RemoteIo.html#a9dd02d5ac89c8b1c2bcd711e9b459b9e">More...</a><br /></td></tr>
+<tr class="separator:a9dd02d5ac89c8b1c2bcd711e9b459b9e inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93fd4073b3799927c7a7d2ebbce31fff inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top"><a id="a93fd4073b3799927c7a7d2ebbce31fff"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#a93fd4073b3799927c7a7d2ebbce31fff">isopen</a> () const</td></tr>
+<tr class="memdesc:a93fd4073b3799927c7a7d2ebbce31fff inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the memory area is allocated. <br /></td></tr>
+<tr class="separator:a93fd4073b3799927c7a7d2ebbce31fff inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec08484e933de81954eb611c32538ba1 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top"><a id="aec08484e933de81954eb611c32538ba1"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#aec08484e933de81954eb611c32538ba1">error</a> () const</td></tr>
+<tr class="memdesc:aec08484e933de81954eb611c32538ba1 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always returns 0. <br /></td></tr>
+<tr class="separator:aec08484e933de81954eb611c32538ba1 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88110c6458edab1553f84daed7e294df inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top"><a id="a88110c6458edab1553f84daed7e294df"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#a88110c6458edab1553f84daed7e294df">eof</a> () const</td></tr>
+<tr class="memdesc:a88110c6458edab1553f84daed7e294df inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the IO position has reached the end, otherwise false. <br /></td></tr>
+<tr class="separator:a88110c6458edab1553f84daed7e294df inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2dc32458b089bab6b62b8a5d08b78f4 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top"><a id="af2dc32458b089bab6b62b8a5d08b78f4"></a>
+virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#af2dc32458b089bab6b62b8a5d08b78f4">path</a> () const</td></tr>
+<tr class="memdesc:af2dc32458b089bab6b62b8a5d08b78f4 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the URL of the file. <br /></td></tr>
+<tr class="separator:af2dc32458b089bab6b62b8a5d08b78f4 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab59574207f2a24266d199f7dde4825f7 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#ab59574207f2a24266d199f7dde4825f7">populateFakeData</a> ()</td></tr>
+<tr class="memdesc:ab59574207f2a24266d199f7dde4825f7 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark all the bNone blocks to bKnow. This avoids allocating memory for parts of the file that contain image-date (non-metadata/pixel data)  <a href="classExiv2_1_1RemoteIo.html#ab59574207f2a24266d199f7dde4825f7">More...</a><br /></td></tr>
+<tr class="separator:ab59574207f2a24266d199f7dde4825f7 inherit pub_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classExiv2_1_1BasicIo"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classExiv2_1_1BasicIo')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td></tr>
+<tr class="memitem:a0c6658dc8caea27ac88def52ce0789bd inherit pub_methods_classExiv2_1_1BasicIo"><td class="memItemLeft" align="right" valign="top"><a id="a0c6658dc8caea27ac88def52ce0789bd"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicIo.html#a0c6658dc8caea27ac88def52ce0789bd">~BasicIo</a> ()</td></tr>
+<tr class="memdesc:a0c6658dc8caea27ac88def52ce0789bd inherit pub_methods_classExiv2_1_1BasicIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:a0c6658dc8caea27ac88def52ce0789bd inherit pub_methods_classExiv2_1_1BasicIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classExiv2_1_1BasicIo"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classExiv2_1_1BasicIo')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td></tr>
+<tr class="memitem:a64c13339b4859aa21faf1f79415c1ec5 inherit pub_attribs_classExiv2_1_1BasicIo"><td class="memItemLeft" align="right" valign="top"><a id="a64c13339b4859aa21faf1f79415c1ec5"></a>
+<a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicIo.html#a64c13339b4859aa21faf1f79415c1ec5">bigBlock_</a></td></tr>
+<tr class="memdesc:a64c13339b4859aa21faf1f79415c1ec5 inherit pub_attribs_classExiv2_1_1BasicIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">this is allocated and populated by <a class="el" href="classExiv2_1_1BasicIo.html#a8728349cdeb79d569eba6fa6e26d5e74" title="Direct access to the IO data. For files, this is done by mapping the file into the process&#39;s address ...">mmap()</a> <br /></td></tr>
+<tr class="separator:a64c13339b4859aa21faf1f79415c1ec5 inherit pub_attribs_classExiv2_1_1BasicIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classExiv2_1_1RemoteIo"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classExiv2_1_1RemoteIo')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classExiv2_1_1RemoteIo.html">Exiv2::RemoteIo</a></td></tr>
+<tr class="memitem:a096f295632a44a555a9de2f06ff4c3d5 inherit pro_methods_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top"><a id="a096f295632a44a555a9de2f06ff4c3d5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#a096f295632a44a555a9de2f06ff4c3d5">RemoteIo</a> ()</td></tr>
+<tr class="memdesc:a096f295632a44a555a9de2f06ff4c3d5 inherit pro_methods_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor. <br /></td></tr>
+<tr class="separator:a096f295632a44a555a9de2f06ff4c3d5 inherit pro_methods_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classExiv2_1_1BasicIo"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classExiv2_1_1BasicIo')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td></tr>
+<tr class="memitem:ac726bef377a5da282b0f2cadb5b779be inherit pro_methods_classExiv2_1_1BasicIo"><td class="memItemLeft" align="right" valign="top"><a id="ac726bef377a5da282b0f2cadb5b779be"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicIo.html#ac726bef377a5da282b0f2cadb5b779be">BasicIo</a> ()</td></tr>
+<tr class="memdesc:ac726bef377a5da282b0f2cadb5b779be inherit pro_methods_classExiv2_1_1BasicIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor. <br /></td></tr>
+<tr class="separator:ac726bef377a5da282b0f2cadb5b779be inherit pro_methods_classExiv2_1_1BasicIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classExiv2_1_1RemoteIo"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classExiv2_1_1RemoteIo')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classExiv2_1_1RemoteIo.html">Exiv2::RemoteIo</a></td></tr>
+<tr class="memitem:a2b8a068c616c8c0e238e38bcd5266fc3 inherit pro_attribs_classExiv2_1_1RemoteIo"><td class="memItemLeft" align="right" valign="top"><a id="a2b8a068c616c8c0e238e38bcd5266fc3"></a>
+Impl *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html#a2b8a068c616c8c0e238e38bcd5266fc3">p_</a></td></tr>
+<tr class="memdesc:a2b8a068c616c8c0e238e38bcd5266fc3 inherit pro_attribs_classExiv2_1_1RemoteIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to implementation. <br /></td></tr>
+<tr class="separator:a2b8a068c616c8c0e238e38bcd5266fc3 inherit pro_attribs_classExiv2_1_1RemoteIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Provides the http read/write access for the <a class="el" href="classExiv2_1_1RemoteIo.html" title="Provides remote binary file IO by implementing the BasicIo interface. This is an abstract class....">RemoteIo</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa6eda32636069f5ecba554fc25213ec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6eda32636069f5ecba554fc25213ec6">&#9670;&nbsp;</a></span>HttpIo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Exiv2::HttpIo::HttpIo </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>blockSize</em> = <code>1024</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor that accepts the http URL on which IO will be performed. The constructor does not open the file, and therefore never failes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>The full path of url </td></tr>
+    <tr><td class="paramname">blockSize</td><td>the size of the memory block. The file content is divided into the memory blocks. These blocks are populated on demand from the server, so it avoids copying the complete file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>basicio.hpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

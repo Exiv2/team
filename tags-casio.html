@@ -1,0 +1,700 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Exiv2 - Image metadata library and tools</title>
+
+  <!-- Doxygen styles -->
+  <link href="doc/doxygen.css" rel="stylesheet" type="text/css">
+  <link href="doc/customdoxygen.css" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="include/exiv2.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img alt="Exiv2" src="include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="getting-started.html">Getting started</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="whatsnew.html">What's New</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+        <li><a href="makernote.html">Makernote</a></li>
+        <li><a href="doc/examples.html">Examples</a></li>
+        <li><a href="doc/index.html">API</a></li>
+        <li><a href="manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+	    <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="page-header">
+    <h1>Metadata reference tables</h1>
+  </div>
+<p>There are two different Casio MakerNote formats. Exiv2 will automatically detect the correct format for the Exif data from a particular Casio camera model. 
+References: <a href="makernote.html#R9">[9]</a>, <a href="makernote.html#R10">[10]</a>, <a href="makernote.html#R12">[12]</a>.</p>
+
+<h2>Casio (format 1) MakerNote Tags defined in Exiv2</h2>
+<div>  
+<p>Tags found in the MakerNote of images taken with older Casio cameras.</p>
+</div>
+<table class="table table-striped">
+<thead><tr>
+<th>Tag (hex)</th>
+<th>Tag (dec)</th>
+<th>IFD</th>
+<th>Key</th>
+<th>Type</th>
+<th>Tag description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>0x0001</td>
+<td>1</td>
+<td>Casio</td>
+<td>Exif.Casio.RecodingMode</td>
+<td>Short</td>
+<td>Recording Mode</td>
+</tr>
+<tr>
+<td>0x0002</td>
+<td>2</td>
+<td>Casio</td>
+<td>Exif.Casio.Quality</td>
+<td>Short</td>
+<td>Quality</td>
+</tr>
+<tr>
+<td>0x0003</td>
+<td>3</td>
+<td>Casio</td>
+<td>Exif.Casio.FocusMode</td>
+<td>Short</td>
+<td>Focus Mode</td>
+</tr>
+<tr>
+<td>0x0004</td>
+<td>4</td>
+<td>Casio</td>
+<td>Exif.Casio.FlashMode</td>
+<td>Short</td>
+<td>Flash Mode</td>
+</tr>
+<tr>
+<td>0x0005</td>
+<td>5</td>
+<td>Casio</td>
+<td>Exif.Casio.FlashIntensity</td>
+<td>Short</td>
+<td>Flash Intensity</td>
+</tr>
+<tr>
+<td>0x0006</td>
+<td>6</td>
+<td>Casio</td>
+<td>Exif.Casio.ObjectDistance</td>
+<td>Long</td>
+<td>Distance to object</td>
+</tr>
+<tr>
+<td>0x0007</td>
+<td>7</td>
+<td>Casio</td>
+<td>Exif.Casio.WhiteBalance</td>
+<td>Short</td>
+<td>White balance settings</td>
+</tr>
+<tr>
+<td>0x000a</td>
+<td>10</td>
+<td>Casio</td>
+<td>Exif.Casio.DigitalZoom</td>
+<td>Long</td>
+<td>Digital zoom</td>
+</tr>
+<tr>
+<td>0x000b</td>
+<td>11</td>
+<td>Casio</td>
+<td>Exif.Casio.Sharpness</td>
+<td>Short</td>
+<td>Sharpness</td>
+</tr>
+<tr>
+<td>0x000c</td>
+<td>12</td>
+<td>Casio</td>
+<td>Exif.Casio.Contrast</td>
+<td>Short</td>
+<td>Contrast</td>
+</tr>
+<tr>
+<td>0x000d</td>
+<td>13</td>
+<td>Casio</td>
+<td>Exif.Casio.Saturation</td>
+<td>Short</td>
+<td>Saturation</td>
+</tr>
+<tr>
+<td>0x0014</td>
+<td>20</td>
+<td>Casio</td>
+<td>Exif.Casio.ISO</td>
+<td>Short</td>
+<td>ISO</td>
+</tr>
+<tr>
+<td>0x0015</td>
+<td>21</td>
+<td>Casio</td>
+<td>Exif.Casio.FirmwareDate</td>
+<td>Ascii</td>
+<td>Firmware date</td>
+</tr>
+<tr>
+<td>0x0016</td>
+<td>22</td>
+<td>Casio</td>
+<td>Exif.Casio.Enhancement</td>
+<td>Short</td>
+<td>Enhancement</td>
+</tr>
+<tr>
+<td>0x0017</td>
+<td>23</td>
+<td>Casio</td>
+<td>Exif.Casio.ColorFilter</td>
+<td>Short</td>
+<td>Color Filter</td>
+</tr>
+<tr>
+<td>0x0018</td>
+<td>24</td>
+<td>Casio</td>
+<td>Exif.Casio.AFPoint</td>
+<td>Short</td>
+<td>AF Point</td>
+</tr>
+<tr>
+<td>0x0019</td>
+<td>25</td>
+<td>Casio</td>
+<td>Exif.Casio.FlashIntensity2</td>
+<td>Short</td>
+<td>Flash Intensity</td>
+</tr>
+<tr>
+<td>0x0020</td>
+<td>32</td>
+<td>Casio</td>
+<td>Exif.Casio.CCDSensitivity</td>
+<td>Short</td>
+<td>CCDSensitivity</td>
+</tr>
+<tr>
+<td>0x0e00</td>
+<td>3584</td>
+<td>Casio</td>
+<td>Exif.Casio.PrintIM</td>
+<td>Undefined</td>
+<td>PrintIM information</td>
+</tr>
+</tbody>
+</table>
+
+<br>
+
+<h2>Casio (format 2) MakerNote Tags defined in Exiv2</h2>
+<div>
+<p>Tags found in the MakerNote of images taken with newer Casio cameras.</p>
+</div>
+<table class="table table-striped">
+<thead><tr>
+<th>Tag (hex)</th>
+<th>Tag (dec)</th>
+<th>IFD</th>
+<th>Key</th>
+<th>Type</th>
+<th>Tag description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>0x0002</td>
+<td>2</td>
+<td>Casio2</td>
+<td>Exif.Casio2.PreviewImageSize</td>
+<td>Short</td>
+<td>Preview Image Size</td>
+</tr>
+<tr>
+<td>0x0003</td>
+<td>3</td>
+<td>Casio2</td>
+<td>Exif.Casio2.PreviewImageLength</td>
+<td>Long</td>
+<td>Preview Image Length</td>
+</tr>
+<tr>
+<td>0x0004</td>
+<td>4</td>
+<td>Casio2</td>
+<td>Exif.Casio2.PreviewImageStart</td>
+<td>Long</td>
+<td>Preview Image Start</td>
+</tr>
+<tr>
+<td>0x0008</td>
+<td>8</td>
+<td>Casio2</td>
+<td>Exif.Casio2.QualityMode</td>
+<td>Short</td>
+<td>Quality Mode</td>
+</tr>
+<tr>
+<td>0x0009</td>
+<td>9</td>
+<td>Casio2</td>
+<td>Exif.Casio2.ImageSize</td>
+<td>Short</td>
+<td>Image Size</td>
+</tr>
+<tr>
+<td>0x000d</td>
+<td>13</td>
+<td>Casio2</td>
+<td>Exif.Casio2.FocusMode</td>
+<td>Short</td>
+<td>Focus Mode</td>
+</tr>
+<tr>
+<td>0x0014</td>
+<td>20</td>
+<td>Casio2</td>
+<td>Exif.Casio2.ISOSpeed</td>
+<td>Short</td>
+<td>ISO Speed</td>
+</tr>
+<tr>
+<td>0x0019</td>
+<td>25</td>
+<td>Casio2</td>
+<td>Exif.Casio2.WhiteBalance</td>
+<td>Short</td>
+<td>White Balance Setting</td>
+</tr>
+<tr>
+<td>0x001d</td>
+<td>29</td>
+<td>Casio2</td>
+<td>Exif.Casio2.FocalLength</td>
+<td>Rational</td>
+<td>Focal Length</td>
+</tr>
+<tr>
+<td>0x001f</td>
+<td>31</td>
+<td>Casio2</td>
+<td>Exif.Casio2.Saturation</td>
+<td>Short</td>
+<td>Saturation</td>
+</tr>
+<tr>
+<td>0x0020</td>
+<td>32</td>
+<td>Casio2</td>
+<td>Exif.Casio2.Contrast</td>
+<td>Short</td>
+<td>Contrast</td>
+</tr>
+<tr>
+<td>0x0021</td>
+<td>33</td>
+<td>Casio2</td>
+<td>Exif.Casio2.Sharpness</td>
+<td>Short</td>
+<td>Sharpness</td>
+</tr>
+<tr>
+<td>0x0e00</td>
+<td>3584</td>
+<td>Casio2</td>
+<td>Exif.Casio2.PrintIM</td>
+<td>Undefined</td>
+<td>PrintIM information</td>
+</tr>
+<tr>
+<td>0x2000</td>
+<td>8192</td>
+<td>Casio2</td>
+<td>Exif.Casio2.PreviewImage</td>
+<td>Undefined</td>
+<td>Preview Image</td>
+</tr>
+<tr>
+<td>0x2001</td>
+<td>8193</td>
+<td>Casio2</td>
+<td>Exif.Casio2.FirmwareDate</td>
+<td>Ascii</td>
+<td>Firmware Date</td>
+</tr>
+<tr>
+<td>0x2011</td>
+<td>8209</td>
+<td>Casio2</td>
+<td>Exif.Casio2.WhiteBalanceBias</td>
+<td>Short</td>
+<td>White Balance Bias</td>
+</tr>
+<tr>
+<td>0x2012</td>
+<td>8210</td>
+<td>Casio2</td>
+<td>Exif.Casio2.WhiteBalance2</td>
+<td>Short</td>
+<td>White Balance Setting</td>
+</tr>
+<tr>
+<td>0x2021</td>
+<td>8225</td>
+<td>Casio2</td>
+<td>Exif.Casio2.AFPointPosition</td>
+<td>Short</td>
+<td>AF Point Position</td>
+</tr>
+<tr>
+<td>0x2022</td>
+<td>8226</td>
+<td>Casio2</td>
+<td>Exif.Casio2.ObjectDistance</td>
+<td>Long</td>
+<td>Object Distance</td>
+</tr>
+<tr>
+<td>0x2034</td>
+<td>8244</td>
+<td>Casio2</td>
+<td>Exif.Casio2.FlashDistance</td>
+<td>Short</td>
+<td>Flash Distance</td>
+</tr>
+<tr>
+<td>0x2076</td>
+<td>8310</td>
+<td>Casio2</td>
+<td>Exif.Casio2.SpecialEffectMode</td>
+<td>Byte</td>
+<td>Special Effect Mode</td>
+</tr>
+<tr>
+<td>0x2089</td>
+<td>8329</td>
+<td>Casio2</td>
+<td>Exif.Casio2.FaceInfo</td>
+<td>Undefined</td>
+<td>Face Info</td>
+</tr>
+<tr>
+<td>0x211c</td>
+<td>8476</td>
+<td>Casio2</td>
+<td>Exif.Casio2.FacesDetected</td>
+<td>Byte</td>
+<td>Faces detected</td>
+</tr>
+<tr>
+<td>0x3000</td>
+<td>12288</td>
+<td>Casio2</td>
+<td>Exif.Casio2.RecordMode</td>
+<td>Short</td>
+<td>Record Mode</td>
+</tr>
+<tr>
+<td>0x3001</td>
+<td>12289</td>
+<td>Casio2</td>
+<td>Exif.Casio2.ReleaseMode</td>
+<td>Short</td>
+<td>Release Mode</td>
+</tr>
+<tr>
+<td>0x3002</td>
+<td>12290</td>
+<td>Casio2</td>
+<td>Exif.Casio2.Quality</td>
+<td>Short</td>
+<td>Quality</td>
+</tr>
+<tr>
+<td>0x3003</td>
+<td>12291</td>
+<td>Casio2</td>
+<td>Exif.Casio2.FocusMode2</td>
+<td>Short</td>
+<td>Focus Mode2</td>
+</tr>
+<tr>
+<td>0x3006</td>
+<td>12294</td>
+<td>Casio2</td>
+<td>Exif.Casio2.HometownCity</td>
+<td>Ascii</td>
+<td>Home town city</td>
+</tr>
+<tr>
+<td>0x3007</td>
+<td>12295</td>
+<td>Casio2</td>
+<td>Exif.Casio2.BestShotMode</td>
+<td>Short</td>
+<td>Best Shot Mode</td>
+</tr>
+<tr>
+<td>0x3008</td>
+<td>12296</td>
+<td>Casio2</td>
+<td>Exif.Casio2.AutoISO</td>
+<td>Short</td>
+<td>Auto ISO</td>
+</tr>
+<tr>
+<td>0x3009</td>
+<td>12297</td>
+<td>Casio2</td>
+<td>Exif.Casio2.AFMode</td>
+<td>Short</td>
+<td>AF Mode</td>
+</tr>
+<tr>
+<td>0x3011</td>
+<td>12305</td>
+<td>Casio2</td>
+<td>Exif.Casio2.Sharpness2</td>
+<td>Undefined</td>
+<td>Sharpness</td>
+</tr>
+<tr>
+<td>0x3012</td>
+<td>12306</td>
+<td>Casio2</td>
+<td>Exif.Casio2.Contrast2</td>
+<td>Undefined</td>
+<td>Contrast</td>
+</tr>
+<tr>
+<td>0x3013</td>
+<td>12307</td>
+<td>Casio2</td>
+<td>Exif.Casio2.Saturation2</td>
+<td>Undefined</td>
+<td>Saturation</td>
+</tr>
+<tr>
+<td>0x3014</td>
+<td>12308</td>
+<td>Casio2</td>
+<td>Exif.Casio2.ISO</td>
+<td>Short</td>
+<td>ISO</td>
+</tr>
+<tr>
+<td>0x3015</td>
+<td>12309</td>
+<td>Casio2</td>
+<td>Exif.Casio2.ColorMode</td>
+<td>Short</td>
+<td>Color Mode</td>
+</tr>
+<tr>
+<td>0x3016</td>
+<td>12310</td>
+<td>Casio2</td>
+<td>Exif.Casio2.Enhancement</td>
+<td>Short</td>
+<td>Enhancement</td>
+</tr>
+<tr>
+<td>0x3017</td>
+<td>12311</td>
+<td>Casio2</td>
+<td>Exif.Casio2.ColorFilter</td>
+<td>Short</td>
+<td>Color Filter</td>
+</tr>
+<tr>
+<td>0x301b</td>
+<td>12315</td>
+<td>Casio2</td>
+<td>Exif.Casio2.ArtMode</td>
+<td>Short</td>
+<td>Art Mode</td>
+</tr>
+<tr>
+<td>0x301c</td>
+<td>12316</td>
+<td>Casio2</td>
+<td>Exif.Casio2.SequenceNumber</td>
+<td>Short</td>
+<td>Sequence Number</td>
+</tr>
+<tr>
+<td>0x3020</td>
+<td>12320</td>
+<td>Casio2</td>
+<td>Exif.Casio2.ImageStabilization</td>
+<td>Short</td>
+<td>Image Stabilization</td>
+</tr>
+<tr>
+<td>0x302a</td>
+<td>12330</td>
+<td>Casio2</td>
+<td>Exif.Casio2.LightingMode</td>
+<td>Short</td>
+<td>Lighting Mode</td>
+</tr>
+<tr>
+<td>0x302b</td>
+<td>12331</td>
+<td>Casio2</td>
+<td>Exif.Casio2.PortraitRefiner</td>
+<td>Short</td>
+<td>Portrait Refiner settings</td>
+</tr>
+<tr>
+<td>0x3030</td>
+<td>12336</td>
+<td>Casio2</td>
+<td>Exif.Casio2.SpecialEffectLevel</td>
+<td>Short</td>
+<td>Special Effect Level</td>
+</tr>
+<tr>
+<td>0x3031</td>
+<td>12337</td>
+<td>Casio2</td>
+<td>Exif.Casio2.SpecialEffectSetting</td>
+<td>Short</td>
+<td>Special Effect Setting</td>
+</tr>
+<tr>
+<td>0x3103</td>
+<td>12547</td>
+<td>Casio2</td>
+<td>Exif.Casio2.DriveMode</td>
+<td>Short</td>
+<td>Drive Mode</td>
+</tr>
+<tr>
+<td>0x310b</td>
+<td>12555</td>
+<td>Casio2</td>
+<td>Exif.Casio2.ArtModeParameters</td>
+<td>Undefined</td>
+<td>Art Mode Parameters</td>
+</tr>
+<tr>
+<td>0x4001</td>
+<td>16385</td>
+<td>Casio2</td>
+<td>Exif.Casio2.CaptureFrameRate</td>
+<td>Short</td>
+<td>Capture Frame Rate</td>
+</tr>
+<tr>
+<td>0x4003</td>
+<td>16387</td>
+<td>Casio2</td>
+<td>Exif.Casio2.VideoQuality</td>
+<td>Short</td>
+<td>Video Quality</td>
+</tr>
+</tbody>
+</table>
+
+<br>
+
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>

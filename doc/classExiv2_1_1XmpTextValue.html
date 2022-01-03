@@ -1,0 +1,474 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceExiv2.html">Exiv2</a></li><li class="navelem"><a class="el" href="classExiv2_1_1XmpTextValue.html">XmpTextValue</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="classExiv2_1_1XmpTextValue-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Exiv2::XmpTextValue Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Value type suitable for simple XMP properties and XMP nodes of complex types which are not parsed into specific values.  
+ <a href="classExiv2_1_1XmpTextValue.html#details">More...</a></p>
+
+<p><code>#include &lt;value.hpp&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Exiv2::XmpTextValue:</div>
+<div class="dyncontent">
+<div class="center"><img src="classExiv2_1_1XmpTextValue__inherit__graph.png" border="0" usemap="#Exiv2_1_1XmpTextValue_inherit__map" alt="Inheritance graph"/></div>
+<map name="Exiv2_1_1XmpTextValue_inherit__map" id="Exiv2_1_1XmpTextValue_inherit__map">
+<area shape="rect" title="Value type suitable for simple XMP properties and XMP nodes of complex types which are not parsed int..." alt="" coords="5,155,164,181"/>
+<area shape="rect" href="classExiv2_1_1XmpValue.html" title="Base class for all Exiv2 values used to store XMP property values." alt="" coords="19,80,151,107"/>
+<area shape="rect" href="classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata." alt="" coords="33,5,136,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:acc84736acca75059f54d022d6a2df0b9"><td class="memItemLeft" align="right" valign="top"><a id="acc84736acca75059f54d022d6a2df0b9"></a>
+typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1XmpTextValue.html">XmpTextValue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpTextValue.html#acc84736acca75059f54d022d6a2df0b9">AutoPtr</a></td></tr>
+<tr class="memdesc:acc84736acca75059f54d022d6a2df0b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for a XmpTextValue auto pointer. <br /></td></tr>
+<tr class="separator:acc84736acca75059f54d022d6a2df0b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classExiv2_1_1XmpValue"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classExiv2_1_1XmpValue')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classExiv2_1_1XmpValue.html">Exiv2::XmpValue</a></td></tr>
+<tr class="memitem:adcef489707e5b72735cccb7bee57cf5c inherit pub_types_classExiv2_1_1XmpValue"><td class="memItemLeft" align="right" valign="top"><a id="adcef489707e5b72735cccb7bee57cf5c"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpValue.html#adcef489707e5b72735cccb7bee57cf5c">XmpArrayType</a> { <b>xaNone</b>, 
+<b>xaAlt</b>, 
+<b>xaBag</b>, 
+<b>xaSeq</b>
+ }</td></tr>
+<tr class="memdesc:adcef489707e5b72735cccb7bee57cf5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMP array types. <br /></td></tr>
+<tr class="separator:adcef489707e5b72735cccb7bee57cf5c inherit pub_types_classExiv2_1_1XmpValue"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a417c4392d9251b143df126fa9e9d1025 inherit pub_types_classExiv2_1_1XmpValue"><td class="memItemLeft" align="right" valign="top"><a id="a417c4392d9251b143df126fa9e9d1025"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpValue.html#a417c4392d9251b143df126fa9e9d1025">XmpStruct</a> { <b>xsNone</b>, 
+<b>xsStruct</b>
+ }</td></tr>
+<tr class="memdesc:a417c4392d9251b143df126fa9e9d1025"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMP structure indicator. <br /></td></tr>
+<tr class="separator:a417c4392d9251b143df126fa9e9d1025 inherit pub_types_classExiv2_1_1XmpValue"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0559bb270b4d2ebc0d784b807c3af44a inherit pub_types_classExiv2_1_1XmpValue"><td class="memItemLeft" align="right" valign="top"><a id="a0559bb270b4d2ebc0d784b807c3af44a"></a>
+typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1XmpValue.html">XmpValue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpValue.html#a0559bb270b4d2ebc0d784b807c3af44a">AutoPtr</a></td></tr>
+<tr class="memdesc:a0559bb270b4d2ebc0d784b807c3af44a inherit pub_types_classExiv2_1_1XmpValue"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for a XmpValue auto pointer. <br /></td></tr>
+<tr class="separator:a0559bb270b4d2ebc0d784b807c3af44a inherit pub_types_classExiv2_1_1XmpValue"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classExiv2_1_1Value"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classExiv2_1_1Value')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classExiv2_1_1Value.html">Exiv2::Value</a></td></tr>
+<tr class="memitem:a0f62e585b82c97738858b743e60dff21 inherit pub_types_classExiv2_1_1Value"><td class="memItemLeft" align="right" valign="top"><a id="a0f62e585b82c97738858b743e60dff21"></a>
+typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1Value.html">Value</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a0f62e585b82c97738858b743e60dff21">AutoPtr</a></td></tr>
+<tr class="memdesc:a0f62e585b82c97738858b743e60dff21 inherit pub_types_classExiv2_1_1Value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for a Value auto pointer. <br /></td></tr>
+<tr class="separator:a0f62e585b82c97738858b743e60dff21 inherit pub_types_classExiv2_1_1Value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Creators</div></td></tr>
+<tr class="memitem:a52258246de480683ba8c26331729cb9a"><td class="memItemLeft" align="right" valign="top"><a id="a52258246de480683ba8c26331729cb9a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpTextValue.html#a52258246de480683ba8c26331729cb9a">XmpTextValue</a> ()</td></tr>
+<tr class="memdesc:a52258246de480683ba8c26331729cb9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
+<tr class="separator:a52258246de480683ba8c26331729cb9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3fad8cf98fdf1f898d60f81be8419e1"><td class="memItemLeft" align="right" valign="top"><a id="ab3fad8cf98fdf1f898d60f81be8419e1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpTextValue.html#ab3fad8cf98fdf1f898d60f81be8419e1">XmpTextValue</a> (const std::string &amp;buf)</td></tr>
+<tr class="memdesc:ab3fad8cf98fdf1f898d60f81be8419e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, reads the value from a string. <br /></td></tr>
+<tr class="separator:ab3fad8cf98fdf1f898d60f81be8419e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Manipulators</div></td></tr>
+<tr class="memitem:a03ba8322cd618df04eda0e2c6f7b6246"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpTextValue.html#a03ba8322cd618df04eda0e2c6f7b6246">read</a> (const std::string &amp;buf)</td></tr>
+<tr class="memdesc:a03ba8322cd618df04eda0e2c6f7b6246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a simple property value from <em>buf</em> to set the value.  <a href="classExiv2_1_1XmpTextValue.html#a03ba8322cd618df04eda0e2c6f7b6246">More...</a><br /></td></tr>
+<tr class="separator:a03ba8322cd618df04eda0e2c6f7b6246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadaa78392376573ef52effdbd5a8ffe6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpTextValue.html#aadaa78392376573ef52effdbd5a8ffe6">read</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *buf, long len, <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> byteOrder=invalidByteOrder)</td></tr>
+<tr class="memdesc:aadaa78392376573ef52effdbd5a8ffe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the value from a character buffer.  <a href="classExiv2_1_1XmpTextValue.html#aadaa78392376573ef52effdbd5a8ffe6">More...</a><br /></td></tr>
+<tr class="separator:aadaa78392376573ef52effdbd5a8ffe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c357e0bee86bd3c6eee197711472821"><td class="memItemLeft" align="right" valign="top"><a id="a7c357e0bee86bd3c6eee197711472821"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> (const std::string &amp;buf)=0</td></tr>
+<tr class="separator:a7c357e0bee86bd3c6eee197711472821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classExiv2_1_1XmpValue"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classExiv2_1_1XmpValue')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classExiv2_1_1XmpValue.html">Exiv2::XmpValue</a></td></tr>
+<tr class="memitem:a04fe5c2370ba38a8068040f92a865fec inherit pub_methods_classExiv2_1_1XmpValue"><td class="memItemLeft" align="right" valign="top"><a id="a04fe5c2370ba38a8068040f92a865fec"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>XmpValue</b> (<a class="el" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450c">TypeId</a> <a class="el" href="classExiv2_1_1Value.html#a06a65925d8c11766ded7f7ecb00507c7">typeId</a>)</td></tr>
+<tr class="separator:a04fe5c2370ba38a8068040f92a865fec inherit pub_methods_classExiv2_1_1XmpValue"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78cb3a23d3af67bf0cfc201913f91639 inherit pub_methods_classExiv2_1_1XmpValue"><td class="memItemLeft" align="right" valign="top"><a id="a78cb3a23d3af67bf0cfc201913f91639"></a>
+<a class="el" href="classExiv2_1_1XmpValue.html#adcef489707e5b72735cccb7bee57cf5c">XmpArrayType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpValue.html#a78cb3a23d3af67bf0cfc201913f91639">xmpArrayType</a> () const</td></tr>
+<tr class="memdesc:a78cb3a23d3af67bf0cfc201913f91639 inherit pub_methods_classExiv2_1_1XmpValue"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return XMP array type, indicates if an XMP value is an array. <br /></td></tr>
+<tr class="separator:a78cb3a23d3af67bf0cfc201913f91639 inherit pub_methods_classExiv2_1_1XmpValue"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70f03b2bf8aeaa9ae38b0094eb48dfc2 inherit pub_methods_classExiv2_1_1XmpValue"><td class="memItemLeft" align="right" valign="top"><a id="a70f03b2bf8aeaa9ae38b0094eb48dfc2"></a>
+<a class="el" href="classExiv2_1_1XmpValue.html#a417c4392d9251b143df126fa9e9d1025">XmpStruct</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpValue.html#a70f03b2bf8aeaa9ae38b0094eb48dfc2">xmpStruct</a> () const</td></tr>
+<tr class="memdesc:a70f03b2bf8aeaa9ae38b0094eb48dfc2 inherit pub_methods_classExiv2_1_1XmpValue"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return XMP struct, indicates if an XMP value is a structure. <br /></td></tr>
+<tr class="separator:a70f03b2bf8aeaa9ae38b0094eb48dfc2 inherit pub_methods_classExiv2_1_1XmpValue"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f16a4fa607d76cf649e82ecf4ca41af inherit pub_methods_classExiv2_1_1XmpValue"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpValue.html#a3f16a4fa607d76cf649e82ecf4ca41af">copy</a> (<a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *buf, <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> byteOrder=invalidByteOrder) const</td></tr>
+<tr class="memdesc:a3f16a4fa607d76cf649e82ecf4ca41af inherit pub_methods_classExiv2_1_1XmpValue"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write value to a character data buffer.  <a href="classExiv2_1_1XmpValue.html#a3f16a4fa607d76cf649e82ecf4ca41af">More...</a><br /></td></tr>
+<tr class="separator:a3f16a4fa607d76cf649e82ecf4ca41af inherit pub_methods_classExiv2_1_1XmpValue"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ca857d5c130ac36996d6a0519369df inherit pub_methods_classExiv2_1_1XmpValue"><td class="memItemLeft" align="right" valign="top"><a id="af9ca857d5c130ac36996d6a0519369df"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpValue.html#af9ca857d5c130ac36996d6a0519369df">setXmpArrayType</a> (<a class="el" href="classExiv2_1_1XmpValue.html#adcef489707e5b72735cccb7bee57cf5c">XmpArrayType</a> <a class="el" href="classExiv2_1_1XmpValue.html#a78cb3a23d3af67bf0cfc201913f91639">xmpArrayType</a>)</td></tr>
+<tr class="memdesc:af9ca857d5c130ac36996d6a0519369df inherit pub_methods_classExiv2_1_1XmpValue"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the XMP array type to indicate that an XMP value is an array. <br /></td></tr>
+<tr class="separator:af9ca857d5c130ac36996d6a0519369df inherit pub_methods_classExiv2_1_1XmpValue"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b98fc15a65051d546ff5d1f73487ed inherit pub_methods_classExiv2_1_1XmpValue"><td class="memItemLeft" align="right" valign="top"><a id="ac3b98fc15a65051d546ff5d1f73487ed"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpValue.html#ac3b98fc15a65051d546ff5d1f73487ed">setXmpStruct</a> (<a class="el" href="classExiv2_1_1XmpValue.html#a417c4392d9251b143df126fa9e9d1025">XmpStruct</a> <a class="el" href="classExiv2_1_1XmpValue.html#a70f03b2bf8aeaa9ae38b0094eb48dfc2">xmpStruct</a>=xsStruct)</td></tr>
+<tr class="memdesc:ac3b98fc15a65051d546ff5d1f73487ed inherit pub_methods_classExiv2_1_1XmpValue"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the XMP struct type to indicate that an XMP value is a structure. <br /></td></tr>
+<tr class="separator:ac3b98fc15a65051d546ff5d1f73487ed inherit pub_methods_classExiv2_1_1XmpValue"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadaa78392376573ef52effdbd5a8ffe6 inherit pub_methods_classExiv2_1_1XmpValue"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpValue.html#aadaa78392376573ef52effdbd5a8ffe6">read</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *buf, long len, <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> byteOrder=invalidByteOrder)</td></tr>
+<tr class="memdesc:aadaa78392376573ef52effdbd5a8ffe6 inherit pub_methods_classExiv2_1_1XmpValue"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the value from a character buffer.  <a href="classExiv2_1_1XmpValue.html#aadaa78392376573ef52effdbd5a8ffe6">More...</a><br /></td></tr>
+<tr class="separator:aadaa78392376573ef52effdbd5a8ffe6 inherit pub_methods_classExiv2_1_1XmpValue"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classExiv2_1_1Value"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classExiv2_1_1Value')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classExiv2_1_1Value.html">Exiv2::Value</a></td></tr>
+<tr class="memitem:ab475b1680c6fa36a092c4584f70a8027 inherit pub_methods_classExiv2_1_1Value"><td class="memItemLeft" align="right" valign="top"><a id="ab475b1680c6fa36a092c4584f70a8027"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#ab475b1680c6fa36a092c4584f70a8027">Value</a> (<a class="el" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450c">TypeId</a> <a class="el" href="classExiv2_1_1Value.html#a06a65925d8c11766ded7f7ecb00507c7">typeId</a>)</td></tr>
+<tr class="memdesc:ab475b1680c6fa36a092c4584f70a8027 inherit pub_methods_classExiv2_1_1Value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, taking a type id to initialize the base class with. <br /></td></tr>
+<tr class="separator:ab475b1680c6fa36a092c4584f70a8027 inherit pub_methods_classExiv2_1_1Value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad27fa9023be70d47b5f101d1f2f565cc inherit pub_methods_classExiv2_1_1Value"><td class="memItemLeft" align="right" valign="top"><a id="ad27fa9023be70d47b5f101d1f2f565cc"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#ad27fa9023be70d47b5f101d1f2f565cc">~Value</a> ()</td></tr>
+<tr class="memdesc:ad27fa9023be70d47b5f101d1f2f565cc inherit pub_methods_classExiv2_1_1Value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
+<tr class="separator:ad27fa9023be70d47b5f101d1f2f565cc inherit pub_methods_classExiv2_1_1Value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78a4f322ebe0049b9630648407c91843 inherit pub_methods_classExiv2_1_1Value"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a78a4f322ebe0049b9630648407c91843">setDataArea</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *buf, long len)</td></tr>
+<tr class="memdesc:a78a4f322ebe0049b9630648407c91843 inherit pub_methods_classExiv2_1_1Value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the data area, if the value has one by copying (cloning) the buffer pointed to by buf.  <a href="classExiv2_1_1Value.html#a78a4f322ebe0049b9630648407c91843">More...</a><br /></td></tr>
+<tr class="separator:a78a4f322ebe0049b9630648407c91843 inherit pub_methods_classExiv2_1_1Value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a65925d8c11766ded7f7ecb00507c7 inherit pub_methods_classExiv2_1_1Value"><td class="memItemLeft" align="right" valign="top"><a id="a06a65925d8c11766ded7f7ecb00507c7"></a>
+<a class="el" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450c">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a06a65925d8c11766ded7f7ecb00507c7">typeId</a> () const</td></tr>
+<tr class="memdesc:a06a65925d8c11766ded7f7ecb00507c7 inherit pub_methods_classExiv2_1_1Value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the type identifier (Exif data format type). <br /></td></tr>
+<tr class="separator:a06a65925d8c11766ded7f7ecb00507c7 inherit pub_methods_classExiv2_1_1Value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9f3a161fa77abd57e425a63eacb9cb inherit pub_methods_classExiv2_1_1Value"><td class="memItemLeft" align="right" valign="top"><a id="a1a9f3a161fa77abd57e425a63eacb9cb"></a>
+<a class="el" href="classExiv2_1_1Value.html#a0f62e585b82c97738858b743e60dff21">AutoPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a1a9f3a161fa77abd57e425a63eacb9cb">clone</a> () const</td></tr>
+<tr class="memdesc:a1a9f3a161fa77abd57e425a63eacb9cb inherit pub_methods_classExiv2_1_1Value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an auto-pointer to a copy of itself (deep copy). The caller owns this copy and the auto-pointer ensures that it will be deleted. <br /></td></tr>
+<tr class="separator:a1a9f3a161fa77abd57e425a63eacb9cb inherit pub_methods_classExiv2_1_1Value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4e67718590984cb441fcebc3d088ec inherit pub_methods_classExiv2_1_1Value"><td class="memItemLeft" align="right" valign="top"><a id="a6c4e67718590984cb441fcebc3d088ec"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a6c4e67718590984cb441fcebc3d088ec">toString</a> () const</td></tr>
+<tr class="memdesc:a6c4e67718590984cb441fcebc3d088ec inherit pub_methods_classExiv2_1_1Value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value as a string. Implemented in terms of <a class="el" href="classExiv2_1_1Value.html#a2518f5ba09fc8c00785c57a119892c4c" title="Write the value to an output stream. You do not usually have to use this function; it is used for the...">write(std::ostream&amp; os) const </a>of the concrete class. <br /></td></tr>
+<tr class="separator:a6c4e67718590984cb441fcebc3d088ec inherit pub_methods_classExiv2_1_1Value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af60376344fb9a6a20247f6554b6d1532 inherit pub_methods_classExiv2_1_1Value"><td class="memItemLeft" align="right" valign="top"><a id="af60376344fb9a6a20247f6554b6d1532"></a>
+virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#af60376344fb9a6a20247f6554b6d1532">toString</a> (long n) const</td></tr>
+<tr class="memdesc:af60376344fb9a6a20247f6554b6d1532 inherit pub_methods_classExiv2_1_1Value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <em>n</em>-th component of the value as a string. The default implementation returns <a class="el" href="classExiv2_1_1Value.html#a6c4e67718590984cb441fcebc3d088ec" title="Return the value as a string. Implemented in terms of write(std::ostream&amp; os) const of the concrete c...">toString()</a>. The behaviour of this method may be undefined if there is no <em>n</em>-th component. <br /></td></tr>
+<tr class="separator:af60376344fb9a6a20247f6554b6d1532 inherit pub_methods_classExiv2_1_1Value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48993086d04a3a87ab7cbb7600986612 inherit pub_methods_classExiv2_1_1Value"><td class="memItemLeft" align="right" valign="top"><a id="a48993086d04a3a87ab7cbb7600986612"></a>
+virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a48993086d04a3a87ab7cbb7600986612">sizeDataArea</a> () const</td></tr>
+<tr class="memdesc:a48993086d04a3a87ab7cbb7600986612 inherit pub_methods_classExiv2_1_1Value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the data area, 0 if there is none. <br /></td></tr>
+<tr class="separator:a48993086d04a3a87ab7cbb7600986612 inherit pub_methods_classExiv2_1_1Value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb34848ea4ad36f19443875d9e8671b0 inherit pub_methods_classExiv2_1_1Value"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#afb34848ea4ad36f19443875d9e8671b0">dataArea</a> () const</td></tr>
+<tr class="memdesc:afb34848ea4ad36f19443875d9e8671b0 inherit pub_methods_classExiv2_1_1Value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a copy of the data area if the value has one. The caller owns this copy and <a class="el" href="classExiv2_1_1DataBuf.html" title="Utility class containing a character array. All it does is to take care of memory allocation and dele...">DataBuf</a> ensures that it will be deleted.  <a href="classExiv2_1_1Value.html#afb34848ea4ad36f19443875d9e8671b0">More...</a><br /></td></tr>
+<tr class="separator:afb34848ea4ad36f19443875d9e8671b0 inherit pub_methods_classExiv2_1_1Value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533f3a5b8363e2b1be3524d2b6b89658 inherit pub_methods_classExiv2_1_1Value"><td class="memItemLeft" align="right" valign="top"><a id="a533f3a5b8363e2b1be3524d2b6b89658"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a533f3a5b8363e2b1be3524d2b6b89658">ok</a> () const</td></tr>
+<tr class="memdesc:a533f3a5b8363e2b1be3524d2b6b89658 inherit pub_methods_classExiv2_1_1Value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the <em>ok</em> status indicator. After a to&lt;Type&gt; conversion, this indicator shows whether the conversion was successful. <br /></td></tr>
+<tr class="separator:a533f3a5b8363e2b1be3524d2b6b89658 inherit pub_methods_classExiv2_1_1Value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Accessors</h2></td></tr>
+<tr class="memitem:adeadb1227704c657d32183af5da010a8"><td class="memItemLeft" align="right" valign="top"><a id="adeadb1227704c657d32183af5da010a8"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpTextValue.html#adeadb1227704c657d32183af5da010a8">value_</a></td></tr>
+<tr class="memdesc:adeadb1227704c657d32183af5da010a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the string values. <br /></td></tr>
+<tr class="separator:adeadb1227704c657d32183af5da010a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba9b162f0276131b1e188af45335c2f7"><td class="memItemLeft" align="right" valign="top"><a id="aba9b162f0276131b1e188af45335c2f7"></a>
+<a class="el" href="classExiv2_1_1Value.html#a0f62e585b82c97738858b743e60dff21">AutoPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clone</b> () const</td></tr>
+<tr class="separator:aba9b162f0276131b1e188af45335c2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a301ecad8ce744248a23e774be11f5d7f"><td class="memItemLeft" align="right" valign="top"><a id="a301ecad8ce744248a23e774be11f5d7f"></a>
+long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpTextValue.html#a301ecad8ce744248a23e774be11f5d7f">size</a> () const</td></tr>
+<tr class="memdesc:a301ecad8ce744248a23e774be11f5d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the value in bytes. <br /></td></tr>
+<tr class="separator:a301ecad8ce744248a23e774be11f5d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42221f975337e639418bfc8d89954de7"><td class="memItemLeft" align="right" valign="top"><a id="a42221f975337e639418bfc8d89954de7"></a>
+virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpTextValue.html#a42221f975337e639418bfc8d89954de7">count</a> () const</td></tr>
+<tr class="memdesc:a42221f975337e639418bfc8d89954de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of components of the value. <br /></td></tr>
+<tr class="separator:a42221f975337e639418bfc8d89954de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a11b24ca40f167a362b14e9ed9eea96"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpTextValue.html#a0a11b24ca40f167a362b14e9ed9eea96">toLong</a> (long n=0) const</td></tr>
+<tr class="memdesc:a0a11b24ca40f167a362b14e9ed9eea96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the value to a long. The optional parameter <em>n</em> is not used and is ignored.  <a href="classExiv2_1_1XmpTextValue.html#a0a11b24ca40f167a362b14e9ed9eea96">More...</a><br /></td></tr>
+<tr class="separator:a0a11b24ca40f167a362b14e9ed9eea96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6da2bb624be28522fe2472531fa87af4"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpTextValue.html#a6da2bb624be28522fe2472531fa87af4">toFloat</a> (long n=0) const</td></tr>
+<tr class="memdesc:a6da2bb624be28522fe2472531fa87af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the value to a float. The optional parameter <em>n</em> is not used and is ignored.  <a href="classExiv2_1_1XmpTextValue.html#a6da2bb624be28522fe2472531fa87af4">More...</a><br /></td></tr>
+<tr class="separator:a6da2bb624be28522fe2472531fa87af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a086634c9fe3290cfa05df894c9a5eee9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceExiv2.html#a95756f3f7fa19103f83addf5fa088a30">Rational</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpTextValue.html#a086634c9fe3290cfa05df894c9a5eee9">toRational</a> (long n=0) const</td></tr>
+<tr class="memdesc:a086634c9fe3290cfa05df894c9a5eee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the value to a Rational. The optional parameter <em>n</em> is not used and is ignored.  <a href="classExiv2_1_1XmpTextValue.html#a086634c9fe3290cfa05df894c9a5eee9">More...</a><br /></td></tr>
+<tr class="separator:a086634c9fe3290cfa05df894c9a5eee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ae7d33d0ad5e65f6c053478384976c"><td class="memItemLeft" align="right" valign="top"><a id="a78ae7d33d0ad5e65f6c053478384976c"></a>
+virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpTextValue.html#a78ae7d33d0ad5e65f6c053478384976c">write</a> (std::ostream &amp;os) const</td></tr>
+<tr class="memdesc:a78ae7d33d0ad5e65f6c053478384976c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the value to an output stream. You do not usually have to use this function; it is used for the implementation of the output operator for Value, <a class="el" href="namespaceExiv2.html#abe882054db13fc2f4f6f7e8e1261d982" title="Output operator for Value types.">operator&lt;&lt;(std::ostream &amp;os, const Value &amp;value)</a>. <br /></td></tr>
+<tr class="separator:a78ae7d33d0ad5e65f6c053478384976c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_static_methods_classExiv2_1_1XmpValue"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classExiv2_1_1XmpValue')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classExiv2_1_1XmpValue.html">Exiv2::XmpValue</a></td></tr>
+<tr class="memitem:a1d47827b7a215239c530833aa006697b inherit pub_static_methods_classExiv2_1_1XmpValue"><td class="memItemLeft" align="right" valign="top"><a id="a1d47827b7a215239c530833aa006697b"></a>
+static <a class="el" href="classExiv2_1_1XmpValue.html#adcef489707e5b72735cccb7bee57cf5c">XmpArrayType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpValue.html#a1d47827b7a215239c530833aa006697b">xmpArrayType</a> (<a class="el" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450c">TypeId</a> <a class="el" href="classExiv2_1_1Value.html#a06a65925d8c11766ded7f7ecb00507c7">typeId</a>)</td></tr>
+<tr class="memdesc:a1d47827b7a215239c530833aa006697b inherit pub_static_methods_classExiv2_1_1XmpValue"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return XMP array type for an array <a class="el" href="classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Value</a> TypeId, xaNone if <em>typeId</em> is not an XMP array value type. <br /></td></tr>
+<tr class="separator:a1d47827b7a215239c530833aa006697b inherit pub_static_methods_classExiv2_1_1XmpValue"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_methods_classExiv2_1_1Value"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classExiv2_1_1Value')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classExiv2_1_1Value.html">Exiv2::Value</a></td></tr>
+<tr class="memitem:ad6ff043921cd1a5c399a9a4fc8257006 inherit pub_static_methods_classExiv2_1_1Value"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classExiv2_1_1Value.html#a0f62e585b82c97738858b743e60dff21">AutoPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#ad6ff043921cd1a5c399a9a4fc8257006">create</a> (<a class="el" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450c">TypeId</a> <a class="el" href="classExiv2_1_1Value.html#a06a65925d8c11766ded7f7ecb00507c7">typeId</a>)</td></tr>
+<tr class="memdesc:ad6ff043921cd1a5c399a9a4fc8257006 inherit pub_static_methods_classExiv2_1_1Value"><td class="mdescLeft">&#160;</td><td class="mdescRight">A (simple) factory to create a <a class="el" href="classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Value</a> type.  <a href="classExiv2_1_1Value.html#ad6ff043921cd1a5c399a9a4fc8257006">More...</a><br /></td></tr>
+<tr class="separator:ad6ff043921cd1a5c399a9a4fc8257006 inherit pub_static_methods_classExiv2_1_1Value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classExiv2_1_1XmpValue"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classExiv2_1_1XmpValue')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classExiv2_1_1XmpValue.html">Exiv2::XmpValue</a></td></tr>
+<tr class="memitem:a18f2c4ef7ded7d42c26792ebec68c91b inherit pro_methods_classExiv2_1_1XmpValue"><td class="memItemLeft" align="right" valign="top"><a id="a18f2c4ef7ded7d42c26792ebec68c91b"></a>
+<a class="el" href="classExiv2_1_1XmpValue.html">XmpValue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpValue.html#a18f2c4ef7ded7d42c26792ebec68c91b">operator=</a> (const <a class="el" href="classExiv2_1_1XmpValue.html">XmpValue</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a18f2c4ef7ded7d42c26792ebec68c91b inherit pro_methods_classExiv2_1_1XmpValue"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator. Protected so that it can only be used by subclasses but not directly. <br /></td></tr>
+<tr class="separator:a18f2c4ef7ded7d42c26792ebec68c91b inherit pro_methods_classExiv2_1_1XmpValue"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classExiv2_1_1Value"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classExiv2_1_1Value')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classExiv2_1_1Value.html">Exiv2::Value</a></td></tr>
+<tr class="memitem:a9d0c89df1b1908fc8ad5db83bcfd1482 inherit pro_methods_classExiv2_1_1Value"><td class="memItemLeft" align="right" valign="top"><a id="a9d0c89df1b1908fc8ad5db83bcfd1482"></a>
+<a class="el" href="classExiv2_1_1Value.html">Value</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a9d0c89df1b1908fc8ad5db83bcfd1482">operator=</a> (const <a class="el" href="classExiv2_1_1Value.html">Value</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a9d0c89df1b1908fc8ad5db83bcfd1482 inherit pro_methods_classExiv2_1_1Value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator. Protected so that it can only be used by subclasses but not directly. <br /></td></tr>
+<tr class="separator:a9d0c89df1b1908fc8ad5db83bcfd1482 inherit pro_methods_classExiv2_1_1Value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classExiv2_1_1Value"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classExiv2_1_1Value')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classExiv2_1_1Value.html">Exiv2::Value</a></td></tr>
+<tr class="memitem:a4dc3a689b4bc1819290525cac491c1a8 inherit pro_attribs_classExiv2_1_1Value"><td class="memItemLeft" align="right" valign="top"><a id="a4dc3a689b4bc1819290525cac491c1a8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a4dc3a689b4bc1819290525cac491c1a8">ok_</a></td></tr>
+<tr class="memdesc:a4dc3a689b4bc1819290525cac491c1a8 inherit pro_attribs_classExiv2_1_1Value"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates the status of the previous to&lt;Type&gt; conversion. <br /></td></tr>
+<tr class="separator:a4dc3a689b4bc1819290525cac491c1a8 inherit pro_attribs_classExiv2_1_1Value"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Value type suitable for simple XMP properties and XMP nodes of complex types which are not parsed into specific values. </p>
+<p>Uses a std::string to store the value. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="xmpsample_8cpp-example.html#_a4">xmpsample.cpp</a>.</dd>
+</dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aadaa78392376573ef52effdbd5a8ffe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadaa78392376573ef52effdbd5a8ffe6">&#9670;&nbsp;</a></span>read() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Exiv2::XmpValue::read</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read the value from a character buffer. </p>
+<p>Uses <a class="el" href="classExiv2_1_1XmpTextValue.html#a03ba8322cd618df04eda0e2c6f7b6246" title="Read a simple property value from buf to set the value.">read(const std::string&amp; buf)</a></p>
+<dl class="section note"><dt>Note</dt><dd>The byte order is required by the interface but not used by this method, so just use the default.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>Pointer to the data buffer to read from </td></tr>
+    <tr><td class="paramname">len</td><td>Number of bytes in the data buffer </td></tr>
+    <tr><td class="paramname">byteOrder</td><td>Byte order. Not needed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if successful. </dd></dl>
+
+</div>
+</div>
+<a id="a03ba8322cd618df04eda0e2c6f7b6246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03ba8322cd618df04eda0e2c6f7b6246">&#9670;&nbsp;</a></span>read() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Exiv2::XmpTextValue::read </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read a simple property value from <em>buf</em> to set the value. </p>
+<p>Sets the value to the contents of <em>buf</em>. A optional keyword, <em>type</em> is supported to set the XMP value type. This is useful for complex value types for which <a class="el" href="namespaceExiv2.html" title="Provides classes and functions to encode and decode Exif and Iptc data. The libexiv2 API consists of ...">Exiv2</a> does not have direct support.</p>
+<p>The format of <em>buf</em> is: <br  />
+ <code>[type=["]Alt|Bag|Seq|Struct["] ]text</code> <br  />
+</p>
+<dl class="section return"><dt>Returns</dt><dd>0 if successful. </dd></dl>
+
+<p>Implements <a class="el" href="classExiv2_1_1XmpValue.html#a7c357e0bee86bd3c6eee197711472821">Exiv2::XmpValue</a>.</p>
+
+</div>
+</div>
+<a id="a6da2bb624be28522fe2472531fa87af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6da2bb624be28522fe2472531fa87af4">&#9670;&nbsp;</a></span>toFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float Exiv2::XmpTextValue::toFloat </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>n</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert the value to a float. The optional parameter <em>n</em> is not used and is ignored. </p>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
+<p>Implements <a class="el" href="classExiv2_1_1Value.html#a22d257caa6c1ffe6416ce02de7bd8c1c">Exiv2::Value</a>.</p>
+
+</div>
+</div>
+<a id="a0a11b24ca40f167a362b14e9ed9eea96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a11b24ca40f167a362b14e9ed9eea96">&#9670;&nbsp;</a></span>toLong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual long Exiv2::XmpTextValue::toLong </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>n</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert the value to a long. The optional parameter <em>n</em> is not used and is ignored. </p>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
+<p>Implements <a class="el" href="classExiv2_1_1Value.html#a4530a3fc3e2305cf994de5476f46f953">Exiv2::Value</a>.</p>
+
+</div>
+</div>
+<a id="a086634c9fe3290cfa05df894c9a5eee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a086634c9fe3290cfa05df894c9a5eee9">&#9670;&nbsp;</a></span>toRational()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespaceExiv2.html#a95756f3f7fa19103f83addf5fa088a30">Rational</a> Exiv2::XmpTextValue::toRational </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>n</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert the value to a Rational. The optional parameter <em>n</em> is not used and is ignored. </p>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
+<p>Implements <a class="el" href="classExiv2_1_1Value.html#a595a4cb549bec8c19d290ca3e95a2678">Exiv2::Value</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>value.hpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

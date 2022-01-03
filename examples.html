@@ -1,0 +1,808 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Exiv2 - Image metadata library and tools</title>
+
+  <!-- Doxygen styles -->
+  <link href="doc/doxygen.css" rel="stylesheet" type="text/css">
+  <link href="doc/customdoxygen.css" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="include/exiv2.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img alt="Exiv2" src="include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="getting-started.html">Getting started</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="whatsnew.html">What's New</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+        <li><a href="makernote.html">Makernote</a></li>
+        <li><a href="doc/examples.html">Examples</a></li>
+        <li><a href="doc/index.html">API</a></li>
+        <li><a href="manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+	    <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="page-header">
+    <h1>Library examples</h1>
+  </div>
+
+  <h2 id="example1">Example 1: exifprint.cpp</h2>
+
+<p class="lead">This is a very simple program to read and print the Exif metadata
+of an image. Go to <a title="Sample usage of high-level metadata operations" 
+href="#example2-output">Example2</a> to see how the
+output looks like.</p>
+
+<div class="fragment"><div class="line"><span class="comment">// ***************************************************************** -*- C++ -*-</span></div>
+<div class="line"><span class="comment">// exifprint.cpp, $Rev: 3090 $</span></div>
+<div class="line"><span class="comment">// Sample program to print the Exif metadata of an image</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="doc/exiv2_8hpp.html" title="Include all Exiv2 header files.">exiv2/exiv2.hpp</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* <span class="keyword">const</span> argv[])</div>
+<div class="line"><span class="keyword">try</span> {</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span> (argc != 2) {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; file\n&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="doc/classExiv2_1_1Image.html#a89ad3ffe7a4e8a943d267d77843415fb" title="Image auto_ptr type.">Exiv2::Image::AutoPtr</a> image = <a name="a0"></a><a class="code" href="doc/classExiv2_1_1ImageFactory.html#aba929c4ca4a71625d12bcb97bcc28161" title="Create an Image subclass of the appropriate type by reading the specified file. Image type is derived...">Exiv2::ImageFactory::open</a>(argv[1]);</div>
+<div class="line">    assert(image.get() != 0);</div>
+<div class="line">    image-&gt;readMetadata();</div>
+<div class="line"></div>
+<div class="line">    <a name="_a1"></a><a class="code" href="doc/classExiv2_1_1ExifData.html" title="A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...">Exiv2::ExifData</a> &amp;exifData = image-&gt;exifData();</div>
+<div class="line">    <span class="keywordflow">if</span> (exifData.<a name="a2"></a><a class="code" href="doc/classExiv2_1_1ExifData.html#a4993c68fbb50731014c307852875c731" title="Return true if there is no Exif metadata.">empty</a>()) {</div>
+<div class="line">        std::string error(argv[1]);</div>
+<div class="line">        error += <span class="stringliteral">&quot;: No Exif data found in the file&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">throw</span> <a name="a4"></a><a class="code" href="doc/namespaceExiv2.html#accd3e49cafe9db52c1e0e6f648753cae" title="Error class used for exceptions (std::string based)">Exiv2::Error</a>(1, error);</div>
+<div class="line">    }</div>
+<div class="line">    <a class="code" href="doc/classExiv2_1_1ExifData.html#a2b8ac7a474d6527c0f3f6a0a9cebef77" title="ExifMetadata const iterator type.">Exiv2::ExifData::const_iterator</a> end = exifData.<a name="a5"></a><a class="code" href="doc/classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe" title="End of the metadata.">end</a>();</div>
+<div class="line">    <span class="keywordflow">for</span> (<a class="code" href="doc/classExiv2_1_1ExifData.html#a2b8ac7a474d6527c0f3f6a0a9cebef77" title="ExifMetadata const iterator type.">Exiv2::ExifData::const_iterator</a> i = exifData.<a name="a6"></a><a class="code" href="doc/classExiv2_1_1ExifData.html#a53bce2980ee060fc2da5fe6751f51db9" title="Begin of the metadata.">begin</a>(); i != end; ++i) {</div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">char</span>* tn = i-&gt;typeName();</div>
+<div class="line">        std::cout &lt;&lt; std::setw(44) &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::left</div>
+<div class="line">                  &lt;&lt; i-&gt;key() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                  &lt;&lt; <span class="stringliteral">&quot;0x&quot;</span> &lt;&lt; std::setw(4) &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; std::right</div>
+<div class="line">                  &lt;&lt; std::hex &lt;&lt; i-&gt;tag() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                  &lt;&lt; std::setw(9) &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::left</div>
+<div class="line">                  &lt;&lt; (tn ? tn : <span class="stringliteral">&quot;Unknown&quot;</span>) &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                  &lt;&lt; std::dec &lt;&lt; std::setw(3)</div>
+<div class="line">                  &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::right</div>
+<div class="line">                  &lt;&lt; i-&gt;count() &lt;&lt; <span class="stringliteral">&quot;  &quot;</span></div>
+<div class="line">                  &lt;&lt; std::dec &lt;&lt; i-&gt;value()</div>
+<div class="line">                  &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"><span class="comment">//catch (std::exception&amp; e) {</span></div>
+<div class="line"><span class="comment">//catch (Exiv2::AnyError&amp; e) {</span></div>
+<div class="line"><span class="keywordflow">catch</span> (<a name="_a7"></a><a class="code" href="doc/classExiv2_1_1BasicError.html" title="Simple error class used for exceptions. An output operator is provided to print errors to a stream...">Exiv2::Error</a>&amp; e) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Caught Exiv2 exception &#39;&quot;</span> &lt;&lt; e.<a name="a8"></a><a class="code" href="doc/classExiv2_1_1BasicError.html#a72e9f29e45d6f59125fa3de232641504" title="Return the error message as a C-string. The pointer returned by what() is valid only as long as the B...">what</a>() &lt;&lt; <span class="stringliteral">&quot;&#39;\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">return</span> -1;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+
+
+<p>&nbsp;</p>
+<hr>
+<h2 id="example2">Example 2: addmoddel.cpp</h2>
+
+<p class="lead">Sample usage of high-level Exiv2 library calls to add, modify and delete Exif metadata.</p>
+
+<div class="fragment"><div class="line"><span class="comment">// ***************************************************************** -*- C++ -*-</span></div>
+<div class="line"><span class="comment">// addmoddel.cpp, $Rev: 3353 $</span></div>
+<div class="line"><span class="comment">// Sample program showing how to add, modify and delete Exif metadata.</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="doc/exiv2_8hpp.html" title="Include all Exiv2 header files.">exiv2/exiv2.hpp</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* <span class="keyword">const</span> argv[])</div>
+<div class="line"><span class="keyword">try</span> {</div>
+<div class="line">    <span class="keywordflow">if</span> (argc != 2) {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; file\n&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">    }</div>
+<div class="line">    std::string file(argv[1]);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Container for exif metadata. This is an example of creating</span></div>
+<div class="line">    <span class="comment">// exif metadata from scratch. If you want to add, modify, delete</span></div>
+<div class="line">    <span class="comment">// metadata that exists in an image, start with ImageFactory::open</span></div>
+<div class="line">    <a name="_a1"></a><a class="code" href="doc/classExiv2_1_1ExifData.html" title="A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...">Exiv2::ExifData</a> exifData;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// *************************************************************************</span></div>
+<div class="line">    <span class="comment">// Add to the Exif data</span></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// This is the quickest way to add (simple) Exif data. If a metadatum for</span></div>
+<div class="line">    <span class="comment">// a given key already exists, its value is overwritten. Otherwise a new</span></div>
+<div class="line">    <span class="comment">// tag is added.</span></div>
+<div class="line">    exifData[<span class="stringliteral">&quot;Exif.Image.Model&quot;</span>] = <span class="stringliteral">&quot;Test 1&quot;</span>;                     <span class="comment">// AsciiValue</span></div>
+<div class="line">    exifData[<span class="stringliteral">&quot;Exif.Image.SamplesPerPixel&quot;</span>] = uint16_t(162);      <span class="comment">// UShortValue</span></div>
+<div class="line">    exifData[<span class="stringliteral">&quot;Exif.Image.XResolution&quot;</span>] = int32_t(-2);            <span class="comment">// LongValue</span></div>
+<div class="line">    exifData[<span class="stringliteral">&quot;Exif.Image.YResolution&quot;</span>] = <a name="a2"></a><a class="code" href="doc/namespaceExiv2.html#a95756f3f7fa19103f83addf5fa088a30" title="8 byte signed rational type.">Exiv2::Rational</a>(-2, 3); <span class="comment">// RationalValue</span></div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Added a few tags the quick way.\n&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Create a ASCII string value (note the use of create)</span></div>
+<div class="line">    <a class="code" href="doc/classExiv2_1_1Value.html#a0f62e585b82c97738858b743e60dff21" title="Shortcut for a Value auto pointer.">Exiv2::Value::AutoPtr</a> v = <a name="a3"></a><a class="code" href="doc/classExiv2_1_1Value.html#ad6ff043921cd1a5c399a9a4fc8257006" title="A (simple) factory to create a Value type.">Exiv2::Value::create</a>(<a name="a4"></a><a class="code" href="doc/namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450ca773cf6dde5caaabb3dcf9fb161fa7dfd" title="Exif ASCII type, 8-bit byte.">Exiv2::asciiString</a>);</div>
+<div class="line">    <span class="comment">// Set the value to a string</span></div>
+<div class="line">    v-&gt;read(<span class="stringliteral">&quot;1999:12:31 23:59:59&quot;</span>);</div>
+<div class="line">    <span class="comment">// Add the value together with its key to the Exif data container</span></div>
+<div class="line">    <a name="_a5"></a><a class="code" href="doc/classExiv2_1_1ExifKey.html" title="Concrete keys for Exif metadata and access to Exif tag reference data.">Exiv2::ExifKey</a> key(<span class="stringliteral">&quot;Exif.Photo.DateTimeOriginal&quot;</span>);</div>
+<div class="line">    exifData.<a name="a6"></a><a class="code" href="doc/classExiv2_1_1ExifData.html#a91d231cd1b9fefc311c5166e30ab66eb" title="Add an Exifdatum from the supplied key and value pair. This method copies (clones) key and value...">add</a>(key, v.get());</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Added key \&quot;&quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;\&quot;, value \&quot;&quot;</span> &lt;&lt; *v &lt;&lt; <span class="stringliteral">&quot;\&quot;\n&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Now create a more interesting value (without using the create method)</span></div>
+<div class="line">    <a class="code" href="doc/classExiv2_1_1ValueType.html#a0c76c512468a47f6eac463f4af278a14" title="Shortcut for a ValueType&lt;T&gt; auto pointer.">Exiv2::URationalValue::AutoPtr</a> rv(<span class="keyword">new</span> <a name="_a7"></a><a class="code" href="doc/classExiv2_1_1ValueType.html" title="Template for a Value of a basic type. This is used for unsigned and signed short, long and rationals...">Exiv2::URationalValue</a>);</div>
+<div class="line">    <span class="comment">// Set two rational components from a string</span></div>
+<div class="line">    rv-&gt;read(<span class="stringliteral">&quot;1/2 1/3&quot;</span>);</div>
+<div class="line">    <span class="comment">// Add more elements through the extended interface of rational value</span></div>
+<div class="line">    rv-&gt;value_.push_back(std::make_pair(2,3));</div>
+<div class="line">    rv-&gt;value_.push_back(std::make_pair(3,4));</div>
+<div class="line">    <span class="comment">// Add the key and value pair to the Exif data</span></div>
+<div class="line">    key = <a class="code" href="doc/classExiv2_1_1ExifKey.html" title="Concrete keys for Exif metadata and access to Exif tag reference data.">Exiv2::ExifKey</a>(<span class="stringliteral">&quot;Exif.Image.PrimaryChromaticities&quot;</span>);</div>
+<div class="line">    exifData.<a class="code" href="doc/classExiv2_1_1ExifData.html#a91d231cd1b9fefc311c5166e30ab66eb" title="Add an Exifdatum from the supplied key and value pair. This method copies (clones) key and value...">add</a>(key, rv.get());</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Added key \&quot;&quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;\&quot;, value \&quot;&quot;</span> &lt;&lt; *rv &lt;&lt; <span class="stringliteral">&quot;\&quot;\n&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// *************************************************************************</span></div>
+<div class="line">    <span class="comment">// Modify Exif data</span></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Since we know that the metadatum exists (or we don&#39;t mind creating a new</span></div>
+<div class="line">    <span class="comment">// tag if it doesn&#39;t), we can simply do this:</span></div>
+<div class="line">    <a name="_a8"></a><a class="code" href="doc/classExiv2_1_1Exifdatum.html" title="An Exif metadatum, consisting of an ExifKey and a Value and methods to manipulate these...">Exiv2::Exifdatum</a>&amp; tag = exifData[<span class="stringliteral">&quot;Exif.Photo.DateTimeOriginal&quot;</span>];</div>
+<div class="line">    std::string date = tag.<a name="a10"></a><a class="code" href="doc/classExiv2_1_1Exifdatum.html#a73d1e5346411c2adf520fec405f2e536" title="Return the value as a string.">toString</a>();</div>
+<div class="line">    date.replace(0, 4, <span class="stringliteral">&quot;2000&quot;</span>);</div>
+<div class="line">    tag.<a name="a11"></a>setValue(date);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Modified key \&quot;&quot;</span> &lt;&lt; tag.<a name="a12"></a><a class="code" href="doc/classExiv2_1_1Exifdatum.html#a6651602de3d217dd622d33ab67289c11" title="Return the key of the Exifdatum.">key</a>()</div>
+<div class="line">              &lt;&lt; <span class="stringliteral">&quot;\&quot;, new value \&quot;&quot;</span> &lt;&lt; tag.<a name="a13"></a><a class="code" href="doc/classExiv2_1_1Exifdatum.html#ad4a621c1399e02648f1fb1fb550e7a53" title="Return a constant reference to the value.">value</a>() &lt;&lt; <span class="stringliteral">&quot;\&quot;\n&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Alternatively, we can use findKey()</span></div>
+<div class="line">    key = <a class="code" href="doc/classExiv2_1_1ExifKey.html" title="Concrete keys for Exif metadata and access to Exif tag reference data.">Exiv2::ExifKey</a>(<span class="stringliteral">&quot;Exif.Image.PrimaryChromaticities&quot;</span>);</div>
+<div class="line">    <a class="code" href="doc/classExiv2_1_1ExifData.html#a02e2a2acb4cfeb0f7755c1a45f94106f" title="ExifMetadata iterator type.">Exiv2::ExifData::iterator</a> pos = exifData.<a name="a14"></a><a class="code" href="doc/classExiv2_1_1ExifData.html#a96c38cbd300ebdfa05f849864b380690" title="Find the first Exifdatum with the given key, return an iterator to it.">findKey</a>(key);</div>
+<div class="line">    <span class="keywordflow">if</span> (pos == exifData.<a name="a15"></a><a class="code" href="doc/classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe" title="End of the metadata.">end</a>()) <span class="keywordflow">throw</span> <a name="_a16"></a><a class="code" href="doc/classExiv2_1_1BasicError.html" title="Simple error class used for exceptions. An output operator is provided to print errors to a stream...">Exiv2::Error</a>(1, <span class="stringliteral">&quot;Key not found&quot;</span>);</div>
+<div class="line">    <span class="comment">// Get a pointer to a copy of the value</span></div>
+<div class="line">    v = pos-&gt;getValue();</div>
+<div class="line">    <span class="comment">// Downcast the Value pointer to its actual type</span></div>
+<div class="line">    <a class="code" href="doc/classExiv2_1_1ValueType.html" title="Template for a Value of a basic type. This is used for unsigned and signed short, long and rationals...">Exiv2::URationalValue</a>* prv = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="doc/classExiv2_1_1ValueType.html" title="Template for a Value of a basic type. This is used for unsigned and signed short, long and rationals...">Exiv2::URationalValue</a>*<span class="keyword">&gt;</span>(v.release());</div>
+<div class="line">    <span class="keywordflow">if</span> (prv == 0) <span class="keywordflow">throw</span> <a name="a17"></a><a class="code" href="doc/namespaceExiv2.html#accd3e49cafe9db52c1e0e6f648753cae" title="Error class used for exceptions (std::string based)">Exiv2::Error</a>(1, <span class="stringliteral">&quot;Downcast failed&quot;</span>);</div>
+<div class="line">    rv = <a name="a18"></a><a class="code" href="doc/classExiv2_1_1ValueType.html#a0c76c512468a47f6eac463f4af278a14" title="Shortcut for a ValueType&lt;T&gt; auto pointer.">Exiv2::URationalValue::AutoPtr</a>(prv);</div>
+<div class="line">    <span class="comment">// Modify the value directly through the interface of URationalValue</span></div>
+<div class="line">    rv-&gt;value_[2] = std::make_pair(88,77);</div>
+<div class="line">    <span class="comment">// Copy the modified value back to the metadatum</span></div>
+<div class="line">    pos-&gt;setValue(rv.get());</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Modified key \&quot;&quot;</span> &lt;&lt; key</div>
+<div class="line">              &lt;&lt; <span class="stringliteral">&quot;\&quot;, new value \&quot;&quot;</span> &lt;&lt; pos-&gt;value() &lt;&lt; <span class="stringliteral">&quot;\&quot;\n&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// *************************************************************************</span></div>
+<div class="line">    <span class="comment">// Delete metadata from the Exif data container</span></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Delete the metadatum at iterator position pos</span></div>
+<div class="line">    key = <a class="code" href="doc/classExiv2_1_1ExifKey.html" title="Concrete keys for Exif metadata and access to Exif tag reference data.">Exiv2::ExifKey</a>(<span class="stringliteral">&quot;Exif.Image.PrimaryChromaticities&quot;</span>);</div>
+<div class="line">    pos = exifData.<a class="code" href="doc/classExiv2_1_1ExifData.html#a96c38cbd300ebdfa05f849864b380690" title="Find the first Exifdatum with the given key, return an iterator to it.">findKey</a>(key);</div>
+<div class="line">    <span class="keywordflow">if</span> (pos == exifData.<a class="code" href="doc/classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe" title="End of the metadata.">end</a>()) <span class="keywordflow">throw</span> <a class="code" href="doc/classExiv2_1_1BasicError.html" title="Simple error class used for exceptions. An output operator is provided to print errors to a stream...">Exiv2::Error</a>(1, <span class="stringliteral">&quot;Key not found&quot;</span>);</div>
+<div class="line">    exifData.<a name="a19"></a><a class="code" href="doc/classExiv2_1_1ExifData.html#a710a66ca8be51192c15729c541b72fb5" title="Delete the Exifdatum at iterator position pos, return the position of the next exifdatum. Note that iterators into the metadata, including pos, are potentially invalidated by this call.">erase</a>(pos);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Deleted key \&quot;&quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;\&quot;\n&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// *************************************************************************</span></div>
+<div class="line">    <span class="comment">// Finally, write the remaining Exif data to the image file</span></div>
+<div class="line">    <a class="code" href="doc/classExiv2_1_1Image.html#a89ad3ffe7a4e8a943d267d77843415fb" title="Image auto_ptr type.">Exiv2::Image::AutoPtr</a> image = <a name="a20"></a><a class="code" href="doc/classExiv2_1_1ImageFactory.html#aba929c4ca4a71625d12bcb97bcc28161" title="Create an Image subclass of the appropriate type by reading the specified file. Image type is derived...">Exiv2::ImageFactory::open</a>(file);</div>
+<div class="line">    assert(image.get() != 0);</div>
+<div class="line"></div>
+<div class="line">    image-&gt;setExifData(exifData);</div>
+<div class="line">    image-&gt;writeMetadata();</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">catch</span> (<a name="_a21"></a><a class="code" href="doc/classExiv2_1_1AnyError.html" title="Error class interface. Allows the definition and use of a hierarchy of error classes which can all be...">Exiv2::AnyError</a>&amp; e) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Caught Exiv2 exception &#39;&quot;</span> &lt;&lt; e &lt;&lt; <span class="stringliteral">&quot;&#39;\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">return</span> -1;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+
+
+<p>&nbsp;</p>
+<div class="row">
+  <div class="col-md-8">
+    <p id="example2-output">Using the print function from 
+      <a title="Reading and printing the Exif metadata of an image" 
+	 href="#example1">Example1</a> shows the
+      following Exif tags in the image. Note the tag
+      <code>Exif.Image.ExifTag</code>: It is required by the Exif standard because
+      the metadata contains an <code>Exif.Photo.*</code> tag and is automatically
+      added by Exiv2 to ensure that the Exif structure is valid.</p>
+
+    <pre>
+<span class="stringliteral">$ exifprint img_2158.jpg</span>
+Exif.Image.Model                  0x0110 Ascii       7  Test 1
+Exif.Image.SamplesPerPixel        0x0115 Short       1  162
+Exif.Image.XResolution            0x011a SLong       1  -2
+Exif.Image.YResolution            0x011b SRational   1  -2/3
+Exif.Image.ExifTag                0x8769 Long        1  89
+Exif.Photo.DateTimeOriginal       0x9003 Ascii      20  2000:12:31 23:59:59
+    </pre>
+
+  </div><!-- /.col-md-8 -->
+  <div class="col-md-4">
+    <img src="include/img_2158.jpg" class="img-responsive img-rounded center-block" title="img_2158.jpg (28036 Bytes)" alt="Image containing the Exif metadata from example 2">
+    <p class="text-center text-muted"><em>Image with the Exif metadata from example 2</em></p>
+  </div><!-- /.col-md-4 -->
+</div><!-- /.row -->
+
+<hr>
+<h2 id="example3">Example 3: iptcprint.cpp</h2>
+
+<p class="lead">This is a very simple program to read and print the IPTC metadata of an image.</p>
+
+<div class="fragment"><div class="line"><span class="comment">// ***************************************************************** -*- C++ -*-</span></div>
+<div class="line"><span class="comment">// iptcprint.cpp, $Rev: 3090 $</span></div>
+<div class="line"><span class="comment">// Sample program to print the IPTC metadata of an image</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="doc/exiv2_8hpp.html" title="Include all Exiv2 header files.">exiv2/exiv2.hpp</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* <span class="keyword">const</span> argv[])</div>
+<div class="line"><span class="keyword">try</span> {</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span> (argc != 2) {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; file\n&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="doc/classExiv2_1_1Image.html#a89ad3ffe7a4e8a943d267d77843415fb" title="Image auto_ptr type.">Exiv2::Image::AutoPtr</a> image = <a name="a0"></a><a class="code" href="doc/classExiv2_1_1ImageFactory.html#aba929c4ca4a71625d12bcb97bcc28161" title="Create an Image subclass of the appropriate type by reading the specified file. Image type is derived...">Exiv2::ImageFactory::open</a>(argv[1]);</div>
+<div class="line">    assert (image.get() != 0);</div>
+<div class="line">    image-&gt;readMetadata();</div>
+<div class="line"></div>
+<div class="line">    <a name="_a1"></a><a class="code" href="doc/classExiv2_1_1IptcData.html" title="A container for IPTC data. This is a top-level class of the Exiv2 library.">Exiv2::IptcData</a> &amp;iptcData = image-&gt;iptcData();</div>
+<div class="line">    <span class="keywordflow">if</span> (iptcData.<a name="a2"></a><a class="code" href="doc/classExiv2_1_1IptcData.html#afda626e27ebecd599005c68022db9c1c" title="Return true if there is no IPTC metadata.">empty</a>()) {</div>
+<div class="line">        std::string error(argv[1]);</div>
+<div class="line">        error += <span class="stringliteral">&quot;: No IPTC data found in the file&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">throw</span> <a name="a4"></a><a class="code" href="doc/namespaceExiv2.html#accd3e49cafe9db52c1e0e6f648753cae" title="Error class used for exceptions (std::string based)">Exiv2::Error</a>(1, error);</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="doc/classExiv2_1_1IptcData.html#a0d53776cd2f36e63fff78c8f142a7caf" title="IptcMetadata iterator type.">Exiv2::IptcData::iterator</a> end = iptcData.<a name="a5"></a><a class="code" href="doc/classExiv2_1_1IptcData.html#a6753e8a713ab2b42a3bdc7b3d9eab401" title="End of the metadata.">end</a>();</div>
+<div class="line">    <span class="keywordflow">for</span> (<a class="code" href="doc/classExiv2_1_1IptcData.html#a0d53776cd2f36e63fff78c8f142a7caf" title="IptcMetadata iterator type.">Exiv2::IptcData::iterator</a> md = iptcData.<a name="a6"></a><a class="code" href="doc/classExiv2_1_1IptcData.html#a03385c128b29d262ade837093fddc0d2" title="Begin of the metadata.">begin</a>(); md != end; ++md) {</div>
+<div class="line">        std::cout &lt;&lt; std::setw(44) &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::left</div>
+<div class="line">                  &lt;&lt; md-&gt;key() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                  &lt;&lt; <span class="stringliteral">&quot;0x&quot;</span> &lt;&lt; std::setw(4) &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; std::right</div>
+<div class="line">                  &lt;&lt; std::hex &lt;&lt; md-&gt;tag() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                  &lt;&lt; std::setw(9) &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::left</div>
+<div class="line">                  &lt;&lt; md-&gt;typeName() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                  &lt;&lt; std::dec &lt;&lt; std::setw(3)</div>
+<div class="line">                  &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::right</div>
+<div class="line">                  &lt;&lt; md-&gt;count() &lt;&lt; <span class="stringliteral">&quot;  &quot;</span></div>
+<div class="line">                  &lt;&lt; std::dec &lt;&lt; md-&gt;value()</div>
+<div class="line">                  &lt;&lt; std::endl;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">catch</span> (<a name="_a7"></a><a class="code" href="doc/classExiv2_1_1AnyError.html" title="Error class interface. Allows the definition and use of a hierarchy of error classes which can all be...">Exiv2::AnyError</a>&amp; e) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Caught Exiv2 exception &#39;&quot;</span> &lt;&lt; e &lt;&lt; <span class="stringliteral">&quot;&#39;\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">return</span> -1;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+
+
+<p>&nbsp;</p>
+<div class="row">
+  <div class="col-md-9">
+    <pre>
+<span class="stringliteral">$ iptcprint smiley1.jpg</span>
+Iptc.Application2.Headline              0x0069 String     17  The headline I am
+Iptc.Application2.Keywords              0x0019 String     19  Yet another keyword
+Iptc.Application2.DateCreated           0x0037 Date        8  2004-08-03
+Iptc.Application2.Urgency               0x000a String      5  very!
+Iptc.Envelope.ModelVersion              0x0000 Short       1  42
+Iptc.Envelope.TimeSent                  0x0050 Time       11  14:41:00-05:00
+Iptc.Application2.RasterizedCaption     0x007d Undefined   8  230 42 34 2 90 84 23 146
+Iptc.0x0009.0x0001                      0x0001 String      9  Who am I?
+    </pre>
+  </div><!-- /.col-md-9 -->
+  <div class="col-md-3">
+    <img src="include/smiley1.jpg" id="smiley1" class="img-responsive img-thumbnail center-block" title="smiley1.jpg (2909 Bytes)" alt="Sample image with the IPTC data from example 3">
+    <p class="text-center text-muted"><em>Image with the IPTC data<br>from examples 3 &amp; 4</em></p>
+  </div><!-- /.col-md-3 -->
+</div><!-- /.row -->
+
+<hr>
+<h2 id="example4">Example 4: iptceasy.cpp</h2>
+
+<p class="lead">This shows the quickest way to access, set or modify IPTC metadata, which is similar to how <code>std::map</code> works.
+The sample program writes the IPTC data to a file. <a title="Reading and printing the IPTC metadata of an image" 
+href="#smiley1">Example 3</a>, above, has the image with this IPTC data.</p>
+
+<div class="fragment"><div class="line"><span class="comment">// ***************************************************************** -*- C++ -*-</span></div>
+<div class="line"><span class="comment">// iptceasy.cpp, $Rev: 3090 $</span></div>
+<div class="line"><span class="comment">// The quickest way to access, set or modify IPTC metadata.</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="doc/exiv2_8hpp.html" title="Include all Exiv2 header files.">exiv2/exiv2.hpp</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* <span class="keyword">const</span> argv[])</div>
+<div class="line"><span class="keyword">try</span> {</div>
+<div class="line">    <span class="keywordflow">if</span> (argc != 2) {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; file\n&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">    }</div>
+<div class="line">    std::string file(argv[1]);</div>
+<div class="line"></div>
+<div class="line">    <a name="_a1"></a><a class="code" href="doc/classExiv2_1_1IptcData.html" title="A container for IPTC data. This is a top-level class of the Exiv2 library.">Exiv2::IptcData</a> iptcData;</div>
+<div class="line"></div>
+<div class="line">    iptcData[<span class="stringliteral">&quot;Iptc.Application2.Headline&quot;</span>] = <span class="stringliteral">&quot;The headline I am&quot;</span>;</div>
+<div class="line">    iptcData[<span class="stringliteral">&quot;Iptc.Application2.Keywords&quot;</span>] = <span class="stringliteral">&quot;Yet another keyword&quot;</span>;</div>
+<div class="line">    iptcData[<span class="stringliteral">&quot;Iptc.Application2.DateCreated&quot;</span>] = <span class="stringliteral">&quot;2004-8-3&quot;</span>;</div>
+<div class="line">    iptcData[<span class="stringliteral">&quot;Iptc.Application2.Urgency&quot;</span>] = uint16_t(1);</div>
+<div class="line">    iptcData[<span class="stringliteral">&quot;Iptc.Envelope.ModelVersion&quot;</span>] = 42;</div>
+<div class="line">    iptcData[<span class="stringliteral">&quot;Iptc.Envelope.TimeSent&quot;</span>] = <span class="stringliteral">&quot;14:41:0-05:00&quot;</span>;</div>
+<div class="line">    iptcData[<span class="stringliteral">&quot;Iptc.Application2.RasterizedCaption&quot;</span>] = <span class="stringliteral">&quot;230 42 34 2 90 84 23 146&quot;</span>;</div>
+<div class="line">    iptcData[<span class="stringliteral">&quot;Iptc.0x0009.0x0001&quot;</span>] = <span class="stringliteral">&quot;Who am I?&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <a name="_a2"></a><a class="code" href="doc/classExiv2_1_1StringValue.html" title="Value for string type.">Exiv2::StringValue</a> value;</div>
+<div class="line">    value.<a name="a3"></a><a class="code" href="doc/classExiv2_1_1StringValueBase.html#a6882ba90138a30fcf2123c74f928a75e" title="Read the value from buf. This default implementation uses buf as it is.">read</a>(<span class="stringliteral">&quot;very!&quot;</span>);</div>
+<div class="line">    iptcData[<span class="stringliteral">&quot;Iptc.Application2.Urgency&quot;</span>] = value;</div>
+<div class="line"></div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Time sent: &quot;</span> &lt;&lt; iptcData[<span class="stringliteral">&quot;Iptc.Envelope.TimeSent&quot;</span>] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Open image file</span></div>
+<div class="line">    <a class="code" href="doc/classExiv2_1_1Image.html#a89ad3ffe7a4e8a943d267d77843415fb" title="Image auto_ptr type.">Exiv2::Image::AutoPtr</a> image = <a name="a4"></a><a class="code" href="doc/classExiv2_1_1ImageFactory.html#aba929c4ca4a71625d12bcb97bcc28161" title="Create an Image subclass of the appropriate type by reading the specified file. Image type is derived...">Exiv2::ImageFactory::open</a>(file);</div>
+<div class="line">    assert (image.get() != 0);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Set IPTC data and write it to the file</span></div>
+<div class="line">    image-&gt;setIptcData(iptcData);</div>
+<div class="line">    image-&gt;writeMetadata();</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">catch</span> (<a name="_a5"></a><a class="code" href="doc/classExiv2_1_1AnyError.html" title="Error class interface. Allows the definition and use of a hierarchy of error classes which can all be...">Exiv2::AnyError</a>&amp; e) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Caught Exiv2 exception &#39;&quot;</span> &lt;&lt; e &lt;&lt; <span class="stringliteral">&quot;&#39;\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">return</span> -1;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+
+
+<p>&nbsp;</p>
+<hr>
+<h2 id="example5">Example 5: xmpsample.cpp</h2>
+
+<p class="lead">Sample (test) usage of high level XMP classes. This example shows various aspects
+ of setting XMP metadata, including complex types. See also <a href="#example2">Example 2: addmoddel.cpp</a></p>
+
+<div class="fragment"><div class="line"><span class="comment">// ***************************************************************** -*- C++ -*-</span></div>
+<div class="line"><span class="comment">// xmpsample.cpp, $Rev: 3090 $</span></div>
+<div class="line"><span class="comment">// Sample/test for high level XMP classes. See also addmoddel.cpp</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="doc/exiv2_8hpp.html" title="Include all Exiv2 header files.">exiv2/exiv2.hpp</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">bool</span> isEqual(<span class="keywordtype">float</span> a, <span class="keywordtype">float</span> b)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">double</span> d = std::fabs(a - b);</div>
+<div class="line">    <span class="keywordflow">return</span> d &lt; 0.00001;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line"><span class="keyword">try</span> {</div>
+<div class="line">    <span class="comment">// The XMP property container</span></div>
+<div class="line">    <a name="_a0"></a><a class="code" href="doc/classExiv2_1_1XmpData.html" title="A container for XMP data. This is a top-level class of the Exiv2 library.">Exiv2::XmpData</a> xmpData;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// Teaser: Setting XMP properties doesn&#39;t get much easier than this:</span></div>
+<div class="line"></div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.source&quot;</span>]  = <span class="stringliteral">&quot;xmpsample.cpp&quot;</span>;    <span class="comment">// a simple text value</span></div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.subject&quot;</span>] = <span class="stringliteral">&quot;Palmtree&quot;</span>;         <span class="comment">// an array item</span></div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.subject&quot;</span>] = <span class="stringliteral">&quot;Rubbertree&quot;</span>;       <span class="comment">// add a 2nd array item</span></div>
+<div class="line">    <span class="comment">// a language alternative with two entries and without default</span></div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.title&quot;</span>]   = <span class="stringliteral">&quot;lang=de-DE Sonnenuntergang am Strand&quot;</span>;</div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.title&quot;</span>]   = <span class="stringliteral">&quot;lang=en-US Sunset on the beach&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// Any properties can be set provided the namespace is known. Values of any</span></div>
+<div class="line">    <span class="comment">// type can be assigned to an Xmpdatum, if they have an output operator. The</span></div>
+<div class="line">    <span class="comment">// default XMP value type for unknown properties is a simple text value.</span></div>
+<div class="line"></div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.one&quot;</span>]     = -1;</div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.two&quot;</span>]     = 3.1415;</div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.three&quot;</span>]   = <a name="a1"></a><a class="code" href="doc/namespaceExiv2.html#a95756f3f7fa19103f83addf5fa088a30" title="8 byte signed rational type.">Exiv2::Rational</a>(5, 7);</div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.four&quot;</span>]    = uint16_t(255);</div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.five&quot;</span>]    = int32_t(256);</div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.six&quot;</span>]     = <span class="keyword">false</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// In addition, there is a dedicated assignment operator for Exiv2::Value</span></div>
+<div class="line">    <a name="_a2"></a><a class="code" href="doc/classExiv2_1_1XmpTextValue.html" title="Value type suitable for simple XMP properties and XMP nodes of complex types which are not parsed int...">Exiv2::XmpTextValue</a> val(<span class="stringliteral">&quot;Seven&quot;</span>);</div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.seven&quot;</span>]   = val;</div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.eight&quot;</span>]   = <span class="keyword">true</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Extracting values</span></div>
+<div class="line">    assert(xmpData[<span class="stringliteral">&quot;Xmp.dc.one&quot;</span>].toLong() == -1);</div>
+<div class="line">    assert(xmpData[<span class="stringliteral">&quot;Xmp.dc.one&quot;</span>].value().ok());</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">const</span> <a name="_a3"></a><a class="code" href="doc/classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Exiv2::Value</a> &amp;getv1 = xmpData[<span class="stringliteral">&quot;Xmp.dc.one&quot;</span>].value();</div>
+<div class="line">    assert(isEqual(getv1.<a name="a4"></a><a class="code" href="doc/classExiv2_1_1Value.html#a22d257caa6c1ffe6416ce02de7bd8c1c" title="Convert the n-th component of the value to a float. The behaviour of this method may be undefined if ...">toFloat</a>(), -1)); </div>
+<div class="line">    assert(getv1.<a name="a5"></a><a class="code" href="doc/classExiv2_1_1Value.html#a161550b3ef31b3a14b1d75149ba9ba71" title="Check the ok status indicator. After a to&lt;Type&gt; conversion, this indicator shows whether the conversi...">ok</a>());</div>
+<div class="line">    assert(getv1.<a name="a6"></a><a class="code" href="doc/classExiv2_1_1Value.html#a595a4cb549bec8c19d290ca3e95a2678" title="Convert the n-th component of the value to a Rational. The behaviour of this method may be undefined ...">toRational</a>() == <a class="code" href="doc/namespaceExiv2.html#a95756f3f7fa19103f83addf5fa088a30" title="8 byte signed rational type.">Exiv2::Rational</a>(-1, 1));</div>
+<div class="line">    assert(getv1.<a class="code" href="doc/classExiv2_1_1Value.html#a161550b3ef31b3a14b1d75149ba9ba71" title="Check the ok status indicator. After a to&lt;Type&gt; conversion, this indicator shows whether the conversi...">ok</a>());</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="doc/classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Exiv2::Value</a> &amp;getv2 = xmpData[<span class="stringliteral">&quot;Xmp.dc.two&quot;</span>].value();</div>
+<div class="line">    assert(isEqual(getv2.toFloat(), 3.1415f)); </div>
+<div class="line">    assert(getv2.ok());</div>
+<div class="line">    assert(getv2.toLong() == 3);</div>
+<div class="line">    assert(getv2.ok());</div>
+<div class="line">    <a class="code" href="doc/namespaceExiv2.html#a95756f3f7fa19103f83addf5fa088a30" title="8 byte signed rational type.">Exiv2::Rational</a> R = getv2.toRational();</div>
+<div class="line">    assert(getv2.ok());</div>
+<div class="line">    assert(isEqual(static_cast&lt;float&gt;(R.first) / R.second, 3.1415f ));</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="doc/classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Exiv2::Value</a> &amp;getv3 = xmpData[<span class="stringliteral">&quot;Xmp.dc.three&quot;</span>].value();</div>
+<div class="line">    assert(isEqual(getv3.<a class="code" href="doc/classExiv2_1_1Value.html#a22d257caa6c1ffe6416ce02de7bd8c1c" title="Convert the n-th component of the value to a float. The behaviour of this method may be undefined if ...">toFloat</a>(), 5.0f/7.0f)); </div>
+<div class="line">    assert(getv3.<a class="code" href="doc/classExiv2_1_1Value.html#a161550b3ef31b3a14b1d75149ba9ba71" title="Check the ok status indicator. After a to&lt;Type&gt; conversion, this indicator shows whether the conversi...">ok</a>());</div>
+<div class="line">    assert(getv3.<a name="a7"></a><a class="code" href="doc/classExiv2_1_1Value.html#a4530a3fc3e2305cf994de5476f46f953" title="Convert the n-th component of the value to a long. The behaviour of this method may be undefined if t...">toLong</a>() == 0);  <span class="comment">// long(5.0 / 7.0) </span></div>
+<div class="line">    assert(getv3.<a class="code" href="doc/classExiv2_1_1Value.html#a161550b3ef31b3a14b1d75149ba9ba71" title="Check the ok status indicator. After a to&lt;Type&gt; conversion, this indicator shows whether the conversi...">ok</a>());</div>
+<div class="line">    assert(getv3.<a class="code" href="doc/classExiv2_1_1Value.html#a595a4cb549bec8c19d290ca3e95a2678" title="Convert the n-th component of the value to a Rational. The behaviour of this method may be undefined ...">toRational</a>() == <a class="code" href="doc/namespaceExiv2.html#a95756f3f7fa19103f83addf5fa088a30" title="8 byte signed rational type.">Exiv2::Rational</a>(5, 7));</div>
+<div class="line">    assert(getv3.<a class="code" href="doc/classExiv2_1_1Value.html#a161550b3ef31b3a14b1d75149ba9ba71" title="Check the ok status indicator. After a to&lt;Type&gt; conversion, this indicator shows whether the conversi...">ok</a>());</div>
+<div class="line">    </div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="doc/classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Exiv2::Value</a> &amp;getv6 = xmpData[<span class="stringliteral">&quot;Xmp.dc.six&quot;</span>].value();</div>
+<div class="line">    assert(getv6.toLong() == 0);</div>
+<div class="line">    assert(getv6.ok());</div>
+<div class="line">    assert(getv6.toFloat() == 0.0);</div>
+<div class="line">    assert(getv6.ok());</div>
+<div class="line">    assert(getv6.toRational() == <a class="code" href="doc/namespaceExiv2.html#a95756f3f7fa19103f83addf5fa088a30" title="8 byte signed rational type.">Exiv2::Rational</a>(0, 1));</div>
+<div class="line">    assert(getv6.ok());</div>
+<div class="line">    </div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="doc/classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Exiv2::Value</a> &amp;getv7 = xmpData[<span class="stringliteral">&quot;Xmp.dc.seven&quot;</span>].value();</div>
+<div class="line">    getv7.toLong(); <span class="comment">// this should fail</span></div>
+<div class="line">    assert(!getv7.ok()); </div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="doc/classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Exiv2::Value</a> &amp;getv8 = xmpData[<span class="stringliteral">&quot;Xmp.dc.eight&quot;</span>].value();</div>
+<div class="line">    assert(getv8.toLong() == 1);</div>
+<div class="line">    assert(getv8.ok());</div>
+<div class="line">    assert(getv8.toFloat() == 1.0);</div>
+<div class="line">    assert(getv8.ok());</div>
+<div class="line">    assert(getv8.toRational() == <a class="code" href="doc/namespaceExiv2.html#a95756f3f7fa19103f83addf5fa088a30" title="8 byte signed rational type.">Exiv2::Rational</a>(1, 1));</div>
+<div class="line">    assert(getv8.ok());</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Deleting an XMP property</span></div>
+<div class="line">    <a class="code" href="doc/classExiv2_1_1XmpData.html#a6ad054efbea675843895e3f74c3c1923" title="XmpMetadata iterator type.">Exiv2::XmpData::iterator</a> pos = xmpData.<a name="a8"></a><a class="code" href="doc/classExiv2_1_1XmpData.html#af4d4e63ed5641dbc6e211b880f6d0990" title="Find the first Xmpdatum with the given key, return an iterator to it.">findKey</a>(<a name="_a9"></a><a class="code" href="doc/classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">Exiv2::XmpKey</a>(<span class="stringliteral">&quot;Xmp.dc.eight&quot;</span>));</div>
+<div class="line">    <span class="keywordflow">if</span> (pos == xmpData.<a name="a10"></a><a class="code" href="doc/classExiv2_1_1XmpData.html#a1db4d5a92a7ec0694da08a7dee58faac" title="End of the metadata.">end</a>()) <span class="keywordflow">throw</span> <a name="_a11"></a><a class="code" href="doc/classExiv2_1_1BasicError.html" title="Simple error class used for exceptions. An output operator is provided to print errors to a stream...">Exiv2::Error</a>(1, <span class="stringliteral">&quot;Key not found&quot;</span>);</div>
+<div class="line">    xmpData.<a name="a12"></a><a class="code" href="doc/classExiv2_1_1XmpData.html#aa608042a71623e7dac640c135cb768e6" title="Delete the Xmpdatum at iterator position pos, return the position of the next Xmpdatum.">erase</a>(pos);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// Exiv2 has specialized values for simple XMP properties, arrays of simple</span></div>
+<div class="line">    <span class="comment">// properties and language alternatives.</span></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Add a simple XMP property in a known namespace    </span></div>
+<div class="line">    <a class="code" href="doc/classExiv2_1_1Value.html#a0f62e585b82c97738858b743e60dff21" title="Shortcut for a Value auto pointer.">Exiv2::Value::AutoPtr</a> v = <a name="a13"></a><a class="code" href="doc/classExiv2_1_1Value.html#ad6ff043921cd1a5c399a9a4fc8257006" title="A (simple) factory to create a Value type.">Exiv2::Value::create</a>(<a name="a14"></a><a class="code" href="doc/namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450ca77cea60f60ef2c6f0f986137c5404c02" title="XMP text type.">Exiv2::xmpText</a>);</div>
+<div class="line">    v-&gt;read(<span class="stringliteral">&quot;image/jpeg&quot;</span>);</div>
+<div class="line">    xmpData.<a name="a15"></a><a class="code" href="doc/classExiv2_1_1XmpData.html#a8ce28ae5c68a30b8e646c7ddfed75843" title="Add an Xmpdatum from the supplied key and value pair. This method copies (clones) the value...">add</a>(<a class="code" href="doc/classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">Exiv2::XmpKey</a>(<span class="stringliteral">&quot;Xmp.dc.format&quot;</span>), v.get());</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Add an ordered array of text values.</span></div>
+<div class="line">    v = <a class="code" href="doc/classExiv2_1_1Value.html#ad6ff043921cd1a5c399a9a4fc8257006" title="A (simple) factory to create a Value type.">Exiv2::Value::create</a>(<a name="a16"></a><a class="code" href="doc/namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450ca969c20e44455272599e3a273471546e8" title="XMP sequence type.">Exiv2::xmpSeq</a>); <span class="comment">// or xmpBag or xmpAlt.</span></div>
+<div class="line">    v-&gt;read(<span class="stringliteral">&quot;1) The first creator&quot;</span>);         <span class="comment">// The sequence in which the array</span></div>
+<div class="line">    v-&gt;read(<span class="stringliteral">&quot;2) The second creator&quot;</span>);        <span class="comment">// elements are added is their</span></div>
+<div class="line">    v-&gt;read(<span class="stringliteral">&quot;3) And another one&quot;</span>);           <span class="comment">// order in the array.</span></div>
+<div class="line">    xmpData.<a class="code" href="doc/classExiv2_1_1XmpData.html#a8ce28ae5c68a30b8e646c7ddfed75843" title="Add an Xmpdatum from the supplied key and value pair. This method copies (clones) the value...">add</a>(<a class="code" href="doc/classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">Exiv2::XmpKey</a>(<span class="stringliteral">&quot;Xmp.dc.creator&quot;</span>), v.get());</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Add a language alternative property</span></div>
+<div class="line">    v = <a class="code" href="doc/classExiv2_1_1Value.html#ad6ff043921cd1a5c399a9a4fc8257006" title="A (simple) factory to create a Value type.">Exiv2::Value::create</a>(<a name="a17"></a><a class="code" href="doc/namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450ca52dce1d022dd8927bc651d2e51dc1bcd" title="XMP language alternative type.">Exiv2::langAlt</a>);</div>
+<div class="line">    v-&gt;read(<span class="stringliteral">&quot;lang=de-DE Hallo, Welt&quot;</span>);       <span class="comment">// The default doesn&#39;t need a </span></div>
+<div class="line">    v-&gt;read(<span class="stringliteral">&quot;Hello, World&quot;</span>);                 <span class="comment">// qualifier</span></div>
+<div class="line">    xmpData.<a class="code" href="doc/classExiv2_1_1XmpData.html#a8ce28ae5c68a30b8e646c7ddfed75843" title="Add an Xmpdatum from the supplied key and value pair. This method copies (clones) the value...">add</a>(<a class="code" href="doc/classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">Exiv2::XmpKey</a>(<span class="stringliteral">&quot;Xmp.dc.description&quot;</span>), v.get());</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// According to the XMP specification, Xmp.tiff.ImageDescription is an</span></div>
+<div class="line">    <span class="comment">// alias for Xmp.dc.description. Exiv2 treats an alias just like any</span></div>
+<div class="line">    <span class="comment">// other property and leaves it to the application to implement specific</span></div>
+<div class="line">    <span class="comment">// behaviour if desired.</span></div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.tiff.ImageDescription&quot;</span>] = <span class="stringliteral">&quot;TIFF image description&quot;</span>;</div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.tiff.ImageDescription&quot;</span>] = <span class="stringliteral">&quot;lang=de-DE TIFF Bildbeschreibung&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// Register a namespace which Exiv2 doesn&#39;t know yet. This is only needed</span></div>
+<div class="line">    <span class="comment">// when properties are added manually. If the XMP metadata is read from an</span></div>
+<div class="line">    <span class="comment">// image, namespaces are decoded and registered at the same time.</span></div>
+<div class="line">    <a name="a18"></a><a class="code" href="doc/classExiv2_1_1XmpProperties.html#ae58ee081625b7924563e93a1ba184fec" title="Register namespace ns with preferred prefix prefix.">Exiv2::XmpProperties::registerNs</a>(<span class="stringliteral">&quot;myNamespace/&quot;</span>, <span class="stringliteral">&quot;ns&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// Add a property in the new custom namespace.</span></div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.ns.myProperty&quot;</span>] = <span class="stringliteral">&quot;myValue&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// There are no specialized values for structures, qualifiers and nested</span></div>
+<div class="line">    <span class="comment">// types. However, these can be added by using an XmpTextValue and a path as</span></div>
+<div class="line">    <span class="comment">// the key.</span></div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Add a structure</span></div>
+<div class="line">    <a class="code" href="doc/classExiv2_1_1XmpTextValue.html" title="Value type suitable for simple XMP properties and XMP nodes of complex types which are not parsed int...">Exiv2::XmpTextValue</a> tv(<span class="stringliteral">&quot;16&quot;</span>);</div>
+<div class="line">    xmpData.<a class="code" href="doc/classExiv2_1_1XmpData.html#a8ce28ae5c68a30b8e646c7ddfed75843" title="Add an Xmpdatum from the supplied key and value pair. This method copies (clones) the value...">add</a>(<a class="code" href="doc/classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">Exiv2::XmpKey</a>(<span class="stringliteral">&quot;Xmp.xmpDM.videoFrameSize/stDim:w&quot;</span>), &amp;tv);</div>
+<div class="line">    tv.read(<span class="stringliteral">&quot;9&quot;</span>);</div>
+<div class="line">    xmpData.<a class="code" href="doc/classExiv2_1_1XmpData.html#a8ce28ae5c68a30b8e646c7ddfed75843" title="Add an Xmpdatum from the supplied key and value pair. This method copies (clones) the value...">add</a>(<a class="code" href="doc/classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">Exiv2::XmpKey</a>(<span class="stringliteral">&quot;Xmp.xmpDM.videoFrameSize/stDim:h&quot;</span>), &amp;tv);</div>
+<div class="line">    tv.read(<span class="stringliteral">&quot;inch&quot;</span>);</div>
+<div class="line">    xmpData.<a class="code" href="doc/classExiv2_1_1XmpData.html#a8ce28ae5c68a30b8e646c7ddfed75843" title="Add an Xmpdatum from the supplied key and value pair. This method copies (clones) the value...">add</a>(<a class="code" href="doc/classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">Exiv2::XmpKey</a>(<span class="stringliteral">&quot;Xmp.xmpDM.videoFrameSize/stDim:unit&quot;</span>), &amp;tv);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Add an element with a qualifier (using the namespace registered above)</span></div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.publisher&quot;</span>] = <span class="stringliteral">&quot;James Bond&quot;</span>;  <span class="comment">// creates an unordered array</span></div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.dc.publisher[1]/?ns:role&quot;</span>] = <span class="stringliteral">&quot;secret agent&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Add a qualifer to an array element of Xmp.dc.creator (added above)</span></div>
+<div class="line">    tv.read(<span class="stringliteral">&quot;programmer&quot;</span>);</div>
+<div class="line">    xmpData.<a class="code" href="doc/classExiv2_1_1XmpData.html#a8ce28ae5c68a30b8e646c7ddfed75843" title="Add an Xmpdatum from the supplied key and value pair. This method copies (clones) the value...">add</a>(<a class="code" href="doc/classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">Exiv2::XmpKey</a>(<span class="stringliteral">&quot;Xmp.dc.creator[2]/?ns:role&quot;</span>), &amp;tv);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Add an array of structures</span></div>
+<div class="line">    tv.read(<span class="stringliteral">&quot;&quot;</span>);                                         <span class="comment">// Clear the value</span></div>
+<div class="line">    tv.setXmpArrayType(Exiv2::XmpValue::xaBag);</div>
+<div class="line">    xmpData.<a class="code" href="doc/classExiv2_1_1XmpData.html#a8ce28ae5c68a30b8e646c7ddfed75843" title="Add an Xmpdatum from the supplied key and value pair. This method copies (clones) the value...">add</a>(<a class="code" href="doc/classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">Exiv2::XmpKey</a>(<span class="stringliteral">&quot;Xmp.xmpBJ.JobRef&quot;</span>), &amp;tv); <span class="comment">// Set the array type.</span></div>
+<div class="line"></div>
+<div class="line">    tv.setXmpArrayType(Exiv2::XmpValue::xaNone);</div>
+<div class="line">    tv.read(<span class="stringliteral">&quot;Birthday party&quot;</span>);</div>
+<div class="line">    xmpData.<a class="code" href="doc/classExiv2_1_1XmpData.html#a8ce28ae5c68a30b8e646c7ddfed75843" title="Add an Xmpdatum from the supplied key and value pair. This method copies (clones) the value...">add</a>(<a class="code" href="doc/classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">Exiv2::XmpKey</a>(<span class="stringliteral">&quot;Xmp.xmpBJ.JobRef[1]/stJob:name&quot;</span>), &amp;tv);</div>
+<div class="line">    tv.read(<span class="stringliteral">&quot;Photographer&quot;</span>);</div>
+<div class="line">    xmpData.<a class="code" href="doc/classExiv2_1_1XmpData.html#a8ce28ae5c68a30b8e646c7ddfed75843" title="Add an Xmpdatum from the supplied key and value pair. This method copies (clones) the value...">add</a>(<a class="code" href="doc/classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">Exiv2::XmpKey</a>(<span class="stringliteral">&quot;Xmp.xmpBJ.JobRef[1]/stJob:role&quot;</span>), &amp;tv);</div>
+<div class="line"></div>
+<div class="line">    tv.read(<span class="stringliteral">&quot;Wedding ceremony&quot;</span>);</div>
+<div class="line">    xmpData.<a class="code" href="doc/classExiv2_1_1XmpData.html#a8ce28ae5c68a30b8e646c7ddfed75843" title="Add an Xmpdatum from the supplied key and value pair. This method copies (clones) the value...">add</a>(<a class="code" href="doc/classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">Exiv2::XmpKey</a>(<span class="stringliteral">&quot;Xmp.xmpBJ.JobRef[2]/stJob:name&quot;</span>), &amp;tv);</div>
+<div class="line">    tv.read(<span class="stringliteral">&quot;Best man&quot;</span>);</div>
+<div class="line">    xmpData.<a class="code" href="doc/classExiv2_1_1XmpData.html#a8ce28ae5c68a30b8e646c7ddfed75843" title="Add an Xmpdatum from the supplied key and value pair. This method copies (clones) the value...">add</a>(<a class="code" href="doc/classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">Exiv2::XmpKey</a>(<span class="stringliteral">&quot;Xmp.xmpBJ.JobRef[2]/stJob:role&quot;</span>), &amp;tv);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Add a creator contact info structure</span></div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.iptc.CreatorContactInfo/Iptc4xmpCore:CiAdrCity&quot;</span>] = <span class="stringliteral">&quot;Kuala Lumpur&quot;</span>;</div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.iptc.CreatorContactInfo/Iptc4xmpCore:CiAdrCtry&quot;</span>] = <span class="stringliteral">&quot;Malaysia&quot;</span>;</div>
+<div class="line">    xmpData[<span class="stringliteral">&quot;Xmp.iptc.CreatorContactInfo/Iptc4xmpCore:CiUrlWork&quot;</span>] = <span class="stringliteral">&quot;http://www.exiv2.org&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// Output XMP properties</span></div>
+<div class="line">    <span class="keywordflow">for</span> (<a class="code" href="doc/classExiv2_1_1XmpData.html#a9c0a6575296f3da8bfc200091da40f2e" title="XmpMetadata const iterator type.">Exiv2::XmpData::const_iterator</a> md = xmpData.<a name="a19"></a><a class="code" href="doc/classExiv2_1_1XmpData.html#aa6649bbd9d1f35555778febb49d5857a" title="Begin of the metadata.">begin</a>(); </div>
+<div class="line">         md != xmpData.<a class="code" href="doc/classExiv2_1_1XmpData.html#a1db4d5a92a7ec0694da08a7dee58faac" title="End of the metadata.">end</a>(); ++md) {</div>
+<div class="line">        std::cout &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::left</div>
+<div class="line">                  &lt;&lt; std::setw(44)</div>
+<div class="line">                  &lt;&lt; md-&gt;key() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                  &lt;&lt; std::setw(9) &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::left</div>
+<div class="line">                  &lt;&lt; md-&gt;typeName() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                  &lt;&lt; std::dec &lt;&lt; std::setw(3)</div>
+<div class="line">                  &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::right</div>
+<div class="line">                  &lt;&lt; md-&gt;<a name="a20"></a><a class="code" href="doc/classExiv2_1_1XmpData.html#a65b24c7bef3d7e9f2b58edfc19571753" title="Get the number of metadata entries.">count</a>() &lt;&lt; <span class="stringliteral">&quot;  &quot;</span></div>
+<div class="line">                  &lt;&lt; std::dec &lt;&lt; md-&gt;value()</div>
+<div class="line">                  &lt;&lt; std::endl;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line">    <span class="comment">// Serialize the XMP data and output the XMP packet</span></div>
+<div class="line">    std::string xmpPacket;</div>
+<div class="line">    <span class="keywordflow">if</span> (0 != <a name="a22"></a><a class="code" href="doc/classExiv2_1_1XmpParser.html#afad88c80404f9f35b687b33fe9ea9c63" title="Encode (serialize) XMP metadata from xmpData into a string xmpPacket. The XMP packet returned in the ...">Exiv2::XmpParser::encode</a>(xmpPacket, xmpData)) {</div>
+<div class="line">        <span class="keywordflow">throw</span> <a name="a23"></a><a class="code" href="doc/namespaceExiv2.html#accd3e49cafe9db52c1e0e6f648753cae" title="Error class used for exceptions (std::string based)">Exiv2::Error</a>(1, <span class="stringliteral">&quot;Failed to serialize XMP data&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">    std::cout &lt;&lt; xmpPacket &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Cleanup</span></div>
+<div class="line">    <a name="a24"></a><a class="code" href="doc/classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2" title="Terminate the XMP Toolkit and unregister custom namespaces.">Exiv2::XmpParser::terminate</a>();</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">catch</span> (<a name="_a25"></a><a class="code" href="doc/classExiv2_1_1AnyError.html" title="Error class interface. Allows the definition and use of a hierarchy of error classes which can all be...">Exiv2::AnyError</a>&amp; e) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Caught Exiv2 exception &#39;&quot;</span> &lt;&lt; e &lt;&lt; <span class="stringliteral">&quot;&#39;\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">return</span> -1;</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+
+
+<p>&nbsp;</p>
+<p>The resulting XMP Exiv2 metadata and XMP packet is below.
+The same can be achieved with a set of <a href="sample.html#xmp">commands</a>
+to the Exiv2 command line tool.</p>
+
+<div id="example5-output"><pre>
+<span class="stringliteral">$ xmpsample</span>
+Xmp.dc.source                                XmpText    13  xmpsample.cpp
+Xmp.dc.subject                               XmpBag      2  Palmtree, Rubbertree
+Xmp.dc.title                                 LangAlt     2  lang="de-DE" Sonnenuntergang am Strand, lang="en-US" Sunset on the beach
+Xmp.dc.one                                   XmpText     2  -1
+Xmp.dc.two                                   XmpText     6  3.1415
+Xmp.dc.three                                 XmpText     3  5/7
+Xmp.dc.four                                  XmpText     3  255
+Xmp.dc.five                                  XmpText     3  256
+Xmp.dc.six                                   XmpText     5  false
+Xmp.dc.seven                                 XmpText     5  Seven
+Xmp.dc.format                                XmpText    10  image/jpeg
+Xmp.dc.creator                               XmpSeq      3  1) The first creator, 2) The second creator, 3) And another one
+Xmp.dc.description                           LangAlt     2  lang="x-default" Hello, World, lang="de-DE" Hallo, Welt
+Xmp.tiff.ImageDescription                    LangAlt     2  lang="x-default" TIFF image description, lang="de-DE" TIFF Bildbeschreibung
+Xmp.xmpDM.videoFrameSize/stDim:w             XmpText     2  16
+Xmp.xmpDM.videoFrameSize/stDim:h             XmpText     1  9
+Xmp.xmpDM.videoFrameSize/stDim:unit          XmpText     4  inch
+Xmp.dc.publisher                             XmpBag      1  James Bond
+Xmp.dc.publisher[1]/?ns:role                 XmpText    12  secret agent
+Xmp.dc.creator[2]/?ns:role                   XmpText    10  programmer
+Xmp.xmpBJ.JobRef                             XmpText     0  type="Bag"
+Xmp.xmpBJ.JobRef[1]/stJob:name               XmpText    14  Birthday party
+Xmp.xmpBJ.JobRef[1]/stJob:role               XmpText    12  Photographer
+Xmp.xmpBJ.JobRef[2]/stJob:name               XmpText    16  Wedding ceremony
+Xmp.xmpBJ.JobRef[2]/stJob:role               XmpText     8  Best man
+
+&lt;?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?&gt;
+&lt;x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 4.1.1-Exiv2"&gt;
+ &lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+  &lt;rdf:Description rdf:about=""
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:ns="myNamespace/"
+    xmlns:tiff="http://ns.adobe.com/tiff/1.0/"
+    xmlns:xmpDM="http://ns.adobe.com/xmp/1.0/DynamicMedia/"
+    xmlns:stDim="http://ns.adobe.com/xap/1.0/sType/Dimensions#"
+    xmlns:xapBJ="http://ns.adobe.com/xap/1.0/bj/"
+    xmlns:stJob="http://ns.adobe.com/xap/1.0/sType/Job#"
+   dc:source="xmpsample.cpp"
+   dc:one="-1"
+   dc:two="3.1415"
+   dc:three="5/7"
+   dc:four="255"
+   dc:five="256"
+   dc:six="false"
+   dc:seven="Seven"
+   dc:format="image/jpeg"&gt;
+   &lt;dc:subject&gt;
+    &lt;rdf:Bag&gt;
+     &lt;rdf:li&gt;Palmtree&lt;/rdf:li&gt;
+     &lt;rdf:li&gt;Rubbertree&lt;/rdf:li&gt;
+    &lt;/rdf:Bag&gt;
+   &lt;/dc:subject&gt;
+   &lt;dc:title&gt;
+    &lt;rdf:Alt&gt;
+     &lt;rdf:li xml:lang="de-DE"&gt;Sonnenuntergang am Strand&lt;/rdf:li&gt;
+     &lt;rdf:li xml:lang="en-US"&gt;Sunset on the beach&lt;/rdf:li&gt;
+    &lt;/rdf:Alt&gt;
+   &lt;/dc:title&gt;
+   &lt;dc:creator&gt;
+    &lt;rdf:Seq&gt;
+     &lt;rdf:li&gt;1) The first creator&lt;/rdf:li&gt;
+     &lt;rdf:li rdf:parseType="Resource"&gt;
+      &lt;rdf:value&gt;2) The second creator&lt;/rdf:value&gt;
+      &lt;ns:role&gt;programmer&lt;/ns:role&gt;
+     &lt;/rdf:li&gt;
+     &lt;rdf:li&gt;3) And another one&lt;/rdf:li&gt;
+    &lt;/rdf:Seq&gt;
+   &lt;/dc:creator&gt;
+   &lt;dc:description&gt;
+    &lt;rdf:Alt&gt;
+     &lt;rdf:li xml:lang="x-default"&gt;Hello, World&lt;/rdf:li&gt;
+     &lt;rdf:li xml:lang="de-DE"&gt;Hallo, Welt&lt;/rdf:li&gt;
+    &lt;/rdf:Alt&gt;
+   &lt;/dc:description&gt;
+   &lt;dc:publisher&gt;
+    &lt;rdf:Bag&gt;
+     &lt;rdf:li rdf:parseType="Resource"&gt;
+      &lt;rdf:value&gt;James Bond&lt;/rdf:value&gt;
+      &lt;ns:role&gt;secret agent&lt;/ns:role&gt;
+     &lt;/rdf:li&gt;
+    &lt;/rdf:Bag&gt;
+   &lt;/dc:publisher&gt;
+   &lt;tiff:ImageDescription&gt;
+    &lt;rdf:Alt&gt;
+     &lt;rdf:li xml:lang="x-default"&gt;TIFF image description&lt;/rdf:li&gt;
+     &lt;rdf:li xml:lang="de-DE"&gt;TIFF Bildbeschreibung&lt;/rdf:li&gt;
+    &lt;/rdf:Alt&gt;
+   &lt;/tiff:ImageDescription&gt;
+   &lt;xmpDM:videoFrameSize
+    stDim:w="16"
+    stDim:h="9"
+    stDim:unit="inch"/&gt;
+   &lt;xapBJ:JobRef&gt;
+    &lt;rdf:Bag&gt;
+     &lt;rdf:li
+      stJob:name="Birthday party"
+      stJob:role="Photographer"/&gt;
+     &lt;rdf:li
+      stJob:name="Wedding ceremony"
+      stJob:role="Best man"/&gt;
+    &lt;/rdf:Bag&gt;
+   &lt;/xapBJ:JobRef&gt;
+  &lt;/rdf:Description&gt;
+ &lt;/rdf:RDF&gt;
+&lt;/x:xmpmeta&gt;
+&lt;?xpacket end="w"?&gt;
+</pre></div>
+
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doc/doxy-boot.js"></script>
+
+</body>
+</html>

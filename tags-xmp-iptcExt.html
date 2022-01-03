@@ -1,0 +1,384 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Exiv2 - Image metadata library and tools</title>
+
+  <!-- Doxygen styles -->
+  <link href="doc/doxygen.css" rel="stylesheet" type="text/css">
+  <link href="doc/customdoxygen.css" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="include/exiv2.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img alt="Exiv2" src="include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="getting-started.html">Getting started</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="whatsnew.html">What's New</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+        <li><a href="makernote.html">Makernote</a></li>
+        <li><a href="doc/examples.html">Examples</a></li>
+        <li><a href="doc/index.html">API</a></li>
+        <li><a href="manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+	    <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="page-header">
+    <h1>Metadata reference tables</h1>
+  </div>
+
+<div><h2>IPTC Extension schema</h2></div>
+<p>This schema specifies the IPTC Extension XMP properties. The IPTC
+   Extension schema extends and complements the IPTC Core schema by a set
+   of more granular properties and further specialized rights related
+   properties from the PLUS metadata schema.
+ <ul>
+  <li>Exiv2 keys are <code>Xmp.iptcExt.&lt;Property&gt;</code></li>
+  <li>The schema namespace URI is <code>http://iptc.org/std/Iptc4xmpExt/2008-02-29/</code></li>
+  <li>The preferred schema namespace prefix is <code>Iptc4xmpExt</code></li>
+ </ul>
+Reference: <a href="http://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata" title="IPTC Extension Specification Version 1.2">IPTC Extension Specification Version 1.2</a> standard</p>
+<p>Note: Exiv2 uses <code>iptcExt</code> (rather than <code>Iptc4xmpExt</code>) as the group name for keys of IPTC Extension schema properties.</p>
+
+
+<table class="table table-striped">
+<thead><tr>
+<th>Property</th>
+<th>Label</th>
+<th>Value type</th>
+<th>Exiv2 type</th>
+<th>Category</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>AddlModelInfo</td>
+<td>Additional model info</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Information about the ethnicity and other facts of the model(s) in a model-released image.</td>
+</tr>
+<tr>
+<td>OrganisationInImageCode</td>
+<td>Code of featured Organisation</td>
+<td>bag Text</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>Code from controlled vocabulary for identifying the organisation or company which is featured in the image.</td>
+</tr>
+<tr>
+<td>CVterm</td>
+<td>Controlled Vocabulary Term</td>
+<td>bag URI</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>A term to describe the content of the image by a value from a Controlled Vocabulary.</td>
+</tr>
+<tr>
+<td>ModelAge</td>
+<td>Model age</td>
+<td>bag Integer</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>Age of the human model(s) at the time this image was taken in a model released image.</td>
+</tr>
+<tr>
+<td>OrganisationInImageName</td>
+<td>Name of featured Organisation</td>
+<td>bag Text</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>Name of the organisation or company which is featured in the image.</td>
+</tr>
+<tr>
+<td>PersonInImage</td>
+<td>Person shown</td>
+<td>bag Text</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>Name of a person shown in the image.</td>
+</tr>
+<tr>
+<td>DigImageGUID</td>
+<td>Digital Image Identifier</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Globally unique identifier for this digital image. It is created and applied by the creator of the digital image at the time of its creation. this value shall not be changed after that time.</td>
+</tr>
+<tr>
+<td>DigitalSourcefileType</td>
+<td>Physical type of original photo</td>
+<td>URI</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The type of the source digital file.</td>
+</tr>
+<tr>
+<td>Event</td>
+<td>Event</td>
+<td>Lang Alt</td>
+<td>LangAlt</td>
+<td>External</td>
+<td>Names or describes the specific event at which the photo was taken.</td>
+</tr>
+<tr>
+<td>MaxAvailHeight</td>
+<td>Maximum available height</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The maximum available height in pixels of the original photo from which this photo has been derived by downsizing.</td>
+</tr>
+<tr>
+<td>MaxAvailWidth</td>
+<td>Maximum available width</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The maximum available width in pixels of the original photo from which this photo has been derived by downsizing.</td>
+</tr>
+<tr>
+<td>RegistryId</td>
+<td>Registry Entry</td>
+<td>bag RegistryEntryDetails</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>Both a Registry Item Id and a Registry Organisation Id to record any registration of this digital image with a registry.</td>
+</tr>
+<tr>
+<td>RegItemId</td>
+<td>Registry Entry-Item Identifier</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>A unique identifier created by a registry and applied by the creator of the digital image. This value shall not be changed after being applied. This identifier is linked to a corresponding Registry Organisation Identifier.</td>
+</tr>
+<tr>
+<td>RegOrgId</td>
+<td>Registry Entry-Organisation Identifier</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>An identifier for the registry which issued the corresponding Registry Image Id.</td>
+</tr>
+<tr>
+<td>IptcLastEdited</td>
+<td>IPTC Fields Last Edited</td>
+<td>Date</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The date and optionally time when any of the IPTC photo metadata fields has been last edited.</td>
+</tr>
+<tr>
+<td>LocationShown</td>
+<td>Location Shown</td>
+<td>bag LocationDetails</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>A location shown in the image.</td>
+</tr>
+<tr>
+<td>LocationCreated</td>
+<td>Location Created</td>
+<td>bag LocationDetails</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>The location the photo was taken.</td>
+</tr>
+<tr>
+<td>City</td>
+<td>Location-City</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Name of the city of a location.</td>
+</tr>
+<tr>
+<td>CountryCode</td>
+<td>Location-Country ISO-Code</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The ISO code of a country of a location.</td>
+</tr>
+<tr>
+<td>CountryName</td>
+<td>Location-Country Name</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The name of a country of a location.</td>
+</tr>
+<tr>
+<td>ProvinceState</td>
+<td>Location-Province/State</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The name of a subregion of a country - a province or state - of a location.</td>
+</tr>
+<tr>
+<td>Sublocation</td>
+<td>Location-Sublocation</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Name of a sublocation. This sublocation name could either be the name of a sublocation to a city or the name of a well known location or (natural) monument outside a city.</td>
+</tr>
+<tr>
+<td>WorldRegion</td>
+<td>Location-World Region</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The name of a world region of a location.</td>
+</tr>
+<tr>
+<td>ArtworkOrObject</td>
+<td>Artwork or object in the image</td>
+<td>bag ArtworkOrObjectDetails</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>A set of metadata about artwork or an object in the image.</td>
+</tr>
+<tr>
+<td>AOCopyrightNotice</td>
+<td>Artwork or object-Copyright notice</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Contains any necessary copyright notice for claiming the intellectual property for artwork or an object in the image and should identify the current owner of the copyright of this work with associated intellectual property rights.</td>
+</tr>
+<tr>
+<td>AOCreator</td>
+<td>Artwork or object-Creator</td>
+<td>seq ProperName</td>
+<td>XmpSeq</td>
+<td>External</td>
+<td>Contains the name of the artist who has created artwork or an object in the image. In cases where the artist could or should not be identified the name of a company or organisation may be appropriate.</td>
+</tr>
+<tr>
+<td>AODateCreated</td>
+<td>Artwork or object-Date Created</td>
+<td>Date</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Designates the date and optionally the time the artwork or object in the image was created. This relates to artwork or objects with associated intellectual property rights.</td>
+</tr>
+<tr>
+<td>AOSource</td>
+<td>Artwork or object-Source</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The organisation or body holding and registering the artwork or object in the image for inventory purposes.</td>
+</tr>
+<tr>
+<td>AOSourceInvNo</td>
+<td>Artwork or object-Source inventory number</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The inventory number issued by the organisation or body holding and registering the artwork or object in the image.</td>
+</tr>
+<tr>
+<td>AOTitle</td>
+<td>Artwork or object-Title</td>
+<td>Lang Alt</td>
+<td>LangAlt</td>
+<td>External</td>
+<td>A reference for the artwork or object in the image.</td>
+</tr>
+</tbody>
+</table>
+
+
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>

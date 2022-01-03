@@ -1,0 +1,8 @@
+<map id="Exiv2::Slice&lt; container &gt;" name="Exiv2::Slice&lt; container &gt;">
+<area shape="rect" id="node1" title="Slice (= view) for STL containers." alt="" coords="1484,57,1672,84"/>
+<area shape="rect" id="node2" href="$structExiv2_1_1Internal_1_1MutableSliceBase.html" title=" " alt="" coords="1213,43,1435,99"/>
+<area shape="rect" id="node3" href="$structExiv2_1_1Internal_1_1ConstSliceBase.html" title=" " alt="" coords="727,5,971,61"/>
+<area shape="rect" id="node4" href="$structExiv2_1_1Internal_1_1SliceBase.html" title=" " alt="" coords="5,36,192,63"/>
+<area shape="rect" id="node5" href="$structExiv2_1_1Internal_1_1ConstSliceBase.html" title="This class provides the public&#45;facing const&#45;qualified methods of a slice." alt="" coords="241,58,484,99"/>
+<area shape="rect" id="node6" href="$structExiv2_1_1Internal_1_1MutableSliceBase.html" title=" " alt="" coords="754,85,943,141"/>
+</map>

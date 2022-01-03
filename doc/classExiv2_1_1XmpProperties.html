@@ -1,0 +1,648 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceExiv2.html">Exiv2</a></li><li class="navelem"><a class="el" href="classExiv2_1_1XmpProperties.html">XmpProperties</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="classExiv2_1_1XmpProperties-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Exiv2::XmpProperties Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>XMP property reference, implemented as a static class.  
+ <a href="classExiv2_1_1XmpProperties.html#details">More...</a></p>
+
+<p><code>#include &lt;properties.hpp&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ac1ee044e04366db5028c3baa02c511be"><td class="memItemLeft" align="right" valign="top"><a id="ac1ee044e04366db5028c3baa02c511be"></a>
+typedef std::map&lt; std::string, <a class="el" href="structExiv2_1_1XmpNsInfo.html">XmpNsInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#ac1ee044e04366db5028c3baa02c511be">NsRegistry</a></td></tr>
+<tr class="memdesc:ac1ee044e04366db5028c3baa02c511be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for the namespace registry. <br /></td></tr>
+<tr class="separator:ac1ee044e04366db5028c3baa02c511be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ace720866dca9064dbd34a545f8869b6a"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#ace720866dca9064dbd34a545f8869b6a">propertyTitle</a> (const <a class="el" href="classExiv2_1_1XmpKey.html">XmpKey</a> &amp;key)</td></tr>
+<tr class="memdesc:ace720866dca9064dbd34a545f8869b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the title (label) of the property.  <a href="classExiv2_1_1XmpProperties.html#ace720866dca9064dbd34a545f8869b6a">More...</a><br /></td></tr>
+<tr class="separator:ace720866dca9064dbd34a545f8869b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a86c7d0e8fb3517f47588a6a262598"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#ab5a86c7d0e8fb3517f47588a6a262598">propertyDesc</a> (const <a class="el" href="classExiv2_1_1XmpKey.html">XmpKey</a> &amp;key)</td></tr>
+<tr class="memdesc:ab5a86c7d0e8fb3517f47588a6a262598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the description of the property.  <a href="classExiv2_1_1XmpProperties.html#ab5a86c7d0e8fb3517f47588a6a262598">More...</a><br /></td></tr>
+<tr class="separator:ab5a86c7d0e8fb3517f47588a6a262598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1afe108a735f91f0f1afb5e0baffc06f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450c">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a1afe108a735f91f0f1afb5e0baffc06f">propertyType</a> (const <a class="el" href="classExiv2_1_1XmpKey.html">XmpKey</a> &amp;key)</td></tr>
+<tr class="memdesc:a1afe108a735f91f0f1afb5e0baffc06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the type for property <em>key</em>. The default for unknown keys is xmpText.  <a href="classExiv2_1_1XmpProperties.html#a1afe108a735f91f0f1afb5e0baffc06f">More...</a><br /></td></tr>
+<tr class="separator:a1afe108a735f91f0f1afb5e0baffc06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d7405a277af2f52c1707b5ac5533c3"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structExiv2_1_1XmpPropertyInfo.html">XmpPropertyInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a92d7405a277af2f52c1707b5ac5533c3">propertyInfo</a> (const <a class="el" href="classExiv2_1_1XmpKey.html">XmpKey</a> &amp;key)</td></tr>
+<tr class="memdesc:a92d7405a277af2f52c1707b5ac5533c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return information for the property for key.  <a href="classExiv2_1_1XmpProperties.html#a92d7405a277af2f52c1707b5ac5533c3">More...</a><br /></td></tr>
+<tr class="separator:a92d7405a277af2f52c1707b5ac5533c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b558be19460be890e68d93faa77fac1"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a6b558be19460be890e68d93faa77fac1">ns</a> (const std::string &amp;<a class="el" href="classExiv2_1_1XmpProperties.html#a9242436f9f9475216b21ea0c4643c357">prefix</a>)</td></tr>
+<tr class="memdesc:a6b558be19460be890e68d93faa77fac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the namespace name for the schema associated with <em>prefix</em>.  <a href="classExiv2_1_1XmpProperties.html#a6b558be19460be890e68d93faa77fac1">More...</a><br /></td></tr>
+<tr class="separator:a6b558be19460be890e68d93faa77fac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9377197dc487aa7053a9b8d8f19e7230"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a9377197dc487aa7053a9b8d8f19e7230">nsDesc</a> (const std::string &amp;<a class="el" href="classExiv2_1_1XmpProperties.html#a9242436f9f9475216b21ea0c4643c357">prefix</a>)</td></tr>
+<tr class="memdesc:a9377197dc487aa7053a9b8d8f19e7230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the namespace description for the schema associated with <em>prefix</em>.  <a href="classExiv2_1_1XmpProperties.html#a9377197dc487aa7053a9b8d8f19e7230">More...</a><br /></td></tr>
+<tr class="separator:a9377197dc487aa7053a9b8d8f19e7230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae280a62dd2f58da353cdc4dede298103"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structExiv2_1_1XmpPropertyInfo.html">XmpPropertyInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#ae280a62dd2f58da353cdc4dede298103">propertyList</a> (const std::string &amp;<a class="el" href="classExiv2_1_1XmpProperties.html#a9242436f9f9475216b21ea0c4643c357">prefix</a>)</td></tr>
+<tr class="memdesc:ae280a62dd2f58da353cdc4dede298103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return read-only list of built-in properties for <em>prefix</em>.  <a href="classExiv2_1_1XmpProperties.html#ae280a62dd2f58da353cdc4dede298103">More...</a><br /></td></tr>
+<tr class="separator:ae280a62dd2f58da353cdc4dede298103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88167c117a38bde4d9b52ba996e6f029"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structExiv2_1_1XmpNsInfo.html">XmpNsInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a88167c117a38bde4d9b52ba996e6f029">nsInfo</a> (const std::string &amp;<a class="el" href="classExiv2_1_1XmpProperties.html#a9242436f9f9475216b21ea0c4643c357">prefix</a>)</td></tr>
+<tr class="memdesc:a88167c117a38bde4d9b52ba996e6f029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return information about a schema namespace for <em>prefix</em>. Always returns a valid pointer.  <a href="classExiv2_1_1XmpProperties.html#a88167c117a38bde4d9b52ba996e6f029">More...</a><br /></td></tr>
+<tr class="separator:a88167c117a38bde4d9b52ba996e6f029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9242436f9f9475216b21ea0c4643c357"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a9242436f9f9475216b21ea0c4643c357">prefix</a> (const std::string &amp;<a class="el" href="classExiv2_1_1XmpProperties.html#a6b558be19460be890e68d93faa77fac1">ns</a>)</td></tr>
+<tr class="memdesc:a9242436f9f9475216b21ea0c4643c357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the (preferred) prefix for schema namespace <em>ns</em>.  <a href="classExiv2_1_1XmpProperties.html#a9242436f9f9475216b21ea0c4643c357">More...</a><br /></td></tr>
+<tr class="separator:a9242436f9f9475216b21ea0c4643c357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b7e72de6863587e9c18157f7ea527e4"><td class="memItemLeft" align="right" valign="top"><a id="a9b7e72de6863587e9c18157f7ea527e4"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a9b7e72de6863587e9c18157f7ea527e4">printProperties</a> (std::ostream &amp;os, const std::string &amp;<a class="el" href="classExiv2_1_1XmpProperties.html#a9242436f9f9475216b21ea0c4643c357">prefix</a>)</td></tr>
+<tr class="memdesc:a9b7e72de6863587e9c18157f7ea527e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a list of properties of a schema namespace to output stream <em>os</em>. <br /></td></tr>
+<tr class="separator:a9b7e72de6863587e9c18157f7ea527e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a406a3bada810fc6f720a2c3a989e09e4"><td class="memItemLeft" align="right" valign="top"><a id="a406a3bada810fc6f720a2c3a989e09e4"></a>
+static std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a406a3bada810fc6f720a2c3a989e09e4">printProperty</a> (std::ostream &amp;os, const std::string &amp;key, const <a class="el" href="classExiv2_1_1Value.html">Value</a> &amp;value)</td></tr>
+<tr class="memdesc:a406a3bada810fc6f720a2c3a989e09e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpret and print the value of an XMP property. <br /></td></tr>
+<tr class="separator:a406a3bada810fc6f720a2c3a989e09e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae58ee081625b7924563e93a1ba184fec"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#ae58ee081625b7924563e93a1ba184fec">registerNs</a> (const std::string &amp;<a class="el" href="classExiv2_1_1XmpProperties.html#a6b558be19460be890e68d93faa77fac1">ns</a>, const std::string &amp;<a class="el" href="classExiv2_1_1XmpProperties.html#a9242436f9f9475216b21ea0c4643c357">prefix</a>)</td></tr>
+<tr class="memdesc:ae58ee081625b7924563e93a1ba184fec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register namespace <em>ns</em> with preferred prefix <em>prefix</em>.  <a href="classExiv2_1_1XmpProperties.html#ae58ee081625b7924563e93a1ba184fec">More...</a><br /></td></tr>
+<tr class="separator:ae58ee081625b7924563e93a1ba184fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82d620dbdbc671a635c7b4d8a11c694f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a82d620dbdbc671a635c7b4d8a11c694f">unregisterNs</a> (const std::string &amp;<a class="el" href="classExiv2_1_1XmpProperties.html#a6b558be19460be890e68d93faa77fac1">ns</a>)</td></tr>
+<tr class="memdesc:a82d620dbdbc671a635c7b4d8a11c694f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister a custom namespace <em>ns</em>.  <a href="classExiv2_1_1XmpProperties.html#a82d620dbdbc671a635c7b4d8a11c694f">More...</a><br /></td></tr>
+<tr class="separator:a82d620dbdbc671a635c7b4d8a11c694f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6758ab102c4b9d1330c184971fe56962"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a6758ab102c4b9d1330c184971fe56962">unregisterNs</a> ()</td></tr>
+<tr class="memdesc:a6758ab102c4b9d1330c184971fe56962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister all custom namespaces.  <a href="classExiv2_1_1XmpProperties.html#a6758ab102c4b9d1330c184971fe56962">More...</a><br /></td></tr>
+<tr class="separator:a6758ab102c4b9d1330c184971fe56962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a899a34dc5d27750e7e6ece0a249d1bcc"><td class="memItemLeft" align="right" valign="top"><a id="a899a34dc5d27750e7e6ece0a249d1bcc"></a>
+static const <a class="el" href="structExiv2_1_1XmpNsInfo.html">XmpNsInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a899a34dc5d27750e7e6ece0a249d1bcc">lookupNsRegistry</a> (const <a class="el" href="structExiv2_1_1XmpNsInfo_1_1Prefix.html">XmpNsInfo::Prefix</a> &amp;<a class="el" href="classExiv2_1_1XmpProperties.html#a9242436f9f9475216b21ea0c4643c357">prefix</a>)</td></tr>
+<tr class="memdesc:a899a34dc5d27750e7e6ece0a249d1bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the registered namespace for a specific <em>prefix</em> from the registry. <br /></td></tr>
+<tr class="separator:a899a34dc5d27750e7e6ece0a249d1bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafb4d492218c9e87292f3d7cf7a21d65"><td class="memItemLeft" align="right" valign="top"><a id="aafb4d492218c9e87292f3d7cf7a21d65"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#aafb4d492218c9e87292f3d7cf7a21d65">registeredNamespaces</a> (<a class="el" href="namespaceExiv2.html#afae71d05c1e275acf159c2b9324974e3">Exiv2::Dictionary</a> &amp;nsDict)</td></tr>
+<tr class="memdesc:aafb4d492218c9e87292f3d7cf7a21d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all registered namespaces (for both <a class="el" href="namespaceExiv2.html" title="Provides classes and functions to encode and decode Exif and Iptc data. The libexiv2 API consists of ...">Exiv2</a> and XMPsdk) <br /></td></tr>
+<tr class="separator:aafb4d492218c9e87292f3d7cf7a21d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a8d2f58b458b547e3467483885fa7248b"><td class="memItemLeft" align="right" valign="top"><a id="a8d2f58b458b547e3467483885fa7248b"></a>
+static <a class="el" href="classExiv2_1_1RWLock.html">Exiv2::RWLock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a8d2f58b458b547e3467483885fa7248b">rwLock_</a></td></tr>
+<tr class="memdesc:a8d2f58b458b547e3467483885fa7248b"><td class="mdescLeft">&#160;</td><td class="mdescRight">lock to be used while modifying properties <br /></td></tr>
+<tr class="separator:a8d2f58b458b547e3467483885fa7248b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5184fa01ff867af9a3d65848b95b1994"><td class="memItemLeft" align="right" valign="top"><a id="a5184fa01ff867af9a3d65848b95b1994"></a>
+static <a class="el" href="classExiv2_1_1XmpProperties.html#ac1ee044e04366db5028c3baa02c511be">NsRegistry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a5184fa01ff867af9a3d65848b95b1994">nsRegistry_</a></td></tr>
+<tr class="memdesc:a5184fa01ff867af9a3d65848b95b1994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace registry. <br /></td></tr>
+<tr class="separator:a5184fa01ff867af9a3d65848b95b1994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>XMP property reference, implemented as a static class. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6b558be19460be890e68d93faa77fac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b558be19460be890e68d93faa77fac1">&#9670;&nbsp;</a></span>ns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string Exiv2::XmpProperties::ns </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the namespace name for the schema associated with <em>prefix</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefix</td><td>Prefix </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The namespace name </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if no namespace is registered with <em>prefix</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9377197dc487aa7053a9b8d8f19e7230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9377197dc487aa7053a9b8d8f19e7230">&#9670;&nbsp;</a></span>nsDesc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const char* Exiv2::XmpProperties::nsDesc </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the namespace description for the schema associated with <em>prefix</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefix</td><td>Prefix </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The namespace description </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if no namespace is registered with <em>prefix</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a88167c117a38bde4d9b52ba996e6f029"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88167c117a38bde4d9b52ba996e6f029">&#9670;&nbsp;</a></span>nsInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="structExiv2_1_1XmpNsInfo.html">XmpNsInfo</a>* Exiv2::XmpProperties::nsInfo </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return information about a schema namespace for <em>prefix</em>. Always returns a valid pointer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefix</td><td>The prefix </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the related information </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if no namespace is registered with <em>prefix</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9242436f9f9475216b21ea0c4643c357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9242436f9f9475216b21ea0c4643c357">&#9670;&nbsp;</a></span>prefix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string Exiv2::XmpProperties::prefix </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ns</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the (preferred) prefix for schema namespace <em>ns</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ns</td><td>Schema namespace </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The prefix or an empty string if namespace <em>ns</em> is not registered. </dd></dl>
+
+</div>
+</div>
+<a id="ab5a86c7d0e8fb3517f47588a6a262598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a86c7d0e8fb3517f47588a6a262598">&#9670;&nbsp;</a></span>propertyDesc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const char* Exiv2::XmpProperties::propertyDesc </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classExiv2_1_1XmpKey.html">XmpKey</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the description of the property. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The property key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The description of the property, 0 if the key is of an unknown property. </dd></dl>
+
+</div>
+</div>
+<a id="a92d7405a277af2f52c1707b5ac5533c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d7405a277af2f52c1707b5ac5533c3">&#9670;&nbsp;</a></span>propertyInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="structExiv2_1_1XmpPropertyInfo.html">XmpPropertyInfo</a>* Exiv2::XmpProperties::propertyInfo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classExiv2_1_1XmpKey.html">XmpKey</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return information for the property for key. </p>
+<p>If the key is a path to a nested property (one which contains a slash, like <code>Xmp.MP.RegionInfo/MPRI</code>:Regions), determines the innermost element (<code>Xmp.MPRI.Regions</code>) and returns its property information.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The property key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the property information, 0 if the key is of an unknown property. </dd></dl>
+
+</div>
+</div>
+<a id="ae280a62dd2f58da353cdc4dede298103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae280a62dd2f58da353cdc4dede298103">&#9670;&nbsp;</a></span>propertyList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="structExiv2_1_1XmpPropertyInfo.html">XmpPropertyInfo</a>* Exiv2::XmpProperties::propertyList </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return read-only list of built-in properties for <em>prefix</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefix</td><td>Prefix </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the built-in properties for prefix, may be 0 if none is configured in the namespace info. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if no namespace is registered with <em>prefix</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ace720866dca9064dbd34a545f8869b6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace720866dca9064dbd34a545f8869b6a">&#9670;&nbsp;</a></span>propertyTitle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const char* Exiv2::XmpProperties::propertyTitle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classExiv2_1_1XmpKey.html">XmpKey</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the title (label) of the property. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The property key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The title (label) of the property, 0 if the key is of an unknown property. </dd></dl>
+
+</div>
+</div>
+<a id="a1afe108a735f91f0f1afb5e0baffc06f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1afe108a735f91f0f1afb5e0baffc06f">&#9670;&nbsp;</a></span>propertyType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450c">TypeId</a> Exiv2::XmpProperties::propertyType </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classExiv2_1_1XmpKey.html">XmpKey</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the type for property <em>key</em>. The default for unknown keys is xmpText. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The property key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The type of the property </dd></dl>
+
+</div>
+</div>
+<a id="ae58ee081625b7924563e93a1ba184fec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae58ee081625b7924563e93a1ba184fec">&#9670;&nbsp;</a></span>registerNs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Exiv2::XmpProperties::registerNs </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ns</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>prefix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register namespace <em>ns</em> with preferred prefix <em>prefix</em>. </p>
+<p>If the prefix is a known or previously registered prefix, the corresponding namespace URI is overwritten.</p>
+<dl class="section note"><dt>Note</dt><dd>This invalidates XMP keys generated with the previous prefix. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="xmpsample_8cpp-example.html#a20">xmpsample.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a6758ab102c4b9d1330c184971fe56962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6758ab102c4b9d1330c184971fe56962">&#9670;&nbsp;</a></span>unregisterNs() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Exiv2::XmpProperties::unregisterNs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unregister all custom namespaces. </p>
+<p>The function only unregisters namespaces registered earlier, it does not unregister built-in namespaces.</p>
+<dl class="section note"><dt>Note</dt><dd>This invalidates XMP keys generated in any custom namespace. </dd></dl>
+
+</div>
+</div>
+<a id="a82d620dbdbc671a635c7b4d8a11c694f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82d620dbdbc671a635c7b4d8a11c694f">&#9670;&nbsp;</a></span>unregisterNs() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Exiv2::XmpProperties::unregisterNs </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ns</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unregister a custom namespace <em>ns</em>. </p>
+<p>The function only has an effect if there is a namespace <em>ns</em> registered earlier, it does not unregister built-in namespaces.</p>
+<dl class="section note"><dt>Note</dt><dd>This invalidates XMP keys generated in this namespace. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>properties.hpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceExiv2.html">Exiv2</a></li><li class="navelem"><a class="el" href="classExiv2_1_1ExifThumb.html">ExifThumb</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="classExiv2_1_1ExifThumb-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Exiv2::ExifThumb Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Access and modify an Exif thumbnail image. This class implements manipulators to set and erase the thumbnail image that is optionally embedded in IFD1 of the Exif data. Accessors are provided by the base class, <a class="el" href="classExiv2_1_1ExifThumbC.html" title="Access to a Exif thumbnail image. This class provides higher level accessors to the thumbnail image t...">ExifThumbC</a>.  
+ <a href="classExiv2_1_1ExifThumb.html#details">More...</a></p>
+
+<p><code>#include &lt;exif.hpp&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Exiv2::ExifThumb:</div>
+<div class="dyncontent">
+<div class="center"><img src="classExiv2_1_1ExifThumb__inherit__graph.png" border="0" usemap="#Exiv2_1_1ExifThumb_inherit__map" alt="Inheritance graph"/></div>
+<map name="Exiv2_1_1ExifThumb_inherit__map" id="Exiv2_1_1ExifThumb_inherit__map">
+<area shape="rect" title="Access and modify an Exif thumbnail image. This class implements manipulators to set and erase the th..." alt="" coords="10,80,146,107"/>
+<area shape="rect" href="classExiv2_1_1ExifThumbC.html" title="Access to a Exif thumbnail image. This class provides higher level accessors to the thumbnail image t..." alt="" coords="5,5,151,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Creators</div></td></tr>
+<tr class="memitem:a2c81742f577443a41c1b184406093c68"><td class="memItemLeft" align="right" valign="top"><a id="a2c81742f577443a41c1b184406093c68"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumb.html#a2c81742f577443a41c1b184406093c68">ExifThumb</a> (<a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> &amp;exifData)</td></tr>
+<tr class="memdesc:a2c81742f577443a41c1b184406093c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
+<tr class="separator:a2c81742f577443a41c1b184406093c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classExiv2_1_1ExifThumbC"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classExiv2_1_1ExifThumbC')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classExiv2_1_1ExifThumbC.html">Exiv2::ExifThumbC</a></td></tr>
+<tr class="memitem:a47c5170242743d1dfd32a6d03527f7b7 inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="memItemLeft" align="right" valign="top"><a id="a47c5170242743d1dfd32a6d03527f7b7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumbC.html#a47c5170242743d1dfd32a6d03527f7b7">ExifThumbC</a> (const <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> &amp;exifData)</td></tr>
+<tr class="memdesc:a47c5170242743d1dfd32a6d03527f7b7 inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br /></td></tr>
+<tr class="separator:a47c5170242743d1dfd32a6d03527f7b7 inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90714cf1e4ba74caf94a09db9ca6d6c1 inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="memItemLeft" align="right" valign="top"><a id="a90714cf1e4ba74caf94a09db9ca6d6c1"></a>
+<a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumbC.html#a90714cf1e4ba74caf94a09db9ca6d6c1">copy</a> () const</td></tr>
+<tr class="memdesc:a90714cf1e4ba74caf94a09db9ca6d6c1 inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the thumbnail image in a DataBuf. The caller owns the data buffer and DataBuf ensures that it will be deleted. <br /></td></tr>
+<tr class="separator:a90714cf1e4ba74caf94a09db9ca6d6c1 inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa97f0111eb9e810548740fe7bf263335 inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumbC.html#aa97f0111eb9e810548740fe7bf263335">writeFile</a> (const std::string &amp;path) const</td></tr>
+<tr class="memdesc:aa97f0111eb9e810548740fe7bf263335 inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the thumbnail image to a file.  <a href="classExiv2_1_1ExifThumbC.html#aa97f0111eb9e810548740fe7bf263335">More...</a><br /></td></tr>
+<tr class="separator:aa97f0111eb9e810548740fe7bf263335 inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f7b1ecff1e7614cd826bb8b3005d06f inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="memItemLeft" align="right" valign="top"><a id="a3f7b1ecff1e7614cd826bb8b3005d06f"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumbC.html#a3f7b1ecff1e7614cd826bb8b3005d06f">mimeType</a> () const</td></tr>
+<tr class="memdesc:a3f7b1ecff1e7614cd826bb8b3005d06f inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the MIME type of the thumbnail, either <code>"image/tiff"</code> or <code>"image/jpeg"</code>. <br /></td></tr>
+<tr class="separator:a3f7b1ecff1e7614cd826bb8b3005d06f inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21d32be20c8a64cfd59dbf629b867868 inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="memItemLeft" align="right" valign="top"><a id="a21d32be20c8a64cfd59dbf629b867868"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumbC.html#a21d32be20c8a64cfd59dbf629b867868">extension</a> () const</td></tr>
+<tr class="memdesc:a21d32be20c8a64cfd59dbf629b867868 inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the file extension for the format of the thumbnail (".tif" or ".jpg"). <br /></td></tr>
+<tr class="separator:a21d32be20c8a64cfd59dbf629b867868 inherit pub_methods_classExiv2_1_1ExifThumbC"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Manipulators</h2></td></tr>
+<tr class="memitem:a90e5155ba60dae3af4066f80464c788d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumb.html#a90e5155ba60dae3af4066f80464c788d">setJpegThumbnail</a> (const std::string &amp;path, <a class="el" href="namespaceExiv2.html#aedcaa9af0563cbd00a19b040d5aa7a70">URational</a> xres, <a class="el" href="namespaceExiv2.html#aedcaa9af0563cbd00a19b040d5aa7a70">URational</a> yres, uint16_t unit)</td></tr>
+<tr class="memdesc:a90e5155ba60dae3af4066f80464c788d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Exif thumbnail to the JPEG image <em>path</em>. Set XResolution, YResolution and ResolutionUnit to <em>xres</em>, <em>yres</em> and <em>unit</em>, respectively.  <a href="classExiv2_1_1ExifThumb.html#a90e5155ba60dae3af4066f80464c788d">More...</a><br /></td></tr>
+<tr class="separator:a90e5155ba60dae3af4066f80464c788d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa29789f0a658d53066e0b55bb2b1acb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumb.html#aa29789f0a658d53066e0b55bb2b1acb2">setJpegThumbnail</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *buf, long size, <a class="el" href="namespaceExiv2.html#aedcaa9af0563cbd00a19b040d5aa7a70">URational</a> xres, <a class="el" href="namespaceExiv2.html#aedcaa9af0563cbd00a19b040d5aa7a70">URational</a> yres, uint16_t unit)</td></tr>
+<tr class="memdesc:aa29789f0a658d53066e0b55bb2b1acb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Exif thumbnail to the JPEG image pointed to by <em>buf</em>, and size <em>size</em>. Set XResolution, YResolution and ResolutionUnit to <em>xres</em>, <em>yres</em> and <em>unit</em>, respectively.  <a href="classExiv2_1_1ExifThumb.html#aa29789f0a658d53066e0b55bb2b1acb2">More...</a><br /></td></tr>
+<tr class="separator:aa29789f0a658d53066e0b55bb2b1acb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5578e157a1e60b295d703aecec242b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumb.html#af5578e157a1e60b295d703aecec242b8">setJpegThumbnail</a> (const std::string &amp;path)</td></tr>
+<tr class="memdesc:af5578e157a1e60b295d703aecec242b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Exif thumbnail to the JPEG image <em>path</em>.  <a href="classExiv2_1_1ExifThumb.html#af5578e157a1e60b295d703aecec242b8">More...</a><br /></td></tr>
+<tr class="separator:af5578e157a1e60b295d703aecec242b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8cf3725b3d9d6fa08055ea4809bf77f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumb.html#af8cf3725b3d9d6fa08055ea4809bf77f">setJpegThumbnail</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *buf, long size)</td></tr>
+<tr class="memdesc:af8cf3725b3d9d6fa08055ea4809bf77f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Exif thumbnail to the JPEG image pointed to by <em>buf</em>, and size <em>size</em>.  <a href="classExiv2_1_1ExifThumb.html#af8cf3725b3d9d6fa08055ea4809bf77f">More...</a><br /></td></tr>
+<tr class="separator:af8cf3725b3d9d6fa08055ea4809bf77f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5239338ade638043bf66337fd9d4e3f8"><td class="memItemLeft" align="right" valign="top"><a id="a5239338ade638043bf66337fd9d4e3f8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumb.html#a5239338ade638043bf66337fd9d4e3f8">erase</a> ()</td></tr>
+<tr class="memdesc:a5239338ade638043bf66337fd9d4e3f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the thumbnail from the Exif data. Removes all Exif.Thumbnail.*, i.e., Exif IFD1 tags. <br /></td></tr>
+<tr class="separator:a5239338ade638043bf66337fd9d4e3f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Access and modify an Exif thumbnail image. This class implements manipulators to set and erase the thumbnail image that is optionally embedded in IFD1 of the Exif data. Accessors are provided by the base class, <a class="el" href="classExiv2_1_1ExifThumbC.html" title="Access to a Exif thumbnail image. This class provides higher level accessors to the thumbnail image t...">ExifThumbC</a>. </p>
+<dl class="section note"><dt>Note</dt><dd>Various other preview and thumbnail images may be contained in an image, depending on its format and the camera make and model. This class only provides access to the Exif thumbnail as specified in the Exif standard. </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af8cf3725b3d9d6fa08055ea4809bf77f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8cf3725b3d9d6fa08055ea4809bf77f">&#9670;&nbsp;</a></span>setJpegThumbnail() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Exiv2::ExifThumb::setJpegThumbnail </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the Exif thumbnail to the JPEG image pointed to by <em>buf</em>, and size <em>size</em>. </p>
+<p>This sets only the Compression, JPEGInterchangeFormat and JPEGInterchangeFormatLength tags, which is not all the thumbnail Exif information mandatory according to the Exif standard. (But it's enough to work with the thumbnail.)</p>
+<dl class="section note"><dt>Note</dt><dd>No checks on the image format or size are performed. </dd>
+<dd>
+Additional existing Exif thumbnail tags are not modified. </dd></dl>
+
+</div>
+</div>
+<a id="aa29789f0a658d53066e0b55bb2b1acb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa29789f0a658d53066e0b55bb2b1acb2">&#9670;&nbsp;</a></span>setJpegThumbnail() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Exiv2::ExifThumb::setJpegThumbnail </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#aedcaa9af0563cbd00a19b040d5aa7a70">URational</a>&#160;</td>
+          <td class="paramname"><em>xres</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#aedcaa9af0563cbd00a19b040d5aa7a70">URational</a>&#160;</td>
+          <td class="paramname"><em>yres</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the Exif thumbnail to the JPEG image pointed to by <em>buf</em>, and size <em>size</em>. Set XResolution, YResolution and ResolutionUnit to <em>xres</em>, <em>yres</em> and <em>unit</em>, respectively. </p>
+<p>This results in the minimal thumbnail tags being set for a JPEG thumbnail, as mandated by the Exif standard.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if reading the file fails.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>No checks on the image format or size are performed. </dd>
+<dd>
+Additional existing Exif thumbnail tags are not modified. </dd>
+<dd>
+The JPEG image inserted as thumbnail image should not itself contain Exif data (or other metadata), as existing applications may have problems with that. (The preview application that comes with OS X for one.) - David Harvey. </dd></dl>
+
+</div>
+</div>
+<a id="af5578e157a1e60b295d703aecec242b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5578e157a1e60b295d703aecec242b8">&#9670;&nbsp;</a></span>setJpegThumbnail() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Exiv2::ExifThumb::setJpegThumbnail </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the Exif thumbnail to the JPEG image <em>path</em>. </p>
+<p>This sets only the Compression, JPEGInterchangeFormat and JPEGInterchangeFormatLength tags, which is not all the thumbnail Exif information mandatory according to the Exif standard. (But it's enough to work with the thumbnail.)</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if reading the file fails.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>No checks on the file format or size are performed. </dd>
+<dd>
+Additional existing Exif thumbnail tags are not modified. </dd></dl>
+
+</div>
+</div>
+<a id="a90e5155ba60dae3af4066f80464c788d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90e5155ba60dae3af4066f80464c788d">&#9670;&nbsp;</a></span>setJpegThumbnail() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Exiv2::ExifThumb::setJpegThumbnail </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#aedcaa9af0563cbd00a19b040d5aa7a70">URational</a>&#160;</td>
+          <td class="paramname"><em>xres</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#aedcaa9af0563cbd00a19b040d5aa7a70">URational</a>&#160;</td>
+          <td class="paramname"><em>yres</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>unit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the Exif thumbnail to the JPEG image <em>path</em>. Set XResolution, YResolution and ResolutionUnit to <em>xres</em>, <em>yres</em> and <em>unit</em>, respectively. </p>
+<p>This results in the minimal thumbnail tags being set for a JPEG thumbnail, as mandated by the Exif standard.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if reading the file fails.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>No checks on the file format or size are performed. </dd>
+<dd>
+Additional existing Exif thumbnail tags are not modified. </dd>
+<dd>
+The JPEG image inserted as thumbnail image should not itself contain Exif data (or other metadata), as existing applications may have problems with that. (The preview application that comes with OS X for one.) - David Harvey. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="exif_8hpp.html">exif.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

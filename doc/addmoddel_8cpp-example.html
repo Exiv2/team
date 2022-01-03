@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">addmoddel.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>Sample usage of high-level metadata operations.</p>
+<div class="fragment"><div class="line"><span class="comment">// ***************************************************************** -*- C++ -*-</span></div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Copyright (C) 2004-2021 Exiv2 authors</span></div>
+<div class="line"><span class="comment"> * This program is part of the Exiv2 distribution.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
+<div class="line"><span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
+<div class="line"><span class="comment"> * as published by the Free Software Foundation; either version 2</span></div>
+<div class="line"><span class="comment"> * of the License, or (at your option) any later version.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><span class="comment"> * GNU General Public License for more details.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><span class="comment"> * along with this program; if not, write to the Free Software</span></div>
+<div class="line"><span class="comment"> * Foundation, Inc., 51 Franklin Street, 5th Floor, Boston, MA 02110-1301 USA.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="comment">// addmoddel.cpp</span></div>
+<div class="line"><span class="comment">// Sample program showing how to add, modify and delete Exif metadata.</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;exiv2/exiv2.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* <span class="keyword">const</span> argv[])</div>
+<div class="line"><span class="keyword">try</span> {</div>
+<div class="line">    <a name="a0"></a><a class="code" href="classExiv2_1_1XmpParser.html#aea661a7039adb5a748eb7639c8ce9294">Exiv2::XmpParser::initialize</a>();</div>
+<div class="line">    ::atexit(<a name="a1"></a><a class="code" href="classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2">Exiv2::XmpParser::terminate</a>);</div>
+<div class="line"><span class="preprocessor">#ifdef EXV_ENABLE_BMFF</span></div>
+<div class="line">    Exiv2::enableBMFF();</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (argc != 2) {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; file\n&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">    }</div>
+<div class="line">    std::string file(argv[1]);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Container for exif metadata. This is an example of creating</span></div>
+<div class="line">    <span class="comment">// exif metadata from scratch. If you want to add, modify, delete</span></div>
+<div class="line">    <span class="comment">// metadata that exists in an image, start with ImageFactory::open</span></div>
+<div class="line">    <a name="_a2"></a><a class="code" href="classExiv2_1_1ExifData.html">Exiv2::ExifData</a> exifData;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// *************************************************************************</span></div>
+<div class="line">    <span class="comment">// Add to the Exif data</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// This is the quickest way to add (simple) Exif data. If a metadatum for</span></div>
+<div class="line">    <span class="comment">// a given key already exists, its value is overwritten. Otherwise a new</span></div>
+<div class="line">    <span class="comment">// tag is added.</span></div>
+<div class="line">    exifData[<span class="stringliteral">&quot;Exif.Image.Model&quot;</span>] = <span class="stringliteral">&quot;Test 1&quot;</span>;                     <span class="comment">// AsciiValue</span></div>
+<div class="line">    exifData[<span class="stringliteral">&quot;Exif.Image.SamplesPerPixel&quot;</span>] = uint16_t(162);      <span class="comment">// UShortValue</span></div>
+<div class="line">    exifData[<span class="stringliteral">&quot;Exif.Image.XResolution&quot;</span>] = -2;            <span class="comment">// LongValue</span></div>
+<div class="line">    exifData[<span class="stringliteral">&quot;Exif.Image.YResolution&quot;</span>] = <a name="a3"></a><a class="code" href="namespaceExiv2.html#a95756f3f7fa19103f83addf5fa088a30">Exiv2::Rational</a>(-2, 3); <span class="comment">// RationalValue</span></div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Added a few tags the quick way.\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Create a ASCII string value (note the use of create)</span></div>
+<div class="line">    <a class="code" href="classExiv2_1_1Value.html#a0f62e585b82c97738858b743e60dff21">Exiv2::Value::AutoPtr</a> v = <a name="a4"></a><a class="code" href="classExiv2_1_1Value.html#ad6ff043921cd1a5c399a9a4fc8257006">Exiv2::Value::create</a>(<a name="a5"></a><a class="code" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450ca773cf6dde5caaabb3dcf9fb161fa7dfd">Exiv2::asciiString</a>);</div>
+<div class="line">    <span class="comment">// Set the value to a string</span></div>
+<div class="line">    v-&gt;read(<span class="stringliteral">&quot;1999:12:31 23:59:59&quot;</span>);</div>
+<div class="line">    <span class="comment">// Add the value together with its key to the Exif data container</span></div>
+<div class="line">    <a name="_a6"></a><a class="code" href="classExiv2_1_1ExifKey.html">Exiv2::ExifKey</a> key(<span class="stringliteral">&quot;Exif.Photo.DateTimeOriginal&quot;</span>);</div>
+<div class="line">    exifData.<a name="a7"></a><a class="code" href="classExiv2_1_1ExifData.html#a91d231cd1b9fefc311c5166e30ab66eb">add</a>(key, v.get());</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Added key \&quot;&quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;\&quot;, value \&quot;&quot;</span> &lt;&lt; *v &lt;&lt; <span class="stringliteral">&quot;\&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Now create a more interesting value (without using the create method)</span></div>
+<div class="line">    <a class="code" href="classExiv2_1_1ValueType.html#a0c76c512468a47f6eac463f4af278a14">Exiv2::URationalValue::AutoPtr</a> rv(<span class="keyword">new</span> <a name="_a8"></a><a class="code" href="classExiv2_1_1ValueType.html">Exiv2::URationalValue</a>);</div>
+<div class="line">    <span class="comment">// Set two rational components from a string</span></div>
+<div class="line">    rv-&gt;read(<span class="stringliteral">&quot;1/2 1/3&quot;</span>);</div>
+<div class="line">    <span class="comment">// Add more elements through the extended interface of rational value</span></div>
+<div class="line">    rv-&gt;value_.push_back(std::make_pair(2,3));</div>
+<div class="line">    rv-&gt;value_.push_back(std::make_pair(3,4));</div>
+<div class="line">    <span class="comment">// Add the key and value pair to the Exif data</span></div>
+<div class="line">    key = <a class="code" href="classExiv2_1_1ExifKey.html">Exiv2::ExifKey</a>(<span class="stringliteral">&quot;Exif.Image.PrimaryChromaticities&quot;</span>);</div>
+<div class="line">    exifData.<a class="code" href="classExiv2_1_1ExifData.html#a91d231cd1b9fefc311c5166e30ab66eb">add</a>(key, rv.get());</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Added key \&quot;&quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;\&quot;, value \&quot;&quot;</span> &lt;&lt; *rv &lt;&lt; <span class="stringliteral">&quot;\&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// *************************************************************************</span></div>
+<div class="line">    <span class="comment">// Modify Exif data</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Since we know that the metadatum exists (or we don&#39;t mind creating a new</span></div>
+<div class="line">    <span class="comment">// tag if it doesn&#39;t), we can simply do this:</span></div>
+<div class="line">    <a name="_a9"></a><a class="code" href="classExiv2_1_1Exifdatum.html">Exiv2::Exifdatum</a>&amp; tag = exifData[<span class="stringliteral">&quot;Exif.Photo.DateTimeOriginal&quot;</span>];</div>
+<div class="line">    std::string <a class="code" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450ca0c347d8ddbbad9440f9bb6db8a06fa45">date</a> = tag.<a name="a10"></a><a class="code" href="classExiv2_1_1Exifdatum.html#aab96cd19c708d84e7e7020e7ec46db26">toString</a>();</div>
+<div class="line">    <a class="code" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450ca0c347d8ddbbad9440f9bb6db8a06fa45">date</a>.replace(0, 4, <span class="stringliteral">&quot;2000&quot;</span>);</div>
+<div class="line">    tag.<a name="a11"></a>setValue(<a class="code" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450ca0c347d8ddbbad9440f9bb6db8a06fa45">date</a>);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Modified key \&quot;&quot;</span> &lt;&lt; tag.<a name="a12"></a><a class="code" href="classExiv2_1_1Exifdatum.html#a3e7a7a8aadacb233627091a5fe070229">key</a>()</div>
+<div class="line">              &lt;&lt; <span class="stringliteral">&quot;\&quot;, new value \&quot;&quot;</span> &lt;&lt; tag.<a name="a13"></a><a class="code" href="classExiv2_1_1Exifdatum.html#a4862defbeb7a99b78bf24da6cc1961c3">value</a>() &lt;&lt; <span class="stringliteral">&quot;\&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Alternatively, we can use findKey()</span></div>
+<div class="line">    key = <a class="code" href="classExiv2_1_1ExifKey.html">Exiv2::ExifKey</a>(<span class="stringliteral">&quot;Exif.Image.PrimaryChromaticities&quot;</span>);</div>
+<div class="line">    <a class="code" href="classExiv2_1_1ExifData.html#a02e2a2acb4cfeb0f7755c1a45f94106f">Exiv2::ExifData::iterator</a> pos = exifData.<a name="a14"></a><a class="code" href="classExiv2_1_1ExifData.html#a96c38cbd300ebdfa05f849864b380690">findKey</a>(key);</div>
+<div class="line">    <span class="keywordflow">if</span> (pos == exifData.<a name="a15"></a><a class="code" href="classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe">end</a>()) <span class="keywordflow">throw</span> <a name="a16"></a><a class="code" href="namespaceExiv2.html#accd3e49cafe9db52c1e0e6f648753cae">Exiv2::Error</a>(Exiv2::kerErrorMessage, <span class="stringliteral">&quot;Key not found&quot;</span>);</div>
+<div class="line">    <span class="comment">// Get a pointer to a copy of the value</span></div>
+<div class="line">    v = pos-&gt;getValue();</div>
+<div class="line">    <span class="comment">// Downcast the Value pointer to its actual type</span></div>
+<div class="line">    <a class="code" href="classExiv2_1_1ValueType.html">Exiv2::URationalValue</a>* prv = <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classExiv2_1_1ValueType.html">Exiv2::URationalValue</a>*<span class="keyword">&gt;</span>(v.release());</div>
+<div class="line">    <span class="keywordflow">if</span> (prv == 0) <span class="keywordflow">throw</span> <a class="code" href="namespaceExiv2.html#accd3e49cafe9db52c1e0e6f648753cae">Exiv2::Error</a>(Exiv2::kerErrorMessage, <span class="stringliteral">&quot;Downcast failed&quot;</span>);</div>
+<div class="line">    rv = <a name="a17"></a><a class="code" href="classExiv2_1_1ValueType.html#a0c76c512468a47f6eac463f4af278a14">Exiv2::URationalValue::AutoPtr</a>(prv);</div>
+<div class="line">    <span class="comment">// Modify the value directly through the interface of URationalValue</span></div>
+<div class="line">    rv-&gt;value_.at(2) = std::make_pair(88,77);</div>
+<div class="line">    <span class="comment">// Copy the modified value back to the metadatum</span></div>
+<div class="line">    pos-&gt;setValue(rv.get());</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Modified key \&quot;&quot;</span> &lt;&lt; key</div>
+<div class="line">              &lt;&lt; <span class="stringliteral">&quot;\&quot;, new value \&quot;&quot;</span> &lt;&lt; pos-&gt;value() &lt;&lt; <span class="stringliteral">&quot;\&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// *************************************************************************</span></div>
+<div class="line">    <span class="comment">// Delete metadata from the Exif data container</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Delete the metadatum at iterator position pos</span></div>
+<div class="line">    key = <a class="code" href="classExiv2_1_1ExifKey.html">Exiv2::ExifKey</a>(<span class="stringliteral">&quot;Exif.Image.PrimaryChromaticities&quot;</span>);</div>
+<div class="line">    pos = exifData.<a class="code" href="classExiv2_1_1ExifData.html#a96c38cbd300ebdfa05f849864b380690">findKey</a>(key);</div>
+<div class="line">    <span class="keywordflow">if</span> (pos == exifData.<a class="code" href="classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe">end</a>()) <span class="keywordflow">throw</span> <a class="code" href="namespaceExiv2.html#accd3e49cafe9db52c1e0e6f648753cae">Exiv2::Error</a>(Exiv2::kerErrorMessage, <span class="stringliteral">&quot;Key not found&quot;</span>);</div>
+<div class="line">    exifData.<a name="a18"></a><a class="code" href="classExiv2_1_1ExifData.html#a710a66ca8be51192c15729c541b72fb5">erase</a>(pos);</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Deleted key \&quot;&quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;\&quot;\n&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// *************************************************************************</span></div>
+<div class="line">    <span class="comment">// Finally, write the remaining Exif data to the image file</span></div>
+<div class="line">    <a class="code" href="classExiv2_1_1Image.html#a89ad3ffe7a4e8a943d267d77843415fb">Exiv2::Image::AutoPtr</a> image = <a name="a19"></a><a class="code" href="classExiv2_1_1ImageFactory.html#aba929c4ca4a71625d12bcb97bcc28161">Exiv2::ImageFactory::open</a>(file);</div>
+<div class="line">    assert(image.get() != 0);</div>
+<div class="line"> </div>
+<div class="line">    image-&gt;setExifData(exifData);</div>
+<div class="line">    image-&gt;writeMetadata();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">catch</span> (<a name="_a20"></a><a class="code" href="classExiv2_1_1AnyError.html">Exiv2::AnyError</a>&amp; e) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Caught Exiv2 exception &#39;&quot;</span> &lt;&lt; e &lt;&lt; <span class="stringliteral">&quot;&#39;\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">return</span> -1;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><!-- contents -->
+<div class="ttc" id="aclassExiv2_1_1Exifdatum_html_a4862defbeb7a99b78bf24da6cc1961c3"><div class="ttname"><a href="classExiv2_1_1Exifdatum.html#a4862defbeb7a99b78bf24da6cc1961c3">Exiv2::Exifdatum::value</a></div><div class="ttdeci">const Value &amp; value() const</div><div class="ttdoc">Return a constant reference to the value.</div></div>
+<div class="ttc" id="aclassExiv2_1_1Exifdatum_html_aab96cd19c708d84e7e7020e7ec46db26"><div class="ttname"><a href="classExiv2_1_1Exifdatum.html#aab96cd19c708d84e7e7020e7ec46db26">Exiv2::Exifdatum::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdoc">Return the value as a string.</div></div>
+<div class="ttc" id="aclassExiv2_1_1ExifData_html_a91d231cd1b9fefc311c5166e30ab66eb"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a91d231cd1b9fefc311c5166e30ab66eb">Exiv2::ExifData::add</a></div><div class="ttdeci">void add(const ExifKey &amp;key, const Value *pValue)</div><div class="ttdoc">Add an Exifdatum from the supplied key and value pair. This method copies (clones) key and value....</div></div>
+<div class="ttc" id="aclassExiv2_1_1Exifdatum_html"><div class="ttname"><a href="classExiv2_1_1Exifdatum.html">Exiv2::Exifdatum</a></div><div class="ttdoc">An Exif metadatum, consisting of an ExifKey and a Value and methods to manipulate these.</div><div class="ttdef"><b>Definition:</b> exif.hpp:59</div></div>
+<div class="ttc" id="aclassExiv2_1_1XmpParser_html_aea661a7039adb5a748eb7639c8ce9294"><div class="ttname"><a href="classExiv2_1_1XmpParser.html#aea661a7039adb5a748eb7639c8ce9294">Exiv2::XmpParser::initialize</a></div><div class="ttdeci">static bool initialize(XmpParser::XmpLockFct xmpLockFct=0, void *pLockData=0)</div><div class="ttdoc">Initialize the XMP Toolkit.</div></div>
+<div class="ttc" id="anamespaceExiv2_html_a5153319711f35fe81cbc13f4b852450ca773cf6dde5caaabb3dcf9fb161fa7dfd"><div class="ttname"><a href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450ca773cf6dde5caaabb3dcf9fb161fa7dfd">Exiv2::asciiString</a></div><div class="ttdeci">@ asciiString</div><div class="ttdoc">Exif ASCII type, 8-bit byte.</div><div class="ttdef"><b>Definition:</b> types.hpp:121</div></div>
+<div class="ttc" id="aclassExiv2_1_1AnyError_html"><div class="ttname"><a href="classExiv2_1_1AnyError.html">Exiv2::AnyError</a></div><div class="ttdoc">Error class interface. Allows the definition and use of a hierarchy of error classes which can all be...</div><div class="ttdef"><b>Definition:</b> error.hpp:174</div></div>
+<div class="ttc" id="aclassExiv2_1_1ExifData_html_a9c15177b03489e3d4bb81e9acc1165fe"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe">Exiv2::ExifData::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdoc">End of the metadata.</div><div class="ttdef"><b>Definition:</b> exif.hpp:492</div></div>
+<div class="ttc" id="aclassExiv2_1_1Value_html_ad6ff043921cd1a5c399a9a4fc8257006"><div class="ttname"><a href="classExiv2_1_1Value.html#ad6ff043921cd1a5c399a9a4fc8257006">Exiv2::Value::create</a></div><div class="ttdeci">static AutoPtr create(TypeId typeId)</div><div class="ttdoc">A (simple) factory to create a Value type.</div></div>
+<div class="ttc" id="aclassExiv2_1_1ExifKey_html"><div class="ttname"><a href="classExiv2_1_1ExifKey.html">Exiv2::ExifKey</a></div><div class="ttdoc">Concrete keys for Exif metadata and access to Exif tag reference data.</div><div class="ttdef"><b>Definition:</b> tags.hpp:140</div></div>
+<div class="ttc" id="anamespaceExiv2_html_a95756f3f7fa19103f83addf5fa088a30"><div class="ttname"><a href="namespaceExiv2.html#a95756f3f7fa19103f83addf5fa088a30">Exiv2::Rational</a></div><div class="ttdeci">std::pair&lt; int32_t, int32_t &gt; Rational</div><div class="ttdoc">8 byte signed rational type.</div><div class="ttdef"><b>Definition:</b> types.hpp:99</div></div>
+<div class="ttc" id="aclassExiv2_1_1XmpParser_html_a46ff7c85b860ef81310e0ac8dd6b62a2"><div class="ttname"><a href="classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2">Exiv2::XmpParser::terminate</a></div><div class="ttdeci">static void terminate()</div><div class="ttdoc">Terminate the XMP Toolkit and unregister custom namespaces.</div></div>
+<div class="ttc" id="aclassExiv2_1_1ExifData_html_a710a66ca8be51192c15729c541b72fb5"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a710a66ca8be51192c15729c541b72fb5">Exiv2::ExifData::erase</a></div><div class="ttdeci">iterator erase(iterator pos)</div><div class="ttdoc">Delete the Exifdatum at iterator position pos, return the position of the next exifdatum....</div></div>
+<div class="ttc" id="aclassExiv2_1_1Exifdatum_html_a3e7a7a8aadacb233627091a5fe070229"><div class="ttname"><a href="classExiv2_1_1Exifdatum.html#a3e7a7a8aadacb233627091a5fe070229">Exiv2::Exifdatum::key</a></div><div class="ttdeci">std::string key() const</div><div class="ttdoc">Return the key of the Exifdatum.</div></div>
+<div class="ttc" id="anamespaceExiv2_html_a5153319711f35fe81cbc13f4b852450ca0c347d8ddbbad9440f9bb6db8a06fa45"><div class="ttname"><a href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450ca0c347d8ddbbad9440f9bb6db8a06fa45">Exiv2::date</a></div><div class="ttdeci">@ date</div><div class="ttdoc">IPTC date type.</div><div class="ttdef"><b>Definition:</b> types.hpp:137</div></div>
+<div class="ttc" id="aclassExiv2_1_1Image_html_a89ad3ffe7a4e8a943d267d77843415fb"><div class="ttname"><a href="classExiv2_1_1Image.html#a89ad3ffe7a4e8a943d267d77843415fb">Exiv2::Image::AutoPtr</a></div><div class="ttdeci">std::auto_ptr&lt; Image &gt; AutoPtr</div><div class="ttdoc">Image auto_ptr type.</div><div class="ttdef"><b>Definition:</b> image.hpp:81</div></div>
+<div class="ttc" id="aclassExiv2_1_1ImageFactory_html_aba929c4ca4a71625d12bcb97bcc28161"><div class="ttname"><a href="classExiv2_1_1ImageFactory.html#aba929c4ca4a71625d12bcb97bcc28161">Exiv2::ImageFactory::open</a></div><div class="ttdeci">static Image::AutoPtr open(const std::string &amp;path, bool useCurl=true)</div><div class="ttdoc">Create an Image subclass of the appropriate type by reading the specified file. Image type is derived...</div></div>
+<div class="ttc" id="anamespaceExiv2_html_accd3e49cafe9db52c1e0e6f648753cae"><div class="ttname"><a href="namespaceExiv2.html#accd3e49cafe9db52c1e0e6f648753cae">Exiv2::Error</a></div><div class="ttdeci">BasicError&lt; char &gt; Error</div><div class="ttdoc">Error class used for exceptions (std::string based)</div><div class="ttdef"><b>Definition:</b> error.hpp:324</div></div>
+<div class="ttc" id="aclassExiv2_1_1ValueType_html_a0c76c512468a47f6eac463f4af278a14"><div class="ttname"><a href="classExiv2_1_1ValueType.html#a0c76c512468a47f6eac463f4af278a14">Exiv2::ValueType::AutoPtr</a></div><div class="ttdeci">std::auto_ptr&lt; ValueType&lt; T &gt; &gt; AutoPtr</div><div class="ttdoc">Shortcut for a ValueType&lt;T&gt; auto pointer.</div><div class="ttdef"><b>Definition:</b> value.hpp:1238</div></div>
+<div class="ttc" id="aclassExiv2_1_1ExifData_html_a96c38cbd300ebdfa05f849864b380690"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a96c38cbd300ebdfa05f849864b380690">Exiv2::ExifData::findKey</a></div><div class="ttdeci">iterator findKey(const ExifKey &amp;key)</div><div class="ttdoc">Find the first Exifdatum with the given key, return an iterator to it.</div></div>
+<div class="ttc" id="aclassExiv2_1_1ExifData_html_a02e2a2acb4cfeb0f7755c1a45f94106f"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a02e2a2acb4cfeb0f7755c1a45f94106f">Exiv2::ExifData::iterator</a></div><div class="ttdeci">ExifMetadata::iterator iterator</div><div class="ttdoc">ExifMetadata iterator type.</div><div class="ttdef"><b>Definition:</b> exif.hpp:437</div></div>
+<div class="ttc" id="aclassExiv2_1_1ValueType_html"><div class="ttname"><a href="classExiv2_1_1ValueType.html">Exiv2::ValueType</a></div><div class="ttdoc">Template for a Value of a basic type. This is used for unsigned and signed short, long and rationals.</div><div class="ttdef"><b>Definition:</b> value.hpp:1235</div></div>
+<div class="ttc" id="aclassExiv2_1_1Value_html_a0f62e585b82c97738858b743e60dff21"><div class="ttname"><a href="classExiv2_1_1Value.html#a0f62e585b82c97738858b743e60dff21">Exiv2::Value::AutoPtr</a></div><div class="ttdeci">std::auto_ptr&lt; Value &gt; AutoPtr</div><div class="ttdoc">Shortcut for a Value auto pointer.</div><div class="ttdef"><b>Definition:</b> value.hpp:54</div></div>
+<div class="ttc" id="aclassExiv2_1_1ExifData_html"><div class="ttname"><a href="classExiv2_1_1ExifData.html">Exiv2::ExifData</a></div><div class="ttdoc">A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...</div><div class="ttdef"><b>Definition:</b> exif.hpp:434</div></div>
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceExiv2.html">Exiv2</a></li><li class="navelem"><a class="el" href="classExiv2_1_1Xmpdatum.html">Xmpdatum</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="classExiv2_1_1Xmpdatum-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Exiv2::Xmpdatum Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Information related to an XMP property. An XMP metadatum consists of an <a class="el" href="classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">XmpKey</a> and a <a class="el" href="classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Value</a> and provides methods to manipulate these.  
+ <a href="classExiv2_1_1Xmpdatum.html#details">More...</a></p>
+
+<p><code>#include &lt;xmp_exiv2.hpp&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Exiv2::Xmpdatum:</div>
+<div class="dyncontent">
+<div class="center"><img src="classExiv2_1_1Xmpdatum__inherit__graph.png" border="0" usemap="#Exiv2_1_1Xmpdatum_inherit__map" alt="Inheritance graph"/></div>
+<map name="Exiv2_1_1Xmpdatum_inherit__map" id="Exiv2_1_1Xmpdatum_inherit__map">
+<area shape="rect" title="Information related to an XMP property. An XMP metadatum consists of an XmpKey and a Value and provid..." alt="" coords="7,80,145,107"/>
+<area shape="rect" href="classExiv2_1_1Metadatum.html" title="Abstract base class defining the interface to access information related to one metadata tag." alt="" coords="5,5,147,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Creators</div></td></tr>
+<tr class="memitem:abd992e7c9ed7233458ccf7be0b3e5d9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#abd992e7c9ed7233458ccf7be0b3e5d9c">Xmpdatum</a> (const <a class="el" href="classExiv2_1_1XmpKey.html">XmpKey</a> &amp;<a class="el" href="classExiv2_1_1Xmpdatum.html#a815a8644ffab4077e3a69014ab608fbb">key</a>, const <a class="el" href="classExiv2_1_1Value.html">Value</a> *pValue=0)</td></tr>
+<tr class="memdesc:abd992e7c9ed7233458ccf7be0b3e5d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for new tags created by an application. The Xmpdatum is created from a key / value pair. Xmpdatum copies (clones) the value if one is provided. Alternatively, a program can create an 'empty' Xmpdatum with only a key and set the value using <a class="el" href="classExiv2_1_1Xmpdatum.html#ae7647893d4f7a5577232ffe0c55efd47" title="Set the value. This method copies (clones) the value pointed to by pValue.">setValue()</a>.  <a href="classExiv2_1_1Xmpdatum.html#abd992e7c9ed7233458ccf7be0b3e5d9c">More...</a><br /></td></tr>
+<tr class="separator:abd992e7c9ed7233458ccf7be0b3e5d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab66bc7df5fd4cc769562fe30661c94db"><td class="memItemLeft" align="right" valign="top"><a id="ab66bc7df5fd4cc769562fe30661c94db"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#ab66bc7df5fd4cc769562fe30661c94db">Xmpdatum</a> (const <a class="el" href="classExiv2_1_1Xmpdatum.html">Xmpdatum</a> &amp;rhs)</td></tr>
+<tr class="memdesc:ab66bc7df5fd4cc769562fe30661c94db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. <br /></td></tr>
+<tr class="separator:ab66bc7df5fd4cc769562fe30661c94db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a395c36eddced675a13aae920981eef4d"><td class="memItemLeft" align="right" valign="top"><a id="a395c36eddced675a13aae920981eef4d"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a395c36eddced675a13aae920981eef4d">~Xmpdatum</a> ()</td></tr>
+<tr class="memdesc:a395c36eddced675a13aae920981eef4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:a395c36eddced675a13aae920981eef4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Manipulators</div></td></tr>
+<tr class="memitem:a58ad084846a03bcb8bd7e16ef969dd4e"><td class="memItemLeft" align="right" valign="top"><a id="a58ad084846a03bcb8bd7e16ef969dd4e"></a>
+<a class="el" href="classExiv2_1_1Xmpdatum.html">Xmpdatum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a58ad084846a03bcb8bd7e16ef969dd4e">operator=</a> (const <a class="el" href="classExiv2_1_1Xmpdatum.html">Xmpdatum</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a58ad084846a03bcb8bd7e16ef969dd4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator. <br /></td></tr>
+<tr class="separator:a58ad084846a03bcb8bd7e16ef969dd4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e77fecaf99592876a9515d764166c5b"><td class="memItemLeft" align="right" valign="top"><a id="a0e77fecaf99592876a9515d764166c5b"></a>
+<a class="el" href="classExiv2_1_1Xmpdatum.html">Xmpdatum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a0e77fecaf99592876a9515d764166c5b">operator=</a> (const std::string &amp;<a class="el" href="classExiv2_1_1Xmpdatum.html#a4b0944ebe337a234a578d238b9e4bf14">value</a>)</td></tr>
+<tr class="memdesc:a0e77fecaf99592876a9515d764166c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign std::string <em>value</em> to the Xmpdatum. Calls <a class="el" href="classExiv2_1_1Xmpdatum.html#af8a422ab0e7e02f5526860e201e89e80" title="Set the value to the string value. Uses Value::read(const std::string&amp;). If the Xmpdatum does not hav...">setValue(const std::string&amp;)</a>. <br /></td></tr>
+<tr class="separator:a0e77fecaf99592876a9515d764166c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2651103ef9d64a7172b59307a4d2a7c0"><td class="memItemLeft" align="right" valign="top"><a id="a2651103ef9d64a7172b59307a4d2a7c0"></a>
+<a class="el" href="classExiv2_1_1Xmpdatum.html">Xmpdatum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a2651103ef9d64a7172b59307a4d2a7c0">operator=</a> (const char *<a class="el" href="classExiv2_1_1Xmpdatum.html#a4b0944ebe337a234a578d238b9e4bf14">value</a>)</td></tr>
+<tr class="memdesc:a2651103ef9d64a7172b59307a4d2a7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign const char* <em>value</em> to the Xmpdatum. Calls <a class="el" href="classExiv2_1_1Xmpdatum.html#a0e77fecaf99592876a9515d764166c5b" title="Assign std::string value to the Xmpdatum. Calls setValue(const std::string&amp;).">operator=(const std::string&amp;)</a>. <br /></td></tr>
+<tr class="separator:a2651103ef9d64a7172b59307a4d2a7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff7d6540c3e857222b1a8d3c8abd31c"><td class="memItemLeft" align="right" valign="top"><a id="a7ff7d6540c3e857222b1a8d3c8abd31c"></a>
+<a class="el" href="classExiv2_1_1Xmpdatum.html">Xmpdatum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a7ff7d6540c3e857222b1a8d3c8abd31c">operator=</a> (const bool &amp;<a class="el" href="classExiv2_1_1Xmpdatum.html#a4b0944ebe337a234a578d238b9e4bf14">value</a>)</td></tr>
+<tr class="memdesc:a7ff7d6540c3e857222b1a8d3c8abd31c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign a boolean <em>value</em> to the Xmpdatum. Translates the value to a string "true" or "false". <br /></td></tr>
+<tr class="separator:a7ff7d6540c3e857222b1a8d3c8abd31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60e6b17f5acaedf322533e3509c5e51b"><td class="memTemplParams" colspan="2"><a id="a60e6b17f5acaedf322533e3509c5e51b"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a60e6b17f5acaedf322533e3509c5e51b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classExiv2_1_1Xmpdatum.html">Xmpdatum</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a60e6b17f5acaedf322533e3509c5e51b">operator=</a> (const T &amp;<a class="el" href="classExiv2_1_1Xmpdatum.html#a4b0944ebe337a234a578d238b9e4bf14">value</a>)</td></tr>
+<tr class="memdesc:a60e6b17f5acaedf322533e3509c5e51b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign a <em>value</em> of any type with an output operator to the Xmpdatum. Calls <a class="el" href="classExiv2_1_1Xmpdatum.html#a0e77fecaf99592876a9515d764166c5b" title="Assign std::string value to the Xmpdatum. Calls setValue(const std::string&amp;).">operator=(const std::string&amp;)</a>. <br /></td></tr>
+<tr class="separator:a60e6b17f5acaedf322533e3509c5e51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac76c9ff719a35e2005218babf27b338a"><td class="memItemLeft" align="right" valign="top"><a id="ac76c9ff719a35e2005218babf27b338a"></a>
+<a class="el" href="classExiv2_1_1Xmpdatum.html">Xmpdatum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#ac76c9ff719a35e2005218babf27b338a">operator=</a> (const <a class="el" href="classExiv2_1_1Value.html">Value</a> &amp;<a class="el" href="classExiv2_1_1Xmpdatum.html#a4b0944ebe337a234a578d238b9e4bf14">value</a>)</td></tr>
+<tr class="memdesc:ac76c9ff719a35e2005218babf27b338a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign <a class="el" href="classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Value</a> <em>value</em> to the Xmpdatum. Calls <a class="el" href="classExiv2_1_1Xmpdatum.html#ae7647893d4f7a5577232ffe0c55efd47" title="Set the value. This method copies (clones) the value pointed to by pValue.">setValue(const Value*)</a>. <br /></td></tr>
+<tr class="separator:ac76c9ff719a35e2005218babf27b338a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7647893d4f7a5577232ffe0c55efd47"><td class="memItemLeft" align="right" valign="top"><a id="ae7647893d4f7a5577232ffe0c55efd47"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#ae7647893d4f7a5577232ffe0c55efd47">setValue</a> (const <a class="el" href="classExiv2_1_1Value.html">Value</a> *pValue)</td></tr>
+<tr class="memdesc:ae7647893d4f7a5577232ffe0c55efd47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value. This method copies (clones) the value pointed to by pValue. <br /></td></tr>
+<tr class="separator:ae7647893d4f7a5577232ffe0c55efd47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8a422ab0e7e02f5526860e201e89e80"><td class="memItemLeft" align="right" valign="top"><a id="af8a422ab0e7e02f5526860e201e89e80"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#af8a422ab0e7e02f5526860e201e89e80">setValue</a> (const std::string &amp;<a class="el" href="classExiv2_1_1Xmpdatum.html#a4b0944ebe337a234a578d238b9e4bf14">value</a>)</td></tr>
+<tr class="memdesc:af8a422ab0e7e02f5526860e201e89e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value to the string <em>value</em>. Uses <a class="el" href="classExiv2_1_1Value.html#acc8870f802ebcdf9d4e081816ad8956e" title="Read the value from a character buffer.">Value::read</a>(const std::string&amp;). If the Xmpdatum does not have a <a class="el" href="classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Value</a> yet, then a Value of the correct type for this Xmpdatum is created. If the key is unknown, a <a class="el" href="classExiv2_1_1XmpTextValue.html" title="Value type suitable for simple XMP properties and XMP nodes of complex types which are not parsed int...">XmpTextValue</a> is used as default. Return 0 if the value was read successfully. <br /></td></tr>
+<tr class="separator:af8a422ab0e7e02f5526860e201e89e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classExiv2_1_1Metadatum"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classExiv2_1_1Metadatum')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classExiv2_1_1Metadatum.html">Exiv2::Metadatum</a></td></tr>
+<tr class="memitem:a1d7ef6f699dc1448ddf37c5e8938808a inherit pub_methods_classExiv2_1_1Metadatum"><td class="memItemLeft" align="right" valign="top"><a id="a1d7ef6f699dc1448ddf37c5e8938808a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Metadatum.html#a1d7ef6f699dc1448ddf37c5e8938808a">Metadatum</a> ()</td></tr>
+<tr class="memdesc:a1d7ef6f699dc1448ddf37c5e8938808a inherit pub_methods_classExiv2_1_1Metadatum"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor. <br /></td></tr>
+<tr class="separator:a1d7ef6f699dc1448ddf37c5e8938808a inherit pub_methods_classExiv2_1_1Metadatum"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4b96033393a69d1382570f638d7243b inherit pub_methods_classExiv2_1_1Metadatum"><td class="memItemLeft" align="right" valign="top"><a id="aa4b96033393a69d1382570f638d7243b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Metadatum.html#aa4b96033393a69d1382570f638d7243b">Metadatum</a> (const <a class="el" href="classExiv2_1_1Metadatum.html">Metadatum</a> &amp;rhs)</td></tr>
+<tr class="memdesc:aa4b96033393a69d1382570f638d7243b inherit pub_methods_classExiv2_1_1Metadatum"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. <br /></td></tr>
+<tr class="separator:aa4b96033393a69d1382570f638d7243b inherit pub_methods_classExiv2_1_1Metadatum"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad968ef659aaeb20b5ee5dd585098c45e inherit pub_methods_classExiv2_1_1Metadatum"><td class="memItemLeft" align="right" valign="top"><a id="ad968ef659aaeb20b5ee5dd585098c45e"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Metadatum.html#ad968ef659aaeb20b5ee5dd585098c45e">~Metadatum</a> ()</td></tr>
+<tr class="memdesc:ad968ef659aaeb20b5ee5dd585098c45e inherit pub_methods_classExiv2_1_1Metadatum"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:ad968ef659aaeb20b5ee5dd585098c45e inherit pub_methods_classExiv2_1_1Metadatum"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40e059d047c2d3fa0cb91cbed9a7eadf inherit pub_methods_classExiv2_1_1Metadatum"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Metadatum.html#a40e059d047c2d3fa0cb91cbed9a7eadf">print</a> (const <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> *pMetadata=0) const</td></tr>
+<tr class="memdesc:a40e059d047c2d3fa0cb91cbed9a7eadf inherit pub_methods_classExiv2_1_1Metadatum"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the interpreted value to a string.  <a href="classExiv2_1_1Metadatum.html#a40e059d047c2d3fa0cb91cbed9a7eadf">More...</a><br /></td></tr>
+<tr class="separator:a40e059d047c2d3fa0cb91cbed9a7eadf inherit pub_methods_classExiv2_1_1Metadatum"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Accessors</h2></td></tr>
+<tr class="memitem:a48e8fa1362f8a6517a7909914b31e4d3"><td class="memItemLeft" align="right" valign="top"><a id="a48e8fa1362f8a6517a7909914b31e4d3"></a>
+long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a48e8fa1362f8a6517a7909914b31e4d3">copy</a> (<a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *buf, <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> byteOrder) const</td></tr>
+<tr class="memdesc:a48e8fa1362f8a6517a7909914b31e4d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not implemented. Calling this method will raise an exception. <br /></td></tr>
+<tr class="separator:a48e8fa1362f8a6517a7909914b31e4d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a606d11f69fcef56aa769d9047facd5ef"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a606d11f69fcef56aa769d9047facd5ef">write</a> (std::ostream &amp;os, const <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> *pMetadata=0) const</td></tr>
+<tr class="memdesc:a606d11f69fcef56aa769d9047facd5ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the interpreted value to an output stream, return the stream.  <a href="classExiv2_1_1Xmpdatum.html#a606d11f69fcef56aa769d9047facd5ef">More...</a><br /></td></tr>
+<tr class="separator:a606d11f69fcef56aa769d9047facd5ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a815a8644ffab4077e3a69014ab608fbb"><td class="memItemLeft" align="right" valign="top"><a id="a815a8644ffab4077e3a69014ab608fbb"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a815a8644ffab4077e3a69014ab608fbb">key</a> () const</td></tr>
+<tr class="memdesc:a815a8644ffab4077e3a69014ab608fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the key of the <a class="el" href="classExiv2_1_1Xmpdatum.html" title="Information related to an XMP property. An XMP metadatum consists of an XmpKey and a Value and provid...">Xmpdatum</a>. The key is of the form '<b>Xmp</b>.prefix.property'. Note however that the key is not necessarily unique, i.e., an <a class="el" href="classExiv2_1_1XmpData.html" title="A container for XMP data. This is a top-level class of the Exiv2 library.">XmpData</a> object may contain multiple metadata with the same key. <br /></td></tr>
+<tr class="separator:a815a8644ffab4077e3a69014ab608fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a091eac92488ecb74eddb1aca72c3746a"><td class="memItemLeft" align="right" valign="top"><a id="a091eac92488ecb74eddb1aca72c3746a"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a091eac92488ecb74eddb1aca72c3746a">familyName</a> () const</td></tr>
+<tr class="memdesc:a091eac92488ecb74eddb1aca72c3746a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name of the metadata family (which is also the first part of the key) <br /></td></tr>
+<tr class="separator:a091eac92488ecb74eddb1aca72c3746a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13fd2633f34311da310b0beb44e34fe"><td class="memItemLeft" align="right" valign="top"><a id="ae13fd2633f34311da310b0beb44e34fe"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#ae13fd2633f34311da310b0beb44e34fe">groupName</a> () const</td></tr>
+<tr class="memdesc:ae13fd2633f34311da310b0beb44e34fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the (preferred) schema namespace prefix. <br /></td></tr>
+<tr class="separator:ae13fd2633f34311da310b0beb44e34fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de073b47d3454c9c190b8b6ad23955d"><td class="memItemLeft" align="right" valign="top"><a id="a8de073b47d3454c9c190b8b6ad23955d"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a8de073b47d3454c9c190b8b6ad23955d">tagName</a> () const</td></tr>
+<tr class="memdesc:a8de073b47d3454c9c190b8b6ad23955d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the property name. <br /></td></tr>
+<tr class="separator:a8de073b47d3454c9c190b8b6ad23955d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a252aa0d9eb33be1b4bd9503af4df3c80"><td class="memItemLeft" align="right" valign="top"><a id="a252aa0d9eb33be1b4bd9503af4df3c80"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a252aa0d9eb33be1b4bd9503af4df3c80">tagLabel</a> () const</td></tr>
+<tr class="memdesc:a252aa0d9eb33be1b4bd9503af4df3c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a label for the tag. <br /></td></tr>
+<tr class="separator:a252aa0d9eb33be1b4bd9503af4df3c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae071e1fa36be6ac47fde0a7a3f5e9184"><td class="memItemLeft" align="right" valign="top"><a id="ae071e1fa36be6ac47fde0a7a3f5e9184"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#ae071e1fa36be6ac47fde0a7a3f5e9184">tag</a> () const</td></tr>
+<tr class="memdesc:ae071e1fa36be6ac47fde0a7a3f5e9184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Properties don't have a tag number. Return 0. <br /></td></tr>
+<tr class="separator:ae071e1fa36be6ac47fde0a7a3f5e9184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c3a5938c77f63a1c9c95d8f1967e046"><td class="memItemLeft" align="right" valign="top"><a id="a5c3a5938c77f63a1c9c95d8f1967e046"></a>
+<a class="el" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450c">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a5c3a5938c77f63a1c9c95d8f1967e046">typeId</a> () const</td></tr>
+<tr class="memdesc:a5c3a5938c77f63a1c9c95d8f1967e046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the type id of the value. <br /></td></tr>
+<tr class="separator:a5c3a5938c77f63a1c9c95d8f1967e046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa01d5410b3f6c27595db866203ad2fb7"><td class="memItemLeft" align="right" valign="top"><a id="aa01d5410b3f6c27595db866203ad2fb7"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#aa01d5410b3f6c27595db866203ad2fb7">typeName</a> () const</td></tr>
+<tr class="memdesc:aa01d5410b3f6c27595db866203ad2fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name of the type. <br /></td></tr>
+<tr class="separator:aa01d5410b3f6c27595db866203ad2fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68c96e0e8233cf6bdc8b1ec85da2cd09"><td class="memItemLeft" align="right" valign="top"><a id="a68c96e0e8233cf6bdc8b1ec85da2cd09"></a>
+long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a68c96e0e8233cf6bdc8b1ec85da2cd09">typeSize</a> () const</td></tr>
+<tr class="memdesc:a68c96e0e8233cf6bdc8b1ec85da2cd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Exif typeSize doesn't make sense here. Return 0. <br /></td></tr>
+<tr class="separator:a68c96e0e8233cf6bdc8b1ec85da2cd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad89c26576a3c5cca53b56f79473dc040"><td class="memItemLeft" align="right" valign="top"><a id="ad89c26576a3c5cca53b56f79473dc040"></a>
+long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#ad89c26576a3c5cca53b56f79473dc040">count</a> () const</td></tr>
+<tr class="memdesc:ad89c26576a3c5cca53b56f79473dc040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of components in the value. <br /></td></tr>
+<tr class="separator:ad89c26576a3c5cca53b56f79473dc040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73da73e83eee71c98aeb45c28ae79fdb"><td class="memItemLeft" align="right" valign="top"><a id="a73da73e83eee71c98aeb45c28ae79fdb"></a>
+long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a73da73e83eee71c98aeb45c28ae79fdb">size</a> () const</td></tr>
+<tr class="memdesc:a73da73e83eee71c98aeb45c28ae79fdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the value in bytes. <br /></td></tr>
+<tr class="separator:a73da73e83eee71c98aeb45c28ae79fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6220fa9f77d640b0f7e55ddc62de818"><td class="memItemLeft" align="right" valign="top"><a id="ad6220fa9f77d640b0f7e55ddc62de818"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#ad6220fa9f77d640b0f7e55ddc62de818">toString</a> () const</td></tr>
+<tr class="memdesc:ad6220fa9f77d640b0f7e55ddc62de818"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value as a string. <br /></td></tr>
+<tr class="separator:ad6220fa9f77d640b0f7e55ddc62de818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a043b1831fd1a884b829124306d6c02a8"><td class="memItemLeft" align="right" valign="top"><a id="a043b1831fd1a884b829124306d6c02a8"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a043b1831fd1a884b829124306d6c02a8">toString</a> (long n) const</td></tr>
+<tr class="memdesc:a043b1831fd1a884b829124306d6c02a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <em>n</em>-th component of the value converted to a string. The behaviour of the method is undefined if there is no <em>n</em>-th component. <br /></td></tr>
+<tr class="separator:a043b1831fd1a884b829124306d6c02a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadc34765d9b99be558ce0dcb2d993b49"><td class="memItemLeft" align="right" valign="top"><a id="aadc34765d9b99be558ce0dcb2d993b49"></a>
+long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#aadc34765d9b99be558ce0dcb2d993b49">toLong</a> (long n=0) const</td></tr>
+<tr class="memdesc:aadc34765d9b99be558ce0dcb2d993b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <em>n</em>-th component of the value converted to long. The return value is -1 if the value is not set and the behaviour of the method is undefined if there is no <em>n</em>-th component. <br /></td></tr>
+<tr class="separator:aadc34765d9b99be558ce0dcb2d993b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad94b824d02a30052c1c6b733a4c9b75b"><td class="memItemLeft" align="right" valign="top"><a id="ad94b824d02a30052c1c6b733a4c9b75b"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#ad94b824d02a30052c1c6b733a4c9b75b">toFloat</a> (long n=0) const</td></tr>
+<tr class="memdesc:ad94b824d02a30052c1c6b733a4c9b75b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <em>n</em>-th component of the value converted to float. The return value is -1 if the value is not set and the behaviour of the method is undefined if there is no <em>n</em>-th component. <br /></td></tr>
+<tr class="separator:ad94b824d02a30052c1c6b733a4c9b75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6632f9d328407ee3a76642acc8b14033"><td class="memItemLeft" align="right" valign="top"><a id="a6632f9d328407ee3a76642acc8b14033"></a>
+<a class="el" href="namespaceExiv2.html#a95756f3f7fa19103f83addf5fa088a30">Rational</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a6632f9d328407ee3a76642acc8b14033">toRational</a> (long n=0) const</td></tr>
+<tr class="memdesc:a6632f9d328407ee3a76642acc8b14033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <em>n</em>-th component of the value converted to Rational. The return value is -1/1 if the value is not set and the behaviour of the method is undefined if there is no <em>n</em>-th component. <br /></td></tr>
+<tr class="separator:a6632f9d328407ee3a76642acc8b14033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2802027b9bcf1b428ae437d4fecae162"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classExiv2_1_1Value.html#a0f62e585b82c97738858b743e60dff21">Value::AutoPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a2802027b9bcf1b428ae437d4fecae162">getValue</a> () const</td></tr>
+<tr class="memdesc:a2802027b9bcf1b428ae437d4fecae162"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an auto-pointer to a copy (clone) of the value. The caller owns this copy and the auto-poiner ensures that it will be deleted.  <a href="classExiv2_1_1Xmpdatum.html#a2802027b9bcf1b428ae437d4fecae162">More...</a><br /></td></tr>
+<tr class="separator:a2802027b9bcf1b428ae437d4fecae162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b0944ebe337a234a578d238b9e4bf14"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classExiv2_1_1Value.html">Value</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Xmpdatum.html#a4b0944ebe337a234a578d238b9e4bf14">value</a> () const</td></tr>
+<tr class="memdesc:a4b0944ebe337a234a578d238b9e4bf14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a constant reference to the value.  <a href="classExiv2_1_1Xmpdatum.html#a4b0944ebe337a234a578d238b9e4bf14">More...</a><br /></td></tr>
+<tr class="separator:a4b0944ebe337a234a578d238b9e4bf14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classExiv2_1_1Metadatum"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classExiv2_1_1Metadatum')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classExiv2_1_1Metadatum.html">Exiv2::Metadatum</a></td></tr>
+<tr class="memitem:a46d5e69333e5ab0045477bcf1c61a73e inherit pro_methods_classExiv2_1_1Metadatum"><td class="memItemLeft" align="right" valign="top"><a id="a46d5e69333e5ab0045477bcf1c61a73e"></a>
+<a class="el" href="classExiv2_1_1Metadatum.html">Metadatum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Metadatum.html#a46d5e69333e5ab0045477bcf1c61a73e">operator=</a> (const <a class="el" href="classExiv2_1_1Metadatum.html">Metadatum</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a46d5e69333e5ab0045477bcf1c61a73e inherit pro_methods_classExiv2_1_1Metadatum"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator. Protected so that it can only be used by subclasses but not directly. <br /></td></tr>
+<tr class="separator:a46d5e69333e5ab0045477bcf1c61a73e inherit pro_methods_classExiv2_1_1Metadatum"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Information related to an XMP property. An XMP metadatum consists of an <a class="el" href="classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata.">XmpKey</a> and a <a class="el" href="classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Value</a> and provides methods to manipulate these. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abd992e7c9ed7233458ccf7be0b3e5d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd992e7c9ed7233458ccf7be0b3e5d9c">&#9670;&nbsp;</a></span>Xmpdatum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Exiv2::Xmpdatum::Xmpdatum </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classExiv2_1_1XmpKey.html">XmpKey</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classExiv2_1_1Value.html">Value</a> *&#160;</td>
+          <td class="paramname"><em>pValue</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor for new tags created by an application. The Xmpdatum is created from a key / value pair. Xmpdatum copies (clones) the value if one is provided. Alternatively, a program can create an 'empty' Xmpdatum with only a key and set the value using <a class="el" href="classExiv2_1_1Xmpdatum.html#ae7647893d4f7a5577232ffe0c55efd47" title="Set the value. This method copies (clones) the value pointed to by pValue.">setValue()</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key of the Xmpdatum. </td></tr>
+    <tr><td class="paramname">pValue</td><td>Pointer to a Xmpdatum value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if the key cannot be parsed and converted to a known schema namespace prefix and property name. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2802027b9bcf1b428ae437d4fecae162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2802027b9bcf1b428ae437d4fecae162">&#9670;&nbsp;</a></span>getValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classExiv2_1_1Value.html#a0f62e585b82c97738858b743e60dff21">Value::AutoPtr</a> Exiv2::Xmpdatum::getValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return an auto-pointer to a copy (clone) of the value. The caller owns this copy and the auto-poiner ensures that it will be deleted. </p>
+<p>This method is provided for users who need full control over the value. A caller may, e.g., downcast the pointer to the appropriate subclass of <a class="el" href="classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Value</a> to make use of the interface of the subclass to set or modify its contents.</p>
+<dl class="section return"><dt>Returns</dt><dd>An auto-pointer containing a pointer to a copy (clone) of the value, 0 if the value is not set. </dd></dl>
+
+<p>Implements <a class="el" href="classExiv2_1_1Metadatum.html#a1f3f53ab9df8c213ade42012a7e89ab3">Exiv2::Metadatum</a>.</p>
+
+</div>
+</div>
+<a id="a4b0944ebe337a234a578d238b9e4bf14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b0944ebe337a234a578d238b9e4bf14">&#9670;&nbsp;</a></span>value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classExiv2_1_1Value.html">Value</a>&amp; Exiv2::Xmpdatum::value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a constant reference to the value. </p>
+<p>This method is provided mostly for convenient and versatile output of the value which can (to some extent) be formatted through standard stream manipulators. Do not attempt to write to the value through this reference. An Error is thrown if the value is not set; as an alternative to catching it, one can use <a class="el" href="classExiv2_1_1Xmpdatum.html#ad89c26576a3c5cca53b56f79473dc040" title="Return the number of components in the value.">count()</a> to check if there is any data before calling this method.</p>
+<dl class="section return"><dt>Returns</dt><dd>A constant reference to the value. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if the value is not set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classExiv2_1_1Metadatum.html#a67ab8d2752f951b70a8188341df9c7e6">Exiv2::Metadatum</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="classExiv2_1_1Xmpdatum.html#a2651103ef9d64a7172b59307a4d2a7c0">operator=()</a>.</p>
+
+</div>
+</div>
+<a id="a606d11f69fcef56aa769d9047facd5ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a606d11f69fcef56aa769d9047facd5ef">&#9670;&nbsp;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; Exiv2::Xmpdatum::write </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> *&#160;</td>
+          <td class="paramname"><em>pMetadata</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write the interpreted value to an output stream, return the stream. </p>
+<p>The method takes an optional pointer to a metadata container. Pretty-print functions may use that to refer to other metadata as it is sometimes not sufficient to know only the value of the metadatum that should be interpreted. Thus, it is advisable to always call this method with a pointer to the metadata container if possible.</p>
+<p>This functionality is currently only implemented for Exif tags. The pointer is ignored when used to write IPTC datasets or XMP properties.</p>
+<p>Without the optional metadata pointer, you do not usually have to use this function; it is used for the implementation of the output operator for Metadatum, <a class="el" href="namespaceExiv2.html#a8525be11fc92fcb2bd88e886daa1959a" title="Output operator for Metadatum types, writing the interpreted tag value.">operator&lt;&lt;(std::ostream &amp;os, const Metadatum &amp;md)</a>.</p>
+<p>See also <a class="el" href="classExiv2_1_1Metadatum.html#a40e059d047c2d3fa0cb91cbed9a7eadf" title="Write the interpreted value to a string.">print()</a>, which prints the interpreted value to a string. </p>
+
+<p>Implements <a class="el" href="classExiv2_1_1Metadatum.html#a63c2b87249ba96679c29e01218169124">Exiv2::Metadatum</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>xmp_exiv2.hpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

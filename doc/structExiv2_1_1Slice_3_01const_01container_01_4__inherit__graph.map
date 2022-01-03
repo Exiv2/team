@@ -1,0 +1,6 @@
+<map id="Exiv2::Slice&lt; const container &gt;" name="Exiv2::Slice&lt; const container &gt;">
+<area shape="rect" id="node1" title="Specialization of slices for constant containers." alt="" coords="1020,13,1167,54"/>
+<area shape="rect" id="node2" href="$structExiv2_1_1Internal_1_1ConstSliceBase.html" title=" " alt="" coords="727,5,971,61"/>
+<area shape="rect" id="node3" href="$structExiv2_1_1Internal_1_1SliceBase.html" title=" " alt="" coords="5,23,192,49"/>
+<area shape="rect" id="node4" href="$structExiv2_1_1Internal_1_1ConstSliceBase.html" title="This class provides the public&#45;facing const&#45;qualified methods of a slice." alt="" coords="241,45,484,86"/>
+</map>

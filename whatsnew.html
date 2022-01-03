@@ -1,0 +1,1020 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Exiv2 - Image metadata library and tools</title>
+
+  <!-- Doxygen styles -->
+  <link href="doc/doxygen.css" rel="stylesheet" type="text/css">
+  <link href="doc/customdoxygen.css" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="include/exiv2.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img alt="Exiv2" src="include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="getting-started.html">Getting started</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li class="active"><a href="whatsnew.html">What's New</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+        <li><a href="makernote.html">Makernote</a></li>
+        <li><a href="doc/examples.html">Examples</a></li>
+        <li><a href="doc/index.html">API</a></li>
+        <li><a href="manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+	    <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="page-header">
+    <h1>What's New in Exiv2</h1>
+  </div>
+<table class="table table-striped">
+<tr>
+<td class="text-nowrap">2021-10-22</td>
+<td>
+<b><a name="item1">Exiv2 v0.27.5</a></b><br>
+   <p>Thank you to Alex, Christoph, David, Kev, Milos, Peter K, Peter S and Robin for working on the release.<br>   </p>
+   <ol>
+    <li>BMFF bug fixes including CR3 previews</li>
+    <li>Security fixes</li>
+    <li>libFuzzer target for improved security testing</li>
+    <li>Minor bugs and fixes</li>
+   </ol>
+   <p>More details: <a href="https://github.com/Exiv2/exiv2/issues/1018#issuecomment-895425552" _target="_blank">Change List</a></p>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">2021-09-30</td>
+<td>
+<b><a name="item2">Exiv2 v0.27.5 RC3</a></b><br>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">2021-09-09</td>
+<td>
+<b><a name="item3">Exiv2 v0.27.5 RC2</a></b><br>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">2021-08-10</td>
+<td>
+<b><a name="item4">Exiv2 v0.27.5 RC1</a></b><br>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">2021-06-15</td>
+<td>
+<b><a name="item5">Exiv2 v0.27.4</a></b><br>
+   <p>Thank you to Alex, Christoph, David, Freddie, Kevin, Leo, Leonardo, Milos, Peter K and Peter S and pydera for working with me on the release.<br>
+      This release is dedicated to our cat Lizzie who was put to sleep on 2021-02-13.
+      As always, thanks to my wife (and Exiv2 widow) Alison.
+   </p>
+   <p>I have finished my book <b>Image Metadata</b><i> and </i><b>Exiv2 Architecture</b>.<br>
+   <b>Available:</b><br>
+   <a href="https://clanmills.com/exiv2/book/">https://clanmills.com/exiv2/book/</a><br>
+   and/or<br>
+   <a href="https://clanmills.com/exiv2/book/IMaEA.pdf">https://clanmills.com/exiv2/book/IMaEA.pdf</a><br>
+   There is no plan to have it printed or commercially published.
+   </p>
+   <p>Highlights of Exiv2 v0.27.4</p>
+   <ol>
+    <li>Support for bmff files (HEIC, HEIF, AVIF, CR3, JXL/bmff)</li>
+    <li>Bash test scripts rewritten in python</li>
+    <li>DNG 1.6 and Exif 2.32 support</li>
+    <li>Bug and security fixes</li>
+    <li>Localisation project on Crowdin</li>
+    <li>Updated build and test environments</li>
+    <li>Revised documentation</li>
+    <li>Other improvements</li>
+   </ol>
+   <p>More details: <a href="https://github.com/Exiv2/exiv2/issues/1018#issuecomment-757979745" _target="_blank">Change List</a></p>
+   <h3>Future of Exiv2</h3>
+   <p>Robin was 70 in January and has now retired.<br></p>
+   <p>More details: <a href="https://github.com/Exiv2/exiv2/issues/1466#issuecomment-787129589" _target="_blank">Future of Exiv2</a></p>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">2021-05-22</td>
+<td>
+<b><a name="item6">Exiv2 v0.27.4 RC3</a></b><br>
+</td>
+</tr>
+<tr>
+<td class="text-nowrap">2021-04-07</td>
+<td>
+<b><a name="item7">Exiv2 v0.27.4 RC2</a></b><br>
+</td>
+</tr>
+<tr>
+<td class="text-nowrap">2021-03-18</td>
+<td>
+<b><a name="item8">Exiv2 v0.27.4 RC1</a></b><br>
+</td>
+</tr>
+<tr>
+<td class="text-nowrap">2020-06-30</td>
+<td>
+<b><a name="item9">Exiv2 v0.27.3</a></b><br>
+   <p>Thank you to Phil, Sridhar, Luis, Kevin, and Andreas S for working with me on the release.<br>
+      As always, thanks to my wife Alison and our cat Lizzie for their support.
+   </p>
+   <p>I am writing a book called <b>Image Metadata <i>and</i> Exiv2 Architecture.</b><br>
+   Current Draft:<br>
+   <a href="https://clanmills.com/exiv2/book/">https://clanmills.com/exiv2/book/</a><br>
+   and/or<br>
+   <a href="https://clanmills.com/exiv2/book/IMaEA.pdf">https://clanmills.com/exiv2/book/IMaEA.pdf</a>
+   </p>
+   <p>Highlights of Exiv2 v0.27.3</p>
+   <ol>
+    <li>Bug and security fixes</li>
+    <li>UNIX suppport</li>
+    <li>Support for building with C++11 and C++14</li>
+    <li>Revised build and test environments</li>
+    <li>Revised documentation</li>
+    <li>Improved charset handling in UserComment</li>
+    <li>Other improvements</li>
+   </ol>
+   <p>More details: <a href="https://github.com/Exiv2/exiv2/issues/1018#issuecomment-604539346" _target="_blank">Change List</a></p>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">2020-05-31</td>
+<td>
+<b><a name="item10">Exiv2 v0.27.3 RC2</a></b><br>
+   <p>Thank you to Phil, Sridhar, Luis, Kevin, and Andreas S for working with me on the release.<br>
+      As always, thanks to my wife Alison and our cat Lizzie for their support.
+   </p>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">2020-04-28</td>
+<td>
+<b><a name="item11">Exiv2 v0.27.3 RC1</a></b><br>
+   <p>Thank you to Phil, Sridhar, Luis, Kevin, and Andreas S for working with me on the release.<br>
+      As always, thanks to my wife Alison and our cat Lizzie for their support.
+   </p>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">2019-07-28</td>
+<td>
+<b><a name="item12">Exiv2 v0.27.2</a></b><br>
+   <p>Thank You to Kevin for security contributions to this release.<br>
+      Thank You to Ting-Wei for Unix contributions to this release.<br>
+      Thank You to Dan and Luis for their solid efforts on Exiv2.<br>
+      Thank You to Andreas S for representing Team Exiv2 at LGM 2019.<br>
+      Contributors: Jens, Nehal, Phil, Paul, Toni
+   </p>
+   <ol>
+    <li>Bug and security fixes</li>
+    <li>Support for Nikon/AutoFocus and Sony/FocusPosition Metadata</li>
+    <li>Documentation and man page revisions</li>
+    <li>Updated Catalan Localisation</li>
+    <li>Using mergify to sync select PRs between 0.27-maintenance and 0.28</li>
+    <li>Monitoring API changes for v0.27 dot releases</li>
+    <li>Prelinary Dutch Localisation</li>
+    <li>Prelinary Support for Unix (FreeBSD and NetBSD)</li>
+    <li>Better Build Bundle Dependency handling</li>
+   </ol>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">2019-07-19</td>
+<td>
+<b><a name="item13">Exiv2 v0.27.2 RC3 (0.27.2.3)</a></b><br>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">2019-06-29</td>
+<td>
+<b><a name="item14">Exiv2 v0.27.2 RC2 (0.27.2.2)</a></b><br>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">2019-06-13</td>
+<td>
+<b><a name="item15">Exiv2 v0.27.2 RC1 (0.27.2.1)</a></b><br>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">26-Apr-2019</td>
+<td>
+<b><a name="item16">Exiv2 v0.27.1 (0.27.1)</a></b><br>
+   <p>Thanks to Luis, Dan and Thomas, Nehal and Andreas H for their work to make this release possible.</p>
+   <p>Thanks to Elliot at HostPresto for hosting http://exiv2.org.uk</p>
+   <p>Contributors: Andreas S, Freddie, Gilles, Michal, Phil.</p>
+   <ol>
+    <li>Bug and security fixes.</li>
+    <li>Deprecation warnings for Video, EPS and SSH support.</li>
+    <li>Relocated https://exiv2.org</li>
+    <li>Branch 0.27-maintenance for "dots" to avoid confusion with tag 0.27 (== 0.27.0 code).</li>
+    <li>Support for Visual Studio 2019 using Conan and CMake</li>
+   </ol>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">29-Mar-2019</td>
+<td>
+<b><a name="item17">Exiv2 v0.27.1 RC1 (0.27.1.1)</a></b><br>Exiv2 v0.27.1 RC1</td>
+</tr>
+<tr>
+<td class="text-nowrap">02-Jan-2019</td>
+<td>
+<b><a name="item18">Exiv2 v0.27.0a</a></b><br>No code changes. The source bundle has to been repackaged. https://github.com/Exiv2/exiv2/issues/620</td>
+</tr>
+<tr>
+<td class="text-nowrap">20-Dec-2018</td>
+<td>
+<b><a name="item19">Exiv2 v0.27</a></b><br>Thank You to <b>Dan</b> and <b>Luis</b> for their huge contribution to this release.
+    <p>
+     Contributors: Ben, Freddy, Gilles, Henri, Michal, Phil, Shridar, Toni and Thomas.
+    </p>
+<p>
+     The headline features are:
+    </p>
+<ol>
+    <li>Security fixes</li>
+    <li>Bug Fixes</li>
+    <li>Rewritten CMake Support</li>
+    <li>Conan Support to build dependencies</li>
+    <li>Adobe XMPsdk 2016 support</li>
+    <li>New python test suite</li>
+    <li>AppVeyor, Travis, CodeCov and GitLabs monitor submissions</li>
+    <li>Support for MinGW/msys2</li>
+    <li>Jenkins buildserver operates from GitHub</li>
+    <li>Jenkins buildserver operates from GitHub</li>
+    <li>New Documentation: Markdown, ReleaseNotes, Platform/ReadMe.txt and Website</li>
+    </ol>
+    <p>With Exiv2 v0.27, Team Exiv2 will offer "Long Term Support" and plan "dot" releases with security and critical fixes in 2019 and 2020.</p>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">07-Dec-2018</td>
+<td>
+<b><a name="item20">Exiv2 v0.27 RC3</a></b><br>Third (and probably final) Release Candidate for Exiv2 0.27.
+	  <p>Very useful feedback from Gilles and others.
+	     Every issue raised has been fixed and listed in releasenotes.txt.</p>
+	  <p>Built and tested in 104 configurations:<br>
+		  <table>
+			<tr>
+<td width="1%"><i>Platform</i></td>
+<td width="1%"><b>Compilers</b></td>
+<td width="1%"><b>Bits</b></td>
+<td width="1%"><b>Config</b></td>
+<td width="1%"><b>Library</b></td>
+<td width="1%"><b>Kind</b></td>
+<td width="1%" align="right"><b>Total = 104</b></td>
+<td width="1%"></td>
+</tr>
+			<tr>
+<td>
+<b>Linux</b>   </td>
+<td>gcc, clang</td>
+<td>64, 32</td>
+<td>Static, Shared</td>
+<td>Release, Debug</td>
+<td>Normal, Full</td>
+<td align="right">32</td>
+</tr>
+			<tr>
+<td>
+<b>MacOSX</b>  </td>
+<td>clang</td>
+<td>64 </td>
+<td>Static, Shared</td>
+<td>Release, Debug</td>
+<td>Normal, Full</td>
+<td align="right">8</td>
+</tr>
+			<tr>
+<td>
+<b>MinGW</b>   </td>
+<td>gcc</td>
+<td>64, 32</td>
+<td>Static, Shared</td>
+<td>Release, Debug</td>
+<td>Normal, Full</td>
+<td align="right">16</td>
+</tr>
+			<tr>
+<td>
+<b>Cygwin</b>  </td>
+<td>gcc</td>
+<td>64, 32</td>
+<td>Static, Shared</td>
+<td>Release, Debug</td>
+<td>Normal, Full</td>
+<td align="right">16</td>
+</tr>
+			<tr>
+<td>
+<b>MSVC</b>    </td>
+<td>2015, 2017</td>
+<td>64, 32</td>
+<td>Static, DLL</td>
+<td>Release, Debug</td>
+<td>Normal, Full</td>
+<td align="right">32</td>
+</tr>
+		  </table></p>
+	  <p>A <b><i>Normal</i></b> build is Exiv2 with expat and zlib.  A <b><i>Full</i></b> build also includes Video and Webready support.</p>
+	  <p>No open issues.  The code is now frozen.</p>
+	  <p>See <a title="ChangeLog" href="changelog.html#v0.27">ChangeLog</a> for details.</p>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">15-Nov-2018</td>
+<td>
+<b><a name="item21">Exiv2 v0.27 RC2</a></b><br>Second Release Candidate for Exiv2 0.27.
+  <p>Lots of productive feedback from RC1.
+  Issues raised have been fixed and listed in releasenotes.txt</p>
+  <p>See <a title="ChangeLog" href="changelog.html#v0.27">ChangeLog</a> for details.</p>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">27-Oct-2018</td>
+<td>
+<b><a name="item22">Exiv2 v0.27 RC1</a></b><br>First Release Candidate for Exiv2 0.27.
+  <ul>
+<li>Security Fixes.</li>
+      <li>New build and test infrastructure.</li>
+      <li>Many bug fixes.</li>
+      <li>Support for MinGW/msys2.</li>
+      <li>Buildserver rewritten.</li>
+      <li>Support for Adobe XMPsdk.</li>
+  </ul>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">17-May-2017</td>
+<td>
+<b><a name="item23">Exiv2 v0.26 slipsteam</a></b><br>Commercial License was discontinued and all mention removed from documentation.
+  No code changes from v0.26.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">28-April-2017</td>
+<td>
+<b><a name="item24">Exiv2 v0.26</a></b><br>Many bugs fixed.  Support for ICC Profiles, CMake/Visual Studio Support.  Metadata piping with the exiv2 command-line utility.
+  Optional user defined configuration file for lens recognition.
+    <p>See <a title="ChangeLog" href="changelog.html#v0.26">ChangeLog</a> for details.</p>
+    <p>Slide Presentation: <a href="Exiv2v0-26.pdf">Exiv2v0-26.pdf</a></p>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">10-Oct-2015</td>
+<td>
+<b><a name="item25">Window dressing</a></b><br>We re-designed the website for improved useability and for use on various devices with
+  different screen sizes.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">21-Jun-2015</td>
+<td>
+<b><a name="item26">Exiv2 0.25 released</a></b><br>This release contains a large collection of new features, new lenses and bugfixes
+  across all areas of Exiv2. See the
+  <a title="ChangeLog" href="changelog.html">ChangeLog</a> for the complete long
+  list of changes.
+  Both 2013 GSoC projects, '<a title="Web Ready" href="http://dev.exiv2.org/projects/exiv2/wiki/GSoC_2013_%22Cloud_Ready%22_Project_Specification">Web Ready</a>' by Tuan (mentored by Robin)
+  and 'Video Write support' by Mahesh (Abhinav) are included as build options,
+  the latter builds together with Video Read support, which is no longer part
+  of the standard build.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">03-Oct-2014</td>
+<td>
+<b><a name="item27">We have moved</a></b><br>You shouldn't actually notice anything of that, except that we
+  have at the same time also upgraded to a more recent version of
+  Redmine, with new features and a slightly updated look. I also had
+  to update some of the Redmine links. If you find any remaining
+  issues with the sites, please report them to us in the
+  <a title="Form - Exiv2" href="http://dev.exiv2.org/projects/exiv2/boards">forum</a>.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">02-Dec-2013</td>
+<td>
+<b><a name="item28">Exiv2 0.24 released</a></b><br>Exiv2 introduces its first support for Video metadata.
+  Many more cameras and accessories are now recognised.
+  Numerous bugs fixes, build and test improvments.
+  More details: <a title="ChangeLog" href="changelog.html">ChangeLog</a>.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">02-Dec-2013</td>
+<td>
+<b><a name="item29">GIMP meets (g)exiv2</a></b><br>Improved <a title="GIMP gets advanced Exif, XMP, IPTC metadata support - Alexandre Prokoudine" href="http://libregraphicsworld.org/blog/entry/gimp-gets-advanced-exif-xmp-iptc-metadata-support">support for Exif, XMP, and IPTC</a> along with a viewer/editor will be part of
+  GIMP 2.10. <a title="GIMP meets gexiv2 - Jim Nelson" href="https://blogs.gnome.org/jnelson/2013/11/06/gimp-meets-gexiv2/">GIMP has adopted gexiv2</a>, and therefore Exiv2, for their photo metadata needs. Yay!
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">23-Apr-2012</td>
+<td>
+<b><a name="item30">Exiv2 0.23 released</a></b><br>Exiv2 can now finally write metadata to Canon CR2 images. Besides, this release
+  adds support for Pentax makernotes in Pentax native DNG images, updates various lens lists
+  and contains the usual new minor features and bugfixes, which are all detailed in
+  the <a title="ChangeLog" href="changelog.html">ChangeLog</a>.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">18-Sep-2011</td>
+<td>
+<b><a name="item31">Exiv2 0.22 released</a></b><br>This release adds support to access previews and read and write XMP
+  metadata in Postscript images. It also introduces a new MSVC project for 64 bit
+  builds as well as many smaller features and bugfixes, all of which are listed in
+  the <a title="ChangeLog" href="changelog.html">ChangeLog</a> as usual.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">14-Feb-2011</td>
+<td>
+<b><a name="item32">Exiv2 0.21.1 released</a></b><br>This release fixes several bugs that were present in 0.21 and is binary
+  compatible with the previous version. As usual, the
+  <a title="ChangeLog" href="changelog.html">ChangeLog</a> lists all
+  changes in detail.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">01-Dec-2010</td>
+<td>
+<b><a name="item33">Exiv2 0.21 released</a></b><br>This release adds read and write support for Samsung SRW
+  images and <a title="Samsung makernote tags" href="tags-samsung.html">Samsung makernotes</a>.
+  The exiv2 library now accepts a custom error handler and has a
+  setting to control which messages are generated. The exiv2 command
+  line tool has a new 'quiet' option which uses the new functionality
+  to suppress all library warnings.
+  Some important API changes will allow many future image format
+  and makernote enhancements to be done in a binary compatible
+  fashion.  The new exiv2.hpp umbrella header file further shields
+  applications from library changes.
+  The <a title="ChangeLog" href="changelog.html">ChangeLog</a> lists these and
+  various smaller enhancements, bug fixes and tag updates in detail.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">30-May-2010</td>
+<td>
+<b><a name="item34">Exiv2 0.20 released</a></b><br>This release includes
+   <a title="Sony makernote tags" href="tags-sony.html">Sony</a>,
+   <a title="Nikon makernote tags" href="tags-nikon.html">Nikon</a> and
+   <a title="Pentax makernote tags" href="tags-pentax.html">Pentax</a>
+   makernote updates and a significant performance improvement for Nikon
+   makernotes. Writing to Minolta raw images (ORF) is now supported.
+   Several TIFF tags and the XMP
+   <a href="tags-xmp-kipi.html" title="KDE Image Program Interface schema">KDE Image Program Interface (kipi) schema</a>,
+   <a href="tags-xmp-mediapro.html" title="iView Media Pro schema">iView Media Pro schema</a> and
+   <a href="tags-xmp-expressionmedia.html" title="Microsoft Expression Media schema">Microsoft Expression Media schema</a>
+   have been added. See the
+   <a title="ChangeLog" href="changelog.html">ChangeLog</a> for a complete list of
+   all enhancements and bugfixes in this release.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">30-Dec-2009</td>
+<td>
+<b><a name="item35">Exiv2 0.19 released</a></b><br>This release has a dramatically reduced memory footprint when writing
+   to TIFF and TIFF-based images as the images are no longer completely
+   loaded into memory. In addition it improves performance of read
+   operations for such files by about a factor six on Windows. It also
+   provides extended Nikon makernote support. Exiv2 is now able to read
+   and write many additional
+   <a title="Nikon makernote tags" href="tags-nikon.html">Nikon makernote tags</a>,
+   including encrypted tags. The XMP toolkit used by Exiv2 has been upgraded to
+   the latest available version,
+   <a title="Iptc4xmpExt schema" href="tags-xmp-iptcExt.html">iptc4xmpExt</a> and
+   <a title="PLUS schema" href="tags-xmp-plus.html">plus</a> XMP schemas have been
+   added and several XMP conversion issues fixed.
+   The <a title="ChangeLog" href="changelog.html">ChangeLog</a> lists all
+   these enhancements and various other features and bugs that have been
+   addressed for this release.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">24-Jun-2009</td>
+<td>
+<b><a name="item36">Exiv2 0.18.2 released</a></b><br>This release fixes several important issues found with PNG
+   write-support, writing to certain NEF images and writing comments to
+   JPG images, among others. It also contains minor Nikon and Minolta
+   lens updates and updates Polish translations.
+   The <a title="ChangeLog" href="changelog.html">ChangeLog</a> has
+   the complete list of changes, as usual.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">06-Apr-2009</td>
+<td>
+<b><a name="item37">Exiv2 0.18.1 released</a></b><br>This release adds write-support for Adobe Photoshop PSD
+   images, read-support for Panasonic RW2 images, Panasonic and Nikon
+   makernote updates, and a number of improvements under the hood and
+   bug fixes, detailed in the <a title="ChangeLog" href="changelog.html">ChangeLog</a>.
+   It also includes a new utility,
+   <a title="organize directories with digital images" href="http://dev.exiv2.org/boards/3/topics/44">organize</a>,
+   contributed by Brad Schick.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">08-Jan-2009</td>
+<td>
+<b><a name="item38">Community website</a></b><br>Brad has migrated the Mantis issue tracker and the commit
+  info list to a
+  <a href="http://www.redmine.org" title="Redmine - a flexible project management web application">Redmine</a>
+  installation. This also includes a new forum, which replaces the Exiv2
+  Yahoo! group, and a new Exiv2 Wiki, all integrated, with a common
+  look-and-feel and a single sign-on. From the main website, these
+  project resources are accessible through the
+  <a href="http://dev.exiv2.org/projects/exiv2/wiki" title="Exiv2 project resources and help centre">Project</a>
+  link in the sidebar.<br>
+  Thanks to Brad Schick for this latest innovation as well as his
+  reliable sysadmin services and sponsorship since the early days of
+  the project!
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">18-Dec-2008</td>
+<td>
+<b><a name="item39">Exiv2 0.18 released</a></b><br>Here is the final 0.18 release with write-support for TIFF,
+   DNG, NEF, PEF, PNG and JP2 images, makernote updates and access to
+   image previews. On Windows, Exiv2 can now be built as a DLL.<br>
+   In addition to the changes in the 0.18 pre-releases, the Exiv2
+   command line utility has new options to show all (Exif, IPTC and
+   XMP) metadata and to list and extract preview images, while the
+   library enhancements are mostly bug fixes and minor features. See
+   the <a title="ChangeLog" href="changelog.html">ChangeLog</a> for
+   details.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">04-Nov-2008</td>
+<td>
+<b><a name="item40">Exiv2 0.18-pre2</a></b><br>With this pre-release it is now possible to build an Exiv2 Windows
+   DLL.<br>
+   A new API was added to
+   <a title="" href="http://uk.groups.yahoo.com/group/exiv2/message/1404">access image previews</a>
+   of any image. In addition to Exif thumbnails this allows retrieving
+   various other previews from RAW images and Exif MakerNotes through
+   a common interface.<br>
+   Another backward-compatible API change allows
+   <a title="" href="http://uk.groups.yahoo.com/group/exiv2/message/1408">advanced Exif pretty-printing functions</a>
+   to refer to all Exif tags.<br>
+   Further Exif improvements and fixes are detailed in the
+   <a title="ChangeLog" href="changelog.html">ChangeLog</a>.<br>
+   Again, please use this pre-release to test with backups of your
+   images and to adapt applications to the modified interface, and raise
+   issues in the <a title="Exiv2 support forum" href="support.html">forum</a>.
+   Your feedback is important to finalizing release 0.18.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">11-Sep-2008</td>
+<td>
+<b><a name="item41">Exiv2 0.18-pre1</a></b><br>This pre-release adds write-support for TIFF, DNG, NEF, PEF,
+   PNG and JP2 images and provides the basis for write-support for
+   other TIFF-like RAW formats.<br>
+   The library's <a title="Exiv2 API documentation" href="doc/index.html">API</a>
+   was streamlined and internal symbols removed from the ABI. The
+   benefits of this change are manifold. In particular, the reduced
+   API is easier to work with and will ultimately be more stable.<br>
+   Under the hood, the TIFF parser code was consolidated: JPEG images
+   now also use the new TIFF parser to read and write Exif metadata
+   and the old obsolete code was removed.<br>
+   See the <a title="ChangeLog" href="changelog.html">ChangeLog</a> for a
+   complete list of changes and links to even more details.<br>
+   Please use this pre-release to test with backups of your images and
+   to adapt applications to the modified interface, and raise issues
+   in the
+   <a title="Exiv2 support forum" href="support.html">forum</a>.
+   This feedback is key to finalizing release 0.18.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">19-Jun-2008</td>
+<td>
+<b><a name="item42">Exiv2 0.17.1 released</a></b><br>This is a bugfix release for some important issues, some of which
+  were introduced with the previous release. See the
+  <a title="ChangeLog" href="changelog.html">ChangeLog</a> for details.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">06-Jun-2008</td>
+<td>
+<b><a name="item43">Exiv2 0.17 released</a></b><br>This release considerably extends the functionality for
+  dealing with XMP. It includes conversion of Exif and IPTC to/from
+  XMP, XMP sidecar files and XMP pretty printing functionality. It
+  also adds support for JPEG 2000 (JP2) and Photoshop (PSD) images,
+  among other
+  <a title="ChangeLog" href="changelog.html">improvements and fixes</a>.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">06-Mar-2008</td>
+<td>
+<b><a name="item44">API documentation</a></b><br>The complete Exiv2 API documentation is now available
+  <a title="Exiv2 API documentation" href="doc/index.html">online</a>.
+  Thanks to Dimitri van Heesch for
+  <a title="Doxygen" href="http://www.doxygen.org">doxygen</a>,
+  the great source code documentation generator tool!
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">10-Jan-2008</td>
+<td>
+<b><a name="item45">Exiv2 0.16 released</a></b><br>Here is the final 0.16 release with XMP support. It took longer
+  than it should have and thus contains quite a
+  <a title="ChangeLog" href="changelog.html">list</a> of bug fixes and
+  enhancements.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">09-Nov-2007</td>
+<td>
+<b><a name="item46">Exiv2 0.16-pre1</a></b><br>This is a pre-release of the upcoming Exiv2 0.16 with XMP
+  support. Adding XMP metadata to an image is now just as easy as
+  adding Exif or IPTC tags. In addition there is new support for Olympus ORF
+  images and Pentax makernotes. Please try Exiv2 0.16-pre1 and report issues
+  you may have with it to the
+  <a title="Exiv2 support forum" href="support.html">Exiv2 forum</a>.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">24-Sep-2007</td>
+<td>
+<b><a name="item47">XMP testing</a></b><br>The XMP implementation is now in the trunk in SVN and it is
+  reasonably complete and ready for testing. Please try it out and let
+  us know your comments. See
+  <a title="XMP BETA announcement" href="http://uk.groups.yahoo.com/group/exiv2/message/916">this announcement</a> for more details.</td>
+</tr>
+<tr>
+<td class="text-nowrap">31-Aug-2007</td>
+<td>
+<b><a name="item48">XMP support</a></b><br>We're working on adding XMP support to the library, which should
+   become the main feature of the next release.
+   Contributions are welcome, in particular we need input from potential
+   users about API preferences and XMP test data. You are invited to
+   join <a title="XMP discussion" href="http://uk.groups.yahoo.com/group/exiv2/message/836">this discussion</a> in the forum and
+   contribute your viewpoints.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">10-Jul-2007</td>
+<td>
+<b><a name="item49">Exiv2 0.15 released</a></b><br>This maintenance release fixes a number of bugs, adds support for
+   Minolta G500 RAW files and has minor tag and some larger translation updates.
+   See the <a title="ChangeLog" href="changelog.html">changelog</a> for a concise
+   listing of patches in this release.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">19-Mar-2007</td>
+<td>
+<b><a name="item50">Exiv2 0.14 released</a></b><br>Exiv2 now uses libtool's -version-info library versioning system, which
+   will allow future releases to indicate their compatibility with previous
+   releases. This release also fixes a few bugs and adds minor
+   features and tweaks to the build environment. See the
+   <a title="ChangeLog" href="changelog.html">changelog</a> for details.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">03-Mar-2007</td>
+<td>
+<b><a name="item51">Exiv2 0.13 released</a></b><br>This release features the Native Language Support framework and
+   partial translations for Finnish, French, German, Polish, Russian
+   and Spanish. It adds read-support for Fujifilm RAF images and a number
+   of other features and fixes, listed in the
+   <a title="ChangeLog" href="changelog.html">changelog</a>.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">06-Dec-2006</td>
+<td>
+<b><a name="item52">Internationalisation</a></b><br>A framework for Native Language Support (using
+   <a title="GNU gettext homepage" href="http://www.gnu.org/software/gettext">GNU gettext</a>)
+   has been added to the Exiv2 library in the SVN repository. This will
+   be the main new feature of the next release.<br>
+   Messages from Exiv2 like metadata tag titles, content, descriptions
+   are ready to be translated now. If you are interested to contribute to
+   the project, take a look at the
+   <a title="Development" href="download.html#devel">Exiv2 repository</a>.
+   You can start a new translation using the Exiv2.pot file or update an
+   existing PO file. Please contact me to coordinate; Thanks in advance!
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">27-Nov-2006</td>
+<td>
+<b><a name="item53">Exiv2 0.12 released</a></b><br>This is a bugfix release with just a few new features thrown
+   in. The exiv2 tool can now use the original filename when renaming
+   images and the library has pretty-print functions for Exif GPS tags.
+   See the <a title="ChangeLog" href="changelog.html">changelog</a>
+   for more.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">16-Sep-2006</td>
+<td>
+<b><a name="item54">Exiv2 0.11 released</a></b><br>This release adds PNG and Sony ARW file format support, both
+   read-only. Canon makernote tags were updated and a few additional
+   Canon composite tags are now recognized. Reading TIFF and related
+   files is about six times faster now compared to the previous version.
+   This release finally works with Visual Studio C++ 2005 (MSVC 8) and
+   fixes various bugs.
+   See the <a title="ChangeLog" href="changelog.html">changelog</a>
+   for details.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">21-Aug-2006</td>
+<td>
+<b><a name="item55">Duallicensing</a></b><br>Exiv2 is now also available with a commercial license, i.e., for a fee,
+  which makes it suitable for use in closed-source projects. Contact me for details.
+  See this <a title="License discussion" href="http://uk.groups.yahoo.com/group/exiv2/message/255">discussion</a> in the forum for more information on the implications of this change.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">03-Jun-2006</td>
+<td>
+<b><a name="item56">Exiv2 0.10 released</a></b><br>Exiv2 can now read TIFF images and a number of TIFF-based RAW
+   image formats, including Nikon NEF, Canon CR2, Pentax PEF, Sony SR2,
+   Adobe DNG and Minolta MRW formats. Besides displaying the Exif metadata,
+   you can easily copy it from TIFF or RAW files to JPEG files
+   (with the insert action).<br>
+   This release also adds
+   <a title="Minolta Makernote tags" href="tags-minolta.html">Minolta</a>
+   <a title="Makernote Formats and Specifications" href="makernote.html">makernote</a>
+   support among <a title="Changelog" href="changelog.html">other changes</a>.<br>
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">08-Mar-2006</td>
+<td>
+<b><a name="item57">Announcing exiv2.org</a></b><br>The new address not only looks nice, it is also hosted on an account with
+   sufficient bandwidth to support the steadily increasing number of downloads.<br>
+   If you have a bookmark or page that links to the old Exiv2 homepage, please change
+   it to the respective new page on
+   <a title="The new address of the Exiv2 project" href="http://www.exiv2.org/">www.exiv2.org/</a>.<br>
+   Thanks to Brad for hosting and sponsoring the site.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">04-Feb-2006</td>
+<td>
+<b><a name="item58">Exiv2 0.9.1 released</a></b><br>Exiv2 wrote an invalid Exif.Photo.UserComment tag when it was added
+   to an image which didn't have this tag before. This bug is fixed in this
+   release. It was introduced in release 0.8.<br>
+   Added a method to class Image to check which types of metadata are supported.<br>
+   See the <a title="ChangeLog" href="changelog.html">changelog</a> and this
+   <a title="Exiv2 bug #451" href="http://dev.exiv2.org/issues/451">bug report</a> for details.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">26-Jan-2006</td>
+<td>
+<b><a name="item59">Exiv2 0.9 released</a></b><br>Completed Canon CRW support, tags can now also be written to Canon
+   CRW images. See the documentation for the list of Exif tags that can be
+   accessed in CRW files.<br>
+   Added new options to the utility to deal with image file timestamps and
+   to make the ISO setting of Nikon cameras accessible to applications
+   that don't know Nikon makernotes by copying it from the makernote
+   to the regular Exif ISO tag.<br>
+   The <a title="Changelog" href="changelog.html">changelog</a> has the
+   complete list.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">19-Nov-2005</td>
+<td>
+<b><a name="item60">Exiv2 0.8 released</a></b><br>The Canon RAW support is currently read-only. Canon THM is also
+   supported, since that is the same as JPEG. Note that THM files contain
+   all the Exif stuff, CRW have only a few tags. Other improvements are
+   mostly bugfixes to make Exiv2 handle various (more or less) exceptional
+   situations more gracefully.<br>
+   For application developers, there is a new precompiler define to
+   suppress all output from the library and a small script,
+   exiv2-config, to help with the compilation of your applications.<br>
+   As always, check out the <a title="Changelog" href="changelog.html">changelog</a>
+   for details.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">09-Oct-2005</td>
+<td>
+<b><a name="item61">Vizrea agreement</a></b><br>I've recently entered into an agreement with
+  <a title="Vizrea" href="http://www.vizrea.com">Vizrea</a>,
+   under which the company can use most of the Exiv2 library (except for
+   the Nikon lens table and related code) in their proprietary products
+   under terms which are different from those of the GPL.
+   In return Vizrea will assign the copyright of their changes to me and
+   contribute them back to the free version.<br>
+   Therefore, if this deal is successful, the free version of Exiv2
+   will benefit from the code contributed under the agreement. Since
+   Brad, who wrote major portions of the existing library is with
+   Vizrea, this will hopefully allow him to continue to spend time
+   adding good stuff to Exiv2.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">15-Jun-2005</td>
+<td>
+<b><a name="item62">Exiv2 0.7 released</a></b><br>The inside-out design change made class Exiv2::Image the
+   top-level class of the library. This is the basis for support of
+   other file formats (however, Exiv2 still only supports Jpeg for
+   now). As a result, the C++ interface changed fundamentally in the
+   way how metadata is accessed. Existing programs will need to be
+   updated (see the examples). Thanks to the new I/O abstraction layer,
+   it is now possible to access images in memory directly.<br>
+   Additional makernotes from Olympus, Panasonic and Sony cameras
+   are recognized and the Canon and Nikon makernotes have been updated.<br>
+   Exif tags now have a default type, it works like the existing Iptc
+   default type.<br>
+   See the <a title="Changelog" href="changelog.html">changelog</a> for details.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">06-Mar-2005</td>
+<td>
+<b><a name="item63">Exiv2 0.6.2 released</a></b><br>Utility: New -M option to specify modify commands directly on the
+   command line, new -l option for a directory to/from which to extract/import
+   files.<br>
+   Bugfixes: Support for non-standard IFDs (as created by e.g., GraphicConverter
+   for Mac), proper non-intrusive writing for the utility's modify command.<br>
+   Build environment: Libtool support for correct (shared) library generation
+   on various platforms, improved installation routine.<br>
+   The <a title="Changelog" href="changelog.html">changelog</a> has the details.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">17-Jan-2005</td>
+<td>
+<b><a name="item64">Exiv2 0.6.1 released</a></b><br>Bugfix: The Exif thumbnail is no more lost when Exif data is modified
+   in an "intrusive" manner, e.g., by adding new tags. This was a bug
+   introduced with release 0.6. <br>
+   Feature: The new modify option adds metadata write support to the Exiv2
+   utility. <br>As usual, the
+   <a title="Changelog" href="changelog.html">changelog</a> has more details.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">09-Jan-2005</td>
+<td>
+<b><a name="item65">Support forum added</a></b><br>There have been more queries recently which may be of interest for
+  other users. Going forward, please direct your questions to the new
+  <a title="Exiv2 support" href="support.html">forum</a>.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">12-Dec-2004</td>
+<td>
+<b><a name="item66">Exiv2 0.6 released</a></b><br>This is a maintenance release containing numerous smaller
+   improvements and fixes. The Exiv2 utility now also deletes,
+   extracts, and re-inserts IPTC data and Jpeg comments from/into Jpeg
+   files. The library now supports creation of all Exif metadata from
+   scratch, including makernote tags and thumbnails. In addition, Exif
+   as well as IPTC metadata with unknown tag names can be added and
+   manipulated just like known tags. See the <a title="Changelog" href="changelog.html">changelog</a> for more details.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">30-Oct-2004</td>
+<td>
+<b><a name="item67">Source online</a></b><br>Brad Schick, author of <a title="Robot Battle" href="http://www.robotbattle.com/index.php">Robot Battle</a>, now
+   hosts the Exiv2 source code repository. He converted it from CVS to
+   Subversion and provides a web interface, public bug tracking system
+   and a nifty live list of the 50 last commits. Thanks! Check out the
+   <a title="Development" href="download.html#devel">development
+   section</a> on the download page.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">13-Sep-2004</td>
+<td>
+<b><a name="item68">Exiv2 0.5 released</a></b><br>This release adds support for IPTC metadata. IPTC datasets can
+   now be manipulated (read and written) similar to Exif metadata.
+   In connection with the IPTC feature, the existing Metadatum Key and
+   Value concept was enhanced and the Jpeg file access code was revamped.
+   The exiv2 utility has a new print option to show the IPTC metadata of
+   a Jpeg image.
+   Also, this release adds a configure script and MSVC project files
+   (but no libtool support yet).
+   See the <a title="Changelog" href="changelog.html">changelog</a> for
+   details.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">13-Sep-2004</td>
+<td>
+<b><a name="item69">Exif keys changed</a></b><br>Starting with release 0.5 the keys used to identify
+   <a title="Exif and MakerNote tags" href="metadata.html">Exif tags</a>
+   are of the form '<i>Exif</i>.groupName.tagName' to be consistent
+   with the new IPTC keys. Existing programs need to be updated
+   accordingly. Since the old keys are plain C++ strings, the
+   compiler cannot detect the change. However, it will tell you to use
+   the new classes Key and ExifKey in the critical regions of the code.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">03-Jul-2004</td>
+<td>
+<b><a name="item70">Exiv2 0.4 released</a></b><br>This release adds support for three different Nikon makernote
+   formats to the library. The generalised IfdMakerNote interface can
+   accomodate more makernote oddities and allows for programmatic
+   detection of the makernote format. The library now knows how to
+   deal with broken IFDs. The Exiv2 utility uses a more intuitive and
+   less rigid command line parsing logic. See the <a title="Changelog" href="changelog.html">changelog</a>
+   for details.
+  </td>
+</tr>
+<tr>
+<td class="text-nowrap">03-Jul-2004</td>
+<td>
+<b><a name="item71">Nikon tags added</a></b><br>Tags for three different Nikon makernote formats are now available
+   <a title="Nikon makernote tags" href="tags-nikon.html">here</a>.
+  </td>
+</tr>
+</table>
+
+</div><!-- /.container -->
+
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>

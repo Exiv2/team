@@ -1,0 +1,1265 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceExiv2.html">Exiv2</a></li><li class="navelem"><a class="el" href="classExiv2_1_1Image.html">Image</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="classExiv2_1_1Image-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Exiv2::Image Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Abstract base class defining the interface for an image. This is the top-level interface to the <a class="el" href="namespaceExiv2.html" title="Provides classes and functions to encode and decode Exif and Iptc data. The libexiv2 API consists of ...">Exiv2</a> library.  
+ <a href="classExiv2_1_1Image.html#details">More...</a></p>
+
+<p><code>#include &lt;image.hpp&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Exiv2::Image:</div>
+<div class="dyncontent">
+<div class="center"><img src="classExiv2_1_1Image__inherit__graph.png" border="0" usemap="#Exiv2_1_1Image_inherit__map" alt="Inheritance graph"/></div>
+<map name="Exiv2_1_1Image_inherit__map" id="Exiv2_1_1Image_inherit__map">
+<area shape="rect" title="Abstract base class defining the interface for an image. This is the top&#45;level interface to the Exiv2..." alt="" coords="5,537,112,564"/>
+<area shape="rect" href="classExiv2_1_1AsfVideo.html" title="Class to access ASF video files." alt="" coords="185,5,309,32"/>
+<area shape="rect" href="classExiv2_1_1BmffImage.html" title="Class to access BMFF images." alt="" coords="177,56,316,83"/>
+<area shape="rect" href="classExiv2_1_1BmpImage.html" title="Class to access Windows bitmaps. This is just a stub &#45; we only read width and height." alt="" coords="178,107,315,133"/>
+<area shape="rect" href="classExiv2_1_1Cr2Image.html" title="Class to access raw Canon CR2 images. Exif metadata is supported directly, IPTC is read from the Exif..." alt="" coords="182,157,311,184"/>
+<area shape="rect" href="classExiv2_1_1CrwImage.html" title="Class to access raw Canon CRW images. Only Exif metadata and a comment are supported...." alt="" coords="181,208,313,235"/>
+<area shape="rect" href="classExiv2_1_1EpsImage.html" title="Class to access EPS images." alt="" coords="181,259,312,285"/>
+<area shape="rect" href="classExiv2_1_1GifImage.html" title="Class to access raw GIF images. Exif/IPTC metadata are supported directly." alt="" coords="183,309,310,336"/>
+<area shape="rect" href="classExiv2_1_1Jp2Image.html" title="Class to access JPEG&#45;2000 images." alt="" coords="183,360,310,387"/>
+<area shape="rect" href="classExiv2_1_1JpegBase.html" title="Abstract helper base class to access JPEG images." alt="" coords="183,411,310,437"/>
+<area shape="rect" href="classExiv2_1_1MatroskaVideo.html" title="Class to access Matroska video files." alt="" coords="165,461,328,488"/>
+<area shape="rect" href="classExiv2_1_1MrwImage.html" title="Class to access raw Minolta MRW images. Exif metadata is supported directly, IPTC is read from the Ex..." alt="" coords="179,512,314,539"/>
+<area shape="rect" href="classExiv2_1_1PgfImage.html" title="Class to access PGF images. Exif and IPTC metadata are supported directly." alt="" coords="183,563,311,589"/>
+<area shape="rect" href="classExiv2_1_1PngImage.html" title="Class to access PNG images. Exif and IPTC metadata are supported directly." alt="" coords="181,613,312,640"/>
+<area shape="rect" href="classExiv2_1_1PsdImage.html" title="Class to access raw Photoshop images." alt="" coords="181,664,312,691"/>
+<area shape="rect" href="classExiv2_1_1QuickTimeVideo.html" title="Class to access QuickTime video files." alt="" coords="160,715,333,741"/>
+<area shape="rect" href="classExiv2_1_1RafImage.html" title="Class to access raw Fujifilm RAF images. Exif metadata is supported directly, IPTC is read from the E..." alt="" coords="182,765,311,792"/>
+<area shape="rect" href="classExiv2_1_1RiffVideo.html" title="Class to access RIFF video files." alt="" coords="184,816,309,843"/>
+<area shape="rect" href="classExiv2_1_1Rw2Image.html" title="Class to access raw Panasonic RW2 images. Exif metadata is supported directly, IPTC and XMP are read ..." alt="" coords="179,867,314,893"/>
+<area shape="rect" href="classExiv2_1_1TgaImage.html" title="Class to access raw TARGA images. This is just a stub &#45; we only read width and height." alt="" coords="181,917,312,944"/>
+<area shape="rect" href="classExiv2_1_1TiffImage.html" title="Class to access TIFF images. Exif metadata is supported directly, IPTC is read from the Exif data,..." alt="" coords="183,968,311,995"/>
+<area shape="rect" href="classExiv2_1_1WebPImage.html" title="Class to access WEBP video files." alt="" coords="175,1019,318,1045"/>
+<area shape="rect" href="classExiv2_1_1XmpSidecar.html" title="Class to access XMP sidecar files. They contain only XMP metadata." alt="" coords="175,1069,319,1096"/>
+<area shape="rect" href="classExiv2_1_1ExvImage.html" title="Helper class to access Exiv2 files." alt="" coords="383,385,514,412"/>
+<area shape="rect" href="classExiv2_1_1JpegImage.html" title="Class to access JPEG images." alt="" coords="381,436,516,463"/>
+<area shape="rect" href="classExiv2_1_1OrfImage.html" title="Class to access raw Olympus ORF images. Exif metadata is supported directly, IPTC is read from the Ex..." alt="" coords="385,968,512,995"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a89ad3ffe7a4e8a943d267d77843415fb"><td class="memItemLeft" align="right" valign="top"><a id="a89ad3ffe7a4e8a943d267d77843415fb"></a>
+typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1Image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a89ad3ffe7a4e8a943d267d77843415fb">AutoPtr</a></td></tr>
+<tr class="memdesc:a89ad3ffe7a4e8a943d267d77843415fb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> auto_ptr type. <br /></td></tr>
+<tr class="separator:a89ad3ffe7a4e8a943d267d77843415fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Creators</div></td></tr>
+<tr class="memitem:ae11f75b7ba9228b3aec7f6dccc5ea081"><td class="memItemLeft" align="right" valign="top"><a id="ae11f75b7ba9228b3aec7f6dccc5ea081"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ae11f75b7ba9228b3aec7f6dccc5ea081">Image</a> (int <a class="el" href="classExiv2_1_1Image.html#a9631075925ed92077b247e53a63fae0c">imageType</a>, uint16_t supportedMetadata, <a class="el" href="classExiv2_1_1BasicIo.html#af8f989522925b884d8c9d3a257265fa1">BasicIo::AutoPtr</a> <a class="el" href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">io</a>)</td></tr>
+<tr class="memdesc:ae11f75b7ba9228b3aec7f6dccc5ea081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor taking the image type, a bitmap of the supported metadata types and an auto-pointer that owns an IO instance. See subclass constructor doc. <br /></td></tr>
+<tr class="separator:ae11f75b7ba9228b3aec7f6dccc5ea081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1189ab5cbe4e963ffb3a199576bc85fa"><td class="memItemLeft" align="right" valign="top"><a id="a1189ab5cbe4e963ffb3a199576bc85fa"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a1189ab5cbe4e963ffb3a199576bc85fa">~Image</a> ()</td></tr>
+<tr class="memdesc:a1189ab5cbe4e963ffb3a199576bc85fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual Destructor. <br /></td></tr>
+<tr class="separator:a1189ab5cbe4e963ffb3a199576bc85fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Manipulators</div></td></tr>
+<tr class="memitem:a0772d67eaf86367ef515b2f99443f67f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a0772d67eaf86367ef515b2f99443f67f">printStructure</a> (std::ostream &amp;out, <a class="el" href="namespaceExiv2.html#a0e75ea64b8d502bf50e75ce1bb8c1ddd">PrintStructureOption</a> option=kpsNone, int depth=0)</td></tr>
+<tr class="memdesc:a0772d67eaf86367ef515b2f99443f67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print out the structure of image file.  <a href="classExiv2_1_1Image.html#a0772d67eaf86367ef515b2f99443f67f">More...</a><br /></td></tr>
+<tr class="separator:a0772d67eaf86367ef515b2f99443f67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a198b8d5924d6441748aa162130c96a5f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a198b8d5924d6441748aa162130c96a5f">readMetadata</a> ()=0</td></tr>
+<tr class="memdesc:a198b8d5924d6441748aa162130c96a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all metadata supported by a specific image format from the image. Before this method is called, the image metadata will be cleared.  <a href="classExiv2_1_1Image.html#a198b8d5924d6441748aa162130c96a5f">More...</a><br /></td></tr>
+<tr class="separator:a198b8d5924d6441748aa162130c96a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9f7e86aac2f656473e456e16550ab58"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58">writeMetadata</a> ()=0</td></tr>
+<tr class="memdesc:af9f7e86aac2f656473e456e16550ab58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write metadata back to the image.  <a href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58">More...</a><br /></td></tr>
+<tr class="separator:af9f7e86aac2f656473e456e16550ab58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62611f2a70a9aef4447a86221e92dcc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ae62611f2a70a9aef4447a86221e92dcc">setExifData</a> (const <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> &amp;<a class="el" href="classExiv2_1_1Image.html#a6b2ee3de4a0c89cb8ff42a59946abbd9">exifData</a>)</td></tr>
+<tr class="memdesc:ae62611f2a70a9aef4447a86221e92dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign new Exif data. The new Exif data is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#ae62611f2a70a9aef4447a86221e92dcc">More...</a><br /></td></tr>
+<tr class="separator:ae62611f2a70a9aef4447a86221e92dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2594a384de1b802c1f6a80a87a97beb2"><td class="memItemLeft" align="right" valign="top"><a id="a2594a384de1b802c1f6a80a87a97beb2"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a2594a384de1b802c1f6a80a87a97beb2">clearExifData</a> ()</td></tr>
+<tr class="memdesc:a2594a384de1b802c1f6a80a87a97beb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase any buffered Exif data. Exif data is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. <br /></td></tr>
+<tr class="separator:a2594a384de1b802c1f6a80a87a97beb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af786d276e6bf72c4ecb2c642fd478a75"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#af786d276e6bf72c4ecb2c642fd478a75">setIptcData</a> (const <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;<a class="el" href="classExiv2_1_1Image.html#a098600f7a24b1a8d4162c2742a351699">iptcData</a>)</td></tr>
+<tr class="memdesc:af786d276e6bf72c4ecb2c642fd478a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign new IPTC data. The new IPTC data is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#af786d276e6bf72c4ecb2c642fd478a75">More...</a><br /></td></tr>
+<tr class="separator:af786d276e6bf72c4ecb2c642fd478a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4acce8a6da7e039788af806fc956a330"><td class="memItemLeft" align="right" valign="top"><a id="a4acce8a6da7e039788af806fc956a330"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a4acce8a6da7e039788af806fc956a330">clearIptcData</a> ()</td></tr>
+<tr class="memdesc:a4acce8a6da7e039788af806fc956a330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase any buffered IPTC data. IPTC data is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. <br /></td></tr>
+<tr class="separator:a4acce8a6da7e039788af806fc956a330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff3a5906307a84ea56a7b7002a26126b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#aff3a5906307a84ea56a7b7002a26126b">setXmpPacket</a> (const std::string &amp;<a class="el" href="classExiv2_1_1Image.html#a77b4eda9639ea84b58d96ce6777afd72">xmpPacket</a>)</td></tr>
+<tr class="memdesc:aff3a5906307a84ea56a7b7002a26126b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign a raw XMP packet. The new XMP packet is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#aff3a5906307a84ea56a7b7002a26126b">More...</a><br /></td></tr>
+<tr class="separator:aff3a5906307a84ea56a7b7002a26126b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43ac9ab965a2c2d0ca706bd037590e00"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a43ac9ab965a2c2d0ca706bd037590e00">clearXmpPacket</a> ()</td></tr>
+<tr class="memdesc:a43ac9ab965a2c2d0ca706bd037590e00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase the buffered XMP packet. XMP data is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#a43ac9ab965a2c2d0ca706bd037590e00">More...</a><br /></td></tr>
+<tr class="separator:a43ac9ab965a2c2d0ca706bd037590e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adabf3dfc5e40e8c5deee2abf5987190b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#adabf3dfc5e40e8c5deee2abf5987190b">setXmpData</a> (const <a class="el" href="classExiv2_1_1XmpData.html">XmpData</a> &amp;<a class="el" href="classExiv2_1_1Image.html#aa85bb569118da6fa12699a2b71e3801b">xmpData</a>)</td></tr>
+<tr class="memdesc:adabf3dfc5e40e8c5deee2abf5987190b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign new XMP data. The new XMP data is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#adabf3dfc5e40e8c5deee2abf5987190b">More...</a><br /></td></tr>
+<tr class="separator:adabf3dfc5e40e8c5deee2abf5987190b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01f38451af96af7f28aa27be4aaa18a6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a01f38451af96af7f28aa27be4aaa18a6">clearXmpData</a> ()</td></tr>
+<tr class="memdesc:a01f38451af96af7f28aa27be4aaa18a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase any buffered XMP data. XMP data is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#a01f38451af96af7f28aa27be4aaa18a6">More...</a><br /></td></tr>
+<tr class="separator:a01f38451af96af7f28aa27be4aaa18a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc0f7bbd48610ec3882ef0b36955a49b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#afc0f7bbd48610ec3882ef0b36955a49b">setComment</a> (const std::string &amp;<a class="el" href="classExiv2_1_1Image.html#a41e2f0728a9330ce753bd3d36bf50e58">comment</a>)</td></tr>
+<tr class="memdesc:afc0f7bbd48610ec3882ef0b36955a49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the image comment. The new comment is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#afc0f7bbd48610ec3882ef0b36955a49b">More...</a><br /></td></tr>
+<tr class="separator:afc0f7bbd48610ec3882ef0b36955a49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a4c3188f4d3970c9636dd00c378ebb8"><td class="memItemLeft" align="right" valign="top"><a id="a1a4c3188f4d3970c9636dd00c378ebb8"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a1a4c3188f4d3970c9636dd00c378ebb8">clearComment</a> ()</td></tr>
+<tr class="memdesc:a1a4c3188f4d3970c9636dd00c378ebb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase any buffered comment. Comment is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. <br /></td></tr>
+<tr class="separator:a1a4c3188f4d3970c9636dd00c378ebb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11ef8321ac42be4a4813367e07fac339"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a11ef8321ac42be4a4813367e07fac339">setIccProfile</a> (<a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> &amp;<a class="el" href="classExiv2_1_1Image.html#a3a058de0a7187f415025a05e4afdd62e">iccProfile</a>, bool bTestValid=true)</td></tr>
+<tr class="memdesc:a11ef8321ac42be4a4813367e07fac339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the image iccProfile. The new profile is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#a11ef8321ac42be4a4813367e07fac339">More...</a><br /></td></tr>
+<tr class="separator:a11ef8321ac42be4a4813367e07fac339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd1d072afad0d58be252b994c78bc1d"><td class="memItemLeft" align="right" valign="top"><a id="aabd1d072afad0d58be252b994c78bc1d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#aabd1d072afad0d58be252b994c78bc1d">clearIccProfile</a> ()</td></tr>
+<tr class="memdesc:aabd1d072afad0d58be252b994c78bc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase iccProfile. the profile is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. <br /></td></tr>
+<tr class="separator:aabd1d072afad0d58be252b994c78bc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abce46df193c9796de47c31c863da941c"><td class="memItemLeft" align="right" valign="top"><a id="abce46df193c9796de47c31c863da941c"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#abce46df193c9796de47c31c863da941c">iccProfileDefined</a> ()</td></tr>
+<tr class="memdesc:abce46df193c9796de47c31c863da941c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase iccProfile. the profile is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. <br /></td></tr>
+<tr class="separator:abce46df193c9796de47c31c863da941c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a058de0a7187f415025a05e4afdd62e"><td class="memItemLeft" align="right" valign="top"><a id="a3a058de0a7187f415025a05e4afdd62e"></a>
+virtual <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a3a058de0a7187f415025a05e4afdd62e">iccProfile</a> ()</td></tr>
+<tr class="memdesc:a3a058de0a7187f415025a05e4afdd62e"><td class="mdescLeft">&#160;</td><td class="mdescRight">return iccProfile <br /></td></tr>
+<tr class="separator:a3a058de0a7187f415025a05e4afdd62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459781449dd7eddcaa88ae6221e90ef5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a459781449dd7eddcaa88ae6221e90ef5">setMetadata</a> (const <a class="el" href="classExiv2_1_1Image.html">Image</a> &amp;image)</td></tr>
+<tr class="memdesc:a459781449dd7eddcaa88ae6221e90ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy all existing metadata from source <a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a>. The data is copied into internal buffers and is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#a459781449dd7eddcaa88ae6221e90ef5">More...</a><br /></td></tr>
+<tr class="separator:a459781449dd7eddcaa88ae6221e90ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c41c773af9f433957326f76603d89f1"><td class="memItemLeft" align="right" valign="top"><a id="a8c41c773af9f433957326f76603d89f1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a8c41c773af9f433957326f76603d89f1">clearMetadata</a> ()</td></tr>
+<tr class="memdesc:a8c41c773af9f433957326f76603d89f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase all buffered metadata. Metadata is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. <br /></td></tr>
+<tr class="separator:a8c41c773af9f433957326f76603d89f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b2ee3de4a0c89cb8ff42a59946abbd9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a6b2ee3de4a0c89cb8ff42a59946abbd9">exifData</a> ()</td></tr>
+<tr class="memdesc:a6b2ee3de4a0c89cb8ff42a59946abbd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classExiv2_1_1ExifData.html" title="A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...">ExifData</a> instance containing currently buffered Exif data.  <a href="classExiv2_1_1Image.html#a6b2ee3de4a0c89cb8ff42a59946abbd9">More...</a><br /></td></tr>
+<tr class="separator:a6b2ee3de4a0c89cb8ff42a59946abbd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a098600f7a24b1a8d4162c2742a351699"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a098600f7a24b1a8d4162c2742a351699">iptcData</a> ()</td></tr>
+<tr class="memdesc:a098600f7a24b1a8d4162c2742a351699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classExiv2_1_1IptcData.html" title="A container for IPTC data. This is a top-level class of the Exiv2 library.">IptcData</a> instance containing currently buffered IPTC data.  <a href="classExiv2_1_1Image.html#a098600f7a24b1a8d4162c2742a351699">More...</a><br /></td></tr>
+<tr class="separator:a098600f7a24b1a8d4162c2742a351699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa85bb569118da6fa12699a2b71e3801b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classExiv2_1_1XmpData.html">XmpData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#aa85bb569118da6fa12699a2b71e3801b">xmpData</a> ()</td></tr>
+<tr class="memdesc:aa85bb569118da6fa12699a2b71e3801b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classExiv2_1_1XmpData.html" title="A container for XMP data. This is a top-level class of the Exiv2 library.">XmpData</a> instance containing currently buffered XMP data.  <a href="classExiv2_1_1Image.html#aa85bb569118da6fa12699a2b71e3801b">More...</a><br /></td></tr>
+<tr class="separator:aa85bb569118da6fa12699a2b71e3801b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b4eda9639ea84b58d96ce6777afd72"><td class="memItemLeft" align="right" valign="top"><a id="a77b4eda9639ea84b58d96ce6777afd72"></a>
+virtual std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a77b4eda9639ea84b58d96ce6777afd72">xmpPacket</a> ()</td></tr>
+<tr class="memdesc:a77b4eda9639ea84b58d96ce6777afd72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a modifiable reference to the raw XMP packet. <br /></td></tr>
+<tr class="separator:a77b4eda9639ea84b58d96ce6777afd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64199a4be87a12f81bd111ce4019dfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ab64199a4be87a12f81bd111ce4019dfc">writeXmpFromPacket</a> (bool flag)</td></tr>
+<tr class="memdesc:ab64199a4be87a12f81bd111ce4019dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine the source when writing XMP.  <a href="classExiv2_1_1Image.html#ab64199a4be87a12f81bd111ce4019dfc">More...</a><br /></td></tr>
+<tr class="separator:ab64199a4be87a12f81bd111ce4019dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1533e0b8d24c49974d0dc59911c330a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#af1533e0b8d24c49974d0dc59911c330a">setByteOrder</a> (<a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> <a class="el" href="classExiv2_1_1Image.html#aaada24ce9c2d86fa8c43454f123aa4be">byteOrder</a>)</td></tr>
+<tr class="memdesc:af1533e0b8d24c49974d0dc59911c330a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the byte order to encode the Exif metadata in.  <a href="classExiv2_1_1Image.html#af1533e0b8d24c49974d0dc59911c330a">More...</a><br /></td></tr>
+<tr class="separator:af1533e0b8d24c49974d0dc59911c330a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0799da0ceb675d40a4ad75eba07eb37d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a0799da0ceb675d40a4ad75eba07eb37d">printTiffStructure</a> (<a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;<a class="el" href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">io</a>, std::ostream &amp;out, <a class="el" href="namespaceExiv2.html#a0e75ea64b8d502bf50e75ce1bb8c1ddd">PrintStructureOption</a> option, int depth, size_t offset=0)</td></tr>
+<tr class="memdesc:a0799da0ceb675d40a4ad75eba07eb37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print out the structure of image file.  <a href="classExiv2_1_1Image.html#a0799da0ceb675d40a4ad75eba07eb37d">More...</a><br /></td></tr>
+<tr class="separator:a0799da0ceb675d40a4ad75eba07eb37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6304ef637b6f71059b12c06f65b26e21"><td class="memItemLeft" align="right" valign="top"><a id="a6304ef637b6f71059b12c06f65b26e21"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a6304ef637b6f71059b12c06f65b26e21">printIFDStructure</a> (<a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;<a class="el" href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">io</a>, std::ostream &amp;out, <a class="el" href="namespaceExiv2.html#a0e75ea64b8d502bf50e75ce1bb8c1ddd">Exiv2::PrintStructureOption</a> option, uint32_t start, bool bSwap, char c, int depth)</td></tr>
+<tr class="memdesc:a6304ef637b6f71059b12c06f65b26e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print out the structure of a TIFF IFD. <br /></td></tr>
+<tr class="separator:a6304ef637b6f71059b12c06f65b26e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43dbe6bedef6b0b0794dd21f5c3ec555"><td class="memItemLeft" align="right" valign="top"><a id="a43dbe6bedef6b0b0794dd21f5c3ec555"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a43dbe6bedef6b0b0794dd21f5c3ec555">isBigEndianPlatform</a> ()</td></tr>
+<tr class="memdesc:a43dbe6bedef6b0b0794dd21f5c3ec555"><td class="mdescLeft">&#160;</td><td class="mdescRight">is the host platform bigEndian <br /></td></tr>
+<tr class="separator:a43dbe6bedef6b0b0794dd21f5c3ec555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6d5583279f48f1215984bd2173bfbe8"><td class="memItemLeft" align="right" valign="top"><a id="ab6d5583279f48f1215984bd2173bfbe8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ab6d5583279f48f1215984bd2173bfbe8">isLittleEndianPlatform</a> ()</td></tr>
+<tr class="memdesc:ab6d5583279f48f1215984bd2173bfbe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">is the host platform littleEndian <br /></td></tr>
+<tr class="separator:ab6d5583279f48f1215984bd2173bfbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a563b69a77c7938467b140233abf9c4ab"><td class="memItemLeft" align="right" valign="top"><a id="a563b69a77c7938467b140233abf9c4ab"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isStringType</b> (uint16_t type)</td></tr>
+<tr class="separator:a563b69a77c7938467b140233abf9c4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a130f8f6cb17204406f5448c3b03aba0e"><td class="memItemLeft" align="right" valign="top"><a id="a130f8f6cb17204406f5448c3b03aba0e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isShortType</b> (uint16_t type)</td></tr>
+<tr class="separator:a130f8f6cb17204406f5448c3b03aba0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55ec420605c5dea4608b8da97a94b09"><td class="memItemLeft" align="right" valign="top"><a id="aa55ec420605c5dea4608b8da97a94b09"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLongType</b> (uint16_t type)</td></tr>
+<tr class="separator:aa55ec420605c5dea4608b8da97a94b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c02e66c9daa1ad69425dffd0925859"><td class="memItemLeft" align="right" valign="top"><a id="a71c02e66c9daa1ad69425dffd0925859"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLongLongType</b> (uint16_t type)</td></tr>
+<tr class="separator:a71c02e66c9daa1ad69425dffd0925859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df594e76f96eed809bcb91f9f02dd5c"><td class="memItemLeft" align="right" valign="top"><a id="a6df594e76f96eed809bcb91f9f02dd5c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isRationalType</b> (uint16_t type)</td></tr>
+<tr class="separator:a6df594e76f96eed809bcb91f9f02dd5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fc87330d61f334e2359bfd143b48a4a"><td class="memItemLeft" align="right" valign="top"><a id="a5fc87330d61f334e2359bfd143b48a4a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is2ByteType</b> (uint16_t type)</td></tr>
+<tr class="separator:a5fc87330d61f334e2359bfd143b48a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae243b329440331cae62ce89373c2f38b"><td class="memItemLeft" align="right" valign="top"><a id="ae243b329440331cae62ce89373c2f38b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is4ByteType</b> (uint16_t type)</td></tr>
+<tr class="separator:ae243b329440331cae62ce89373c2f38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f3763bd128e5c4cd0982aed6267cc47"><td class="memItemLeft" align="right" valign="top"><a id="a9f3763bd128e5c4cd0982aed6267cc47"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is8ByteType</b> (uint16_t type)</td></tr>
+<tr class="separator:a9f3763bd128e5c4cd0982aed6267cc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d2def8c0253c24d80664d12c549142c"><td class="memItemLeft" align="right" valign="top"><a id="a5d2def8c0253c24d80664d12c549142c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isPrintXMP</b> (uint16_t type, <a class="el" href="namespaceExiv2.html#a0e75ea64b8d502bf50e75ce1bb8c1ddd">Exiv2::PrintStructureOption</a> option)</td></tr>
+<tr class="separator:a5d2def8c0253c24d80664d12c549142c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9318b996c38b817890174616dcb4ef"><td class="memItemLeft" align="right" valign="top"><a id="a5f9318b996c38b817890174616dcb4ef"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isPrintICC</b> (uint16_t type, <a class="el" href="namespaceExiv2.html#a0e75ea64b8d502bf50e75ce1bb8c1ddd">Exiv2::PrintStructureOption</a> option)</td></tr>
+<tr class="separator:a5f9318b996c38b817890174616dcb4ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33738dcc4bf54cd0a3b9a3654c6e92d3"><td class="memItemLeft" align="right" valign="top"><a id="a33738dcc4bf54cd0a3b9a3654c6e92d3"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>byteSwap</b> (uint64_t value, bool bSwap) const</td></tr>
+<tr class="separator:a33738dcc4bf54cd0a3b9a3654c6e92d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7e9e8893f39db1b40d69913176a08c"><td class="memItemLeft" align="right" valign="top"><a id="a9d7e9e8893f39db1b40d69913176a08c"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>byteSwap</b> (uint32_t value, bool bSwap) const</td></tr>
+<tr class="separator:a9d7e9e8893f39db1b40d69913176a08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1390fb552e3060e6a4cb0a9b39922443"><td class="memItemLeft" align="right" valign="top"><a id="a1390fb552e3060e6a4cb0a9b39922443"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>byteSwap</b> (uint16_t value, bool bSwap) const</td></tr>
+<tr class="separator:a1390fb552e3060e6a4cb0a9b39922443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd5f6e1503211a2c52bf2e49051d10a4"><td class="memItemLeft" align="right" valign="top"><a id="afd5f6e1503211a2c52bf2e49051d10a4"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>byteSwap2</b> (const <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> &amp;buf, size_t offset, bool bSwap) const</td></tr>
+<tr class="separator:afd5f6e1503211a2c52bf2e49051d10a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726e9fdf7de38a60f5d9e6f4cf419a08"><td class="memItemLeft" align="right" valign="top"><a id="a726e9fdf7de38a60f5d9e6f4cf419a08"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>byteSwap4</b> (const <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> &amp;buf, size_t offset, bool bSwap) const</td></tr>
+<tr class="separator:a726e9fdf7de38a60f5d9e6f4cf419a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3684c6e9292da27d46eba8ce57767069"><td class="memItemLeft" align="right" valign="top"><a id="a3684c6e9292da27d46eba8ce57767069"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>byteSwap8</b> (const <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> &amp;buf, size_t offset, bool bSwap) const</td></tr>
+<tr class="separator:a3684c6e9292da27d46eba8ce57767069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Accessors</h2></td></tr>
+<tr class="memitem:a441d551a7d353e6f440748a486e004e5"><td class="memItemLeft" align="right" valign="top"><a id="a441d551a7d353e6f440748a486e004e5"></a>
+<a class="el" href="classExiv2_1_1BasicIo.html#af8f989522925b884d8c9d3a257265fa1">BasicIo::AutoPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a441d551a7d353e6f440748a486e004e5">io_</a></td></tr>
+<tr class="memdesc:a441d551a7d353e6f440748a486e004e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> data IO pointer. <br /></td></tr>
+<tr class="separator:a441d551a7d353e6f440748a486e004e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1a8a72f1faf1b49a980a5050be8f8df"><td class="memItemLeft" align="right" valign="top"><a id="aa1a8a72f1faf1b49a980a5050be8f8df"></a>
+<a class="el" href="classExiv2_1_1ExifData.html">ExifData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#aa1a8a72f1faf1b49a980a5050be8f8df">exifData_</a></td></tr>
+<tr class="memdesc:aa1a8a72f1faf1b49a980a5050be8f8df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exif data container. <br /></td></tr>
+<tr class="separator:aa1a8a72f1faf1b49a980a5050be8f8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac613777e529af8d8c421cf0138234d6f"><td class="memItemLeft" align="right" valign="top"><a id="ac613777e529af8d8c421cf0138234d6f"></a>
+<a class="el" href="classExiv2_1_1IptcData.html">IptcData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ac613777e529af8d8c421cf0138234d6f">iptcData_</a></td></tr>
+<tr class="memdesc:ac613777e529af8d8c421cf0138234d6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPTC data container. <br /></td></tr>
+<tr class="separator:ac613777e529af8d8c421cf0138234d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd748b186fc5d731e7943ab38b718168"><td class="memItemLeft" align="right" valign="top"><a id="afd748b186fc5d731e7943ab38b718168"></a>
+<a class="el" href="classExiv2_1_1XmpData.html">XmpData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#afd748b186fc5d731e7943ab38b718168">xmpData_</a></td></tr>
+<tr class="memdesc:afd748b186fc5d731e7943ab38b718168"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMP data container. <br /></td></tr>
+<tr class="separator:afd748b186fc5d731e7943ab38b718168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb37d01478a74bfabf19ad920c81a91"><td class="memItemLeft" align="right" valign="top"><a id="afbb37d01478a74bfabf19ad920c81a91"></a>
+<a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#afbb37d01478a74bfabf19ad920c81a91">iccProfile_</a></td></tr>
+<tr class="memdesc:afbb37d01478a74bfabf19ad920c81a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">ICC buffer (binary data) <br /></td></tr>
+<tr class="separator:afbb37d01478a74bfabf19ad920c81a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad908536e7406677e193f6fa75e53d3ae"><td class="memItemLeft" align="right" valign="top"><a id="ad908536e7406677e193f6fa75e53d3ae"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ad908536e7406677e193f6fa75e53d3ae">comment_</a></td></tr>
+<tr class="memdesc:ad908536e7406677e193f6fa75e53d3ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">User comment. <br /></td></tr>
+<tr class="separator:ad908536e7406677e193f6fa75e53d3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62dc4efdf1c3ffe94443588e7d7b15b"><td class="memItemLeft" align="right" valign="top"><a id="ab62dc4efdf1c3ffe94443588e7d7b15b"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ab62dc4efdf1c3ffe94443588e7d7b15b">xmpPacket_</a></td></tr>
+<tr class="memdesc:ab62dc4efdf1c3ffe94443588e7d7b15b"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMP packet. <br /></td></tr>
+<tr class="separator:ab62dc4efdf1c3ffe94443588e7d7b15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a114180b5449669339b0cbe3f4078a915"><td class="memItemLeft" align="right" valign="top"><a id="a114180b5449669339b0cbe3f4078a915"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a114180b5449669339b0cbe3f4078a915">pixelWidth_</a></td></tr>
+<tr class="memdesc:a114180b5449669339b0cbe3f4078a915"><td class="mdescLeft">&#160;</td><td class="mdescRight">image pixel width <br /></td></tr>
+<tr class="separator:a114180b5449669339b0cbe3f4078a915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a093efd59b753173a50a5c3a2ab881878"><td class="memItemLeft" align="right" valign="top"><a id="a093efd59b753173a50a5c3a2ab881878"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a093efd59b753173a50a5c3a2ab881878">pixelHeight_</a></td></tr>
+<tr class="memdesc:a093efd59b753173a50a5c3a2ab881878"><td class="mdescLeft">&#160;</td><td class="mdescRight">image pixel height <br /></td></tr>
+<tr class="separator:a093efd59b753173a50a5c3a2ab881878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fe1e6f41e5e2e99ce1560f0b5ad36b9"><td class="memItemLeft" align="right" valign="top"><a id="a7fe1e6f41e5e2e99ce1560f0b5ad36b9"></a>
+<a class="el" href="namespaceExiv2.html#af72182be3e51f30ef8cb55a86dfa8e67">NativePreviewList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a7fe1e6f41e5e2e99ce1560f0b5ad36b9">nativePreviews_</a></td></tr>
+<tr class="memdesc:a7fe1e6f41e5e2e99ce1560f0b5ad36b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">list of native previews <br /></td></tr>
+<tr class="separator:a7fe1e6f41e5e2e99ce1560f0b5ad36b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaada24ce9c2d86fa8c43454f123aa4be"><td class="memItemLeft" align="right" valign="top"><a id="aaada24ce9c2d86fa8c43454f123aa4be"></a>
+<a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#aaada24ce9c2d86fa8c43454f123aa4be">byteOrder</a> () const</td></tr>
+<tr class="memdesc:aaada24ce9c2d86fa8c43454f123aa4be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the byte order in which the Exif metadata of the image is encoded. Initially, it is not set (<em>invalidByteOrder</em>). <br /></td></tr>
+<tr class="separator:aaada24ce9c2d86fa8c43454f123aa4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9b0050e69f898b1226e7655f0c799f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a5b9b0050e69f898b1226e7655f0c799f">good</a> () const</td></tr>
+<tr class="memdesc:a5b9b0050e69f898b1226e7655f0c799f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the <a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> instance is valid. Use after object construction.  <a href="classExiv2_1_1Image.html#a5b9b0050e69f898b1226e7655f0c799f">More...</a><br /></td></tr>
+<tr class="separator:a5b9b0050e69f898b1226e7655f0c799f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c517b500586613595e2e1b62601657a"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a5c517b500586613595e2e1b62601657a">mimeType</a> () const =0</td></tr>
+<tr class="memdesc:a5c517b500586613595e2e1b62601657a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the MIME type of the image.  <a href="classExiv2_1_1Image.html#a5c517b500586613595e2e1b62601657a">More...</a><br /></td></tr>
+<tr class="separator:a5c517b500586613595e2e1b62601657a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a681db288938dfe2be06951bb2eadcbcc"><td class="memItemLeft" align="right" valign="top"><a id="a681db288938dfe2be06951bb2eadcbcc"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a681db288938dfe2be06951bb2eadcbcc">pixelWidth</a> () const</td></tr>
+<tr class="memdesc:a681db288938dfe2be06951bb2eadcbcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the pixel width of the image. <br /></td></tr>
+<tr class="separator:a681db288938dfe2be06951bb2eadcbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2956955424be14d99d56ec9b2902ecb"><td class="memItemLeft" align="right" valign="top"><a id="af2956955424be14d99d56ec9b2902ecb"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#af2956955424be14d99d56ec9b2902ecb">pixelHeight</a> () const</td></tr>
+<tr class="memdesc:af2956955424be14d99d56ec9b2902ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the pixel height of the image. <br /></td></tr>
+<tr class="separator:af2956955424be14d99d56ec9b2902ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15973cb5211046fd1273327689367603"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a15973cb5211046fd1273327689367603">exifData</a> () const</td></tr>
+<tr class="memdesc:a15973cb5211046fd1273327689367603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classExiv2_1_1ExifData.html" title="A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...">ExifData</a> instance containing currently buffered Exif data.  <a href="classExiv2_1_1Image.html#a15973cb5211046fd1273327689367603">More...</a><br /></td></tr>
+<tr class="separator:a15973cb5211046fd1273327689367603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8311ed831a1b8bde5f9288e592d99e"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#aca8311ed831a1b8bde5f9288e592d99e">iptcData</a> () const</td></tr>
+<tr class="memdesc:aca8311ed831a1b8bde5f9288e592d99e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classExiv2_1_1IptcData.html" title="A container for IPTC data. This is a top-level class of the Exiv2 library.">IptcData</a> instance containing currently buffered IPTC data.  <a href="classExiv2_1_1Image.html#aca8311ed831a1b8bde5f9288e592d99e">More...</a><br /></td></tr>
+<tr class="separator:aca8311ed831a1b8bde5f9288e592d99e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5a54300cddc7ec0de2ce7da3c8517a0"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classExiv2_1_1XmpData.html">XmpData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#af5a54300cddc7ec0de2ce7da3c8517a0">xmpData</a> () const</td></tr>
+<tr class="memdesc:af5a54300cddc7ec0de2ce7da3c8517a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classExiv2_1_1XmpData.html" title="A container for XMP data. This is a top-level class of the Exiv2 library.">XmpData</a> instance containing currently buffered XMP data.  <a href="classExiv2_1_1Image.html#af5a54300cddc7ec0de2ce7da3c8517a0">More...</a><br /></td></tr>
+<tr class="separator:af5a54300cddc7ec0de2ce7da3c8517a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e2f0728a9330ce753bd3d36bf50e58"><td class="memItemLeft" align="right" valign="top"><a id="a41e2f0728a9330ce753bd3d36bf50e58"></a>
+virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a41e2f0728a9330ce753bd3d36bf50e58">comment</a> () const</td></tr>
+<tr class="memdesc:a41e2f0728a9330ce753bd3d36bf50e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a copy of the image comment. May be an empty string. <br /></td></tr>
+<tr class="separator:a41e2f0728a9330ce753bd3d36bf50e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2bce95de847f86e29dbe348a0dcab8a"><td class="memItemLeft" align="right" valign="top"><a id="ad2bce95de847f86e29dbe348a0dcab8a"></a>
+virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ad2bce95de847f86e29dbe348a0dcab8a">xmpPacket</a> () const</td></tr>
+<tr class="memdesc:ad2bce95de847f86e29dbe348a0dcab8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the raw XMP packet as a string. <br /></td></tr>
+<tr class="separator:ad2bce95de847f86e29dbe348a0dcab8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62345361501892f42c6bbc86514bf5c6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">io</a> () const</td></tr>
+<tr class="memdesc:a62345361501892f42c6bbc86514bf5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to the <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> instance being used for Io.  <a href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">More...</a><br /></td></tr>
+<tr class="separator:a62345361501892f42c6bbc86514bf5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9044deeee647a5c646d90d4285ecde66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceExiv2.html#af5f0ea6c944c786f7c4c4841fa22b16c">AccessMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a9044deeee647a5c646d90d4285ecde66">checkMode</a> (<a class="el" href="namespaceExiv2.html#acca494c8cf80f3ac8a804e1b54afffca">MetadataId</a> metadataId) const</td></tr>
+<tr class="memdesc:a9044deeee647a5c646d90d4285ecde66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the access mode, i.e., the metadata functions, which this image supports for the metadata type <em>metadataId</em>.  <a href="classExiv2_1_1Image.html#a9044deeee647a5c646d90d4285ecde66">More...</a><br /></td></tr>
+<tr class="separator:a9044deeee647a5c646d90d4285ecde66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3393e922bf59ef1f535ab7dd41db7f92"><td class="memItemLeft" align="right" valign="top"><a id="a3393e922bf59ef1f535ab7dd41db7f92"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a3393e922bf59ef1f535ab7dd41db7f92">supportsMetadata</a> (<a class="el" href="namespaceExiv2.html#acca494c8cf80f3ac8a804e1b54afffca">MetadataId</a> metadataId) const</td></tr>
+<tr class="memdesc:a3393e922bf59ef1f535ab7dd41db7f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if image supports a particular type of metadata. This method is deprecated. Use <a class="el" href="classExiv2_1_1Image.html#a9044deeee647a5c646d90d4285ecde66" title="Returns the access mode, i.e., the metadata functions, which this image supports for the metadata typ...">checkMode()</a> instead. <br /></td></tr>
+<tr class="separator:a3393e922bf59ef1f535ab7dd41db7f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae71a3de5f6782e09464ae152944969a1"><td class="memItemLeft" align="right" valign="top"><a id="ae71a3de5f6782e09464ae152944969a1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ae71a3de5f6782e09464ae152944969a1">writeXmpFromPacket</a> () const</td></tr>
+<tr class="memdesc:ae71a3de5f6782e09464ae152944969a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the flag indicating the source when writing XMP metadata. <br /></td></tr>
+<tr class="separator:ae71a3de5f6782e09464ae152944969a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e71af82146be8769ed1e7a6f6cf50b"><td class="memItemLeft" align="right" valign="top"><a id="a90e71af82146be8769ed1e7a6f6cf50b"></a>
+const <a class="el" href="namespaceExiv2.html#af72182be3e51f30ef8cb55a86dfa8e67">NativePreviewList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a90e71af82146be8769ed1e7a6f6cf50b">nativePreviews</a> () const</td></tr>
+<tr class="memdesc:a90e71af82146be8769ed1e7a6f6cf50b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return list of native previews. This is meant to be used only by the <a class="el" href="classExiv2_1_1PreviewManager.html" title="Class for extracting preview images from image metadata.">PreviewManager</a>. <br /></td></tr>
+<tr class="separator:a90e71af82146be8769ed1e7a6f6cf50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48deb806a67146e7c91ff206fbc4d106"><td class="memItemLeft" align="right" valign="top"><a id="a48deb806a67146e7c91ff206fbc4d106"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a48deb806a67146e7c91ff206fbc4d106">setTypeSupported</a> (int <a class="el" href="classExiv2_1_1Image.html#a9631075925ed92077b247e53a63fae0c">imageType</a>, uint16_t supportedMetadata)</td></tr>
+<tr class="memdesc:a48deb806a67146e7c91ff206fbc4d106"><td class="mdescLeft">&#160;</td><td class="mdescRight">set type support for this image format <br /></td></tr>
+<tr class="separator:a48deb806a67146e7c91ff206fbc4d106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9631075925ed92077b247e53a63fae0c"><td class="memItemLeft" align="right" valign="top"><a id="a9631075925ed92077b247e53a63fae0c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a9631075925ed92077b247e53a63fae0c">imageType</a> () const</td></tr>
+<tr class="memdesc:a9631075925ed92077b247e53a63fae0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">set type support for this image format <br /></td></tr>
+<tr class="separator:a9631075925ed92077b247e53a63fae0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa717a840747c745f212f4c8d8b65681e"><td class="memItemLeft" align="right" valign="top"><a id="aa717a840747c745f212f4c8d8b65681e"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#aa717a840747c745f212f4c8d8b65681e">tagName</a> (uint16_t tag)</td></tr>
+<tr class="memdesc:aa717a840747c745f212f4c8d8b65681e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return tag name for given tag id. <br /></td></tr>
+<tr class="separator:aa717a840747c745f212f4c8d8b65681e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76b1c1f5a95d1ff39837c1f3bbe6f89b"><td class="memItemLeft" align="right" valign="top"><a id="a76b1c1f5a95d1ff39837c1f3bbe6f89b"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a76b1c1f5a95d1ff39837c1f3bbe6f89b">typeName</a> (uint16_t tag) const</td></tr>
+<tr class="memdesc:a76b1c1f5a95d1ff39837c1f3bbe6f89b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return tag type for given tag id. <br /></td></tr>
+<tr class="separator:a76b1c1f5a95d1ff39837c1f3bbe6f89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstract base class defining the interface for an image. This is the top-level interface to the <a class="el" href="namespaceExiv2.html" title="Provides classes and functions to encode and decode Exif and Iptc data. The libexiv2 API consists of ...">Exiv2</a> library. </p>
+<p><a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> has containers to store image metadata and subclasses implement read and save metadata from and to specific image formats.<br  />
+ Most client apps will obtain an <a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> instance by calling a static <a class="el" href="classExiv2_1_1ImageFactory.html" title="Returns an Image instance of the specified type.">ImageFactory</a> method. The <a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> class can then be used to to read, write, and save metadata. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9044deeee647a5c646d90d4285ecde66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9044deeee647a5c646d90d4285ecde66">&#9670;&nbsp;</a></span>checkMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceExiv2.html#af5f0ea6c944c786f7c4c4841fa22b16c">AccessMode</a> Exiv2::Image::checkMode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#acca494c8cf80f3ac8a804e1b54afffca">MetadataId</a>&#160;</td>
+          <td class="paramname"><em>metadataId</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the access mode, i.e., the metadata functions, which this image supports for the metadata type <em>metadataId</em>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">metadataId</td><td>The metadata identifier. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Access mode for the requested image type and metadata identifier. </dd></dl>
+
+</div>
+</div>
+<a id="a01f38451af96af7f28aa27be4aaa18a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f38451af96af7f28aa27be4aaa18a6">&#9670;&nbsp;</a></span>clearXmpData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exiv2::Image::clearXmpData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erase any buffered XMP data. XMP data is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. </p>
+<p>This has the same effect as <a class="el" href="classExiv2_1_1Image.html#a43ac9ab965a2c2d0ca706bd037590e00" title="Erase the buffered XMP packet. XMP data is not removed from the actual image until the writeMetadata(...">clearXmpPacket()</a> but operates on the buffered parsed XMP data.</p>
+<p>Subsequent calls to <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> encode the XMP data to a raw XMP packet and write the newly encoded packet to the image. In the process, the buffered raw XMP packet is updated. In order to write directly from the raw XMP packet, use writeXmpFromPacket(true) or <a class="el" href="classExiv2_1_1Image.html#aff3a5906307a84ea56a7b7002a26126b" title="Assign a raw XMP packet. The new XMP packet is not written to the image until the writeMetadata() met...">setXmpPacket()</a>. </p>
+
+</div>
+</div>
+<a id="a43ac9ab965a2c2d0ca706bd037590e00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43ac9ab965a2c2d0ca706bd037590e00">&#9670;&nbsp;</a></span>clearXmpPacket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exiv2::Image::clearXmpPacket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erase the buffered XMP packet. XMP data is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. </p>
+<p>This has the same effect as <a class="el" href="classExiv2_1_1Image.html#a01f38451af96af7f28aa27be4aaa18a6" title="Erase any buffered XMP data. XMP data is not removed from the actual image until the writeMetadata() ...">clearXmpData()</a> but operates on the buffered raw XMP packet only, not the parsed XMP data.</p>
+<p>Subsequent calls to <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> write the XMP packet from the buffered raw XMP packet rather than from buffered parsed XMP data. In order to write from parsed XMP data again, use either writeXmpFromPacket(false) or <a class="el" href="classExiv2_1_1Image.html#adabf3dfc5e40e8c5deee2abf5987190b" title="Assign new XMP data. The new XMP data is not written to the image until the writeMetadata() method is...">setXmpData()</a>. </p>
+
+</div>
+</div>
+<a id="a6b2ee3de4a0c89cb8ff42a59946abbd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b2ee3de4a0c89cb8ff42a59946abbd9">&#9670;&nbsp;</a></span>exifData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a>&amp; Exiv2::Image::exifData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an <a class="el" href="classExiv2_1_1ExifData.html" title="A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...">ExifData</a> instance containing currently buffered Exif data. </p>
+<p>The contained Exif data may have been read from the image by a previous call to <a class="el" href="classExiv2_1_1Image.html#a198b8d5924d6441748aa162130c96a5f" title="Read all metadata supported by a specific image format from the image. Before this method is called,...">readMetadata()</a> or added directly. The Exif data in the returned instance will be written to the image when <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> is called.</p>
+<dl class="section return"><dt>Returns</dt><dd>modifiable <a class="el" href="classExiv2_1_1ExifData.html" title="A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...">ExifData</a> instance containing Exif values </dd></dl>
+
+</div>
+</div>
+<a id="a15973cb5211046fd1273327689367603"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15973cb5211046fd1273327689367603">&#9670;&nbsp;</a></span>exifData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a>&amp; Exiv2::Image::exifData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an <a class="el" href="classExiv2_1_1ExifData.html" title="A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...">ExifData</a> instance containing currently buffered Exif data. </p>
+<p>The Exif data may have been read from the image by a previous call to <a class="el" href="classExiv2_1_1Image.html#a198b8d5924d6441748aa162130c96a5f" title="Read all metadata supported by a specific image format from the image. Before this method is called,...">readMetadata()</a> or added directly. The Exif data in the returned instance will be written to the image when <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> is called.</p>
+<dl class="section return"><dt>Returns</dt><dd>read only <a class="el" href="classExiv2_1_1ExifData.html" title="A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...">ExifData</a> instance containing Exif values </dd></dl>
+
+</div>
+</div>
+<a id="a5b9b0050e69f898b1226e7655f0c799f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b9b0050e69f898b1226e7655f0c799f">&#9670;&nbsp;</a></span>good()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Exiv2::Image::good </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the <a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> instance is valid. Use after object construction. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the <a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> is in a valid state. </dd></dl>
+
+</div>
+</div>
+<a id="a62345361501892f42c6bbc86514bf5c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62345361501892f42c6bbc86514bf5c6">&#9670;&nbsp;</a></span>io()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a>&amp; Exiv2::Image::io </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a reference to the <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> instance being used for Io. </p>
+<p>This refence is particularly useful to reading the results of operations on a <a class="el" href="classExiv2_1_1MemIo.html" title="Provides binary IO on blocks of memory by implementing the BasicIo interface. A copy-on-write impleme...">MemIo</a> instance. For example after metadata has been modified and the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method has been called, this method can be used to get access to the modified image.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> instance that can be used to read or write image data directly. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the returned <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> is used to write to the image, the <a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> class will not see those changes until the <a class="el" href="classExiv2_1_1Image.html#a198b8d5924d6441748aa162130c96a5f" title="Read all metadata supported by a specific image format from the image. Before this method is called,...">readMetadata()</a> method is called. </dd></dl>
+
+</div>
+</div>
+<a id="a098600f7a24b1a8d4162c2742a351699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a098600f7a24b1a8d4162c2742a351699">&#9670;&nbsp;</a></span>iptcData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a>&amp; Exiv2::Image::iptcData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an <a class="el" href="classExiv2_1_1IptcData.html" title="A container for IPTC data. This is a top-level class of the Exiv2 library.">IptcData</a> instance containing currently buffered IPTC data. </p>
+<p>The contained IPTC data may have been read from the image by a previous call to <a class="el" href="classExiv2_1_1Image.html#a198b8d5924d6441748aa162130c96a5f" title="Read all metadata supported by a specific image format from the image. Before this method is called,...">readMetadata()</a> or added directly. The IPTC data in the returned instance will be written to the image when <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> is called.</p>
+<dl class="section return"><dt>Returns</dt><dd>modifiable <a class="el" href="classExiv2_1_1IptcData.html" title="A container for IPTC data. This is a top-level class of the Exiv2 library.">IptcData</a> instance containing IPTC values </dd></dl>
+
+</div>
+</div>
+<a id="aca8311ed831a1b8bde5f9288e592d99e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca8311ed831a1b8bde5f9288e592d99e">&#9670;&nbsp;</a></span>iptcData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a>&amp; Exiv2::Image::iptcData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an <a class="el" href="classExiv2_1_1IptcData.html" title="A container for IPTC data. This is a top-level class of the Exiv2 library.">IptcData</a> instance containing currently buffered IPTC data. </p>
+<p>The contained IPTC data may have been read from the image by a previous call to <a class="el" href="classExiv2_1_1Image.html#a198b8d5924d6441748aa162130c96a5f" title="Read all metadata supported by a specific image format from the image. Before this method is called,...">readMetadata()</a> or added directly. The IPTC data in the returned instance will be written to the image when <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> is called.</p>
+<dl class="section return"><dt>Returns</dt><dd>modifiable <a class="el" href="classExiv2_1_1IptcData.html" title="A container for IPTC data. This is a top-level class of the Exiv2 library.">IptcData</a> instance containing IPTC values </dd></dl>
+
+</div>
+</div>
+<a id="a5c517b500586613595e2e1b62601657a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c517b500586613595e2e1b62601657a">&#9670;&nbsp;</a></span>mimeType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string Exiv2::Image::mimeType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the MIME type of the image. </p>
+<dl class="section note"><dt>Note</dt><dd>For each supported image format, the library knows only one MIME type. This may not be the most specific MIME type for that format. In particular, several RAW formats are variants of the TIFF format with the same magic as TIFF itself. Class <a class="el" href="classExiv2_1_1TiffImage.html" title="Class to access TIFF images. Exif metadata is supported directly, IPTC is read from the Exif data,...">TiffImage</a> handles most of them and thus they all have MIME type "image/tiff", although a more specific MIME type may exist (e.g., "image/x-nikon-nef"). </dd></dl>
+
+<p>Implemented in <a class="el" href="classExiv2_1_1ExvImage.html#aaf11d53a0ca5d41c9b5cbe5ac66d6e93">Exiv2::ExvImage</a>, <a class="el" href="classExiv2_1_1JpegImage.html#aadc4c44a392446e6f52b57fc4f462da6">Exiv2::JpegImage</a>, <a class="el" href="classExiv2_1_1BmffImage.html#a8945f2efab262b4b035be8c24e0cf84c">Exiv2::BmffImage</a>, <a class="el" href="classExiv2_1_1BmpImage.html#a6fec180077157be3120dd61714b18d2e">Exiv2::BmpImage</a>, <a class="el" href="classExiv2_1_1RafImage.html#a8d351ab8f7a49ef294388b3a85e1b390">Exiv2::RafImage</a>, <a class="el" href="classExiv2_1_1GifImage.html#a66f6f24af97fd476607b257f1026fe8f">Exiv2::GifImage</a>, <a class="el" href="classExiv2_1_1TgaImage.html#aad513d29aeda8ca47ec4c67a5ee0f4f0">Exiv2::TgaImage</a>, <a class="el" href="classExiv2_1_1TiffImage.html#af44bb5c59481e7f21db76184358d26d4">Exiv2::TiffImage</a>, <a class="el" href="classExiv2_1_1Cr2Image.html#a2e8657a8baeaa13c4546cce55e4f737c">Exiv2::Cr2Image</a>, <a class="el" href="classExiv2_1_1CrwImage.html#aabd0daa835864ee47390cb9b2d47d55b">Exiv2::CrwImage</a>, <a class="el" href="classExiv2_1_1Jp2Image.html#a5f5b77cae18d68c514ed6da74a9d32a9">Exiv2::Jp2Image</a>, <a class="el" href="classExiv2_1_1MrwImage.html#a1564cb306929815b9e9bf6826f1005dc">Exiv2::MrwImage</a>, <a class="el" href="classExiv2_1_1PsdImage.html#ae5bddf0f2a3c90ca94f44b06486cfa5e">Exiv2::PsdImage</a>, <a class="el" href="classExiv2_1_1EpsImage.html#a3cfe016930defe40d09deabd568f5eb8">Exiv2::EpsImage</a>, <a class="el" href="classExiv2_1_1Rw2Image.html#ae59480620e0b47e4593c1c3d218f1ba9">Exiv2::Rw2Image</a>, <a class="el" href="classExiv2_1_1PngImage.html#ac9f8c66cbe72ec8062462c4fe752068b">Exiv2::PngImage</a>, <a class="el" href="classExiv2_1_1MatroskaVideo.html#a528ce75ff2c27bdcda3fb2c3897a9705">Exiv2::MatroskaVideo</a>, <a class="el" href="classExiv2_1_1OrfImage.html#a4af1def2e6d635ffea9ba700724a7912">Exiv2::OrfImage</a>, <a class="el" href="classExiv2_1_1WebPImage.html#ad3952bc5e3bfadaa24b8972726ab96b9">Exiv2::WebPImage</a>, <a class="el" href="classExiv2_1_1PgfImage.html#a9b151605b81ff200c9dee251f52e5cd0">Exiv2::PgfImage</a>, <a class="el" href="classExiv2_1_1XmpSidecar.html#a27440d9024a9f359f92052b2f72128da">Exiv2::XmpSidecar</a>, <a class="el" href="classExiv2_1_1AsfVideo.html#a2d5a2c45d3c5dc8a28d092b07ed6e255">Exiv2::AsfVideo</a>, <a class="el" href="classExiv2_1_1RiffVideo.html#a7fa8d222ca48007dbc4e64b3f9066132">Exiv2::RiffVideo</a>, and <a class="el" href="classExiv2_1_1QuickTimeVideo.html#a34816dc564daf862c9c45883779d8cc2">Exiv2::QuickTimeVideo</a>.</p>
+
+</div>
+</div>
+<a id="a0772d67eaf86367ef515b2f99443f67f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0772d67eaf86367ef515b2f99443f67f">&#9670;&nbsp;</a></span>printStructure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exiv2::Image::printStructure </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#a0e75ea64b8d502bf50e75ce1bb8c1ddd">PrintStructureOption</a>&#160;</td>
+          <td class="paramname"><em>option</em> = <code>kpsNone</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print out the structure of image file. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if reading of the file fails or the image data is not valid (does not look like data of the specific image type). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function is not thread safe and intended for exiv2 -pS for debugging. </dd>
+<dd>
+You may need to put the stream into binary mode (see src/actions.cpp) </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classExiv2_1_1TiffImage.html#aa73e4c4e18252280a6b94696af7f451c">Exiv2::TiffImage</a>, <a class="el" href="classExiv2_1_1JpegBase.html#a39a2a90d150a404ff041a3fc0f20fa22">Exiv2::JpegBase</a>, <a class="el" href="classExiv2_1_1Cr2Image.html#a46744bbf248f28ac94b224a1f7c843a9">Exiv2::Cr2Image</a>, <a class="el" href="classExiv2_1_1Jp2Image.html#a02238a37f28026be1c7bc40bea813fcf">Exiv2::Jp2Image</a>, <a class="el" href="classExiv2_1_1PngImage.html#aebe39c7d4c943c9b2a52dae00d9e6f7a">Exiv2::PngImage</a>, <a class="el" href="classExiv2_1_1RafImage.html#a391201da70155208a0c72f4c3fdde9d2">Exiv2::RafImage</a>, <a class="el" href="classExiv2_1_1OrfImage.html#a75a52a2bca197d875c4e1a2d63024932">Exiv2::OrfImage</a>, <a class="el" href="classExiv2_1_1Rw2Image.html#af82bb3027235595158e10f8878035d84">Exiv2::Rw2Image</a>, <a class="el" href="classExiv2_1_1WebPImage.html#ab61de767c729ee8b2a99a34a5c0abd62">Exiv2::WebPImage</a>, <a class="el" href="classExiv2_1_1RiffVideo.html#a5e2c7fe781ea6d798ebf393c6324e627">Exiv2::RiffVideo</a>, and <a class="el" href="classExiv2_1_1BmffImage.html#a6ce444c652495637a2b671c52a5ea5ba">Exiv2::BmffImage</a>.</p>
+
+</div>
+</div>
+<a id="a0799da0ceb675d40a4ad75eba07eb37d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0799da0ceb675d40a4ad75eba07eb37d">&#9670;&nbsp;</a></span>printTiffStructure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Exiv2::Image::printTiffStructure </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;&#160;</td>
+          <td class="paramname"><em>io</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#a0e75ea64b8d502bf50e75ce1bb8c1ddd">PrintStructureOption</a>&#160;</td>
+          <td class="paramname"><em>option</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>offset</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print out the structure of image file. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if reading of the file fails or the image data is not valid (does not look like data of the specific image type). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a198b8d5924d6441748aa162130c96a5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a198b8d5924d6441748aa162130c96a5f">&#9670;&nbsp;</a></span>readMetadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exiv2::Image::readMetadata </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read all metadata supported by a specific image format from the image. Before this method is called, the image metadata will be cleared. </p>
+<p>This method returns success even if no metadata is found in the image. Callers must therefore check the size of individual metadata types before accessing the data.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if opening or reading of the file fails or the image data is not valid (does not look like data of the specific image type). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classExiv2_1_1JpegBase.html#ad6e281a6e5e863c93fbb123f0b38bc4c">Exiv2::JpegBase</a>, <a class="el" href="classExiv2_1_1BmffImage.html#a5ea434a4e7ec06dfde58ad4f59526ac7">Exiv2::BmffImage</a>, <a class="el" href="classExiv2_1_1CrwImage.html#a9757cfb64310acf700d51c77ac4d55b5">Exiv2::CrwImage</a>, <a class="el" href="classExiv2_1_1EpsImage.html#a18a8c0284898635b301e63d8a14effc5">Exiv2::EpsImage</a>, <a class="el" href="classExiv2_1_1BmpImage.html#af325637dd954988bdd0812705b03ee91">Exiv2::BmpImage</a>, <a class="el" href="classExiv2_1_1Cr2Image.html#a9ac07ec115329228cf1eb2afe622feb0">Exiv2::Cr2Image</a>, <a class="el" href="classExiv2_1_1MatroskaVideo.html#ac5f3d04f8243b8f6c15b37d503210694">Exiv2::MatroskaVideo</a>, <a class="el" href="classExiv2_1_1TiffImage.html#ac0965fb8aea437062775da11bece20ff">Exiv2::TiffImage</a>, <a class="el" href="classExiv2_1_1RafImage.html#a53a5fa808a06b133f72cf6ccdacebc76">Exiv2::RafImage</a>, <a class="el" href="classExiv2_1_1GifImage.html#a6ce1509b24dfed94bede077e328a315a">Exiv2::GifImage</a>, <a class="el" href="classExiv2_1_1Jp2Image.html#a4bf3d9ed94a4be4e5d931a812c6d58bf">Exiv2::Jp2Image</a>, <a class="el" href="classExiv2_1_1TgaImage.html#acd57243b467e0f21fa52214bf2831552">Exiv2::TgaImage</a>, <a class="el" href="classExiv2_1_1PsdImage.html#ae9bb61fa8016a76aa01718990c52dd3f">Exiv2::PsdImage</a>, <a class="el" href="classExiv2_1_1PgfImage.html#a5af0948267616b7954d5f95c84441e82">Exiv2::PgfImage</a>, <a class="el" href="classExiv2_1_1PngImage.html#a2a0f0ed945a729104c01a851094150e7">Exiv2::PngImage</a>, <a class="el" href="classExiv2_1_1AsfVideo.html#a6b1f9bd6dc65f99edd2595bccf87e90e">Exiv2::AsfVideo</a>, <a class="el" href="classExiv2_1_1OrfImage.html#a52b0c6a1661b2d68e2432268735ac563">Exiv2::OrfImage</a>, <a class="el" href="classExiv2_1_1MrwImage.html#af57371ca9869cd8c5a009afcd0d62e2a">Exiv2::MrwImage</a>, <a class="el" href="classExiv2_1_1Rw2Image.html#a207a0726d40c8aa9456bb39ab13fd435">Exiv2::Rw2Image</a>, <a class="el" href="classExiv2_1_1RiffVideo.html#a95289b6b1f94b621a1254eb2dd8d23dc">Exiv2::RiffVideo</a>, <a class="el" href="classExiv2_1_1QuickTimeVideo.html#aa0191ddc065a76551537efa4755c4a57">Exiv2::QuickTimeVideo</a>, <a class="el" href="classExiv2_1_1XmpSidecar.html#afaacbbda6639f45f89d967f2c3bcc76c">Exiv2::XmpSidecar</a>, and <a class="el" href="classExiv2_1_1WebPImage.html#a9b761c24b78c691decbd0d88046fc3d8">Exiv2::WebPImage</a>.</p>
+
+</div>
+</div>
+<a id="af1533e0b8d24c49974d0dc59911c330a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1533e0b8d24c49974d0dc59911c330a">&#9670;&nbsp;</a></span>setByteOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Exiv2::Image::setByteOrder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a>&#160;</td>
+          <td class="paramname"><em>byteOrder</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the byte order to encode the Exif metadata in. </p>
+<p>The setting is only used when new Exif metadata is created and may not be applicable at all for some image formats. If the target image already contains Exif metadata, the byte order of the existing data is used. If byte order is not set when <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> is called, little-endian byte order (II) is used by default. </p>
+
+</div>
+</div>
+<a id="afc0f7bbd48610ec3882ef0b36955a49b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc0f7bbd48610ec3882ef0b36955a49b">&#9670;&nbsp;</a></span>setComment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exiv2::Image::setComment </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>comment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the image comment. The new comment is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">comment</td><td>String containing comment. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classExiv2_1_1BmffImage.html#a114c4464757fbebd3bf6583f095487bd">Exiv2::BmffImage</a>, <a class="el" href="classExiv2_1_1BmpImage.html#a0d9e544f1a384228c3ef26f83eb0aaad">Exiv2::BmpImage</a>, <a class="el" href="classExiv2_1_1RafImage.html#a86777f8cdd42ae89677e13561e48a9f6">Exiv2::RafImage</a>, <a class="el" href="classExiv2_1_1GifImage.html#a4cd492b4d311bfc6ba202c56599dfedf">Exiv2::GifImage</a>, <a class="el" href="classExiv2_1_1TgaImage.html#abce4a71d8f652c89a1645f6e63720cb5">Exiv2::TgaImage</a>, <a class="el" href="classExiv2_1_1TiffImage.html#ac204968b22d3098c974551e0d2067650">Exiv2::TiffImage</a>, <a class="el" href="classExiv2_1_1Cr2Image.html#ac76dc2d010d3dbb16b7bc3327d60fb03">Exiv2::Cr2Image</a>, <a class="el" href="classExiv2_1_1Jp2Image.html#a2209338ee4a18a815ac95115a5eecaf5">Exiv2::Jp2Image</a>, <a class="el" href="classExiv2_1_1MrwImage.html#a034a0e0e888474dfa8cd6a24a0e73d19">Exiv2::MrwImage</a>, <a class="el" href="classExiv2_1_1EpsImage.html#afabaf3de204925f341394134d38a66b0">Exiv2::EpsImage</a>, <a class="el" href="classExiv2_1_1Rw2Image.html#a4e4694f9b04d86482607e4df7d6769f5">Exiv2::Rw2Image</a>, <a class="el" href="classExiv2_1_1PsdImage.html#a05f5b0a54a0acf646da8cb08195757b3">Exiv2::PsdImage</a>, <a class="el" href="classExiv2_1_1OrfImage.html#a1a2baa722020f3c5a6472c1f95bda4f6">Exiv2::OrfImage</a>, <a class="el" href="classExiv2_1_1WebPImage.html#ab251f02c7c71b37e4da5c756828cb2d6">Exiv2::WebPImage</a>, and <a class="el" href="classExiv2_1_1XmpSidecar.html#a500e5d1a2a314d1613bcd5244eb7c728">Exiv2::XmpSidecar</a>.</p>
+
+</div>
+</div>
+<a id="ae62611f2a70a9aef4447a86221e92dcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae62611f2a70a9aef4447a86221e92dcc">&#9670;&nbsp;</a></span>setExifData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exiv2::Image::setExifData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> &amp;&#160;</td>
+          <td class="paramname"><em>exifData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assign new Exif data. The new Exif data is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exifData</td><td>An <a class="el" href="classExiv2_1_1ExifData.html" title="A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...">ExifData</a> instance holding Exif data to be copied </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classExiv2_1_1BmpImage.html#a5d730de9ba18015824a327a93760a83b">Exiv2::BmpImage</a>, <a class="el" href="classExiv2_1_1RafImage.html#a0dc6b6ba3c57272e8d8abdad2741e1c9">Exiv2::RafImage</a>, <a class="el" href="classExiv2_1_1GifImage.html#ae98b140069acda271a7a3e0cbef6c640">Exiv2::GifImage</a>, <a class="el" href="classExiv2_1_1TgaImage.html#af8a076bffc4451c69f4836cd846a07c6">Exiv2::TgaImage</a>, <a class="el" href="classExiv2_1_1MrwImage.html#a8ec357197271583008b7a207651eb6fd">Exiv2::MrwImage</a>, and <a class="el" href="classExiv2_1_1Rw2Image.html#a2c99da5914c50a9fd40e21ff1f3da392">Exiv2::Rw2Image</a>.</p>
+
+</div>
+</div>
+<a id="a11ef8321ac42be4a4813367e07fac339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11ef8321ac42be4a4813367e07fac339">&#9670;&nbsp;</a></span>setIccProfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exiv2::Image::setIccProfile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> &amp;&#160;</td>
+          <td class="paramname"><em>iccProfile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bTestValid</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the image iccProfile. The new profile is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iccProfile</td><td><a class="el" href="classExiv2_1_1DataBuf.html" title="Utility class containing a character array. All it does is to take care of memory allocation and dele...">DataBuf</a> containing profile (binary) </td></tr>
+    <tr><td class="paramname">bTestValid</td><td>- tests that iccProfile contains credible data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af786d276e6bf72c4ecb2c642fd478a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af786d276e6bf72c4ecb2c642fd478a75">&#9670;&nbsp;</a></span>setIptcData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exiv2::Image::setIptcData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;&#160;</td>
+          <td class="paramname"><em>iptcData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assign new IPTC data. The new IPTC data is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iptcData</td><td>An <a class="el" href="classExiv2_1_1IptcData.html" title="A container for IPTC data. This is a top-level class of the Exiv2 library.">IptcData</a> instance holding IPTC data to be copied </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classExiv2_1_1BmpImage.html#a2e43c241337615a097316f3723dc772d">Exiv2::BmpImage</a>, <a class="el" href="classExiv2_1_1RafImage.html#ad95a749faed5962eccb5ca46ccf059d7">Exiv2::RafImage</a>, <a class="el" href="classExiv2_1_1CrwImage.html#aaadb20df06a2832e73d75e240f6c2c64">Exiv2::CrwImage</a>, <a class="el" href="classExiv2_1_1GifImage.html#aa9b15e6dca4e2b26d33c0aaeb587ab0b">Exiv2::GifImage</a>, <a class="el" href="classExiv2_1_1TgaImage.html#ad8a17682396f8d0e6f55ab8dbfed6c47">Exiv2::TgaImage</a>, <a class="el" href="classExiv2_1_1MrwImage.html#ab0c4bce2836217c490c7deda5c114925">Exiv2::MrwImage</a>, <a class="el" href="classExiv2_1_1Rw2Image.html#a7c815fe540dac720e784a215d480415b">Exiv2::Rw2Image</a>, and <a class="el" href="classExiv2_1_1WebPImage.html#a9a58bd1c561aa5586fe2ef0269d4ca9c">Exiv2::WebPImage</a>.</p>
+
+</div>
+</div>
+<a id="a459781449dd7eddcaa88ae6221e90ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a459781449dd7eddcaa88ae6221e90ef5">&#9670;&nbsp;</a></span>setMetadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exiv2::Image::setMetadata </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classExiv2_1_1Image.html">Image</a> &amp;&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy all existing metadata from source <a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a>. The data is copied into internal buffers and is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Metadata source. All metadata types are copied. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adabf3dfc5e40e8c5deee2abf5987190b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabf3dfc5e40e8c5deee2abf5987190b">&#9670;&nbsp;</a></span>setXmpData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exiv2::Image::setXmpData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classExiv2_1_1XmpData.html">XmpData</a> &amp;&#160;</td>
+          <td class="paramname"><em>xmpData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assign new XMP data. The new XMP data is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. </p>
+<p>Subsequent calls to <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> encode the XMP data to a raw XMP packet and write the newly encoded packet to the image. In the process, the buffered raw XMP packet is updated. In order to write directly from the raw XMP packet, use writeXmpFromPacket(true) or <a class="el" href="classExiv2_1_1Image.html#aff3a5906307a84ea56a7b7002a26126b" title="Assign a raw XMP packet. The new XMP packet is not written to the image until the writeMetadata() met...">setXmpPacket()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xmpData</td><td>An <a class="el" href="classExiv2_1_1XmpData.html" title="A container for XMP data. This is a top-level class of the Exiv2 library.">XmpData</a> instance holding XMP data to be copied </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aff3a5906307a84ea56a7b7002a26126b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff3a5906307a84ea56a7b7002a26126b">&#9670;&nbsp;</a></span>setXmpPacket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exiv2::Image::setXmpPacket </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>xmpPacket</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assign a raw XMP packet. The new XMP packet is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. </p>
+<p>Subsequent calls to <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> write the XMP packet from the buffered raw XMP packet rather than from buffered parsed XMP data. In order to write from parsed XMP data again, use either writeXmpFromPacket(false) or <a class="el" href="classExiv2_1_1Image.html#adabf3dfc5e40e8c5deee2abf5987190b" title="Assign new XMP data. The new XMP data is not written to the image until the writeMetadata() method is...">setXmpData()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xmpPacket</td><td>A string containing the raw XMP packet. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af9f7e86aac2f656473e456e16550ab58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9f7e86aac2f656473e456e16550ab58">&#9670;&nbsp;</a></span>writeMetadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exiv2::Image::writeMetadata </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write metadata back to the image. </p>
+<p>All existing metadata sections in the image are either created, replaced, or erased. If values for a given metadata type have been assigned, a section for that metadata type will either be created or replaced. If no values have been assigned to a given metadata type, any exists section for that metadata type will be removed from the image.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if the operation fails </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classExiv2_1_1JpegBase.html#a5e17357e701288db323db2bb5c9db1a9">Exiv2::JpegBase</a>, <a class="el" href="classExiv2_1_1BmffImage.html#a23948ee7fcd6fbbcd83016ba52348d63">Exiv2::BmffImage</a>, <a class="el" href="classExiv2_1_1BmpImage.html#a0deb05581273e6407b686e739fcdcf27">Exiv2::BmpImage</a>, <a class="el" href="classExiv2_1_1CrwImage.html#a1ae7b7dbf36f40504152112d67114afa">Exiv2::CrwImage</a>, <a class="el" href="classExiv2_1_1EpsImage.html#a0043b000b9213e8f816db5170f558619">Exiv2::EpsImage</a>, <a class="el" href="classExiv2_1_1RafImage.html#a3337927b7f39bef4dce153556a4b77a2">Exiv2::RafImage</a>, <a class="el" href="classExiv2_1_1GifImage.html#ade01838d801beb44968b806eaf469ef0">Exiv2::GifImage</a>, <a class="el" href="classExiv2_1_1TgaImage.html#af20e745446d742b47753eb9b9698a941">Exiv2::TgaImage</a>, <a class="el" href="classExiv2_1_1Cr2Image.html#a02e43bd63c2b10ce1ee190396d71a1b2">Exiv2::Cr2Image</a>, <a class="el" href="classExiv2_1_1MatroskaVideo.html#aa8b7f91b635b5da885fd10580ba41972">Exiv2::MatroskaVideo</a>, <a class="el" href="classExiv2_1_1TiffImage.html#ab4d6dcbd915abe2254bfef751a3f1da7">Exiv2::TiffImage</a>, <a class="el" href="classExiv2_1_1Jp2Image.html#afebe3c6b1ca88d58922e41b55ce36139">Exiv2::Jp2Image</a>, <a class="el" href="classExiv2_1_1MrwImage.html#a35b5e31b5d4500d71a724813dc0c57cb">Exiv2::MrwImage</a>, <a class="el" href="classExiv2_1_1PsdImage.html#abb47f0e2bcff7e326e6bf09ada06ceae">Exiv2::PsdImage</a>, <a class="el" href="classExiv2_1_1Rw2Image.html#ae71368a7c97550651d131152b31e38ce">Exiv2::Rw2Image</a>, <a class="el" href="classExiv2_1_1PgfImage.html#a253b1c6cb48747420a3fa7813310d95d">Exiv2::PgfImage</a>, <a class="el" href="classExiv2_1_1PngImage.html#a4a82a4143b70e11a59f4e9a56255f6a2">Exiv2::PngImage</a>, <a class="el" href="classExiv2_1_1AsfVideo.html#ac9e9471001bc8feb68d9b2f5c7878812">Exiv2::AsfVideo</a>, <a class="el" href="classExiv2_1_1OrfImage.html#acfbb361e4af39171546fb1491a6df085">Exiv2::OrfImage</a>, <a class="el" href="classExiv2_1_1RiffVideo.html#a6617d31a182f5f4bfb76ff3b21fa35d7">Exiv2::RiffVideo</a>, <a class="el" href="classExiv2_1_1QuickTimeVideo.html#a9d39c61bf9e07042cb8b05539de739b9">Exiv2::QuickTimeVideo</a>, <a class="el" href="classExiv2_1_1XmpSidecar.html#ac19b2de60b6af08602da62ef3f937ee0">Exiv2::XmpSidecar</a>, and <a class="el" href="classExiv2_1_1WebPImage.html#abc4aef05e49c82efb4a086111520de4c">Exiv2::WebPImage</a>.</p>
+
+</div>
+</div>
+<a id="ab64199a4be87a12f81bd111ce4019dfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64199a4be87a12f81bd111ce4019dfc">&#9670;&nbsp;</a></span>writeXmpFromPacket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Exiv2::Image::writeXmpFromPacket </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determine the source when writing XMP. </p>
+<p>Depending on the setting of this flag, <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> writes XMP from the buffered raw XMP packet or from parsed XMP data. The default is to write from parsed XMP data. The switch is also set by all functions to set and clear the buffered raw XMP packet and parsed XMP data, so using this function should usually not be necessary.</p>
+<p>If Exiv2 was compiled without XMP support, the default for this flag is true and it will never be changed in order to preserve access to the raw XMP packet. </p>
+
+</div>
+</div>
+<a id="aa85bb569118da6fa12699a2b71e3801b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa85bb569118da6fa12699a2b71e3801b">&#9670;&nbsp;</a></span>xmpData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classExiv2_1_1XmpData.html">XmpData</a>&amp; Exiv2::Image::xmpData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an <a class="el" href="classExiv2_1_1XmpData.html" title="A container for XMP data. This is a top-level class of the Exiv2 library.">XmpData</a> instance containing currently buffered XMP data. </p>
+<p>The contained XMP data may have been read from the image by a previous call to <a class="el" href="classExiv2_1_1Image.html#a198b8d5924d6441748aa162130c96a5f" title="Read all metadata supported by a specific image format from the image. Before this method is called,...">readMetadata()</a> or added directly. The XMP data in the returned instance will be written to the image when <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> is called.</p>
+<dl class="section return"><dt>Returns</dt><dd>modifiable <a class="el" href="classExiv2_1_1XmpData.html" title="A container for XMP data. This is a top-level class of the Exiv2 library.">XmpData</a> instance containing XMP values </dd></dl>
+
+</div>
+</div>
+<a id="af5a54300cddc7ec0de2ce7da3c8517a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5a54300cddc7ec0de2ce7da3c8517a0">&#9670;&nbsp;</a></span>xmpData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classExiv2_1_1XmpData.html">XmpData</a>&amp; Exiv2::Image::xmpData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an <a class="el" href="classExiv2_1_1XmpData.html" title="A container for XMP data. This is a top-level class of the Exiv2 library.">XmpData</a> instance containing currently buffered XMP data. </p>
+<p>The contained XMP data may have been read from the image by a previous call to <a class="el" href="classExiv2_1_1Image.html#a198b8d5924d6441748aa162130c96a5f" title="Read all metadata supported by a specific image format from the image. Before this method is called,...">readMetadata()</a> or added directly. The XMP data in the returned instance will be written to the image when <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> is called.</p>
+<dl class="section return"><dt>Returns</dt><dd>modifiable <a class="el" href="classExiv2_1_1XmpData.html" title="A container for XMP data. This is a top-level class of the Exiv2 library.">XmpData</a> instance containing XMP values </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>image.hpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

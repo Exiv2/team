@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceExiv2.html">Exiv2</a></li><li class="navelem"><a class="el" href="classExiv2_1_1LogMsg.html">LogMsg</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="classExiv2_1_1LogMsg-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Exiv2::LogMsg Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Class for a log message, used by the library. Applications can set the log level and provide a customer log message handler (callback function).  
+ <a href="classExiv2_1_1LogMsg.html#details">More...</a></p>
+
+<p><code>#include &lt;error.hpp&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:af72a9026cffe2536ae475e1c31e7ff70"><td class="memItemLeft" align="right" valign="top"><a id="af72a9026cffe2536ae475e1c31e7ff70"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#af72a9026cffe2536ae475e1c31e7ff70">Level</a> { <br />
+&#160;&#160;<b>debug</b> = 0, 
+<b>info</b> = 1, 
+<b>warn</b> = 2, 
+<b>error</b> = 3, 
+<br />
+&#160;&#160;<b>mute</b> = 4
+<br />
+ }</td></tr>
+<tr class="memdesc:af72a9026cffe2536ae475e1c31e7ff70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defined log levels. To suppress all log messages, either set the log level to <code>mute</code> or set the log message handler to 0. <br /></td></tr>
+<tr class="separator:af72a9026cffe2536ae475e1c31e7ff70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7058654225955500dc09e31d0834aed1"><td class="memItemLeft" align="right" valign="top"><a id="a7058654225955500dc09e31d0834aed1"></a>
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#a7058654225955500dc09e31d0834aed1">Handler</a>) (int, const char *)</td></tr>
+<tr class="memdesc:a7058654225955500dc09e31d0834aed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for a log message handler function. The function receives the log level and message and can process it in an application specific way. The default handler sends the log message to standard error. <br /></td></tr>
+<tr class="separator:a7058654225955500dc09e31d0834aed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Creators</div></td></tr>
+<tr class="memitem:aef46b169c328eecf0b83886ef8b9ea9f"><td class="memItemLeft" align="right" valign="top"><a id="aef46b169c328eecf0b83886ef8b9ea9f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#aef46b169c328eecf0b83886ef8b9ea9f">LogMsg</a> (<a class="el" href="classExiv2_1_1LogMsg.html#af72a9026cffe2536ae475e1c31e7ff70">Level</a> msgType)</td></tr>
+<tr class="memdesc:aef46b169c328eecf0b83886ef8b9ea9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, takes the log message type as an argument. <br /></td></tr>
+<tr class="separator:aef46b169c328eecf0b83886ef8b9ea9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedeb7bc7577e6c82e002f03017ce2f04"><td class="memItemLeft" align="right" valign="top"><a id="aedeb7bc7577e6c82e002f03017ce2f04"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#aedeb7bc7577e6c82e002f03017ce2f04">~LogMsg</a> ()</td></tr>
+<tr class="memdesc:aedeb7bc7577e6c82e002f03017ce2f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor, passes the log message to the message handler depending on the log level. <br /></td></tr>
+<tr class="separator:aedeb7bc7577e6c82e002f03017ce2f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Manipulators</h2></td></tr>
+<tr class="memitem:a0e84e1ddf83bf19ef9c83a420518e8aa"><td class="memItemLeft" align="right" valign="top"><a id="a0e84e1ddf83bf19ef9c83a420518e8aa"></a>
+std::ostringstream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#a0e84e1ddf83bf19ef9c83a420518e8aa">os</a> ()</td></tr>
+<tr class="memdesc:a0e84e1ddf83bf19ef9c83a420518e8aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to the ostringstream which holds the log message. <br /></td></tr>
+<tr class="separator:a0e84e1ddf83bf19ef9c83a420518e8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d044a62ace539813d255283a4c41782"><td class="memItemLeft" align="right" valign="top"><a id="a3d044a62ace539813d255283a4c41782"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#a3d044a62ace539813d255283a4c41782">setLevel</a> (<a class="el" href="classExiv2_1_1LogMsg.html#af72a9026cffe2536ae475e1c31e7ff70">Level</a> <a class="el" href="classExiv2_1_1LogMsg.html#ac2bf90efb62ec69439f6c71ca1498cc1">level</a>)</td></tr>
+<tr class="memdesc:a3d044a62ace539813d255283a4c41782"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log level. Only log messages with a level greater or equal <em>level</em> are sent to the log message handler. Default log level is <code>warn</code>. To suppress all log messages, set the log level to <code>mute</code> (or set the log message handler to 0). <br /></td></tr>
+<tr class="separator:a3d044a62ace539813d255283a4c41782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a782d9c817b49f3b503c5a85f418319be"><td class="memItemLeft" align="right" valign="top"><a id="a782d9c817b49f3b503c5a85f418319be"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#a782d9c817b49f3b503c5a85f418319be">setHandler</a> (<a class="el" href="classExiv2_1_1LogMsg.html#a7058654225955500dc09e31d0834aed1">Handler</a> <a class="el" href="classExiv2_1_1LogMsg.html#abe4cfbb3b6aaff49f4b793f2711adaa9">handler</a>)</td></tr>
+<tr class="memdesc:a782d9c817b49f3b503c5a85f418319be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log message handler. The default handler writes log messages to standard error. To suppress all log messages, set the log message handler to 0 (or set the log level to <code>mute</code>). <br /></td></tr>
+<tr class="separator:a782d9c817b49f3b503c5a85f418319be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2bf90efb62ec69439f6c71ca1498cc1"><td class="memItemLeft" align="right" valign="top"><a id="ac2bf90efb62ec69439f6c71ca1498cc1"></a>
+static <a class="el" href="classExiv2_1_1LogMsg.html#af72a9026cffe2536ae475e1c31e7ff70">Level</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#ac2bf90efb62ec69439f6c71ca1498cc1">level</a> ()</td></tr>
+<tr class="memdesc:ac2bf90efb62ec69439f6c71ca1498cc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current log level. <br /></td></tr>
+<tr class="separator:ac2bf90efb62ec69439f6c71ca1498cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe4cfbb3b6aaff49f4b793f2711adaa9"><td class="memItemLeft" align="right" valign="top"><a id="abe4cfbb3b6aaff49f4b793f2711adaa9"></a>
+static <a class="el" href="classExiv2_1_1LogMsg.html#a7058654225955500dc09e31d0834aed1">Handler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#abe4cfbb3b6aaff49f4b793f2711adaa9">handler</a> ()</td></tr>
+<tr class="memdesc:abe4cfbb3b6aaff49f4b793f2711adaa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current log message handler. <br /></td></tr>
+<tr class="separator:abe4cfbb3b6aaff49f4b793f2711adaa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f066bf7afb1b36a77cb08434f36962"><td class="memItemLeft" align="right" valign="top"><a id="aa1f066bf7afb1b36a77cb08434f36962"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#aa1f066bf7afb1b36a77cb08434f36962">defaultHandler</a> (int <a class="el" href="classExiv2_1_1LogMsg.html#ac2bf90efb62ec69439f6c71ca1498cc1">level</a>, const char *s)</td></tr>
+<tr class="memdesc:aa1f066bf7afb1b36a77cb08434f36962"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default log handler. Sends the log message to standard error. <br /></td></tr>
+<tr class="separator:aa1f066bf7afb1b36a77cb08434f36962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class for a log message, used by the library. Applications can set the log level and provide a customer log message handler (callback function). </p>
+<p>This class is meant to be used as a temporary object with the related macro-magic like this:</p>
+<p><code> EXV_WARNING &lt;&lt; "Warning! Something looks fishy.\n"; </code></p>
+<p>which translates to</p>
+<p><code> if (LogMsg::warn &gt;= <a class="el" href="classExiv2_1_1LogMsg.html#ac2bf90efb62ec69439f6c71ca1498cc1" title="Return the current log level.">LogMsg::level()</a> &amp;&amp; <a class="el" href="classExiv2_1_1LogMsg.html#abe4cfbb3b6aaff49f4b793f2711adaa9" title="Return the current log message handler.">LogMsg::handler()</a>) LogMsg(LogMsg::warn).<a class="el" href="classExiv2_1_1LogMsg.html#a0e84e1ddf83bf19ef9c83a420518e8aa" title="Return a reference to the ostringstream which holds the log message.">os()</a> &lt;&lt; "Warning! Something looks fishy.\n"; </code></p>
+<p>The macros EXV_DEBUG, EXV_INFO, EXV_WARNING and EXV_ERROR are shorthands and ensure efficient use of the logging facility: If a log message doesn't need to be generated because of the log level setting, the temp object is not even created.</p>
+<p>Caveat: The entire log message is not processed in this case. So don't make that call any logic that always needs to be executed. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="error_8hpp.html">error.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

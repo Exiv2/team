@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>README-CONAN</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<p><img src="http://www.exiv2.org/include/exiv2-logo-big.png" alt="Exiv2"></p>
+
+<h1 id="toc_0">Building Exiv2 dependencies with conan</h1>
+
+<p>Conan is a portable package manager for C/C++ libraries. It can be used to create all  dependencies needed to build Exiv2, without needing to install system packages.</p>
+
+<p>This document provides a step-by-step guide to show you the basic usage of conan. For more details about the tool,
+please visit the <a href="http://docs.conan.io/en/latest/">Conan documentation website</a>.</p>
+
+<p>Although we provide step-by-step instructions to enable you to build Exiv2 with conan, we recommend that you read conan&#39;s documentation to understand the main concepts: <a href="http://docs.conan.io/en/latest/getting_started.html">Getting started with Conan</a></p>
+
+<p>To build Exiv2 with conan, you will also need to install CMake.  https://cmake.org/download/</p>
+
+<h2 id="toc_1"><name id="TOC"></a></h2>
+
+<h3 id="toc_2">T A B L E _ OF _ C O N T E N T S</h3>
+
+<ol>
+<li><a href="#1">Step by Step Guide</a>
+
+<ol>
+<li><a href="#1-1">Install conan</a></li>
+<li><a href="#1-2">Test conan installation</a></li>
+<li><a href="#1-3">Create a build directory</a></li>
+<li><a href="#1-4">Build dependencies and install conan artefacts in your build directory</a></li>
+<li><a href="#1-5">Execute cmake to generate build files for your environment:</a></li>
+</ol></li>
+<li><a href="#2">Platform Notes</a>
+
+<ol>
+<li><a href="#2-1">Linux Notes</a></li>
+<li><a href="#2-2">Visual Studio Notes</a></li>
+<li><a href="#2-3">Cygwin Notes</a></li>
+<li><a href="#2-4">MinGW Notes</a></li>
+</ol></li>
+<li><a href="#3">Conan Architecture</a>
+
+<ol>
+<li><a href="#3-1">conanfile.py</a></li>
+<li><a href="#3-2">Conan Recipes</a></li>
+<li><a href="#3-3">Conan server search path</a></li>
+<li><a href="#3-4">Configuring conan on your machine</a></li>
+</ol></li>
+<li><a href="#4">Building Exiv2 with Adobe XMPsdk 2016</a>
+
+<ol>
+<li><a href="#4-1">Add a remote directory to conan&#39;s recipe search path</a></li>
+<li><a href="#4-2">Build dependencies and install conan artefacts in your build directory</a></li>
+<li><a href="#4-3">Execute cmake to generate build files for your environment</a></li>
+<li><a href="#4-4">Build Exiv2 and link Adobe XMPsdk library</a></li>
+</ol></li>
+<li><a href="#5">Webready Support</a></li>
+</ol>
+
+<h2 id="toc_3"><name id="1"></a></h2>
+
+<h1 id="toc_4">1 Step by Step Guide</h1>
+
+<p><name id="1-1"></a></p>
+
+<h5 id="toc_5">1.1) </a>Install conan:</h5>
+
+<div><pre><code class="language-bash">$ pip install conan</code></pre></div>
+
+<p>For other installation methods (brew, installers, from sources), visit this <a href="%5Binstall%0Aconan%5D(http://docs.conan.io/en/latest/installation.html)">link</a>.</p>
+
+<p>To upgrade the version of conan:</p>
+
+<div><pre><code class="language-bash">$ pip install conan --upgrade</code></pre></div>
+
+<p><name id="1-2"></a></p>
+
+<h5 id="toc_6">1.2) Test conan installation</h5>
+
+<div><pre><code class="language-bash">$ conan --version
+Conan version 1.4.1</code></pre></div>
+
+<p><name id="1-3"></a></p>
+
+<h5 id="toc_7">1.3) Create a build directory<name id="1-3"></a></h5>
+
+<p>Create a build directory and will run the conan commands:</p>
+
+<div><pre><code class="language-bash">$ mkdir build
+$ cd build
+$ conan profile list</code></pre></div>
+
+<p><strong>IMPORTANT</strong> <em><strong>Visual Studio Users</strong></em> require the profile msvc2017Release64 in %HOMEPATH%.conan\profiles\msvc2017Release64</p>
+
+<div><pre><code class="language-ini">[build_requires]
+[settings]
+arch=x86_64
+build_type=Release
+compiler=Visual Studio
+compiler.runtime=MD
+compiler.version=15
+os=Windows
+arch_build=x86_64
+os_build=Windows
+[options]
+[env]</code></pre></div>
+
+<p><name id="1-4"></a></p>
+
+<h5 id="toc_8">1.4) Build dependencies and install conan artefacts in your build directory</a></h5>
+
+<p>Execute <code>$ conan install</code> pointing to the directory containing <code>conanfile.py</code>.</p>
+
+<div><pre><code class="language-bash">$ conan install .. --build missing  # --profile msvc2017Release64</code></pre></div>
+
+<p><em><strong>Visual Studio Users</strong></em> should use <code>--profile msvc2017Release64</code></p>
+
+<p>The output from this command is quite long as conan downloads or builds zlib, expat, curl and other dependencies.</p>
+
+<p><name id="1-5"></a></p>
+
+<h5 id="toc_9">1.5) Execute cmake to generate build files for your environment.</h5>
+
+<div><pre><code class="language-bash">$ cmake ..  # -G &quot;Visual Studio 15 2017 Win64&quot; -DCMAKE_BUILD_TYPE=Release</code></pre></div>
+
+<p><name id="1-6"></a></p>
+
+<h5 id="toc_10">1.6) Build Exiv2:</h5>
+
+<div><pre><code class="language-bash">$ cmake --build . --config Release</code></pre></div>
+
+<p><a href="#TOC">TOC</a>
+<name id="2"></a></p>
+
+<h2 id="toc_11">2) Platform Notes</h2>
+
+<p><name id="2-1"></a></p>
+
+<h3 id="toc_12">2.1) Linux Notes</h3>
+
+<h5 id="toc_13">Default Profile</h5>
+
+<p>When you run conan install for the first time, it will detect and write the default profile ~/.conan/profile/default.  On my Ubuntu system with GCC 4.9, this is:</p>
+
+<div><pre><code class="language-bash">[settings]
+os=Linux
+os_build=Linux
+arch=x86_64
+arch_build=x86_64
+compiler=gcc
+compiler.version=4.9
+compiler.libcxx=libstdc++
+build_type=Release
+[options]
+[build_requires]
+[env]</code></pre></div>
+
+<h5 id="toc_14">Changing profile settings</h5>
+
+<p>One of the most important <strong>profile</strong> settings to be adjusted in your conan profile when working on Linux is the field</p>
+
+<div><pre><code class="language-bash">compiler.libcxx=libstdc++11  # Possible values: libstdc++, libstdc++11, libc++</code></pre></div>
+
+<p>With the arrival of the c++11 standard, and the growing popularity of the <em>clang</em> compiler, it is increasingly important which version of the standard library to use (corresponds to the <code>-stdlib</code> compiler flag).</p>
+
+<p>Recommended <strong>libcxx</strong>
+settings works with conan and different compilers:</p>
+
+<div><pre><code class="language-bash">compiler.libcxx=libstdc++11  # will use -stdlib=libstdc++ and define _GLIBCXX_USE_CXX11_ABI=1
+compiler.libcxx=libstdc++    # will use -stdlib=libstdc++ and define _GLIBCXX_USE_CXX11_ABI=0
+compiler.libcxx=libc++       # will use -stdlib=libc++
+</code></pre></div>
+
+<p>As a rule of thumb, set <code>compiler.libcxx=libstdc++11</code> when using a version of gcc &gt;= 5.1.</p>
+
+<p>More information about the standard library and GCC <a href="https://gcc.gnu.org/onlinedocs/libstdc++/manual/using_dual_abi.html">dual ABI in gcc</a> with GCC works.</p>
+
+<p>Please, be aware that normally when using gcc &gt;= 5.1, _GLIBCXX_USE_CXX11_ABI is set to 1 by default. However some linux
+distributions might set that definition to 0 by default. In case you get linking errors about standard c++ containers or
+algorithms when bringing the Exiv2 dependencies with conan, this might indicate a mismatch between the value set in
+<strong>compiler.libcxx</strong> and the default values used in your distribution.</p>
+
+<p><a href="#TOC">TOC</a>
+<name id="2-2"></a></p>
+
+<h3 id="toc_15">2.2) Visual Studio Notes</h3>
+
+<h3 id="toc_16">Profiles for Visual Studio</h3>
+
+<p>You can build Exiv2 with either Visual Studio 2015 (version 14) or 2017 (version 15).  You create profiles in %HOMEPATH%.conan\profiles with a text editor.</p>
+
+<p>If you have an installation of Visual Studio 2017, the profile msvc2017Release64 is as follows:</p>
+
+<div><pre><code class="language-ini">[build_requires]
+[settings]
+arch=x86_64
+build_type=Release
+compiler=Visual Studio
+compiler.runtime=MD
+compiler.version=15
+os=Windows
+arch_build=x86_64
+os_build=Windows
+[options]
+[env]</code></pre></div>
+
+<h3 id="toc_17">CMake Generators for Visual Studio</h3>
+
+<p>In the step-by-step guide, the command <code>$ cmake ..</code> uses
+the default CMake generator.  Always use the generator for your version of Visual Studio.  For example:</p>
+
+<div><pre><code class="language-bash">c:\....\exiv2\build&gt; conan install .. --profile msvc2017Release64 --build missing
+c:\....\exiv2\build&gt; cmake         .. -G &quot;Visual Studio 15 2017 Win64&quot; -DCMAKE_BUILD_TYPE=Release
+c:\....\exiv2\build&gt; cmake --build .  --config Release</code></pre></div>
+
+<p>CMake provides 4 Generators.  The 64 and 32 bit Generators have different names:</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Architecture</th>
+<th>Visual Studio 2015</th>
+<th>Visual Studio 2017</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">64 bit</td>
+<td>&quot;Visual Studio 14 2015 Win64&quot;</td>
+<td>&quot;Visual Studio 15 2017 Win64&quot;</td>
+</tr>
+<tr>
+<td style="text-align: left">32 bit</td>
+<td>&quot;Visual Studio 14 2015&quot;</td>
+<td>&quot;Visual Studio 15 2017&quot;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_18">Recommended settings for Visual Studio</h3>
+
+<h5 id="toc_19">64 bit Release Build</h5>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left"></th>
+<th>Visual Studio 2015</th>
+<th>Visual Studio 2017</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left"><em><strong>conan install .. --profile</strong></em></td>
+<td>msvc2015Release64</td>
+<td>msvc2017Release64</td>
+</tr>
+<tr>
+<td style="text-align: left"><em><strong>cmake -G</strong></em></td>
+<td>&quot;Visual Studio 14 2015 Win64&quot;</td>
+<td>&quot;Visual Studio 15 2017 Win64&quot;</td>
+</tr>
+<tr>
+<td style="text-align: left"><em><strong>cmake</strong></em></td>
+<td>-DCMAKE_BUILD_TYPE=Release</td>
+<td>-DCMAKE_BUILD_TYPE=Release</td>
+</tr>
+<tr>
+<td style="text-align: left"><em><strong>profile</strong></em></td>
+<td>arch=x86_64</td>
+<td>arch=x86_64</td>
+</tr>
+<tr>
+<td style="text-align: left"></td>
+<td>arch_build=x86_64</td>
+<td>arch_build=x86_64</td>
+</tr>
+<tr>
+<td style="text-align: left"></td>
+<td>build_type=Release</td>
+<td>build_type=Release</td>
+</tr>
+<tr>
+<td style="text-align: left"></td>
+<td>compiler.runtime=MD</td>
+<td>compiler.runtime=MD</td>
+</tr>
+<tr>
+<td style="text-align: left"></td>
+<td>compiler.version=14</td>
+<td>compiler.version=15</td>
+</tr>
+<tr>
+<td style="text-align: left"></td>
+<td>compiler=Visual Studio</td>
+<td>compiler=Visual Studio</td>
+</tr>
+<tr>
+<td style="text-align: left"></td>
+<td>os=Windows</td>
+<td>os=Windows</td>
+</tr>
+<tr>
+<td style="text-align: left"></td>
+<td>os_build=Windows</td>
+<td>os_build=Windows</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="toc_20">Debug Builds</h5>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left"></th>
+<th>Visual Studio 2015</th>
+<th>Visual Studio 2017</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left"><em><strong>conan install .. --profile</strong></em></td>
+<td>msvc2015Debug64</td>
+<td>msvc2017Debug64</td>
+</tr>
+<tr>
+<td style="text-align: left"><em><strong>cmake</strong></em></td>
+<td>-DCMAKE_BUILD_TYPE=Debug</td>
+<td>-DCMAKE_BUILD_TYPE=Debug</td>
+</tr>
+<tr>
+<td style="text-align: left"><em><strong>profile</strong></em></td>
+<td>build_type=Debug</td>
+<td>build_type=Debug</td>
+</tr>
+<tr>
+<td style="text-align: left"></td>
+<td>compiler.runtime=MDd</td>
+<td>compiler.runtime=MDd</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="toc_21">32bit Builds</h5>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left"></th>
+<th>Visual Studio 2015</th>
+<th>Visual Studio 2017</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left"><em><strong>conan install .. --profile</strong></em></td>
+<td>msvc2015Release32</td>
+<td>msvc2017Release32</td>
+</tr>
+<tr>
+<td style="text-align: left"><em><strong>cmake -G</strong></em></td>
+<td>&quot;Visual Studio 14 2015&quot;</td>
+<td>&quot;Visual Studio 15 2017&quot;</td>
+</tr>
+<tr>
+<td style="text-align: left"><em><strong>profile</strong></em></td>
+<td>arch=x86</td>
+<td>arch=x86</td>
+</tr>
+<tr>
+<td style="text-align: left"></td>
+<td>arch_build=x86</td>
+<td>arch_build=x86</td>
+</tr>
+</tbody>
+</table>
+
+<h5 id="toc_22">Static Builds</h5>
+
+<p>The default (and recommended) builds of Exiv2 and sample applications build and use DLLs.  If you wish to build static applications and libraries, you will need to set the correct &quot;C&quot; run-time library to be linked both to your code and dependencies being built/downloaded by conan.</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left">Static Release</th>
+<th style="text-align: left">Static Debug</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: left">compiler.runtime=MT</td>
+<td style="text-align: left">compiler.runtime=MTd</td>
+</tr>
+</tbody>
+</table>
+
+<p>Additionally, you will have to use the cmake option -DBUILD_SHARED_LIBS=Off to</p>
+
+<div><pre><code class="language-none">$ cmake -DBUILD_SHARED_LIBS=Off ..
+</code></pre></div>
+
+<h3 id="toc_23">Changing profile settings with the conan command</h3>
+
+<p>It is recommended that you create 8 profiles for msvc{2017|2015}{Release|Debug}{64|32}.</p>
+
+<p>You can modify profile settings on the command line.
+The following example demonstrates making substantial changes to profile settings by performing a 32 bit build using Visual Studio 2015 with a 2017 profile!  This example is not considered good practice, it is an illustration to some conan flexibility which be useful when your build environment is automated.</p>
+
+<div><pre><code class="language-bash">$ conan install .. --profile msvc2017Release64 -s arch_build=x86 -s arch=x86 -s compiler.version=14
+$ cmake         .. -G &quot;Visual Studio 2015&quot;
+$ cmake --build .  --config Release</code></pre></div>
+
+<h3 id="toc_24">CMake/Cygwin Collisions on the build machine</h3>
+
+<p>If you have Cygwin installed on your build machine, you may encounter the situation
+that CMake erroneously finds library files in Cygwin directories and adds <code>c:\\cygwin64\\usr\\include</code> to the
+compiler header search path.  FindIntl is a prime suspect and I believe this issue is caused by %PATH%.</p>
+
+<p>I recommend that you disable Natural Language Support when building with Visual Studio:</p>
+
+<div><pre><code class="language-none">$ cmake .. -G &quot;Visual Studio 15 2017 Win64&quot; -DCMAKE_BUILD_TYPE=Release -DEXIV2_ENABLE_NLS=Off</code></pre></div>
+
+<p>If necessary, temporarily rename c:\cygwin64\usr\include as c:\cygwin64\usr\uncle to hide those files when working with CMake.</p>
+
+<p><a href="#TOC">TOC</a>
+<name id="2-3"></a></p>
+
+<h3 id="toc_25">2.3) Cygwin Notes</h3>
+
+<p>Do not use conan on the Cygwin Platform.  To build Exiv2 for Cygwin use CMake without conan.  We recommend installing or building dependences (expat, zlib) with platform tools.</p>
+
+<p><name id="2-4"></a></p>
+
+<h3 id="toc_26">2.4) MinGW Notes</h3>
+
+<p>Team Exiv2 supports MinGW msys/2.  Team Exiv2 does not support MinGW msys/1.0.</p>
+
+<p>As with Cygwin, we recommend installing or building dependencies with platform tools dependencies and using CMake to build Exiv2.</p>
+
+<p><a href="#TOC">TOC</a>
+<name id="3"></p>
+
+<h2 id="toc_27">3 Conan Architecture</h2>
+
+<p><name id="3-1"></p>
+
+<h5 id="toc_28">3.1) conanfile.py</h5>
+
+<p>In the root level of the <strong>Exiv2</strong> repository, the file <code>conanfile.py</code> defines C/C++ dependencies with the syntax: <code>Library/version@user/channel</code></p>
+
+<p>For example, <strong>zlib</strong>:</p>
+
+<div><pre><code class="language-python">self.requires(&#39;self.requires(&#39;zlib/1.2.11@conan/stable&#39;)&#39;)</code></pre></div>
+
+<p><a href="#TOC">TOC</a>
+<name id="3-2"></p>
+
+<h5 id="toc_29">3.2) Conan <em><strong>Recipes</strong></em></h5>
+
+<p>Conan searches remote servers for a <em><strong>recipe</strong></em> to build a dependency.</p>
+
+<p>A <em><strong>recipe</strong></em> is a python file which indicates how to build a library from sources. The recipe
+understands configurations: Platform/Compiler/Settings.  If the remote server has a pre-compiled package for
+your configuration, it will be downloaded.  Otherwise, conan will compile the libraries on your machine using instructions in the recipe.</p>
+
+<p>To illustrate, here is list of packages that returned by the command <code>$ conan search</code></p>
+
+<div><pre><code class="language-bash">$ conan search --remote conan-center zlib/1.2.11@conan/stable</code></pre></div>
+
+<p>The output should be:</p>
+
+<div><pre><code class="language-bash">Existing packages for recipe zlib/1.2.11@conan/stable:
+
+    Package_ID: 0000193ac313953e78a4f8e82528100030ca70ee
+        [options]
+            shared: False
+        [settings]
+            arch: x86_64
+            build_type: Debug
+            compiler: gcc
+            compiler.version: 4.9
+            os: Linux
+        Outdated from recipe: False
+
+    Package_ID: 014be746b283391f79d11e4e8af3154344b58223
+        [options]
+            shared: False
+        [settings]
+            arch: x86_64
+            build_type: Debug
+            compiler: gcc
+            compiler.exception: seh
+            compiler.threads: posix
+            compiler.version: 5
+            os: Windows
+        Outdated from recipe: False
+
+... deleted ....
+</code></pre></div>
+
+<p><a href="#TOC">TOC</a>
+<name id="3-3"></p>
+
+<h5 id="toc_30">3.3) Conan server search path</h5>
+
+<p>Conan searches remote servers for a <em><strong>recipe</strong></em> to build the dependency.  You can list them with the command:</p>
+
+<div><pre><code class="language-bash">$ conan remote list</code></pre></div>
+
+<p>You can add servers to the conan server search path:</p>
+
+<div><pre><code class="language-bash">$ conan remote add conan-piponazo https://api.bintray.com/conan/piponazo/piponazo</code></pre></div>
+
+<p><a href="#TOC">TOC</a>
+<name id="3-4"></p>
+
+<h5 id="toc_31">3.4) Configuring conan on your machine</h5>
+
+<p>Conan stores its configuration and local builds in the directory ~/.conan (%HOMEPATH%\.conan on Windows).</p>
+
+<p>Conan installs several files and two directories:</p>
+
+<div><pre><code class="language-bash">$HOME/.conan/profiles   Configuration files for compilers/platforms
+$HOME/.conan/data       Dependencies are built/stored in this directory</code></pre></div>
+
+<p><a href="#TOC">TOC</a>
+<name id="3-5"></p>
+
+<h5 id="toc_32">3.5) Running <code>conan install</code> for the first time</h5>
+
+<p>The first time you run <code>$ conan install</code>, it will auto-detect your configuration and store a default profile in the file
+$HOME/.conan/profiles/default</p>
+
+<p>Normally you will want to define new profiles for choosing different compilers (msvc, gcc, clang), different
+build_type (Release, Debug), runtimes (MD, MT, MDd, MTd)</p>
+
+<p>The expected output should be something like this, in case it&#39;s the first time you run conan:</p>
+
+<div><pre><code class="language-bash">$ conan install ..  --build missing
+Expat/2.2.5@pix4d/stable: Retrieving from predefined remote &#39;conan-center&#39;
+Expat/2.2.5@pix4d/stable: Trying with &#39;conan-center&#39;...
+Downloading conanmanifest.txt
+[==================================================] 220B/220B
+Downloading conanfile.py
+[==================================================] 1.7KB/1.7KB
+zlib/1.2.11@conan/stable: Retrieving from predefined remote &#39;conan-center&#39;
+zlib/1.2.11@conan/stable: Trying with &#39;conan-center&#39;...
+Downloading conanmanifest.txt
+[==================================================] 121B/121B
+Downloading conanfile.py
+[==================================================] 5.7KB/5.7KB
+libcurl/7.56.1@bincrafters/stable: Retrieving from predefined remote &#39;bincrafters&#39;
+libcurl/7.56.1@bincrafters/stable: Trying with &#39;bincrafters&#39;...
+Downloading conanmanifest.txt
+...
+PROJECT: Installing D:\Dev\Windows\projects\exiv2\conanfile.py
+Requirements
+    Expat/2.2.5@pix4d/stable from &#39;conan-center&#39;
+    OpenSSL/1.0.2n@conan/stable from &#39;conan-center&#39;
+    gtest/1.8.0@bincrafters/stable from &#39;conan-center&#39;
+    libcurl/7.56.1@bincrafters/stable from &#39;bincrafters&#39;
+    zlib/1.2.11@conan/stable from &#39;conan-center&#39;
+Packages
+    Expat/2.2.5@pix4d/stable:6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
+    OpenSSL/1.0.2n@conan/stable:606fdb601e335c2001bdf31d478826b644747077
+    gtest/1.8.0@bincrafters/stable:a35f8fa327837a5f1466eaf165e1b6347f6e1e51
+    libcurl/7.56.1@bincrafters/stable:e37838f02fd790447943465f1c9317fd1c59b95c
+    zlib/1.2.11@conan/stable:6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
+
+PROJECT: Retrieving package 6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
+Expat/2.2.5@pix4d/stable: Looking for package 6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7 in remote &#39;conan-center&#39;
+Downloading conanmanifest.txt
+[==================================================] 323B/323B
+Downloading conaninfo.txt
+[==================================================] 438B/438B
+Downloading conan_package.tgz
+[==================================================] 133.6KB/133.6KB
+Expat/2.2.5@pix4d/stable: Package installed 6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
+PROJECT: Retrieving package a35f8fa327837a5f1466eaf165e1b6347f6e1e51
+gtest/1.8.0@bincrafters/stable: Looking for package a35f8fa327837a5f1466eaf165e1b6347f6e1e51 in remote &#39;conan-center&#39;
+Downloading conanmanifest.txt
+[==================================================] 3.5KB/3.5KB
+Downloading conaninfo.txt
+[==================================================] 478B/478B
+Downloading conan_package.tgz
+[==================================================] 1001.1KB/1001.1KB
+gtest/1.8.0@bincrafters/stable: Package installed a35f8fa327837a5f1466eaf165e1b6347f6e1e51
+PROJECT: Retrieving package 6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
+...
+PROJECT: Generator cmake created conanbuildinfo.cmake
+PROJECT: Generator txt created conanbuildinfo.txt
+PROJECT: Generated conaninfo.txt
+PROJECT imports(): Copied 5 &#39;.dll&#39; files
+(conan)</code></pre></div>
+
+<p>Note that it first downloads the recipes, and then the binary packages. When everything goes well, conan found
+the recipes in the remotes, and it also found packages for our configuration (msvc2017, Release, MD).</p>
+
+<p>However, if you use other configuration for which there are no packages in the remotes, you will get an error such as:</p>
+
+<div><pre><code class="language-bash">    PROJECT: WARN: Can&#39;t find a &#39;zlib/1.2.11@conan/stable&#39; package for the specified options and settings:
+    - Settings: arch=x86_64, build_type=Release, compiler=clang, compiler.version=3.9, os=Macos
+    - Options: shared=False
+
+    ERROR: Missing prebuilt package for &#39;zlib/1.2.11@conan/stable&#39;
+    Try to build it from sources with &quot;--build zlib&quot;
+    Or read &quot;http://docs.conan.io/en/latest/faq/troubleshooting.html#error-missing-prebuilt-package&quot;</code></pre></div>
+
+<p>In that case, we can tell conan to build the library:</p>
+
+<div><pre><code class="language-bash">$ conan install .. --profile MyEsotericProfile --build missing</code></pre></div>
+
+<p>Once the command succeeds, we will have the libraries in our system (you can find the recipes and packages in
+<code>$HOME/.conan/data</code>). When you execute the command <code>conan install</code> with the same profile, the following output is typical:</p>
+
+<div><pre><code class="language-bash">$ conan install ..
+PROJECT: Installing D:\Dev\Windows\projects\exiv2\conanfile.py
+Requirements
+    Expat/2.2.5@pix4d/stable from &#39;conan-center&#39;
+    OpenSSL/1.0.2n@conan/stable from &#39;conan-center&#39;
+    gtest/1.8.0@bincrafters/stable from &#39;conan-center&#39;
+    libcurl/7.56.1@bincrafters/stable from &#39;bincrafters&#39;
+    zlib/1.2.11@conan/stable from &#39;conan-center&#39;
+Packages
+    Expat/2.2.5@pix4d/stable:6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
+    OpenSSL/1.0.2n@conan/stable:606fdb601e335c2001bdf31d478826b644747077
+    gtest/1.8.0@bincrafters/stable:a35f8fa327837a5f1466eaf165e1b6347f6e1e51
+    libcurl/7.56.1@bincrafters/stable:e37838f02fd790447943465f1c9317fd1c59b95c
+    zlib/1.2.11@conan/stable:6cc50b139b9c3d27b3e9042d5f5372d327b3a9f7
+
+Expat/2.2.5@pix4d/stable: Already installed!
+gtest/1.8.0@bincrafters/stable: Already installed!
+zlib/1.2.11@conan/stable: Already installed!
+OpenSSL/1.0.2n@conan/stable: Already installed!
+libcurl/7.56.1@bincrafters/stable: Already installed!
+PROJECT: Generator cmake created conanbuildinfo.cmake
+PROJECT: Generator txt created conanbuildinfo.txt
+PROJECT: Generated conaninfo.txt
+PROJECT imports(): Copied 5 &#39;.dll&#39; files</code></pre></div>
+
+<p>Indicating that the packages were found in the local cache.</p>
+
+<p><a href="#TOC">TOC</a>
+<name id="4"></p>
+
+<h2 id="toc_33">4 Building Exiv2 with Adobe XMPsdk 2016</h2>
+
+<p>With Exiv2 v0.27, you can build Exiv2 with Adobe XMPsdk 2016 on Linux/GCC, Mac/clang and Visual Studio 2017.
+Other platforms such as Cygwin are not supported by Adobe.  Adobe/XMPsdk is built as a external library.
+Applications which wish use the Adobe XMPsdk directly should build Exiv2 in this configuration and the
+library can be used by the application and Exiv2.  The Adobe XMPsdk can be built as a static or shared library (.DLL)</p>
+
+<p>To build Exiv2 with Adobe XMPsdk 2016, should perform steps 1.1, 1.2 and 1.3 described above, then perform the following:</p>
+
+<p><name id="4-1"></p>
+
+<h5 id="toc_34">4.1) Add a remote directory to conan&#39;s recipe search path</h5>
+
+<p>By default, conan knows about several public conan repositories. Exiv2 requires
+the <strong>piponazo</strong> repository to find the XmpSdk dependency which is not available from <strong>conan-center</strong> repository.</p>
+
+<div><pre><code class="language-bash">$ conan remote add conan-piponazo https://api.bintray.com/conan/piponazo/piponazo</code></pre></div>
+
+<p><name id="4-2"></p>
+
+<h5 id="toc_35">4.2) Build dependencies and install conan artefacts in your build directory</h5>
+
+<div><pre><code class="language-bash">$ conan install .. --options xmp=True --build missing</code></pre></div>
+
+<p><name id="4-3"></p>
+
+<h5 id="toc_36">4.3) Execute cmake to generate build files for your environment:</h5>
+
+<p>You must tell CMake to link Adobe&#39;s library:</p>
+
+<div><pre><code class="language-bash">$ cmake .. -DEXIV2_ENABLE_EXTERNAL_XMP=On # -G &quot;Visual Studio 15 2017 Win64&quot; -DCMAKE_BUILD_TYPE=Release</code></pre></div>
+
+<p><strong>MacOS-X</strong> users should use the cmake <em><strong>Xcode</strong></em> Generator</p>
+
+<div><pre><code class="language-bash">$ cmake .. -DEXIV2_ENABLE_EXTERNAL_XMP=On -G Xcode</code></pre></div>
+
+<p><name id="4-4"></p>
+
+<h5 id="toc_37">4.4) Build Exiv2 and link Adobe XMPsdk library</h5>
+
+<div><pre><code class="language-bash">$ cmake --build . --config Release</code></pre></div>
+
+<p><a href="#TOC">TOC</a>
+<name id="5"></p>
+
+<h2 id="toc_38">5 Webready Support</h2>
+
+<p>Exiv2 can perform I/O using internet protocols such as https, https, ftp and ssh.</p>
+
+<p>The feature is disabled by default.  You will need to instruct conan to build/download necessary libraries (curl, openssl and libssh) and tell CMake to link to the libraries.</p>
+
+<div><pre><code class="language-none">$ conan install .. --options webready=True
+$ cmake -DEXIV2_ENABLE_WEBREADY=ON -DEXIV2_ENABLE_CURL=ON -DEXIV2_ENABLE_SSH=ON ..</code></pre></div>
+
+<p><a href="#TOC">TOC</a></p>
+
+
+
+
+</body>
+
+</html>

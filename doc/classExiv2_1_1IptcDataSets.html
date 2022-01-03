@@ -1,0 +1,798 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceExiv2.html">Exiv2</a></li><li class="navelem"><a class="el" href="classExiv2_1_1IptcDataSets.html">IptcDataSets</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="classExiv2_1_1IptcDataSets-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Exiv2::IptcDataSets Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>IPTC dataset reference, implemented as a static class.  
+ <a href="classExiv2_1_1IptcDataSets.html#details">More...</a></p>
+
+<p><code>#include &lt;datasets.hpp&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Record identifiers</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Record identifiers to logically group dataSets. There are other possible record types, but they are not standardized by the IPTC IIM4 standard (and not commonly used in images). </p>
+</div></td></tr>
+<tr class="memitem:a2145fa394443b3ac156185937ced00b8"><td class="memItemLeft" align="right" valign="top"><a id="a2145fa394443b3ac156185937ced00b8"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>invalidRecord</b> = 0</td></tr>
+<tr class="separator:a2145fa394443b3ac156185937ced00b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b220e087783924b2315deacc5ced06d"><td class="memItemLeft" align="right" valign="top"><a id="a9b220e087783924b2315deacc5ced06d"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>envelope</b> = 1</td></tr>
+<tr class="separator:a9b220e087783924b2315deacc5ced06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fbc98a8d7d2b0ba27d07849cff918a0"><td class="memItemLeft" align="right" valign="top"><a id="a3fbc98a8d7d2b0ba27d07849cff918a0"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>application2</b> = 2</td></tr>
+<tr class="separator:a3fbc98a8d7d2b0ba27d07849cff918a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Dataset identifiers</h2></td></tr>
+<tr class="memitem:ae647c7b911a528172897b22436719a84"><td class="memItemLeft" align="right" valign="top"><a id="ae647c7b911a528172897b22436719a84"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ModelVersion</b> = 0</td></tr>
+<tr class="separator:ae647c7b911a528172897b22436719a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d7be1c92200e251a576eebc02c6396"><td class="memItemLeft" align="right" valign="top"><a id="a56d7be1c92200e251a576eebc02c6396"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Destination</b> = 5</td></tr>
+<tr class="separator:a56d7be1c92200e251a576eebc02c6396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1b1dd1dc2da4837939f5bc7adc08942"><td class="memItemLeft" align="right" valign="top"><a id="af1b1dd1dc2da4837939f5bc7adc08942"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>FileFormat</b> = 20</td></tr>
+<tr class="separator:af1b1dd1dc2da4837939f5bc7adc08942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1dfe2c8d4aa2d6c27abbadf5fe570ec"><td class="memItemLeft" align="right" valign="top"><a id="af1dfe2c8d4aa2d6c27abbadf5fe570ec"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>FileVersion</b> = 22</td></tr>
+<tr class="separator:af1dfe2c8d4aa2d6c27abbadf5fe570ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d628e6afd9ed01b1bc15dd6684ad703"><td class="memItemLeft" align="right" valign="top"><a id="a5d628e6afd9ed01b1bc15dd6684ad703"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ServiceId</b> = 30</td></tr>
+<tr class="separator:a5d628e6afd9ed01b1bc15dd6684ad703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78de1f0dd52c8e525e9ad642a84e6b2"><td class="memItemLeft" align="right" valign="top"><a id="ad78de1f0dd52c8e525e9ad642a84e6b2"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>EnvelopeNumber</b> = 40</td></tr>
+<tr class="separator:ad78de1f0dd52c8e525e9ad642a84e6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4761d25a421d9c7fe364bab2bea1dd03"><td class="memItemLeft" align="right" valign="top"><a id="a4761d25a421d9c7fe364bab2bea1dd03"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ProductId</b> = 50</td></tr>
+<tr class="separator:a4761d25a421d9c7fe364bab2bea1dd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa486abaeee54d8ae1d3d0526fc9c0b74"><td class="memItemLeft" align="right" valign="top"><a id="aa486abaeee54d8ae1d3d0526fc9c0b74"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>EnvelopePriority</b> = 60</td></tr>
+<tr class="separator:aa486abaeee54d8ae1d3d0526fc9c0b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63d6716649311e4d39ce14ac5f02af66"><td class="memItemLeft" align="right" valign="top"><a id="a63d6716649311e4d39ce14ac5f02af66"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>DateSent</b> = 70</td></tr>
+<tr class="separator:a63d6716649311e4d39ce14ac5f02af66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf231f585d5b72a1927745506b47c5a"><td class="memItemLeft" align="right" valign="top"><a id="a8cf231f585d5b72a1927745506b47c5a"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>TimeSent</b> = 80</td></tr>
+<tr class="separator:a8cf231f585d5b72a1927745506b47c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af3f97dad16dce0b82cf29d0c531ee4"><td class="memItemLeft" align="right" valign="top"><a id="a4af3f97dad16dce0b82cf29d0c531ee4"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>CharacterSet</b> = 90</td></tr>
+<tr class="separator:a4af3f97dad16dce0b82cf29d0c531ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26581d3c99cfcbd153d43c77534207c7"><td class="memItemLeft" align="right" valign="top"><a id="a26581d3c99cfcbd153d43c77534207c7"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>UNO</b> = 100</td></tr>
+<tr class="separator:a26581d3c99cfcbd153d43c77534207c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a037773096cd1aa7c8df9ba73191d589c"><td class="memItemLeft" align="right" valign="top"><a id="a037773096cd1aa7c8df9ba73191d589c"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ARMId</b> = 120</td></tr>
+<tr class="separator:a037773096cd1aa7c8df9ba73191d589c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8da0219b8998ae1a2d49e6c76648fcb"><td class="memItemLeft" align="right" valign="top"><a id="ac8da0219b8998ae1a2d49e6c76648fcb"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ARMVersion</b> = 122</td></tr>
+<tr class="separator:ac8da0219b8998ae1a2d49e6c76648fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f669f36ccb7f8d3efc9029542ae4b8"><td class="memItemLeft" align="right" valign="top"><a id="a12f669f36ccb7f8d3efc9029542ae4b8"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>RecordVersion</b> = 0</td></tr>
+<tr class="separator:a12f669f36ccb7f8d3efc9029542ae4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25dd0c448023e4d3a3ab97097ec6ecdf"><td class="memItemLeft" align="right" valign="top"><a id="a25dd0c448023e4d3a3ab97097ec6ecdf"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ObjectType</b> = 3</td></tr>
+<tr class="separator:a25dd0c448023e4d3a3ab97097ec6ecdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eff4bdf9934cdd04d236785d60b8e08"><td class="memItemLeft" align="right" valign="top"><a id="a0eff4bdf9934cdd04d236785d60b8e08"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ObjectAttribute</b> = 4</td></tr>
+<tr class="separator:a0eff4bdf9934cdd04d236785d60b8e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fb37377862e436d19165ef544b92ee0"><td class="memItemLeft" align="right" valign="top"><a id="a3fb37377862e436d19165ef544b92ee0"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ObjectName</b> = 5</td></tr>
+<tr class="separator:a3fb37377862e436d19165ef544b92ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8132a2e4d78953e53f03546b08f26bf9"><td class="memItemLeft" align="right" valign="top"><a id="a8132a2e4d78953e53f03546b08f26bf9"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>EditStatus</b> = 7</td></tr>
+<tr class="separator:a8132a2e4d78953e53f03546b08f26bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab185c9db79b50b11ff7a4d1c57a4d86b"><td class="memItemLeft" align="right" valign="top"><a id="ab185c9db79b50b11ff7a4d1c57a4d86b"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>EditorialUpdate</b> = 8</td></tr>
+<tr class="separator:ab185c9db79b50b11ff7a4d1c57a4d86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e657e8f6674557a07c51b0597aa9143"><td class="memItemLeft" align="right" valign="top"><a id="a0e657e8f6674557a07c51b0597aa9143"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Urgency</b> = 10</td></tr>
+<tr class="separator:a0e657e8f6674557a07c51b0597aa9143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b6034920ae17f04f0fc91a0ea781bf4"><td class="memItemLeft" align="right" valign="top"><a id="a7b6034920ae17f04f0fc91a0ea781bf4"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Subject</b> = 12</td></tr>
+<tr class="separator:a7b6034920ae17f04f0fc91a0ea781bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e774f99a51bfb33561b822a893c8be"><td class="memItemLeft" align="right" valign="top"><a id="a78e774f99a51bfb33561b822a893c8be"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Category</b> = 15</td></tr>
+<tr class="separator:a78e774f99a51bfb33561b822a893c8be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a6e2f02cb1320fddb66125cf13619bd"><td class="memItemLeft" align="right" valign="top"><a id="a4a6e2f02cb1320fddb66125cf13619bd"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>SuppCategory</b> = 20</td></tr>
+<tr class="separator:a4a6e2f02cb1320fddb66125cf13619bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af8cb9036030114d7867d92a5b0626e"><td class="memItemLeft" align="right" valign="top"><a id="a7af8cb9036030114d7867d92a5b0626e"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>FixtureId</b> = 22</td></tr>
+<tr class="separator:a7af8cb9036030114d7867d92a5b0626e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dcbdc3f6ad633c0f3b5e86474708dbb"><td class="memItemLeft" align="right" valign="top"><a id="a8dcbdc3f6ad633c0f3b5e86474708dbb"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Keywords</b> = 25</td></tr>
+<tr class="separator:a8dcbdc3f6ad633c0f3b5e86474708dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8034b723f7bd79be9ee140e01a44b7"><td class="memItemLeft" align="right" valign="top"><a id="a6b8034b723f7bd79be9ee140e01a44b7"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>LocationCode</b> = 26</td></tr>
+<tr class="separator:a6b8034b723f7bd79be9ee140e01a44b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa04f314f5c722f4dc980650605bfe44"><td class="memItemLeft" align="right" valign="top"><a id="aaa04f314f5c722f4dc980650605bfe44"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>LocationName</b> = 27</td></tr>
+<tr class="separator:aaa04f314f5c722f4dc980650605bfe44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff407fba79efb478c59f8b38cc4504ae"><td class="memItemLeft" align="right" valign="top"><a id="aff407fba79efb478c59f8b38cc4504ae"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ReleaseDate</b> = 30</td></tr>
+<tr class="separator:aff407fba79efb478c59f8b38cc4504ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f9c3e1235b725650700156d7a5e2f71"><td class="memItemLeft" align="right" valign="top"><a id="a6f9c3e1235b725650700156d7a5e2f71"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ReleaseTime</b> = 35</td></tr>
+<tr class="separator:a6f9c3e1235b725650700156d7a5e2f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a876c906c309b6fcf74afa81efe584aba"><td class="memItemLeft" align="right" valign="top"><a id="a876c906c309b6fcf74afa81efe584aba"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ExpirationDate</b> = 37</td></tr>
+<tr class="separator:a876c906c309b6fcf74afa81efe584aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78143368ed05b0da3a83d0adaef8bdbe"><td class="memItemLeft" align="right" valign="top"><a id="a78143368ed05b0da3a83d0adaef8bdbe"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ExpirationTime</b> = 38</td></tr>
+<tr class="separator:a78143368ed05b0da3a83d0adaef8bdbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3f523f2f8952397767c6ac74747eda3"><td class="memItemLeft" align="right" valign="top"><a id="ad3f523f2f8952397767c6ac74747eda3"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>SpecialInstructions</b> = 40</td></tr>
+<tr class="separator:ad3f523f2f8952397767c6ac74747eda3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d6d5c2764263648e12bace226e4a87f"><td class="memItemLeft" align="right" valign="top"><a id="a8d6d5c2764263648e12bace226e4a87f"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ActionAdvised</b> = 42</td></tr>
+<tr class="separator:a8d6d5c2764263648e12bace226e4a87f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fda1cffdf169cbe09ee5166771bb308"><td class="memItemLeft" align="right" valign="top"><a id="a6fda1cffdf169cbe09ee5166771bb308"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ReferenceService</b> = 45</td></tr>
+<tr class="separator:a6fda1cffdf169cbe09ee5166771bb308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62447913bc7790d51c4ce88cd5d6cd49"><td class="memItemLeft" align="right" valign="top"><a id="a62447913bc7790d51c4ce88cd5d6cd49"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ReferenceDate</b> = 47</td></tr>
+<tr class="separator:a62447913bc7790d51c4ce88cd5d6cd49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaefe1d102ff07b320a1868ba8baae05e"><td class="memItemLeft" align="right" valign="top"><a id="aaefe1d102ff07b320a1868ba8baae05e"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ReferenceNumber</b> = 50</td></tr>
+<tr class="separator:aaefe1d102ff07b320a1868ba8baae05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa45fa871eeb6b9d5ec2bfbc65470bd5b"><td class="memItemLeft" align="right" valign="top"><a id="aa45fa871eeb6b9d5ec2bfbc65470bd5b"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>DateCreated</b> = 55</td></tr>
+<tr class="separator:aa45fa871eeb6b9d5ec2bfbc65470bd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af442cd1b5805988fa1671f9b3f9b1a06"><td class="memItemLeft" align="right" valign="top"><a id="af442cd1b5805988fa1671f9b3f9b1a06"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>TimeCreated</b> = 60</td></tr>
+<tr class="separator:af442cd1b5805988fa1671f9b3f9b1a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e336ea4574cd9161722e58b5d36d6b8"><td class="memItemLeft" align="right" valign="top"><a id="a6e336ea4574cd9161722e58b5d36d6b8"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>DigitizationDate</b> = 62</td></tr>
+<tr class="separator:a6e336ea4574cd9161722e58b5d36d6b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2bff740fe75ac9e2333161077cd6a2d"><td class="memItemLeft" align="right" valign="top"><a id="ae2bff740fe75ac9e2333161077cd6a2d"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>DigitizationTime</b> = 63</td></tr>
+<tr class="separator:ae2bff740fe75ac9e2333161077cd6a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc36516709f0b371dd82c93a8f18470a"><td class="memItemLeft" align="right" valign="top"><a id="abc36516709f0b371dd82c93a8f18470a"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Program</b> = 65</td></tr>
+<tr class="separator:abc36516709f0b371dd82c93a8f18470a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9464fdbdd118519b7b6a8d933df2aead"><td class="memItemLeft" align="right" valign="top"><a id="a9464fdbdd118519b7b6a8d933df2aead"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ProgramVersion</b> = 70</td></tr>
+<tr class="separator:a9464fdbdd118519b7b6a8d933df2aead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd187538966023db00d372409e8f794"><td class="memItemLeft" align="right" valign="top"><a id="a3bd187538966023db00d372409e8f794"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ObjectCycle</b> = 75</td></tr>
+<tr class="separator:a3bd187538966023db00d372409e8f794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a736fddd6d8823cb71f214b594610cc1f"><td class="memItemLeft" align="right" valign="top"><a id="a736fddd6d8823cb71f214b594610cc1f"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Byline</b> = 80</td></tr>
+<tr class="separator:a736fddd6d8823cb71f214b594610cc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f494b83a5dfbdf78888402b2841a48d"><td class="memItemLeft" align="right" valign="top"><a id="a1f494b83a5dfbdf78888402b2841a48d"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>BylineTitle</b> = 85</td></tr>
+<tr class="separator:a1f494b83a5dfbdf78888402b2841a48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70de33bfcb749fca98a63eb568675e44"><td class="memItemLeft" align="right" valign="top"><a id="a70de33bfcb749fca98a63eb568675e44"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>City</b> = 90</td></tr>
+<tr class="separator:a70de33bfcb749fca98a63eb568675e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83f51802a8ceaa7cd74dda2593b12252"><td class="memItemLeft" align="right" valign="top"><a id="a83f51802a8ceaa7cd74dda2593b12252"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>SubLocation</b> = 92</td></tr>
+<tr class="separator:a83f51802a8ceaa7cd74dda2593b12252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0752626315da182610db313e5841004a"><td class="memItemLeft" align="right" valign="top"><a id="a0752626315da182610db313e5841004a"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ProvinceState</b> = 95</td></tr>
+<tr class="separator:a0752626315da182610db313e5841004a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ca723560349b856b4d476f37f2d6ab"><td class="memItemLeft" align="right" valign="top"><a id="a73ca723560349b856b4d476f37f2d6ab"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>CountryCode</b> = 100</td></tr>
+<tr class="separator:a73ca723560349b856b4d476f37f2d6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5ec9d5bafc541a93108818bab6b169"><td class="memItemLeft" align="right" valign="top"><a id="afc5ec9d5bafc541a93108818bab6b169"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>CountryName</b> = 101</td></tr>
+<tr class="separator:afc5ec9d5bafc541a93108818bab6b169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3643dabfd1e4d3c06f05ac0c8491a4e0"><td class="memItemLeft" align="right" valign="top"><a id="a3643dabfd1e4d3c06f05ac0c8491a4e0"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>TransmissionReference</b> = 103</td></tr>
+<tr class="separator:a3643dabfd1e4d3c06f05ac0c8491a4e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adafc2d03e86611e6fcd12c13c23f6a48"><td class="memItemLeft" align="right" valign="top"><a id="adafc2d03e86611e6fcd12c13c23f6a48"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Headline</b> = 105</td></tr>
+<tr class="separator:adafc2d03e86611e6fcd12c13c23f6a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1212a931ce10e3a8638b5ef02f2e6ed1"><td class="memItemLeft" align="right" valign="top"><a id="a1212a931ce10e3a8638b5ef02f2e6ed1"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Credit</b> = 110</td></tr>
+<tr class="separator:a1212a931ce10e3a8638b5ef02f2e6ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f0c595560713818e8250c423bacd31c"><td class="memItemLeft" align="right" valign="top"><a id="a9f0c595560713818e8250c423bacd31c"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Source</b> = 115</td></tr>
+<tr class="separator:a9f0c595560713818e8250c423bacd31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b50ee26e7eb6685d3824124b20a67a3"><td class="memItemLeft" align="right" valign="top"><a id="a3b50ee26e7eb6685d3824124b20a67a3"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Copyright</b> = 116</td></tr>
+<tr class="separator:a3b50ee26e7eb6685d3824124b20a67a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60c948fa76f57bf6081546b1a289136d"><td class="memItemLeft" align="right" valign="top"><a id="a60c948fa76f57bf6081546b1a289136d"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Contact</b> = 118</td></tr>
+<tr class="separator:a60c948fa76f57bf6081546b1a289136d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2a2912bf6fdfff6aa8ffbd1414c465a"><td class="memItemLeft" align="right" valign="top"><a id="ab2a2912bf6fdfff6aa8ffbd1414c465a"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Caption</b> = 120</td></tr>
+<tr class="separator:ab2a2912bf6fdfff6aa8ffbd1414c465a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14aed6bca795bc401001cd99c25630ce"><td class="memItemLeft" align="right" valign="top"><a id="a14aed6bca795bc401001cd99c25630ce"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Writer</b> = 122</td></tr>
+<tr class="separator:a14aed6bca795bc401001cd99c25630ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df949865cfa736d9368de81f0fb9033"><td class="memItemLeft" align="right" valign="top"><a id="a2df949865cfa736d9368de81f0fb9033"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>RasterizedCaption</b> = 125</td></tr>
+<tr class="separator:a2df949865cfa736d9368de81f0fb9033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae768352e9a1054088c531b6cf92ea2c3"><td class="memItemLeft" align="right" valign="top"><a id="ae768352e9a1054088c531b6cf92ea2c3"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ImageType</b> = 130</td></tr>
+<tr class="separator:ae768352e9a1054088c531b6cf92ea2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a960a63924828786dbedf31c35c476dfd"><td class="memItemLeft" align="right" valign="top"><a id="a960a63924828786dbedf31c35c476dfd"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>ImageOrientation</b> = 131</td></tr>
+<tr class="separator:a960a63924828786dbedf31c35c476dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64a2ffc2a0427787af94149687df406"><td class="memItemLeft" align="right" valign="top"><a id="ab64a2ffc2a0427787af94149687df406"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Language</b> = 135</td></tr>
+<tr class="separator:ab64a2ffc2a0427787af94149687df406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa15102f5cb6cf0c93ea9ae74c4130837"><td class="memItemLeft" align="right" valign="top"><a id="aa15102f5cb6cf0c93ea9ae74c4130837"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>AudioType</b> = 150</td></tr>
+<tr class="separator:aa15102f5cb6cf0c93ea9ae74c4130837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64530fb88a0cc5414aa5798dcbf097bf"><td class="memItemLeft" align="right" valign="top"><a id="a64530fb88a0cc5414aa5798dcbf097bf"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>AudioRate</b> = 151</td></tr>
+<tr class="separator:a64530fb88a0cc5414aa5798dcbf097bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ef276aed6a24664bfab71abee1e8dab"><td class="memItemLeft" align="right" valign="top"><a id="a1ef276aed6a24664bfab71abee1e8dab"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>AudioResolution</b> = 152</td></tr>
+<tr class="separator:a1ef276aed6a24664bfab71abee1e8dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5b05420bd3225db6f1baf5ac7e09543"><td class="memItemLeft" align="right" valign="top"><a id="af5b05420bd3225db6f1baf5ac7e09543"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>AudioDuration</b> = 153</td></tr>
+<tr class="separator:af5b05420bd3225db6f1baf5ac7e09543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af085164f2a06af6793e2da4c19826b70"><td class="memItemLeft" align="right" valign="top"><a id="af085164f2a06af6793e2da4c19826b70"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>AudioOutcue</b> = 154</td></tr>
+<tr class="separator:af085164f2a06af6793e2da4c19826b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e21d686e36aa68f4970552009f06c14"><td class="memItemLeft" align="right" valign="top"><a id="a7e21d686e36aa68f4970552009f06c14"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>PreviewFormat</b> = 200</td></tr>
+<tr class="separator:a7e21d686e36aa68f4970552009f06c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cea78c29a6eb2d6e4979e3fcb9d3443"><td class="memItemLeft" align="right" valign="top"><a id="a1cea78c29a6eb2d6e4979e3fcb9d3443"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>PreviewVersion</b> = 201</td></tr>
+<tr class="separator:a1cea78c29a6eb2d6e4979e3fcb9d3443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1894914e645e2e51805215c8110cba82"><td class="memItemLeft" align="right" valign="top"><a id="a1894914e645e2e51805215c8110cba82"></a>
+static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Preview</b> = 202</td></tr>
+<tr class="separator:a1894914e645e2e51805215c8110cba82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b9ea82890e37029b5b9f5f6b99ebb06"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcDataSets.html#a9b9ea82890e37029b5b9f5f6b99ebb06">dataSetName</a> (uint16_t number, uint16_t <a class="el" href="classExiv2_1_1IptcDataSets.html#a8d7890f69135ad178de4c9dada1615f5">recordId</a>)</td></tr>
+<tr class="memdesc:a9b9ea82890e37029b5b9f5f6b99ebb06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name of the dataset.  <a href="classExiv2_1_1IptcDataSets.html#a9b9ea82890e37029b5b9f5f6b99ebb06">More...</a><br /></td></tr>
+<tr class="separator:a9b9ea82890e37029b5b9f5f6b99ebb06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7df88d4f1b0ade27a7137d100ec67398"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcDataSets.html#a7df88d4f1b0ade27a7137d100ec67398">dataSetTitle</a> (uint16_t number, uint16_t <a class="el" href="classExiv2_1_1IptcDataSets.html#a8d7890f69135ad178de4c9dada1615f5">recordId</a>)</td></tr>
+<tr class="memdesc:a7df88d4f1b0ade27a7137d100ec67398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the title (label) of the dataset.  <a href="classExiv2_1_1IptcDataSets.html#a7df88d4f1b0ade27a7137d100ec67398">More...</a><br /></td></tr>
+<tr class="separator:a7df88d4f1b0ade27a7137d100ec67398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e90a141579ac47e7a5f3227cc3fb3d"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcDataSets.html#a01e90a141579ac47e7a5f3227cc3fb3d">dataSetDesc</a> (uint16_t number, uint16_t <a class="el" href="classExiv2_1_1IptcDataSets.html#a8d7890f69135ad178de4c9dada1615f5">recordId</a>)</td></tr>
+<tr class="memdesc:a01e90a141579ac47e7a5f3227cc3fb3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the description of the dataset.  <a href="classExiv2_1_1IptcDataSets.html#a01e90a141579ac47e7a5f3227cc3fb3d">More...</a><br /></td></tr>
+<tr class="separator:a01e90a141579ac47e7a5f3227cc3fb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7d4013033ff5224155bfe040120378d"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcDataSets.html#aa7d4013033ff5224155bfe040120378d">dataSetPsName</a> (uint16_t number, uint16_t <a class="el" href="classExiv2_1_1IptcDataSets.html#a8d7890f69135ad178de4c9dada1615f5">recordId</a>)</td></tr>
+<tr class="memdesc:aa7d4013033ff5224155bfe040120378d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the photohsop name of a given dataset.  <a href="classExiv2_1_1IptcDataSets.html#aa7d4013033ff5224155bfe040120378d">More...</a><br /></td></tr>
+<tr class="separator:aa7d4013033ff5224155bfe040120378d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8d30717ec39431b83da4c34ff79a8e3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcDataSets.html#ac8d30717ec39431b83da4c34ff79a8e3">dataSetRepeatable</a> (uint16_t number, uint16_t <a class="el" href="classExiv2_1_1IptcDataSets.html#a8d7890f69135ad178de4c9dada1615f5">recordId</a>)</td></tr>
+<tr class="memdesc:ac8d30717ec39431b83da4c34ff79a8e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a given dataset is repeatable.  <a href="classExiv2_1_1IptcDataSets.html#ac8d30717ec39431b83da4c34ff79a8e3">More...</a><br /></td></tr>
+<tr class="separator:ac8d30717ec39431b83da4c34ff79a8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9313b3dd05b95f0a2daa64e87571f82"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcDataSets.html#ad9313b3dd05b95f0a2daa64e87571f82">dataSet</a> (const std::string &amp;<a class="el" href="classExiv2_1_1IptcDataSets.html#a9b9ea82890e37029b5b9f5f6b99ebb06">dataSetName</a>, uint16_t <a class="el" href="classExiv2_1_1IptcDataSets.html#a8d7890f69135ad178de4c9dada1615f5">recordId</a>)</td></tr>
+<tr class="memdesc:ad9313b3dd05b95f0a2daa64e87571f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the dataSet number for dataset name and record id.  <a href="classExiv2_1_1IptcDataSets.html#ad9313b3dd05b95f0a2daa64e87571f82">More...</a><br /></td></tr>
+<tr class="separator:ad9313b3dd05b95f0a2daa64e87571f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e0cb3dce9110395b9ee74ad05bd03c"><td class="memItemLeft" align="right" valign="top"><a id="a54e0cb3dce9110395b9ee74ad05bd03c"></a>
+static <a class="el" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450c">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcDataSets.html#a54e0cb3dce9110395b9ee74ad05bd03c">dataSetType</a> (uint16_t number, uint16_t <a class="el" href="classExiv2_1_1IptcDataSets.html#a8d7890f69135ad178de4c9dada1615f5">recordId</a>)</td></tr>
+<tr class="memdesc:a54e0cb3dce9110395b9ee74ad05bd03c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the type for dataSet number and Record id. <br /></td></tr>
+<tr class="separator:a54e0cb3dce9110395b9ee74ad05bd03c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2eea4b9e00efa2fc4d3929451f4ea5c"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcDataSets.html#ad2eea4b9e00efa2fc4d3929451f4ea5c">recordName</a> (uint16_t <a class="el" href="classExiv2_1_1IptcDataSets.html#a8d7890f69135ad178de4c9dada1615f5">recordId</a>)</td></tr>
+<tr class="memdesc:ad2eea4b9e00efa2fc4d3929451f4ea5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the name of the Record.  <a href="classExiv2_1_1IptcDataSets.html#ad2eea4b9e00efa2fc4d3929451f4ea5c">More...</a><br /></td></tr>
+<tr class="separator:ad2eea4b9e00efa2fc4d3929451f4ea5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9ea74d6d5ec013b1453e2d29341e46"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcDataSets.html#a0e9ea74d6d5ec013b1453e2d29341e46">recordDesc</a> (uint16_t <a class="el" href="classExiv2_1_1IptcDataSets.html#a8d7890f69135ad178de4c9dada1615f5">recordId</a>)</td></tr>
+<tr class="memdesc:a0e9ea74d6d5ec013b1453e2d29341e46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the description of a record.  <a href="classExiv2_1_1IptcDataSets.html#a0e9ea74d6d5ec013b1453e2d29341e46">More...</a><br /></td></tr>
+<tr class="separator:a0e9ea74d6d5ec013b1453e2d29341e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d7890f69135ad178de4c9dada1615f5"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcDataSets.html#a8d7890f69135ad178de4c9dada1615f5">recordId</a> (const std::string &amp;<a class="el" href="classExiv2_1_1IptcDataSets.html#ad2eea4b9e00efa2fc4d3929451f4ea5c">recordName</a>)</td></tr>
+<tr class="memdesc:a8d7890f69135ad178de4c9dada1615f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Id number of a record.  <a href="classExiv2_1_1IptcDataSets.html#a8d7890f69135ad178de4c9dada1615f5">More...</a><br /></td></tr>
+<tr class="separator:a8d7890f69135ad178de4c9dada1615f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbeb29e5bc97b17f3df9306fb17cfbf0"><td class="memItemLeft" align="right" valign="top"><a id="adbeb29e5bc97b17f3df9306fb17cfbf0"></a>
+static const <a class="el" href="structExiv2_1_1DataSet.html">DataSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcDataSets.html#adbeb29e5bc97b17f3df9306fb17cfbf0">envelopeRecordList</a> ()</td></tr>
+<tr class="memdesc:adbeb29e5bc97b17f3df9306fb17cfbf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return read-only list of built-in Envelope Record datasets. <br /></td></tr>
+<tr class="separator:adbeb29e5bc97b17f3df9306fb17cfbf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d1ba044ef5ed680355e7fe11cab8bd7"><td class="memItemLeft" align="right" valign="top"><a id="a4d1ba044ef5ed680355e7fe11cab8bd7"></a>
+static const <a class="el" href="structExiv2_1_1DataSet.html">DataSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcDataSets.html#a4d1ba044ef5ed680355e7fe11cab8bd7">application2RecordList</a> ()</td></tr>
+<tr class="memdesc:a4d1ba044ef5ed680355e7fe11cab8bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return read-only list of built-in Application2 Record datasets. <br /></td></tr>
+<tr class="separator:a4d1ba044ef5ed680355e7fe11cab8bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11f48ad9e3e475515f81fe87ad33c802"><td class="memItemLeft" align="right" valign="top"><a id="a11f48ad9e3e475515f81fe87ad33c802"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcDataSets.html#a11f48ad9e3e475515f81fe87ad33c802">dataSetList</a> (std::ostream &amp;os)</td></tr>
+<tr class="memdesc:a11f48ad9e3e475515f81fe87ad33c802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a list of all dataSets to output stream. <br /></td></tr>
+<tr class="separator:a11f48ad9e3e475515f81fe87ad33c802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>IPTC dataset reference, implemented as a static class. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad9313b3dd05b95f0a2daa64e87571f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9313b3dd05b95f0a2daa64e87571f82">&#9670;&nbsp;</a></span>dataSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint16_t Exiv2::IptcDataSets::dataSet </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dataSetName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>recordId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the dataSet number for dataset name and record id. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataSetName</td><td>dataSet name </td></tr>
+    <tr><td class="paramname">recordId</td><td>recordId</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>dataSet number</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if the <em>dataSetName</em> or <em>recordId</em> are invalid </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a01e90a141579ac47e7a5f3227cc3fb3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01e90a141579ac47e7a5f3227cc3fb3d">&#9670;&nbsp;</a></span>dataSetDesc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const char* Exiv2::IptcDataSets::dataSetDesc </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>recordId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the description of the dataset. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number</td><td>The dataset number </td></tr>
+    <tr><td class="paramname">recordId</td><td>The IPTC record Id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The description of the dataset </dd></dl>
+
+</div>
+</div>
+<a id="a9b9ea82890e37029b5b9f5f6b99ebb06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b9ea82890e37029b5b9f5f6b99ebb06">&#9670;&nbsp;</a></span>dataSetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string Exiv2::IptcDataSets::dataSetName </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>recordId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the name of the dataset. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number</td><td>The dataset number </td></tr>
+    <tr><td class="paramname">recordId</td><td>The IPTC record Id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The name of the dataset or a string containing the hexadecimal value of the dataset in the form "0x01ff", if this is an unknown dataset. </dd></dl>
+
+</div>
+</div>
+<a id="aa7d4013033ff5224155bfe040120378d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7d4013033ff5224155bfe040120378d">&#9670;&nbsp;</a></span>dataSetPsName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const char* Exiv2::IptcDataSets::dataSetPsName </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>recordId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the photohsop name of a given dataset. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number</td><td>The dataset number </td></tr>
+    <tr><td class="paramname">recordId</td><td>The IPTC record Id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The name used by photoshop for a dataset or an empty string if photoshop does not use the dataset. </dd></dl>
+
+</div>
+</div>
+<a id="ac8d30717ec39431b83da4c34ff79a8e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8d30717ec39431b83da4c34ff79a8e3">&#9670;&nbsp;</a></span>dataSetRepeatable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Exiv2::IptcDataSets::dataSetRepeatable </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>recordId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if a given dataset is repeatable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number</td><td>The dataset number </td></tr>
+    <tr><td class="paramname">recordId</td><td>The IPTC record Id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the given dataset is repeatable otherwise false </dd></dl>
+
+</div>
+</div>
+<a id="a7df88d4f1b0ade27a7137d100ec67398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df88d4f1b0ade27a7137d100ec67398">&#9670;&nbsp;</a></span>dataSetTitle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const char* Exiv2::IptcDataSets::dataSetTitle </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>recordId</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the title (label) of the dataset. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number</td><td>The dataset number </td></tr>
+    <tr><td class="paramname">recordId</td><td>The IPTC record Id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The title (label) of the dataset </dd></dl>
+
+</div>
+</div>
+<a id="a0e9ea74d6d5ec013b1453e2d29341e46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e9ea74d6d5ec013b1453e2d29341e46">&#9670;&nbsp;</a></span>recordDesc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const char* Exiv2::IptcDataSets::recordDesc </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>recordId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the description of a record. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">recordId</td><td>Record Id number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the description of the Record </dd></dl>
+
+</div>
+</div>
+<a id="a8d7890f69135ad178de4c9dada1615f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d7890f69135ad178de4c9dada1615f5">&#9670;&nbsp;</a></span>recordId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint16_t Exiv2::IptcDataSets::recordId </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>recordName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the Id number of a record. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">recordName</td><td>Name of a record type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the Id number of a Record </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if the record is not known; </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad2eea4b9e00efa2fc4d3929451f4ea5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2eea4b9e00efa2fc4d3929451f4ea5c">&#9670;&nbsp;</a></span>recordName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string Exiv2::IptcDataSets::recordName </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>recordId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the name of the Record. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">recordId</td><td>The record id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The name of the record or a string containing the hexadecimal value of the record in the form "0x01ff", if this is an unknown record. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li><a class="el" href="datasets_8hpp.html">datasets.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

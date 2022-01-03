@@ -1,0 +1,520 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Class Hierarchy</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock">
+<p><a href="hierarchy.html">Go to the textual class hierarchy</a></p>
+</div><table border="0" cellspacing="10" cellpadding="0">
+<tr><td><img src="inherit_graph_0.png" border="0" usemap="#Exiv2_1_1AnyError" alt=""/>
+<map name="Exiv2_1_1AnyError" id="Exiv2_1_1AnyError">
+<area shape="rect" title="STL class." alt="" coords="5,13,120,39"/>
+<area shape="rect" href="classExiv2_1_1AnyError.html" title="Error class interface. Allows the definition and use of a hierarchy of error classes which can all be..." alt="" coords="168,13,291,39"/>
+<area shape="rect" href="classExiv2_1_1BasicError.html" title="Simple error class used for exceptions. An output operator is provided to print errors to a stream." alt="" coords="339,5,481,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_1.png" border="0" usemap="#Exiv2_1_1BasicIo" alt=""/>
+<map name="Exiv2_1_1BasicIo" id="Exiv2_1_1BasicIo">
+<area shape="rect" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO." alt="" coords="5,56,119,83"/>
+<area shape="rect" href="classExiv2_1_1FileIo.html" title="Provides binary file IO by implementing the BasicIo interface." alt="" coords="181,5,282,32"/>
+<area shape="rect" href="classExiv2_1_1MemIo.html" title="Provides binary IO on blocks of memory by implementing the BasicIo interface. A copy&#45;on&#45;write impleme..." alt="" coords="176,56,287,83"/>
+<area shape="rect" href="classExiv2_1_1RemoteIo.html" title="Provides remote binary file IO by implementing the BasicIo interface. This is an abstract class...." alt="" coords="167,107,296,133"/>
+<area shape="rect" href="classExiv2_1_1XPathIo.html" title="Provides binary IO for the data from stdin and data uri path." alt="" coords="344,5,459,32"/>
+<area shape="rect" href="classExiv2_1_1HttpIo.html" title="Provides the http read/write access for the RemoteIo." alt="" coords="348,107,455,133"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_2.png" border="0" usemap="#Exiv2_1_1CommentValue_1_1CharsetInfo" alt=""/>
+<map name="Exiv2_1_1CommentValue_1_1CharsetInfo" id="Exiv2_1_1CommentValue_1_1CharsetInfo">
+<area shape="rect" href="classExiv2_1_1CommentValue_1_1CharsetInfo.html" title="Charset information lookup functions. Implemented as a static class." alt="" coords="5,5,172,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_3.png" border="0" usemap="#Exiv2_1_1CommentValue_1_1CharsetTable" alt=""/>
+<map name="Exiv2_1_1CommentValue_1_1CharsetTable" id="Exiv2_1_1CommentValue_1_1CharsetTable">
+<area shape="rect" href="structExiv2_1_1CommentValue_1_1CharsetTable.html" title="Information pertaining to the defined character sets." alt="" coords="5,5,172,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_4.png" border="0" usemap="#Exiv2_1_1Cr2Parser" alt=""/>
+<map name="Exiv2_1_1Cr2Parser" id="Exiv2_1_1Cr2Parser">
+<area shape="rect" href="classExiv2_1_1Cr2Parser.html" title="Stateless parser class for data in CR2 format. Images use this class to decode and encode CR2 data...." alt="" coords="5,5,133,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_5.png" border="0" usemap="#Exiv2_1_1CrwParser" alt=""/>
+<map name="Exiv2_1_1CrwParser" id="Exiv2_1_1CrwParser">
+<area shape="rect" href="classExiv2_1_1CrwParser.html" title=" " alt="" coords="5,5,136,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_6.png" border="0" usemap="#Exiv2_1_1DataBuf" alt=""/>
+<map name="Exiv2_1_1DataBuf" id="Exiv2_1_1DataBuf">
+<area shape="rect" href="classExiv2_1_1DataBuf.html" title="Utility class containing a character array. All it does is to take care of memory allocation and dele..." alt="" coords="5,5,124,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_7.png" border="0" usemap="#Exiv2_1_1DataBufRef" alt=""/>
+<map name="Exiv2_1_1DataBufRef" id="Exiv2_1_1DataBufRef">
+<area shape="rect" href="structExiv2_1_1DataBufRef.html" title="Auxiliary type to enable copies and assignments, similar to std::auto_ptr_ref. See http://www...." alt="" coords="5,5,147,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_8.png" border="0" usemap="#Exiv2_1_1DataSet" alt=""/>
+<map name="Exiv2_1_1DataSet" id="Exiv2_1_1DataSet">
+<area shape="rect" href="structExiv2_1_1DataSet.html" title="Details of an IPTC dataset." alt="" coords="5,5,124,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_9.png" border="0" usemap="#Exiv2_1_1DateValue_1_1Date" alt=""/>
+<map name="Exiv2_1_1DateValue_1_1Date" id="Exiv2_1_1DateValue_1_1Date">
+<area shape="rect" href="structExiv2_1_1DateValue_1_1Date.html" title="Simple Date helper structure." alt="" coords="5,5,177,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_10.png" border="0" usemap="#Exiv2_1_1ExifData" alt=""/>
+<map name="Exiv2_1_1ExifData" id="Exiv2_1_1ExifData">
+<area shape="rect" href="classExiv2_1_1ExifData.html" title="A container for Exif data. This is a top&#45;level class of the Exiv2 library. The container holds Exifda..." alt="" coords="5,5,128,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_11.png" border="0" usemap="#Exiv2_1_1ExifParser" alt=""/>
+<map name="Exiv2_1_1ExifParser" id="Exiv2_1_1ExifParser">
+<area shape="rect" href="classExiv2_1_1ExifParser.html" title="Stateless parser class for Exif data. Images use this class to decode and encode binary Exif data." alt="" coords="5,5,136,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_12.png" border="0" usemap="#Exiv2_1_1ExifTags" alt=""/>
+<map name="Exiv2_1_1ExifTags" id="Exiv2_1_1ExifTags">
+<area shape="rect" href="classExiv2_1_1ExifTags.html" title="Access to Exif group and tag lists and misc. tag reference methods, implemented as a static class." alt="" coords="5,5,125,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_13.png" border="0" usemap="#Exiv2_1_1ExifThumbC" alt=""/>
+<map name="Exiv2_1_1ExifThumbC" id="Exiv2_1_1ExifThumbC">
+<area shape="rect" href="classExiv2_1_1ExifThumbC.html" title="Access to a Exif thumbnail image. This class provides higher level accessors to the thumbnail image t..." alt="" coords="5,5,151,32"/>
+<area shape="rect" href="classExiv2_1_1ExifThumb.html" title="Access and modify an Exif thumbnail image. This class implements manipulators to set and erase the th..." alt="" coords="199,5,335,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_14.png" border="0" usemap="#Exiv2_1_1GroupInfo" alt=""/>
+<map name="Exiv2_1_1GroupInfo" id="Exiv2_1_1GroupInfo">
+<area shape="rect" href="structExiv2_1_1GroupInfo.html" title="The details of an Exif group. Groups include IFDs and binary arrays." alt="" coords="5,5,136,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_15.png" border="0" usemap="#Exiv2_1_1Iloc" alt=""/>
+<map name="Exiv2_1_1Iloc" id="Exiv2_1_1Iloc">
+<area shape="rect" href="structExiv2_1_1Iloc.html" title=" " alt="" coords="5,5,95,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_16.png" border="0" usemap="#Exiv2_1_1Image" alt=""/>
+<map name="Exiv2_1_1Image" id="Exiv2_1_1Image">
+<area shape="rect" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top&#45;level interface to the Exiv2..." alt="" coords="5,537,112,564"/>
+<area shape="rect" href="classExiv2_1_1AsfVideo.html" title="Class to access ASF video files." alt="" coords="185,5,309,32"/>
+<area shape="rect" href="classExiv2_1_1BmffImage.html" title="Class to access BMFF images." alt="" coords="177,56,316,83"/>
+<area shape="rect" href="classExiv2_1_1BmpImage.html" title="Class to access Windows bitmaps. This is just a stub &#45; we only read width and height." alt="" coords="178,107,315,133"/>
+<area shape="rect" href="classExiv2_1_1Cr2Image.html" title="Class to access raw Canon CR2 images. Exif metadata is supported directly, IPTC is read from the Exif..." alt="" coords="182,157,311,184"/>
+<area shape="rect" href="classExiv2_1_1CrwImage.html" title="Class to access raw Canon CRW images. Only Exif metadata and a comment are supported...." alt="" coords="181,208,313,235"/>
+<area shape="rect" href="classExiv2_1_1EpsImage.html" title="Class to access EPS images." alt="" coords="181,259,312,285"/>
+<area shape="rect" href="classExiv2_1_1GifImage.html" title="Class to access raw GIF images. Exif/IPTC metadata are supported directly." alt="" coords="183,309,310,336"/>
+<area shape="rect" href="classExiv2_1_1Jp2Image.html" title="Class to access JPEG&#45;2000 images." alt="" coords="183,360,310,387"/>
+<area shape="rect" href="classExiv2_1_1JpegBase.html" title="Abstract helper base class to access JPEG images." alt="" coords="183,411,310,437"/>
+<area shape="rect" href="classExiv2_1_1MatroskaVideo.html" title="Class to access Matroska video files." alt="" coords="165,461,328,488"/>
+<area shape="rect" href="classExiv2_1_1MrwImage.html" title="Class to access raw Minolta MRW images. Exif metadata is supported directly, IPTC is read from the Ex..." alt="" coords="179,512,314,539"/>
+<area shape="rect" href="classExiv2_1_1PgfImage.html" title="Class to access PGF images. Exif and IPTC metadata are supported directly." alt="" coords="183,563,311,589"/>
+<area shape="rect" href="classExiv2_1_1PngImage.html" title="Class to access PNG images. Exif and IPTC metadata are supported directly." alt="" coords="181,613,312,640"/>
+<area shape="rect" href="classExiv2_1_1PsdImage.html" title="Class to access raw Photoshop images." alt="" coords="181,664,312,691"/>
+<area shape="rect" href="classExiv2_1_1QuickTimeVideo.html" title="Class to access QuickTime video files." alt="" coords="160,715,333,741"/>
+<area shape="rect" href="classExiv2_1_1RafImage.html" title="Class to access raw Fujifilm RAF images. Exif metadata is supported directly, IPTC is read from the E..." alt="" coords="182,765,311,792"/>
+<area shape="rect" href="classExiv2_1_1RiffVideo.html" title="Class to access RIFF video files." alt="" coords="184,816,309,843"/>
+<area shape="rect" href="classExiv2_1_1Rw2Image.html" title="Class to access raw Panasonic RW2 images. Exif metadata is supported directly, IPTC and XMP are read ..." alt="" coords="179,867,314,893"/>
+<area shape="rect" href="classExiv2_1_1TgaImage.html" title="Class to access raw TARGA images. This is just a stub &#45; we only read width and height." alt="" coords="181,917,312,944"/>
+<area shape="rect" href="classExiv2_1_1TiffImage.html" title="Class to access TIFF images. Exif metadata is supported directly, IPTC is read from the Exif data,..." alt="" coords="183,968,311,995"/>
+<area shape="rect" href="classExiv2_1_1WebPImage.html" title="Class to access WEBP video files." alt="" coords="175,1019,318,1045"/>
+<area shape="rect" href="classExiv2_1_1XmpSidecar.html" title="Class to access XMP sidecar files. They contain only XMP metadata." alt="" coords="175,1069,319,1096"/>
+<area shape="rect" href="classExiv2_1_1ExvImage.html" title="Helper class to access Exiv2 files." alt="" coords="383,385,514,412"/>
+<area shape="rect" href="classExiv2_1_1JpegImage.html" title="Class to access JPEG images." alt="" coords="381,436,516,463"/>
+<area shape="rect" href="classExiv2_1_1OrfImage.html" title="Class to access raw Olympus ORF images. Exif metadata is supported directly, IPTC is read from the Ex..." alt="" coords="385,968,512,995"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_17.png" border="0" usemap="#Exiv2_1_1ImageFactory" alt=""/>
+<map name="Exiv2_1_1ImageFactory" id="Exiv2_1_1ImageFactory">
+<area shape="rect" href="classExiv2_1_1ImageFactory.html" title="Returns an Image instance of the specified type." alt="" coords="5,5,160,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_18.png" border="0" usemap="#Exiv2_1_1INIReader" alt=""/>
+<map name="Exiv2_1_1INIReader" id="Exiv2_1_1INIReader">
+<area shape="rect" href="classExiv2_1_1INIReader.html" title="Read an INI file into easy&#45;to&#45;access name/value pairs. (Note that I&#39;ve gone for simplicity here rathe..." alt="" coords="5,5,136,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_19.png" border="0" usemap="#Exiv2_1_1Internal_1_1ContainerStorage_3_01const_01container_01_4" alt=""/>
+<map name="Exiv2_1_1Internal_1_1ContainerStorage_3_01const_01container_01_4" id="Exiv2_1_1Internal_1_1ContainerStorage_3_01const_01container_01_4">
+<area shape="rect" href="structExiv2_1_1Internal_1_1ContainerStorage.html" title=" " alt="" coords="5,5,208,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_20.png" border="0" usemap="#Exiv2_1_1Internal_1_1ContainerStorage_3_01container_01_4" alt=""/>
+<map name="Exiv2_1_1Internal_1_1ContainerStorage_3_01container_01_4" id="Exiv2_1_1Internal_1_1ContainerStorage_3_01container_01_4">
+<area shape="rect" href="structExiv2_1_1Internal_1_1ContainerStorage.html" title=" " alt="" coords="5,5,192,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_21.png" border="0" usemap="#Exiv2_1_1Internal_1_1PtrSliceStorage_3_01const_01T_01_5_01_4" alt=""/>
+<map name="Exiv2_1_1Internal_1_1PtrSliceStorage_3_01const_01T_01_5_01_4" id="Exiv2_1_1Internal_1_1PtrSliceStorage_3_01const_01T_01_5_01_4">
+<area shape="rect" href="structExiv2_1_1Internal_1_1PtrSliceStorage.html" title=" " alt="" coords="5,5,179,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_22.png" border="0" usemap="#Exiv2_1_1Internal_1_1PtrSliceStorage_3_01storage__type_01_4" alt=""/>
+<map name="Exiv2_1_1Internal_1_1PtrSliceStorage_3_01storage__type_01_4" id="Exiv2_1_1Internal_1_1PtrSliceStorage_3_01storage__type_01_4">
+<area shape="rect" href="structExiv2_1_1Internal_1_1PtrSliceStorage.html" title="Implementation of the storage concept for slices of C arrays." alt="" coords="5,5,192,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_23.png" border="0" usemap="#Exiv2_1_1Internal_1_1PtrSliceStorage_3_01T_01_5_01_4" alt=""/>
+<map name="Exiv2_1_1Internal_1_1PtrSliceStorage_3_01T_01_5_01_4" id="Exiv2_1_1Internal_1_1PtrSliceStorage_3_01T_01_5_01_4">
+<area shape="rect" href="structExiv2_1_1Internal_1_1PtrSliceStorage.html" title=" " alt="" coords="5,5,179,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_24.png" border="0" usemap="#Exiv2_1_1Internal_1_1remove__const_3_01const_01T_01_4" alt=""/>
+<map name="Exiv2_1_1Internal_1_1remove__const_3_01const_01T_01_4" id="Exiv2_1_1Internal_1_1remove__const_3_01const_01T_01_4">
+<area shape="rect" href="structExiv2_1_1Internal_1_1remove__const_3_01const_01T_01_4.html" title=" " alt="" coords="5,5,180,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_25.png" border="0" usemap="#Exiv2_1_1Internal_1_1remove__const_3_01T_01_4" alt=""/>
+<map name="Exiv2_1_1Internal_1_1remove__const_3_01T_01_4" id="Exiv2_1_1Internal_1_1remove__const_3_01T_01_4">
+<area shape="rect" href="structExiv2_1_1Internal_1_1remove__const.html" title=" " alt="" coords="5,5,180,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_26.png" border="0" usemap="#Exiv2_1_1Internal_1_1remove__cv_3_01T_01_4" alt=""/>
+<map name="Exiv2_1_1Internal_1_1remove__cv_3_01T_01_4" id="Exiv2_1_1Internal_1_1remove__cv_3_01T_01_4">
+<area shape="rect" href="structExiv2_1_1Internal_1_1remove__cv.html" title=" " alt="" coords="5,5,180,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_27.png" border="0" usemap="#Exiv2_1_1Internal_1_1remove__pointer_3_01T_01_5_01_4" alt=""/>
+<map name="Exiv2_1_1Internal_1_1remove__pointer_3_01T_01_5_01_4" id="Exiv2_1_1Internal_1_1remove__pointer_3_01T_01_5_01_4">
+<area shape="rect" href="structExiv2_1_1Internal_1_1remove__pointer_3_01T_01_5_01_4.html" title=" " alt="" coords="5,5,180,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_28.png" border="0" usemap="#Exiv2_1_1Internal_1_1remove__pointer_3_01T_01_5const_01_4" alt=""/>
+<map name="Exiv2_1_1Internal_1_1remove__pointer_3_01T_01_5const_01_4" id="Exiv2_1_1Internal_1_1remove__pointer_3_01T_01_5const_01_4">
+<area shape="rect" href="structExiv2_1_1Internal_1_1remove__pointer_3_01T_01_5const_01_4.html" title=" " alt="" coords="5,5,180,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_29.png" border="0" usemap="#Exiv2_1_1Internal_1_1remove__pointer_3_01T_01_4" alt=""/>
+<map name="Exiv2_1_1Internal_1_1remove__pointer_3_01T_01_4" id="Exiv2_1_1Internal_1_1remove__pointer_3_01T_01_4">
+<area shape="rect" href="structExiv2_1_1Internal_1_1remove__pointer.html" title=" " alt="" coords="5,5,180,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_30.png" border="0" usemap="#Exiv2_1_1Internal_1_1remove__volatile_3_01T_01_4" alt=""/>
+<map name="Exiv2_1_1Internal_1_1remove__volatile_3_01T_01_4" id="Exiv2_1_1Internal_1_1remove__volatile_3_01T_01_4">
+<area shape="rect" href="structExiv2_1_1Internal_1_1remove__volatile.html" title=" " alt="" coords="5,5,180,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_31.png" border="0" usemap="#Exiv2_1_1Internal_1_1remove__volatile_3_01volatile_01T_01_4" alt=""/>
+<map name="Exiv2_1_1Internal_1_1remove__volatile_3_01volatile_01T_01_4" id="Exiv2_1_1Internal_1_1remove__volatile_3_01volatile_01T_01_4">
+<area shape="rect" href="structExiv2_1_1Internal_1_1remove__volatile_3_01volatile_01T_01_4.html" title=" " alt="" coords="5,5,180,47"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_32.png" border="0" usemap="#Exiv2_1_1Internal_1_1SliceBase" alt=""/>
+<map name="Exiv2_1_1Internal_1_1SliceBase" id="Exiv2_1_1Internal_1_1SliceBase">
+<area shape="rect" href="structExiv2_1_1Internal_1_1SliceBase.html" title=" " alt="" coords="5,180,192,207"/>
+<area shape="rect" href="structExiv2_1_1Internal_1_1ConstSliceBase.html" title=" " alt="" coords="252,5,496,61"/>
+<area shape="rect" href="structExiv2_1_1Internal_1_1ConstSliceBase.html" title=" " alt="" coords="252,85,496,141"/>
+<area shape="rect" href="structExiv2_1_1Internal_1_1ConstSliceBase.html" title=" " alt="" coords="259,165,489,221"/>
+<area shape="rect" href="structExiv2_1_1Internal_1_1ConstSliceBase.html" title=" " alt="" coords="240,246,508,287"/>
+<area shape="rect" href="structExiv2_1_1Internal_1_1ConstSliceBase.html" title="This class provides the public&#45;facing const&#45;qualified methods of a slice." alt="" coords="253,318,495,359"/>
+<area shape="rect" href="structExiv2_1_1Slice_3_01const_01container_01_4.html" title="Specialization of slices for constant containers." alt="" coords="593,13,740,54"/>
+<area shape="rect" href="structExiv2_1_1Internal_1_1MutableSliceBase.html" title=" " alt="" coords="556,85,777,141"/>
+<area shape="rect" href="structExiv2_1_1Slice.html" title="Slice (= view) for STL containers." alt="" coords="825,100,1013,127"/>
+<area shape="rect" href="structExiv2_1_1Slice_3_01const_01T_01_5_01_4.html" title=" " alt="" coords="593,173,740,214"/>
+<area shape="rect" href="structExiv2_1_1Internal_1_1MutableSliceBase.html" title=" " alt="" coords="563,239,770,295"/>
+<area shape="rect" href="structExiv2_1_1Slice_3_01T_01_5_01_4.html" title=" " alt="" coords="846,253,993,280"/>
+<area shape="rect" href="structExiv2_1_1Internal_1_1MutableSliceBase.html" title=" " alt="" coords="572,319,761,375"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_33.png" border="0" usemap="#Exiv2_1_1IoCloser" alt=""/>
+<map name="Exiv2_1_1IoCloser" id="Exiv2_1_1IoCloser">
+<area shape="rect" href="classExiv2_1_1IoCloser.html" title="Utility class that closes a BasicIo instance upon destruction. Meant to be used as a stack variable i..." alt="" coords="5,5,124,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_34.png" border="0" usemap="#Exiv2_1_1IptcData" alt=""/>
+<map name="Exiv2_1_1IptcData" id="Exiv2_1_1IptcData">
+<area shape="rect" href="classExiv2_1_1IptcData.html" title="A container for IPTC data. This is a top&#45;level class of the Exiv2 library." alt="" coords="5,5,127,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_35.png" border="0" usemap="#Exiv2_1_1IptcDataSets" alt=""/>
+<map name="Exiv2_1_1IptcDataSets" id="Exiv2_1_1IptcDataSets">
+<area shape="rect" href="classExiv2_1_1IptcDataSets.html" title="IPTC dataset reference, implemented as a static class." alt="" coords="5,5,155,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_36.png" border="0" usemap="#Exiv2_1_1IptcParser" alt=""/>
+<map name="Exiv2_1_1IptcParser" id="Exiv2_1_1IptcParser">
+<area shape="rect" href="classExiv2_1_1IptcParser.html" title="Stateless parser class for IPTC data. Images use this class to decode and encode binary IPTC data." alt="" coords="5,5,136,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_37.png" border="0" usemap="#Exiv2_1_1Key" alt=""/>
+<map name="Exiv2_1_1Key" id="Exiv2_1_1Key">
+<area shape="rect" href="classExiv2_1_1Key.html" title="Abstract base class defining the Key of a metadatum. Keys are used to identify and group metadata." alt="" coords="5,56,96,83"/>
+<area shape="rect" href="classExiv2_1_1ExifKey.html" title="Concrete keys for Exif metadata and access to Exif tag reference data." alt="" coords="147,5,261,32"/>
+<area shape="rect" href="classExiv2_1_1IptcKey.html" title="Concrete keys for IPTC metadata." alt="" coords="147,56,261,83"/>
+<area shape="rect" href="classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata." alt="" coords="144,107,264,133"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_38.png" border="0" usemap="#Exiv2_1_1LangAltValueComparator" alt=""/>
+<map name="Exiv2_1_1LangAltValueComparator" id="Exiv2_1_1LangAltValueComparator">
+<area shape="rect" href="structExiv2_1_1LangAltValueComparator.html" title="LangAltValueComparator" alt="" coords="5,5,233,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_39.png" border="0" usemap="#Exiv2_1_1LogMsg" alt=""/>
+<map name="Exiv2_1_1LogMsg" id="Exiv2_1_1LogMsg">
+<area shape="rect" href="classExiv2_1_1LogMsg.html" title="Class for a log message, used by the library. Applications can set the log level and provide a custom..." alt="" coords="5,5,121,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_40.png" border="0" usemap="#Exiv2_1_1MatroskaTags" alt=""/>
+<map name="Exiv2_1_1MatroskaTags" id="Exiv2_1_1MatroskaTags">
+<area shape="rect" href="structExiv2_1_1MatroskaTags.html" title="Helper structure for the Matroska tags lookup table." alt="" coords="5,5,160,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_41.png" border="0" usemap="#Exiv2_1_1Metadatum" alt=""/>
+<map name="Exiv2_1_1Metadatum" id="Exiv2_1_1Metadatum">
+<area shape="rect" href="classExiv2_1_1Metadatum.html" title="Abstract base class defining the interface to access information related to one metadata tag." alt="" coords="5,56,147,83"/>
+<area shape="rect" href="classExiv2_1_1Exifdatum.html" title="An Exif metadatum, consisting of an ExifKey and a Value and methods to manipulate these." alt="" coords="197,5,331,32"/>
+<area shape="rect" href="classExiv2_1_1Iptcdatum.html" title="An IPTC metadatum (&quot;dataset&quot;), consisting of an IptcKey and a Value and methods to manipulate these." alt="" coords="198,56,330,83"/>
+<area shape="rect" href="classExiv2_1_1Xmpdatum.html" title="Information related to an XMP property. An XMP metadatum consists of an XmpKey and a Value and provid..." alt="" coords="195,107,333,133"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_42.png" border="0" usemap="#Exiv2_1_1NativePreview" alt=""/>
+<map name="Exiv2_1_1NativePreview" id="Exiv2_1_1NativePreview">
+<area shape="rect" href="structExiv2_1_1NativePreview.html" title="Native preview information. This is meant to be used only by the PreviewManager." alt="" coords="5,5,167,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_43.png" border="0" usemap="#Exiv2_1_1OrfParser" alt=""/>
+<map name="Exiv2_1_1OrfParser" id="Exiv2_1_1OrfParser">
+<area shape="rect" href="classExiv2_1_1OrfParser.html" title="Stateless parser class for data in ORF format. Images use this class to decode and encode ORF data...." alt="" coords="5,5,132,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_44.png" border="0" usemap="#Exiv2_1_1Photoshop" alt=""/>
+<map name="Exiv2_1_1Photoshop" id="Exiv2_1_1Photoshop">
+<area shape="rect" href="structExiv2_1_1Photoshop.html" title="Helper class, has methods to deal with Photoshop &quot;Information &#160;&#160;&#160;&#160;&#160;&#160;&#160;Resource Blocks&quot; (IRBs)." alt="" coords="5,5,140,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_45.png" border="0" usemap="#Exiv2_1_1PreviewImage" alt=""/>
+<map name="Exiv2_1_1PreviewImage" id="Exiv2_1_1PreviewImage">
+<area shape="rect" href="classExiv2_1_1PreviewImage.html" title="Class that holds preview image properties and data buffer." alt="" coords="5,5,164,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_46.png" border="0" usemap="#Exiv2_1_1PreviewManager" alt=""/>
+<map name="Exiv2_1_1PreviewManager" id="Exiv2_1_1PreviewManager">
+<area shape="rect" href="classExiv2_1_1PreviewManager.html" title="Class for extracting preview images from image metadata." alt="" coords="5,5,180,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_47.png" border="0" usemap="#Exiv2_1_1PreviewProperties" alt=""/>
+<map name="Exiv2_1_1PreviewProperties" id="Exiv2_1_1PreviewProperties">
+<area shape="rect" href="structExiv2_1_1PreviewProperties.html" title="Preview image properties." alt="" coords="5,5,189,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_48.png" border="0" usemap="#Exiv2_1_1RecordInfo" alt=""/>
+<map name="Exiv2_1_1RecordInfo" id="Exiv2_1_1RecordInfo">
+<area shape="rect" href="structExiv2_1_1RecordInfo.html" title="Details of an IPTC record." alt="" coords="5,5,141,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_49.png" border="0" usemap="#Exiv2_1_1Rw2Parser" alt=""/>
+<map name="Exiv2_1_1Rw2Parser" id="Exiv2_1_1Rw2Parser">
+<area shape="rect" href="classExiv2_1_1Rw2Parser.html" title="Stateless parser class for data in RW2 format. Images use this class to decode and encode RW2 data...." alt="" coords="5,5,140,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_50.png" border="0" usemap="#Exiv2_1_1RWLock" alt=""/>
+<map name="Exiv2_1_1RWLock" id="Exiv2_1_1RWLock">
+<area shape="rect" href="classExiv2_1_1RWLock.html" title="Class to provide a Read&#45;Write Lock." alt="" coords="5,5,124,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_51.png" border="0" usemap="#Exiv2_1_1ScopedReadLock" alt=""/>
+<map name="Exiv2_1_1ScopedReadLock" id="Exiv2_1_1ScopedReadLock">
+<area shape="rect" href="classExiv2_1_1ScopedReadLock.html" title="Class to provide a ScopedReadLock. The lock is applied by the constructor and released by the destruc..." alt="" coords="5,5,181,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_52.png" border="0" usemap="#Exiv2_1_1ScopedWriteLock" alt=""/>
+<map name="Exiv2_1_1ScopedWriteLock" id="Exiv2_1_1ScopedWriteLock">
+<area shape="rect" href="classExiv2_1_1ScopedWriteLock.html" title="Class to provide a ScopedWriteLock. The lock is applied by the constructor and released by the destru..." alt="" coords="5,5,184,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_53.png" border="0" usemap="#Exiv2_1_1TagInfo" alt=""/>
+<map name="Exiv2_1_1TagInfo" id="Exiv2_1_1TagInfo">
+<area shape="rect" href="structExiv2_1_1TagInfo.html" title="Tag information." alt="" coords="5,5,119,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_54.png" border="0" usemap="#Exiv2_1_1TiffParser" alt=""/>
+<map name="Exiv2_1_1TiffParser" id="Exiv2_1_1TiffParser">
+<area shape="rect" href="classExiv2_1_1TiffParser.html" title="Stateless parser class for data in TIFF format. Images use this class to decode and encode TIFF data...." alt="" coords="5,5,132,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_55.png" border="0" usemap="#Exiv2_1_1TimeValue_1_1Time" alt=""/>
+<map name="Exiv2_1_1TimeValue_1_1Time" id="Exiv2_1_1TimeValue_1_1Time">
+<area shape="rect" href="structExiv2_1_1TimeValue_1_1Time.html" title="Simple Time helper structure." alt="" coords="5,5,181,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_56.png" border="0" usemap="#Exiv2_1_1TypeInfo" alt=""/>
+<map name="Exiv2_1_1TypeInfo" id="Exiv2_1_1TypeInfo">
+<area shape="rect" href="classExiv2_1_1TypeInfo.html" title="Type information lookup functions. Implemented as a static class." alt="" coords="5,5,127,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_57.png" border="0" usemap="#Exiv2_1_1Uri" alt=""/>
+<map name="Exiv2_1_1Uri" id="Exiv2_1_1Uri">
+<area shape="rect" href="classExiv2_1_1Uri.html" title="A container for URL components. It also provides the method to parse a URL to get the protocol,..." alt="" coords="5,5,91,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_58.png" border="0" usemap="#Exiv2_1_1UtilsVideo" alt=""/>
+<map name="Exiv2_1_1UtilsVideo" id="Exiv2_1_1UtilsVideo">
+<area shape="rect" href="classExiv2_1_1UtilsVideo.html" title="Class of utility functions used by the video code." alt="" coords="5,5,139,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_59.png" border="0" usemap="#Exiv2_1_1Value" alt=""/>
+<map name="Exiv2_1_1Value" id="Exiv2_1_1Value">
+<area shape="rect" href="classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata." alt="" coords="5,132,108,159"/>
+<area shape="rect" href="classExiv2_1_1DataValue.html" title="Value for an undefined data type." alt="" coords="175,5,309,32"/>
+<area shape="rect" href="classExiv2_1_1DateValue.html" title="Value for simple ISO 8601 dates" alt="" coords="175,56,309,83"/>
+<area shape="rect" href="classExiv2_1_1StringValueBase.html" title="Abstract base class for a string based Value type." alt="" coords="156,107,328,133"/>
+<area shape="rect" href="classExiv2_1_1TimeValue.html" title="Value for simple ISO 8601 times." alt="" coords="175,157,309,184"/>
+<area shape="rect" href="classExiv2_1_1ValueType.html" title="Template for a Value of a basic type. This is used for unsigned and signed short, long and rationals." alt="" coords="157,208,327,235"/>
+<area shape="rect" href="classExiv2_1_1XmpValue.html" title="Base class for all Exiv2 values used to store XMP property values." alt="" coords="176,259,308,285"/>
+<area shape="rect" href="classExiv2_1_1AsciiValue.html" title="Value for an Ascii string type." alt="" coords="393,56,526,83"/>
+<area shape="rect" href="classExiv2_1_1CommentValue.html" title="Value for an Exif comment." alt="" coords="376,107,543,133"/>
+<area shape="rect" href="classExiv2_1_1StringValue.html" title="Value for string type." alt="" coords="389,157,529,184"/>
+<area shape="rect" href="classExiv2_1_1LangAltValue.html" title="Value type for XMP language alternative properties." alt="" coords="384,208,535,235"/>
+<area shape="rect" href="classExiv2_1_1XmpArrayValue.html" title="Value type for simple arrays. Each item in the array is a simple value, without qualifiers...." alt="" coords="376,259,543,285"/>
+<area shape="rect" href="classExiv2_1_1XmpTextValue.html" title="Value type suitable for simple XMP properties and XMP nodes of complex types which are not parsed int..." alt="" coords="380,309,539,336"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_60.png" border="0" usemap="#Exiv2_1_1XmpData" alt=""/>
+<map name="Exiv2_1_1XmpData" id="Exiv2_1_1XmpData">
+<area shape="rect" href="classExiv2_1_1XmpData.html" title="A container for XMP data. This is a top&#45;level class of the Exiv2 library." alt="" coords="5,5,132,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_61.png" border="0" usemap="#Exiv2_1_1XmpNsInfo" alt=""/>
+<map name="Exiv2_1_1XmpNsInfo" id="Exiv2_1_1XmpNsInfo">
+<area shape="rect" href="structExiv2_1_1XmpNsInfo.html" title="Structure mapping XMP namespaces and (preferred) prefixes." alt="" coords="5,5,144,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_62.png" border="0" usemap="#Exiv2_1_1XmpNsInfo_1_1Ns" alt=""/>
+<map name="Exiv2_1_1XmpNsInfo_1_1Ns" id="Exiv2_1_1XmpNsInfo_1_1Ns">
+<area shape="rect" href="structExiv2_1_1XmpNsInfo_1_1Ns.html" title="For comparison with namespace." alt="" coords="5,5,168,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_63.png" border="0" usemap="#Exiv2_1_1XmpNsInfo_1_1Prefix" alt=""/>
+<map name="Exiv2_1_1XmpNsInfo_1_1Prefix" id="Exiv2_1_1XmpNsInfo_1_1Prefix">
+<area shape="rect" href="structExiv2_1_1XmpNsInfo_1_1Prefix.html" title="For comparison with prefix." alt="" coords="5,5,188,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_64.png" border="0" usemap="#Exiv2_1_1XmpParser" alt=""/>
+<map name="Exiv2_1_1XmpParser" id="Exiv2_1_1XmpParser">
+<area shape="rect" href="classExiv2_1_1XmpParser.html" title="Stateless parser class for XMP packets. Images use this class to parse and serialize XMP packets...." alt="" coords="5,5,141,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_65.png" border="0" usemap="#Exiv2_1_1XmpProperties" alt=""/>
+<map name="Exiv2_1_1XmpProperties" id="Exiv2_1_1XmpProperties">
+<area shape="rect" href="classExiv2_1_1XmpProperties.html" title="XMP property reference, implemented as a static class." alt="" coords="5,5,168,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_66.png" border="0" usemap="#Exiv2_1_1XmpPropertyInfo" alt=""/>
+<map name="Exiv2_1_1XmpPropertyInfo" id="Exiv2_1_1XmpPropertyInfo">
+<area shape="rect" href="structExiv2_1_1XmpPropertyInfo.html" title="Information about one XMP property." alt="" coords="5,5,181,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_67.png" border="0" usemap="#Exiv2__grep__key__t" alt=""/>
+<map name="Exiv2__grep__key__t" id="Exiv2__grep__key__t">
+<area shape="rect" href="structExiv2__grep__key__t.html" title="exv_grep_key_t is a simple string and the ignore flag" alt="" coords="5,5,141,32"/>
+</map>
+</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

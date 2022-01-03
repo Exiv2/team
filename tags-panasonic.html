@@ -1,0 +1,951 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Exiv2 - Image metadata library and tools</title>
+
+  <!-- Doxygen styles -->
+  <link href="doc/doxygen.css" rel="stylesheet" type="text/css">
+  <link href="doc/customdoxygen.css" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="include/exiv2.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img alt="Exiv2" src="include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="getting-started.html">Getting started</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="whatsnew.html">What's New</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+        <li><a href="makernote.html">Makernote</a></li>
+        <li><a href="doc/examples.html">Examples</a></li>
+        <li><a href="doc/index.html">API</a></li>
+        <li><a href="manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+	    <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="page-header">
+    <h1>Metadata reference tables</h1>
+  </div>
+<div><h2>Panasonic MakerNote Tags</h2></div>
+
+<p>Tags found in the MakerNote of images taken with Panasonic cameras. References: 
+<a href="makernote.html#R8">[8]</a>, <a href="makernote.html#R9">[9]</a>, and <a href="makernote.html#R10">[10]</a>.</p> 
+
+
+<table class="table table-striped">
+<thead><tr>
+<th>Tag (hex)</th>
+<th>Tag (dec)</th>
+<th>IFD</th>
+<th>Key</th>
+<th>Type</th>
+<th>Tag description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>0x0001</td>
+<td>1</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.Quality</td>
+<td>Short</td>
+<td>Image Quality</td>
+</tr>
+<tr>
+<td>0x0002</td>
+<td>2</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.FirmwareVersion</td>
+<td>Undefined</td>
+<td>Firmware version</td>
+</tr>
+<tr>
+<td>0x0003</td>
+<td>3</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.WhiteBalance</td>
+<td>Short</td>
+<td>White balance setting</td>
+</tr>
+<tr>
+<td>0x0004</td>
+<td>4</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.0x0004</td>
+<td>Short</td>
+<td>Unknown</td>
+</tr>
+<tr>
+<td>0x0007</td>
+<td>7</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.FocusMode</td>
+<td>Short</td>
+<td>Focus mode</td>
+</tr>
+<tr>
+<td>0x000f</td>
+<td>15</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.AFMode</td>
+<td>Byte</td>
+<td>AF mode</td>
+</tr>
+<tr>
+<td>0x001a</td>
+<td>26</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ImageStabilization</td>
+<td>Short</td>
+<td>Image stabilization</td>
+</tr>
+<tr>
+<td>0x001c</td>
+<td>28</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.Macro</td>
+<td>Short</td>
+<td>Macro mode</td>
+</tr>
+<tr>
+<td>0x001f</td>
+<td>31</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ShootingMode</td>
+<td>Short</td>
+<td>Shooting mode</td>
+</tr>
+<tr>
+<td>0x0020</td>
+<td>32</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.Audio</td>
+<td>Short</td>
+<td>Audio</td>
+</tr>
+<tr>
+<td>0x0021</td>
+<td>33</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.DataDump</td>
+<td>Undefined</td>
+<td>Data dump</td>
+</tr>
+<tr>
+<td>0x0022</td>
+<td>34</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.0x0022</td>
+<td>Short</td>
+<td>Unknown</td>
+</tr>
+<tr>
+<td>0x0023</td>
+<td>35</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.WhiteBalanceBias</td>
+<td>SShort</td>
+<td>White balance adjustment</td>
+</tr>
+<tr>
+<td>0x0024</td>
+<td>36</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.FlashBias</td>
+<td>SShort</td>
+<td>Flash bias</td>
+</tr>
+<tr>
+<td>0x0025</td>
+<td>37</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.InternalSerialNumber</td>
+<td>Undefined</td>
+<td>This number is unique, and contains the date of manufacture, but is not the same as the number printed on the camera body.</td>
+</tr>
+<tr>
+<td>0x0026</td>
+<td>38</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ExifVersion</td>
+<td>Undefined</td>
+<td>Exif version</td>
+</tr>
+<tr>
+<td>0x0027</td>
+<td>39</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.0x0027</td>
+<td>Short</td>
+<td>Unknown</td>
+</tr>
+<tr>
+<td>0x0028</td>
+<td>40</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ColorEffect</td>
+<td>Short</td>
+<td>Color effect</td>
+</tr>
+<tr>
+<td>0x0029</td>
+<td>41</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.TimeSincePowerOn</td>
+<td>Long</td>
+<td>Time in 1/100 s from when the camera was powered on to when the image is written to memory card</td>
+</tr>
+<tr>
+<td>0x002a</td>
+<td>42</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.BurstMode</td>
+<td>Short</td>
+<td>Burst mode</td>
+</tr>
+<tr>
+<td>0x002b</td>
+<td>43</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.SequenceNumber</td>
+<td>Long</td>
+<td>Sequence number</td>
+</tr>
+<tr>
+<td>0x002c</td>
+<td>44</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.Contrast</td>
+<td>Short</td>
+<td>Contrast setting</td>
+</tr>
+<tr>
+<td>0x002d</td>
+<td>45</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.NoiseReduction</td>
+<td>Short</td>
+<td>Noise reduction</td>
+</tr>
+<tr>
+<td>0x002e</td>
+<td>46</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.SelfTimer</td>
+<td>Short</td>
+<td>Self timer</td>
+</tr>
+<tr>
+<td>0x002f</td>
+<td>47</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.0x002f</td>
+<td>Short</td>
+<td>Unknown</td>
+</tr>
+<tr>
+<td>0x0030</td>
+<td>48</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.Rotation</td>
+<td>Short</td>
+<td>Rotation</td>
+</tr>
+<tr>
+<td>0x0031</td>
+<td>49</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.AFAssistLamp</td>
+<td>Short</td>
+<td>AF Assist Lamp</td>
+</tr>
+<tr>
+<td>0x0032</td>
+<td>50</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ColorMode</td>
+<td>Short</td>
+<td>Color mode</td>
+</tr>
+<tr>
+<td>0x0033</td>
+<td>51</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.BabyAge1</td>
+<td>Ascii</td>
+<td>Baby (or pet) age 1</td>
+</tr>
+<tr>
+<td>0x0034</td>
+<td>52</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.OpticalZoomMode</td>
+<td>Short</td>
+<td>Optical zoom mode</td>
+</tr>
+<tr>
+<td>0x0035</td>
+<td>53</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ConversionLens</td>
+<td>Short</td>
+<td>Conversion lens</td>
+</tr>
+<tr>
+<td>0x0036</td>
+<td>54</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.TravelDay</td>
+<td>Short</td>
+<td>Travel day</td>
+</tr>
+<tr>
+<td>0x0039</td>
+<td>57</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.Contrast</td>
+<td>Short</td>
+<td>Contrast</td>
+</tr>
+<tr>
+<td>0x003a</td>
+<td>58</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.WorldTimeLocation</td>
+<td>Short</td>
+<td>World time location</td>
+</tr>
+<tr>
+<td>0x003b</td>
+<td>59</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.TextStamp1</td>
+<td>Short</td>
+<td>Text Stamp 1</td>
+</tr>
+<tr>
+<td>0x003c</td>
+<td>60</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ProgramISO</td>
+<td>Short</td>
+<td>Program ISO</td>
+</tr>
+<tr>
+<td>0x003d</td>
+<td>61</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.AdvancedSceneType</td>
+<td>Short</td>
+<td>Advanced Scene Type</td>
+</tr>
+<tr>
+<td>0x003e</td>
+<td>62</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.TextStamp2</td>
+<td>Short</td>
+<td>Text Stamp 2</td>
+</tr>
+<tr>
+<td>0x003f</td>
+<td>63</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.FacesDetected</td>
+<td>Short</td>
+<td>Faces detected</td>
+</tr>
+<tr>
+<td>0x0040</td>
+<td>64</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.Saturation</td>
+<td>Short</td>
+<td>Saturation</td>
+</tr>
+<tr>
+<td>0x0041</td>
+<td>65</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.Sharpness</td>
+<td>Short</td>
+<td>Sharpness</td>
+</tr>
+<tr>
+<td>0x0042</td>
+<td>66</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.FilmMode</td>
+<td>Short</td>
+<td>Film mode</td>
+</tr>
+<tr>
+<td>0x0044</td>
+<td>68</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ColorTempKelvin</td>
+<td>Short</td>
+<td>Color Temperatur in Kelvin</td>
+</tr>
+<tr>
+<td>0x0045</td>
+<td>69</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.BracketSettings</td>
+<td>Short</td>
+<td>Bracket Settings</td>
+</tr>
+<tr>
+<td>0x0046</td>
+<td>70</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.WBAdjustAB</td>
+<td>Short</td>
+<td>WB adjust AB. Positive is a shift toward blue.</td>
+</tr>
+<tr>
+<td>0x0047</td>
+<td>71</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.WBAdjustGM</td>
+<td>Short</td>
+<td>WBAdjustGM. Positive is a shift toward green.</td>
+</tr>
+<tr>
+<td>0x0048</td>
+<td>72</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.FlashCurtain</td>
+<td>Short</td>
+<td>Flash Curtain</td>
+</tr>
+<tr>
+<td>0x0049</td>
+<td>73</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.LongShutterNoiseReduction</td>
+<td>Short</td>
+<td>Long Shutter Noise Reduction</td>
+</tr>
+<tr>
+<td>0x004b</td>
+<td>75</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ImageWidth</td>
+<td>Long</td>
+<td>Image width</td>
+</tr>
+<tr>
+<td>0x004c</td>
+<td>76</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ImageHeight</td>
+<td>Long</td>
+<td>Image height</td>
+</tr>
+<tr>
+<td>0x004d</td>
+<td>77</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.AFPointPosition</td>
+<td>Rational</td>
+<td>AF Point Position</td>
+</tr>
+<tr>
+<td>0x004e</td>
+<td>78</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.FaceDetInfo</td>
+<td>Undefined</td>
+<td>Face detection info</td>
+</tr>
+<tr>
+<td>0x0051</td>
+<td>81</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.LensType</td>
+<td>Ascii</td>
+<td>Lens type</td>
+</tr>
+<tr>
+<td>0x0052</td>
+<td>82</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.LensSerialNumber</td>
+<td>Ascii</td>
+<td>Lens serial number</td>
+</tr>
+<tr>
+<td>0x0053</td>
+<td>83</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.AccessoryType</td>
+<td>Ascii</td>
+<td>Accessory type</td>
+</tr>
+<tr>
+<td>0x0054</td>
+<td>84</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.AccessorySerialNumber</td>
+<td>Ascii</td>
+<td>Accessory Serial Number</td>
+</tr>
+<tr>
+<td>0x0059</td>
+<td>89</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.Transform1</td>
+<td>Undefined</td>
+<td>Transform 1</td>
+</tr>
+<tr>
+<td>0x005d</td>
+<td>93</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.IntelligentExposure</td>
+<td>Short</td>
+<td>Intelligent Exposure</td>
+</tr>
+<tr>
+<td>0x0060</td>
+<td>96</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.LensFirmwareVersion</td>
+<td>Undefined</td>
+<td>Firmware Version of the Lens</td>
+</tr>
+<tr>
+<td>0x0061</td>
+<td>97</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.FaceRecInfo</td>
+<td>Undefined</td>
+<td>Face recognition info</td>
+</tr>
+<tr>
+<td>0x0062</td>
+<td>98</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.FlashWarning</td>
+<td>Short</td>
+<td>Flash warning</td>
+</tr>
+<tr>
+<td>0x0065</td>
+<td>101</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.Title</td>
+<td>Undefined</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>0x0066</td>
+<td>102</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.BabyName</td>
+<td>Undefined</td>
+<td>Baby name (or pet name)</td>
+</tr>
+<tr>
+<td>0x0067</td>
+<td>103</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.Location</td>
+<td>Undefined</td>
+<td>Location</td>
+</tr>
+<tr>
+<td>0x0069</td>
+<td>105</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.Country</td>
+<td>Undefined</td>
+<td>Country</td>
+</tr>
+<tr>
+<td>0x006b</td>
+<td>107</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.State</td>
+<td>Undefined</td>
+<td>State</td>
+</tr>
+<tr>
+<td>0x006d</td>
+<td>109</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.City</td>
+<td>Undefined</td>
+<td>City</td>
+</tr>
+<tr>
+<td>0x006f</td>
+<td>111</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.Landmark</td>
+<td>Undefined</td>
+<td>Landmark</td>
+</tr>
+<tr>
+<td>0x0070</td>
+<td>112</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.IntelligentResolution</td>
+<td>Byte</td>
+<td>Intelligent resolution</td>
+</tr>
+<tr>
+<td>0x0077</td>
+<td>119</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.BurstSpeed</td>
+<td>Short</td>
+<td>Burst Speed in pictures per second</td>
+</tr>
+<tr>
+<td>0x0079</td>
+<td>121</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.IntelligentDRange</td>
+<td>Short</td>
+<td>Intelligent Dynamic Range</td>
+</tr>
+<tr>
+<td>0x007c</td>
+<td>124</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ClearRetouch</td>
+<td>Short</td>
+<td>Clear Retouch</td>
+</tr>
+<tr>
+<td>0x0080</td>
+<td>128</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.City2</td>
+<td>Undefined</td>
+<td>City2</td>
+</tr>
+<tr>
+<td>0x0086</td>
+<td>134</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ManometerPressure</td>
+<td>Short</td>
+<td>Manometer pressure</td>
+</tr>
+<tr>
+<td>0x0089</td>
+<td>137</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.PhotoStyle</td>
+<td>Short</td>
+<td>Photo style</td>
+</tr>
+<tr>
+<td>0x008a</td>
+<td>138</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ShadingCompensation</td>
+<td>Short</td>
+<td>Shading Compensation</td>
+</tr>
+<tr>
+<td>0x008c</td>
+<td>140</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.AccelerometerZ</td>
+<td>Short</td>
+<td>positive is acceleration upwards</td>
+</tr>
+<tr>
+<td>0x008d</td>
+<td>141</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.AccelerometerX</td>
+<td>Short</td>
+<td>positive is acceleration to the left</td>
+</tr>
+<tr>
+<td>0x008e</td>
+<td>142</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.AccelerometerY</td>
+<td>Short</td>
+<td>positive is acceleration backwards</td>
+</tr>
+<tr>
+<td>0x008f</td>
+<td>143</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.CameraOrientation</td>
+<td>Byte</td>
+<td>Camera Orientation</td>
+</tr>
+<tr>
+<td>0x0090</td>
+<td>144</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.RollAngle</td>
+<td>Short</td>
+<td>degress of clockwise camera rotation</td>
+</tr>
+<tr>
+<td>0x0091</td>
+<td>145</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.PitchAngle</td>
+<td>Short</td>
+<td>degress of upwards camera tilt</td>
+</tr>
+<tr>
+<td>0x0093</td>
+<td>147</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.SweepPanoramaDirection</td>
+<td>Byte</td>
+<td>Sweep Panorama Direction</td>
+</tr>
+<tr>
+<td>0x0094</td>
+<td>148</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.PanoramaFieldOfView</td>
+<td>Short</td>
+<td>Field of View of Panorama</td>
+</tr>
+<tr>
+<td>0x0096</td>
+<td>150</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.TimerRecording</td>
+<td>Byte</td>
+<td>Timer Recording</td>
+</tr>
+<tr>
+<td>0x009d</td>
+<td>157</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.InternalNDFilter</td>
+<td>Rational</td>
+<td>Internal ND Filter</td>
+</tr>
+<tr>
+<td>0x009e</td>
+<td>158</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.HDR</td>
+<td>Short</td>
+<td>HDR</td>
+</tr>
+<tr>
+<td>0x009f</td>
+<td>159</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ShutterType</td>
+<td>Short</td>
+<td>Shutter Type</td>
+</tr>
+<tr>
+<td>0x00a3</td>
+<td>163</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.ClearRetouchValue</td>
+<td>Rational</td>
+<td>Clear Retouch Value</td>
+</tr>
+<tr>
+<td>0x00ab</td>
+<td>171</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.TouchAE</td>
+<td>Short</td>
+<td>TouchAE</td>
+</tr>
+<tr>
+<td>0x0e00</td>
+<td>3584</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.PrintIM</td>
+<td>Undefined</td>
+<td>PrintIM information</td>
+</tr>
+<tr>
+<td>0x4449</td>
+<td>17481</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.0x4449</td>
+<td>Undefined</td>
+<td>Unknown</td>
+</tr>
+<tr>
+<td>0x8000</td>
+<td>32768</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.MakerNoteVersion</td>
+<td>Undefined</td>
+<td>MakerNote version</td>
+</tr>
+<tr>
+<td>0x8001</td>
+<td>32769</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.SceneMode</td>
+<td>Short</td>
+<td>Scene mode</td>
+</tr>
+<tr>
+<td>0x8004</td>
+<td>32772</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.WBRedLevel</td>
+<td>Short</td>
+<td>WB red level</td>
+</tr>
+<tr>
+<td>0x8005</td>
+<td>32773</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.WBGreenLevel</td>
+<td>Short</td>
+<td>WB green level</td>
+</tr>
+<tr>
+<td>0x8006</td>
+<td>32774</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.WBBlueLevel</td>
+<td>Short</td>
+<td>WB blue level</td>
+</tr>
+<tr>
+<td>0x8007</td>
+<td>32775</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.FlashFired</td>
+<td>Short</td>
+<td>Flash Fired</td>
+</tr>
+<tr>
+<td>0x8008</td>
+<td>32776</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.TextStamp3</td>
+<td>Short</td>
+<td>Text Stamp 3</td>
+</tr>
+<tr>
+<td>0x8009</td>
+<td>32777</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.TextStamp4</td>
+<td>Short</td>
+<td>Text Stamp 4</td>
+</tr>
+<tr>
+<td>0x8010</td>
+<td>32784</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.BabyAge2</td>
+<td>Ascii</td>
+<td>Baby (or pet) age 2</td>
+</tr>
+<tr>
+<td>0x8012</td>
+<td>32786</td>
+<td>Panasonic</td>
+<td>Exif.Panasonic.Transform2</td>
+<td>Undefined</td>
+<td>Transform 2</td>
+</tr>
+</tbody>
+</table>
+
+
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>

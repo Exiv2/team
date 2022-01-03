@@ -1,0 +1,606 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceExiv2.html">Exiv2</a></li><li class="navelem"><a class="el" href="classExiv2_1_1QuickTimeVideo.html">QuickTimeVideo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="classExiv2_1_1QuickTimeVideo-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Exiv2::QuickTimeVideo Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Class to access QuickTime video files.  
+ <a href="classExiv2_1_1QuickTimeVideo.html#details">More...</a></p>
+
+<p><code>#include &lt;quicktimevideo.hpp&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Exiv2::QuickTimeVideo:</div>
+<div class="dyncontent">
+<div class="center"><img src="classExiv2_1_1QuickTimeVideo__inherit__graph.png" border="0" usemap="#Exiv2_1_1QuickTimeVideo_inherit__map" alt="Inheritance graph"/></div>
+<map name="Exiv2_1_1QuickTimeVideo_inherit__map" id="Exiv2_1_1QuickTimeVideo_inherit__map">
+<area shape="rect" title="Class to access QuickTime video files." alt="" coords="5,80,179,107"/>
+<area shape="rect" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top&#45;level interface to the Exiv2..." alt="" coords="39,5,145,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Creators</div></td></tr>
+<tr class="memitem:a9ed0546172111810b363eb758acad655"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1QuickTimeVideo.html#a9ed0546172111810b363eb758acad655">QuickTimeVideo</a> (<a class="el" href="classExiv2_1_1BasicIo.html#af8f989522925b884d8c9d3a257265fa1">BasicIo::AutoPtr</a> <a class="el" href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">io</a>)</td></tr>
+<tr class="memdesc:a9ed0546172111810b363eb758acad655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for a QuickTime video. Since the constructor can not return a result, callers should check the <a class="el" href="classExiv2_1_1Image.html#a5b9b0050e69f898b1226e7655f0c799f" title="Check if the Image instance is valid. Use after object construction.">good()</a> method after object construction to determine success or failure.  <a href="classExiv2_1_1QuickTimeVideo.html#a9ed0546172111810b363eb758acad655">More...</a><br /></td></tr>
+<tr class="separator:a9ed0546172111810b363eb758acad655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Manipulators</div></td></tr>
+<tr class="memitem:aa0191ddc065a76551537efa4755c4a57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1QuickTimeVideo.html#aa0191ddc065a76551537efa4755c4a57">readMetadata</a> ()</td></tr>
+<tr class="memdesc:aa0191ddc065a76551537efa4755c4a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all metadata supported by a specific image format from the image. Before this method is called, the image metadata will be cleared.  <a href="classExiv2_1_1QuickTimeVideo.html#aa0191ddc065a76551537efa4755c4a57">More...</a><br /></td></tr>
+<tr class="separator:aa0191ddc065a76551537efa4755c4a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d39c61bf9e07042cb8b05539de739b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1QuickTimeVideo.html#a9d39c61bf9e07042cb8b05539de739b9">writeMetadata</a> ()</td></tr>
+<tr class="memdesc:a9d39c61bf9e07042cb8b05539de739b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write metadata back to the image.  <a href="classExiv2_1_1QuickTimeVideo.html#a9d39c61bf9e07042cb8b05539de739b9">More...</a><br /></td></tr>
+<tr class="separator:a9d39c61bf9e07042cb8b05539de739b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classExiv2_1_1Image"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classExiv2_1_1Image')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classExiv2_1_1Image.html">Exiv2::Image</a></td></tr>
+<tr class="memitem:ae11f75b7ba9228b3aec7f6dccc5ea081 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="ae11f75b7ba9228b3aec7f6dccc5ea081"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ae11f75b7ba9228b3aec7f6dccc5ea081">Image</a> (int <a class="el" href="classExiv2_1_1Image.html#a9631075925ed92077b247e53a63fae0c">imageType</a>, uint16_t supportedMetadata, <a class="el" href="classExiv2_1_1BasicIo.html#af8f989522925b884d8c9d3a257265fa1">BasicIo::AutoPtr</a> <a class="el" href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">io</a>)</td></tr>
+<tr class="memdesc:ae11f75b7ba9228b3aec7f6dccc5ea081 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor taking the image type, a bitmap of the supported metadata types and an auto-pointer that owns an IO instance. See subclass constructor doc. <br /></td></tr>
+<tr class="separator:ae11f75b7ba9228b3aec7f6dccc5ea081 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1189ab5cbe4e963ffb3a199576bc85fa inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a1189ab5cbe4e963ffb3a199576bc85fa"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a1189ab5cbe4e963ffb3a199576bc85fa">~Image</a> ()</td></tr>
+<tr class="memdesc:a1189ab5cbe4e963ffb3a199576bc85fa inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual Destructor. <br /></td></tr>
+<tr class="separator:a1189ab5cbe4e963ffb3a199576bc85fa inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0772d67eaf86367ef515b2f99443f67f inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a0772d67eaf86367ef515b2f99443f67f">printStructure</a> (std::ostream &amp;out, <a class="el" href="namespaceExiv2.html#a0e75ea64b8d502bf50e75ce1bb8c1ddd">PrintStructureOption</a> option=kpsNone, int depth=0)</td></tr>
+<tr class="memdesc:a0772d67eaf86367ef515b2f99443f67f inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print out the structure of image file.  <a href="classExiv2_1_1Image.html#a0772d67eaf86367ef515b2f99443f67f">More...</a><br /></td></tr>
+<tr class="separator:a0772d67eaf86367ef515b2f99443f67f inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62611f2a70a9aef4447a86221e92dcc inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ae62611f2a70a9aef4447a86221e92dcc">setExifData</a> (const <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> &amp;<a class="el" href="classExiv2_1_1Image.html#a6b2ee3de4a0c89cb8ff42a59946abbd9">exifData</a>)</td></tr>
+<tr class="memdesc:ae62611f2a70a9aef4447a86221e92dcc inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign new Exif data. The new Exif data is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#ae62611f2a70a9aef4447a86221e92dcc">More...</a><br /></td></tr>
+<tr class="separator:ae62611f2a70a9aef4447a86221e92dcc inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2594a384de1b802c1f6a80a87a97beb2 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a2594a384de1b802c1f6a80a87a97beb2"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a2594a384de1b802c1f6a80a87a97beb2">clearExifData</a> ()</td></tr>
+<tr class="memdesc:a2594a384de1b802c1f6a80a87a97beb2 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase any buffered Exif data. Exif data is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. <br /></td></tr>
+<tr class="separator:a2594a384de1b802c1f6a80a87a97beb2 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af786d276e6bf72c4ecb2c642fd478a75 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#af786d276e6bf72c4ecb2c642fd478a75">setIptcData</a> (const <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;<a class="el" href="classExiv2_1_1Image.html#a098600f7a24b1a8d4162c2742a351699">iptcData</a>)</td></tr>
+<tr class="memdesc:af786d276e6bf72c4ecb2c642fd478a75 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign new IPTC data. The new IPTC data is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#af786d276e6bf72c4ecb2c642fd478a75">More...</a><br /></td></tr>
+<tr class="separator:af786d276e6bf72c4ecb2c642fd478a75 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4acce8a6da7e039788af806fc956a330 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a4acce8a6da7e039788af806fc956a330"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a4acce8a6da7e039788af806fc956a330">clearIptcData</a> ()</td></tr>
+<tr class="memdesc:a4acce8a6da7e039788af806fc956a330 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase any buffered IPTC data. IPTC data is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. <br /></td></tr>
+<tr class="separator:a4acce8a6da7e039788af806fc956a330 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff3a5906307a84ea56a7b7002a26126b inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#aff3a5906307a84ea56a7b7002a26126b">setXmpPacket</a> (const std::string &amp;<a class="el" href="classExiv2_1_1Image.html#a77b4eda9639ea84b58d96ce6777afd72">xmpPacket</a>)</td></tr>
+<tr class="memdesc:aff3a5906307a84ea56a7b7002a26126b inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign a raw XMP packet. The new XMP packet is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#aff3a5906307a84ea56a7b7002a26126b">More...</a><br /></td></tr>
+<tr class="separator:aff3a5906307a84ea56a7b7002a26126b inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43ac9ab965a2c2d0ca706bd037590e00 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a43ac9ab965a2c2d0ca706bd037590e00">clearXmpPacket</a> ()</td></tr>
+<tr class="memdesc:a43ac9ab965a2c2d0ca706bd037590e00 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase the buffered XMP packet. XMP data is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#a43ac9ab965a2c2d0ca706bd037590e00">More...</a><br /></td></tr>
+<tr class="separator:a43ac9ab965a2c2d0ca706bd037590e00 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adabf3dfc5e40e8c5deee2abf5987190b inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#adabf3dfc5e40e8c5deee2abf5987190b">setXmpData</a> (const <a class="el" href="classExiv2_1_1XmpData.html">XmpData</a> &amp;<a class="el" href="classExiv2_1_1Image.html#aa85bb569118da6fa12699a2b71e3801b">xmpData</a>)</td></tr>
+<tr class="memdesc:adabf3dfc5e40e8c5deee2abf5987190b inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign new XMP data. The new XMP data is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#adabf3dfc5e40e8c5deee2abf5987190b">More...</a><br /></td></tr>
+<tr class="separator:adabf3dfc5e40e8c5deee2abf5987190b inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01f38451af96af7f28aa27be4aaa18a6 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a01f38451af96af7f28aa27be4aaa18a6">clearXmpData</a> ()</td></tr>
+<tr class="memdesc:a01f38451af96af7f28aa27be4aaa18a6 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase any buffered XMP data. XMP data is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#a01f38451af96af7f28aa27be4aaa18a6">More...</a><br /></td></tr>
+<tr class="separator:a01f38451af96af7f28aa27be4aaa18a6 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc0f7bbd48610ec3882ef0b36955a49b inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#afc0f7bbd48610ec3882ef0b36955a49b">setComment</a> (const std::string &amp;<a class="el" href="classExiv2_1_1Image.html#a41e2f0728a9330ce753bd3d36bf50e58">comment</a>)</td></tr>
+<tr class="memdesc:afc0f7bbd48610ec3882ef0b36955a49b inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the image comment. The new comment is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#afc0f7bbd48610ec3882ef0b36955a49b">More...</a><br /></td></tr>
+<tr class="separator:afc0f7bbd48610ec3882ef0b36955a49b inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a4c3188f4d3970c9636dd00c378ebb8 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a1a4c3188f4d3970c9636dd00c378ebb8"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a1a4c3188f4d3970c9636dd00c378ebb8">clearComment</a> ()</td></tr>
+<tr class="memdesc:a1a4c3188f4d3970c9636dd00c378ebb8 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase any buffered comment. Comment is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. <br /></td></tr>
+<tr class="separator:a1a4c3188f4d3970c9636dd00c378ebb8 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11ef8321ac42be4a4813367e07fac339 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a11ef8321ac42be4a4813367e07fac339">setIccProfile</a> (<a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> &amp;<a class="el" href="classExiv2_1_1Image.html#a3a058de0a7187f415025a05e4afdd62e">iccProfile</a>, bool bTestValid=true)</td></tr>
+<tr class="memdesc:a11ef8321ac42be4a4813367e07fac339 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the image iccProfile. The new profile is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#a11ef8321ac42be4a4813367e07fac339">More...</a><br /></td></tr>
+<tr class="separator:a11ef8321ac42be4a4813367e07fac339 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd1d072afad0d58be252b994c78bc1d inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="aabd1d072afad0d58be252b994c78bc1d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#aabd1d072afad0d58be252b994c78bc1d">clearIccProfile</a> ()</td></tr>
+<tr class="memdesc:aabd1d072afad0d58be252b994c78bc1d inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase iccProfile. the profile is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. <br /></td></tr>
+<tr class="separator:aabd1d072afad0d58be252b994c78bc1d inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abce46df193c9796de47c31c863da941c inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="abce46df193c9796de47c31c863da941c"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#abce46df193c9796de47c31c863da941c">iccProfileDefined</a> ()</td></tr>
+<tr class="memdesc:abce46df193c9796de47c31c863da941c inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase iccProfile. the profile is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. <br /></td></tr>
+<tr class="separator:abce46df193c9796de47c31c863da941c inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a058de0a7187f415025a05e4afdd62e inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a3a058de0a7187f415025a05e4afdd62e"></a>
+virtual <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a3a058de0a7187f415025a05e4afdd62e">iccProfile</a> ()</td></tr>
+<tr class="memdesc:a3a058de0a7187f415025a05e4afdd62e inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">return iccProfile <br /></td></tr>
+<tr class="separator:a3a058de0a7187f415025a05e4afdd62e inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459781449dd7eddcaa88ae6221e90ef5 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a459781449dd7eddcaa88ae6221e90ef5">setMetadata</a> (const <a class="el" href="classExiv2_1_1Image.html">Image</a> &amp;image)</td></tr>
+<tr class="memdesc:a459781449dd7eddcaa88ae6221e90ef5 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy all existing metadata from source <a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a>. The data is copied into internal buffers and is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <a href="classExiv2_1_1Image.html#a459781449dd7eddcaa88ae6221e90ef5">More...</a><br /></td></tr>
+<tr class="separator:a459781449dd7eddcaa88ae6221e90ef5 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c41c773af9f433957326f76603d89f1 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a8c41c773af9f433957326f76603d89f1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a8c41c773af9f433957326f76603d89f1">clearMetadata</a> ()</td></tr>
+<tr class="memdesc:a8c41c773af9f433957326f76603d89f1 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase all buffered metadata. Metadata is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. <br /></td></tr>
+<tr class="separator:a8c41c773af9f433957326f76603d89f1 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b2ee3de4a0c89cb8ff42a59946abbd9 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a6b2ee3de4a0c89cb8ff42a59946abbd9">exifData</a> ()</td></tr>
+<tr class="memdesc:a6b2ee3de4a0c89cb8ff42a59946abbd9 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classExiv2_1_1ExifData.html" title="A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...">ExifData</a> instance containing currently buffered Exif data.  <a href="classExiv2_1_1Image.html#a6b2ee3de4a0c89cb8ff42a59946abbd9">More...</a><br /></td></tr>
+<tr class="separator:a6b2ee3de4a0c89cb8ff42a59946abbd9 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a098600f7a24b1a8d4162c2742a351699 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a098600f7a24b1a8d4162c2742a351699">iptcData</a> ()</td></tr>
+<tr class="memdesc:a098600f7a24b1a8d4162c2742a351699 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classExiv2_1_1IptcData.html" title="A container for IPTC data. This is a top-level class of the Exiv2 library.">IptcData</a> instance containing currently buffered IPTC data.  <a href="classExiv2_1_1Image.html#a098600f7a24b1a8d4162c2742a351699">More...</a><br /></td></tr>
+<tr class="separator:a098600f7a24b1a8d4162c2742a351699 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa85bb569118da6fa12699a2b71e3801b inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classExiv2_1_1XmpData.html">XmpData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#aa85bb569118da6fa12699a2b71e3801b">xmpData</a> ()</td></tr>
+<tr class="memdesc:aa85bb569118da6fa12699a2b71e3801b inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classExiv2_1_1XmpData.html" title="A container for XMP data. This is a top-level class of the Exiv2 library.">XmpData</a> instance containing currently buffered XMP data.  <a href="classExiv2_1_1Image.html#aa85bb569118da6fa12699a2b71e3801b">More...</a><br /></td></tr>
+<tr class="separator:aa85bb569118da6fa12699a2b71e3801b inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b4eda9639ea84b58d96ce6777afd72 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a77b4eda9639ea84b58d96ce6777afd72"></a>
+virtual std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a77b4eda9639ea84b58d96ce6777afd72">xmpPacket</a> ()</td></tr>
+<tr class="memdesc:a77b4eda9639ea84b58d96ce6777afd72 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a modifiable reference to the raw XMP packet. <br /></td></tr>
+<tr class="separator:a77b4eda9639ea84b58d96ce6777afd72 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64199a4be87a12f81bd111ce4019dfc inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ab64199a4be87a12f81bd111ce4019dfc">writeXmpFromPacket</a> (bool flag)</td></tr>
+<tr class="memdesc:ab64199a4be87a12f81bd111ce4019dfc inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine the source when writing XMP.  <a href="classExiv2_1_1Image.html#ab64199a4be87a12f81bd111ce4019dfc">More...</a><br /></td></tr>
+<tr class="separator:ab64199a4be87a12f81bd111ce4019dfc inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1533e0b8d24c49974d0dc59911c330a inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#af1533e0b8d24c49974d0dc59911c330a">setByteOrder</a> (<a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> <a class="el" href="classExiv2_1_1Image.html#aaada24ce9c2d86fa8c43454f123aa4be">byteOrder</a>)</td></tr>
+<tr class="memdesc:af1533e0b8d24c49974d0dc59911c330a inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the byte order to encode the Exif metadata in.  <a href="classExiv2_1_1Image.html#af1533e0b8d24c49974d0dc59911c330a">More...</a><br /></td></tr>
+<tr class="separator:af1533e0b8d24c49974d0dc59911c330a inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0799da0ceb675d40a4ad75eba07eb37d inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a0799da0ceb675d40a4ad75eba07eb37d">printTiffStructure</a> (<a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;<a class="el" href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">io</a>, std::ostream &amp;out, <a class="el" href="namespaceExiv2.html#a0e75ea64b8d502bf50e75ce1bb8c1ddd">PrintStructureOption</a> option, int depth, size_t offset=0)</td></tr>
+<tr class="memdesc:a0799da0ceb675d40a4ad75eba07eb37d inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print out the structure of image file.  <a href="classExiv2_1_1Image.html#a0799da0ceb675d40a4ad75eba07eb37d">More...</a><br /></td></tr>
+<tr class="separator:a0799da0ceb675d40a4ad75eba07eb37d inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6304ef637b6f71059b12c06f65b26e21 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a6304ef637b6f71059b12c06f65b26e21"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a6304ef637b6f71059b12c06f65b26e21">printIFDStructure</a> (<a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;<a class="el" href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">io</a>, std::ostream &amp;out, <a class="el" href="namespaceExiv2.html#a0e75ea64b8d502bf50e75ce1bb8c1ddd">Exiv2::PrintStructureOption</a> option, uint32_t start, bool bSwap, char c, int depth)</td></tr>
+<tr class="memdesc:a6304ef637b6f71059b12c06f65b26e21 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print out the structure of a TIFF IFD. <br /></td></tr>
+<tr class="separator:a6304ef637b6f71059b12c06f65b26e21 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43dbe6bedef6b0b0794dd21f5c3ec555 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a43dbe6bedef6b0b0794dd21f5c3ec555"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a43dbe6bedef6b0b0794dd21f5c3ec555">isBigEndianPlatform</a> ()</td></tr>
+<tr class="memdesc:a43dbe6bedef6b0b0794dd21f5c3ec555 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">is the host platform bigEndian <br /></td></tr>
+<tr class="separator:a43dbe6bedef6b0b0794dd21f5c3ec555 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6d5583279f48f1215984bd2173bfbe8 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="ab6d5583279f48f1215984bd2173bfbe8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ab6d5583279f48f1215984bd2173bfbe8">isLittleEndianPlatform</a> ()</td></tr>
+<tr class="memdesc:ab6d5583279f48f1215984bd2173bfbe8 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">is the host platform littleEndian <br /></td></tr>
+<tr class="separator:ab6d5583279f48f1215984bd2173bfbe8 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a563b69a77c7938467b140233abf9c4ab inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a563b69a77c7938467b140233abf9c4ab"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isStringType</b> (uint16_t type)</td></tr>
+<tr class="separator:a563b69a77c7938467b140233abf9c4ab inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a130f8f6cb17204406f5448c3b03aba0e inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a130f8f6cb17204406f5448c3b03aba0e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isShortType</b> (uint16_t type)</td></tr>
+<tr class="separator:a130f8f6cb17204406f5448c3b03aba0e inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55ec420605c5dea4608b8da97a94b09 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="aa55ec420605c5dea4608b8da97a94b09"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLongType</b> (uint16_t type)</td></tr>
+<tr class="separator:aa55ec420605c5dea4608b8da97a94b09 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c02e66c9daa1ad69425dffd0925859 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a71c02e66c9daa1ad69425dffd0925859"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLongLongType</b> (uint16_t type)</td></tr>
+<tr class="separator:a71c02e66c9daa1ad69425dffd0925859 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df594e76f96eed809bcb91f9f02dd5c inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a6df594e76f96eed809bcb91f9f02dd5c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isRationalType</b> (uint16_t type)</td></tr>
+<tr class="separator:a6df594e76f96eed809bcb91f9f02dd5c inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fc87330d61f334e2359bfd143b48a4a inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a5fc87330d61f334e2359bfd143b48a4a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is2ByteType</b> (uint16_t type)</td></tr>
+<tr class="separator:a5fc87330d61f334e2359bfd143b48a4a inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae243b329440331cae62ce89373c2f38b inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="ae243b329440331cae62ce89373c2f38b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is4ByteType</b> (uint16_t type)</td></tr>
+<tr class="separator:ae243b329440331cae62ce89373c2f38b inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f3763bd128e5c4cd0982aed6267cc47 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a9f3763bd128e5c4cd0982aed6267cc47"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is8ByteType</b> (uint16_t type)</td></tr>
+<tr class="separator:a9f3763bd128e5c4cd0982aed6267cc47 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d2def8c0253c24d80664d12c549142c inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a5d2def8c0253c24d80664d12c549142c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isPrintXMP</b> (uint16_t type, <a class="el" href="namespaceExiv2.html#a0e75ea64b8d502bf50e75ce1bb8c1ddd">Exiv2::PrintStructureOption</a> option)</td></tr>
+<tr class="separator:a5d2def8c0253c24d80664d12c549142c inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9318b996c38b817890174616dcb4ef inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a5f9318b996c38b817890174616dcb4ef"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isPrintICC</b> (uint16_t type, <a class="el" href="namespaceExiv2.html#a0e75ea64b8d502bf50e75ce1bb8c1ddd">Exiv2::PrintStructureOption</a> option)</td></tr>
+<tr class="separator:a5f9318b996c38b817890174616dcb4ef inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33738dcc4bf54cd0a3b9a3654c6e92d3 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a33738dcc4bf54cd0a3b9a3654c6e92d3"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>byteSwap</b> (uint64_t value, bool bSwap) const</td></tr>
+<tr class="separator:a33738dcc4bf54cd0a3b9a3654c6e92d3 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7e9e8893f39db1b40d69913176a08c inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a9d7e9e8893f39db1b40d69913176a08c"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>byteSwap</b> (uint32_t value, bool bSwap) const</td></tr>
+<tr class="separator:a9d7e9e8893f39db1b40d69913176a08c inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1390fb552e3060e6a4cb0a9b39922443 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a1390fb552e3060e6a4cb0a9b39922443"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>byteSwap</b> (uint16_t value, bool bSwap) const</td></tr>
+<tr class="separator:a1390fb552e3060e6a4cb0a9b39922443 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd5f6e1503211a2c52bf2e49051d10a4 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="afd5f6e1503211a2c52bf2e49051d10a4"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>byteSwap2</b> (const <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> &amp;buf, size_t offset, bool bSwap) const</td></tr>
+<tr class="separator:afd5f6e1503211a2c52bf2e49051d10a4 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726e9fdf7de38a60f5d9e6f4cf419a08 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a726e9fdf7de38a60f5d9e6f4cf419a08"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>byteSwap4</b> (const <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> &amp;buf, size_t offset, bool bSwap) const</td></tr>
+<tr class="separator:a726e9fdf7de38a60f5d9e6f4cf419a08 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3684c6e9292da27d46eba8ce57767069 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a3684c6e9292da27d46eba8ce57767069"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>byteSwap8</b> (const <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> &amp;buf, size_t offset, bool bSwap) const</td></tr>
+<tr class="separator:a3684c6e9292da27d46eba8ce57767069 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaada24ce9c2d86fa8c43454f123aa4be inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="aaada24ce9c2d86fa8c43454f123aa4be"></a>
+<a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#aaada24ce9c2d86fa8c43454f123aa4be">byteOrder</a> () const</td></tr>
+<tr class="memdesc:aaada24ce9c2d86fa8c43454f123aa4be inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the byte order in which the Exif metadata of the image is encoded. Initially, it is not set (<em>invalidByteOrder</em>). <br /></td></tr>
+<tr class="separator:aaada24ce9c2d86fa8c43454f123aa4be inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b9b0050e69f898b1226e7655f0c799f inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a5b9b0050e69f898b1226e7655f0c799f">good</a> () const</td></tr>
+<tr class="memdesc:a5b9b0050e69f898b1226e7655f0c799f inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the <a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> instance is valid. Use after object construction.  <a href="classExiv2_1_1Image.html#a5b9b0050e69f898b1226e7655f0c799f">More...</a><br /></td></tr>
+<tr class="separator:a5b9b0050e69f898b1226e7655f0c799f inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a681db288938dfe2be06951bb2eadcbcc inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a681db288938dfe2be06951bb2eadcbcc"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a681db288938dfe2be06951bb2eadcbcc">pixelWidth</a> () const</td></tr>
+<tr class="memdesc:a681db288938dfe2be06951bb2eadcbcc inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the pixel width of the image. <br /></td></tr>
+<tr class="separator:a681db288938dfe2be06951bb2eadcbcc inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2956955424be14d99d56ec9b2902ecb inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="af2956955424be14d99d56ec9b2902ecb"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#af2956955424be14d99d56ec9b2902ecb">pixelHeight</a> () const</td></tr>
+<tr class="memdesc:af2956955424be14d99d56ec9b2902ecb inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the pixel height of the image. <br /></td></tr>
+<tr class="separator:af2956955424be14d99d56ec9b2902ecb inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15973cb5211046fd1273327689367603 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a15973cb5211046fd1273327689367603">exifData</a> () const</td></tr>
+<tr class="memdesc:a15973cb5211046fd1273327689367603 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classExiv2_1_1ExifData.html" title="A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...">ExifData</a> instance containing currently buffered Exif data.  <a href="classExiv2_1_1Image.html#a15973cb5211046fd1273327689367603">More...</a><br /></td></tr>
+<tr class="separator:a15973cb5211046fd1273327689367603 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8311ed831a1b8bde5f9288e592d99e inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#aca8311ed831a1b8bde5f9288e592d99e">iptcData</a> () const</td></tr>
+<tr class="memdesc:aca8311ed831a1b8bde5f9288e592d99e inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classExiv2_1_1IptcData.html" title="A container for IPTC data. This is a top-level class of the Exiv2 library.">IptcData</a> instance containing currently buffered IPTC data.  <a href="classExiv2_1_1Image.html#aca8311ed831a1b8bde5f9288e592d99e">More...</a><br /></td></tr>
+<tr class="separator:aca8311ed831a1b8bde5f9288e592d99e inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5a54300cddc7ec0de2ce7da3c8517a0 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classExiv2_1_1XmpData.html">XmpData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#af5a54300cddc7ec0de2ce7da3c8517a0">xmpData</a> () const</td></tr>
+<tr class="memdesc:af5a54300cddc7ec0de2ce7da3c8517a0 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classExiv2_1_1XmpData.html" title="A container for XMP data. This is a top-level class of the Exiv2 library.">XmpData</a> instance containing currently buffered XMP data.  <a href="classExiv2_1_1Image.html#af5a54300cddc7ec0de2ce7da3c8517a0">More...</a><br /></td></tr>
+<tr class="separator:af5a54300cddc7ec0de2ce7da3c8517a0 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e2f0728a9330ce753bd3d36bf50e58 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a41e2f0728a9330ce753bd3d36bf50e58"></a>
+virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a41e2f0728a9330ce753bd3d36bf50e58">comment</a> () const</td></tr>
+<tr class="memdesc:a41e2f0728a9330ce753bd3d36bf50e58 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a copy of the image comment. May be an empty string. <br /></td></tr>
+<tr class="separator:a41e2f0728a9330ce753bd3d36bf50e58 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2bce95de847f86e29dbe348a0dcab8a inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="ad2bce95de847f86e29dbe348a0dcab8a"></a>
+virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ad2bce95de847f86e29dbe348a0dcab8a">xmpPacket</a> () const</td></tr>
+<tr class="memdesc:ad2bce95de847f86e29dbe348a0dcab8a inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the raw XMP packet as a string. <br /></td></tr>
+<tr class="separator:ad2bce95de847f86e29dbe348a0dcab8a inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62345361501892f42c6bbc86514bf5c6 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">io</a> () const</td></tr>
+<tr class="memdesc:a62345361501892f42c6bbc86514bf5c6 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to the <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> instance being used for Io.  <a href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">More...</a><br /></td></tr>
+<tr class="separator:a62345361501892f42c6bbc86514bf5c6 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9044deeee647a5c646d90d4285ecde66 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceExiv2.html#af5f0ea6c944c786f7c4c4841fa22b16c">AccessMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a9044deeee647a5c646d90d4285ecde66">checkMode</a> (<a class="el" href="namespaceExiv2.html#acca494c8cf80f3ac8a804e1b54afffca">MetadataId</a> metadataId) const</td></tr>
+<tr class="memdesc:a9044deeee647a5c646d90d4285ecde66 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the access mode, i.e., the metadata functions, which this image supports for the metadata type <em>metadataId</em>.  <a href="classExiv2_1_1Image.html#a9044deeee647a5c646d90d4285ecde66">More...</a><br /></td></tr>
+<tr class="separator:a9044deeee647a5c646d90d4285ecde66 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3393e922bf59ef1f535ab7dd41db7f92 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a3393e922bf59ef1f535ab7dd41db7f92"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a3393e922bf59ef1f535ab7dd41db7f92">supportsMetadata</a> (<a class="el" href="namespaceExiv2.html#acca494c8cf80f3ac8a804e1b54afffca">MetadataId</a> metadataId) const</td></tr>
+<tr class="memdesc:a3393e922bf59ef1f535ab7dd41db7f92 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if image supports a particular type of metadata. This method is deprecated. Use <a class="el" href="classExiv2_1_1Image.html#a9044deeee647a5c646d90d4285ecde66" title="Returns the access mode, i.e., the metadata functions, which this image supports for the metadata typ...">checkMode()</a> instead. <br /></td></tr>
+<tr class="separator:a3393e922bf59ef1f535ab7dd41db7f92 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae71a3de5f6782e09464ae152944969a1 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="ae71a3de5f6782e09464ae152944969a1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ae71a3de5f6782e09464ae152944969a1">writeXmpFromPacket</a> () const</td></tr>
+<tr class="memdesc:ae71a3de5f6782e09464ae152944969a1 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the flag indicating the source when writing XMP metadata. <br /></td></tr>
+<tr class="separator:ae71a3de5f6782e09464ae152944969a1 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90e71af82146be8769ed1e7a6f6cf50b inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a90e71af82146be8769ed1e7a6f6cf50b"></a>
+const <a class="el" href="namespaceExiv2.html#af72182be3e51f30ef8cb55a86dfa8e67">NativePreviewList</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a90e71af82146be8769ed1e7a6f6cf50b">nativePreviews</a> () const</td></tr>
+<tr class="memdesc:a90e71af82146be8769ed1e7a6f6cf50b inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return list of native previews. This is meant to be used only by the <a class="el" href="classExiv2_1_1PreviewManager.html" title="Class for extracting preview images from image metadata.">PreviewManager</a>. <br /></td></tr>
+<tr class="separator:a90e71af82146be8769ed1e7a6f6cf50b inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48deb806a67146e7c91ff206fbc4d106 inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a48deb806a67146e7c91ff206fbc4d106"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a48deb806a67146e7c91ff206fbc4d106">setTypeSupported</a> (int <a class="el" href="classExiv2_1_1Image.html#a9631075925ed92077b247e53a63fae0c">imageType</a>, uint16_t supportedMetadata)</td></tr>
+<tr class="memdesc:a48deb806a67146e7c91ff206fbc4d106 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">set type support for this image format <br /></td></tr>
+<tr class="separator:a48deb806a67146e7c91ff206fbc4d106 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9631075925ed92077b247e53a63fae0c inherit pub_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a9631075925ed92077b247e53a63fae0c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a9631075925ed92077b247e53a63fae0c">imageType</a> () const</td></tr>
+<tr class="memdesc:a9631075925ed92077b247e53a63fae0c inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">set type support for this image format <br /></td></tr>
+<tr class="separator:a9631075925ed92077b247e53a63fae0c inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Accessors</h2></td></tr>
+<tr class="memitem:a34816dc564daf862c9c45883779d8cc2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1QuickTimeVideo.html#a34816dc564daf862c9c45883779d8cc2">mimeType</a> () const</td></tr>
+<tr class="memdesc:a34816dc564daf862c9c45883779d8cc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the MIME type of the image.  <a href="classExiv2_1_1QuickTimeVideo.html#a34816dc564daf862c9c45883779d8cc2">More...</a><br /></td></tr>
+<tr class="separator:a34816dc564daf862c9c45883779d8cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6e5bf3f1351bb7d70b23891f5564b6f"><td class="memItemLeft" align="right" valign="top"><a id="ab6e5bf3f1351bb7d70b23891f5564b6f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1QuickTimeVideo.html#ab6e5bf3f1351bb7d70b23891f5564b6f">decodeBlock</a> ()</td></tr>
+<tr class="memdesc:ab6e5bf3f1351bb7d70b23891f5564b6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for a valid tag and decode the block at the current IO position. Calls <a class="el" href="classExiv2_1_1QuickTimeVideo.html#a2d034e6fbfaf1c5dc95d7a728f71e6c3" title="Interpret tag information, and call the respective function to save it in the respective XMP containe...">tagDecoder()</a> or skips to next tag, if required. <br /></td></tr>
+<tr class="separator:ab6e5bf3f1351bb7d70b23891f5564b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d034e6fbfaf1c5dc95d7a728f71e6c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1QuickTimeVideo.html#a2d034e6fbfaf1c5dc95d7a728f71e6c3">tagDecoder</a> (<a class="el" href="classExiv2_1_1DataBuf.html">Exiv2::DataBuf</a> &amp;buf, unsigned long size)</td></tr>
+<tr class="memdesc:a2d034e6fbfaf1c5dc95d7a728f71e6c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpret tag information, and call the respective function to save it in the respective XMP container. Decodes a Tag Information and saves it in the respective XMP container, if the block size is small.  <a href="classExiv2_1_1QuickTimeVideo.html#a2d034e6fbfaf1c5dc95d7a728f71e6c3">More...</a><br /></td></tr>
+<tr class="separator:a2d034e6fbfaf1c5dc95d7a728f71e6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classExiv2_1_1Image"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classExiv2_1_1Image')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classExiv2_1_1Image.html">Exiv2::Image</a></td></tr>
+<tr class="memitem:a89ad3ffe7a4e8a943d267d77843415fb inherit pub_types_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a89ad3ffe7a4e8a943d267d77843415fb"></a>
+typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1Image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a89ad3ffe7a4e8a943d267d77843415fb">AutoPtr</a></td></tr>
+<tr class="memdesc:a89ad3ffe7a4e8a943d267d77843415fb inherit pub_types_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> auto_ptr type. <br /></td></tr>
+<tr class="separator:a89ad3ffe7a4e8a943d267d77843415fb inherit pub_types_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classExiv2_1_1Image"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classExiv2_1_1Image')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classExiv2_1_1Image.html">Exiv2::Image</a></td></tr>
+<tr class="memitem:aa717a840747c745f212f4c8d8b65681e inherit pro_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="aa717a840747c745f212f4c8d8b65681e"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#aa717a840747c745f212f4c8d8b65681e">tagName</a> (uint16_t tag)</td></tr>
+<tr class="memdesc:aa717a840747c745f212f4c8d8b65681e inherit pro_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return tag name for given tag id. <br /></td></tr>
+<tr class="separator:aa717a840747c745f212f4c8d8b65681e inherit pro_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76b1c1f5a95d1ff39837c1f3bbe6f89b inherit pro_methods_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a76b1c1f5a95d1ff39837c1f3bbe6f89b"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a76b1c1f5a95d1ff39837c1f3bbe6f89b">typeName</a> (uint16_t tag) const</td></tr>
+<tr class="memdesc:a76b1c1f5a95d1ff39837c1f3bbe6f89b inherit pro_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return tag type for given tag id. <br /></td></tr>
+<tr class="separator:a76b1c1f5a95d1ff39837c1f3bbe6f89b inherit pro_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classExiv2_1_1Image"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classExiv2_1_1Image')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classExiv2_1_1Image.html">Exiv2::Image</a></td></tr>
+<tr class="memitem:a441d551a7d353e6f440748a486e004e5 inherit pro_attribs_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a441d551a7d353e6f440748a486e004e5"></a>
+<a class="el" href="classExiv2_1_1BasicIo.html#af8f989522925b884d8c9d3a257265fa1">BasicIo::AutoPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a441d551a7d353e6f440748a486e004e5">io_</a></td></tr>
+<tr class="memdesc:a441d551a7d353e6f440748a486e004e5 inherit pro_attribs_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> data IO pointer. <br /></td></tr>
+<tr class="separator:a441d551a7d353e6f440748a486e004e5 inherit pro_attribs_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1a8a72f1faf1b49a980a5050be8f8df inherit pro_attribs_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="aa1a8a72f1faf1b49a980a5050be8f8df"></a>
+<a class="el" href="classExiv2_1_1ExifData.html">ExifData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#aa1a8a72f1faf1b49a980a5050be8f8df">exifData_</a></td></tr>
+<tr class="memdesc:aa1a8a72f1faf1b49a980a5050be8f8df inherit pro_attribs_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exif data container. <br /></td></tr>
+<tr class="separator:aa1a8a72f1faf1b49a980a5050be8f8df inherit pro_attribs_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac613777e529af8d8c421cf0138234d6f inherit pro_attribs_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="ac613777e529af8d8c421cf0138234d6f"></a>
+<a class="el" href="classExiv2_1_1IptcData.html">IptcData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ac613777e529af8d8c421cf0138234d6f">iptcData_</a></td></tr>
+<tr class="memdesc:ac613777e529af8d8c421cf0138234d6f inherit pro_attribs_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPTC data container. <br /></td></tr>
+<tr class="separator:ac613777e529af8d8c421cf0138234d6f inherit pro_attribs_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd748b186fc5d731e7943ab38b718168 inherit pro_attribs_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="afd748b186fc5d731e7943ab38b718168"></a>
+<a class="el" href="classExiv2_1_1XmpData.html">XmpData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#afd748b186fc5d731e7943ab38b718168">xmpData_</a></td></tr>
+<tr class="memdesc:afd748b186fc5d731e7943ab38b718168 inherit pro_attribs_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMP data container. <br /></td></tr>
+<tr class="separator:afd748b186fc5d731e7943ab38b718168 inherit pro_attribs_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb37d01478a74bfabf19ad920c81a91 inherit pro_attribs_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="afbb37d01478a74bfabf19ad920c81a91"></a>
+<a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#afbb37d01478a74bfabf19ad920c81a91">iccProfile_</a></td></tr>
+<tr class="memdesc:afbb37d01478a74bfabf19ad920c81a91 inherit pro_attribs_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">ICC buffer (binary data) <br /></td></tr>
+<tr class="separator:afbb37d01478a74bfabf19ad920c81a91 inherit pro_attribs_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad908536e7406677e193f6fa75e53d3ae inherit pro_attribs_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="ad908536e7406677e193f6fa75e53d3ae"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ad908536e7406677e193f6fa75e53d3ae">comment_</a></td></tr>
+<tr class="memdesc:ad908536e7406677e193f6fa75e53d3ae inherit pro_attribs_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">User comment. <br /></td></tr>
+<tr class="separator:ad908536e7406677e193f6fa75e53d3ae inherit pro_attribs_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62dc4efdf1c3ffe94443588e7d7b15b inherit pro_attribs_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="ab62dc4efdf1c3ffe94443588e7d7b15b"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#ab62dc4efdf1c3ffe94443588e7d7b15b">xmpPacket_</a></td></tr>
+<tr class="memdesc:ab62dc4efdf1c3ffe94443588e7d7b15b inherit pro_attribs_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">XMP packet. <br /></td></tr>
+<tr class="separator:ab62dc4efdf1c3ffe94443588e7d7b15b inherit pro_attribs_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a114180b5449669339b0cbe3f4078a915 inherit pro_attribs_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a114180b5449669339b0cbe3f4078a915"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a114180b5449669339b0cbe3f4078a915">pixelWidth_</a></td></tr>
+<tr class="memdesc:a114180b5449669339b0cbe3f4078a915 inherit pro_attribs_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">image pixel width <br /></td></tr>
+<tr class="separator:a114180b5449669339b0cbe3f4078a915 inherit pro_attribs_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a093efd59b753173a50a5c3a2ab881878 inherit pro_attribs_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a093efd59b753173a50a5c3a2ab881878"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a093efd59b753173a50a5c3a2ab881878">pixelHeight_</a></td></tr>
+<tr class="memdesc:a093efd59b753173a50a5c3a2ab881878 inherit pro_attribs_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">image pixel height <br /></td></tr>
+<tr class="separator:a093efd59b753173a50a5c3a2ab881878 inherit pro_attribs_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fe1e6f41e5e2e99ce1560f0b5ad36b9 inherit pro_attribs_classExiv2_1_1Image"><td class="memItemLeft" align="right" valign="top"><a id="a7fe1e6f41e5e2e99ce1560f0b5ad36b9"></a>
+<a class="el" href="namespaceExiv2.html#af72182be3e51f30ef8cb55a86dfa8e67">NativePreviewList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a7fe1e6f41e5e2e99ce1560f0b5ad36b9">nativePreviews_</a></td></tr>
+<tr class="memdesc:a7fe1e6f41e5e2e99ce1560f0b5ad36b9 inherit pro_attribs_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">list of native previews <br /></td></tr>
+<tr class="separator:a7fe1e6f41e5e2e99ce1560f0b5ad36b9 inherit pro_attribs_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class to access QuickTime video files. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9ed0546172111810b363eb758acad655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ed0546172111810b363eb758acad655">&#9670;&nbsp;</a></span>QuickTimeVideo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Exiv2::QuickTimeVideo::QuickTimeVideo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classExiv2_1_1BasicIo.html#af8f989522925b884d8c9d3a257265fa1">BasicIo::AutoPtr</a>&#160;</td>
+          <td class="paramname"><em>io</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor for a QuickTime video. Since the constructor can not return a result, callers should check the <a class="el" href="classExiv2_1_1Image.html#a5b9b0050e69f898b1226e7655f0c799f" title="Check if the Image instance is valid. Use after object construction.">good()</a> method after object construction to determine success or failure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">io</td><td>An auto-pointer that owns a <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> instance used for reading and writing image metadata. <b>Important:</b> The constructor takes ownership of the passed in <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> instance through the auto-pointer. Callers should not continue to use the <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> instance after it is passed to this method. Use the <a class="el" href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6" title="Return a reference to the BasicIo instance being used for Io.">Image::io()</a> method to get a temporary reference. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a34816dc564daf862c9c45883779d8cc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34816dc564daf862c9c45883779d8cc2">&#9670;&nbsp;</a></span>mimeType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Exiv2::QuickTimeVideo::mimeType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the MIME type of the image. </p>
+<dl class="section note"><dt>Note</dt><dd>For each supported image format, the library knows only one MIME type. This may not be the most specific MIME type for that format. In particular, several RAW formats are variants of the TIFF format with the same magic as TIFF itself. Class <a class="el" href="classExiv2_1_1TiffImage.html" title="Class to access TIFF images. Exif metadata is supported directly, IPTC is read from the Exif data,...">TiffImage</a> handles most of them and thus they all have MIME type "image/tiff", although a more specific MIME type may exist (e.g., "image/x-nikon-nef"). </dd></dl>
+
+<p>Implements <a class="el" href="classExiv2_1_1Image.html#a5c517b500586613595e2e1b62601657a">Exiv2::Image</a>.</p>
+
+</div>
+</div>
+<a id="aa0191ddc065a76551537efa4755c4a57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0191ddc065a76551537efa4755c4a57">&#9670;&nbsp;</a></span>readMetadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Exiv2::QuickTimeVideo::readMetadata </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read all metadata supported by a specific image format from the image. Before this method is called, the image metadata will be cleared. </p>
+<p>This method returns success even if no metadata is found in the image. Callers must therefore check the size of individual metadata types before accessing the data.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if opening or reading of the file fails or the image data is not valid (does not look like data of the specific image type). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classExiv2_1_1Image.html#a198b8d5924d6441748aa162130c96a5f">Exiv2::Image</a>.</p>
+
+</div>
+</div>
+<a id="a2d034e6fbfaf1c5dc95d7a728f71e6c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d034e6fbfaf1c5dc95d7a728f71e6c3">&#9670;&nbsp;</a></span>tagDecoder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Exiv2::QuickTimeVideo::tagDecoder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classExiv2_1_1DataBuf.html">Exiv2::DataBuf</a> &amp;&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Interpret tag information, and call the respective function to save it in the respective XMP container. Decodes a Tag Information and saves it in the respective XMP container, if the block size is small. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>Data buffer which cotains tag ID. </td></tr>
+    <tr><td class="paramname">size</td><td>Size of the data block used to store Tag Information. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9d39c61bf9e07042cb8b05539de739b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d39c61bf9e07042cb8b05539de739b9">&#9670;&nbsp;</a></span>writeMetadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Exiv2::QuickTimeVideo::writeMetadata </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write metadata back to the image. </p>
+<p>All existing metadata sections in the image are either created, replaced, or erased. If values for a given metadata type have been assigned, a section for that metadata type will either be created or replaced. If no values have been assigned to a given metadata type, any exists section for that metadata type will be removed from the image.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Error</td><td>if the operation fails </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58">Exiv2::Image</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>quicktimevideo.hpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

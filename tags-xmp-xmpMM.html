@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Exiv2 - Image metadata library and tools</title>
+
+  <!-- Doxygen styles -->
+  <link href="doc/doxygen.css" rel="stylesheet" type="text/css">
+  <link href="doc/customdoxygen.css" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="include/exiv2.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img alt="Exiv2" src="include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="getting-started.html">Getting started</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="whatsnew.html">What's New</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+        <li><a href="makernote.html">Makernote</a></li>
+        <li><a href="doc/examples.html">Examples</a></li>
+        <li><a href="doc/index.html">API</a></li>
+        <li><a href="manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+	    <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="page-header">
+    <h1>Metadata reference tables</h1>
+  </div>
+
+<div><h2>XMP Media Management Schema</h2></div>
+<p>The XMP Media Management Schema is primarily for use by digital asset management (DAM) systems.</p>
+<p>The following XMP properties are "owned" by the DAM system and should be set by applications
+under their direction; they should not be used by unmanaged files: xmpMM:ManagedFrom,
+xmpMM:Manager, xmpMM:ManageTo, xmpMM:ManageUI, xmpMM:ManagerVariant.</p>
+<p>The following properties are owned by the DAM system for managed files, but can also be
+used by applications for unmanaged files: xmpMM:DerivedFrom, xmpMM:DocumentID,
+xmpMM:RenditionClass, xmpMM:RenditionParams, xmpMM:VersionID, xmpMM:Versions.</p>
+<p>The xmpMM:History property is always owned by the application.
+ <ul>
+  <li>Exiv2 keys are <code>Xmp.xmpMM.&lt;Property&gt;</code>
+  <li>The schema namespace URI is <code>http://ns.adobe.com/xap/1.0/mm/</code></li>
+  <li>The preferred schema namespace prefix is <code>xmpMM</code></li>
+ </ul>
+Reference: <a href="http://www.adobe.com/devnet/xmp.html" title="XMP specification">XMP Specification and Documentation</a>
+</p>
+
+<table class="table table-striped">
+<thead><tr>
+<th>Property</th>
+<th>Label</th>
+<th>Value type</th>
+<th>Exiv2 type</th>
+<th>Category</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>DerivedFrom</td>
+<td>Derived From</td>
+<td>ResourceRef</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>A reference to the original document from which this one is derived. It is a minimal reference; missing components can be assumed to be unchanged. For example, a new version might only need to specify the instance ID and version number of the previous version, or a rendition might only need to specify the instance ID and rendition class of the original.</td>
+</tr>
+<tr>
+<td>DocumentID</td>
+<td>Document ID</td>
+<td>URI</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The common identifier for all versions and renditions of a document. It should be based on a UUID; see Document and Instance IDs below.</td>
+</tr>
+<tr>
+<td>History</td>
+<td>History</td>
+<td>seq ResourceEvent</td>
+<td>XmpSeq</td>
+<td>Internal</td>
+<td>An ordered array of high-level user actions that resulted in this resource. It is intended to give human readers a general indication of the steps taken to make the changes from the previous version to this one. The list should be at an abstract level; it is not intended to be an exhaustive keystroke or other detailed history.</td>
+</tr>
+<tr>
+<td>Ingredients</td>
+<td>Ingredients</td>
+<td>bag ResourceRef</td>
+<td>XmpBag</td>
+<td>Internal</td>
+<td>References to resources that were incorporated, byinclusion or reference, into this resource.</td>
+</tr>
+<tr>
+<td>InstanceID</td>
+<td>Instance ID</td>
+<td>URI</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>An identifier for a specific incarnation of a document, updated each time a file is saved. It should be based on a UUID; see Document and Instance IDs below.</td>
+</tr>
+<tr>
+<td>ManagedFrom</td>
+<td>Managed From</td>
+<td>ResourceRef</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>A reference to the document as it was prior to becoming managed. It is set when a managed document is introduced to an asset management system that does not currently own it. It may or may not include references to different management systems.</td>
+</tr>
+<tr>
+<td>Manager</td>
+<td>Manager</td>
+<td>AgentName</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The name of the asset management system that manages this resource. Along with xmpMM: ManagerVariant, it tells applications which asset management system to contact concerning this document.</td>
+</tr>
+<tr>
+<td>ManageTo</td>
+<td>Manage To</td>
+<td>URI</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>A URI identifying the managed resource to the asset management system; the presence of this property is the formal indication that this resource is managed. The form and content of this URI is private to the asset management system.</td>
+</tr>
+<tr>
+<td>ManageUI</td>
+<td>Manage UI</td>
+<td>URI</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>A URI that can be used to access information about the managed resource through a web browser. It might require a custom browser plug-in.</td>
+</tr>
+<tr>
+<td>ManagerVariant</td>
+<td>Manager Variant</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Specifies a particular variant of the asset management system. The format of this property is private to the specific asset management system.</td>
+</tr>
+<tr>
+<td>OriginalDocumentID</td>
+<td>Original Document ID</td>
+<td>URI</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Refer to Part 1, Data Model, Serialization, and Core Properties, for definition.</td>
+</tr>
+<tr>
+<td>Pantry</td>
+<td>Pantry</td>
+<td>bag struct</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Each array item has a structure value with a potentially unique set of fields, containing extracted XMP from a component. Each field is a property from the XMP of a contained resource component, with all substructure preserved. Each pantry entry shall contain an xmpMM:InstanceID. Only one copy of the pantry entry for any given xmpMM:InstanceID shall be retained in the pantry. Nested pantry items shall be removed from the individual pantry item and promoted to the top level of the pantry.</td>
+</tr>
+<tr>
+<td>RenditionClass</td>
+<td>Rendition Class</td>
+<td>RenditionClass</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The rendition class name for this resource. This property should be absent or set to default for a document version that is not a derived rendition.</td>
+</tr>
+<tr>
+<td>RenditionParams</td>
+<td>Rendition Params</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Can be used to provide additional rendition parameters that are too complex or verbose to encode in xmpMM: RenditionClass.</td>
+</tr>
+<tr>
+<td>VersionID</td>
+<td>Version ID</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The document version identifier for this resource. Each version of a document gets a new identifier, usually simply by incrementing integers 1, 2, 3 . . . and so on. Media management systems can have other conventions or support branching which requires a more complex scheme.</td>
+</tr>
+<tr>
+<td>Versions</td>
+<td>Versions</td>
+<td>seq Version</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The version history associated with this resource. Entry [1] is the oldest known version for this document, entry [last()] is the most recent version. Typically, a media management system would fill in the version information in the metadata on check-in. It is not guaranteed that a complete history  versions from the first to this one will be present in the xmpMM:Versions property. Interior version information can be compressed or eliminated and the version history can be truncated at some point.</td>
+</tr>
+<tr>
+<td>LastURL</td>
+<td>Last URL</td>
+<td>URL</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Deprecated for privacy protection.</td>
+</tr>
+<tr>
+<td>RenditionOf</td>
+<td>Rendition Of</td>
+<td>ResourceRef</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Deprecated in favor of xmpMM:DerivedFrom. A reference to the document of which this is a rendition.</td>
+</tr>
+<tr>
+<td>SaveID</td>
+<td>Save ID</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Deprecated. Previously used only to support the xmpMM:LastURL property.</td>
+</tr>
+</tbody>
+</table>
+
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>

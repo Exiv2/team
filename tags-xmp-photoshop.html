@@ -1,0 +1,339 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Exiv2 - Image metadata library and tools</title>
+
+  <!-- Doxygen styles -->
+  <link href="doc/doxygen.css" rel="stylesheet" type="text/css">
+  <link href="doc/customdoxygen.css" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="include/exiv2.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img alt="Exiv2" src="include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="getting-started.html">Getting started</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="whatsnew.html">What's New</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+        <li><a href="makernote.html">Makernote</a></li>
+        <li><a href="doc/examples.html">Examples</a></li>
+        <li><a href="doc/index.html">API</a></li>
+        <li><a href="manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+	    <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="page-header">
+    <h1>Metadata reference tables</h1>
+  </div>
+<div><h2>Photoshop Schema</h2></div>
+<p>This schema specifies XMP properties used by Adobe Photoshop.
+ <ul>
+  <li>Exiv2 keys are <code>Xmp.photoshop.&lt;Property&gt;</code>
+  <li>The schema namespace URI is <code>http://ns.adobe.com/photoshop/1.0/</code></li>
+  <li>The preferred schema namespace prefix is <code>photoshop</code></li>
+ </ul>
+Reference: <a href="http://www.adobe.com/devnet/xmp.html" title="XMP specification">XMP Specification and Documentation</a>
+</p>
+
+<table class="table table-striped">
+<thead><tr>
+<th>Property</th>
+<th>Label</th>
+<th>Value type</th>
+<th>Exiv2 type</th>
+<th>Category</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>DateCreated</td>
+<td>Date Created</td>
+<td>Date</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The date the intellectual content of the document was created (rather than the creation date of the physical representation), following IIM conventions. For example, a photo taken during the American Civil War would have a creation date during that epoch (1861-1865) rather than the date the photo was digitized for archiving.</td>
+</tr>
+<tr>
+<td>Headline</td>
+<td>Headline</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Headline.</td>
+</tr>
+<tr>
+<td>Country</td>
+<td>Country</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Country/primary location.</td>
+</tr>
+<tr>
+<td>State</td>
+<td>State</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Province/state.</td>
+</tr>
+<tr>
+<td>City</td>
+<td>City</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>City.</td>
+</tr>
+<tr>
+<td>Credit</td>
+<td>Credit</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Credit.</td>
+</tr>
+<tr>
+<td>AuthorsPosition</td>
+<td>Authors Position</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>By-line title.</td>
+</tr>
+<tr>
+<td>CaptionWriter</td>
+<td>Caption Writer</td>
+<td>ProperName</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Writer/editor.</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>Category</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Category. Limited to 3 7-bit ASCII characters.</td>
+</tr>
+<tr>
+<td>Instructions</td>
+<td>Instructions</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Special instructions.</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Source</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Source.</td>
+</tr>
+<tr>
+<td>SupplementalCategories</td>
+<td>Supplemental Categories</td>
+<td>bag Text</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>Supplemental category.</td>
+</tr>
+<tr>
+<td>TransmissionReference</td>
+<td>Transmission Reference</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Original transmission reference.</td>
+</tr>
+<tr>
+<td>Urgency</td>
+<td>Urgency</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Urgency. Valid range is 1-8.</td>
+</tr>
+<tr>
+<td>ICCProfile</td>
+<td>ICC Profile</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The colour profile, such as AppleRGB, AdobeRGB1998.</td>
+</tr>
+<tr>
+<td>ColorMode</td>
+<td>Color Mode</td>
+<td>Closed Choice of Integer</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The colour mode. One of: 0 = Bitmap, 1 = Grayscale, 2 = Indexed, 3 = RGB, 4 = CMYK, 7 = Multichannel, 8 = Duotone, 9 = Lab.</td>
+</tr>
+<tr>
+<td>AncestorID</td>
+<td>Ancestor ID</td>
+<td>URI</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The unique identifier of a document.</td>
+</tr>
+<tr>
+<td>DocumentAncestors</td>
+<td>Document Ancestors</td>
+<td>bag Ancestor</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>If the source document for a copy-and-paste or place operation has a document ID, that ID is added to this list in the destination document's XMP.</td>
+</tr>
+<tr>
+<td>History</td>
+<td>History</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The history that appears in the FileInfo panel, if activated in the application preferences.</td>
+</tr>
+<tr>
+<td>TextLayers</td>
+<td>Text Layers</td>
+<td>seq Layer</td>
+<td>XmpSeq</td>
+<td>External</td>
+<td>If a document has text layers, this property caches the text for each layer.</td>
+</tr>
+<tr>
+<td>LayerName</td>
+<td>Layer Name</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The identifying name of the text layer.</td>
+</tr>
+<tr>
+<td>LayerText</td>
+<td>Layer Text</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The text content of the text layer.</td>
+</tr>
+<tr>
+<td>EmbeddedXMPDigest</td>
+<td>Embedded XMP Digest</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Embedded XMP Digest.</td>
+</tr>
+<tr>
+<td>LegacyIPTCDigest</td>
+<td>Legacy IPTC Digest</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Legacy IPTC Digest.</td>
+</tr>
+<tr>
+<td>SidecarForExtension</td>
+<td>Sidecar F or Extension</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Filename extension of associated image file.</td>
+</tr>
+</tbody>
+</table>
+
+
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceExiv2.html">Exiv2</a></li><li class="navelem"><a class="el" href="classExiv2_1_1TiffParser.html">TiffParser</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="classExiv2_1_1TiffParser-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Exiv2::TiffParser Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Stateless parser class for data in TIFF format. Images use this class to decode and encode TIFF data. It is a wrapper of the internal class Internal::TiffParserWorker.  
+ <a href="classExiv2_1_1TiffParser.html#details">More...</a></p>
+
+<p><code>#include &lt;tiffimage.hpp&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a2383b828823e000600c09bd5c96bde2c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1TiffParser.html#a2383b828823e000600c09bd5c96bde2c">decode</a> (<a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> &amp;exifData, <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;iptcData, <a class="el" href="classExiv2_1_1XmpData.html">XmpData</a> &amp;xmpData, const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *pData, uint32_t size)</td></tr>
+<tr class="memdesc:a2383b828823e000600c09bd5c96bde2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decode metadata from a buffer <em>pData</em> of length <em>size</em> with data in TIFF format to the provided metadata containers.  <a href="classExiv2_1_1TiffParser.html#a2383b828823e000600c09bd5c96bde2c">More...</a><br /></td></tr>
+<tr class="separator:a2383b828823e000600c09bd5c96bde2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22522605aa9135493a08969aaaa227a2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespaceExiv2.html#aabfd4f86ce5d686323498c42cfd6cde7">WriteMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1TiffParser.html#a22522605aa9135493a08969aaaa227a2">encode</a> (<a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;io, const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *pData, uint32_t size, <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> byteOrder, const <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> &amp;exifData, const <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;iptcData, const <a class="el" href="classExiv2_1_1XmpData.html">XmpData</a> &amp;xmpData)</td></tr>
+<tr class="memdesc:a22522605aa9135493a08969aaaa227a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode metadata from the provided metadata to TIFF format.  <a href="classExiv2_1_1TiffParser.html#a22522605aa9135493a08969aaaa227a2">More...</a><br /></td></tr>
+<tr class="separator:a22522605aa9135493a08969aaaa227a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Stateless parser class for data in TIFF format. Images use this class to decode and encode TIFF data. It is a wrapper of the internal class Internal::TiffParserWorker. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2383b828823e000600c09bd5c96bde2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2383b828823e000600c09bd5c96bde2c">&#9670;&nbsp;</a></span>decode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> Exiv2::TiffParser::decode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> &amp;&#160;</td>
+          <td class="paramname"><em>exifData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;&#160;</td>
+          <td class="paramname"><em>iptcData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classExiv2_1_1XmpData.html">XmpData</a> &amp;&#160;</td>
+          <td class="paramname"><em>xmpData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
+          <td class="paramname"><em>pData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Decode metadata from a buffer <em>pData</em> of length <em>size</em> with data in TIFF format to the provided metadata containers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exifData</td><td>Exif metadata container. </td></tr>
+    <tr><td class="paramname">iptcData</td><td>IPTC metadata container. </td></tr>
+    <tr><td class="paramname">xmpData</td><td>XMP metadata container. </td></tr>
+    <tr><td class="paramname">pData</td><td>Pointer to the data buffer. Must point to data in TIFF format; no checks are performed. </td></tr>
+    <tr><td class="paramname">size</td><td>Length of the data buffer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Byte order in which the data is encoded. </dd></dl>
+
+</div>
+</div>
+<a id="a22522605aa9135493a08969aaaa227a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22522605aa9135493a08969aaaa227a2">&#9670;&nbsp;</a></span>encode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespaceExiv2.html#aabfd4f86ce5d686323498c42cfd6cde7">WriteMethod</a> Exiv2::TiffParser::encode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;&#160;</td>
+          <td class="paramname"><em>io</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
+          <td class="paramname"><em>pData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a>&#160;</td>
+          <td class="paramname"><em>byteOrder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> &amp;&#160;</td>
+          <td class="paramname"><em>exifData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;&#160;</td>
+          <td class="paramname"><em>iptcData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classExiv2_1_1XmpData.html">XmpData</a> &amp;&#160;</td>
+          <td class="paramname"><em>xmpData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Encode metadata from the provided metadata to TIFF format. </p>
+<p>The original binary image in the memory block <em>pData</em>, <em>size</em> is parsed and updated in-place if possible ("non-intrusive" writing). If that is not possible (e.g., if new tags were added), the entire TIFF structure is re-written to the <em>io</em> instance ("intrusive" writing).<br  />
+ The return value indicates which write method was used. If it is <code>wmNonIntrusive</code>, the original memory <em>pData</em>, <em>size</em> contains the result and nothing is written to <em>io</em>. If the return value is <code>wmIntrusive</code>, a new TIFF structure was created and written to <em>io</em>. The memory block <em>pData</em>, <em>size</em> may be partly updated in this case and should not be used anymore.</p>
+<dl class="section note"><dt>Note</dt><dd>If there is no metadata to encode, i.e., all metadata containers are empty, then the return value is <code>wmIntrusive</code> and nothing is written to <em>io</em>, i.e., no TIFF header is written.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">io</td><td>IO instance to write the binary image to in case of "intrusive" writing. Nothing is written to <em>io</em> in the case of "non-intrusive" writing. </td></tr>
+    <tr><td class="paramname">pData</td><td>Pointer to the binary image data buffer. Must point to data in TIFF format; no checks are performed. Will be modified if "non-intrusive" writing is possible. </td></tr>
+    <tr><td class="paramname">size</td><td>Length of the data buffer. </td></tr>
+    <tr><td class="paramname">byteOrder</td><td>Byte order to use. </td></tr>
+    <tr><td class="paramname">exifData</td><td>Exif metadata container. </td></tr>
+    <tr><td class="paramname">iptcData</td><td>IPTC metadata container. </td></tr>
+    <tr><td class="paramname">xmpData</td><td>XMP metadata container.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Write method used. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>tiffimage.hpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

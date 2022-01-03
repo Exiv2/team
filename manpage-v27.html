@@ -1,0 +1,569 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource">
+
+  <link rel="icon" href="include/favicon.ico">
+
+  <title>Exiv2 - Image metadata library and tools</title>
+
+  <!-- Doxygen styles -->
+  <link href="doc/doxygen.css" rel="stylesheet" type="text/css">
+  <link href="doc/customdoxygen.css" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="include/exiv2.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img alt="Exiv2" src="include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="getting-started.html">Getting started</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="whatsnew.html">What's New</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+        <li><a href="makernote.html">Makernote</a></li>
+        <li><a href="doc/index.html">API</a></li>
+        <li class="active"><a href="manpage.html">Manual</a></li>
+	    <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="page-header">
+    <h1>Exiv2 utility manual</h1>
+  </div>
+  <p class="lead">A Unix-style "manpage" for the Exiv2 command line utility.
+  </p>
+  <a href="exiv2-manpage.pdf" title="Exiv2 man page (PDF)" class="btn btn-danger margin-bottom-m">
+    <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>&nbsp; Download PDF
+  </a>
+
+  <HTML>
+<style> pre { background : #eee; }
+</style>
+<div style="background:#ddd;">
+<H2>NAME</H2>
+<PRE>Exiv2 - Image metadata manipulation tool</PRE>
+<H2>SYNOPSIS</H2><PRE>
+       <B>exiv2</B> [<I>options</I>] [<I>action</I>] <I>file</I> ...
+</PRE>
+<H2>DESCRIPTION</H2><PRE>
+       <B>exiv2</B> is a program to read and write Exif, IPTC, XMP metadata and image
+       comments and can read many vendor makernote tags. The  program  option-
+       ally  converts  between  Exif tags, XMP properties and IPTC datasets as
+       recommended by the Exif Standard, the IPTC Standard, the XMP specifica-
+       tion and Metadata Working Group guidelines.
+       The following image formats are supported:
+
+       <B>Type</B>   <B>Exif</B>         <B>IPTC</B>         <B>XMP</B>          <B>Image</B> <B>Comments</B>          <B>ICC</B> <B>Profile</B>
+       ----------------------------------------------------------------------------------
+       JPEG   Read/Write   Read/Write   Read/Write   Read/Write              Read/Write
+       EXV    Read/Write   Read/Write   Read/Write   Read/Write Read/Write
+       CR2    Read/Write   Read/Write   Read/Write   -                       Read/Write
+       CRW    Read/Write   -            -            Read/Write              -
+       MRW    Read         Read         Read         -                       -
+       TIFF   Read/Write   Read/Write   Read/Write   -                       Read/Write
+       WEBP   Read/Write   -            Read/Write   -                       Read/Write
+       DNG    Read/Write   Read/Write   Read/Write   -                       Read/Write
+       NEF    Read/Write   Read/Write   Read/Write   -                       Read/Write
+       PEF    Read/Write   Read/Write   Read/Write   -                       Read/Write
+       ARW    Read         Read         Read         -                       -
+       RW2    Read         Read         Read         -                       -
+       SR2    Read         Read         Read         -                       -
+       SRW    Read/Write   Read/Write   Read/Write   -                       -
+       ORF    Read/Write   Read/Write   Read/Write   -                       -
+       PNG    Read/Write   Read/Write   Read/Write   Read/Write              Read/Write
+       PGF    Read/Write   Read/Write   Read/Write   Read/Write              Read/Write
+       RAF    Read         Read         Read         -                       -
+       EPS    -            -            Read/Write   -                       -
+       XMP    -            -            Read/Write   -                       -
+       GIF    -            -            -            -                       -
+       PSD    Read/Write   Read/Write   Read/Write   -                       -
+       TGA    -            -            -            -                       -
+       BMP    -            -            -            -                       -
+       JP2    Read/Write   Read/Write   Read/Write   -                       Read/Write
+
+       <B>o</B> Support  for  GIF, TGA and BMP images is minimal: the image format is
+         recognized, a MIME type assigned to it and the height  and  width  of
+         the image are determined.
+
+       <B>o</B> Reading  other  TIFF-like  RAW image formats, which are not listed in
+         the table, may also work.
+
+
+</PRE>
+<H2>ACTIONS</H2><PRE>
+       The <I>action</I> argument is only required  if  it  is  not  clear  from  the
+       <I>options</I> which action is implied.
+
+       <B>pr</B> <B>|</B> <B>print</B>
+              Print image metadata. This is the default action, i.e., the com-
+
+       <B>rm</B> <B>|</B> <B>delete</B>
+              Delete image metadata from the files.
+
+       <B>ad</B> <B>|</B> <B>adjust</B>
+              Adjust  Exif timestamps by the given time. Requires at least one
+              of the options <B>-a</B> <I>time</I>, <B>-Y</B> <I>yrs</I>, <B>-O</B> <I>mon</I> or <B>-D</B> <I>day</I>.
+
+       <B>mo</B> <B>|</B> <B>modify</B>
+              Apply commands to modify (add, set, delete) the Exif,  IPTC  and
+              XMP metadata of image files. Requires option <B>-c</B>, <B>-m</B> or <B>-M</B>.
+
+       <B>mv</B> <B>|</B> <B>rename</B>
+              Rename  files  and/or  set file timestamps according to the Exif
+              create timestamp. Uses the value of tag Exif.Photo.DateTimeOrig-
+              inal  or,  if  not present, Exif.Image.DateTime to determine the
+              timestamp. The filename format can be set with <B>-r</B> <I>fmt</I>, timestamp
+              options are <B>-t</B> and <B>-T</B>.
+
+       <B>fi</B> <B>|</B> <B>fixiso</B>
+              Copy  the ISO setting from one of the proprietary Nikon or Canon
+              makernote   ISO   tags   to   the   regular   Exif   ISO    tag,
+              Exif.Photo.ISOSpeedRatings. Does not overwrite an existing stan-
+              dard Exif ISO tag.
+
+       <B>fc</B> <B>|</B> <B>fixcom</B>
+              Fix the  character  encoding  of  Exif  Unicode  user  comments.
+              Decodes the comment using the auto-detected or specified charac-
+              ter encoding and writes it back in UCS-2. Use option <B>-n</B> to spec-
+              ify the current encoding of the comment if necessary.
+
+
+</PRE>
+<H2>COMMAND SUMMARY</H2><PRE>
+       exiv2 [ opt [arg] ]+ [ act ] file ...
+
+       option [arg]     long option  description
+       -a  tim          --adjust     Modify time stamps.  [+|-]HH[:MM[:SS[.mmm]]]
+       -b               --binary     Show large binary values (default is to suppress them).
+       -c  txt          --comment    JPEG comment string to set in the image ('modify' action).  ...
+       -d  tgt          --delete     Delete target(s) for the 'delete' action. ...
+       -D  +-n          --days       Time  adjustment by a positive or negative number of days ...
+       -e  tgt          --extract    Extract target(s) for the 'extract' action.
+       -f               --force      Do not prompt before overwriting existing  files ...
+       -F               --Force      Do not prompt before renaming files (Force rename) ...
+       -g  key          --grep       Only output info for this Exiv2 key
+       -h               --help       Display help and exit.
+       -i  tgt          --insert     Insert target(s) for the 'insert' action. ...
+       -k               --keep       Preserve file timestamps when updating files
+       -K  key          --key        Report key.  Similar to -g (grep) however key must match exactly.
+       -l  dir          --location   Location (directory) for files to be inserted or extracted.
+       -m  file         --modify     read commands from cmd-file
+       -M  cmd          --Modify     Command line for the 'modify' action. ...
+       -n  enc          --encode     Charset to decode Exif Unicode user comments. See: man 3 iconv_open
+       act              pr | ex | in | rm | ad | mo | mv | fi | fc
+                        print, extract, insert, delete, adjust, modify, rename, fixiso, fixcom
+
+       cmd              See "Commands" below.
+
+       flg              E | I | X | x | g | k | l | n | y | c | s | v | t | h
+                        Exif, IPTC, XMP, num, grp, key, label, name, type, count, size, vanilla, translated, hex
+
+       fmt              Default format is %Y%m%d_%H%M%S.
+
+       lvl              d | i | i | w | e
+                        debug, info, warning, error
+
+       mod              s | a | e | t | v | h | i | x | c | p | i | C | R | S | X
+                        summary, all, exif, translated, vanilla, hex, iptc, xmp, comment, preview,
+                        ICC Profile, Recursive Structure, Simple Structure, raw XMP
+
+       tgt              a | c | e | i | p | t | x | C | X | XX | -
+                        all, comment, exif, iptc, preview, thumb, xmp, ICC Profile, SideCar, RawXMP, stdin/out
+
+
+
+</PRE>
+<H2>OPTIONS</H2><PRE>
+       <B>-h</B>     Display help and exit.
+
+       <B>-V</B>     Show the program version and exit.
+              When <B>-V</B> is combined with <B>-v</B> (Verbose version), build information
+              is printed to standard  output  along  with  a  list  of  shared
+              libraries which have been loaded into memory. Verbose version is
+              supported on Windows (MSVC, Cygwin and MinGW builds), MacOSX and
+              Linux and is provided for test and debugging.
+
+       <B>-v</B>     Be verbose during the program run.
+
+       <B>-q</B>     Silence  warnings and error messages from the Exiv2 library dur-
+              ing the program run (quiet). Note that options <B>-v</B> and <B>-q</B> can  be
+              used at the same time.
+
+       <B>-Q</B> <I>lvl</I> Set the log-level to 'd'(ebug), 'i'(nfo), 'w'(arning), 'e'(rror)
+              or 'm'(ute). The default log-level is 'w'. <B>-Qm</B> is equivalent  to
+              <B>-q</B>. All log messages are written to standard error.
+
+       <B>-b</B>     Show large binary values (default is to suppress them).
+
+       <B>-u</B>     Show  unknown tags (default is to suppress tags which don't have
+              a name).
+
+       <B>-g</B> <I>key</I> Only keys which match the given key (grep).
+              Multiple <B>-g</B> options can be used to grep info for  several  keys.
+              Example: exiv2 -v -V -g webready -g time.
+
+              exiv2 -g Date -pt R.jpg
+              Exif.Image.DateTime           Ascii      20  2012:08:07 16:01:05
+              Exif.Photo.DateTimeOriginal   Ascii      20  2011:09:18 16:25:48
+              Exif.Photo.DateTimeDigitized  Ascii      20  2011:09:18 16:25:48
+
+       <B>-n</B> <I>enc</I> Charset to use to decode Exif Unicode user comments.  <I>enc</I>  is  a
+              name understood by <B>iconv_open(3)</B>, e.g., 'UTF-8'.
+
+       <B>-k</B>     Preserve file timestamps when updating files (keep). Can be used
+              with all options which update files.  The  flag  is  ignored  by
+              read-only options.
+
+       <B>-t</B>     Set the file timestamp according to the Exif create timestamp in
+              addition to renaming the file (overrides  <B>-k</B>).  This  option  is
+              only used with the 'rename' action.
+
+       <B>-T</B>     Only  set  the file timestamp according to the Exif create time-
+              stamp, do not rename the file (overrides  <B>-k</B>).  This  option  is
+              only  used  with  the  'rename' action. Note: On Windows you may
+              have to set the TZ environment variable for this option to  work
+              correctly.
+
+       <B>-f</B>     Do  not  prompt  before  overwriting existing files (force over-
+              write).
+
+       <B>-F</B>     Do not prompt before renaming files (Force rename). Appends '_1'
+              ('_2', ...) to the name of the new file.
+
+       <B>-a</B> <I>time</I>
+              Time  adjustment  in  the format [-]HH[:MM[:SS]]. This option is
+              only used with the 'adjust' action. Examples: 1 adds  one  hour,
+              1:01  adds  one  hour and one minute, -0:00:30 subtracts 30 sec-
+              onds.
+
+       <B>-Y</B> <I>yrs</I> Time adjustment by a positive or negative number of  years,  for
+              the 'adjust' action.
+
+       <B>-O</B> <I>mon</I> Time  adjustment by a positive or negative number of months, for
+              the 'adjust' action.
+
+       <B>-D</B> <I>day</I> Time adjustment by a positive or negative number  of  days,  for
+              the 'adjust' action.
+
+       <B>-p</B> <I>mode</I>
+              Print mode for the 'print' action. Possible modes are:
+              s : print a summary of the Exif metadata (the default)
+              a : print Exif, IPTC and XMP metadata (shortcut for -Pkyct)
+              e : print Exif metadata (shortcut for -PEkycv)
+              t : interpreted (translated) Exif tags (-PEkyct)
+              v : plain Exif tag values (-PExgnycv)
+              h : hexdump of the Exif data (-PExgnycsh)
+              i : IPTC datasets (-PIkyct)
+              x : XMP properties (-PXkyct)
+              c : JPEG comment
+              E : include Exif tags in the list
+              I : IPTC datasets
+              X : XMP properties
+              x : print a column with the tag number
+              g : group name
+              k : key
+              l : tag label
+              n : tag name
+              y : type
+              c : number of components (count)
+              s : size in bytes
+              v : plain data value (vanilla values)
+              V  :  plain  data  value AND the word 'set ' (for use with exiv2
+              -m-)
+              t : interpreted (translated) human readable data
+              h : hexdump of the data
+
+       <B>-d</B> <I>tgt</I> Delete target(s) for the 'delete' action. Possible targets are:
+              a : all supported metadata (the default)
+              e : Exif section
+              t : Exif thumbnail only
+              i : IPTC data
+              x : XMP packet
+              c : JPEG comment
+              C : ICC Profile
+              I : All IPTC data
+
+       <B>-i</B> <I>tgt</I> Insert target(s) for the 'insert' action. Possible  targets  are
+              the same as those for the <B>-d</B> option, plus an optional modifier:
+
+              X  :  Insert  metadata  from an XMP sidecar file &lt;file&gt;.xmp. The
+              remaining insert targets determine what metadata to insert  from
+              the  sidecar  file.  Possible  are  Exif,  IPTC  and XMP and the
+              default is all of these. Note that the inserted  XMP  properties
+              include those converted to Exif and IPTC.
+
+              XX: Insert "raw" XMP metadata from a sidecar (see option -pX)
+
+              - : Read from stdin.  This option is intended for "filter" oper-
+              ations such as:
+              $ exiv2 -e{tgt}- <I>filename</I> | xmllint .... | exiv2 -i{tgt}-  <I>file-</I>
+              <I>name</I>
+
+              Only  JPEG thumbnails can be inserted (not TIFF thumbnails), and
+              must be named <I>file</I>-thumb.jpg.
+
+       <B>-e</B> <I>tgt</I> Extract target(s) for the 'extract' action. Possible targets are
+              the  same  as  those for the <B>-d</B> option, plus a target to extract
+              preview images and a modifier to generate an XMP sidecar file:
+              p[&lt;n&gt;[,&lt;m&gt; ...]] : Extract preview images.  The  optional  comma
+              separated  list  of  preview  image numbers is used to determine
+              which preview images to extract. The  available  preview  images
+
+
+       <B>-r</B> <I>fmt</I> Filename format for the 'rename' action. The format string  fol-
+              lows <B>strftime(3)</B> and supports the following keywords:
+
+              :basename:     original filename without extension
+              :dirname:      name of the directory holding the original file
+              :parentname:   name of parent directory
+              Default filename format is %Y%m%d_%H%M%S.
+
+       <B>-c</B> <I>txt</I> JPEG  comment string to set in the image ('modify' action). This
+              option can also be used with the 'extract' and 'insert'  actions
+              to modify metadata on-the-fly.
+
+       <B>-m</B> <I>file</I>
+              Command  file  for  the 'modify' action. This option can also be
+              used with the 'extract' and 'insert' actions to modify  metadata
+              on-the-fly.  -m- represents standard-input.
+
+       <B>-M</B> <I>cmd</I> Command  line  for  the 'modify' action. This option can also be
+              used with the 'extract' and 'insert' actions to modify  metadata
+              on-the-fly.   The format for the commands is the same as that of
+              the lines of a command file.
+
+       <B>-l</B> <I>dir</I> Location (directory) for files to be inserted or extracted.
+
+       <B>-S</B> <I>.suf</I>
+              Use suffix <I>.suf</I> for source files in 'insert' action.
+
+
+</PRE>
+<H2>COMMANDS</H2><PRE>
+       Commands for the 'modify' action can be read from a command file, e.g.,
+
+          exiv2 -m cmd.txt image.jpg
+
+       or given on the command line, as in
+
+          exiv2 -M"add Iptc.Application2.Credit String Mr. Smith" image.jpg
+
+       Note the quotes. Multiple <B>-m</B> and <B>-M</B> options can be combined, and a non-
+       standard XMP namespace registered.
+
+          exiv2 -M"reg myprefix http://ns.myprefix.me/" -M"add Xmp.myprefix.Whom Mr. Smith" -M"set Exif.Image.Artist Mr. Smith" image.jpg
+
+       When writing Exif, IPTC and XMP metadata, <B>exiv2</B> enforces only a correct
+       metadata  structure. It is possible to write tags with types and values
+       different from those specified in the standards, duplicate  Exif  tags,
+       undefined tags, or incomplete metadata. While <B>exiv2</B> is able to read all
+       metadata that it can write, other programs may have  difficulties  with
+       images that contain non standard-conforming metadata.
+
+   <B>Command</B> <B>format</B>
+       The format of a command is
+              <B>SLong</B> <B>|</B> <B>SRational</B> <B>|</B> <B>Comment</B> for Exif keys,
+              <B>String</B> <B>|</B> <B>Date</B> <B>|</B> <B>Time</B> <B>|</B> <B>Short</B> <B>|</B> <B>Undefined</B> for IPTC keys, and
+              <B>XmpText</B> <B>|</B> <B>XmpAlt</B> <B>|</B> <B>XmpBag</B> <B>|</B> <B>XmpSeq</B> <B>|</B> <B>LangAlt</B> for XMP keys.
+
+              A default <I>type</I> is used if none is explicitly given. The  default
+              is determined based on <I>key</I>.
+
+       <I>value</I>  The  remaining  text on the line is the value. It can optionally
+              be  enclosed  in  single  quotes  ('<I>value</I>')  or  double   quotes
+              ("<I>value</I>").
+
+              The  value is optional. Not providing any value is equivalent to
+              an empty value ("") and is mainly useful to create an XMP  array
+              property, e.g., a bag.
+
+              The  format  of Exif <B>Comment</B> values includes an optional charset
+              specification at the beginning:
+              <B>[charset=Ascii|Jis|Unicode|Undefined</B> <B>]</B><I>comment</I>
+
+              <B>Undefined</B> is used by default if the value doesn't start  with  a
+              charset definition.
+
+              The format for an IPTC <B>Date</B> value is:
+
+                  YYYY-MM-DD (year, month, day)
+
+              The format for an IPTC <B>Time</B> value is:
+
+                  HH:MM:SS (hours, minutes, seconds)
+
+              and may optionally be followed by:
+
+                 -HH:MM or +HH:MM (hours, minutes ahead/behind UTC)
+
+              The format of <B>Rational</B> (and <B>SRational</B>) is one of:
+
+                 integer | integer/integer | Fnumber | number
+
+              Rational Examples:
+
+              $ exiv2 "-Mset Exif.Photo.MaxApertureValue 557429/62500" X.jpg
+              $ exiv2 "-Mset Exif.Photo.MaxApertureValue F5.6" X.jpg
+
+              The  Rational  format  Fnumber is for the convenience of setting
+              aperture values.  Aperture values are stored in Exif is an  <B>APEX</B>
+              value which can be evaluated by the expression:
+
+              apex-value  =    log(Fnumber) * 2.0 / log(2.0)
+              number      = exp(apex-value * log(2.0) / 2.0)
+
+              The Rational format Fnumber is valid for any <B>Rational</B>, even when
+              the key is not an Aperture.  More information about  <B>APEX</B>  value
+              To  remove  a language specification, set the value to '' (empty
+              string)
+              exiv2 -M'set Xmp.dc.title lang="en-US"' X.jpg
+              To remove all language specifications, delete the key:
+              $ exiv2 -M'del Xmp.dc.title' X.jpg
+              To register additional XMP namespaces, combine the command with:
+              <B>reg</B> <I>prefix</I> <I>namespace</I>
+
+   <B>Command</B> <B>file</B> <B>format</B>
+       Empty  lines  and  lines  starting with <B>#</B> in a command file are ignored
+       (comments). Remaining lines are commands as described above.
+
+
+</PRE>
+<H2>EXAMPLES</H2><PRE>
+       exiv2 *.jpg
+              Prints a summary of the Exif information for all JPEG  files  in
+              the directory.
+
+       exiv2 -pi image.jpg
+              Prints the IPTC metadata of the image.
+
+       exiv2 rename img_1234.jpg
+              Renames   img_1234.jpg  (taken  on  13-Nov-05  at  22:58:31)  to
+              20051113_225831.jpg
+
+       exiv2 -r':basename:_%Y%m' rename img_1234.jpg
+              Renames img_1234.jpg to img_1234_200511.jpg
+
+       exiv2 -et img1.jpg img2.jpg
+              Extracts  the  Exif  thumbnails  from   the   two   files   into
+              img1-thumb.jpg and img2-thumb.jpg.
+
+       exiv2 -it img1.jpg img2.jpg
+              Inserts  (copies)  metadata  from  img1.exv to img1.jpg and from
+              img2.exv to img2.jpg.
+
+       exiv2 -ep1,2 image.jpg
+              Extracts previews 1 and 2 from the image to the files image-pre-
+              view1.jpg and image-preview2.jpg.
+
+       exiv2 -eiX image.jpg
+              Extracts IPTC datasets into an XMP sidecar file image.xmp and in
+              the process converts them to "IPTC Core" XMP schema.
+
+       exiv2 -iixX image.jpg
+              Inserts IPTC and XMP metadata from an XMP sidecar file image.xmp
+              into  image.jpg.  The resulting IPTC datasets are converted from
+              the "IPTC Core" XMP schema properties in the sidecar file to the
+              older  IPTC  IIM4  format.  The  inserted XMP properties include
+              those in the "IPTC Core" XMP schema.
+
+       exiv2 -M"set Exif.Photo.UserComment  charset=Ascii  New  Exif  comment"
+       image.jpg
+              adapt  it  to  the  requirements of the target format. Some tags
+              copied like this may not make sense in the target image.
+
+
+</PRE>
+<H2>SEE ALSO</H2><PRE>
+       <I>http://www.exiv2.org/sample.html#modify</I>
+              Sample command files.
+
+       <I>http://www.exiv2.org/metadata.html</I>
+              Taglists with <I>key</I> and default <I>type</I> values.
+
+
+</PRE>
+<H2>AUTHORS</H2><PRE>
+       <B>exiv2</B> was written by Andreas Huggel and others.  The Exiv2 project  web
+       site is http://exiv2.org
+
+       This manual page was originally created for the Debian project by KELE-
+       MEN Peter &lt;fuji@debian.org&gt;.
+
+
+
+                                 Oct 19, 2016                         <B>EXIV2(1)</B>
+</PRE>
+</div>
+<HR>
+<ADDRESS>
+Man(1) output converted with
+<a href="http://www.oac.uci.edu/indiv/ehood/man2html.html">man2html</a>
+</ADDRESS>
+
+
+</div><!-- /.container -->
+<div id="footer">
+  <hr>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5">
+          Exiv2 v0.27.0.1
+
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2">
+        </div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 26-Oct-2018</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 26-Oct-2018</p></span>
+        </div><!-- /.col-sm-5 -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>

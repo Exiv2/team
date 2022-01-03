@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Exiv2 - Image metadata library and tools</title>
+
+  <!-- Doxygen styles -->
+  <link href="doc/doxygen.css" rel="stylesheet" type="text/css">
+  <link href="doc/customdoxygen.css" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="include/exiv2.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img alt="Exiv2" src="include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="getting-started.html">Getting started</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="whatsnew.html">What's New</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+        <li><a href="makernote.html">Makernote</a></li>
+        <li><a href="doc/examples.html">Examples</a></li>
+        <li><a href="doc/index.html">API</a></li>
+        <li><a href="manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+	    <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="page-header">
+    <h1>Metadata reference tables</h1>
+  </div>
+
+<div><div><h2>Dublin Core Schema</h2></div></div>
+<p>The Dublin Core schema provides a set of commonly used XMP properties.
+ <ul>
+  <li>Exiv2 keys are <code>Xmp.dc.&lt;Property&gt;</code>
+  <li>The schema namespace URI is <code>http://purl.org/dc/elements/1.1/</code></li>
+  <li>The preferred schema namespace prefix is <code>dc</code></li>
+ </ul>
+Reference: <a href="http://www.adobe.com/devnet/xmp.html" title="XMP specification">XMP Specification and Documentation</a>
+</p>
+
+<table class="table table-striped">
+<thead><tr>
+<th>Property</th>
+<th>Label</th>
+<th>Value type</th>
+<th>Exiv2 type</th>
+<th>Category</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>contributor</td>
+<td>Contributor</td>
+<td>bag ProperName</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>Contributors to the resource (other than the authors).</td>
+</tr>
+<tr>
+<td>coverage</td>
+<td>Coverage</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</td>
+</tr>
+<tr>
+<td>creator</td>
+<td>Creator</td>
+<td>seq ProperName</td>
+<td>XmpSeq</td>
+<td>External</td>
+<td>The authors of the resource (listed in order of precedence, if significant).</td>
+</tr>
+<tr>
+<td>date</td>
+<td>Date</td>
+<td>seq Date</td>
+<td>XmpSeq</td>
+<td>External</td>
+<td>Date(s) that something interesting happened to the resource.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Description</td>
+<td>Lang Alt</td>
+<td>LangAlt</td>
+<td>External</td>
+<td>A textual description of the content of the resource. Multiple values may be present for different languages.</td>
+</tr>
+<tr>
+<td>format</td>
+<td>Format</td>
+<td>MIMEType</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The file format used when saving the resource. Tools and applications should set this property to the save format of the data. It may include appropriate qualifiers.</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Identifier</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Unique identifier of the resource. Recommended best practice is to identify the resource by means of a string conforming to a formal identification system.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>Language</td>
+<td>bag Locale</td>
+<td>XmpBag</td>
+<td>Internal</td>
+<td>An unordered array specifying the languages used in the resource.</td>
+</tr>
+<tr>
+<td>publisher</td>
+<td>Publisher</td>
+<td>bag ProperName</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>An entity responsible for making the resource available. Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</td>
+</tr>
+<tr>
+<td>relation</td>
+<td>Relation</td>
+<td>bag Text</td>
+<td>XmpBag</td>
+<td>Internal</td>
+<td>Relationships to other documents. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</td>
+</tr>
+<tr>
+<td>rights</td>
+<td>Rights</td>
+<td>Lang Alt</td>
+<td>LangAlt</td>
+<td>External</td>
+<td>Informal rights statement, selected by language. Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</td>
+</tr>
+<tr>
+<td>source</td>
+<td>Source</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Unique identifier of the work from which this resource was derived.</td>
+</tr>
+<tr>
+<td>subject</td>
+<td>Subject</td>
+<td>bag Text</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>An unordered array of descriptive phrases or keywords that specify the topic of the content of the resource.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>Title</td>
+<td>Lang Alt</td>
+<td>LangAlt</td>
+<td>External</td>
+<td>The title of the document, or the name given to the resource. Typically, it will be a name by which the resource is formally known.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Type</td>
+<td>bag open Choice</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>A document type; for example, novel, poem, or working paper.</td>
+</tr>
+</tbody>
+</table>
+
+
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+</body>
+</html>

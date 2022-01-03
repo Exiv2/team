@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">iptcprint.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>Sample program to print the IPTC metadata of an image</p>
+<div class="fragment"><div class="line"><span class="comment">// ***************************************************************** -*- C++ -*-</span></div>
+<div class="line"><span class="comment">/*</span></div>
+<div class="line"><span class="comment"> * Copyright (C) 2004-2021 Exiv2 authors</span></div>
+<div class="line"><span class="comment"> * This program is part of the Exiv2 distribution.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
+<div class="line"><span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
+<div class="line"><span class="comment"> * as published by the Free Software Foundation; either version 2</span></div>
+<div class="line"><span class="comment"> * of the License, or (at your option) any later version.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
+<div class="line"><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
+<div class="line"><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
+<div class="line"><span class="comment"> * GNU General Public License for more details.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
+<div class="line"><span class="comment"> * along with this program; if not, write to the Free Software</span></div>
+<div class="line"><span class="comment"> * Foundation, Inc., 51 Franklin Street, 5th Floor, Boston, MA 02110-1301 USA.</span></div>
+<div class="line"><span class="comment"> */</span></div>
+<div class="line"><span class="comment">// iptcprint.cpp</span></div>
+<div class="line"><span class="comment">// Sample program to print the IPTC metadata of an image</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;exiv2/exiv2.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* <span class="keyword">const</span> argv[])</div>
+<div class="line"><span class="keyword">try</span> {</div>
+<div class="line">    <a name="a0"></a><a class="code" href="classExiv2_1_1XmpParser.html#aea661a7039adb5a748eb7639c8ce9294">Exiv2::XmpParser::initialize</a>();</div>
+<div class="line">    ::atexit(<a name="a1"></a><a class="code" href="classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2">Exiv2::XmpParser::terminate</a>);</div>
+<div class="line"><span class="preprocessor">#ifdef EXV_ENABLE_BMFF</span></div>
+<div class="line">    Exiv2::enableBMFF();</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (argc != 2) {</div>
+<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; file\n&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">return</span> 1;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="classExiv2_1_1Image.html#a89ad3ffe7a4e8a943d267d77843415fb">Exiv2::Image::AutoPtr</a> image = <a name="a2"></a><a class="code" href="classExiv2_1_1ImageFactory.html#aba929c4ca4a71625d12bcb97bcc28161">Exiv2::ImageFactory::open</a>(argv[1]);</div>
+<div class="line">    assert (image.get() != 0);</div>
+<div class="line">    image-&gt;readMetadata();</div>
+<div class="line"> </div>
+<div class="line">    <a name="_a3"></a><a class="code" href="classExiv2_1_1IptcData.html">Exiv2::IptcData</a> &amp;iptcData = image-&gt;iptcData();</div>
+<div class="line">    <span class="keywordflow">if</span> (iptcData.<a name="a4"></a><a class="code" href="classExiv2_1_1IptcData.html#a4c8b0bc3d09b8dc0a97ed0fd26370c7f">empty</a>()) {</div>
+<div class="line">        std::string error(argv[1]);</div>
+<div class="line">        error += <span class="stringliteral">&quot;: No IPTC data found in the file&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">throw</span> <a name="a5"></a><a class="code" href="namespaceExiv2.html#accd3e49cafe9db52c1e0e6f648753cae">Exiv2::Error</a>(Exiv2::kerErrorMessage, error);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code" href="classExiv2_1_1IptcData.html#a0d53776cd2f36e63fff78c8f142a7caf">Exiv2::IptcData::iterator</a> end = iptcData.<a name="a6"></a><a class="code" href="classExiv2_1_1IptcData.html#a6753e8a713ab2b42a3bdc7b3d9eab401">end</a>();</div>
+<div class="line">    <span class="keywordflow">for</span> (<a class="code" href="classExiv2_1_1IptcData.html#a0d53776cd2f36e63fff78c8f142a7caf">Exiv2::IptcData::iterator</a> md = iptcData.<a name="a7"></a><a class="code" href="classExiv2_1_1IptcData.html#a03385c128b29d262ade837093fddc0d2">begin</a>(); md != end; ++md) {</div>
+<div class="line">        std::cout &lt;&lt; std::setw(44) &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::left</div>
+<div class="line">                  &lt;&lt; md-&gt;key() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                  &lt;&lt; <span class="stringliteral">&quot;0x&quot;</span> &lt;&lt; std::setw(4) &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; std::right</div>
+<div class="line">                  &lt;&lt; std::hex &lt;&lt; md-&gt;tag() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                  &lt;&lt; std::setw(9) &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::left</div>
+<div class="line">                  &lt;&lt; md-&gt;typeName() &lt;&lt; <span class="stringliteral">&quot; &quot;</span></div>
+<div class="line">                  &lt;&lt; std::dec &lt;&lt; std::setw(3)</div>
+<div class="line">                  &lt;&lt; std::setfill(<span class="charliteral">&#39; &#39;</span>) &lt;&lt; std::right</div>
+<div class="line">                  &lt;&lt; md-&gt;count() &lt;&lt; <span class="stringliteral">&quot;  &quot;</span></div>
+<div class="line">                  &lt;&lt; std::dec &lt;&lt; md-&gt;value()</div>
+<div class="line">                  &lt;&lt; std::endl;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+<div class="line"><span class="keywordflow">catch</span> (<a name="_a8"></a><a class="code" href="classExiv2_1_1AnyError.html">Exiv2::AnyError</a>&amp; e) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Caught Exiv2 exception &#39;&quot;</span> &lt;&lt; e &lt;&lt; <span class="stringliteral">&quot;&#39;\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">return</span> -1;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><!-- contents -->
+<div class="ttc" id="aclassExiv2_1_1IptcData_html_a03385c128b29d262ade837093fddc0d2"><div class="ttname"><a href="classExiv2_1_1IptcData.html#a03385c128b29d262ade837093fddc0d2">Exiv2::IptcData::begin</a></div><div class="ttdeci">iterator begin()</div><div class="ttdoc">Begin of the metadata.</div><div class="ttdef"><b>Definition:</b> iptc.hpp:221</div></div>
+<div class="ttc" id="aclassExiv2_1_1IptcData_html_a4c8b0bc3d09b8dc0a97ed0fd26370c7f"><div class="ttname"><a href="classExiv2_1_1IptcData.html#a4c8b0bc3d09b8dc0a97ed0fd26370c7f">Exiv2::IptcData::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">Return true if there is no IPTC metadata.</div><div class="ttdef"><b>Definition:</b> iptc.hpp:255</div></div>
+<div class="ttc" id="aclassExiv2_1_1XmpParser_html_aea661a7039adb5a748eb7639c8ce9294"><div class="ttname"><a href="classExiv2_1_1XmpParser.html#aea661a7039adb5a748eb7639c8ce9294">Exiv2::XmpParser::initialize</a></div><div class="ttdeci">static bool initialize(XmpParser::XmpLockFct xmpLockFct=0, void *pLockData=0)</div><div class="ttdoc">Initialize the XMP Toolkit.</div></div>
+<div class="ttc" id="aclassExiv2_1_1AnyError_html"><div class="ttname"><a href="classExiv2_1_1AnyError.html">Exiv2::AnyError</a></div><div class="ttdoc">Error class interface. Allows the definition and use of a hierarchy of error classes which can all be...</div><div class="ttdef"><b>Definition:</b> error.hpp:174</div></div>
+<div class="ttc" id="aclassExiv2_1_1IptcData_html_a6753e8a713ab2b42a3bdc7b3d9eab401"><div class="ttname"><a href="classExiv2_1_1IptcData.html#a6753e8a713ab2b42a3bdc7b3d9eab401">Exiv2::IptcData::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdoc">End of the metadata.</div><div class="ttdef"><b>Definition:</b> iptc.hpp:223</div></div>
+<div class="ttc" id="aclassExiv2_1_1XmpParser_html_a46ff7c85b860ef81310e0ac8dd6b62a2"><div class="ttname"><a href="classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2">Exiv2::XmpParser::terminate</a></div><div class="ttdeci">static void terminate()</div><div class="ttdoc">Terminate the XMP Toolkit and unregister custom namespaces.</div></div>
+<div class="ttc" id="aclassExiv2_1_1IptcData_html_a0d53776cd2f36e63fff78c8f142a7caf"><div class="ttname"><a href="classExiv2_1_1IptcData.html#a0d53776cd2f36e63fff78c8f142a7caf">Exiv2::IptcData::iterator</a></div><div class="ttdeci">IptcMetadata::iterator iterator</div><div class="ttdoc">IptcMetadata iterator type.</div><div class="ttdef"><b>Definition:</b> iptc.hpp:173</div></div>
+<div class="ttc" id="aclassExiv2_1_1Image_html_a89ad3ffe7a4e8a943d267d77843415fb"><div class="ttname"><a href="classExiv2_1_1Image.html#a89ad3ffe7a4e8a943d267d77843415fb">Exiv2::Image::AutoPtr</a></div><div class="ttdeci">std::auto_ptr&lt; Image &gt; AutoPtr</div><div class="ttdoc">Image auto_ptr type.</div><div class="ttdef"><b>Definition:</b> image.hpp:81</div></div>
+<div class="ttc" id="aclassExiv2_1_1ImageFactory_html_aba929c4ca4a71625d12bcb97bcc28161"><div class="ttname"><a href="classExiv2_1_1ImageFactory.html#aba929c4ca4a71625d12bcb97bcc28161">Exiv2::ImageFactory::open</a></div><div class="ttdeci">static Image::AutoPtr open(const std::string &amp;path, bool useCurl=true)</div><div class="ttdoc">Create an Image subclass of the appropriate type by reading the specified file. Image type is derived...</div></div>
+<div class="ttc" id="anamespaceExiv2_html_accd3e49cafe9db52c1e0e6f648753cae"><div class="ttname"><a href="namespaceExiv2.html#accd3e49cafe9db52c1e0e6f648753cae">Exiv2::Error</a></div><div class="ttdeci">BasicError&lt; char &gt; Error</div><div class="ttdoc">Error class used for exceptions (std::string based)</div><div class="ttdef"><b>Definition:</b> error.hpp:324</div></div>
+<div class="ttc" id="aclassExiv2_1_1IptcData_html"><div class="ttname"><a href="classExiv2_1_1IptcData.html">Exiv2::IptcData</a></div><div class="ttdoc">A container for IPTC data. This is a top-level class of the Exiv2 library.</div><div class="ttdef"><b>Definition:</b> iptc.hpp:170</div></div>
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

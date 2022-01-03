@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Exiv2 - Image metadata library and tools</title>
+
+  <!-- Doxygen styles -->
+  <link href="doc/doxygen.css" rel="stylesheet" type="text/css">
+  <link href="doc/customdoxygen.css" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="include/exiv2.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img alt="Exiv2" src="include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="getting-started.html">Getting started</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="whatsnew.html">What's New</a></li>
+        <li><a href="metadata.html">Metadata</a></li>
+        <li><a href="makernote.html">Makernote</a></li>
+        <li><a href="doc/examples.html">Examples</a></li>
+        <li><a href="doc/index.html">API</a></li>
+        <li><a href="manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+	    <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="page-header">
+    <h1>Getting started</h1>
+    <p class="lead">
+	  An overview of Exiv2 C++ library, the exiv2 command line utility, the Exiv2 project, and sample code.
+    </p>
+  </div>
+</div><!-- /.container -->
+
+
+<div class="container">
+  <div class="col-sm-pair">
+    <div class="row">
+      <div class="col-sm-6">
+	    <h2 id="lib">Exiv2 C++ library</h2>
+	    <ul>
+	      <li>Fast read and write access to the
+	        <a href="http://en.wikipedia.org/wiki/Exif">Exif</a>,
+	        <a href="http://en.wikipedia.org/wiki/IPTC">IPTC</a> and
+	        <a href="http://en.wikipedia.org/wiki/Extensible_Metadata_Platform">XMP</a>
+	        <a href="http://en.wikipedia.org/wiki/Metadata">metadata</a> of an image.
+	      </li>
+	      <li>Easy to use and <a href="doc/index.html" title="Exiv2 API documentation">extensively documented</a> C++ API.</li>
+	      <li><a href="conversion.html" title="Exiv2 Conversions">Conversions</a> of Exif and IPTC metadata to XMP and vice versa.</li>
+	      <li>Smart IPTC implementation that does not affect data that programs like Photoshop store
+	        in the same image segment.
+	      </li>
+	      <li>Exif <a href="makernote.html" title="Exif Makernote Formats and Specifications">Makernote</a> support:
+	       <ul>
+	        <li>Makernote tags can be read and written just like any other metadata.</li>
+	        <li>Sophisticated write algorithm avoids corrupting the Makernote.</li>
+	       </ul>
+	      </li>
+	      <li>Other Features:<ul>
+	        <li>Easy to use command-line utility to manipulate metadata.</li>
+	        <li>Command-line utility provides a rich scripting interface.</li>
+	        <li>Library and utility provide tools to debug, pipe metadata and much more.</li>
+	        <li>Simple interface to extract Exif thumbnails.</li>
+	        <li>Support to extract, change and remove ICC profiles.</li>
+	       </ul></li>
+	    </ul>
+
+        <h4 class="margin-top-m">Future plans</h4>
+        <p>These are high-level goals for the Exiv2 library, see the
+	      <a href="https://github.com/Exiv2/exiv2/projects">projects</a>
+	      for information about future projects.
+	    </p>
+        <ul>
+	     <li>A stable API</li>
+	     <li>A unified metadata container.</li>
+	     <li>Additional image formats such as BigTiff.</li>
+	     <li>Better lens recognition.</li>
+	     <li>More makernote support.</li>
+        </ul>
+
+	    <div class="panel panel-primary margin-top-s">
+	      <div class="panel-body">
+		    <p>
+		    To learn how to use the Exiv2 library in your own programs, start by reading the
+		    short <a href="doc/index.html">API documentation intro</a> and study some of the examples here.
+		    Refer to the <a href="metadata.html">metadata taglists</a> for supported tags and default types
+		    and the <a href="doc/namespaceExiv2.html">API documentation</a> for the interface.
+		    </p>
+	        <div class="btn-group">
+		<a class="btn btn-primary" href="examples.html" role="button">Library examples</a>
+		<button type="button" class="btn btn-primary dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  <span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+		<li><a title="Reading and printing the Exif metadata of an image" href="examples.html#example1">Read Exif metadata</a></li>
+		<li><a title="Sample usage of high-level Exif metadata operations" href="examples.html#example2">Add, modify, delete Exif</a></li>
+		<li><a title="Reading and printing the IPTC metadata of an image" href="examples.html#example3">Read IPTC datasets</a></li>
+		<li><a title="The quickest way to access, set or modify IPTC metadata" href="examples.html#example4">Set IPTC datasets</a></li>
+		<li><a title="Sample (test) usage of high level XMP classes" href="examples.html#example5">Set XMP properties</a></li>
+		</ul>
+	  </div>
+	</div>
+   </div>
+
+   <div class="panel panel-primary">
+ 	 <div class="panel-body">
+       <h2>Exiv2 Community and Resources</h2>
+       <p>The Exiv2 Project is hosted on GitHub where can interact with project members and users
+	   to get help and support, report bugs and get involved with the project.</p>
+	   <p><a class="btn btn-primary" href="https://github.com/exiv2/exiv2" role="button">Exiv2 GitHub</a></p>
+	 </div>
+   </div>
+
+  </div><!-- /.col-sm-6 -->
+
+  <div class="col-sm-6">
+	<h2 id="util">Command line utility</h2>
+	<ul>
+	  <li>Print <a href="http://en.wikipedia.org/wiki/Exif">Exif</a>,
+            <a href="http://en.wikipedia.org/wiki/IPTC">IPTC</a> and
+            <a href="http://en.wikipedia.org/wiki/Extensible_Metadata_Platform">XMP</a> image
+            <a href="http://en.wikipedia.org/wiki/Metadata">metadata</a> in different formats:
+	    Exif summary info, interpreted values, or the plain data for each tag</li>
+	  <li>Print the structure of images.  This is useful for image file analysis.</li>
+	  <li><a title="Modify" href="sample.html#modify">Set, add and delete</a> Exif, IPTC, XMP metadata and ICC profile
+	    from command line modify commands or command scripts</li>
+	  <li>Adjust the Exif timestamp (that's how it all started...)</li>
+	  <li>Rename Exif image files according to the Exif timestamp</li>
+	  <li>Extract, insert and delete Exif, IPTC and XMP metadata and JPEG comments</li>
+	  <li><a href="conversion.html" title="Exiv2 Conversions">Convert</a> from Exif and IPTC to XMP properties and vice versa</li>
+	  <li>Extract previews from RAW images and thumbnails from the Exif metadata</li>
+	  <li>Insert and delete the thumbnail image embedded in the Exif metadata</li>
+	  <li>Print, set and delete the JPEG comment of JPEG images</li>
+	  <li>Fix the Exif ISO setting of picture taken with Canon and Nikon cameras</li>
+	  <li>Metadata and ICC Profiles can be very conveniently piped on the command-line from one image to others.</li>
+	</ul>
+
+	  <div class="panel panel-primary margin-top-s">
+	    <div class="panel-body">
+	      <p>
+	      To get started with the Exiv2 command line utility, run it with the <em>-h</em>
+	      parameter from a terminal or cmd shell:
+	      <code><a title="Exiv2 usage" href="sample.html#usage">exiv2 -h</a></code> and
+	      study the samples here.
+	      For details, read the <a href="manpage.html" title="Exiv2 man page">manual page</a>.
+	      </p>
+	      <a class="btn btn-primary" href="sample.html" role="button">Utility samples</a>
+	    </div>
+	  </div>
+
+   <div class="panel panel-primary">
+ 	 <div class="panel-body">
+      <p>The Exiv2 project is registered with
+	  <a href="https://www.openhub.net/p/exiv2">Open Hub</a>, a service that helps track and compare Open Source projects.
+	  Among other things, the good people at Open Hub provide tools for evaluating Open Source projects and communities.
+	  Their analysis is based on data gathered from the project's source code repositories. Below are the Open Hub "factoids"
+	  for Exiv2. Use these to explore what Open Hub has to say on the state of our project.
+	  </p>
+	  <script type="text/javascript" src="http://www.openhub.net/p/13985/widgets/project_factoids.js"></script>
+  </div></div>
+      </div><!-- /.col-sm-6 -->
+    </div><!-- /.row -->
+  </div><!-- /.col-sm-pair -->
+</div><!-- /.container -->
+
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<script type="text/javascript">
+  //<![CDATA[
+  $(document).ready(function() {
+    window.swapped = false;
+    swapcols();
+  });
+  $(window).resize(function() {
+    swapcols();
+  });
+  function swapcols() {
+    if ($(window).width() < 768 && !window.swapped) {
+      $(".col-sm-pair").each( function() {
+        $(".col-sm-6", this).eq(0).after($(".col-sm-6", this).eq(2).remove());
+      });
+      window.swapped = true;
+    }
+    if ($(window).width() >= 768 && window.swapped) {
+      $(".col-sm-pair").each( function() {
+        $(".col-sm-6", this).eq(3).before($(".col-sm-6", this).eq(1).remove());
+      });
+      window.swapped = false;
+    }
+  }
+  //]]>
+</script>
+
+</body>
+</html>

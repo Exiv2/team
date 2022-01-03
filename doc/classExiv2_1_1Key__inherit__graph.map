@@ -1,0 +1,6 @@
+<map id="Exiv2::Key" name="Exiv2::Key">
+<area shape="rect" id="node1" title="Abstract base class defining the Key of a metadatum. Keys are used to identify and group metadata." alt="" coords="156,5,247,32"/>
+<area shape="rect" id="node2" href="$classExiv2_1_1ExifKey.html" title="Concrete keys for Exif metadata and access to Exif tag reference data." alt="" coords="5,80,120,107"/>
+<area shape="rect" id="node3" href="$classExiv2_1_1IptcKey.html" title="Concrete keys for IPTC metadata." alt="" coords="144,80,259,107"/>
+<area shape="rect" id="node4" href="$classExiv2_1_1XmpKey.html" title="Concrete keys for XMP metadata." alt="" coords="283,80,403,107"/>
+</map>

@@ -1,0 +1,344 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Class Index</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="qindex"><a class="qindex" href="#letter_a">a</a>&#160;|&#160;<a class="qindex" href="#letter_b">b</a>&#160;|&#160;<a class="qindex" href="#letter_c">c</a>&#160;|&#160;<a class="qindex" href="#letter_d">d</a>&#160;|&#160;<a class="qindex" href="#letter_e">e</a>&#160;|&#160;<a class="qindex" href="#letter_f">f</a>&#160;|&#160;<a class="qindex" href="#letter_g">g</a>&#160;|&#160;<a class="qindex" href="#letter_h">h</a>&#160;|&#160;<a class="qindex" href="#letter_i">i</a>&#160;|&#160;<a class="qindex" href="#letter_j">j</a>&#160;|&#160;<a class="qindex" href="#letter_k">k</a>&#160;|&#160;<a class="qindex" href="#letter_l">l</a>&#160;|&#160;<a class="qindex" href="#letter_m">m</a>&#160;|&#160;<a class="qindex" href="#letter_n">n</a>&#160;|&#160;<a class="qindex" href="#letter_o">o</a>&#160;|&#160;<a class="qindex" href="#letter_p">p</a>&#160;|&#160;<a class="qindex" href="#letter_q">q</a>&#160;|&#160;<a class="qindex" href="#letter_r">r</a>&#160;|&#160;<a class="qindex" href="#letter_s">s</a>&#160;|&#160;<a class="qindex" href="#letter_t">t</a>&#160;|&#160;<a class="qindex" href="#letter_u">u</a>&#160;|&#160;<a class="qindex" href="#letter_v">v</a>&#160;|&#160;<a class="qindex" href="#letter_w">w</a>&#160;|&#160;<a class="qindex" href="#letter_x">x</a></div>
+<table class="classindex">
+<tr><td rowspan="2" valign="bottom"><a name="letter_a"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;a&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="classExiv2_1_1INIReader.html">INIReader</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Internal_1_1remove__cv.html">remove_cv</a> (Exiv2::Internal)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1IoCloser.html">IoCloser</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Internal_1_1remove__pointer.html">remove_pointer</a> (Exiv2::Internal)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1AnyError.html">AnyError</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Internal_1_1remove__pointer_3_01T_01_5_01_4.html">remove_pointer&lt; T * &gt;</a> (Exiv2::Internal)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1AsciiValue.html">AsciiValue</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1IptcDataSets.html">IptcDataSets</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Internal_1_1remove__pointer_3_01T_01_5const_01_4.html">remove_pointer&lt; T *const &gt;</a> (Exiv2::Internal)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1AsfVideo.html">AsfVideo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1Iptcdatum.html">Iptcdatum</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Internal_1_1remove__volatile.html">remove_volatile</a> (Exiv2::Internal)&#160;&#160;&#160;</td>
+</tr>
+<tr><td rowspan="2" valign="bottom"><a name="letter_b"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;b&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="classExiv2_1_1IptcKey.html">IptcKey</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Internal_1_1remove__volatile_3_01volatile_01T_01_4.html">remove_volatile&lt; volatile T &gt;</a> (Exiv2::Internal)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1IptcParser.html">IptcParser</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1RiffVideo.html">RiffVideo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1BasicError.html">BasicError</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td rowspan="2" valign="bottom"><a name="letter_j"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;j&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="classExiv2_1_1Rw2Image.html">Rw2Image</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1Rw2Parser.html">Rw2Parser</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1BmffImage.html">BmffImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1Jp2Image.html">Jp2Image</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1RWLock.html">RWLock</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1BmpImage.html">BmpImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1JpegBase.html">JpegBase</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td rowspan="2" valign="bottom"><a name="letter_s"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;s&#160;&#160;</div></td></tr></table>
+</td>
+</tr>
+<tr><td rowspan="2" valign="bottom"><a name="letter_c"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;c&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="classExiv2_1_1JpegImage.html">JpegImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td rowspan="2" valign="bottom"><a name="letter_k"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;k&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="classExiv2_1_1ScopedReadLock.html">ScopedReadLock</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1CommentValue_1_1CharsetInfo.html">CommentValue::CharsetInfo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1ScopedWriteLock.html">ScopedWriteLock</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="structExiv2_1_1CommentValue_1_1CharsetTable.html">CommentValue::CharsetTable</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1Key.html">Key</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Slice.html">Slice</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1CommentValue.html">CommentValue</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td rowspan="2" valign="bottom"><a name="letter_l"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;l&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Slice_3_01const_01container_01_4.html">Slice&lt; const container &gt;</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html">ConstSliceBase</a> (Exiv2::Internal)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Slice_3_01const_01T_01_5_01_4.html">Slice&lt; const T * &gt;</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">ContainerStorage</a> (Exiv2::Internal)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1LangAltValue.html">LangAltValue</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Slice_3_01T_01_5_01_4.html">Slice&lt; T * &gt;</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1Cr2Image.html">Cr2Image</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1LangAltValueComparator.html">LangAltValueComparator</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Internal_1_1SliceBase.html">SliceBase</a> (Exiv2::Internal)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1Cr2Parser.html">Cr2Parser</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1LogMsg.html">LogMsg</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1StringValue.html">StringValue</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1CrwImage.html">CrwImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td rowspan="2" valign="bottom"><a name="letter_m"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;m&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="classExiv2_1_1StringValueBase.html">StringValueBase</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1CrwParser.html">CrwParser</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td rowspan="2" valign="bottom"><a name="letter_t"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;t&#160;&#160;</div></td></tr></table>
+</td>
+</tr>
+<tr><td rowspan="2" valign="bottom"><a name="letter_d"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;d&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="structExiv2_1_1MatroskaTags.html">MatroskaTags</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1MatroskaVideo.html">MatroskaVideo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1TagInfo.html">TagInfo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1MemIo.html">MemIo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1TgaImage.html">TgaImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="structExiv2_1_1DataBufRef.html">DataBufRef</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1Metadatum.html">Metadatum</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1TiffImage.html">TiffImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="structExiv2_1_1DataSet.html">DataSet</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1MrwImage.html">MrwImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1TiffParser.html">TiffParser</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1DataValue.html">DataValue</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html">MutableSliceBase</a> (Exiv2::Internal)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1TimeValue_1_1Time.html">TimeValue::Time</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="structExiv2_1_1DateValue_1_1Date.html">DateValue::Date</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td rowspan="2" valign="bottom"><a name="letter_n"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;n&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="classExiv2_1_1TimeValue.html">TimeValue</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1DateValue.html">DateValue</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1TypeInfo.html">TypeInfo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td rowspan="2" valign="bottom"><a name="letter_e"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;e&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="structExiv2_1_1NativePreview.html">NativePreview</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td rowspan="2" valign="bottom"><a name="letter_u"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;u&#160;&#160;</div></td></tr></table>
+</td>
+</tr>
+<tr><td valign="top"><a class="el" href="structExiv2_1_1XmpNsInfo_1_1Ns.html">XmpNsInfo::Ns</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1EpsImage.html">EpsImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td rowspan="2" valign="bottom"><a name="letter_o"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;o&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="classExiv2_1_1Uri.html">Uri</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1ExifData.html">ExifData</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1UtilsVideo.html">UtilsVideo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1Exifdatum.html">Exifdatum</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1OrfImage.html">OrfImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td rowspan="2" valign="bottom"><a name="letter_v"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;v&#160;&#160;</div></td></tr></table>
+</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1ExifKey.html">ExifKey</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1OrfParser.html">OrfParser</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1ExifParser.html">ExifParser</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td rowspan="2" valign="bottom"><a name="letter_p"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;p&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="classExiv2_1_1Value.html">Value</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1ExifTags.html">ExifTags</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1ValueType.html">ValueType</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1ExifThumb.html">ExifThumb</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1PgfImage.html">PgfImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td rowspan="2" valign="bottom"><a name="letter_w"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;w&#160;&#160;</div></td></tr></table>
+</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1ExifThumbC.html">ExifThumbC</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Photoshop.html">Photoshop</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="structExiv2__grep__key__t.html">Exiv2_grep_key_t</a>&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1PngImage.html">PngImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1WebPImage.html">WebPImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1ExvImage.html">ExvImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1XmpNsInfo_1_1Prefix.html">XmpNsInfo::Prefix</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td rowspan="2" valign="bottom"><a name="letter_x"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;x&#160;&#160;</div></td></tr></table>
+</td>
+</tr>
+<tr><td rowspan="2" valign="bottom"><a name="letter_f"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;f&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="classExiv2_1_1PreviewImage.html">PreviewImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1PreviewManager.html">PreviewManager</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1XmpArrayValue.html">XmpArrayValue</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1FileIo.html">FileIo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1PreviewProperties.html">PreviewProperties</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1XmpData.html">XmpData</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td rowspan="2" valign="bottom"><a name="letter_g"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;g&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="classExiv2_1_1PsdImage.html">PsdImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1Xmpdatum.html">Xmpdatum</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="structExiv2_1_1Internal_1_1PtrSliceStorage.html">PtrSliceStorage</a> (Exiv2::Internal)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1XmpKey.html">XmpKey</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1GifImage.html">GifImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td rowspan="2" valign="bottom"><a name="letter_q"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;q&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="structExiv2_1_1XmpNsInfo.html">XmpNsInfo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="structExiv2_1_1GroupInfo.html">GroupInfo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1XmpParser.html">XmpParser</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td rowspan="2" valign="bottom"><a name="letter_h"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;h&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="classExiv2_1_1QuickTimeVideo.html">QuickTimeVideo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1XmpProperties.html">XmpProperties</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td rowspan="2" valign="bottom"><a name="letter_r"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;r&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="structExiv2_1_1XmpPropertyInfo.html">XmpPropertyInfo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1HttpIo.html">HttpIo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1XmpSidecar.html">XmpSidecar</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td rowspan="2" valign="bottom"><a name="letter_i"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;i&#160;&#160;</div></td></tr></table>
+</td>
+<td valign="top"><a class="el" href="classExiv2_1_1RafImage.html">RafImage</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1XmpTextValue.html">XmpTextValue</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="structExiv2_1_1RecordInfo.html">RecordInfo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1XmpValue.html">XmpValue</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="structExiv2_1_1Iloc.html">Iloc</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1RemoteIo.html">RemoteIo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="classExiv2_1_1XPathIo.html">XPathIo</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+</tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1Image.html">Image</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Internal_1_1remove__const.html">remove_const</a> (Exiv2::Internal)&#160;&#160;&#160;</td>
+<td></td></tr>
+<tr><td valign="top"><a class="el" href="classExiv2_1_1ImageFactory.html">ImageFactory</a> (<a class="el" href="namespaceExiv2.html">Exiv2</a>)&#160;&#160;&#160;</td>
+<td valign="top"><a class="el" href="structExiv2_1_1Internal_1_1remove__const_3_01const_01T_01_4.html">remove_const&lt; const T &gt;</a> (Exiv2::Internal)&#160;&#160;&#160;</td>
+<td></td></tr>
+<tr><td></td><td></td><td></td></tr>
+</table>
+<div class="qindex"><a class="qindex" href="#letter_a">a</a>&#160;|&#160;<a class="qindex" href="#letter_b">b</a>&#160;|&#160;<a class="qindex" href="#letter_c">c</a>&#160;|&#160;<a class="qindex" href="#letter_d">d</a>&#160;|&#160;<a class="qindex" href="#letter_e">e</a>&#160;|&#160;<a class="qindex" href="#letter_f">f</a>&#160;|&#160;<a class="qindex" href="#letter_g">g</a>&#160;|&#160;<a class="qindex" href="#letter_h">h</a>&#160;|&#160;<a class="qindex" href="#letter_i">i</a>&#160;|&#160;<a class="qindex" href="#letter_j">j</a>&#160;|&#160;<a class="qindex" href="#letter_k">k</a>&#160;|&#160;<a class="qindex" href="#letter_l">l</a>&#160;|&#160;<a class="qindex" href="#letter_m">m</a>&#160;|&#160;<a class="qindex" href="#letter_n">n</a>&#160;|&#160;<a class="qindex" href="#letter_o">o</a>&#160;|&#160;<a class="qindex" href="#letter_p">p</a>&#160;|&#160;<a class="qindex" href="#letter_q">q</a>&#160;|&#160;<a class="qindex" href="#letter_r">r</a>&#160;|&#160;<a class="qindex" href="#letter_s">s</a>&#160;|&#160;<a class="qindex" href="#letter_t">t</a>&#160;|&#160;<a class="qindex" href="#letter_u">u</a>&#160;|&#160;<a class="qindex" href="#letter_v">v</a>&#160;|&#160;<a class="qindex" href="#letter_w">w</a>&#160;|&#160;<a class="qindex" href="#letter_x">x</a></div>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

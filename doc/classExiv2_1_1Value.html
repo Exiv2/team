@@ -1,0 +1,660 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceExiv2.html">Exiv2</a></li><li class="navelem"><a class="el" href="classExiv2_1_1Value.html">Value</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="classExiv2_1_1Value-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Exiv2::Value Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Common interface for all types of values used with metadata.  
+ <a href="classExiv2_1_1Value.html#details">More...</a></p>
+
+<p><code>#include &lt;value.hpp&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Exiv2::Value:</div>
+<div class="dyncontent">
+<div class="center"><img src="classExiv2_1_1Value__inherit__graph.png" border="0" usemap="#Exiv2_1_1Value_inherit__map" alt="Inheritance graph"/></div>
+<map name="Exiv2_1_1Value_inherit__map" id="Exiv2_1_1Value_inherit__map">
+<area shape="rect" title="Common interface for all types of values used with metadata." alt="" coords="5,132,108,159"/>
+<area shape="rect" href="classExiv2_1_1DataValue.html" title="Value for an undefined data type." alt="" coords="175,5,309,32"/>
+<area shape="rect" href="classExiv2_1_1DateValue.html" title="Value for simple ISO 8601 dates" alt="" coords="175,56,309,83"/>
+<area shape="rect" href="classExiv2_1_1StringValueBase.html" title="Abstract base class for a string based Value type." alt="" coords="156,107,328,133"/>
+<area shape="rect" href="classExiv2_1_1TimeValue.html" title="Value for simple ISO 8601 times." alt="" coords="175,157,309,184"/>
+<area shape="rect" href="classExiv2_1_1ValueType.html" title="Template for a Value of a basic type. This is used for unsigned and signed short, long and rationals." alt="" coords="157,208,327,235"/>
+<area shape="rect" href="classExiv2_1_1XmpValue.html" title="Base class for all Exiv2 values used to store XMP property values." alt="" coords="176,259,308,285"/>
+<area shape="rect" href="classExiv2_1_1AsciiValue.html" title="Value for an Ascii string type." alt="" coords="393,56,526,83"/>
+<area shape="rect" href="classExiv2_1_1CommentValue.html" title="Value for an Exif comment." alt="" coords="376,107,543,133"/>
+<area shape="rect" href="classExiv2_1_1StringValue.html" title="Value for string type." alt="" coords="389,157,529,184"/>
+<area shape="rect" href="classExiv2_1_1LangAltValue.html" title="Value type for XMP language alternative properties." alt="" coords="384,208,535,235"/>
+<area shape="rect" href="classExiv2_1_1XmpArrayValue.html" title="Value type for simple arrays. Each item in the array is a simple value, without qualifiers...." alt="" coords="376,259,543,285"/>
+<area shape="rect" href="classExiv2_1_1XmpTextValue.html" title="Value type suitable for simple XMP properties and XMP nodes of complex types which are not parsed int..." alt="" coords="380,309,539,336"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a0f62e585b82c97738858b743e60dff21"><td class="memItemLeft" align="right" valign="top"><a id="a0f62e585b82c97738858b743e60dff21"></a>
+typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1Value.html">Value</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a0f62e585b82c97738858b743e60dff21">AutoPtr</a></td></tr>
+<tr class="memdesc:a0f62e585b82c97738858b743e60dff21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for a Value auto pointer. <br /></td></tr>
+<tr class="separator:a0f62e585b82c97738858b743e60dff21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Creators</div></td></tr>
+<tr class="memitem:ab475b1680c6fa36a092c4584f70a8027"><td class="memItemLeft" align="right" valign="top"><a id="ab475b1680c6fa36a092c4584f70a8027"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#ab475b1680c6fa36a092c4584f70a8027">Value</a> (<a class="el" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450c">TypeId</a> <a class="el" href="classExiv2_1_1Value.html#a06a65925d8c11766ded7f7ecb00507c7">typeId</a>)</td></tr>
+<tr class="memdesc:ab475b1680c6fa36a092c4584f70a8027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, taking a type id to initialize the base class with. <br /></td></tr>
+<tr class="separator:ab475b1680c6fa36a092c4584f70a8027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad27fa9023be70d47b5f101d1f2f565cc"><td class="memItemLeft" align="right" valign="top"><a id="ad27fa9023be70d47b5f101d1f2f565cc"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#ad27fa9023be70d47b5f101d1f2f565cc">~Value</a> ()</td></tr>
+<tr class="memdesc:ad27fa9023be70d47b5f101d1f2f565cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br /></td></tr>
+<tr class="separator:ad27fa9023be70d47b5f101d1f2f565cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Manipulators</div></td></tr>
+<tr class="memitem:acc8870f802ebcdf9d4e081816ad8956e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#acc8870f802ebcdf9d4e081816ad8956e">read</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *buf, long len, <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> byteOrder)=0</td></tr>
+<tr class="memdesc:acc8870f802ebcdf9d4e081816ad8956e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the value from a character buffer.  <a href="classExiv2_1_1Value.html#acc8870f802ebcdf9d4e081816ad8956e">More...</a><br /></td></tr>
+<tr class="separator:acc8870f802ebcdf9d4e081816ad8956e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2864378d7572310aa5f4cf4127365862"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a2864378d7572310aa5f4cf4127365862">read</a> (const std::string &amp;buf)=0</td></tr>
+<tr class="memdesc:a2864378d7572310aa5f4cf4127365862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value from a string buffer. The format of the string corresponds to that of the <a class="el" href="classExiv2_1_1Value.html#a2518f5ba09fc8c00785c57a119892c4c" title="Write the value to an output stream. You do not usually have to use this function; it is used for the...">write()</a> method, i.e., a string obtained through the <a class="el" href="classExiv2_1_1Value.html#a2518f5ba09fc8c00785c57a119892c4c" title="Write the value to an output stream. You do not usually have to use this function; it is used for the...">write()</a> method can be read by this function.  <a href="classExiv2_1_1Value.html#a2864378d7572310aa5f4cf4127365862">More...</a><br /></td></tr>
+<tr class="separator:a2864378d7572310aa5f4cf4127365862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78a4f322ebe0049b9630648407c91843"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a78a4f322ebe0049b9630648407c91843">setDataArea</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *buf, long len)</td></tr>
+<tr class="memdesc:a78a4f322ebe0049b9630648407c91843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the data area, if the value has one by copying (cloning) the buffer pointed to by buf.  <a href="classExiv2_1_1Value.html#a78a4f322ebe0049b9630648407c91843">More...</a><br /></td></tr>
+<tr class="separator:a78a4f322ebe0049b9630648407c91843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Accessors</h2></td></tr>
+<tr class="memitem:a4dc3a689b4bc1819290525cac491c1a8"><td class="memItemLeft" align="right" valign="top"><a id="a4dc3a689b4bc1819290525cac491c1a8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a4dc3a689b4bc1819290525cac491c1a8">ok_</a></td></tr>
+<tr class="memdesc:a4dc3a689b4bc1819290525cac491c1a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates the status of the previous to&lt;Type&gt; conversion. <br /></td></tr>
+<tr class="separator:a4dc3a689b4bc1819290525cac491c1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a65925d8c11766ded7f7ecb00507c7"><td class="memItemLeft" align="right" valign="top"><a id="a06a65925d8c11766ded7f7ecb00507c7"></a>
+<a class="el" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450c">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a06a65925d8c11766ded7f7ecb00507c7">typeId</a> () const</td></tr>
+<tr class="memdesc:a06a65925d8c11766ded7f7ecb00507c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the type identifier (Exif data format type). <br /></td></tr>
+<tr class="separator:a06a65925d8c11766ded7f7ecb00507c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9f3a161fa77abd57e425a63eacb9cb"><td class="memItemLeft" align="right" valign="top"><a id="a1a9f3a161fa77abd57e425a63eacb9cb"></a>
+<a class="el" href="classExiv2_1_1Value.html#a0f62e585b82c97738858b743e60dff21">AutoPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a1a9f3a161fa77abd57e425a63eacb9cb">clone</a> () const</td></tr>
+<tr class="memdesc:a1a9f3a161fa77abd57e425a63eacb9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an auto-pointer to a copy of itself (deep copy). The caller owns this copy and the auto-pointer ensures that it will be deleted. <br /></td></tr>
+<tr class="separator:a1a9f3a161fa77abd57e425a63eacb9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf4f9c2eda4f7850a390de98668ce15"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a3bf4f9c2eda4f7850a390de98668ce15">copy</a> (<a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *buf, <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> byteOrder) const =0</td></tr>
+<tr class="memdesc:a3bf4f9c2eda4f7850a390de98668ce15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write value to a data buffer.  <a href="classExiv2_1_1Value.html#a3bf4f9c2eda4f7850a390de98668ce15">More...</a><br /></td></tr>
+<tr class="separator:a3bf4f9c2eda4f7850a390de98668ce15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae046b0b081c2be1cf160db595c66fe6d"><td class="memItemLeft" align="right" valign="top"><a id="ae046b0b081c2be1cf160db595c66fe6d"></a>
+virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#ae046b0b081c2be1cf160db595c66fe6d">count</a> () const =0</td></tr>
+<tr class="memdesc:ae046b0b081c2be1cf160db595c66fe6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of components of the value. <br /></td></tr>
+<tr class="separator:ae046b0b081c2be1cf160db595c66fe6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2929f67840fb0565b868993b140ed0ff"><td class="memItemLeft" align="right" valign="top"><a id="a2929f67840fb0565b868993b140ed0ff"></a>
+virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a2929f67840fb0565b868993b140ed0ff">size</a> () const =0</td></tr>
+<tr class="memdesc:a2929f67840fb0565b868993b140ed0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the value in bytes. <br /></td></tr>
+<tr class="separator:a2929f67840fb0565b868993b140ed0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2518f5ba09fc8c00785c57a119892c4c"><td class="memItemLeft" align="right" valign="top"><a id="a2518f5ba09fc8c00785c57a119892c4c"></a>
+virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a2518f5ba09fc8c00785c57a119892c4c">write</a> (std::ostream &amp;os) const =0</td></tr>
+<tr class="memdesc:a2518f5ba09fc8c00785c57a119892c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the value to an output stream. You do not usually have to use this function; it is used for the implementation of the output operator for Value, <a class="el" href="namespaceExiv2.html#abe882054db13fc2f4f6f7e8e1261d982" title="Output operator for Value types.">operator&lt;&lt;(std::ostream &amp;os, const Value &amp;value)</a>. <br /></td></tr>
+<tr class="separator:a2518f5ba09fc8c00785c57a119892c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4e67718590984cb441fcebc3d088ec"><td class="memItemLeft" align="right" valign="top"><a id="a6c4e67718590984cb441fcebc3d088ec"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a6c4e67718590984cb441fcebc3d088ec">toString</a> () const</td></tr>
+<tr class="memdesc:a6c4e67718590984cb441fcebc3d088ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value as a string. Implemented in terms of <a class="el" href="classExiv2_1_1Value.html#a2518f5ba09fc8c00785c57a119892c4c" title="Write the value to an output stream. You do not usually have to use this function; it is used for the...">write(std::ostream&amp; os) const </a>of the concrete class. <br /></td></tr>
+<tr class="separator:a6c4e67718590984cb441fcebc3d088ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af60376344fb9a6a20247f6554b6d1532"><td class="memItemLeft" align="right" valign="top"><a id="af60376344fb9a6a20247f6554b6d1532"></a>
+virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#af60376344fb9a6a20247f6554b6d1532">toString</a> (long n) const</td></tr>
+<tr class="memdesc:af60376344fb9a6a20247f6554b6d1532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <em>n</em>-th component of the value as a string. The default implementation returns <a class="el" href="classExiv2_1_1Value.html#a6c4e67718590984cb441fcebc3d088ec" title="Return the value as a string. Implemented in terms of write(std::ostream&amp; os) const of the concrete c...">toString()</a>. The behaviour of this method may be undefined if there is no <em>n</em>-th component. <br /></td></tr>
+<tr class="separator:af60376344fb9a6a20247f6554b6d1532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4530a3fc3e2305cf994de5476f46f953"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a4530a3fc3e2305cf994de5476f46f953">toLong</a> (long n=0) const =0</td></tr>
+<tr class="memdesc:a4530a3fc3e2305cf994de5476f46f953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the <em>n</em>-th component of the value to a long. The behaviour of this method may be undefined if there is no <em>n</em>-th component.  <a href="classExiv2_1_1Value.html#a4530a3fc3e2305cf994de5476f46f953">More...</a><br /></td></tr>
+<tr class="separator:a4530a3fc3e2305cf994de5476f46f953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d257caa6c1ffe6416ce02de7bd8c1c"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a22d257caa6c1ffe6416ce02de7bd8c1c">toFloat</a> (long n=0) const =0</td></tr>
+<tr class="memdesc:a22d257caa6c1ffe6416ce02de7bd8c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the <em>n</em>-th component of the value to a float. The behaviour of this method may be undefined if there is no <em>n</em>-th component.  <a href="classExiv2_1_1Value.html#a22d257caa6c1ffe6416ce02de7bd8c1c">More...</a><br /></td></tr>
+<tr class="separator:a22d257caa6c1ffe6416ce02de7bd8c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a595a4cb549bec8c19d290ca3e95a2678"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceExiv2.html#a95756f3f7fa19103f83addf5fa088a30">Rational</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a595a4cb549bec8c19d290ca3e95a2678">toRational</a> (long n=0) const =0</td></tr>
+<tr class="memdesc:a595a4cb549bec8c19d290ca3e95a2678"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the <em>n</em>-th component of the value to a Rational. The behaviour of this method may be undefined if there is no <em>n</em>-th component.  <a href="classExiv2_1_1Value.html#a595a4cb549bec8c19d290ca3e95a2678">More...</a><br /></td></tr>
+<tr class="separator:a595a4cb549bec8c19d290ca3e95a2678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48993086d04a3a87ab7cbb7600986612"><td class="memItemLeft" align="right" valign="top"><a id="a48993086d04a3a87ab7cbb7600986612"></a>
+virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a48993086d04a3a87ab7cbb7600986612">sizeDataArea</a> () const</td></tr>
+<tr class="memdesc:a48993086d04a3a87ab7cbb7600986612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the data area, 0 if there is none. <br /></td></tr>
+<tr class="separator:a48993086d04a3a87ab7cbb7600986612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb34848ea4ad36f19443875d9e8671b0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#afb34848ea4ad36f19443875d9e8671b0">dataArea</a> () const</td></tr>
+<tr class="memdesc:afb34848ea4ad36f19443875d9e8671b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a copy of the data area if the value has one. The caller owns this copy and <a class="el" href="classExiv2_1_1DataBuf.html" title="Utility class containing a character array. All it does is to take care of memory allocation and dele...">DataBuf</a> ensures that it will be deleted.  <a href="classExiv2_1_1Value.html#afb34848ea4ad36f19443875d9e8671b0">More...</a><br /></td></tr>
+<tr class="separator:afb34848ea4ad36f19443875d9e8671b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533f3a5b8363e2b1be3524d2b6b89658"><td class="memItemLeft" align="right" valign="top"><a id="a533f3a5b8363e2b1be3524d2b6b89658"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a533f3a5b8363e2b1be3524d2b6b89658">ok</a> () const</td></tr>
+<tr class="memdesc:a533f3a5b8363e2b1be3524d2b6b89658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the <em>ok</em> status indicator. After a to&lt;Type&gt; conversion, this indicator shows whether the conversion was successful. <br /></td></tr>
+<tr class="separator:a533f3a5b8363e2b1be3524d2b6b89658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ff043921cd1a5c399a9a4fc8257006"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classExiv2_1_1Value.html#a0f62e585b82c97738858b743e60dff21">AutoPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#ad6ff043921cd1a5c399a9a4fc8257006">create</a> (<a class="el" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450c">TypeId</a> <a class="el" href="classExiv2_1_1Value.html#a06a65925d8c11766ded7f7ecb00507c7">typeId</a>)</td></tr>
+<tr class="memdesc:ad6ff043921cd1a5c399a9a4fc8257006"><td class="mdescLeft">&#160;</td><td class="mdescRight">A (simple) factory to create a <a class="el" href="classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Value</a> type.  <a href="classExiv2_1_1Value.html#ad6ff043921cd1a5c399a9a4fc8257006">More...</a><br /></td></tr>
+<tr class="separator:ad6ff043921cd1a5c399a9a4fc8257006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d0c89df1b1908fc8ad5db83bcfd1482"><td class="memItemLeft" align="right" valign="top"><a id="a9d0c89df1b1908fc8ad5db83bcfd1482"></a>
+<a class="el" href="classExiv2_1_1Value.html">Value</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Value.html#a9d0c89df1b1908fc8ad5db83bcfd1482">operator=</a> (const <a class="el" href="classExiv2_1_1Value.html">Value</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a9d0c89df1b1908fc8ad5db83bcfd1482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator. Protected so that it can only be used by subclasses but not directly. <br /></td></tr>
+<tr class="separator:a9d0c89df1b1908fc8ad5db83bcfd1482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Common interface for all types of values used with metadata. </p>
+<p>The interface provides a uniform way to access values independent of their actual C++ type for simple tasks like reading the values from a string or data buffer. For other tasks, like modifying values you may need to downcast it to a specific subclass to access its interface. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="xmpsample_8cpp-example.html#_a5">xmpsample.cpp</a>.</dd>
+</dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3bf4f9c2eda4f7850a390de98668ce15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf4f9c2eda4f7850a390de98668ce15">&#9670;&nbsp;</a></span>copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual long Exiv2::Value::copy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a>&#160;</td>
+          <td class="paramname"><em>byteOrder</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write value to a data buffer. </p>
+<p>The user must ensure that the buffer has enough memory. Otherwise the call results in undefined behaviour.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>Data buffer to write to. </td></tr>
+    <tr><td class="paramname">byteOrder</td><td>Applicable byte order (little or big endian). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of bytes written. </dd></dl>
+
+<p>Implemented in <a class="el" href="classExiv2_1_1TimeValue.html#a7d9421fa7b29c2e50817822b72c56d3a">Exiv2::TimeValue</a>, <a class="el" href="classExiv2_1_1DateValue.html#adeb54be19c827a7b4c7b354bfee00d86">Exiv2::DateValue</a>, <a class="el" href="classExiv2_1_1XmpValue.html#a3f16a4fa607d76cf649e82ecf4ca41af">Exiv2::XmpValue</a>, <a class="el" href="classExiv2_1_1StringValueBase.html#a202991e08046796657e14eb016757d56">Exiv2::StringValueBase</a>, <a class="el" href="classExiv2_1_1DataValue.html#a691a3ccb0ec086259f022da9cdeb8b3b">Exiv2::DataValue</a>, <a class="el" href="classExiv2_1_1ValueType.html#af2690fc41d37bdcdfeb67c77613c5a4b">Exiv2::ValueType&lt; T &gt;</a>, and <a class="el" href="classExiv2_1_1CommentValue.html#ac5e3f902f0998692257779951d8894a8">Exiv2::CommentValue</a>.</p>
+
+</div>
+</div>
+<a id="ad6ff043921cd1a5c399a9a4fc8257006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ff043921cd1a5c399a9a4fc8257006">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classExiv2_1_1Value.html#a0f62e585b82c97738858b743e60dff21">AutoPtr</a> Exiv2::Value::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#a5153319711f35fe81cbc13f4b852450c">TypeId</a>&#160;</td>
+          <td class="paramname"><em>typeId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A (simple) factory to create a <a class="el" href="classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Value</a> type. </p>
+<p>The following <a class="el" href="classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Value</a> subclasses are created depending on typeId:<br  />
+<br  />
+ </p><table class="doxtable">
+<tr>
+<td><b>typeId</b></td><td><b>Value subclass</b> </td></tr>
+<tr>
+<td><code>invalidTypeId</code></td><td>DataValue(invalidTypeId) </td></tr>
+<tr>
+<td><code>unsignedByte</code></td><td>DataValue(unsignedByte) </td></tr>
+<tr>
+<td><code>asciiString</code></td><td>AsciiValue </td></tr>
+<tr>
+<td><code>string</code></td><td>StringValue </td></tr>
+<tr>
+<td><code>unsignedShort</code></td><td>ValueType &lt; uint16_t &gt; </td></tr>
+<tr>
+<td><code>unsignedLong</code></td><td>ValueType &lt; uint32_t &gt; </td></tr>
+<tr>
+<td><code>unsignedRational</code></td><td>ValueType &lt; URational &gt; </td></tr>
+<tr>
+<td><code>invalid6</code></td><td>DataValue(invalid6) </td></tr>
+<tr>
+<td><code>undefined</code></td><td>DataValue </td></tr>
+<tr>
+<td><code>signedShort</code></td><td>ValueType &lt; int16_t &gt; </td></tr>
+<tr>
+<td><code>signedLong</code></td><td>ValueType &lt; int32_t &gt; </td></tr>
+<tr>
+<td><code>signedRational</code></td><td>ValueType &lt; Rational &gt; </td></tr>
+<tr>
+<td><code>tiffFloat</code></td><td>ValueType &lt; float &gt; </td></tr>
+<tr>
+<td><code>tiffDouble</code></td><td>ValueType &lt; double &gt; </td></tr>
+<tr>
+<td><code>tiffIfd</code></td><td>ValueType &lt; uint32_t &gt; </td></tr>
+<tr>
+<td><code>date</code></td><td>DateValue </td></tr>
+<tr>
+<td><code>time</code></td><td>TimeValue </td></tr>
+<tr>
+<td><code>comment</code></td><td>CommentValue </td></tr>
+<tr>
+<td><code>xmpText</code></td><td>XmpTextValue </td></tr>
+<tr>
+<td><code>xmpBag</code></td><td>XmpArrayValue </td></tr>
+<tr>
+<td><code>xmpSeq</code></td><td>XmpArrayValue </td></tr>
+<tr>
+<td><code>xmpAlt</code></td><td>XmpArrayValue </td></tr>
+<tr>
+<td><code>langAlt</code></td><td>LangAltValue </td></tr>
+<tr>
+<td><em>default</em></td><td>DataValue(typeId) </td></tr>
+</table>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">typeId</td><td>Type of the value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Auto-pointer to the newly created <a class="el" href="classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata.">Value</a>. The caller owns this copy and the auto-pointer ensures that it will be deleted. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="addmoddel_8cpp-example.html#a4">addmoddel.cpp</a>, and <a class="el" href="xmpsample_8cpp-example.html#a15">xmpsample.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="afb34848ea4ad36f19443875d9e8671b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb34848ea4ad36f19443875d9e8671b0">&#9670;&nbsp;</a></span>dataArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> Exiv2::Value::dataArea </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a copy of the data area if the value has one. The caller owns this copy and <a class="el" href="classExiv2_1_1DataBuf.html" title="Utility class containing a character array. All it does is to take care of memory allocation and dele...">DataBuf</a> ensures that it will be deleted. </p>
+<p>Values may have a data area, which can contain additional information besides the actual value. This method is used to access such a data area.</p>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classExiv2_1_1DataBuf.html" title="Utility class containing a character array. All it does is to take care of memory allocation and dele...">DataBuf</a> containing a copy of the data area or an empty <a class="el" href="classExiv2_1_1DataBuf.html" title="Utility class containing a character array. All it does is to take care of memory allocation and dele...">DataBuf</a> if the value does not have a data area assigned. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classExiv2_1_1ValueType.html#a8bf5d95ad43838b0ee4931d70c821f29">Exiv2::ValueType&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="acc8870f802ebcdf9d4e081816ad8956e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc8870f802ebcdf9d4e081816ad8956e">&#9670;&nbsp;</a></span>read() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Exiv2::Value::read </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a>&#160;</td>
+          <td class="paramname"><em>byteOrder</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read the value from a character buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>Pointer to the data buffer to read from </td></tr>
+    <tr><td class="paramname">len</td><td>Number of bytes in the data buffer </td></tr>
+    <tr><td class="paramname">byteOrder</td><td>Applicable byte order (little or big endian).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if successful. </dd></dl>
+
+<p>Implemented in <a class="el" href="classExiv2_1_1TimeValue.html#a2670613720bd933ee5c95e489a6cd4cf">Exiv2::TimeValue</a>, <a class="el" href="classExiv2_1_1DateValue.html#ab4c990cb1e24751c786e26bac8272ce9">Exiv2::DateValue</a>, <a class="el" href="classExiv2_1_1XmpValue.html#aadaa78392376573ef52effdbd5a8ffe6">Exiv2::XmpValue</a>, <a class="el" href="classExiv2_1_1StringValueBase.html#aae2b6c108c891670a4ee873946aedfea">Exiv2::StringValueBase</a>, <a class="el" href="classExiv2_1_1DataValue.html#ad09a8313bc8b11729c43d10c6f1a3ffb">Exiv2::DataValue</a>, <a class="el" href="classExiv2_1_1ValueType.html#a725c88fdf395b0dba55c13794b458b69">Exiv2::ValueType&lt; T &gt;</a>, and <a class="el" href="classExiv2_1_1CommentValue.html#a4210d47fa2e7e8a24d8ad89328996e3b">Exiv2::CommentValue</a>.</p>
+
+</div>
+</div>
+<a id="a2864378d7572310aa5f4cf4127365862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2864378d7572310aa5f4cf4127365862">&#9670;&nbsp;</a></span>read() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Exiv2::Value::read </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the value from a string buffer. The format of the string corresponds to that of the <a class="el" href="classExiv2_1_1Value.html#a2518f5ba09fc8c00785c57a119892c4c" title="Write the value to an output stream. You do not usually have to use this function; it is used for the...">write()</a> method, i.e., a string obtained through the <a class="el" href="classExiv2_1_1Value.html#a2518f5ba09fc8c00785c57a119892c4c" title="Write the value to an output stream. You do not usually have to use this function; it is used for the...">write()</a> method can be read by this function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>The string to read from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if successful. </dd></dl>
+
+<p>Implemented in <a class="el" href="classExiv2_1_1CommentValue.html#a0dc1a2489912d18b05ba25881ed172c3">Exiv2::CommentValue</a>, <a class="el" href="classExiv2_1_1XmpValue.html#a7c357e0bee86bd3c6eee197711472821">Exiv2::XmpValue</a>, <a class="el" href="classExiv2_1_1ValueType.html#af66d05b6e6cf774f58f5110b5976a329">Exiv2::ValueType&lt; T &gt;</a>, <a class="el" href="classExiv2_1_1TimeValue.html#afd125642b473bd80ed0f25e71c016c58">Exiv2::TimeValue</a>, <a class="el" href="classExiv2_1_1DateValue.html#aa79469b67dd280fcab1186eb855573e1">Exiv2::DateValue</a>, <a class="el" href="classExiv2_1_1LangAltValue.html#aaab6ae9d75120ba24a4ddec341e77c1e">Exiv2::LangAltValue</a>, <a class="el" href="classExiv2_1_1XmpArrayValue.html#aa49ab2fa5159f9369501ab3fa8c6b63e">Exiv2::XmpArrayValue</a>, <a class="el" href="classExiv2_1_1XmpTextValue.html#a03ba8322cd618df04eda0e2c6f7b6246">Exiv2::XmpTextValue</a>, <a class="el" href="classExiv2_1_1AsciiValue.html#a2d66fb3775f82d536cb18423346f0781">Exiv2::AsciiValue</a>, <a class="el" href="classExiv2_1_1StringValueBase.html#a6882ba90138a30fcf2123c74f928a75e">Exiv2::StringValueBase</a>, and <a class="el" href="classExiv2_1_1DataValue.html#aad4184ffd8169a69f3c4d62d7da1a8b5">Exiv2::DataValue</a>.</p>
+
+</div>
+</div>
+<a id="a78a4f322ebe0049b9630648407c91843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78a4f322ebe0049b9630648407c91843">&#9670;&nbsp;</a></span>setDataArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Exiv2::Value::setDataArea </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the data area, if the value has one by copying (cloning) the buffer pointed to by buf. </p>
+<p>Values may have a data area, which can contain additional information besides the actual value. This method is used to set such a data area.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>Pointer to the source data area </td></tr>
+    <tr><td class="paramname">len</td><td>Size of the data area </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return -1 if the value has no data area, else 0. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="classExiv2_1_1ValueType.html#a360e7872cfcb434d60bdc09dd243958e">Exiv2::ValueType&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a22d257caa6c1ffe6416ce02de7bd8c1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d257caa6c1ffe6416ce02de7bd8c1c">&#9670;&nbsp;</a></span>toFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float Exiv2::Value::toFloat </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>n</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert the <em>n</em>-th component of the value to a float. The behaviour of this method may be undefined if there is no <em>n</em>-th component. </p>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
+<p>Implemented in <a class="el" href="classExiv2_1_1ValueType.html#ac22dec098a327c170ce386ad37442d8b">Exiv2::ValueType&lt; T &gt;</a>, <a class="el" href="classExiv2_1_1TimeValue.html#ad7c2e56662ac378b7d8d6b4baf63ddf2">Exiv2::TimeValue</a>, <a class="el" href="classExiv2_1_1DateValue.html#a932a5ee21962467a8975b5318c3195a3">Exiv2::DateValue</a>, <a class="el" href="classExiv2_1_1LangAltValue.html#acf6ed7b5ef1b000898d5e4e77247877b">Exiv2::LangAltValue</a>, <a class="el" href="classExiv2_1_1XmpArrayValue.html#a7bf26174b804ed32cdc4ae8d2954b9fc">Exiv2::XmpArrayValue</a>, <a class="el" href="classExiv2_1_1XmpTextValue.html#a6da2bb624be28522fe2472531fa87af4">Exiv2::XmpTextValue</a>, <a class="el" href="classExiv2_1_1StringValueBase.html#a7c515672cb1d6b1fddb10ca328c63dc8">Exiv2::StringValueBase</a>, <a class="el" href="classExiv2_1_1DataValue.html#a1e8c9e25b6cbfed141e8dccc6fc36ede">Exiv2::DataValue</a>, <a class="el" href="classExiv2_1_1ValueType.html#a097236490b3429142afc60b6f636f144">Exiv2::ValueType&lt; T &gt;</a>, and <a class="el" href="classExiv2_1_1ValueType.html#ac68f4ac5e10a14ca84bbc9bef0f07cbf">Exiv2::ValueType&lt; T &gt;</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="xmpsample_8cpp-example.html#a6">xmpsample.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a4530a3fc3e2305cf994de5476f46f953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4530a3fc3e2305cf994de5476f46f953">&#9670;&nbsp;</a></span>toLong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual long Exiv2::Value::toLong </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>n</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert the <em>n</em>-th component of the value to a long. The behaviour of this method may be undefined if there is no <em>n</em>-th component. </p>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
+<p>Implemented in <a class="el" href="classExiv2_1_1ValueType.html#a140f345078832a4ca6b3f1b17646c555">Exiv2::ValueType&lt; T &gt;</a>, <a class="el" href="classExiv2_1_1TimeValue.html#a484e33791f1421c4e64115cb27c399d1">Exiv2::TimeValue</a>, <a class="el" href="classExiv2_1_1DateValue.html#aeca49fa9f7758840cb0ed1a3dfde4cad">Exiv2::DateValue</a>, <a class="el" href="classExiv2_1_1LangAltValue.html#aae47e8237fdacd11ee57c28e6ce91a77">Exiv2::LangAltValue</a>, <a class="el" href="classExiv2_1_1XmpArrayValue.html#ab834c888574685854ce318c6b16c51ff">Exiv2::XmpArrayValue</a>, <a class="el" href="classExiv2_1_1XmpTextValue.html#a0a11b24ca40f167a362b14e9ed9eea96">Exiv2::XmpTextValue</a>, <a class="el" href="classExiv2_1_1StringValueBase.html#ab02402d1d2c91f7aa38ca1edc2fe7664">Exiv2::StringValueBase</a>, <a class="el" href="classExiv2_1_1DataValue.html#adc7089881e2014fb7d27d473aba11a4b">Exiv2::DataValue</a>, <a class="el" href="classExiv2_1_1ValueType.html#afb8127ff26531236ff5a75232dcc0d84">Exiv2::ValueType&lt; T &gt;</a>, <a class="el" href="classExiv2_1_1ValueType.html#a4302aa0e8dee770c7265ed8e1fccb07c">Exiv2::ValueType&lt; T &gt;</a>, <a class="el" href="classExiv2_1_1ValueType.html#ada8efe2277a95bf41b7c2cabd3b1d081">Exiv2::ValueType&lt; T &gt;</a>, and <a class="el" href="classExiv2_1_1ValueType.html#a2b7ed62bc1c436eb564807559452a6e8">Exiv2::ValueType&lt; T &gt;</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="xmpsample_8cpp-example.html#a9">xmpsample.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<a id="a595a4cb549bec8c19d290ca3e95a2678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a595a4cb549bec8c19d290ca3e95a2678">&#9670;&nbsp;</a></span>toRational()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespaceExiv2.html#a95756f3f7fa19103f83addf5fa088a30">Rational</a> Exiv2::Value::toRational </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>n</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert the <em>n</em>-th component of the value to a Rational. The behaviour of this method may be undefined if there is no <em>n</em>-th component. </p>
+<dl class="section return"><dt>Returns</dt><dd>The converted value. </dd></dl>
+
+<p>Implemented in <a class="el" href="classExiv2_1_1ValueType.html#a971cd672094f8ecf332cb527fbdd8b71">Exiv2::ValueType&lt; T &gt;</a>, <a class="el" href="classExiv2_1_1TimeValue.html#a782515087aaf7b5f4f50c8c9e764e62a">Exiv2::TimeValue</a>, <a class="el" href="classExiv2_1_1DateValue.html#a4791c815f29473b084dfe369f0a23881">Exiv2::DateValue</a>, <a class="el" href="classExiv2_1_1LangAltValue.html#a546b28ca34e7ec6aa4b23d04ab82f204">Exiv2::LangAltValue</a>, <a class="el" href="classExiv2_1_1XmpArrayValue.html#a3f8460425dd0dde5d47e8ba9bb075e6d">Exiv2::XmpArrayValue</a>, <a class="el" href="classExiv2_1_1XmpTextValue.html#a086634c9fe3290cfa05df894c9a5eee9">Exiv2::XmpTextValue</a>, <a class="el" href="classExiv2_1_1StringValueBase.html#acd31553093967446fde0e382cd2e48ed">Exiv2::StringValueBase</a>, <a class="el" href="classExiv2_1_1DataValue.html#ab6065699831a706b141c91ff40e04262">Exiv2::DataValue</a>, <a class="el" href="classExiv2_1_1ValueType.html#a3ddf28f52786fbc03d0689af36183ddd">Exiv2::ValueType&lt; T &gt;</a>, <a class="el" href="classExiv2_1_1ValueType.html#a3cda24c66df26830450fb7dad15f6c1a">Exiv2::ValueType&lt; T &gt;</a>, <a class="el" href="classExiv2_1_1ValueType.html#a856a6e80a914e0bbd82dcbdc3f82d24b">Exiv2::ValueType&lt; T &gt;</a>, and <a class="el" href="classExiv2_1_1ValueType.html#a006d9f9f1ce12f26e14c19dd3ecb3f1f">Exiv2::ValueType&lt; T &gt;</a>.</p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="xmpsample_8cpp-example.html#a8">xmpsample.cpp</a>.</dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>value.hpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>

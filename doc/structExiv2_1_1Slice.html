@@ -1,0 +1,427 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="../book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceExiv2.html">Exiv2</a></li><li class="navelem"><a class="el" href="structExiv2_1_1Slice.html">Slice</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="structExiv2_1_1Slice-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Exiv2::Slice&lt; container &gt; Struct Template Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="structExiv2_1_1Slice.html" title="Slice (= view) for STL containers.">Slice</a> (= view) for STL containers.  
+ <a href="structExiv2_1_1Slice.html#details">More...</a></p>
+
+<p><code>#include &lt;slice.hpp&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Exiv2::Slice&lt; container &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="structExiv2_1_1Slice__inherit__graph.png" border="0" usemap="#Exiv2_1_1Slice_3_01container_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="Exiv2_1_1Slice_3_01container_01_4_inherit__map" id="Exiv2_1_1Slice_3_01container_01_4_inherit__map">
+<area shape="rect" title="Slice (= view) for STL containers." alt="" coords="1484,57,1672,84"/>
+<area shape="rect" href="structExiv2_1_1Internal_1_1MutableSliceBase.html" title=" " alt="" coords="1213,43,1435,99"/>
+<area shape="rect" href="structExiv2_1_1Internal_1_1ConstSliceBase.html" title=" " alt="" coords="727,5,971,61"/>
+<area shape="rect" href="structExiv2_1_1Internal_1_1SliceBase.html" title=" " alt="" coords="5,36,192,63"/>
+<area shape="rect" href="structExiv2_1_1Internal_1_1ConstSliceBase.html" title="This class provides the public&#45;facing const&#45;qualified methods of a slice." alt="" coords="241,58,484,99"/>
+<area shape="rect" href="structExiv2_1_1Internal_1_1MutableSliceBase.html" title=" " alt="" coords="754,85,943,141"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a1c2bbb067a689ebc98318b45501869db"><td class="memItemLeft" align="right" valign="top"><a id="a1c2bbb067a689ebc98318b45501869db"></a>
+typedef container::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b></td></tr>
+<tr class="separator:a1c2bbb067a689ebc98318b45501869db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70340c130eca052166bd60023c896134"><td class="memItemLeft" align="right" valign="top"><a id="a70340c130eca052166bd60023c896134"></a>
+typedef container::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b></td></tr>
+<tr class="separator:a70340c130eca052166bd60023c896134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a449b19cf742a329c18fdb9320a86eb1f"><td class="memItemLeft" align="right" valign="top"><a id="a449b19cf742a329c18fdb9320a86eb1f"></a>
+typedef <a class="el" href="structExiv2_1_1Internal_1_1remove__cv.html">Internal::remove_cv</a>&lt; typename container::value_type &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
+<tr class="separator:a449b19cf742a329c18fdb9320a86eb1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_structExiv2_1_1Internal_1_1MutableSliceBase"><td colspan="2" onclick="javascript:toggleInherit('pub_types_structExiv2_1_1Internal_1_1MutableSliceBase')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html">Exiv2::Internal::MutableSliceBase&lt; Internal::ContainerStorage, container &gt;</a></td></tr>
+<tr class="memitem:a6915ff5dd764b60a4f7efd0828aa1e50 inherit pub_types_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memItemLeft" align="right" valign="top"><a id="a6915ff5dd764b60a4f7efd0828aa1e50"></a>
+typedef <a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html">ConstSliceBase</a>&lt; <a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>, container &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b></td></tr>
+<tr class="separator:a6915ff5dd764b60a4f7efd0828aa1e50 inherit pub_types_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04ce3c87abc6b427922a0a6f0d64d011 inherit pub_types_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memItemLeft" align="right" valign="top"><a id="a04ce3c87abc6b427922a0a6f0d64d011"></a>
+typedef <a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html">ConstSliceBase</a>&lt; <a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>, container &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b></td></tr>
+<tr class="separator:a04ce3c87abc6b427922a0a6f0d64d011 inherit pub_types_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75c435a8a16857adbc50c2430ca5b0b6 inherit pub_types_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memItemLeft" align="right" valign="top"><a id="a75c435a8a16857adbc50c2430ca5b0b6"></a>
+typedef <a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html">ConstSliceBase</a>&lt; <a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>, container &gt;::value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
+<tr class="separator:a75c435a8a16857adbc50c2430ca5b0b6 inherit pub_types_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td colspan="2" onclick="javascript:toggleInherit('pub_types_structExiv2_1_1Internal_1_1ConstSliceBase')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html">Exiv2::Internal::ConstSliceBase&lt; Internal::ContainerStorage, container &gt;</a></td></tr>
+<tr class="memitem:afbfa37b4f4f50bd2a3b680b7726d0e07 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top"><a id="afbfa37b4f4f50bd2a3b680b7726d0e07"></a>
+typedef <a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>&lt; container &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b></td></tr>
+<tr class="separator:afbfa37b4f4f50bd2a3b680b7726d0e07 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0cc94c8de71e8417e2ecb57ae010216 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top"><a id="ae0cc94c8de71e8417e2ecb57ae010216"></a>
+typedef <a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>&lt; container &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b></td></tr>
+<tr class="separator:ae0cc94c8de71e8417e2ecb57ae010216 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa063ef6f6065ca5b0eaf61c14de2b6 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top"><a id="abfa063ef6f6065ca5b0eaf61c14de2b6"></a>
+typedef <a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>&lt; container &gt;::value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
+<tr class="separator:abfa063ef6f6065ca5b0eaf61c14de2b6 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a4d30a189f99d523da17b078a2ad09cce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Slice.html#a4d30a189f99d523da17b078a2ad09cce">Slice</a> (container &amp;cont, size_t <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a1949738eaf69dbc6d7a2507759ca96ad">begin</a>, size_t <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a22fbea41fd6b439d9565fb452c0bcfb4">end</a>)</td></tr>
+<tr class="memdesc:a4d30a189f99d523da17b078a2ad09cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a slice of the container <code>cont</code> starting at <code>begin</code> (including) and ending before <code>end</code>.  <a href="structExiv2_1_1Slice.html#a4d30a189f99d523da17b078a2ad09cce">More...</a><br /></td></tr>
+<tr class="separator:a4d30a189f99d523da17b078a2ad09cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a837cc0faf8dd67b88f2bd38932fb25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structExiv2_1_1Slice.html">Slice</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Slice.html#a3a837cc0faf8dd67b88f2bd38932fb25">subSlice</a> (size_t <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a1949738eaf69dbc6d7a2507759ca96ad">begin</a>, size_t <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a22fbea41fd6b439d9565fb452c0bcfb4">end</a>)</td></tr>
+<tr class="separator:a3a837cc0faf8dd67b88f2bd38932fb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a463462526b4856653827c9e3bd170547"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structExiv2_1_1Slice.html">Slice</a>&lt; const container &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Slice.html#a463462526b4856653827c9e3bd170547">subSlice</a> (size_t <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a1949738eaf69dbc6d7a2507759ca96ad">begin</a>, size_t <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a22fbea41fd6b439d9565fb452c0bcfb4">end</a>) const</td></tr>
+<tr class="separator:a463462526b4856653827c9e3bd170547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structExiv2_1_1Internal_1_1MutableSliceBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html">Exiv2::Internal::MutableSliceBase&lt; Internal::ContainerStorage, container &gt;</a></td></tr>
+<tr class="memitem:a5e9f6d3048f51b3d68958a4028d5f6af inherit pub_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a5e9f6d3048f51b3d68958a4028d5f6af">MutableSliceBase</a> (container &amp;data, size_t <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a1949738eaf69dbc6d7a2507759ca96ad">begin</a>, size_t <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a22fbea41fd6b439d9565fb452c0bcfb4">end</a>)</td></tr>
+<tr class="separator:a5e9f6d3048f51b3d68958a4028d5f6af inherit pub_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8a9c467e4502a9c80b86c0953bc7c91 inherit pub_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memItemLeft" align="right" valign="top">value_type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#ab8a9c467e4502a9c80b86c0953bc7c91">at</a> (size_t index)</td></tr>
+<tr class="separator:ab8a9c467e4502a9c80b86c0953bc7c91 inherit pub_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a48fe6311f57af01cb4181c8edae9a inherit pub_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memItemLeft" align="right" valign="top"><a id="a99a48fe6311f57af01cb4181c8edae9a"></a>
+const value_type &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>at</b> (size_t index) const</td></tr>
+<tr class="separator:a99a48fe6311f57af01cb4181c8edae9a inherit pub_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1949738eaf69dbc6d7a2507759ca96ad inherit pub_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memItemLeft" align="right" valign="top">iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a1949738eaf69dbc6d7a2507759ca96ad">begin</a> ()  throw ()</td></tr>
+<tr class="separator:a1949738eaf69dbc6d7a2507759ca96ad inherit pub_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22fbea41fd6b439d9565fb452c0bcfb4 inherit pub_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memItemLeft" align="right" valign="top">iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a22fbea41fd6b439d9565fb452c0bcfb4">end</a> ()  throw ()</td></tr>
+<tr class="separator:a22fbea41fd6b439d9565fb452c0bcfb4 inherit pub_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html">Exiv2::Internal::ConstSliceBase&lt; Internal::ContainerStorage, container &gt;</a></td></tr>
+<tr class="memitem:af19c6e79461cd3e8ac2658c67432197a inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html#af19c6e79461cd3e8ac2658c67432197a">ConstSliceBase</a> (container &amp;data, size_t begin, size_t end)</td></tr>
+<tr class="separator:af19c6e79461cd3e8ac2658c67432197a inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d8672586fd2b84b31f41bb5c138b43d inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top">const value_type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html#a9d8672586fd2b84b31f41bb5c138b43d">at</a> (size_t index) const</td></tr>
+<tr class="separator:a9d8672586fd2b84b31f41bb5c138b43d inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c48b20ace6d9497688b600d1c129e3 inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top">const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html#ab0c48b20ace6d9497688b600d1c129e3">cbegin</a> () const  throw ()</td></tr>
+<tr class="separator:ab0c48b20ace6d9497688b600d1c129e3 inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73bcac7d61d3c72a840fbf44160fe97b inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top">const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html#a73bcac7d61d3c72a840fbf44160fe97b">cend</a> () const  throw ()</td></tr>
+<tr class="separator:a73bcac7d61d3c72a840fbf44160fe97b inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ffbb40deacd94ba4f2c1065f2c2333b inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top">slice_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html#a5ffbb40deacd94ba4f2c1065f2c2333b">subSlice</a> (size_t begin, size_t end) const</td></tr>
+<tr class="separator:a5ffbb40deacd94ba4f2c1065f2c2333b inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structExiv2_1_1Internal_1_1SliceBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structExiv2_1_1Internal_1_1SliceBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structExiv2_1_1Internal_1_1SliceBase.html">Exiv2::Internal::SliceBase</a></td></tr>
+<tr class="memitem:a41f1a55c4915f09aec23531488d85c3e inherit pub_methods_structExiv2_1_1Internal_1_1SliceBase"><td class="memItemLeft" align="right" valign="top"><a id="a41f1a55c4915f09aec23531488d85c3e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SliceBase</b> (size_t begin, size_t end)</td></tr>
+<tr class="separator:a41f1a55c4915f09aec23531488d85c3e inherit pub_methods_structExiv2_1_1Internal_1_1SliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91530216c805ca43dc9b1ec4130fdc07 inherit pub_methods_structExiv2_1_1Internal_1_1SliceBase"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1SliceBase.html#a91530216c805ca43dc9b1ec4130fdc07">size</a> () const  throw ()</td></tr>
+<tr class="separator:a91530216c805ca43dc9b1ec4130fdc07 inherit pub_methods_structExiv2_1_1Internal_1_1SliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_types_structExiv2_1_1Internal_1_1MutableSliceBase"><td colspan="2" onclick="javascript:toggleInherit('pro_types_structExiv2_1_1Internal_1_1MutableSliceBase')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html">Exiv2::Internal::MutableSliceBase&lt; Internal::ContainerStorage, container &gt;</a></td></tr>
+<tr class="memitem:aab0ce1c7852d4076b9d1e5dc695a9e01 inherit pro_types_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memItemLeft" align="right" valign="top"><a id="aab0ce1c7852d4076b9d1e5dc695a9e01"></a>
+typedef <a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html">ConstSliceBase</a>&lt; <a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>, container &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>base_type</b></td></tr>
+<tr class="separator:aab0ce1c7852d4076b9d1e5dc695a9e01 inherit pro_types_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_structExiv2_1_1Internal_1_1MutableSliceBase')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html">Exiv2::Internal::MutableSliceBase&lt; Internal::ContainerStorage, container &gt;</a></td></tr>
+<tr class="memitem:a766276987c1a9f8198d4309ccf4955fe inherit pro_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html">ConstSliceBase</a>&lt; <a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>, const container &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a766276987c1a9f8198d4309ccf4955fe">to_const_base</a> () const  throw ()</td></tr>
+<tr class="separator:a766276987c1a9f8198d4309ccf4955fe inherit pro_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ad7db2931c6efdf1969a8ebadce60f inherit pro_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memItemLeft" align="right" valign="top">slice_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#ae0ad7db2931c6efdf1969a8ebadce60f">subSlice</a> (size_t <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a1949738eaf69dbc6d7a2507759ca96ad">begin</a>, size_t <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a22fbea41fd6b439d9565fb452c0bcfb4">end</a>)</td></tr>
+<tr class="separator:ae0ad7db2931c6efdf1969a8ebadce60f inherit pro_methods_structExiv2_1_1Internal_1_1MutableSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_structExiv2_1_1Internal_1_1SliceBase"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_structExiv2_1_1Internal_1_1SliceBase')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="structExiv2_1_1Internal_1_1SliceBase.html">Exiv2::Internal::SliceBase</a></td></tr>
+<tr class="memitem:aee4deafe8085562d6a4889063421f720 inherit pro_methods_structExiv2_1_1Internal_1_1SliceBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1SliceBase.html#aee4deafe8085562d6a4889063421f720">rangeCheck</a> (size_t index) const</td></tr>
+<tr class="separator:aee4deafe8085562d6a4889063421f720 inherit pro_methods_structExiv2_1_1Internal_1_1SliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_structExiv2_1_1Internal_1_1ConstSliceBase"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_structExiv2_1_1Internal_1_1ConstSliceBase')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html">Exiv2::Internal::ConstSliceBase&lt; Internal::ContainerStorage, container &gt;</a></td></tr>
+<tr class="memitem:a8f85c67275e64e44430fb0f3379bd778 inherit pro_attribs_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>&lt; container &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html#a8f85c67275e64e44430fb0f3379bd778">storage_</a></td></tr>
+<tr class="separator:a8f85c67275e64e44430fb0f3379bd778 inherit pro_attribs_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_structExiv2_1_1Internal_1_1SliceBase"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_structExiv2_1_1Internal_1_1SliceBase')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="structExiv2_1_1Internal_1_1SliceBase.html">Exiv2::Internal::SliceBase</a></td></tr>
+<tr class="memitem:aa3385c250725aba1076a6ae203e089c6 inherit pro_attribs_structExiv2_1_1Internal_1_1SliceBase"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1SliceBase.html#aa3385c250725aba1076a6ae203e089c6">begin_</a></td></tr>
+<tr class="separator:aa3385c250725aba1076a6ae203e089c6 inherit pro_attribs_structExiv2_1_1Internal_1_1SliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ee8ca5e6a784018408cd65e130d607 inherit pro_attribs_structExiv2_1_1Internal_1_1SliceBase"><td class="memItemLeft" align="right" valign="top"><a id="a45ee8ca5e6a784018408cd65e130d607"></a>
+const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>end_</b></td></tr>
+<tr class="separator:a45ee8ca5e6a784018408cd65e130d607 inherit pro_attribs_structExiv2_1_1Internal_1_1SliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename container&gt;<br />
+struct Exiv2::Slice&lt; container &gt;</h3>
+
+<p><a class="el" href="structExiv2_1_1Slice.html" title="Slice (= view) for STL containers.">Slice</a> (= view) for STL containers. </p>
+<p>This is a very simple implementation of slices (i.e. views of sub-arrays) for STL containers that support O(1) element access and random access iterators (like std::vector, std::array and std::string).</p>
+<p>A slice represents the semi-open interval [begin, end) and provides a (mutable) view, it does however not own the data! It can be used to conveniently pass parts of containers into functions without having to use iterators or offsets.</p>
+<p>In contrast to C++20's std::span&lt;T&gt; it is impossible to read beyond the container's bounds and unchecked access is not-possible (by design).</p>
+<p>Example usage: </p><div class="fragment"><div class="line">std::vector&lt;int&gt; vec = {0, 1, 2, 3, 4};</div>
+<div class="line">slice&lt;std::vector&lt;int&gt; &gt; one_two(vec, 1, 3);</div>
+<div class="line">assert(one_two.size() == 2);</div>
+<div class="line">assert(one_two.at(0) == 1 &amp;&amp; one_two.at(1) == 2);</div>
+<div class="line"><span class="comment">// mutate the contents:</span></div>
+<div class="line">one_two.at(0) *= 2;</div>
+<div class="line">one_two.at(1) *= 3;</div>
+<div class="line">assert(one_two.at(0) == 2 &amp;&amp; one_two.at(1) == 6);</div>
+</div><!-- fragment --><p>Slices also offer access via iterators of the same type as the underlying container, so that they can be used in a comparable fashion: </p><div class="fragment"><div class="line">std::vector&lt;int&gt; vec = {0, 1, 2, 3, 4};</div>
+<div class="line">slice&lt;std::vector&lt;int&gt;&gt; three_four(vec, 3, 5);</div>
+<div class="line">assert(*three_four.begin() == 3 &amp;&amp; *three_four.end() == 4);</div>
+<div class="line"><span class="comment">// this prints:</span></div>
+<div class="line"><span class="comment">// 3</span></div>
+<div class="line"><span class="comment">// 4</span></div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp; elem : three_four) {</div>
+<div class="line">    std::cout &lt;&lt; elem &lt;&lt; std::endl;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">container</td><td>A STL container type, like vector or array. Must support array-like access via the <code><a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#ab8a9c467e4502a9c80b86c0953bc7c91">at()</a></code> method. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4d30a189f99d523da17b078a2ad09cce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d30a189f99d523da17b078a2ad09cce">&#9670;&nbsp;</a></span>Slice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structExiv2_1_1Slice.html">Exiv2::Slice</a>&lt; container &gt;::<a class="el" href="structExiv2_1_1Slice.html">Slice</a> </td>
+          <td>(</td>
+          <td class="paramtype">container &amp;&#160;</td>
+          <td class="paramname"><em>cont</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a slice of the container <code>cont</code> starting at <code>begin</code> (including) and ending before <code>end</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cont</td><td>Reference to the container </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">begin</td><td>First element of the slice. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>First element beyond the slice.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>For invalid slice bounds: when end is not larger than begin or when the slice's bounds are larger than the container's size.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Please note that due to the requirement that <code>end</code> must be larger than <code>begin</code> (they cannot be equal) it is impossible to construct a slice with zero length. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3a837cc0faf8dd67b88f2bd38932fb25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a837cc0faf8dd67b88f2bd38932fb25">&#9670;&nbsp;</a></span>subSlice() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structExiv2_1_1Slice.html">Slice</a> <a class="el" href="structExiv2_1_1Slice.html">Exiv2::Slice</a>&lt; container &gt;::subSlice </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Construct a sub-slice of this slice with the given bounds. The bounds are evaluated with respect to the current slice.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">begin</td><td>First element in the new slice. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td>First element beyond the new slice.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>when begin or end are invalid </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">References <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a1949738eaf69dbc6d7a2507759ca96ad">Exiv2::Internal::MutableSliceBase&lt; Internal::ContainerStorage, container &gt;::begin()</a>, and <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a22fbea41fd6b439d9565fb452c0bcfb4">Exiv2::Internal::MutableSliceBase&lt; Internal::ContainerStorage, container &gt;::end()</a>.</p>
+
+</div>
+</div>
+<a id="a463462526b4856653827c9e3bd170547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a463462526b4856653827c9e3bd170547">&#9670;&nbsp;</a></span>subSlice() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename container &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structExiv2_1_1Slice.html">Slice</a>&lt;const container&gt; <a class="el" href="structExiv2_1_1Slice.html">Exiv2::Slice</a>&lt; container &gt;::subSlice </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructs a new constant subSlice. Behaves otherwise exactly like the non-const version. </p>
+
+<p class="reference">References <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a1949738eaf69dbc6d7a2507759ca96ad">Exiv2::Internal::MutableSliceBase&lt; Internal::ContainerStorage, container &gt;::begin()</a>, <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a22fbea41fd6b439d9565fb452c0bcfb4">Exiv2::Internal::MutableSliceBase&lt; Internal::ContainerStorage, container &gt;::end()</a>, and <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a766276987c1a9f8198d4309ccf4955fe">Exiv2::Internal::MutableSliceBase&lt; Internal::ContainerStorage, container &gt;::to_const_base()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>slice.hpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.27.5
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-01-03 02:38 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>
