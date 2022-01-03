@@ -1,0 +1,53 @@
+# https://github.com/marketplace/actions/github-pages-action
+
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: Checkout team repository
+        uses: actions/checkout@v2
+        path: team
+
+      - name: Checkout exiv2 repository
+        uses: actions/checkout@v2
+        with:
+          repository: Exiv2/exiv2
+          path: exiv2
+          ref: 0.27-maintenance
+
+      - name: Set environment variables
+        run: |
+          echo "EXIV2WEB=$GITHUB_WORKSPACE/team/website" >> $GITHUB_ENV
+          echo "EXIV2HOME=$GITHUB_WORKSPACE/exiv2"       >> $GITHUB_ENV
+
+      - name: Install dependencies
+        run: sudo apt install -y cmake make g++ man2html python doxygen xsltproc ps2pdf man2html
+
+      - name: Build exiv2
+        run: |
+          cmake -S$EXIV2HOME -B$EXIV2HOME/build -DEXIV2_ENABLE_BMFF=1 -DCMAKE_INSTALL_PREFIX=$EXIV2HOME/install
+          cmake --build $EXIV2HOME/build -- install
+          make -C $EXIV2HOME/doc/template
+
+      - name: Build exiv2.org static content
+        run: |
+          make -C $EXIV2WEB update
+          make -C $EXIV2WEB
+
+      - name: Deploy static content for exiv2.org
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/gh_pages_test' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ${{ env.EXIV2WEB }}/html
