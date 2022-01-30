@@ -1,0 +1,59 @@
+/* $ prince --style IMeEA.css IMaEA.html && open IMaEA.pdf */
+
+@page {
+   size:   275mm 389mm;  
+   margin: 21mm 15mm;
+   @bottom-center {
+      margin: 10pt 0 30pt 0;
+      border-top: .25pt solid #666;
+      content: counter(page);
+      font-size: 10pt;
+      content: "2020-06-30" ; 
+   }
+}
+
+/* first page */
+@page:first {
+   margin: 0;
+}
+
+@page:right{ 
+   @bottom-left {
+       margin: 10pt 0 30pt 0;
+       border-top: .25pt solid #666;
+       content: "Image Metadata and Exiv2 Architecture" ;
+       font-size: 10pt;
+       color: #333;
+   }
+   @bottom-right { 
+       margin: 10pt 0 30pt 0;
+       border-top: .25pt solid #666;
+       content: counter(page);
+       font-size: 10pt;
+   }
+}
+
+@page:left{ 
+   @bottom-right {
+       margin: 10pt 0 30pt 0;
+       border-top: .25pt solid #666;
+       content: "Image Metadata and Exiv2 Architecture" ;
+       font-size: 10pt;
+       color: #333;
+   }
+   @bottom-left { 
+       margin: 10pt 0 30pt 0;
+       border-top: .25pt solid #666;
+       content: counter(page);
+       font-size: 9pt;
+   }
+}
+
+code {
+	font-name : Consolas, fixed;
+	font-size : 8pt;
+	border : 12pt solid red ;
+}
+
+/* That's all Folks! */
+
