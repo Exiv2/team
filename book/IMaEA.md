@@ -1,14 +1,14 @@
 <br><br><br><br>
 <center><img src="exiv2-large.png" width="600"/></center>
 
-<h3 align=center style="font-size: 36px;color:#FF4646;font-faily: Palatino, Times, serif;"><br>Image Metadata<br><i>and</i><br>Exiv2 Architecture</h3>
+<h3 align=center style="font-size: 36px;color:#FF4646;font-family: Palatino, Times, serif;"><br>Image Metadata<br><i>and</i><br>Exiv2 Architecture</h3>
 
 <h3 align=center style="font-size:24px;color:#23668F;font-family: Palatino, Times, serif;">Robin Mills<br>2021-10-06</h3>
 
 <div id="dedication"/>
 ## _Dedication and Acknowledgment_
 
-_I want to say <b>Thank You</b> to a few folks who have made this book possbile._
+_I want to say <b>Thank You</b> to a few folks who have made this book possible._
 
 _First, my wife Alison, who has been my loyal supporter since the day we met in High School in 1967._
 
@@ -151,7 +151,7 @@ I intended to make a proposal at LGM in Rennes in May 2020 concerning this matte
 
 In this way, new lens definitions can be written in M2Lscript without touching anything in Exiv2 or ExifTool.
 
-I will not be able to work on both Exiv2 and M2Lscript simulateously.  When a new maintainer takes responsibility for Exiv2, I will retire.  M2Lscript would be my swansong technology project.  However, the C-19 crisis postponed LGM in 2020 and 2021.  I don't have the energy to continue with open-source. This book is my final contribution.
+I will not be able to work on both Exiv2 and M2Lscript simultaneously.  When a new maintainer takes responsibility for Exiv2, I will retire.  M2Lscript would be my swansong technology project.  However, the C-19 crisis postponed LGM in 2020 and 2021.  I don't have the energy to continue with open-source. This book is my final contribution.
 
 [TOC](#TOC)
 <div id="scope"/>
@@ -369,7 +369,7 @@ It's possible that there are tags which are unique to CR2 and NEF and tvisitor.c
 
 ### Garbage Collecting Tiff Files
 
-There is a significant problem with the Tiff format.  It's possible for binary records to hold offsets to significant data elsewhere in the file.  This creates two problems.  Firstly, when buried in an undocumented MakerNote, we don't know that the data is an offset.  So, when all the blocks move in a rewrite of the file, we can neither relocate the referenced data, nor update the offset.  My conclusion is that is almost impossible to garbage collect a tiff file.  However, the situation isn't hopeless.  The offset in the Tiff Header defines the location of IFD0.  It's very common that IFD0 is at the end of the file and the reason is obvious.  When a Tiff is rewritten by an application, they create IFD0 in memory, then copy it to the end of the file and update the offset in the header.  If we are creating IFD0, we can safely reuse the spaced occuped by previous IFD0.
+There is a significant problem with the Tiff format.  It's possible for binary records to hold offsets to significant data elsewhere in the file.  This creates two problems.  Firstly, when buried in an undocumented MakerNote, we don't know that the data is an offset.  So, when all the blocks move in a rewrite of the file, we can neither relocate the referenced data, nor update the offset.  My conclusion is that is almost impossible to garbage collect a tiff file.  However, the situation isn't hopeless.  The offset in the Tiff Header defines the location of IFD0.  It's very common that IFD0 is at the end of the file and the reason is obvious.  When a Tiff is rewritten by an application, they create IFD0 in memory, then copy it to the end of the file and update the offset in the header.  If we are creating IFD0, we can safely reuse the spaced occupied by previous IFD0.
 
 Imperial College have medical imaging Tiff files which are of the order of 100 GigaBytes in length.  Clearly we do not want to rewrite such a file to modify a few bytes of metadata.  We determine the new IFD0 and write it at end of the file. 
 
@@ -379,7 +379,7 @@ In principle, a Tiff can be garbage collected with a block-map.  If we set up a 
 
 The concept of using a block-map to track known data is used in RemoteIo.  We use a block-map to avoid excessive remote I/O by reading data into a cache.  We never read data twice.  We do not need contiguous memory for the file. This is discussed in [6. I/O in Exiv2](#6)
 
-I would like to express my dismay with the design of most image containers.  There is a much simpler design used by macOS and that is a bundle.  A bundle is a directory of files which includes the file Info.plist.  It appears in the Finder to be a simple entity like a file.  The terminal command _**ditto**_  is provided to copy them.  All programming languages can manipulte files.  The metadata in an image should be a little Tiff or sidecar in a bundle.  In principle, a container such as Tiff is a collection of streams that are both relocatable and never reference external data.  Sadly, TIFF and JPEG make it very easy to break both rules.  The design of JPEG makes it almost impossible to edit anything without relocating all the data.  The situation with video is even more serious as the files are huge.  In the PDF format, the file maintains a directory of objects.  The objects can be safely relocated because objects reference each other by name and not the file offset.
+I would like to express my dismay with the design of most image containers.  There is a much simpler design used by macOS and that is a bundle.  A bundle is a directory of files which includes the file Info.plist.  It appears in the Finder to be a simple entity like a file.  The terminal command _**ditto**_  is provided to copy them.  All programming languages can manipulate files.  The metadata in an image should be a little Tiff or sidecar in a bundle.  In principle, a container such as Tiff is a collection of streams that are both relocatable and never reference external data.  Sadly, TIFF and JPEG make it very easy to break both rules.  The design of JPEG makes it almost impossible to edit anything without relocating all the data.  The situation with video is even more serious as the files are huge.  In the PDF format, the file maintains a directory of objects.  The objects can be safely relocated because objects reference each other by name and not the file offset.
 
 ### Metadata that cannot be edited
 
@@ -1238,7 +1238,7 @@ END: ../files/cr3.cr3
 
 I believe HEIC and AVIF are very similar.  However the codec used in AVIF/mdat is royalty free.  The HEIC/mdat codec is proprietary.  From a metadata standpoint, there's no apparent difference.  The term HEIC is the container for such images.  HEIF is the title of the codec technology.
 
-Apple were the first to introduce HEIC files on the iOS devices about 2015.  Canon have released cameras with the option to store HEIC.  I believe this is an honest effort by Canon to move on from JPEG. Will this be a market success?  We don't know yet.  Thanks to Gordon Laing, I have obtained several Canon genenerated HEIC files and I'm very pleased to say that tvisitor required no modification to read the metadata.  Thank You, Gordon:  [https://www.cameralabs.com/tag/heif/](https://www.cameralabs.com/tag/heif/)
+Apple were the first to introduce HEIC files on the iOS devices about 2015.  Canon have released cameras with the option to store HEIC.  I believe this is an honest effort by Canon to move on from JPEG. Will this be a market success?  We don't know yet.  Thanks to Gordon Laing, I have obtained several Canon generated HEIC files and I'm very pleased to say that tvisitor required no modification to read the metadata.  Thank You, Gordon:  [https://www.cameralabs.com/tag/heif/](https://www.cameralabs.com/tag/heif/)
 
 To understand how to parse HEIC and AVIF, we have to discuss the specification of more boxes.
 
@@ -1325,7 +1325,7 @@ _The item location box provides a directory of resources in this or other Files,
 
 This is a single box with which contains an array of ID/extent/length tuples.  We are very interesting the extend/length of the Exif ID.
 
-Please be aware that the order of the  iinf and iloc boxes is not specified.  In tvisitor, we parse Exif metadata before we leave the the meta box.
+Please be aware that the order of the  iinf and iloc boxes is not specified.  In tvisitor, we parse Exif metadata before we leave the meta box.
 
 The iloc box is is specified as follows:
 
@@ -1421,7 +1421,7 @@ I dumped IMG_3578.HEIC with dmpf and disassembled it by hand:
    0xa8c     2700: _...__F._._____._.7.  ->  00 01 f0 d3 00 00 46 cc 00 08 00 00 00 00 00 
    
    EXC = extent_count   CM = construction_method #E = Number of Entries  DRI = data_reverence_index
-   OFF = base_offset   o-l = offset-length       ID = Indentifier
+   OFF = base_offset   o-l = offset-length       ID = Identifier
 ```
 
 The code in ISOBMFF/iloc.cpp is (effectively):
@@ -1577,7 +1577,7 @@ More information about binary decoding in tvisitor.cpp is discussed in [3.5 Repo
 <div id="JXL"/>
 ### JPEG-XL Format
 
-The JXL format is the current contendor to replace JPEG/GIF as the most popular image format.  At the time of writing (2021), it is too early to say if it will reach the goal that eluded PNG, JP2 and WebP.  There is a discussion of this format here:  [https://github.com/Exiv2/exiv2/issues/1503](https://github.com/Exiv2/exiv2/issues/1503).
+The JXL format is the current contender to replace JPEG/GIF as the most popular image format.  At the time of writing (2021), it is too early to say if it will reach the goal that eluded PNG, JP2 and WebP.  There is a discussion of this format here:  [https://github.com/Exiv2/exiv2/issues/1503](https://github.com/Exiv2/exiv2/issues/1503).
 
 JPEG-XL is the only format discussed in this book which has two file layouts.  The first format is _**naked codestream JXL**_.  The first two bytes are 0xff0a.  I have no further information about this stream.  It does not contain Exif, IPTC or XML data.  However it does contain the image and related data such as size, orientation and color profile/handler.
 
@@ -1587,7 +1587,7 @@ JPEG-XL is the only format discussed in this book which has two file layouts.  T
 ...book $ 
 ```
 
-The second format is **JXL/BMFF** and is bmff based.  In correspondance with the authors of the JPEG-XL standard, they explained: _We are planning to add an option to do Brotli-compressed versions of exif and xmp metadata, though maybe it's a bit early to add support for that since JPEG XL Part 2 (which defines these things) is not finalized yet._
+The second format is **JXL/BMFF** and is bmff based.  In correspondence with the authors of the JPEG-XL standard, they explained: _We are planning to add an option to do Brotli-compressed versions of exif and xmp metadata, though maybe it's a bit early to add support for that since JPEG XL Part 2 (which defines these things) is not finalized yet._
 
 ```bash
 ...book $ dmpf count=20 files/Reagan.jxl 
@@ -2080,7 +2080,7 @@ I found this useful description: [https://libopenraw.freedesktop.org/formats/raf
 
 Most of the metadata is contained in the embedded JPEG.  However there is metadata in the embedded TIFF.  This is discussed here: [https://github.com/Exiv2/exiv2/issues/1402](https://github.com/Exiv2/exiv2/issues/1402).
 
-The MakerNote in the embedded JPEG in a RAF has a 12 byte header followed by an IFD.  The 12 bytes header is the ascii string FUJIFILM followed by the bytes 0x0c 0 0 0.  Perhaps it's a coincidence that that 0x0c00000000 is bigEndian '12'.  It's possible that the header is "FUJIFILM"long and long is the offset to the IFD.  As RAF is a big endian file, that's possible.  The code in both Exiv2 and tvisitor however simply skips the 12 byte header and reads the IFD. 
+The MakerNote in the embedded JPEG in a RAF has a 12 byte header followed by an IFD.  The 12 bytes header is the ascii string FUJIFILM followed by the bytes 0x0c 0 0 0.  Perhaps it's a coincidence that 0x0c00000000 is bigEndian '12'.  It's possible that the header is "FUJIFILM"long and long is the offset to the IFD.  As RAF is a big endian file, that's possible.  The code in both Exiv2 and tvisitor however simply skips the 12 byte header and reads the IFD. 
 
 [TOC](#TOC)
 <div id="RW2"/>
@@ -2103,7 +2103,7 @@ We deal with those differences in TiffImage::valid() as follows:
 
 ```cpp
     valid_ =  (magic_==42||magic_==43||magic_==85) && (c == C) && (c=='I'||c=='M') && bytesize == 8 && version == 0;
-    // Panosonic have augmented tiffDict with their keys
+    // Panasonic have augmented tiffDict with their keys
     if ( magic_ == 85 ) {
         setMaker(kPano);
         for ( TagDict::iterator it = panoDict.begin() ; it != panoDict.end() ; it++ ) {
@@ -2130,7 +2130,7 @@ There is no Exiv2, xmp, ICC or IPTC metadata in a TGA file.
 
 The Windows Bitmap Format "Bimp" has been around in Windows forever.  It may even have been in Windows 1.0.  For sure, it was there when I started to working with Windows 3.0 in 1991.  It's not a container.  It's a few fields of data and lots of pixels!
 
-BMP is often referred to as a "device independant bitmap" because it's not designed for any physical device.  It is the responsibility of the device or printer driver to render the image.  Windows device drivers are required to implement the GDI (Graphical Device Interface).
+BMP is often referred to as a "device independent bitmap" because it's not designed for any physical device.  It is the responsibility of the device or printer driver to render the image.  Windows device drivers are required to implement the GDI (Graphical Device Interface).
 
 The first 4 bytes of the BITMAP (following the 14 byte file BITMAPFILE header) is the length of BITMAP.   As well as being useful for navigating the file, this is effectively the BITMAP version.  In the Windows SDK, they call it bmType.  The last time I looked at the structure of a BMP (Windows 95) it believe it was 42 bytes.  On Windows 10 it's now 124.
 
@@ -2439,7 +2439,7 @@ For the moment, take comfort that both are very similar.  By the end of the book
 <div id="XMP"/>
 ##2.2 XMP Metadata
 
-XMP is an Adobe initiative to provide a comprensive and eXtendable Metadata frame to a wide range of documents.
+XMP is an Adobe initiative to provide a comprehensive and eXtendable Metadata frame to a wide range of documents.
 
 You can create Bag, Seq or Struct of metadata.  An "XmpBag" is a set of key/value pairs and are represented by XML attributes.  An "XmpSeq" is a an array of metadata similar to a JavaScript or Python Array.  It's represented by an XML list and can be accessed by index.  An XmpStruct is a set of keys to trees of metadata rathen like a JavaScript or Python Object or Python.
 
@@ -2848,7 +2848,7 @@ I believe the data is defined in the Standard ISO/IEC 2022.  The following web p
 
 ### IPTC Extended Blocks
 
-As with Exif metdata, the IPTC data block can exceed 64k byte and this cannot be stored in a single JPEG segment.  Exiv2 has code to deal with this and is documented here: [https://dev.exiv2.org/issues/0000533](https://dev.exiv2.org/issues/0000533)
+As with Exif metadata, the IPTC data block can exceed 64k byte and this cannot be stored in a single JPEG segment.  Exiv2 has code to deal with this and is documented here: [https://dev.exiv2.org/issues/0000533](https://dev.exiv2.org/issues/0000533)
 
 ### IPTC in Tiff and other formats.
 
@@ -3034,7 +3034,7 @@ Iptc.Application2.Caption Caption 1
 ## 2.4 ICC Profile
 ![icc](icc.png)
 
-The ICC Profile is a standand alone file that can be embedded verbatim in many image formats.  The purpose of the ICC profile is to provide additional color data about the image.  Most colour images are encoded as RGB or CMYK.   When these are rendered on a device, it's necessary to know the actual colour of Red in the image and on the output device.  The Colour Management System (CMS) attempts to render the image to be the same on different devices.  This is of course impossible, however the aim of the ICC Profile is enable the software to achieve good colour fidelity when printing or displaying on different devices.
+The ICC Profile is a standalone file that can be embedded verbatim in many image formats.  The purpose of the ICC profile is to provide additional color data about the image.  Most colour images are encoded as RGB or CMYK.   When these are rendered on a device, it's necessary to know the actual colour of Red in the image and on the output device.  The Colour Management System (CMS) attempts to render the image to be the same on different devices.  This is of course impossible, however the aim of the ICC Profile is enable the software to achieve good colour fidelity when printing or displaying on different devices.
 
 The ICC Profile is a member of the TIFF family of image standards.  It has a header, a directory of "tags" and values for the tags.
 
@@ -3056,7 +3056,7 @@ MakerNotes are usually written as an IFD, however most manufacturers have extra 
 void IFD::visitMakerNote(Visitor& visitor,DataBuf& buf,uint16_t count,uint32_t offset)
 {
     if ( image_.maker_ == kNikon ) {
-        // Nikon MakerNote is embeded tiff `II*_....` 10 bytes into the data!
+        // Nikon MakerNote is embedded tiff `II*_....` 10 bytes into the data!
         size_t punt = buf.strequals("Nikon") ? 10
                     : 0
                     ;
@@ -3086,7 +3086,7 @@ Because the manufacturers store their data as an embedded IFD or Tiff file, tvis
 <div id="2-6"/>
 ## 2.6 Metadata Convertors
 
-Exiv2 has code to convert data between different Metdata standards.  Generally when you update Exif metadata, equivalent modifications will be performed on the IPTC and XMP metadata.  I can't explain why this code was added to Exiv2 and, while it may be convenient and invisible in its operation, it also has undesirable side effects.
+Exiv2 has code to convert data between different Metadata standards.  Generally when you update Exif metadata, equivalent modifications will be performed on the IPTC and XMP metadata.  I can't explain why this code was added to Exiv2 and, while it may be convenient and invisible in its operation, it also has undesirable side effects.
 
 If Exiv2 is ever rewritten, the decision to keep this capability should be carefully reviewed.  I think it would be better to not have this at all and leave library users to provide this in their application code.
 
@@ -3178,7 +3178,7 @@ A tag is the unit of data storage in a tiff entry.  It has a tag (uint16\_t), ty
 
 It's important to appreciate that when you visit an IFD, you need a dictionary of tag->name to know the meaning of the tag.  That dictionary is not a constant, it depends on the IFD that is being read.  In the case of the MakerNote, the dictionary of tag->name depends on the Manufacturer.  The tvisitor.cpp program invokes code to set the makerDict when it reads the Make (0x010f) in the "top-level" IFD.
 
-Exiv2 (and tvisitor.cpp) report tags with the syntax such as Exif.Image.Make. Exif.Photo.DateTimeOriginal.  This syntax is of the format:  Family.Group.Tagname.  There are three Families in Exiv2 which are Exif, IPTC and Xmp.  The group Image implies that the tag was read in IFD0, the group Photo implies that the tag was read in the the Exif IFD.  tvisitor.cpp has about 10 groups (Image, Photo, GPS, Nikon, Apple, Canon etc).  Exiv2 has 106 groups as each of about 10 manufacturers have about 10 sub groups.
+Exiv2 (and tvisitor.cpp) report tags with the syntax such as Exif.Image.Make. Exif.Photo.DateTimeOriginal.  This syntax is of the format:  Family.Group.Tagname.  There are three Families in Exiv2 which are Exif, IPTC and Xmp.  The group Image implies that the tag was read in IFD0, the group Photo implies that the tag was read in the Exif IFD.  tvisitor.cpp has about 10 groups (Image, Photo, GPS, Nikon, Apple, Canon etc).  Exiv2 has 106 groups as each of about 10 manufacturers have about 10 sub groups.
 
 For simplicity, tvisitor.cpp only supports the family Exif, however it has code to decode and present IPTC, ICC and Xmp metadata.
 
@@ -3386,7 +3386,7 @@ void IFD::accept(Visitor& visitor,const TagDict& tagDict/*=tiffDict*/)
 
         if ( nEntries > 500 ) Error(kerTiffDirectoryTooLarge,nEntries);
         visitor.visitDirBegin(image_,nEntries);
-        uint64_t a0 = start + (bigtiff?8:2) + nEntries * entry.size_; // addresss to read next
+        uint64_t a0 = start + (bigtiff?8:2) + nEntries * entry.size_; // address to read next
 
         // Run along the directory
         for ( uint64_t i = 0 ; i < nEntries ; i ++ ) {
@@ -4199,11 +4199,11 @@ The reason for using memory mapped files was for the convenience of converting o
 
 ### Writing Files
 
-Exiv2 is very reliable at writing files which conform to standards.  The way in which this is achieved is to by calling image->writeMetata() which delegates to the handlers writeMetata().
+Exiv2 is very reliable at writing files which conform to standards.  The way in which this is achieved is to by calling image->writeMetadata() which delegates to the handlers writeMetadata().
 
-Because the handler understands the structure of the image, he writes a temporary in memory copy of the image.  It proceeds to parse the image and copy the data to the temporary file.  When it arrives at each of the four metadata blocks (Exif, ICC, IPTC and XMP) it calls the serializer to create a buffer of data which is injected into the temporary image.  When it arrives the EOF on the original file, if no error has been detected it calls io->transfer() on the temporary image.  The operation transfer() copies the bytes from the temporary stream to the permanent file.
+Because the handler understands the structure of the image, it writes a temporary in memory copy of the image.  It proceeds to parse the image and copy the data to the temporary file.  When it arrives at each of the four metadata blocks (Exif, ICC, IPTC and XMP) it calls the serializer to create a buffer of data which is injected into the temporary image.  When it arrives the EOF on the original file, if no error has been detected it calls io->transfer() on the temporary image.  The operation transfer() copies the bytes from the temporary stream to the permanent file.
 
-This method is very robust and reliable.  For very very files (for example, 100GB medical imaging file), this places huge demands on memory.  For remote file, it requires every byte from the remote location to be copied to the temporary file and subsequently transferred back to the remote location.  One day a project will be undertaken to stress test remote IO on HUGE files and more will be understood about the performance and optimisation that can be undertaken.
+This method is very robust and reliable.  For very large files (for example, 100GB medical imaging file), this places huge demands on memory.  For remote file, it requires every byte from the remote location to be copied to the temporary file and subsequently transferred back to the remote location.  One day a project will be undertaken to stress test remote IO on HUGE files and more will be understood about the performance and optimisation that can be undertaken.
 
 ### WriteMode Intrusive and NonIntrusive
 
@@ -4392,7 +4392,7 @@ To delete metadata, you have to locate the key in the ExifData vector and erase 
       exifData.erase(pos);
 ```
 
-#### Writing modified metada to storage
+#### Writing modified metadata to storage
 
 When you modify metadata using the variable _image_, you are only changing it in memory.  You commit the changes to storage when you call image->writeMetadata().
 
@@ -4499,7 +4499,7 @@ $
 
 A common pattern in the Exiv2 code is the table/function pattern. 
 
-| Fuction         | Purpose | 
+| Function        | Purpose |
 |:--              |:--      |
 | cfgSelFct       | determine which cfg + def of a corresponding array-set to use. |
 | ConvertFct      | Convert between two keys |
@@ -4913,7 +4913,7 @@ Exiv2 has an abstract TiffVisitor class, and the following concrete visitors:
 | class TiffEncoder | TiffVisitor    | Encodes metadata                     |                        |
 | class TiffCopier  | TiffVisitor    | Visits file and copies to a new file | image->writeMetadata() |
 
-TiffVisitor is the "beating heart" of Exiv2.  It is both ingeneous and very difficult to understand.  Although I've worked on the Exiv2 code for more than 12 years, it is only in the process of writing this book that I have come to an (_incomplete)_ understanding of its design.  
+TiffVisitor is the "beating heart" of Exiv2.  It is both ingenious and very difficult to understand.  Although I've worked on the Exiv2 code for more than 12 years, it is only in the process of writing this book that I have come to an (_incomplete)_ understanding of its design.  
 
 TiffVisitor is actually a state machine with a stack.  The code pushes an initial object on the stack and procedes to process the element on top of stack until empty.  Some tags, such as a makernote push objects on the stack.  Reaching the end of an object, pops the stack.  There is a "go" flag to enable the visitor to abort.  The TiffReader creates a vector of objects which are post-processed to create the metadata.
 
@@ -4978,7 +4978,7 @@ const TiffTreeStruct TiffCreator::tiffTreeStruct_[] = {
     { Tag::root, ifd0Id,           ifdIdNotSet,      Tag::root },
 ```
 
-This is a state table used to navigate the metadata heirachy.  For example, starting at root, the first IFD wil create a new TiffDirectory and sets the state to ifd0Id.  When tag 0x8769 is encountered, the parser will create new TiffDirectory and the state becomes exifId.
+This is a state table used to navigate the metadata hierarchy.  For example, starting at root, the first IFD wil create a new TiffDirectory and sets the state to ifd0Id.  When tag 0x8769 is encountered, the parser will create new TiffDirectory and the state becomes exifId.
 
 The "route" from the start of parsing (ifdIdNotSet), via the Tiff-EP tags (ifd0Id), via ExifTag/0x8769, to the MakerNote/0x927c, to the NikonPicture control is:
 
@@ -5151,7 +5151,7 @@ In writing this book, I want to avoid duplicating information from the Exiv2 doc
 <div id="8-1"/>
 # 8.1 Bash Tests
 
-As the name implies, these tests were originally implemented as bash scripts.  They started life as a collection of independant scripts which were written by different contributors.  Although they all shared the goal of executing a command and comparing the output to a referenced file, there was no shared code.  About 2012, I refactored the tests and put common code into test/functions.source.  All bash tests begin by sourcing this file which performs environment checks, initialises bash variables and sets up bash functions such as copyTestFiles, runTest and reportTest.
+As the name implies, these tests were originally implemented as bash scripts.  They started life as a collection of independent scripts which were written by different contributors.  Although they all shared the goal of executing a command and comparing the output to a referenced file, there was no shared code.  About 2012, I refactored the tests and put common code into test/functions.source.  All bash tests begin by sourcing this file which performs environment checks, initialises bash variables and sets up bash functions such as copyTestFiles, runTest and reportTest.
 
 ```bash
 #!/usr/bin/env bash
@@ -5263,7 +5263,7 @@ def reportTest(r,t):
 	good = True
 	R=chop(open('data/%s.out' % t ,'rb').read())
 	if len(R) != len(r):
-		error('output length mismatch Referance %d Test %d' % (len(R),len(r)))
+		error('output length mismatch Reference %d Test %d' % (len(R),len(r)))
 		good=False
 	else:
 		i = 0
@@ -5380,7 +5380,7 @@ The system test suite
 
 positional arguments:
   dir_or_file           root directory under which the testsuite searches for tests or asingle file which tests are run (defaults to the config
-                        file'slocation)
+                        file's location)
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -5411,7 +5411,7 @@ The command: `$ make tests` executes the command `$ cd tests ; python3 runner.py
 <div id="8-3"/>
 # 8.3 Unit Test
 
-The unit tests are very useful for testing C++ functions with a well defined input and output.  In Chemistry, we have elements and compounds.  The unit tests are good for testing elements of the software.  The unit tests are written in C++ and use the Google Test library.  Here's a typical test progam, extracted from unitTests/test_futils.cpp
+The unit tests are very useful for testing C++ functions with a well defined input and output.  In Chemistry, we have elements and compounds.  The unit tests are good for testing elements of the software.  The unit tests are written in C++ and use the Google Test library.  Here's a typical test program, extracted from unitTests/test_futils.cpp
 
 ```cpp
 #include <exiv2/exiv2.hpp>
@@ -5462,7 +5462,7 @@ The unit tests are built into a single executable bin/unit_tests(.exe)
 <div id="8-4"/>
 # 8.4 Version Test
 
-The version test is _more-or-less_ the output of the command _$ exiv2 --verbose --version_ which produces about 150 lines of output.  About 60 lines of the output are a list of pre-registed XMP namespaces and of little interest.  So, the script test/version-test.sh counts and filters out the XMP namespaces.
+The version test is _more-or-less_ the output of the command _$ exiv2 --verbose --version_ which produces about 150 lines of output.  About 60 lines of the output are a list of pre-registered XMP namespaces and of little interest.  So, the script test/version-test.sh counts and filters out the XMP namespaces.
 
 ```bash
 #!/usr/bin/env bash
@@ -5927,7 +5927,7 @@ I must also mention that the fuzzing police use special tools that build and ins
 
 Everything is treated as urgent.  All their reports are assigned very high levels of vulnerability.  In short, those people are a pain in the butt and waste enormous amounts of Team Exiv2 engineering resources.
 
-As the fuzzing police maintain their own CVE data base, the number and frequency of security issues is tracked and published.  Their mission in life is negative.  I don't have a good word to say about those peple.
+As the fuzzing police maintain their own CVE data base, the number and frequency of security issues is tracked and published.  Their mission in life is negative.  I don't have a good word to say about those people.
 
 [TOC](#TOC)
 <div id="11"/>
@@ -6010,7 +6010,7 @@ There are ways to fix on-line abuse.  We could do what the Fuzzing Police do.  T
 
 The Community would be well served by a similar task force to investigate complaints about the behaviour of stakeholders and maintainers.  There are undoubtably stakeholders who would report me.  However I would be able to complain about a stakeholder if I felt they had behaved inappropriately.
 
-For sure, I would not welcome my performance being reviewed.  However a fair, honest and independant review of an issue would be helpful.  The stakeholder and I would shake hands and learn from the situation.  If the stakeholder or maintainer do not attend the review, their github account should be suspended.
+For sure, I would not welcome my performance being reviewed.  However a fair, honest and independent review of an issue would be helpful.  The stakeholder and I would shake hands and learn from the situation.  If the stakeholder or maintainer do not attend the review, their github account should be suspended.
 
 Another possible solution would be to register a complaint about an individual.  In the same way as a bug report can be opened on a project, it would be helpful to open a complaint about an individual.  And that complaint can only be closed by the person who opened it.  I suspect, we'd quickly discover two things:
 
@@ -6035,7 +6035,7 @@ Something has to change and here are some ideas about funding and recognition.
 
 1. GSoC give students a bounty.  That program could be duplicated by Adobe, Facebook, Microsoft, Apple and other Tech Giants.
 2. Large organizations could make donations to a foundation from which projects could apply for grants.
-3. Github could carry ads and share the revenue with open source projects.
+3. GitHub could carry ads and share the revenue with open source projects.
 4. A federal program like Darpa.
 5. Community recognition like the oscar or grammy awards.
 
@@ -6059,7 +6059,7 @@ However, compiling "the dots" in C++11 or C++14 uses compiler legacy compatibili
 <div id="11-2"/>
 ### 11.2 Build
 
-The build code in Exiv2 is implemented using CMake: cross platform make.  This system enables the code to be built on many different platforms in a consistant manner.  CMake recursively reads the files CMakeLists.txt in the source tree and generates build environments for different build systems.  For Exiv2, we actively support using CMake to build on Unix type plaforms (Linux, macOS, Cygwin, MinGW, NetBSD, Solaris and FreeBSD), and several editions of Visual Studio.  CMake can generate project files for Xcode and other popular IDEs.
+The build code in Exiv2 is implemented using CMake: cross platform make.  This system enables the code to be built on many different platforms in a consistent manner.  CMake recursively reads the files CMakeLists.txt in the source tree and generates build environments for different build systems.  For Exiv2, we actively support using CMake to build on Unix type platforms (Linux, macOS, Cygwin, MinGW, NetBSD, Solaris and FreeBSD), and several editions of Visual Studio.  CMake can generate project files for Xcode and other popular IDEs.
 
 Exiv2 has dependencies on the following libraries.  All are optional, however it's unusual to build without zlib and libexpat.
 
@@ -6185,7 +6185,7 @@ The following programs are built and installed in /usr/local/bin.
 | _**addmoddel**_   | Demonstrates Exiv2 library APIs to add, modify or delete metadata          |
 | _**exifcomment**_ | Set Exif.Photo.UserComment in an image                                     |
 | _**exifdata**_    | Prints _**Exif**_ metadata in different formats in an image                |
-| _**exifprint**_   | Print _**Exif**_ metadata in images<br>Miscelleous other features          |
+| _**exifprint**_   | Print _**Exif**_ metadata in images<br>Miscellaneous other features        |
 | _**exifvalue**_   | Prints the value of a single _**Exif**_ tag in a file                      |
 | _**exiv2**_       | Command line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata.<br>This is the primary test tool used by Team Exiv2 and can exercise almost all code in the library.  Due to the extensive capability of this utility, the APIs used are usually less obvious for casual code inspection. | 
 | _**exiv2json**_   | Extracts data from image in JSON format.<br>This program also contains a parser to recursively parse Xmp metadata into vectors and objects. | 
@@ -6362,7 +6362,7 @@ Exiv2::Image::auto_ptr Exiv2::ImageFactory::open(unsigned char const * __ptr64,l
 Exiv2::Image::auto_ptr Exiv2::ImageFactory::open(class std::auto_ptr<class Exiv2::BasicIo>)build>
 ``` 
 
-**Caution:** _You should use the "Developer Command Prompt" in Visual Studio Studio to ensure you have the utilities dumpbin and undname on your path.  To filter the output with grep, you will need to ensure grep is on your PATH._
+**Caution:** _You should use the "Developer Command Prompt" in Visual Studio to ensure you have the utilities dumpbin and undname on your path.  To filter the output with grep, you will need to ensure grep is on your PATH._
 
 Performing the same tests on a default build (without UNICODE path support), shows one less entry point because the library does not provide the UNICODE entry-point _**Exiv2::ImageFactory::open(std::wstring,const bool& )**_.
 
@@ -6592,7 +6592,7 @@ I abandoned Jenkins for several reasons:
 3. I didn't understand how to trigger Jenkins from GitHub.
 4. I didn't like the Cygwin ssh server which runs the bash shell.
 
-I decided to forget about Jenkins and focus on the ssh script.  So build.sh, parses its command arguments, writes the build script and transfers it by ssh to the appropriate VM.  On the machine, rmillsmm, I have VM such as rmillsmm-w10, rmillsmm-ubuntu, rmillsmm-solaris and so on.  On Windows, I use the excellant bitvise ssh server and the native server on other platforms.
+I decided to forget about Jenkins and focus on the ssh script.  So build.sh, parses its command arguments, writes the build script and transfers it by ssh to the appropriate VM.  On the machine, rmillsmm, I have VM such as rmillsmm-w10, rmillsmm-ubuntu, rmillsmm-solaris and so on.  On Windows, I use the excellent bitvise ssh server and the native server on other platforms.
 
 Bitvise is a very solid server.  https://www.bitvise.com/ssh-server.  It can be configured for a variety of shells.  I use cmd.exe to build on Visual Studio or Cygwin/64 or MinGW/msys2/mingw64.  ./build.sh invokes the batch files cmd64.bat, cygwin64.bat or msys64.bat to configure the environment on the build machine.  These scripts are discussed and documented in README.md.
 
@@ -6898,7 +6898,7 @@ The BMFF legal issue has caused me to wonder if Exiv2 is legal.  I also wonder i
 
 Dealing with legal matters is not like reporting a bug.  Exiv2 is an open-source project and we get a regular stream of issues reported on https://github.com/exiv2/exiv2.  I acknowledge, investigate, reply and close the issue.  By design, the process is focused on resolution.  Legal processes are very different.  When you ask for legal advice, you are instigating an open-ended process which will expand endlessly. 
 
-Closely related to licensing is patents.  There is a patent non-agression group called OIN which is the Open Invention Network.  Members agree to give toll free use of their patents to other members.  They have an impressive list of members include Facebook, Google, SAP, Microsoft, IBM and Canon.  They also maintain the Linux System Definition. [https://openinventionnetwork.com](https://openinventionnetwork.com)
+Closely related to licensing is patents.  There is a patent non-aggression group called OIN which is the Open Invention Network.  Members agree to give toll free use of their patents to other members.  They have an impressive list of members include Facebook, Google, SAP, Microsoft, IBM and Canon.  They also maintain the Linux System Definition. [https://openinventionnetwork.com](https://openinventionnetwork.com)
 
 It makes sense for Exiv2 to belong to OIN and be included in the Linux System Definition.  The process to join is to fill in a form and sign it.  And that's a problem.  What is the legal status of Exiv2?  I don't know.  When you have a child, you register the birth and the child is recognised in law as a legal entity.  If you register a company, it is a legal entity with a board of directors.  Board members can sign documents on behalf of the company.  However, open source is neither of these things.  It's a collection of source on a server.  I think it belongs to the authors.  According to openhub.net there are 85 contributors.  Presumably I need the consent of all 85 contributors.  Even if I could contact all 85, it's possible that somebody would withhold their permission to join OIN.
 

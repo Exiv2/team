@@ -135,12 +135,12 @@ enum type_e
 ,    kttAscii           = 2 //!< Exif ASCII type, 8-bit byte.
 ,    kttUShort          = 3 //!< Exif SHORT type, 16-bit (2-byte) unsigned integer.
 ,    kttULong           = 4 //!< Exif LONG type, 32-bit (4-byte) unsigned integer.
-,    kttURational       = 5 //!< Exif RATIONAL type, two LONGs: numerator and denumerator of a fraction.
+,    kttURational       = 5 //!< Exif RATIONAL type, two LONGs: numerator and denominator of a fraction.
 ,    kttByte            = 6 //!< Exif SBYTE type, an 8-bit signed (twos-complement) integer.
 ,    kttUndefined       = 7 //!< Exif UNDEFINED type, an 8-bit byte that may contain anything.
 ,    kttShort           = 8 //!< Exif SSHORT type, a 16-bit (2-byte) signed (twos-complement) integer.
 ,    kttLong            = 9 //!< Exif SLONG type, a 32-bit (4-byte) signed (twos-complement) integer.
-,    kttSRational       =10 //!< Exif SRATIONAL type, two SLONGs: numerator and denumerator of a fraction.
+,    kttSRational       =10 //!< Exif SRATIONAL type, two SLONGs: numerator and denominator of a fraction.
 ,    kttFloat           =11 //!< TIFF FLOAT type, single precision (4-byte) IEEE format.
 ,    kttDouble          =12 //!< TIFF DOUBLE type, double precision (8-byte) IEEE format.
 ,    kttIfd             =13 //!< TIFF IFD type, 32-bit (4-byte) unsigned integer.
@@ -800,7 +800,7 @@ enum kCanonType
 ,   kTC_CameraObject    = 0x0007|kcHTP1
 ,   kTC_ShootingRecord  = 0x0002|kcHTP2
 ,   kTC_MeasuredInfo    = 0x0003|kcHTP2
-,   kTC_CameraSpecificaiton= 0x0004|kcHTP2
+,   kTC_CameraSpecification= 0x0004|kcHTP2
 };
 
 // TagDict is used to map tag (uint16_t) to string
@@ -1541,7 +1541,7 @@ public:
 
         IoSave  restore(io(),0);
         bool    result = false;
-        DataBuf buf(2+4+8); //xxlongHEAPCCRD xx = II or MM
+        DataBuf buf(2+4+8); //xxlongHEAPCCDR xx = II or MM
         if ( io().good() ) {
             io().read(buf);
 
@@ -1719,7 +1719,7 @@ void IPTC::accept(Visitor& visitor)
 //      out() << indent() << buff.toString(kttUByte,length);
         uint32_t i  =    0 ; // index
         uint32_t bs =    5 ; // blocksize
-        uint8_t  fs = 0x1c ; // field seperator
+        uint8_t  fs = 0x1c ; // field separator
         while (i+bs < length && ::getByte (buff,i) != fs ) i++; // find fs
         while (i+bs < length && ::getByte (buff,i) == fs ) {    // FS-RE-DS-short = byte, byte, byte, short ... data ....
             uint16_t record   = ::getByte (buff,i+1);
@@ -2692,7 +2692,7 @@ void IFD::visitMakerNote(Visitor& visitor,DataBuf& buf,uint64_t count,uint64_t o
         default           : /* do nothing */ ; break;
 
         case kNikon       : {
-                // MakerNote is embeded tiff `II*_....` 10 bytes into the data!
+                // MakerNote is embedded tiff `II*_....` 10 bytes into the data!
                 size_t        punt = buf.strequals("Nikon") ? 10 : 0 ;
                 if ( bAdobe ) punt = 30              ;  // Adobe_MakN_.Q.II__..Nikon_..__II*_.___?_
                 Io     io(io_,offset+punt,count-punt);
@@ -2730,7 +2730,7 @@ void IFD::visitMakerNote(Visitor& visitor,DataBuf& buf,uint64_t count,uint64_t o
                 makerNote.valid_ = true; // Valid without magic=42
                 makerNote.accept(visitor,makerDict());
             } else {
-                size_t punt = 8 ; // "OLUMPUS\0shortE#"
+                size_t punt = 8 ; // "OLYMPUS\0shortE#"
                 IFD makerNote(image_,offset+punt,false);
                 makerNote.accept(visitor,makerDict());
             } break;
@@ -2795,7 +2795,7 @@ void IFD::accept(Visitor& visitor,const TagDict& tagDict/*=tiffDict*/)
         }
 
         visitor.visitDirBegin(image_,nEntries);
-        uint64_t a0 = start + (bigtiff?8:2) + nEntries * entry.size_; // addresss to read next
+        uint64_t a0 = start + (bigtiff?8:2) + nEntries * entry.size_; // address to read next
 
         // Run along the directory
         for ( uint64_t i = 0 ; i < nEntries ; i ++ ) {
@@ -3390,7 +3390,7 @@ void ReportVisitor::visitChunk(Io& io,Image& image,uint64_t address
     IoSave save(io,address+8);
     if ( isBasicOrRecursive() ) {
         {   IoSave    restore(io);
-            DataBuf   data(length > 40 ? 40 : length ); // read enougth data for reporting purposes
+            DataBuf   data(length > 40 ? 40 : length ); // read enough data for reporting purposes
             io.read(data);
             out() << indent() << stringFormat(" %8d |  %s | %7d | %#10x | ",address,chunk,length,chksum);
             out() << data.toString(kttUndefined,data.size_,image.endian());

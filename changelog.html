@@ -158,7 +158,7 @@ Changes from version 0.26 to 0.27
 	- <a href="http://dev.exiv2.org/issues/0001310">0001310</a>:	Provide support for msys/2.0
 	- <a href="http://dev.exiv2.org/issues/0001299">0001299</a>:	exiv2-0.26-trunk.tar.gz changed on download server
 				(Jonathan Riddell)
-	- <a href="http://dev.exiv2.org/issues/0001270">0001270</a>:	Using libexiv2.a/.lib  in multhreaded app segfaults.
+	- <a href="http://dev.exiv2.org/issues/0001270">0001270</a>:	Using libexiv2.a/.lib  in multithreaded app segfaults.
 				(Ben Touchette)
 	- <a href="http://dev.exiv2.org/issues/0001237">0001237</a>:	Report CMake/MinGW issues to Kitware
 	- <a href="http://dev.exiv2.org/issues/0001188">0001188</a>:	Provide build support for C++11
@@ -290,7 +290,7 @@ Changes from version 0.26 to 0.27
 				(Jean-Luc CECCOLI)
 	- <a href="http://dev.exiv2.org/issues/0001340">0001340</a>:	Infinite loop bugs in Libexiv2 Exiv2::Image::printIFDStructure()
 				(Sanjay Rawat)
-	- <a href="http://dev.exiv2.org/issues/0001325">0001325</a>:	Crash in exiv2  - Nikon1MakerNote::printBarValue (nikonnm.cpp)
+	- <a href="http://dev.exiv2.org/issues/0001325">0001325</a>:	Crash in exiv2  - Nikon1MakerNote::printBarValue (nikonmn.cpp)
 				(Thibaud Mouton)
 	- <a href="http://dev.exiv2.org/issues/0001322">0001322</a>:	Exception in PentaxMakerNote::printShutterCount, source: pentaxmn.cpp
 				(Norbert Wagner)
@@ -553,9 +553,9 @@ Changes from version 0.25 to 0.26
 	- <a href="http://dev.exiv2.org/issues/0001145">0001145</a>:	Respect Sony/Minolta lenses with shared LensID such as Tamron SP AF 17-50mm F2.8 XR Di II LD
 	- <a href="http://dev.exiv2.org/issues/0001144">0001144</a>:	Sigma 10-20mm f/4-5.6 EX DC is detected as Tamaron
 				(Simon Harhues)
-	- <a href="http://dev.exiv2.org/issues/0001142">0001142</a>:	Manual lens does not get recogniced: Beroflex zoom 500mm
+	- <a href="http://dev.exiv2.org/issues/0001142">0001142</a>:	Manual lens does not get recognized: Beroflex zoom 500mm
 				(Simon Harhues / Niels Kristian Bech Jensen)
-	- <a href="http://dev.exiv2.org/issues/0001141">0001141</a>:	Manual lens does not get recogniced: Pentax macro 100mm
+	- <a href="http://dev.exiv2.org/issues/0001141">0001141</a>:	Manual lens does not get recognized: Pentax macro 100mm
 				(Simon Harhues / Niels Kristian Bech Jensen)
 	- <a href="http://dev.exiv2.org/issues/0001118">0001118</a>:	Add support for ZEISS Loxia 2/50 lens
 				(Eugen Neu)
@@ -612,7 +612,7 @@ Changes from version 0.25 to 0.26
 	- <a href="http://dev.exiv2.org/issues/0000922">0000922</a>:	Add options -pS and -dI to application exiv2
 	- <a href="http://dev.exiv2.org/issues/0000855">0000855</a>:	Segfault when accessing focalLength with 0.23
 				(Tobias E.)
-	- <a href="http://dev.exiv2.org/issues/0000756">0000756</a>:	Access to ICC Profile (TAG: 0x8773) data in Exif as uninterpretted binary
+	- <a href="http://dev.exiv2.org/issues/0000756">0000756</a>:	Access to ICC Profile (TAG: 0x8773) data in Exif as uninterpreted binary
 				(Ray NA)
 	- <a href="http://dev.exiv2.org/issues/0000676">0000676</a>:	Patch for reading ICC color profiles
 				(Andreas Huggel)
@@ -709,7 +709,7 @@ Changes from version 0.25 to 0.26
 
 * Testing: (6)
 	- <a href="http://dev.exiv2.org/issues/0001230">0001230</a>:	Bug Hunt for v0.26
-	- <a href="http://dev.exiv2.org/issues/0001207">0001207</a>:	digiKam maintenance tool to synchronize files metadata and database crash in Exiv2 (re-entrancy issue ?)
+	- <a href="http://dev.exiv2.org/issues/0001207">0001207</a>:	digiKam maintenance tool to synchronize files metadata and database crash in Exiv2 (reentrancy issue ?)
 				(Uwe Haider)
 	- <a href="http://dev.exiv2.org/issues/0001057">0001057</a>:	Implement target/modifier - (stdin/stdout) for exiv2 options -i (insert) and -e (extract)
 	- <a href="http://dev.exiv2.org/issues/0001045">0001045</a>:	Add COPYRIGHT file to test/data/
@@ -1106,7 +1106,7 @@ Changes from version 0.23 to 0.24
 	           (Reported by S. Verdoold, patch by Pascal de Bruijn)
 	- <a title="bug 0000861" href="http://dev.exiv2.org/issues/0000861">0000861</a>: Sigma 18-250mm not properly recognised on Pentax
 	           (Reported by S. Verdoold, patch by Pascal de Bruijn)
-	- <a title="bug 0000862" href="http://dev.exiv2.org/issues/0000862">0000862</a>: Video code is failing the test suite (on all plaforms)
+	- <a title="bug 0000862" href="http://dev.exiv2.org/issues/0000862">0000862</a>: Video code is failing the test suite (on all platforms)
 	           (Robin Mills, Abhinav Badola)
 	- <a title="bug 0000865" href="http://dev.exiv2.org/issues/0000865">0000865</a>: Patches for locale and boost issue (Patches by Mario anyc)
 	- <a title="bug 0000868" href="http://dev.exiv2.org/issues/0000868">0000868</a>: Support for two lens for sony mount
@@ -1643,7 +1643,7 @@ Changes from version 0.18 to 0.18.1
 	           support for multiple TIFF tree structures.
 
 * MSVC related
-	- <a title="bug 0000621" href="http://dev.exiv2.org/issues/0000621">0000621</a>: windows librarys are forcing a link to
+	- <a title="bug 0000621" href="http://dev.exiv2.org/issues/0000621">0000621</a>: windows libraries are forcing a link to
 	           ..\..\..\zlib-1.2.3\projects\visual6\blah\blah.
                    (Reported by Peter J. Ersts, fix by Robin Mills)
 
@@ -2076,7 +2076,7 @@ Changes from version 0.11 to 0.12
 	         - [exif] Updated Minolta makernote. (Gilles Caulier, Paul Tribick)
 
 * MSVC related
-	- <a title="bug 0000487" href="http://dev.exiv2.org/issues/0000487">0000487</a>: Crash in exiv2.exe (built with VC++ 2005 Express) when examing TIFF
+	- <a title="bug 0000487" href="http://dev.exiv2.org/issues/0000487">0000487</a>: Crash in exiv2.exe (built with VC++ 2005 Express) when examining TIFF
 	           images (Reported with patch by Dimitri Schoolwerth)
 
 
@@ -2488,8 +2488,8 @@ Changes from version 0.3 to 0.4
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2022-02-01 02:48 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2022-02-01 02:48 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2022-02-06 08:41 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-02-06 08:41 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->
