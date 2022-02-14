@@ -726,9 +726,9 @@
 <div class="line">    , <span class="stringliteral">&quot;Exif.Image.DateTime&quot;</span></div>
 <div class="line">    , NULL</div>
 <div class="line">    };</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* dateString = dateStrings[0] ;</div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; !result &amp;&amp; dateStrings[i]; i++) {</div>
-<div class="line">        <span class="keyword">const</span> <span class="keywordtype">char</span>* dateString = dateStrings[i] ;</div>
+<div class="line">    <span class="keywordflow">do</span> {</div>
 <div class="line">        <span class="keywordflow">try</span> {</div>
 <div class="line">            <a class="code" href="classExiv2_1_1Image.html#a89ad3ffe7a4e8a943d267d77843415fb">Image::AutoPtr</a> image = ImageFactory::open(path);</div>
 <div class="line">            <span class="keywordflow">if</span> ( image.get() ) {</div>
@@ -739,7 +739,7 @@
 <div class="line">                <span class="keywordflow">if</span> ( result &amp;&amp; pS ) *pS = exifData[dateString].toString();</div>
 <div class="line">            }</div>
 <div class="line">        } <span class="keywordflow">catch</span> ( ... ) {};</div>
-<div class="line">    }</div>
+<div class="line">    } <span class="keywordflow">while</span> ( !result &amp;&amp; ++dateString );</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">return</span> result ;</div>
 <div class="line">}</div>
@@ -1070,8 +1070,8 @@
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2022-02-06 08:41 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2022-02-06 08:41 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2022-02-14 01:16 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-02-14 01:16 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

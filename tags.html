@@ -201,7 +201,7 @@
 <td>Image</td>
 <td>Exif.Image.DocumentName</td>
 <td>Ascii</td>
-<td>The name of the document from which this image was scanned.</td>
+<td>The name of the document from which this image was scanned</td>
 </tr>
 <tr>
 <td>0x010e</td>
@@ -290,30 +290,6 @@
 <td>Exif.Image.PlanarConfiguration</td>
 <td>Short</td>
 <td>Indicates whether pixel components are recorded in a chunky or planar format. In JPEG compressed files a JPEG marker is used instead of this tag. If this field does not exist, the TIFF default of 1 (chunky) is assumed.</td>
-</tr>
-<tr>
-<td>0x011d</td>
-<td>285</td>
-<td>Image</td>
-<td>Exif.Image.PageName</td>
-<td>Ascii</td>
-<td>The name of the page from which this image was scanned.</td>
-</tr>
-<tr>
-<td>0x011e</td>
-<td>286</td>
-<td>Image</td>
-<td>Exif.Image.XPosition</td>
-<td>Rational</td>
-<td>X position of the image. The X offset in ResolutionUnits of the left side of the image, with respect to the left side of the page.</td>
-</tr>
-<tr>
-<td>0x011f</td>
-<td>287</td>
-<td>Image</td>
-<td>Exif.Image.YPosition</td>
-<td>Rational</td>
-<td>Y position of the image. The Y offset in ResolutionUnits of the top of the image, with respect to the top of the page. In the TIFF coordinate scheme, the positive Y direction is down, so that YPosition is always positive.</td>
 </tr>
 <tr>
 <td>0x0122</td>
@@ -2044,14 +2020,6 @@
 <td>When the CalibrationIlluminant3 tag is set to 255 (Other), then the IlluminantData3 tag is required and specifies the data for the third illuminant. Otherwise, this tag is ignored. The format of the data is the same as IlluminantData1.</td>
 </tr>
 <tr>
-<td>0xcd38</td>
-<td>52536</td>
-<td>Image</td>
-<td>Exif.Image.MaskSubArea</td>
-<td>Long</td>
-<td>This tag identifies the crop rectangle of this IFD's mask, relative to the main image.</td>
-</tr>
-<tr>
 <td>0xcd39</td>
 <td>52537</td>
 <td>Image</td>
@@ -2066,14 +2034,6 @@
 <td>Exif.Image.ReductionMatrix3</td>
 <td>SRational</td>
 <td>ReductionMatrix3 defines a dimensionality reduction matrix for use as the first stage in converting color camera native space values to XYZ values, under the third calibration illuminant. This tag may only be used if ColorPlanes is greater than 3. The matrix is stored in row scan order.</td>
-</tr>
-<tr>
-<td>0xcd3b</td>
-<td>52539</td>
-<td>Image</td>
-<td>Exif.Image.RGBTables</td>
-<td>Undefined</td>
-<td>This tag specifies color transforms that can be applied to masked image regions. Color transforms are specified using RGB-to-RGB color lookup tables. These tables are associated with Semantic Masks to limit the color transform to a sub-region of the image. The overall color transform is a linear combination of the color tables, weighted by their corresponding Semantic Masks.</td>
 </tr>
 <tr>
 <td>0x829a</td>
@@ -3042,8 +3002,8 @@
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2022-02-06 08:41 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2022-02-06 08:41 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2022-02-14 01:16 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-02-14 01:16 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->
