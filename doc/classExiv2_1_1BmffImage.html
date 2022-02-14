@@ -125,6 +125,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>parseTiff</b> (uint32
 <tr class="memitem:a48b9bc6ecd0eaa577d97124da2780b40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BmffImage.html#a48b9bc6ecd0eaa577d97124da2780b40">parseXmp</a> (uint64_t length, uint64_t start)</td></tr>
 <tr class="memdesc:a48b9bc6ecd0eaa577d97124da2780b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">parse embedded xmp/xml  <a href="classExiv2_1_1BmffImage.html#a48b9bc6ecd0eaa577d97124da2780b40">More...</a><br /></td></tr>
 <tr class="separator:a48b9bc6ecd0eaa577d97124da2780b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eb56be0a5d01a71980b140cdec861da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BmffImage.html#a2eb56be0a5d01a71980b140cdec861da">parseCr3Preview</a> (<a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> &amp;data, std::ostream &amp;out, bool bTrace, uint8_t <a class="el" href="namespaceExiv2.html#a64705a2301776cea1f4993d9066d44b3">version</a>, uint32_t width_offset, uint32_t height_offset, uint32_t size_offset, uint32_t relative_position)</td></tr>
+<tr class="memdesc:a2eb56be0a5d01a71980b140cdec861da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a Canon PRVW or THMB box and add an entry to the set of native previews.  <a href="classExiv2_1_1BmffImage.html#a2eb56be0a5d01a71980b140cdec861da">More...</a><br /></td></tr>
+<tr class="separator:a2eb56be0a5d01a71980b140cdec861da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Manipulators</div></td></tr>
 <tr class="memitem:a5ea434a4e7ec06dfde58ad4f59526ac7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BmffImage.html#a5ea434a4e7ec06dfde58ad4f59526ac7">readMetadata</a> ()</td></tr>
 <tr class="memdesc:a5ea434a4e7ec06dfde58ad4f59526ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all metadata supported by a specific image format from the image. Before this method is called, the image metadata will be cleared.  <a href="classExiv2_1_1BmffImage.html#a5ea434a4e7ec06dfde58ad4f59526ac7">More...</a><br /></td></tr>
@@ -478,6 +481,84 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 
 </div>
 </div>
+<a id="a2eb56be0a5d01a71980b140cdec861da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eb56be0a5d01a71980b140cdec861da">&#9670;&nbsp;</a></span>parseCr3Preview()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Exiv2::BmffImage::parseCr3Preview </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bTrace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>width_offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>height_offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>size_offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>relative_position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parse a Canon PRVW or THMB box and add an entry to the set of native previews. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Buffer containing the box </td></tr>
+    <tr><td class="paramname">out</td><td>Logging stream </td></tr>
+    <tr><td class="paramname">bTrace</td><td>Controls logging </td></tr>
+    <tr><td class="paramname">width_offset</td><td>Index of image width field in data </td></tr>
+    <tr><td class="paramname">height_offset</td><td>Index of image height field in data </td></tr>
+    <tr><td class="paramname">size_offset</td><td>Index of image size field in data </td></tr>
+    <tr><td class="paramname">relative_position</td><td>Location of the start of image data in the file, relative to the current file position indicator. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ac7d79a73bada41a9ca5065a280bb9cee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac7d79a73bada41a9ca5065a280bb9cee">&#9670;&nbsp;</a></span>parseTiff()</h2>
 
@@ -727,12 +808,12 @@ You may need to put the stream into binary mode (see src/actions.cpp) </dd></dl>
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.5.3
+          Exiv2 v0.27.5
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2022-02-14 01:33 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2022-02-14 01:33 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2022-02-14 01:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2022-02-14 01:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->
