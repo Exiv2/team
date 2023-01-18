@@ -96,7 +96,7 @@
 <HTML><HEAD><TITLE>Man page of EXIV2</TITLE>
 </HEAD><BODY>
 <H1>EXIV2</H1>
-Section: User Commands  (1)<BR>Updated: August 10, 2021<BR><A HREF="#index">Index</A>
+Section: User Commands  (1)<BR>Updated: November 02, 2022<BR><A HREF="#index">Index</A>
 <A HREF="/cgi-bin/man/man2html">Return to Main Contents</A><HR>
 
 
@@ -157,6 +157,7 @@ The following image formats are supported:
 <TR VALIGN=top><TD>HEIF</TD><TD>Read</TD><TD>Read</TD><TD>Read</TD><TD>-</TD><TD>-<BR></TD></TR>
 <TR VALIGN=top><TD>JP2</TD><TD>Read/Write</TD><TD>Read/Write</TD><TD>Read/Write</TD><TD>-</TD><TD>Read/Write<BR></TD></TR>
 <TR VALIGN=top><TD>JPEG</TD><TD>Read/Write</TD><TD>Read/Write</TD><TD>Read/Write</TD><TD>Read/Write</TD><TD>Read/Write<BR></TD></TR>
+<TR VALIGN=top><TD>JPEG XL</TD><TD>Read</TD><TD>Read</TD><TD>Read</TD><TD>-</TD><TD>-<BR></TD></TR>
 <TR VALIGN=top><TD>MRW</TD><TD>Read</TD><TD>Read</TD><TD>Read</TD><TD>-</TD><TD>-<BR></TD></TR>
 <TR VALIGN=top><TD>NEF</TD><TD>Read/Write</TD><TD>Read/Write</TD><TD>Read/Write</TD><TD>-</TD><TD>Read/Write<BR></TD></TR>
 <TR VALIGN=top><TD>ORF</TD><TD>Read/Write</TD><TD>Read/Write</TD><TD>Read/Write</TD><TD>-</TD><TD>-<BR></TD></TR>
@@ -182,6 +183,23 @@ image are determined.
 <DT>&bull;<DD>
 Reading other TIFF-like RAW image formats, which are not listed in the
 table, may also work.
+<DT>&bull;<DD>
+Support for BMFF file types such as CR3, HEIF, HEIC, AVIF, and 
+JPEG XL is a build option. To check if this is enabled, use: 
+</DL>
+<P>
+
+
+
+$ exiv2 --version --verbose | grep bmff
+enable_bmff=1
+
+
+<P>
+
+<DL COMPACT>
+<DT>&bull;<DD>
+Naked codestream JPEG XL files do not contain Exif, IPTC, or XMP metadata.
 </DL>
 <A NAME="lbAE">&nbsp;</A>
 <H2>ACTIONS</H2>
@@ -231,7 +249,8 @@ Rename files and/or set file timestamps according to the Exif create
 timestamp. Uses the value of tag Exif.Photo.DateTimeOriginal or, if
 not present, Exif.Image.DateTime to determine the timestamp. The
 filename format can be set with <B>-r</B> <I>fmt</I>, timestamp options
-are <B>-t</B> and <B>-T</B>.
+are <B>-t</B> and <B>-T</B>. When no rename format is provided, 
+the default is '%Y%m%d_%H%M%S' using definitions from <B><A HREF="/cgi-bin/man/man2html?3+strftime">strftime</A></B>(3).
 <DT><B>fi | fixiso</B>
 
 <DD>
@@ -466,15 +485,17 @@ The 'extract' command will overwrite files when either --force or --Force is use
 <DT><B>-r </B><I>fmt</I>
 
 <DD>
-Filename format for the 'rename' action. The format string follows
-<B><A HREF="/cgi-bin/man/man2html?3+strftime">strftime</A></B>(3) and supports the following keywords:
+Filename format for the 'rename' action. The format string 
+uses <B><A HREF="/cgi-bin/man/man2html?3+strftime">strftime</A></B>(3) definitions and supports the following 
+keywords:
 <TABLE>
 <TR VALIGN=top><TD>:basename:</TD><TD>original filename without extension<BR></TD></TR>
 <TR VALIGN=top><TD>:dirname:</TD><TD>name of the directory holding the original file<BR></TD></TR>
 <TR VALIGN=top><TD>:parentname:</TD><TD>name of parent directory<BR></TD></TR>
 </TABLE>
 
-Default filename format is %Y%m%d_%H%M%S.
+<P>
+Note that the colons are part of the keyword.
 <DT><B>-a </B><I>time</I>
 
 <DD>
@@ -1081,7 +1102,7 @@ The code is hosted on GitHub at <A HREF="https://github.com/exiv2/exiv2">https:/
 This document was created by
 <A HREF="/cgi-bin/man/man2html">man2html</A>,
 using the manual pages.<BR>
-Time: 16:44:15 GMT, February 18, 2022
+Time: 23:29:37 GMT, January 18, 2023
 </BODY>
 </HTML>
 
@@ -1093,12 +1114,12 @@ Time: 16:44:15 GMT, February 18, 2022
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.5
+          Exiv2 v0.27.6
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2022-02-18 16:44 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2022-02-18 16:44 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-01-18 23:29 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-01-18 23:29 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->
