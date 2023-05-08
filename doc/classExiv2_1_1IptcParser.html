@@ -104,18 +104,18 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aa645722e6f55f59a065a175eceb018df"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcParser.html#aa645722e6f55f59a065a175eceb018df">decode</a> (<a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;iptcData, const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *pData, uint32_t size)</td></tr>
-<tr class="memdesc:aa645722e6f55f59a065a175eceb018df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decode binary IPTC data in IPTC IIM4 format from a buffer <em>pData</em> of length <em>size</em> to the provided metadata container.  <a href="classExiv2_1_1IptcParser.html#aa645722e6f55f59a065a175eceb018df">More...</a><br /></td></tr>
-<tr class="separator:aa645722e6f55f59a065a175eceb018df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47e78724002c8be618ecf527a89f343a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcParser.html#a47e78724002c8be618ecf527a89f343a">encode</a> (const <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;iptcData)</td></tr>
+<tr class="memitem:a24c9b492cf8891867a61fe0c8d577977"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcParser.html#a24c9b492cf8891867a61fe0c8d577977">decode</a> (<a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;iptcData, const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *pData, size_t size)</td></tr>
+<tr class="memdesc:a24c9b492cf8891867a61fe0c8d577977"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decode binary IPTC data in IPTC IIM4 format from a buffer <em>pData</em> of length <em>size</em> to the provided metadata container.  <a href="classExiv2_1_1IptcParser.html#a24c9b492cf8891867a61fe0c8d577977">More...</a><br /></td></tr>
+<tr class="separator:a24c9b492cf8891867a61fe0c8d577977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47e78724002c8be618ecf527a89f343a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structExiv2_1_1DataBuf.html">DataBuf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IptcParser.html#a47e78724002c8be618ecf527a89f343a">encode</a> (const <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;iptcData)</td></tr>
 <tr class="memdesc:a47e78724002c8be618ecf527a89f343a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode the IPTC datasets from <em>iptcData</em> to a binary representation in IPTC IIM4 format.  <a href="classExiv2_1_1IptcParser.html#a47e78724002c8be618ecf527a89f343a">More...</a><br /></td></tr>
 <tr class="separator:a47e78724002c8be618ecf527a89f343a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Stateless parser class for IPTC data. Images use this class to decode and encode binary IPTC data. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa645722e6f55f59a065a175eceb018df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa645722e6f55f59a065a175eceb018df">&#9670;&nbsp;</a></span>decode()</h2>
+<a id="a24c9b492cf8891867a61fe0c8d577977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c9b492cf8891867a61fe0c8d577977">&#9670;&nbsp;</a></span>decode()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -132,13 +132,13 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *&#160;</td>
           <td class="paramname"><em>pData</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
@@ -178,7 +178,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> Exiv2::IptcParser::encode </td>
+          <td class="memname">static <a class="el" href="structExiv2_1_1DataBuf.html">DataBuf</a> Exiv2::IptcParser::encode </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;&#160;</td>
           <td class="paramname"><em>iptcData</em></td><td>)</td>
@@ -209,12 +209,12 @@ Static Public Member Functions</h2></td></tr>
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

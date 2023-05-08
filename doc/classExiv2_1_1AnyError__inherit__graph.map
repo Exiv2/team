@@ -1,5 +1,0 @@
-<map id="Exiv2::AnyError" name="Exiv2::AnyError">
-<area shape="rect" id="node1" title="Error class interface. Allows the definition and use of a hierarchy of error classes which can all be..." alt="" coords="15,80,138,107"/>
-<area shape="rect" id="node3" href="$classExiv2_1_1BasicError.html" title="Simple error class used for exceptions. An output operator is provided to print errors to a stream." alt="" coords="5,155,148,196"/>
-<area shape="rect" id="node2" title="STL class." alt="" coords="19,5,134,32"/>
-</map>

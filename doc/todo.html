@@ -90,16 +90,16 @@
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt>Member <a class="el" href="structExiv2_1_1Internal_1_1MutableSliceBase.html#a5e9f6d3048f51b3d68958a4028d5f6af">Exiv2::Internal::MutableSliceBase&lt; storage_type, data_type &gt;::MutableSliceBase</a>  (data_type &amp;data, size_t begin, size_t end)</dt>
-<dd><a class="anchor" id="_todo000005"></a>use using once we have C++11  </dd>
+<dt>Member <a class="el" href="structExiv2_1_1Photoshop.html#a44fdbcba9b5a0d36ff9b616a6ad5d2c9">Exiv2::Photoshop::isIrb</a>  (const byte *pPsData)</dt>
+<dd><a class="anchor" id="_todo000004"></a>This should be an implementation detail and not exposed in the API. An attacker could try to pass a smaller buffer or null pointer.  </dd>
 <dt>Class <a class="el" href="classExiv2_1_1Uri.html">Exiv2::Uri</a>  </dt>
-<dd><a class="anchor" id="_todo000004"></a>This class can probably be hidden from the API  </dd>
-<dt>Member <a class="el" href="namespaceExiv2.html#a3900474d60fbd18b43233e932e23dadd">Exiv2::urldecode</a>  (const char *str)</dt>
-<dd><a class="anchor" id="_todo000002"></a>This function can probably be hidden into the implementation details  </dd>
+<dd><a class="anchor" id="_todo000003"></a>This class can probably be hidden from the API  </dd>
 <dt>Member <a class="el" href="namespaceExiv2.html#ad0531dfdf429651de47ae38361340f4e">Exiv2::urldecode</a>  (std::string &amp;str)</dt>
-<dd><a class="anchor" id="_todo000003"></a>This function can probably be hidden into the implementation details  </dd>
-<dt>Member <a class="el" href="namespaceExiv2.html#a3050c1f47873a695752651832339f265">Exiv2::urlencode</a>  (const char *str)</dt>
-<dd><a class="anchor" id="_todo000001"></a>This function can probably be hidden into the implementation details </dd>
+<dd><a class="anchor" id="_todo000002"></a>This function can probably be hidden into the implementation details  </dd>
+<dt>Member <a class="el" href="namespaceExiv2.html#aff8bdebc9f320e13c8485c3cd1154b02">Exiv2::urlencode</a>  (const std::string &amp;str)</dt>
+<dd><a class="anchor" id="_todo000001"></a>This function can probably be hidden into the implementation details  </dd>
+<dt>Member <a class="el" href="classExiv2_1_1XmpProperties.html#a37201e8e5230b1879dd50eab159fb886">Exiv2::XmpProperties::mutex_</a>  </dt>
+<dd><a class="anchor" id="_todo000005"></a>For a proper read-write lock, this shall be improved by a <em>std::shared_timed_mutex</em> (once C++14 is allowed) or <em>std::shared_mutex</em> (once C++17 is allowed). The read-access locks shall be updated to <em>std::shared_lock</em> then. </dd>
 </dl>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
@@ -110,12 +110,12 @@
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

@@ -104,96 +104,7 @@ Reference: <a href="http://www.adobe.com/devnet/xmp.html" title="XMP specificati
 <th>Category</th>
 <th>Description</th>
 </tr></thead>
-<tbody>
-<tr>
-<td>Advisory</td>
-<td>Advisory</td>
-<td>bag XPath</td>
-<td>XmpBag</td>
-<td>External</td>
-<td>An unordered array specifying properties that were edited outside the authoring application. Each item should contain a single namespace and XPath separated by one ASCII space (U+0020).</td>
-</tr>
-<tr>
-<td>BaseURL</td>
-<td>Base URL</td>
-<td>URL</td>
-<td>XmpText</td>
-<td>Internal</td>
-<td>The base URL for relative URLs in the document content. If this document contains Internet links, and those links are relative, they are relative to this base URL. This property provides a standard way for embedded relative URLs to be interpreted by tools. Web authoring tools should set the value based on their notion of where URLs will be interpreted.</td>
-</tr>
-<tr>
-<td>CreateDate</td>
-<td>Create Date</td>
-<td>Date</td>
-<td>XmpText</td>
-<td>External</td>
-<td>The date and time the resource was originally created.</td>
-</tr>
-<tr>
-<td>CreatorTool</td>
-<td>Creator Tool</td>
-<td>AgentName</td>
-<td>XmpText</td>
-<td>Internal</td>
-<td>The name of the first known tool used to create the resource. If history is present in the metadata, this value should be equivalent to that of xmpMM:History's softwareAgent property.</td>
-</tr>
-<tr>
-<td>Identifier</td>
-<td>Identifier</td>
-<td>bag Text</td>
-<td>XmpBag</td>
-<td>External</td>
-<td>An unordered array of text strings that unambiguously identify the resource within a given context. An array item may be qualified with xmpidq:Scheme to denote the formal identification system to which that identifier conforms. Note: The dc:identifier property is not used because it lacks a defined scheme qualifier and has been defined in the XMP Specification as a simple (single-valued) property.</td>
-</tr>
-<tr>
-<td>Label</td>
-<td>Label</td>
-<td>Text</td>
-<td>XmpText</td>
-<td>External</td>
-<td>A word or short phrase that identifies a document as a member of a user-defined collection. Used to organize documents in a file browser.</td>
-</tr>
-<tr>
-<td>MetadataDate</td>
-<td>Metadata Date</td>
-<td>Date</td>
-<td>XmpText</td>
-<td>Internal</td>
-<td>The date and time that any metadata for this resource was last changed. It should be the same as or more recent than xmp:ModifyDate.</td>
-</tr>
-<tr>
-<td>ModifyDate</td>
-<td>Modify Date</td>
-<td>Date</td>
-<td>XmpText</td>
-<td>Internal</td>
-<td>The date and time the resource was last modified. Note: The value of this property is not necessarily the same as the file's system modification date because it is set before the file is saved.</td>
-</tr>
-<tr>
-<td>Nickname</td>
-<td>Nickname</td>
-<td>Text</td>
-<td>XmpText</td>
-<td>External</td>
-<td>A short informal name for the resource.</td>
-</tr>
-<tr>
-<td>Rating</td>
-<td>Rating</td>
-<td>Closed Choice of Integer</td>
-<td>XmpText</td>
-<td>External</td>
-<td>A number that indicates a document's status relative to other documents, used to organize documents in a file browser. Values are user-defined within an application-defined range.</td>
-</tr>
-<tr>
-<td>Thumbnails</td>
-<td>Thumbnails</td>
-<td>alt Thumbnail</td>
-<td>XmpText</td>
-<td>Internal</td>
-<td>An alternative array of thumbnail images for a file, which can differ in characteristics such as size or image encoding.</td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
 
 
@@ -204,12 +115,12 @@ Reference: <a href="http://www.adobe.com/devnet/xmp.html" title="XMP specificati
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

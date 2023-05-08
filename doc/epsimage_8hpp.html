@@ -92,8 +92,7 @@
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">epsimage.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -118,29 +117,21 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceExiv2"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExiv2.html">Exiv2</a></td></tr>
-<tr class="memdesc:namespaceExiv2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides classes and functions to encode and decode Exif and Iptc data. The <b>libexiv2</b> API consists of the objects of this namespace. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceExiv2_1_1ImageType"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExiv2_1_1ImageType.html">Exiv2::ImageType</a></td></tr>
-<tr class="memdesc:namespaceExiv2_1_1ImageType"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supported image formats. <br /></td></tr>
+<tr class="memdesc:namespaceExiv2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class <a class="el" href="classExiv2_1_1CrwImage.html" title="Class to access raw Canon CRW images. Only Exif metadata and a comment are supported....">CrwImage</a> to access Canon CRW images.<br  />
+ References:<br  />
+ <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/canon_raw.html">The Canon RAW (CRW) File Format</a> by Phil Harvey. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9675df07033075c9a8b6f2695a172def"><td class="memItemLeft" align="right" valign="top"><a id="a9675df07033075c9a8b6f2695a172def"></a>
-EXIV2LIB_DEPRECATED_EXPORT Image::AutoPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExiv2.html#a9675df07033075c9a8b6f2695a172def">Exiv2::newEpsInstance</a> (BasicIo::AutoPtr io, bool create)</td></tr>
-<tr class="memdesc:a9675df07033075c9a8b6f2695a172def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new <a class="el" href="classExiv2_1_1EpsImage.html" title="Class to access EPS images.">EpsImage</a> instance and return an auto-pointer to it. Caller owns the returned object and the auto-pointer ensures that it will be deleted. <br /></td></tr>
-<tr class="separator:a9675df07033075c9a8b6f2695a172def"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a460e8b909ff9c25c951978afc7403e52"><td class="memItemLeft" align="right" valign="top"><a id="a460e8b909ff9c25c951978afc7403e52"></a>
-EXIV2LIB_DEPRECATED_EXPORT bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExiv2.html#a460e8b909ff9c25c951978afc7403e52">Exiv2::isEpsType</a> (BasicIo &amp;iIo, bool advance)</td></tr>
-<tr class="memdesc:a460e8b909ff9c25c951978afc7403e52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the file iIo is a EPS image. <br /></td></tr>
-<tr class="separator:a460e8b909ff9c25c951978afc7403e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:aeb97f777e3c8bf8cfdb89e24ad6adb25"><td class="memItemLeft" align="right" valign="top"><a id="aeb97f777e3c8bf8cfdb89e24ad6adb25"></a>
-const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExiv2_1_1ImageType.html#aeb97f777e3c8bf8cfdb89e24ad6adb25">Exiv2::ImageType::eps</a> = 18</td></tr>
-<tr class="memdesc:aeb97f777e3c8bf8cfdb89e24ad6adb25"><td class="mdescLeft">&#160;</td><td class="mdescRight">EPS image type. <br /></td></tr>
-<tr class="separator:aeb97f777e3c8bf8cfdb89e24ad6adb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a322857615a3fefa6481059b11e3c7c9c"><td class="memItemLeft" align="right" valign="top"><a id="a322857615a3fefa6481059b11e3c7c9c"></a>
+EXIV2API Image::UniquePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExiv2.html#a322857615a3fefa6481059b11e3c7c9c">Exiv2::newEpsInstance</a> (BasicIo::UniquePtr io, bool create)</td></tr>
+<tr class="memdesc:a322857615a3fefa6481059b11e3c7c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new <a class="el" href="classExiv2_1_1EpsImage.html" title="Class to access EPS images.">EpsImage</a> instance and return an auto-pointer to it. Caller owns the returned object and the auto-pointer ensures that it will be deleted. <br /></td></tr>
+<tr class="separator:a322857615a3fefa6481059b11e3c7c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ee22daaeaeae27429093f977fe8258"><td class="memItemLeft" align="right" valign="top"><a id="a97ee22daaeaeae27429093f977fe8258"></a>
+EXIV2API bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExiv2.html#a97ee22daaeaeae27429093f977fe8258">Exiv2::isEpsType</a> (BasicIo &amp;iIo, bool advance)</td></tr>
+<tr class="memdesc:a97ee22daaeaeae27429093f977fe8258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the file iIo is a EPS image. <br /></td></tr>
+<tr class="separator:a97ee22daaeaeae27429093f977fe8258"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>EPS image. <br  />
@@ -161,12 +152,12 @@ Volker Grabsch (vog) <a href="#" onclick="location.href='mai'+'lto:'+'vog'+'@n'+
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

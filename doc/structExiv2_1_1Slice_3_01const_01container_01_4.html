@@ -116,31 +116,28 @@ Inheritance diagram for Exiv2::Slice&lt; const container &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ad41cf584ea5151ffd1086250f0191d8a"><td class="memItemLeft" align="right" valign="top"><a id="ad41cf584ea5151ffd1086250f0191d8a"></a>
-typedef container::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b></td></tr>
-<tr class="separator:ad41cf584ea5151ffd1086250f0191d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5277a2e40085edaa50e349c5c3a9e6aa"><td class="memItemLeft" align="right" valign="top"><a id="a5277a2e40085edaa50e349c5c3a9e6aa"></a>
-typedef container::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b></td></tr>
-<tr class="separator:a5277a2e40085edaa50e349c5c3a9e6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a2e3eca41285d1347239e937281a732"><td class="memItemLeft" align="right" valign="top"><a id="a7a2e3eca41285d1347239e937281a732"></a>
-typedef <a class="el" href="structExiv2_1_1Internal_1_1remove__cv.html">Internal::remove_cv</a>&lt; typename container::value_type &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
-<tr class="separator:a7a2e3eca41285d1347239e937281a732"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adabd89ce4d29d3747029df586346ed31"><td class="memItemLeft" align="right" valign="top"><a id="adabd89ce4d29d3747029df586346ed31"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b> = typename container::iterator</td></tr>
+<tr class="separator:adabd89ce4d29d3747029df586346ed31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b862d4a387a4086dfa236e79516a2eb"><td class="memItemLeft" align="right" valign="top"><a id="a8b862d4a387a4086dfa236e79516a2eb"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b> = typename container::const_iterator</td></tr>
+<tr class="separator:a8b862d4a387a4086dfa236e79516a2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51624335fb8e6f3a6e059577a4aab8c1"><td class="memItemLeft" align="right" valign="top"><a id="a51624335fb8e6f3a6e059577a4aab8c1"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = typename std::remove_cv&lt; typename container::value_type &gt;::type</td></tr>
+<tr class="separator:a51624335fb8e6f3a6e059577a4aab8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td colspan="2" onclick="javascript:toggleInherit('pub_types_structExiv2_1_1Internal_1_1ConstSliceBase')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html">Exiv2::Internal::ConstSliceBase&lt; Internal::ContainerStorage, const container &gt;</a></td></tr>
-<tr class="memitem:afbfa37b4f4f50bd2a3b680b7726d0e07 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top"><a id="afbfa37b4f4f50bd2a3b680b7726d0e07"></a>
-typedef <a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>&lt; const container &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b></td></tr>
-<tr class="separator:afbfa37b4f4f50bd2a3b680b7726d0e07 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0cc94c8de71e8417e2ecb57ae010216 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top"><a id="ae0cc94c8de71e8417e2ecb57ae010216"></a>
-typedef <a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>&lt; const container &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b></td></tr>
-<tr class="separator:ae0cc94c8de71e8417e2ecb57ae010216 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfa063ef6f6065ca5b0eaf61c14de2b6 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top"><a id="abfa063ef6f6065ca5b0eaf61c14de2b6"></a>
-typedef <a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>&lt; const container &gt;::value_type&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
-<tr class="separator:abfa063ef6f6065ca5b0eaf61c14de2b6 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb5af61221defba18bcb142229a1c33 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top"><a id="aaeb5af61221defba18bcb142229a1c33"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b> = typename <a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>&lt; const container &gt;::iterator</td></tr>
+<tr class="separator:aaeb5af61221defba18bcb142229a1c33 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeece7718cb49c898db4203be3e8462da inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top"><a id="aeece7718cb49c898db4203be3e8462da"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b> = typename <a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>&lt; const container &gt;::const_iterator</td></tr>
+<tr class="separator:aeece7718cb49c898db4203be3e8462da inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5d416d123e3938f49757dc4a3126481 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top"><a id="aa5d416d123e3938f49757dc4a3126481"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = typename <a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>&lt; const container &gt;::value_type</td></tr>
+<tr class="separator:aa5d416d123e3938f49757dc4a3126481 inherit pub_types_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3c1ac24be2e7d664d56a13a882cb4dc2"><td class="memItemLeft" align="right" valign="top"><a id="a3c1ac24be2e7d664d56a13a882cb4dc2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Slice</b> (const container &amp;cont, size_t begin, size_t end)</td></tr>
-<tr class="separator:a3c1ac24be2e7d664d56a13a882cb4dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a384ee85a9cea5037ffd58b7fe8b63125"><td class="memItemLeft" align="right" valign="top"><a id="a384ee85a9cea5037ffd58b7fe8b63125"></a>
 <a class="el" href="structExiv2_1_1Slice.html">Slice</a>&#160;</td><td class="memItemRight" valign="bottom"><b>subSlice</b> (size_t begin, size_t end) const</td></tr>
 <tr class="separator:a384ee85a9cea5037ffd58b7fe8b63125"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,18 +146,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af19c6e79461cd3e8ac2658c67432197a inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d8672586fd2b84b31f41bb5c138b43d inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top">const value_type &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html#a9d8672586fd2b84b31f41bb5c138b43d">at</a> (size_t index) const</td></tr>
 <tr class="separator:a9d8672586fd2b84b31f41bb5c138b43d inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0c48b20ace6d9497688b600d1c129e3 inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top">const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html#ab0c48b20ace6d9497688b600d1c129e3">cbegin</a> () const  throw ()</td></tr>
-<tr class="separator:ab0c48b20ace6d9497688b600d1c129e3 inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73bcac7d61d3c72a840fbf44160fe97b inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top">const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html#a73bcac7d61d3c72a840fbf44160fe97b">cend</a> () const  throw ()</td></tr>
-<tr class="separator:a73bcac7d61d3c72a840fbf44160fe97b inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa03ef52aa7dc9cb20f4aa4ed5ecf515a inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top">const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html#aa03ef52aa7dc9cb20f4aa4ed5ecf515a">cbegin</a> () const noexcept</td></tr>
+<tr class="separator:aa03ef52aa7dc9cb20f4aa4ed5ecf515a inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a891fedf1f108ce5c7be34859a05f1bb1 inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top">const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html#a891fedf1f108ce5c7be34859a05f1bb1">cend</a> () const noexcept</td></tr>
+<tr class="separator:a891fedf1f108ce5c7be34859a05f1bb1 inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ffbb40deacd94ba4f2c1065f2c2333b inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top">slice_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html#a5ffbb40deacd94ba4f2c1065f2c2333b">subSlice</a> (size_t begin, size_t end) const</td></tr>
 <tr class="separator:a5ffbb40deacd94ba4f2c1065f2c2333b inherit pub_methods_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_structExiv2_1_1Internal_1_1SliceBase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structExiv2_1_1Internal_1_1SliceBase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structExiv2_1_1Internal_1_1SliceBase.html">Exiv2::Internal::SliceBase</a></td></tr>
 <tr class="memitem:a41f1a55c4915f09aec23531488d85c3e inherit pub_methods_structExiv2_1_1Internal_1_1SliceBase"><td class="memItemLeft" align="right" valign="top"><a id="a41f1a55c4915f09aec23531488d85c3e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>SliceBase</b> (size_t begin, size_t end)</td></tr>
 <tr class="separator:a41f1a55c4915f09aec23531488d85c3e inherit pub_methods_structExiv2_1_1Internal_1_1SliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91530216c805ca43dc9b1ec4130fdc07 inherit pub_methods_structExiv2_1_1Internal_1_1SliceBase"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1SliceBase.html#a91530216c805ca43dc9b1ec4130fdc07">size</a> () const  throw ()</td></tr>
-<tr class="separator:a91530216c805ca43dc9b1ec4130fdc07 inherit pub_methods_structExiv2_1_1Internal_1_1SliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a720342ddba83da25127231e6e8a052d7 inherit pub_methods_structExiv2_1_1Internal_1_1SliceBase"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1SliceBase.html#a720342ddba83da25127231e6e8a052d7">size</a> () const noexcept</td></tr>
+<tr class="separator:a720342ddba83da25127231e6e8a052d7 inherit pub_methods_structExiv2_1_1Internal_1_1SliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -171,11 +168,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a8f85c67275e64e44430fb0f3379bd778 inherit pro_attribs_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structExiv2_1_1Internal_1_1ContainerStorage.html">Internal::ContainerStorage</a>&lt; const container &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1ConstSliceBase.html#a8f85c67275e64e44430fb0f3379bd778">storage_</a></td></tr>
 <tr class="separator:a8f85c67275e64e44430fb0f3379bd778 inherit pro_attribs_structExiv2_1_1Internal_1_1ConstSliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_structExiv2_1_1Internal_1_1SliceBase"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_structExiv2_1_1Internal_1_1SliceBase')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="structExiv2_1_1Internal_1_1SliceBase.html">Exiv2::Internal::SliceBase</a></td></tr>
-<tr class="memitem:aa3385c250725aba1076a6ae203e089c6 inherit pro_attribs_structExiv2_1_1Internal_1_1SliceBase"><td class="memItemLeft" align="right" valign="top">const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1SliceBase.html#aa3385c250725aba1076a6ae203e089c6">begin_</a></td></tr>
-<tr class="separator:aa3385c250725aba1076a6ae203e089c6 inherit pro_attribs_structExiv2_1_1Internal_1_1SliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45ee8ca5e6a784018408cd65e130d607 inherit pro_attribs_structExiv2_1_1Internal_1_1SliceBase"><td class="memItemLeft" align="right" valign="top"><a id="a45ee8ca5e6a784018408cd65e130d607"></a>
-const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>end_</b></td></tr>
-<tr class="separator:a45ee8ca5e6a784018408cd65e130d607 inherit pro_attribs_structExiv2_1_1Internal_1_1SliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d23a176d1ee10978b91c75ccfcb334c inherit pro_attribs_structExiv2_1_1Internal_1_1SliceBase"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Internal_1_1SliceBase.html#a7d23a176d1ee10978b91c75ccfcb334c">begin_</a></td></tr>
+<tr class="separator:a7d23a176d1ee10978b91c75ccfcb334c inherit pro_attribs_structExiv2_1_1Internal_1_1SliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b68c74ebbab903223f8503a0acdadbc inherit pro_attribs_structExiv2_1_1Internal_1_1SliceBase"><td class="memItemLeft" align="right" valign="top"><a id="a7b68c74ebbab903223f8503a0acdadbc"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>end_</b></td></tr>
+<tr class="separator:a7b68c74ebbab903223f8503a0acdadbc inherit pro_attribs_structExiv2_1_1Internal_1_1SliceBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename container&gt;<br />
@@ -193,12 +190,12 @@ struct Exiv2::Slice&lt; const container &gt;</h3>
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

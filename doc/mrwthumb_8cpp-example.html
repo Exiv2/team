@@ -90,99 +90,73 @@
 </div><!--header-->
 <div class="contents">
 <p>Sample program to extract a Minolta thumbnail from the makernote</p>
-<div class="fragment"><div class="line"><span class="comment">// ***************************************************************** -*- C++ -*-</span></div>
-<div class="line"><span class="comment">// mrwthumb.cpp</span></div>
+<div class="fragment"><div class="line"><span class="comment">// SPDX-License-Identifier: GPL-2.0-or-later</span></div>
 <div class="line"><span class="comment">// Sample program to extract a Minolta thumbnail from the makernote</span></div>
-<div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Copyright (C) 2004-2021 Exiv2 authors</span></div>
-<div class="line"><span class="comment"> * This program is part of the Exiv2 distribution.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * This program is free software; you can redistribute it and/or</span></div>
-<div class="line"><span class="comment"> * modify it under the terms of the GNU General Public License</span></div>
-<div class="line"><span class="comment"> * as published by the Free Software Foundation; either version 2</span></div>
-<div class="line"><span class="comment"> * of the License, or (at your option) any later version.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * This program is distributed in the hope that it will be useful,</span></div>
-<div class="line"><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div>
-<div class="line"><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div>
-<div class="line"><span class="comment"> * GNU General Public License for more details.</span></div>
-<div class="line"><span class="comment"> *</span></div>
-<div class="line"><span class="comment"> * You should have received a copy of the GNU General Public License</span></div>
-<div class="line"><span class="comment"> * along with this program; if not, write to the Free Software</span></div>
-<div class="line"><span class="comment"> * Foundation, Inc., 51 Franklin Street, 5th Floor, Boston, MA 02110-1301 USA.</span></div>
-<div class="line"><span class="comment"> */</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;exiv2/exiv2.hpp&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;cassert&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* <span class="keyword">const</span> argv[])</div>
-<div class="line">{</div>
-<div class="line">    <a name="a0"></a><a class="code" href="classExiv2_1_1XmpParser.html#aea661a7039adb5a748eb7639c8ce9294">Exiv2::XmpParser::initialize</a>();</div>
-<div class="line">    ::atexit(<a name="a1"></a><a class="code" href="classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2">Exiv2::XmpParser::terminate</a>);</div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* <span class="keyword">const</span> argv[]) {</div>
+<div class="line">  <a name="a0"></a><a class="code" href="classExiv2_1_1XmpParser.html#afe08760a1a594e66566cb59a0f87d36e">Exiv2::XmpParser::initialize</a>();</div>
+<div class="line">  ::atexit(<a name="a1"></a><a class="code" href="classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2">Exiv2::XmpParser::terminate</a>);</div>
 <div class="line"><span class="preprocessor">#ifdef EXV_ENABLE_BMFF</span></div>
-<div class="line">    Exiv2::enableBMFF();</div>
+<div class="line">  Exiv2::enableBMFF();</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"> </div>
-<div class="line">    <span class="keywordflow">try</span> {</div>
-<div class="line">        <span class="keywordflow">if</span> (argc != 2) {</div>
-<div class="line">            std::cout &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; file\n&quot;</span>;</div>
-<div class="line">            <span class="keywordflow">return</span> 1;</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <a class="code" href="classExiv2_1_1Image.html#a89ad3ffe7a4e8a943d267d77843415fb">Exiv2::Image::AutoPtr</a> image = <a name="a2"></a><a class="code" href="classExiv2_1_1ImageFactory.html#aba929c4ca4a71625d12bcb97bcc28161">Exiv2::ImageFactory::open</a>(argv[1]);</div>
-<div class="line">        assert(image.get() != 0);</div>
-<div class="line">        image-&gt;readMetadata();</div>
-<div class="line"> </div>
-<div class="line">        <a name="_a3"></a><a class="code" href="classExiv2_1_1ExifData.html">Exiv2::ExifData</a>&amp; exifData = image-&gt;exifData();</div>
-<div class="line">        <span class="keywordflow">if</span> (exifData.<a name="a4"></a><a class="code" href="classExiv2_1_1ExifData.html#a0627816364585c0579cba89e6e287d74">empty</a>()) {</div>
-<div class="line">            std::string error(argv[1]);</div>
-<div class="line">            error += <span class="stringliteral">&quot;: No Exif data found in the file&quot;</span>;</div>
-<div class="line">            <span class="keywordflow">throw</span> <a name="a5"></a><a class="code" href="namespaceExiv2.html#accd3e49cafe9db52c1e0e6f648753cae">Exiv2::Error</a>(Exiv2::kerErrorMessage, error);</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <a name="_a6"></a><a class="code" href="classExiv2_1_1ExifKey.html">Exiv2::ExifKey</a> key(<span class="stringliteral">&quot;Exif.Minolta.ThumbnailOffset&quot;</span>);</div>
-<div class="line">        <a class="code" href="classExiv2_1_1ExifData.html#a2b8ac7a474d6527c0f3f6a0a9cebef77">Exiv2::ExifData::const_iterator</a> format = exifData.<a name="a7"></a><a class="code" href="classExiv2_1_1ExifData.html#a96c38cbd300ebdfa05f849864b380690">findKey</a>(key);</div>
-<div class="line"> </div>
-<div class="line">        <span class="keywordflow">if</span> (format != exifData.<a name="a8"></a><a class="code" href="classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe">end</a>()) {</div>
-<div class="line">            <a name="_a9"></a><a class="code" href="classExiv2_1_1DataBuf.html">Exiv2::DataBuf</a> buf = format-&gt;dataArea();</div>
-<div class="line"> </div>
-<div class="line">            <span class="comment">// The first byte of the buffer needs to be patched</span></div>
-<div class="line">            buf.<a name="a10"></a><a class="code" href="classExiv2_1_1DataBuf.html#a9a00173081c913d3add58854d9ad2c39">pData_</a>[0] = 0xff;</div>
-<div class="line"> </div>
-<div class="line">            <a name="_a11"></a><a class="code" href="classExiv2_1_1FileIo.html">Exiv2::FileIo</a> file(<span class="stringliteral">&quot;img_thumb.jpg&quot;</span>);</div>
-<div class="line"> </div>
-<div class="line">            file.<a name="a12"></a><a class="code" href="classExiv2_1_1FileIo.html#a1793ddca7f8c94619ceae7a127da73c2">open</a>(<span class="stringliteral">&quot;wb&quot;</span>);</div>
-<div class="line">            file.<a name="a13"></a><a class="code" href="classExiv2_1_1FileIo.html#a1a576f408124d428d5c446a19e2a504d">write</a>(buf.<a class="code" href="classExiv2_1_1DataBuf.html#a9a00173081c913d3add58854d9ad2c39">pData_</a>, buf.<a name="a14"></a><a class="code" href="classExiv2_1_1DataBuf.html#a5e6028d5cdae2e149749667cf66c3e91">size_</a>);</div>
-<div class="line">            file.<a name="a15"></a><a class="code" href="classExiv2_1_1FileIo.html#a794be686e28524d9eed2a0811d477d3b">close</a>();</div>
-<div class="line">        }</div>
-<div class="line"> </div>
-<div class="line">        <span class="keywordflow">return</span> 0;</div>
-<div class="line">    } <span class="keywordflow">catch</span> (<a name="_a16"></a><a class="code" href="classExiv2_1_1AnyError.html">Exiv2::AnyError</a>&amp; e) {</div>
-<div class="line">        std::cout &lt;&lt; <span class="stringliteral">&quot;Caught Exiv2 exception &#39;&quot;</span> &lt;&lt; e &lt;&lt; <span class="stringliteral">&quot;&#39;\n&quot;</span>;</div>
-<div class="line">        <span class="keywordflow">return</span> -1;</div>
+<div class="line">  <span class="keywordflow">try</span> {</div>
+<div class="line">    <span class="keywordflow">if</span> (argc != 2) {</div>
+<div class="line">      std::cout &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; file\n&quot;</span>;</div>
+<div class="line">      <span class="keywordflow">return</span> EXIT_FAILURE;</div>
 <div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">auto</span> image = <a name="a2"></a><a class="code" href="classExiv2_1_1ImageFactory.html#ac1412e83e334ea32e2a1301619eff39c">Exiv2::ImageFactory::open</a>(argv[1]);</div>
+<div class="line">    image-&gt;readMetadata();</div>
+<div class="line"> </div>
+<div class="line">    <a name="_a3"></a><a class="code" href="classExiv2_1_1ExifData.html">Exiv2::ExifData</a>&amp; exifData = image-&gt;exifData();</div>
+<div class="line">    <span class="keywordflow">if</span> (exifData.<a name="a4"></a><a class="code" href="classExiv2_1_1ExifData.html#a0627816364585c0579cba89e6e287d74">empty</a>()) {</div>
+<div class="line">      std::string error(argv[1]);</div>
+<div class="line">      error += <span class="stringliteral">&quot;: No Exif data found in the file&quot;</span>;</div>
+<div class="line">      <span class="keywordflow">throw</span> <a name="_a5"></a><a class="code" href="classExiv2_1_1Error.html">Exiv2::Error</a>(Exiv2::ErrorCode::kerErrorMessage, error);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a name="_a6"></a><a class="code" href="classExiv2_1_1ExifKey.html">Exiv2::ExifKey</a> key(<span class="stringliteral">&quot;Exif.Minolta.ThumbnailOffset&quot;</span>);</div>
+<div class="line">    <span class="keyword">auto</span> format = exifData.<a name="a7"></a><a class="code" href="classExiv2_1_1ExifData.html#a96c38cbd300ebdfa05f849864b380690">findKey</a>(key);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (format != exifData.<a name="a8"></a><a class="code" href="classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe">end</a>()) {</div>
+<div class="line">      <a name="_a9"></a><a class="code" href="structExiv2_1_1DataBuf.html">Exiv2::DataBuf</a> buf = format-&gt;dataArea();</div>
+<div class="line"> </div>
+<div class="line">      <span class="comment">// The first byte of the buffer needs to be patched</span></div>
+<div class="line">      buf.<a name="a10"></a>write_uint8(0, 0xff);</div>
+<div class="line"> </div>
+<div class="line">      <a name="_a11"></a><a class="code" href="classExiv2_1_1FileIo.html">Exiv2::FileIo</a> file(<span class="stringliteral">&quot;img_thumb.jpg&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">      file.<a name="a12"></a><a class="code" href="classExiv2_1_1FileIo.html#a1793ddca7f8c94619ceae7a127da73c2">open</a>(<span class="stringliteral">&quot;wb&quot;</span>);</div>
+<div class="line">      file.<a name="a13"></a><a class="code" href="classExiv2_1_1FileIo.html#a5b3e675ebb2b547606c2c87596dda1d1">write</a>(buf.<a name="a14"></a><a class="code" href="structExiv2_1_1DataBuf.html#a7c1b19cb75dbed462d1d40e878128a49">c_data</a>(), buf.<a name="a15"></a>size());</div>
+<div class="line">      file.<a name="a16"></a><a class="code" href="classExiv2_1_1FileIo.html#a8768d25ac1b81c8398631a26a85624b7">close</a>();</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line">  } <span class="keywordflow">catch</span> (<a class="code" href="classExiv2_1_1Error.html">Exiv2::Error</a>&amp; e) {</div>
+<div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;Caught Exiv2 exception &#39;&quot;</span> &lt;&lt; e &lt;&lt; <span class="stringliteral">&quot;&#39;\n&quot;</span>;</div>
+<div class="line">    <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line">  }</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
-<div class="ttc" id="aclassExiv2_1_1DataBuf_html_a9a00173081c913d3add58854d9ad2c39"><div class="ttname"><a href="classExiv2_1_1DataBuf.html#a9a00173081c913d3add58854d9ad2c39">Exiv2::DataBuf::pData_</a></div><div class="ttdeci">byte * pData_</div><div class="ttdoc">Pointer to the buffer, 0 if none has been allocated.</div><div class="ttdef"><b>Definition:</b> types.hpp:258</div></div>
-<div class="ttc" id="aclassExiv2_1_1FileIo_html"><div class="ttname"><a href="classExiv2_1_1FileIo.html">Exiv2::FileIo</a></div><div class="ttdoc">Provides binary file IO by implementing the BasicIo interface.</div><div class="ttdef"><b>Definition:</b> basicio.hpp:296</div></div>
-<div class="ttc" id="aclassExiv2_1_1ExifData_html_a2b8ac7a474d6527c0f3f6a0a9cebef77"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a2b8ac7a474d6527c0f3f6a0a9cebef77">Exiv2::ExifData::const_iterator</a></div><div class="ttdeci">ExifMetadata::const_iterator const_iterator</div><div class="ttdoc">ExifMetadata const iterator type.</div><div class="ttdef"><b>Definition:</b> exif.hpp:439</div></div>
-<div class="ttc" id="aclassExiv2_1_1XmpParser_html_aea661a7039adb5a748eb7639c8ce9294"><div class="ttname"><a href="classExiv2_1_1XmpParser.html#aea661a7039adb5a748eb7639c8ce9294">Exiv2::XmpParser::initialize</a></div><div class="ttdeci">static bool initialize(XmpParser::XmpLockFct xmpLockFct=0, void *pLockData=0)</div><div class="ttdoc">Initialize the XMP Toolkit.</div></div>
-<div class="ttc" id="aclassExiv2_1_1AnyError_html"><div class="ttname"><a href="classExiv2_1_1AnyError.html">Exiv2::AnyError</a></div><div class="ttdoc">Error class interface. Allows the definition and use of a hierarchy of error classes which can all be...</div><div class="ttdef"><b>Definition:</b> error.hpp:174</div></div>
-<div class="ttc" id="aclassExiv2_1_1ExifData_html_a9c15177b03489e3d4bb81e9acc1165fe"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe">Exiv2::ExifData::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdoc">End of the metadata.</div><div class="ttdef"><b>Definition:</b> exif.hpp:492</div></div>
-<div class="ttc" id="aclassExiv2_1_1DataBuf_html"><div class="ttname"><a href="classExiv2_1_1DataBuf.html">Exiv2::DataBuf</a></div><div class="ttdoc">Utility class containing a character array. All it does is to take care of memory allocation and dele...</div><div class="ttdef"><b>Definition:</b> types.hpp:193</div></div>
-<div class="ttc" id="aclassExiv2_1_1ExifKey_html"><div class="ttname"><a href="classExiv2_1_1ExifKey.html">Exiv2::ExifKey</a></div><div class="ttdoc">Concrete keys for Exif metadata and access to Exif tag reference data.</div><div class="ttdef"><b>Definition:</b> tags.hpp:140</div></div>
-<div class="ttc" id="aclassExiv2_1_1DataBuf_html_a5e6028d5cdae2e149749667cf66c3e91"><div class="ttname"><a href="classExiv2_1_1DataBuf.html#a5e6028d5cdae2e149749667cf66c3e91">Exiv2::DataBuf::size_</a></div><div class="ttdeci">long size_</div><div class="ttdoc">The current size of the buffer.</div><div class="ttdef"><b>Definition:</b> types.hpp:260</div></div>
+<div class="ttc" id="aclassExiv2_1_1FileIo_html_a8768d25ac1b81c8398631a26a85624b7"><div class="ttname"><a href="classExiv2_1_1FileIo.html#a8768d25ac1b81c8398631a26a85624b7">Exiv2::FileIo::close</a></div><div class="ttdeci">int close() override</div><div class="ttdoc">Flush and unwritten data and close the file . It is safe to call close on an already closed instance.</div></div>
+<div class="ttc" id="aclassExiv2_1_1FileIo_html_a5b3e675ebb2b547606c2c87596dda1d1"><div class="ttname"><a href="classExiv2_1_1FileIo.html#a5b3e675ebb2b547606c2c87596dda1d1">Exiv2::FileIo::write</a></div><div class="ttdeci">size_t write(const byte *data, size_t wcount) override</div><div class="ttdoc">Write data to the file. The file position is advanced by the number of bytes written.</div></div>
+<div class="ttc" id="aclassExiv2_1_1FileIo_html"><div class="ttname"><a href="classExiv2_1_1FileIo.html">Exiv2::FileIo</a></div><div class="ttdoc">Provides binary file IO by implementing the BasicIo interface.</div><div class="ttdef"><b>Definition:</b> basicio.hpp:283</div></div>
+<div class="ttc" id="aclassExiv2_1_1XmpParser_html_afe08760a1a594e66566cb59a0f87d36e"><div class="ttname"><a href="classExiv2_1_1XmpParser.html#afe08760a1a594e66566cb59a0f87d36e">Exiv2::XmpParser::initialize</a></div><div class="ttdeci">static bool initialize(XmpParser::XmpLockFct xmpLockFct=nullptr, void *pLockData=nullptr)</div><div class="ttdoc">Initialize the XMP Toolkit.</div></div>
+<div class="ttc" id="aclassExiv2_1_1ImageFactory_html_ac1412e83e334ea32e2a1301619eff39c"><div class="ttname"><a href="classExiv2_1_1ImageFactory.html#ac1412e83e334ea32e2a1301619eff39c">Exiv2::ImageFactory::open</a></div><div class="ttdeci">static Image::UniquePtr open(const std::string &amp;path, bool useCurl=true)</div><div class="ttdoc">Create an Image subclass of the appropriate type by reading the specified file. Image type is derived...</div></div>
+<div class="ttc" id="aclassExiv2_1_1ExifData_html_a9c15177b03489e3d4bb81e9acc1165fe"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe">Exiv2::ExifData::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdoc">End of the metadata.</div><div class="ttdef"><b>Definition:</b> exif.hpp:433</div></div>
+<div class="ttc" id="aclassExiv2_1_1Error_html"><div class="ttname"><a href="classExiv2_1_1Error.html">Exiv2::Error</a></div><div class="ttdoc">Simple error class used for exceptions. An output operator is provided to print errors to a stream.</div><div class="ttdef"><b>Definition:</b> error.hpp:235</div></div>
+<div class="ttc" id="aclassExiv2_1_1ExifKey_html"><div class="ttname"><a href="classExiv2_1_1ExifKey.html">Exiv2::ExifKey</a></div><div class="ttdoc">Concrete keys for Exif metadata and access to Exif tag reference data.</div><div class="ttdef"><b>Definition:</b> tags.hpp:271</div></div>
 <div class="ttc" id="aclassExiv2_1_1XmpParser_html_a46ff7c85b860ef81310e0ac8dd6b62a2"><div class="ttname"><a href="classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2">Exiv2::XmpParser::terminate</a></div><div class="ttdeci">static void terminate()</div><div class="ttdoc">Terminate the XMP Toolkit and unregister custom namespaces.</div></div>
-<div class="ttc" id="aclassExiv2_1_1FileIo_html_a794be686e28524d9eed2a0811d477d3b"><div class="ttname"><a href="classExiv2_1_1FileIo.html#a794be686e28524d9eed2a0811d477d3b">Exiv2::FileIo::close</a></div><div class="ttdeci">virtual int close()</div><div class="ttdoc">Flush and unwritten data and close the file . It is safe to call close on an already closed instance.</div></div>
-<div class="ttc" id="aclassExiv2_1_1ExifData_html_a0627816364585c0579cba89e6e287d74"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a0627816364585c0579cba89e6e287d74">Exiv2::ExifData::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">Return true if there is no Exif metadata.</div><div class="ttdef"><b>Definition:</b> exif.hpp:512</div></div>
-<div class="ttc" id="aclassExiv2_1_1Image_html_a89ad3ffe7a4e8a943d267d77843415fb"><div class="ttname"><a href="classExiv2_1_1Image.html#a89ad3ffe7a4e8a943d267d77843415fb">Exiv2::Image::AutoPtr</a></div><div class="ttdeci">std::auto_ptr&lt; Image &gt; AutoPtr</div><div class="ttdoc">Image auto_ptr type.</div><div class="ttdef"><b>Definition:</b> image.hpp:81</div></div>
-<div class="ttc" id="aclassExiv2_1_1ImageFactory_html_aba929c4ca4a71625d12bcb97bcc28161"><div class="ttname"><a href="classExiv2_1_1ImageFactory.html#aba929c4ca4a71625d12bcb97bcc28161">Exiv2::ImageFactory::open</a></div><div class="ttdeci">static Image::AutoPtr open(const std::string &amp;path, bool useCurl=true)</div><div class="ttdoc">Create an Image subclass of the appropriate type by reading the specified file. Image type is derived...</div></div>
-<div class="ttc" id="anamespaceExiv2_html_accd3e49cafe9db52c1e0e6f648753cae"><div class="ttname"><a href="namespaceExiv2.html#accd3e49cafe9db52c1e0e6f648753cae">Exiv2::Error</a></div><div class="ttdeci">BasicError&lt; char &gt; Error</div><div class="ttdoc">Error class used for exceptions (std::string based)</div><div class="ttdef"><b>Definition:</b> error.hpp:324</div></div>
+<div class="ttc" id="aclassExiv2_1_1ExifData_html_a0627816364585c0579cba89e6e287d74"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a0627816364585c0579cba89e6e287d74">Exiv2::ExifData::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdoc">Return true if there is no Exif metadata.</div><div class="ttdef"><b>Definition:</b> exif.hpp:459</div></div>
+<div class="ttc" id="astructExiv2_1_1DataBuf_html"><div class="ttname"><a href="structExiv2_1_1DataBuf.html">Exiv2::DataBuf</a></div><div class="ttdoc">Utility class containing a character array. All it does is to take care of memory allocation and dele...</div><div class="ttdef"><b>Definition:</b> types.hpp:124</div></div>
+<div class="ttc" id="astructExiv2_1_1DataBuf_html_a7c1b19cb75dbed462d1d40e878128a49"><div class="ttname"><a href="structExiv2_1_1DataBuf.html#a7c1b19cb75dbed462d1d40e878128a49">Exiv2::DataBuf::c_data</a></div><div class="ttdeci">const byte * c_data(size_t offset=0) const</div><div class="ttdoc">Returns a (read-only) data pointer.</div></div>
 <div class="ttc" id="aclassExiv2_1_1ExifData_html_a96c38cbd300ebdfa05f849864b380690"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a96c38cbd300ebdfa05f849864b380690">Exiv2::ExifData::findKey</a></div><div class="ttdeci">iterator findKey(const ExifKey &amp;key)</div><div class="ttdoc">Find the first Exifdatum with the given key, return an iterator to it.</div></div>
-<div class="ttc" id="aclassExiv2_1_1FileIo_html_a1a576f408124d428d5c446a19e2a504d"><div class="ttname"><a href="classExiv2_1_1FileIo.html#a1a576f408124d428d5c446a19e2a504d">Exiv2::FileIo::write</a></div><div class="ttdeci">virtual long write(const byte *data, long wcount)</div><div class="ttdoc">Write data to the file. The file position is advanced by the number of bytes written.</div></div>
-<div class="ttc" id="aclassExiv2_1_1FileIo_html_a1793ddca7f8c94619ceae7a127da73c2"><div class="ttname"><a href="classExiv2_1_1FileIo.html#a1793ddca7f8c94619ceae7a127da73c2">Exiv2::FileIo::open</a></div><div class="ttdeci">int open(const std::string &amp;mode)</div><div class="ttdoc">Open the file using using the specified mode.</div></div>
-<div class="ttc" id="aclassExiv2_1_1ExifData_html"><div class="ttname"><a href="classExiv2_1_1ExifData.html">Exiv2::ExifData</a></div><div class="ttdoc">A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...</div><div class="ttdef"><b>Definition:</b> exif.hpp:434</div></div>
+<div class="ttc" id="aclassExiv2_1_1FileIo_html_a1793ddca7f8c94619ceae7a127da73c2"><div class="ttname"><a href="classExiv2_1_1FileIo.html#a1793ddca7f8c94619ceae7a127da73c2">Exiv2::FileIo::open</a></div><div class="ttdeci">int open(const std::string &amp;mode)</div><div class="ttdoc">Open the file using the specified mode.</div></div>
+<div class="ttc" id="aclassExiv2_1_1ExifData_html"><div class="ttname"><a href="classExiv2_1_1ExifData.html">Exiv2::ExifData</a></div><div class="ttdoc">A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...</div><div class="ttdef"><b>Definition:</b> exif.hpp:373</div></div>
 </div><!-- /.container -->
 <div id="footer">
   <footer>
@@ -190,12 +164,12 @@
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

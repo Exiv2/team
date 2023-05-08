@@ -106,10 +106,10 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ac1ee044e04366db5028c3baa02c511be"><td class="memItemLeft" align="right" valign="top"><a id="ac1ee044e04366db5028c3baa02c511be"></a>
-typedef std::map&lt; std::string, <a class="el" href="structExiv2_1_1XmpNsInfo.html">XmpNsInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#ac1ee044e04366db5028c3baa02c511be">NsRegistry</a></td></tr>
-<tr class="memdesc:ac1ee044e04366db5028c3baa02c511be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for the namespace registry. <br /></td></tr>
-<tr class="separator:ac1ee044e04366db5028c3baa02c511be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ac3798936ae19b74ee1b0d590289c86"><td class="memItemLeft" align="right" valign="top"><a id="a0ac3798936ae19b74ee1b0d590289c86"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a0ac3798936ae19b74ee1b0d590289c86">NsRegistry</a> = std::map&lt; std::string, <a class="el" href="structExiv2_1_1XmpNsInfo.html">XmpNsInfo</a> &gt;</td></tr>
+<tr class="memdesc:a0ac3798936ae19b74ee1b0d590289c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for the namespace registry. <br /></td></tr>
+<tr class="separator:a0ac3798936ae19b74ee1b0d590289c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -162,18 +162,17 @@ static const <a class="el" href="structExiv2_1_1XmpNsInfo.html">XmpNsInfo</a> *&
 <tr class="memdesc:a899a34dc5d27750e7e6ece0a249d1bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the registered namespace for a specific <em>prefix</em> from the registry. <br /></td></tr>
 <tr class="separator:a899a34dc5d27750e7e6ece0a249d1bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafb4d492218c9e87292f3d7cf7a21d65"><td class="memItemLeft" align="right" valign="top"><a id="aafb4d492218c9e87292f3d7cf7a21d65"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#aafb4d492218c9e87292f3d7cf7a21d65">registeredNamespaces</a> (<a class="el" href="namespaceExiv2.html#afae71d05c1e275acf159c2b9324974e3">Exiv2::Dictionary</a> &amp;nsDict)</td></tr>
-<tr class="memdesc:aafb4d492218c9e87292f3d7cf7a21d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all registered namespaces (for both <a class="el" href="namespaceExiv2.html" title="Provides classes and functions to encode and decode Exif and Iptc data. The libexiv2 API consists of ...">Exiv2</a> and XMPsdk) <br /></td></tr>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#aafb4d492218c9e87292f3d7cf7a21d65">registeredNamespaces</a> (<a class="el" href="namespaceExiv2.html#a1c929732f9b6c9e653bba3455deff622">Exiv2::Dictionary</a> &amp;nsDict)</td></tr>
+<tr class="memdesc:aafb4d492218c9e87292f3d7cf7a21d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all registered namespaces (for both <a class="el" href="namespaceExiv2.html" title="Class CrwImage to access Canon CRW images.  References:  The Canon RAW (CRW) File Format by Phil Harv...">Exiv2</a> and XMPsdk) <br /></td></tr>
 <tr class="separator:aafb4d492218c9e87292f3d7cf7a21d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a8d2f58b458b547e3467483885fa7248b"><td class="memItemLeft" align="right" valign="top"><a id="a8d2f58b458b547e3467483885fa7248b"></a>
-static <a class="el" href="classExiv2_1_1RWLock.html">Exiv2::RWLock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a8d2f58b458b547e3467483885fa7248b">rwLock_</a></td></tr>
-<tr class="memdesc:a8d2f58b458b547e3467483885fa7248b"><td class="mdescLeft">&#160;</td><td class="mdescRight">lock to be used while modifying properties <br /></td></tr>
-<tr class="separator:a8d2f58b458b547e3467483885fa7248b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37201e8e5230b1879dd50eab159fb886"><td class="memItemLeft" align="right" valign="top">static std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a37201e8e5230b1879dd50eab159fb886">mutex_</a></td></tr>
+<tr class="memdesc:a37201e8e5230b1879dd50eab159fb886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock to be used while modifying properties.  <a href="classExiv2_1_1XmpProperties.html#a37201e8e5230b1879dd50eab159fb886">More...</a><br /></td></tr>
+<tr class="separator:a37201e8e5230b1879dd50eab159fb886"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5184fa01ff867af9a3d65848b95b1994"><td class="memItemLeft" align="right" valign="top"><a id="a5184fa01ff867af9a3d65848b95b1994"></a>
-static <a class="el" href="classExiv2_1_1XmpProperties.html#ac1ee044e04366db5028c3baa02c511be">NsRegistry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a5184fa01ff867af9a3d65848b95b1994">nsRegistry_</a></td></tr>
+static <a class="el" href="classExiv2_1_1XmpProperties.html#a0ac3798936ae19b74ee1b0d590289c86">NsRegistry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpProperties.html#a5184fa01ff867af9a3d65848b95b1994">nsRegistry_</a></td></tr>
 <tr class="memdesc:a5184fa01ff867af9a3d65848b95b1994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace registry. <br /></td></tr>
 <tr class="separator:a5184fa01ff867af9a3d65848b95b1994"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -214,7 +213,7 @@ static <a class="el" href="classExiv2_1_1XmpProperties.html#ac1ee044e04366db5028
 <dl class="section return"><dt>Returns</dt><dd>The namespace name </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">Error</td><td>if no namespace is registered with <em>prefix</em>. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classExiv2_1_1Error.html" title="Simple error class used for exceptions. An output operator is provided to print errors to a stream.">Error</a></td><td>if no namespace is registered with <em>prefix</em>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -255,7 +254,7 @@ static <a class="el" href="classExiv2_1_1XmpProperties.html#ac1ee044e04366db5028
 <dl class="section return"><dt>Returns</dt><dd>The namespace description </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">Error</td><td>if no namespace is registered with <em>prefix</em>. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classExiv2_1_1Error.html" title="Simple error class used for exceptions. An output operator is provided to print errors to a stream.">Error</a></td><td>if no namespace is registered with <em>prefix</em>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -296,7 +295,7 @@ static <a class="el" href="classExiv2_1_1XmpProperties.html#ac1ee044e04366db5028
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the related information </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">Error</td><td>if no namespace is registered with <em>prefix</em>. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classExiv2_1_1Error.html" title="Simple error class used for exceptions. An output operator is provided to print errors to a stream.">Error</a></td><td>if no namespace is registered with <em>prefix</em>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -443,7 +442,7 @@ static <a class="el" href="classExiv2_1_1XmpProperties.html#ac1ee044e04366db5028
 <dl class="section return"><dt>Returns</dt><dd>Pointer to the built-in properties for prefix, may be 0 if none is configured in the namespace info. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">Error</td><td>if no namespace is registered with <em>prefix</em>. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classExiv2_1_1Error.html" title="Simple error class used for exceptions. An output operator is provided to print errors to a stream.">Error</a></td><td>if no namespace is registered with <em>prefix</em>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -621,6 +620,32 @@ static <a class="el" href="classExiv2_1_1XmpProperties.html#ac1ee044e04366db5028
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a37201e8e5230b1879dd50eab159fb886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37201e8e5230b1879dd50eab159fb886">&#9670;&nbsp;</a></span>mutex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex Exiv2::XmpProperties::mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lock to be used while modifying properties. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>For a proper read-write lock, this shall be improved by a <em>std::shared_timed_mutex</em> (once C++14 is allowed) or <em>std::shared_mutex</em> (once C++17 is allowed). The read-access locks shall be updated to <em>std::shared_lock</em> then. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>properties.hpp</li>
 </ul>
@@ -632,12 +657,12 @@ static <a class="el" href="classExiv2_1_1XmpProperties.html#ac1ee044e04366db5028
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

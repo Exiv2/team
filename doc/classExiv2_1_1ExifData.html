@@ -104,14 +104,14 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a02e2a2acb4cfeb0f7755c1a45f94106f"><td class="memItemLeft" align="right" valign="top"><a id="a02e2a2acb4cfeb0f7755c1a45f94106f"></a>
-typedef ExifMetadata::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a02e2a2acb4cfeb0f7755c1a45f94106f">iterator</a></td></tr>
-<tr class="memdesc:a02e2a2acb4cfeb0f7755c1a45f94106f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ExifMetadata iterator type. <br /></td></tr>
-<tr class="separator:a02e2a2acb4cfeb0f7755c1a45f94106f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b8ac7a474d6527c0f3f6a0a9cebef77"><td class="memItemLeft" align="right" valign="top"><a id="a2b8ac7a474d6527c0f3f6a0a9cebef77"></a>
-typedef ExifMetadata::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a2b8ac7a474d6527c0f3f6a0a9cebef77">const_iterator</a></td></tr>
-<tr class="memdesc:a2b8ac7a474d6527c0f3f6a0a9cebef77"><td class="mdescLeft">&#160;</td><td class="mdescRight">ExifMetadata const iterator type. <br /></td></tr>
-<tr class="separator:a2b8ac7a474d6527c0f3f6a0a9cebef77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26efd2fdbd838d5b0621797e25f6caef"><td class="memItemLeft" align="right" valign="top"><a id="a26efd2fdbd838d5b0621797e25f6caef"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a26efd2fdbd838d5b0621797e25f6caef">iterator</a> = ExifMetadata::iterator</td></tr>
+<tr class="memdesc:a26efd2fdbd838d5b0621797e25f6caef"><td class="mdescLeft">&#160;</td><td class="mdescRight">ExifMetadata iterator type. <br /></td></tr>
+<tr class="separator:a26efd2fdbd838d5b0621797e25f6caef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac51ec28f5486f43bf881c5b8fb27b6c0"><td class="memItemLeft" align="right" valign="top"><a id="ac51ec28f5486f43bf881c5b8fb27b6c0"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#ac51ec28f5486f43bf881c5b8fb27b6c0">const_iterator</a> = ExifMetadata::const_iterator</td></tr>
+<tr class="memdesc:ac51ec28f5486f43bf881c5b8fb27b6c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ExifMetadata const iterator type. <br /></td></tr>
+<tr class="separator:ac51ec28f5486f43bf881c5b8fb27b6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -127,11 +127,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:ad809ad2a4689a15a899d1ddba954ae2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a copy of the <em>exifdatum</em> to the Exif metadata. No duplicate checks are performed, i.e., it is possible to add multiple metadata with the same key.  <a href="classExiv2_1_1ExifData.html#ad809ad2a4689a15a899d1ddba954ae2b">More...</a><br /></td></tr>
 <tr class="separator:ad809ad2a4689a15a899d1ddba954ae2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a710a66ca8be51192c15729c541b72fb5"><td class="memItemLeft" align="right" valign="top"><a id="a710a66ca8be51192c15729c541b72fb5"></a>
-<a class="el" href="classExiv2_1_1ExifData.html#a02e2a2acb4cfeb0f7755c1a45f94106f">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a710a66ca8be51192c15729c541b72fb5">erase</a> (<a class="el" href="classExiv2_1_1ExifData.html#a02e2a2acb4cfeb0f7755c1a45f94106f">iterator</a> pos)</td></tr>
+<a class="el" href="classExiv2_1_1ExifData.html#a26efd2fdbd838d5b0621797e25f6caef">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a710a66ca8be51192c15729c541b72fb5">erase</a> (<a class="el" href="classExiv2_1_1ExifData.html#a26efd2fdbd838d5b0621797e25f6caef">iterator</a> pos)</td></tr>
 <tr class="memdesc:a710a66ca8be51192c15729c541b72fb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the <a class="el" href="classExiv2_1_1Exifdatum.html" title="An Exif metadatum, consisting of an ExifKey and a Value and methods to manipulate these.">Exifdatum</a> at iterator position <em>pos</em>, return the position of the next exifdatum. Note that iterators into the metadata, including <em>pos</em>, are potentially invalidated by this call. <br /></td></tr>
 <tr class="separator:a710a66ca8be51192c15729c541b72fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab54c698f33166689f5e40312c546ea08"><td class="memItemLeft" align="right" valign="top"><a id="ab54c698f33166689f5e40312c546ea08"></a>
-<a class="el" href="classExiv2_1_1ExifData.html#a02e2a2acb4cfeb0f7755c1a45f94106f">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#ab54c698f33166689f5e40312c546ea08">erase</a> (<a class="el" href="classExiv2_1_1ExifData.html#a02e2a2acb4cfeb0f7755c1a45f94106f">iterator</a> beg, <a class="el" href="classExiv2_1_1ExifData.html#a02e2a2acb4cfeb0f7755c1a45f94106f">iterator</a> <a class="el" href="classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe">end</a>)</td></tr>
+<a class="el" href="classExiv2_1_1ExifData.html#a26efd2fdbd838d5b0621797e25f6caef">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#ab54c698f33166689f5e40312c546ea08">erase</a> (<a class="el" href="classExiv2_1_1ExifData.html#a26efd2fdbd838d5b0621797e25f6caef">iterator</a> beg, <a class="el" href="classExiv2_1_1ExifData.html#a26efd2fdbd838d5b0621797e25f6caef">iterator</a> <a class="el" href="classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe">end</a>)</td></tr>
 <tr class="memdesc:ab54c698f33166689f5e40312c546ea08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all elements of the range <em>beg</em>, <em>end</em>, return the position of the next element. Note that iterators into the metadata are potentially invalidated by this call. <br /></td></tr>
 <tr class="separator:ab54c698f33166689f5e40312c546ea08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d8ccafb025f9d5800686903b6250f2b"><td class="memItemLeft" align="right" valign="top"><a id="a1d8ccafb025f9d5800686903b6250f2b"></a>
@@ -147,40 +147,40 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a1495692d4d076247380549214cbf0cc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort metadata by tag. <br /></td></tr>
 <tr class="separator:a1495692d4d076247380549214cbf0cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53bce2980ee060fc2da5fe6751f51db9"><td class="memItemLeft" align="right" valign="top"><a id="a53bce2980ee060fc2da5fe6751f51db9"></a>
-<a class="el" href="classExiv2_1_1ExifData.html#a02e2a2acb4cfeb0f7755c1a45f94106f">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a53bce2980ee060fc2da5fe6751f51db9">begin</a> ()</td></tr>
+<a class="el" href="classExiv2_1_1ExifData.html#a26efd2fdbd838d5b0621797e25f6caef">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a53bce2980ee060fc2da5fe6751f51db9">begin</a> ()</td></tr>
 <tr class="memdesc:a53bce2980ee060fc2da5fe6751f51db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin of the metadata. <br /></td></tr>
 <tr class="separator:a53bce2980ee060fc2da5fe6751f51db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c15177b03489e3d4bb81e9acc1165fe"><td class="memItemLeft" align="right" valign="top"><a id="a9c15177b03489e3d4bb81e9acc1165fe"></a>
-<a class="el" href="classExiv2_1_1ExifData.html#a02e2a2acb4cfeb0f7755c1a45f94106f">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe">end</a> ()</td></tr>
+<a class="el" href="classExiv2_1_1ExifData.html#a26efd2fdbd838d5b0621797e25f6caef">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe">end</a> ()</td></tr>
 <tr class="memdesc:a9c15177b03489e3d4bb81e9acc1165fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">End of the metadata. <br /></td></tr>
 <tr class="separator:a9c15177b03489e3d4bb81e9acc1165fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96c38cbd300ebdfa05f849864b380690"><td class="memItemLeft" align="right" valign="top"><a id="a96c38cbd300ebdfa05f849864b380690"></a>
-<a class="el" href="classExiv2_1_1ExifData.html#a02e2a2acb4cfeb0f7755c1a45f94106f">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a96c38cbd300ebdfa05f849864b380690">findKey</a> (const <a class="el" href="classExiv2_1_1ExifKey.html">ExifKey</a> &amp;key)</td></tr>
+<a class="el" href="classExiv2_1_1ExifData.html#a26efd2fdbd838d5b0621797e25f6caef">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a96c38cbd300ebdfa05f849864b380690">findKey</a> (const <a class="el" href="classExiv2_1_1ExifKey.html">ExifKey</a> &amp;key)</td></tr>
 <tr class="memdesc:a96c38cbd300ebdfa05f849864b380690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the first <a class="el" href="classExiv2_1_1Exifdatum.html" title="An Exif metadatum, consisting of an ExifKey and a Value and methods to manipulate these.">Exifdatum</a> with the given <em>key</em>, return an iterator to it. <br /></td></tr>
 <tr class="separator:a96c38cbd300ebdfa05f849864b380690"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Accessors</h2></td></tr>
 <tr class="memitem:ae43cdc4f82d4859a34ec1c1ad80461b6"><td class="memItemLeft" align="right" valign="top"><a id="ae43cdc4f82d4859a34ec1c1ad80461b6"></a>
-<a class="el" href="classExiv2_1_1ExifData.html#a2b8ac7a474d6527c0f3f6a0a9cebef77">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#ae43cdc4f82d4859a34ec1c1ad80461b6">begin</a> () const</td></tr>
+<a class="el" href="classExiv2_1_1ExifData.html#ac51ec28f5486f43bf881c5b8fb27b6c0">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#ae43cdc4f82d4859a34ec1c1ad80461b6">begin</a> () const</td></tr>
 <tr class="memdesc:ae43cdc4f82d4859a34ec1c1ad80461b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin of the metadata. <br /></td></tr>
 <tr class="separator:ae43cdc4f82d4859a34ec1c1ad80461b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8371ca1048b380848c5cf36c71cdd386"><td class="memItemLeft" align="right" valign="top"><a id="a8371ca1048b380848c5cf36c71cdd386"></a>
-<a class="el" href="classExiv2_1_1ExifData.html#a2b8ac7a474d6527c0f3f6a0a9cebef77">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a8371ca1048b380848c5cf36c71cdd386">end</a> () const</td></tr>
+<a class="el" href="classExiv2_1_1ExifData.html#ac51ec28f5486f43bf881c5b8fb27b6c0">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a8371ca1048b380848c5cf36c71cdd386">end</a> () const</td></tr>
 <tr class="memdesc:a8371ca1048b380848c5cf36c71cdd386"><td class="mdescLeft">&#160;</td><td class="mdescRight">End of the metadata. <br /></td></tr>
 <tr class="separator:a8371ca1048b380848c5cf36c71cdd386"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50cbdbc9daabd831e873c294e6c6bc92"><td class="memItemLeft" align="right" valign="top"><a id="a50cbdbc9daabd831e873c294e6c6bc92"></a>
-<a class="el" href="classExiv2_1_1ExifData.html#a2b8ac7a474d6527c0f3f6a0a9cebef77">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a50cbdbc9daabd831e873c294e6c6bc92">findKey</a> (const <a class="el" href="classExiv2_1_1ExifKey.html">ExifKey</a> &amp;key) const</td></tr>
+<a class="el" href="classExiv2_1_1ExifData.html#ac51ec28f5486f43bf881c5b8fb27b6c0">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a50cbdbc9daabd831e873c294e6c6bc92">findKey</a> (const <a class="el" href="classExiv2_1_1ExifKey.html">ExifKey</a> &amp;key) const</td></tr>
 <tr class="memdesc:a50cbdbc9daabd831e873c294e6c6bc92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the first <a class="el" href="classExiv2_1_1Exifdatum.html" title="An Exif metadatum, consisting of an ExifKey and a Value and methods to manipulate these.">Exifdatum</a> with the given <em>key</em>, return a const iterator to it. <br /></td></tr>
 <tr class="separator:a50cbdbc9daabd831e873c294e6c6bc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0627816364585c0579cba89e6e287d74"><td class="memItemLeft" align="right" valign="top"><a id="a0627816364585c0579cba89e6e287d74"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a0627816364585c0579cba89e6e287d74">empty</a> () const</td></tr>
 <tr class="memdesc:a0627816364585c0579cba89e6e287d74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if there is no Exif metadata. <br /></td></tr>
 <tr class="separator:a0627816364585c0579cba89e6e287d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4558d60feb5ecf6fa86316a0b87ce7e2"><td class="memItemLeft" align="right" valign="top"><a id="a4558d60feb5ecf6fa86316a0b87ce7e2"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a4558d60feb5ecf6fa86316a0b87ce7e2">count</a> () const</td></tr>
-<tr class="memdesc:a4558d60feb5ecf6fa86316a0b87ce7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of metadata entries. <br /></td></tr>
-<tr class="separator:a4558d60feb5ecf6fa86316a0b87ce7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0deeebcdf95fbd3c22cd24628cedd6b2"><td class="memItemLeft" align="right" valign="top"><a id="a0deeebcdf95fbd3c22cd24628cedd6b2"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifData.html#a0deeebcdf95fbd3c22cd24628cedd6b2">count</a> () const</td></tr>
+<tr class="memdesc:a0deeebcdf95fbd3c22cd24628cedd6b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of metadata entries. <br /></td></tr>
+<tr class="separator:a0deeebcdf95fbd3c22cd24628cedd6b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A container for Exif data. This is a top-level class of the Exiv2 library. The container holds <a class="el" href="classExiv2_1_1Exifdatum.html" title="An Exif metadatum, consisting of an ExifKey and a Value and methods to manipulate these.">Exifdatum</a> objects. </p>
@@ -192,7 +192,7 @@ long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <li>extract Exif metadata to files, insert from these files</li>
 <li>extract and delete Exif thumbnail (JPEG and TIFF thumbnails) </li>
 </ul>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="addmoddel_8cpp-example.html#_a2">addmoddel.cpp</a>, <a class="el" href="exifcomment_8cpp-example.html#_a3">exifcomment.cpp</a>, <a class="el" href="exifdata_8cpp-example.html#_a0">exifdata.cpp</a>, <a class="el" href="exifprint_8cpp-example.html#_a9">exifprint.cpp</a>, <a class="el" href="exifvalue_8cpp-example.html#_a3">exifvalue.cpp</a>, <a class="el" href="exiv2json_8cpp-example.html#_a28">exiv2json.cpp</a>, <a class="el" href="geotag_8cpp-example.html#_a0">geotag.cpp</a>, and <a class="el" href="mrwthumb_8cpp-example.html#_a3">mrwthumb.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="addmoddel_8cpp-example.html#_a2">addmoddel.cpp</a>, <a class="el" href="exifcomment_8cpp-example.html#_a3">exifcomment.cpp</a>, <a class="el" href="exifdata_8cpp-example.html#_a0">exifdata.cpp</a>, <a class="el" href="exifprint_8cpp-example.html#_a11">exifprint.cpp</a>, <a class="el" href="exifvalue_8cpp-example.html#_a3">exifvalue.cpp</a>, <a class="el" href="geotag_8cpp-example.html#_a1">geotag.cpp</a>, and <a class="el" href="mrwthumb_8cpp-example.html#_a3">mrwthumb.cpp</a>.</dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad809ad2a4689a15a899d1ddba954ae2b"></a>
@@ -214,7 +214,7 @@ long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Add a copy of the <em>exifdatum</em> to the Exif metadata. No duplicate checks are performed, i.e., it is possible to add multiple metadata with the same key. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">Error</td><td>if the makernote cannot be created </td></tr>
+    <tr><td class="paramname"><a class="el" href="classExiv2_1_1Error.html" title="Simple error class used for exceptions. An output operator is provided to print errors to a stream.">Error</a></td><td>if the makernote cannot be created </td></tr>
   </table>
   </dd>
 </dl>
@@ -253,12 +253,12 @@ long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

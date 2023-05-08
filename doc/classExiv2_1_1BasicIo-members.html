@@ -96,8 +96,6 @@
 
 <p>This is the complete list of members for <a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#af8f989522925b884d8c9d3a257265fa1">AutoPtr</a> typedef</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#ac726bef377a5da282b0f2cadb5b779be">BasicIo</a>()</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>beg</b> enum value (defined in <a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a>)</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a64c13339b4859aa21faf1f79415c1ec5">bigBlock_</a></td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a67ae3ca0f8aece92a7b7749dfb02edde">close</a>()=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
@@ -110,19 +108,22 @@
   <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a8728349cdeb79d569eba6fa6e26d5e74">mmap</a>(bool isWriteable=false)=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#aad39cb2b01e19b5e648988bbb239fa63">munmap</a>()=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a1beff0dcdf03510bad13b6946379c5f2">open</a>()=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a8c4af60d14039fd99d36c73ce8354c15">path</a>() const =0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a47a081ffd8f8b061abc8711f3a4d38e2">populateFakeData</a>()</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a4560939faf02a9bb1e0ebc3c05c10a63">path</a>() const noexcept=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a4b28be3e3adb7c54f0c2d85a64ad83ac">populateFakeData</a>()=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a1d23c3bf7618f2ee6ebb5cf033b10911">Position</a> enum name</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#ad16a1fab0f122c8ca11b86d09b03b9a7">putb</a>(byte data)=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a8c9e6c7377b642afbb2c14a0e3896917">read</a>(long rcount)=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#aec8cb20c86e72b87577370a28d66a0ca">read</a>(byte *buf, long rcount)=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a561221bbe1d215b4d6b5ceceaa2e9a97">seek</a>(long offset, Position pos)=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#ac026d7ba65e30b1ff0a9e3b76d65eb20">read</a>(size_t rcount)=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#af34a341bf53dbb37da54f44b1975549e">read</a>(byte *buf, size_t rcount)=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a887a037955d932b370ed69b872d7f08b">readOrThrow</a>(byte *buf, size_t rcount, ErrorCode err=ErrorCode::kerCorruptedMetadata)</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a97800e07edbc07cd216d9f5a8f280958">seek</a>(int64_t offset, Position pos)=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#afb48a5cb26592ab3643a5c9c71a9e222">seekOrThrow</a>(int64_t offset, Position pos, ErrorCode err)</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a5e1bfc89b8c336c1a96bcaff9c5f4723">size</a>() const =0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#aeb9673a48a7af7376b7018998fb552e6">tell</a>() const =0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a74d7321a48778a0f8c8231e66f5c584a">tell</a>() const =0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#acb964ff603c96da8711baddb66a385a4">transfer</a>(BasicIo &amp;src)=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#ac548d52ef633ac425bd01d17ccd2e7e4">write</a>(const byte *data, long wcount)=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a31334606e230bbe94d6b8768d3c6d75f">write</a>(BasicIo &amp;src)=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a0c6658dc8caea27ac88def52ce0789bd">~BasicIo</a>()</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#ab316d94d3dedf2a569af5c6b7a2496c8">UniquePtr</a> typedef</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a0767a42aa8f38a34428288338cadb343">write</a>(const byte *data, size_t wcount)=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#ab06092a8ab262208acb540b23d7b814e">write</a>(BasicIo &amp;src)=0</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html#a785e9303a21bebcee19d20195ca6eda2">~BasicIo</a>()=default</td><td class="entry"><a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- /.container -->
 <div id="footer">
@@ -131,12 +132,12 @@
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

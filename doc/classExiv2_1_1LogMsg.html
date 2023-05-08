@@ -91,6 +91,7 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classExiv2_1_1LogMsg-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Exiv2::LogMsg Class Reference</div>  </div>
@@ -115,13 +116,21 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:af72a9026cffe2536ae475e1c31e7ff70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defined log levels. To suppress all log messages, either set the log level to <code>mute</code> or set the log message handler to 0. <br /></td></tr>
 <tr class="separator:af72a9026cffe2536ae475e1c31e7ff70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7058654225955500dc09e31d0834aed1"><td class="memItemLeft" align="right" valign="top"><a id="a7058654225955500dc09e31d0834aed1"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#a7058654225955500dc09e31d0834aed1">Handler</a>) (int, const char *)</td></tr>
-<tr class="memdesc:a7058654225955500dc09e31d0834aed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for a log message handler function. The function receives the log level and message and can process it in an application specific way. The default handler sends the log message to standard error. <br /></td></tr>
-<tr class="separator:a7058654225955500dc09e31d0834aed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d2134f2050d0827f141528b4edc1c5e"><td class="memItemLeft" align="right" valign="top"><a id="a0d2134f2050d0827f141528b4edc1c5e"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#a0d2134f2050d0827f141528b4edc1c5e">Handler</a> = void(*)(int, const char *)</td></tr>
+<tr class="memdesc:a0d2134f2050d0827f141528b4edc1c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for a log message handler function. The function receives the log level and message and can process it in an application specific way. The default handler sends the log message to standard error. <br /></td></tr>
+<tr class="separator:a0d2134f2050d0827f141528b4edc1c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a54629d4766f6bdf60d69ea62103c747c"><td class="memItemLeft" align="right" valign="top"><a id="a54629d4766f6bdf60d69ea62103c747c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#a54629d4766f6bdf60d69ea62103c747c">LogMsg</a> (const <a class="el" href="classExiv2_1_1LogMsg.html">LogMsg</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a54629d4766f6bdf60d69ea62103c747c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent copy-construction: not implemented. <br /></td></tr>
+<tr class="separator:a54629d4766f6bdf60d69ea62103c747c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaef4ba469240dba19d146ba1d0df21c"><td class="memItemLeft" align="right" valign="top"><a id="aeaef4ba469240dba19d146ba1d0df21c"></a>
+<a class="el" href="classExiv2_1_1LogMsg.html">LogMsg</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#aeaef4ba469240dba19d146ba1d0df21c">operator=</a> (const <a class="el" href="classExiv2_1_1LogMsg.html">LogMsg</a> &amp;)=delete</td></tr>
+<tr class="memdesc:aeaef4ba469240dba19d146ba1d0df21c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent assignment: not implemented. <br /></td></tr>
+<tr class="separator:aeaef4ba469240dba19d146ba1d0df21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Creators</div></td></tr>
 <tr class="memitem:aef46b169c328eecf0b83886ef8b9ea9f"><td class="memItemLeft" align="right" valign="top"><a id="aef46b169c328eecf0b83886ef8b9ea9f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#aef46b169c328eecf0b83886ef8b9ea9f">LogMsg</a> (<a class="el" href="classExiv2_1_1LogMsg.html#af72a9026cffe2536ae475e1c31e7ff70">Level</a> msgType)</td></tr>
@@ -143,7 +152,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memdesc:a3d044a62ace539813d255283a4c41782"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log level. Only log messages with a level greater or equal <em>level</em> are sent to the log message handler. Default log level is <code>warn</code>. To suppress all log messages, set the log level to <code>mute</code> (or set the log message handler to 0). <br /></td></tr>
 <tr class="separator:a3d044a62ace539813d255283a4c41782"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a782d9c817b49f3b503c5a85f418319be"><td class="memItemLeft" align="right" valign="top"><a id="a782d9c817b49f3b503c5a85f418319be"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#a782d9c817b49f3b503c5a85f418319be">setHandler</a> (<a class="el" href="classExiv2_1_1LogMsg.html#a7058654225955500dc09e31d0834aed1">Handler</a> <a class="el" href="classExiv2_1_1LogMsg.html#abe4cfbb3b6aaff49f4b793f2711adaa9">handler</a>)</td></tr>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#a782d9c817b49f3b503c5a85f418319be">setHandler</a> (<a class="el" href="classExiv2_1_1LogMsg.html#a0d2134f2050d0827f141528b4edc1c5e">Handler</a> <a class="el" href="classExiv2_1_1LogMsg.html#abe4cfbb3b6aaff49f4b793f2711adaa9">handler</a>)</td></tr>
 <tr class="memdesc:a782d9c817b49f3b503c5a85f418319be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the log message handler. The default handler writes log messages to standard error. To suppress all log messages, set the log message handler to 0 (or set the log level to <code>mute</code>). <br /></td></tr>
 <tr class="separator:a782d9c817b49f3b503c5a85f418319be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2bf90efb62ec69439f6c71ca1498cc1"><td class="memItemLeft" align="right" valign="top"><a id="ac2bf90efb62ec69439f6c71ca1498cc1"></a>
@@ -151,7 +160,7 @@ static <a class="el" href="classExiv2_1_1LogMsg.html#af72a9026cffe2536ae475e1c31
 <tr class="memdesc:ac2bf90efb62ec69439f6c71ca1498cc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current log level. <br /></td></tr>
 <tr class="separator:ac2bf90efb62ec69439f6c71ca1498cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe4cfbb3b6aaff49f4b793f2711adaa9"><td class="memItemLeft" align="right" valign="top"><a id="abe4cfbb3b6aaff49f4b793f2711adaa9"></a>
-static <a class="el" href="classExiv2_1_1LogMsg.html#a7058654225955500dc09e31d0834aed1">Handler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#abe4cfbb3b6aaff49f4b793f2711adaa9">handler</a> ()</td></tr>
+static <a class="el" href="classExiv2_1_1LogMsg.html#a0d2134f2050d0827f141528b4edc1c5e">Handler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html#abe4cfbb3b6aaff49f4b793f2711adaa9">handler</a> ()</td></tr>
 <tr class="memdesc:abe4cfbb3b6aaff49f4b793f2711adaa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current log message handler. <br /></td></tr>
 <tr class="separator:abe4cfbb3b6aaff49f4b793f2711adaa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1f066bf7afb1b36a77cb08434f36962"><td class="memItemLeft" align="right" valign="top"><a id="aa1f066bf7afb1b36a77cb08434f36962"></a>
@@ -178,12 +187,12 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

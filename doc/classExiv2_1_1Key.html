@@ -115,19 +115,27 @@ Inheritance diagram for Exiv2::Key:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a9bf9953294ceb8d272908a0680aeade8"><td class="memItemLeft" align="right" valign="top"><a id="a9bf9953294ceb8d272908a0680aeade8"></a>
-typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1Key.html">Key</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Key.html#a9bf9953294ceb8d272908a0680aeade8">AutoPtr</a></td></tr>
-<tr class="memdesc:a9bf9953294ceb8d272908a0680aeade8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for a Key auto pointer. <br /></td></tr>
-<tr class="separator:a9bf9953294ceb8d272908a0680aeade8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e48eb475c6e29d8274559f2fc13faf1"><td class="memItemLeft" align="right" valign="top"><a id="a4e48eb475c6e29d8274559f2fc13faf1"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Key.html#a4e48eb475c6e29d8274559f2fc13faf1">UniquePtr</a> = std::unique_ptr&lt; <a class="el" href="classExiv2_1_1Key.html">Key</a> &gt;</td></tr>
+<tr class="memdesc:a4e48eb475c6e29d8274559f2fc13faf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shortcut for a Key auto pointer. <br /></td></tr>
+<tr class="separator:a4e48eb475c6e29d8274559f2fc13faf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Creators</div></td></tr>
-<tr class="memitem:a85cc8a8e0770fef573df402f56f1049c"><td class="memItemLeft" align="right" valign="top"><a id="a85cc8a8e0770fef573df402f56f1049c"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Key.html#a85cc8a8e0770fef573df402f56f1049c">~Key</a> ()</td></tr>
-<tr class="memdesc:a85cc8a8e0770fef573df402f56f1049c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
-<tr class="separator:a85cc8a8e0770fef573df402f56f1049c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Accessors</div></td></tr>
+<tr class="memitem:adaeb260410df1017cde117534dc3dd90"><td class="memItemLeft" align="right" valign="top"><a id="adaeb260410df1017cde117534dc3dd90"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Key.html#adaeb260410df1017cde117534dc3dd90">~Key</a> ()=default</td></tr>
+<tr class="memdesc:adaeb260410df1017cde117534dc3dd90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:adaeb260410df1017cde117534dc3dd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f6f0e45b237b93e5c8ce3458eef688"><td class="memItemLeft" align="right" valign="top"><a id="ac2f6f0e45b237b93e5c8ce3458eef688"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Key</b> (<a class="el" href="classExiv2_1_1Key.html">Key</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:ac2f6f0e45b237b93e5c8ce3458eef688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb7ce0bbb36f4a4a0d751ffe085d2c9"><td class="memItemLeft" align="right" valign="top"><a id="afcb7ce0bbb36f4a4a0d751ffe085d2c9"></a>
+<a class="el" href="classExiv2_1_1Key.html">Key</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classExiv2_1_1Key.html">Key</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:afcb7ce0bbb36f4a4a0d751ffe085d2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Accessors</h2></td></tr>
 <tr class="memitem:a272fe50e38e5af51bc3fa54e32cd7931"><td class="memItemLeft" align="right" valign="top"><a id="a272fe50e38e5af51bc3fa54e32cd7931"></a>
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Key.html#a272fe50e38e5af51bc3fa54e32cd7931">key</a> () const =0</td></tr>
 <tr class="memdesc:a272fe50e38e5af51bc3fa54e32cd7931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the key of the metadatum as a string. The key is of the form 'familyName.groupName.tagName'. Note however that the key is not necessarily unique, e.g., an <a class="el" href="classExiv2_1_1ExifData.html" title="A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...">ExifData</a> may contain multiple metadata with the same key. <br /></td></tr>
@@ -148,25 +156,35 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Key.html#a3593df05b735beb63ec263ee00f37e37">tagLabel</a> () const =0</td></tr>
 <tr class="memdesc:a3593df05b735beb63ec263ee00f37e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a label for the tag. <br /></td></tr>
 <tr class="separator:a3593df05b735beb63ec263ee00f37e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a8bc0d39587fb758a256d4074b5faa"><td class="memItemLeft" align="right" valign="top"><a id="a41a8bc0d39587fb758a256d4074b5faa"></a>
+virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Key.html#a41a8bc0d39587fb758a256d4074b5faa">tagDesc</a> () const =0</td></tr>
+<tr class="memdesc:a41a8bc0d39587fb758a256d4074b5faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a description for the tag. <br /></td></tr>
+<tr class="separator:a41a8bc0d39587fb758a256d4074b5faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a04f9c117d0373661b982ac63a9ce84"><td class="memItemLeft" align="right" valign="top"><a id="a7a04f9c117d0373661b982ac63a9ce84"></a>
 virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Key.html#a7a04f9c117d0373661b982ac63a9ce84">tag</a> () const =0</td></tr>
 <tr class="memdesc:a7a04f9c117d0373661b982ac63a9ce84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the tag number. <br /></td></tr>
 <tr class="separator:a7a04f9c117d0373661b982ac63a9ce84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7b0bfb4b86006287434bc45051e6a0f"><td class="memItemLeft" align="right" valign="top"><a id="ae7b0bfb4b86006287434bc45051e6a0f"></a>
-<a class="el" href="classExiv2_1_1Key.html#a9bf9953294ceb8d272908a0680aeade8">AutoPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Key.html#ae7b0bfb4b86006287434bc45051e6a0f">clone</a> () const</td></tr>
-<tr class="memdesc:ae7b0bfb4b86006287434bc45051e6a0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an auto-pointer to a copy of itself (deep copy). The caller owns this copy and the auto-pointer ensures that it will be deleted. <br /></td></tr>
-<tr class="separator:ae7b0bfb4b86006287434bc45051e6a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81dd44b5619065eb593f76f8b26aedfd"><td class="memItemLeft" align="right" valign="top"><a id="a81dd44b5619065eb593f76f8b26aedfd"></a>
+<a class="el" href="classExiv2_1_1Key.html#a4e48eb475c6e29d8274559f2fc13faf1">UniquePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Key.html#a81dd44b5619065eb593f76f8b26aedfd">clone</a> () const</td></tr>
+<tr class="memdesc:a81dd44b5619065eb593f76f8b26aedfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an auto-pointer to a copy of itself (deep copy). The caller owns this copy and the auto-pointer ensures that it will be deleted. <br /></td></tr>
+<tr class="separator:a81dd44b5619065eb593f76f8b26aedfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fb7e2a4559a4dffbb30afdab5844b5b"><td class="memItemLeft" align="right" valign="top"><a id="a2fb7e2a4559a4dffbb30afdab5844b5b"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Key.html#a2fb7e2a4559a4dffbb30afdab5844b5b">write</a> (std::ostream &amp;os) const</td></tr>
 <tr class="memdesc:a2fb7e2a4559a4dffbb30afdab5844b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the key to an output stream. You do not usually have to use this function; it is used for the implementation of the output operator for Key, <a class="el" href="namespaceExiv2.html#aa225826fb028de2941da4230b51dfb95" title="Output operator for Key types.">operator&lt;&lt;(std::ostream &amp;os, const Key &amp;key)</a>. <br /></td></tr>
 <tr class="separator:a2fb7e2a4559a4dffbb30afdab5844b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bdd3e8fa507cb9d700f27685a4d1f71"><td class="memItemLeft" align="right" valign="top"><a id="a3bdd3e8fa507cb9d700f27685a4d1f71"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Key</b> ()=default</td></tr>
+<tr class="separator:a3bdd3e8fa507cb9d700f27685a4d1f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a397544a60ff3e9c64638e2eac8557008"><td class="memItemLeft" align="right" valign="top"><a id="a397544a60ff3e9c64638e2eac8557008"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Key</b> (const <a class="el" href="classExiv2_1_1Key.html">Key</a> &amp;)=default</td></tr>
+<tr class="separator:a397544a60ff3e9c64638e2eac8557008"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Manipulators</h2></td></tr>
-<tr class="memitem:a4e33d283e9e6a8384d8aa79c1848a45f"><td class="memItemLeft" align="right" valign="top"><a id="a4e33d283e9e6a8384d8aa79c1848a45f"></a>
-<a class="el" href="classExiv2_1_1Key.html">Key</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Key.html#a4e33d283e9e6a8384d8aa79c1848a45f">operator=</a> (const <a class="el" href="classExiv2_1_1Key.html">Key</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a4e33d283e9e6a8384d8aa79c1848a45f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator. Protected so that it can only be used by subclasses but not directly. <br /></td></tr>
-<tr class="separator:a4e33d283e9e6a8384d8aa79c1848a45f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59fc202d1acaaa709ed7aaedf5cf6f7a"><td class="memItemLeft" align="right" valign="top"><a id="a59fc202d1acaaa709ed7aaedf5cf6f7a"></a>
+<a class="el" href="classExiv2_1_1Key.html">Key</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Key.html#a59fc202d1acaaa709ed7aaedf5cf6f7a">operator=</a> (const <a class="el" href="classExiv2_1_1Key.html">Key</a> &amp;)=default</td></tr>
+<tr class="memdesc:a59fc202d1acaaa709ed7aaedf5cf6f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator. Protected so that it can only be used by subclasses but not directly. <br /></td></tr>
+<tr class="separator:a59fc202d1acaaa709ed7aaedf5cf6f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract base class defining the Key of a metadatum. Keys are used to identify and group metadata. </p>
@@ -181,12 +199,12 @@ Manipulators</h2></td></tr>
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

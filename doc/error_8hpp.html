@@ -93,7 +93,6 @@
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -104,8 +103,9 @@
 <p>Error class for exceptions, log message class.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;exiv2lib_export.h&quot;</code><br />
-<code>#include &quot;types.hpp&quot;</code><br />
+<code>#include &quot;config.h&quot;</code><br />
 <code>#include &lt;exception&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -113,50 +113,38 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1LogMsg.html">Exiv2::LogMsg</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for a log message, used by the library. Applications can set the log level and provide a customer log message handler (callback function).  <a href="classExiv2_1_1LogMsg.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1AnyError.html">Exiv2::AnyError</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error class interface. Allows the definition and use of a hierarchy of error classes which can all be handled in one catch block. Inherits from the standard exception base-class, to make life easier for library users (they have the option of catching most things via std::exception).  <a href="classExiv2_1_1AnyError.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicError.html">Exiv2::BasicError&lt; charT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple error class used for exceptions. An output operator is provided to print errors to a stream.  <a href="classExiv2_1_1BasicError.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Error.html">Exiv2::Error</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple error class used for exceptions. An output operator is provided to print errors to a stream.  <a href="classExiv2_1_1Error.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceExiv2"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExiv2.html">Exiv2</a></td></tr>
-<tr class="memdesc:namespaceExiv2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides classes and functions to encode and decode Exif and Iptc data. The <b>libexiv2</b> API consists of the objects of this namespace. <br /></td></tr>
+<tr class="memdesc:namespaceExiv2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class <a class="el" href="classExiv2_1_1CrwImage.html" title="Class to access raw Canon CRW images. Only Exif metadata and a comment are supported....">CrwImage</a> to access Canon CRW images.<br  />
+ References:<br  />
+ <a href="http://www.sno.phy.queensu.ca/~phil/exiftool/canon_raw.html">The Canon RAW (CRW) File Format</a> by Phil Harvey. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a824e555382302a4e54e1a0d0ad97279d"><td class="memItemLeft" align="right" valign="top"><a id="a824e555382302a4e54e1a0d0ad97279d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8hpp.html#a824e555382302a4e54e1a0d0ad97279d">EXV_DEBUG</a>&#160;&#160;&#160;if (LogMsg::debug &gt;= LogMsg::level() &amp;&amp; LogMsg::handler()) LogMsg(LogMsg::debug).os()</td></tr>
-<tr class="memdesc:a824e555382302a4e54e1a0d0ad97279d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand to create a temp debug log message object and return its ostringstream. <br /></td></tr>
+<tr class="memitem:a824e555382302a4e54e1a0d0ad97279d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8hpp.html#a824e555382302a4e54e1a0d0ad97279d">EXV_DEBUG</a></td></tr>
+<tr class="memdesc:a824e555382302a4e54e1a0d0ad97279d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand to create a temp debug log message object and return its ostringstream.  <a href="error_8hpp.html#a824e555382302a4e54e1a0d0ad97279d">More...</a><br /></td></tr>
 <tr class="separator:a824e555382302a4e54e1a0d0ad97279d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a877bab177c7381b262585d6cf5f58224"><td class="memItemLeft" align="right" valign="top"><a id="a877bab177c7381b262585d6cf5f58224"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8hpp.html#a877bab177c7381b262585d6cf5f58224">EXV_INFO</a>&#160;&#160;&#160;if (LogMsg::info  &gt;= LogMsg::level() &amp;&amp; LogMsg::handler()) LogMsg(LogMsg::info).os()</td></tr>
-<tr class="memdesc:a877bab177c7381b262585d6cf5f58224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for a temp info log message object and return its ostringstream. <br /></td></tr>
+<tr class="memitem:a877bab177c7381b262585d6cf5f58224"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8hpp.html#a877bab177c7381b262585d6cf5f58224">EXV_INFO</a></td></tr>
+<tr class="memdesc:a877bab177c7381b262585d6cf5f58224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for a temp info log message object and return its ostringstream.  <a href="error_8hpp.html#a877bab177c7381b262585d6cf5f58224">More...</a><br /></td></tr>
 <tr class="separator:a877bab177c7381b262585d6cf5f58224"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06ee301360765662f07d822ea005647e"><td class="memItemLeft" align="right" valign="top"><a id="a06ee301360765662f07d822ea005647e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8hpp.html#a06ee301360765662f07d822ea005647e">EXV_WARNING</a>&#160;&#160;&#160;if (LogMsg::warn  &gt;= LogMsg::level() &amp;&amp; LogMsg::handler()) LogMsg(LogMsg::warn).os()</td></tr>
-<tr class="memdesc:a06ee301360765662f07d822ea005647e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for a temp warning log message object and return its ostringstream. <br /></td></tr>
+<tr class="memitem:a06ee301360765662f07d822ea005647e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8hpp.html#a06ee301360765662f07d822ea005647e">EXV_WARNING</a></td></tr>
+<tr class="memdesc:a06ee301360765662f07d822ea005647e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for a temp warning log message object and return its ostringstream.  <a href="error_8hpp.html#a06ee301360765662f07d822ea005647e">More...</a><br /></td></tr>
 <tr class="separator:a06ee301360765662f07d822ea005647e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b67d3a20351fe4c1da14ca3f2c6f704"><td class="memItemLeft" align="right" valign="top"><a id="a3b67d3a20351fe4c1da14ca3f2c6f704"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8hpp.html#a3b67d3a20351fe4c1da14ca3f2c6f704">EXV_ERROR</a>&#160;&#160;&#160;if (LogMsg::error &gt;= LogMsg::level() &amp;&amp; LogMsg::handler()) LogMsg(LogMsg::error).os()</td></tr>
-<tr class="memdesc:a3b67d3a20351fe4c1da14ca3f2c6f704"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for a temp error log message object and return its ostringstream. <br /></td></tr>
+<tr class="memitem:a3b67d3a20351fe4c1da14ca3f2c6f704"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="error_8hpp.html#a3b67d3a20351fe4c1da14ca3f2c6f704">EXV_ERROR</a></td></tr>
+<tr class="memdesc:a3b67d3a20351fe4c1da14ca3f2c6f704"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for a temp error log message object and return its ostringstream.  <a href="error_8hpp.html#a3b67d3a20351fe4c1da14ca3f2c6f704">More...</a><br /></td></tr>
 <tr class="separator:a3b67d3a20351fe4c1da14ca3f2c6f704"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:accd3e49cafe9db52c1e0e6f648753cae"><td class="memItemLeft" align="right" valign="top"><a id="accd3e49cafe9db52c1e0e6f648753cae"></a>
-typedef BasicError&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExiv2.html#accd3e49cafe9db52c1e0e6f648753cae">Exiv2::Error</a></td></tr>
-<tr class="memdesc:accd3e49cafe9db52c1e0e6f648753cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error class used for exceptions (std::string based) <br /></td></tr>
-<tr class="separator:accd3e49cafe9db52c1e0e6f648753cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a2f8222633119f427c209fe2ae0bc340b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExiv2.html#a2f8222633119f427c209fe2ae0bc340b">Exiv2::ErrorCode</a> { <br />
-&#160;&#160;<b>kerGeneralError</b> = -1, 
-<b>kerSuccess</b> = 0, 
+<tr class="memitem:a2f8222633119f427c209fe2ae0bc340b"><td class="memItemLeft" align="right" valign="top"><a id="a2f8222633119f427c209fe2ae0bc340b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExiv2.html#a2f8222633119f427c209fe2ae0bc340b">Exiv2::ErrorCode</a> { <br />
+&#160;&#160;<b>kerSuccess</b> = 0, 
+<b>kerGeneralError</b>, 
 <b>kerErrorMessage</b>, 
 <b>kerCallFailed</b>, 
 <br />
@@ -186,8 +174,8 @@ Enumerations</h2></td></tr>
 <b>kerNoImageInInputData</b>, 
 <br />
 &#160;&#160;<b>kerInvalidIfdId</b>, 
-<a class="el" href="namespaceExiv2.html#a2f8222633119f427c209fe2ae0bc340ba5d37fc6fe341311a3cc5d752fd222fec">Exiv2::kerValueTooLarge</a>, 
-<a class="el" href="namespaceExiv2.html#a2f8222633119f427c209fe2ae0bc340bace2b02c4983f44c3584b85de7a861c1c">Exiv2::kerDataAreaValueTooLarge</a>, 
+<b>kerValueTooLarge</b>, 
+<b>kerDataAreaValueTooLarge</b>, 
 <b>kerOffsetOutOfRange</b>, 
 <br />
 &#160;&#160;<b>kerUnsupportedDataAreaOffsetType</b>, 
@@ -232,10 +220,13 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<b>kerCorruptedMetadata</b>, 
 <b>kerArithmeticOverflow</b>, 
-<b>kerMallocFailed</b>
+<b>kerMallocFailed</b>, 
+<b>kerInvalidIconvEncoding</b>, 
+<br />
+&#160;&#160;<b>kerErrorCount</b>
 <br />
  }</td></tr>
-<tr class="memdesc:a2f8222633119f427c209fe2ae0bc340b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complete list of all <a class="el" href="namespaceExiv2.html" title="Provides classes and functions to encode and decode Exif and Iptc data. The libexiv2 API consists of ...">Exiv2</a> error codes.  <a href="namespaceExiv2.html#a2f8222633119f427c209fe2ae0bc340b">More...</a><br /></td></tr>
+<tr class="memdesc:a2f8222633119f427c209fe2ae0bc340b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Complete list of all <a class="el" href="namespaceExiv2.html" title="Class CrwImage to access Canon CRW images.  References:  The Canon RAW (CRW) File Format by Phil Harv...">Exiv2</a> error codes. <br /></td></tr>
 <tr class="separator:a2f8222633119f427c209fe2ae0bc340b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -245,21 +236,90 @@ template&lt;typename charT , typename T &gt; </td></tr>
 <tr class="memitem:a5b5e630a62be27d591d7d6a11464983b"><td class="memTemplItemLeft" align="right" valign="top">std::basic_string&lt; charT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceExiv2.html#a5b5e630a62be27d591d7d6a11464983b">Exiv2::toBasicString</a> (const T &amp;arg)</td></tr>
 <tr class="memdesc:a5b5e630a62be27d591d7d6a11464983b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generalised toString function. <br /></td></tr>
 <tr class="separator:a5b5e630a62be27d591d7d6a11464983b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a984441dbc42706388541913499c48384"><td class="memItemLeft" align="right" valign="top"><a id="a984441dbc42706388541913499c48384"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExiv2.html#a984441dbc42706388541913499c48384">Exiv2::operator&lt;&lt;</a> (std::ostream &amp;os, const AnyError &amp;error)</td></tr>
-<tr class="memdesc:a984441dbc42706388541913499c48384"><td class="mdescLeft">&#160;</td><td class="mdescRight">AnyError output operator <br /></td></tr>
-<tr class="separator:a984441dbc42706388541913499c48384"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cfd003e271344e4574c570c10d33aaa"><td class="memItemLeft" align="right" valign="top"><a id="a3cfd003e271344e4574c570c10d33aaa"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExiv2.html#a3cfd003e271344e4574c570c10d33aaa">Exiv2::errMsg</a> (int code)</td></tr>
-<tr class="memdesc:a3cfd003e271344e4574c570c10d33aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the error message for the error with code <em>code</em>. <br /></td></tr>
-<tr class="separator:a3cfd003e271344e4574c570c10d33aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b04c76622ddd3609a9c32b0e048bc93"><td class="memItemLeft" align="right" valign="top"><a id="a9b04c76622ddd3609a9c32b0e048bc93"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExiv2.html#a9b04c76622ddd3609a9c32b0e048bc93">Exiv2::operator&lt;&lt;</a> (std::ostream &amp;os, const Error &amp;error)</td></tr>
+<tr class="memdesc:a9b04c76622ddd3609a9c32b0e048bc93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error output operator <br /></td></tr>
+<tr class="separator:a9b04c76622ddd3609a9c32b0e048bc93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Error class for exceptions, log message class. </p>
 <dl class="section author"><dt>Author</dt><dd>Andreas Huggel (ahu) <a href="#" onclick="location.href='mai'+'lto:'+'ahu'+'gg'+'el@'+'gm'+'x.n'+'et'; return false;">ahuggel@gmx.net</a> </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>15-Jan-04, ahu: created<br  />
  11-Feb-04, ahu: isolated as a component </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a824e555382302a4e54e1a0d0ad97279d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a824e555382302a4e54e1a0d0ad97279d">&#9670;&nbsp;</a></span>EXV_DEBUG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXV_DEBUG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (LogMsg::debug &gt;= LogMsg::level() &amp;&amp; LogMsg::handler()) \</div>
+<div class="line">  LogMsg(LogMsg::debug).os()</div>
+</div><!-- fragment -->
+<p>Shorthand to create a temp debug log message object and return its ostringstream. </p>
+
+</div>
+</div>
+<a id="a3b67d3a20351fe4c1da14ca3f2c6f704"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b67d3a20351fe4c1da14ca3f2c6f704">&#9670;&nbsp;</a></span>EXV_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXV_ERROR</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (LogMsg::error &gt;= LogMsg::level() &amp;&amp; LogMsg::handler()) \</div>
+<div class="line">  LogMsg(LogMsg::error).os()</div>
+</div><!-- fragment -->
+<p>Shorthand for a temp error log message object and return its ostringstream. </p>
+
+</div>
+</div>
+<a id="a877bab177c7381b262585d6cf5f58224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a877bab177c7381b262585d6cf5f58224">&#9670;&nbsp;</a></span>EXV_INFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXV_INFO</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (LogMsg::info &gt;= LogMsg::level() &amp;&amp; LogMsg::handler()) \</div>
+<div class="line">  LogMsg(LogMsg::info).os()</div>
+</div><!-- fragment -->
+<p>Shorthand for a temp info log message object and return its ostringstream. </p>
+
+</div>
+</div>
+<a id="a06ee301360765662f07d822ea005647e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ee301360765662f07d822ea005647e">&#9670;&nbsp;</a></span>EXV_WARNING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EXV_WARNING</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (LogMsg::warn &gt;= LogMsg::level() &amp;&amp; LogMsg::handler()) \</div>
+<div class="line">  LogMsg(LogMsg::warn).os()</div>
+</div><!-- fragment -->
+<p>Shorthand for a temp warning log message object and return its ostringstream. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- /.container -->
 <div id="footer">
   <footer>
@@ -267,12 +327,12 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

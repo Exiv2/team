@@ -119,9 +119,9 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ae372d5a006f3fc79ffae5a324c38330d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options to control the format of the serialized XMP packet.  <a href="classExiv2_1_1XmpParser.html#ae372d5a006f3fc79ffae5a324c38330d">More...</a><br /></td></tr>
 <tr class="separator:ae372d5a006f3fc79ffae5a324c38330d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6d0864f7237d99a1227b4b73cbaed91"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpParser.html#af6d0864f7237d99a1227b4b73cbaed91">XmpLockFct</a>) (void *pLockData, bool lockUnlock)</td></tr>
-<tr class="memdesc:af6d0864f7237d99a1227b4b73cbaed91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock/unlock function type.  <a href="classExiv2_1_1XmpParser.html#af6d0864f7237d99a1227b4b73cbaed91">More...</a><br /></td></tr>
-<tr class="separator:af6d0864f7237d99a1227b4b73cbaed91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a107c19e5d94912982b1fc05a3a3b33a8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpParser.html#a107c19e5d94912982b1fc05a3a3b33a8">XmpLockFct</a> = void(*)(void *pLockData, bool lockUnlock)</td></tr>
+<tr class="memdesc:a107c19e5d94912982b1fc05a3a3b33a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock/unlock function type.  <a href="classExiv2_1_1XmpParser.html#a107c19e5d94912982b1fc05a3a3b33a8">More...</a><br /></td></tr>
+<tr class="separator:a107c19e5d94912982b1fc05a3a3b33a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -131,9 +131,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:afad88c80404f9f35b687b33fe9ea9c63"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpParser.html#afad88c80404f9f35b687b33fe9ea9c63">encode</a> (std::string &amp;xmpPacket, const <a class="el" href="classExiv2_1_1XmpData.html">XmpData</a> &amp;xmpData, uint16_t formatFlags=<a class="el" href="classExiv2_1_1XmpParser.html#ae372d5a006f3fc79ffae5a324c38330dad1d601f10197dfbb8d3c3ed6a340f9ff">useCompactFormat</a>, uint32_t padding=0)</td></tr>
 <tr class="memdesc:afad88c80404f9f35b687b33fe9ea9c63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encode (serialize) XMP metadata from <em>xmpData</em> into a string xmpPacket. The XMP packet returned in the string follows the XMP specification. This method only modifies <em>xmpPacket</em> if the operations succeeds (return code 0).  <a href="classExiv2_1_1XmpParser.html#afad88c80404f9f35b687b33fe9ea9c63">More...</a><br /></td></tr>
 <tr class="separator:afad88c80404f9f35b687b33fe9ea9c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea661a7039adb5a748eb7639c8ce9294"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpParser.html#aea661a7039adb5a748eb7639c8ce9294">initialize</a> (<a class="el" href="classExiv2_1_1XmpParser.html#af6d0864f7237d99a1227b4b73cbaed91">XmpParser::XmpLockFct</a> xmpLockFct=0, void *pLockData=0)</td></tr>
-<tr class="memdesc:aea661a7039adb5a748eb7639c8ce9294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the XMP Toolkit.  <a href="classExiv2_1_1XmpParser.html#aea661a7039adb5a748eb7639c8ce9294">More...</a><br /></td></tr>
-<tr class="separator:aea661a7039adb5a748eb7639c8ce9294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe08760a1a594e66566cb59a0f87d36e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpParser.html#afe08760a1a594e66566cb59a0f87d36e">initialize</a> (<a class="el" href="classExiv2_1_1XmpParser.html#a107c19e5d94912982b1fc05a3a3b33a8">XmpParser::XmpLockFct</a> xmpLockFct=nullptr, void *pLockData=nullptr)</td></tr>
+<tr class="memdesc:afe08760a1a594e66566cb59a0f87d36e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the XMP Toolkit.  <a href="classExiv2_1_1XmpParser.html#afe08760a1a594e66566cb59a0f87d36e">More...</a><br /></td></tr>
+<tr class="separator:afe08760a1a594e66566cb59a0f87d36e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46ff7c85b860ef81310e0ac8dd6b62a2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2">terminate</a> ()</td></tr>
 <tr class="memdesc:a46ff7c85b860ef81310e0ac8dd6b62a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate the XMP Toolkit and unregister custom namespaces.  <a href="classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2">More...</a><br /></td></tr>
 <tr class="separator:a46ff7c85b860ef81310e0ac8dd6b62a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,23 +147,23 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>XmpProperties</b></t
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Stateless parser class for XMP packets. Images use this class to parse and serialize XMP packets. The parser uses the XMP toolkit to do the job. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="af6d0864f7237d99a1227b4b73cbaed91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6d0864f7237d99a1227b4b73cbaed91">&#9670;&nbsp;</a></span>XmpLockFct</h2>
+<a id="a107c19e5d94912982b1fc05a3a3b33a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a107c19e5d94912982b1fc05a3a3b33a8">&#9670;&nbsp;</a></span>XmpLockFct</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* Exiv2::XmpParser::XmpLockFct) (void *pLockData, bool lockUnlock)</td>
+          <td class="memname">using <a class="el" href="classExiv2_1_1XmpParser.html#a107c19e5d94912982b1fc05a3a3b33a8">Exiv2::XmpParser::XmpLockFct</a> =  void (*)(void* pLockData, bool lockUnlock)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Lock/unlock function type. </p>
-<p>A function of this type can be passed to <a class="el" href="classExiv2_1_1XmpParser.html#aea661a7039adb5a748eb7639c8ce9294" title="Initialize the XMP Toolkit.">initialize()</a> to make subsequent registration of XMP namespaces thread-safe. See the <a class="el" href="classExiv2_1_1XmpParser.html#aea661a7039adb5a748eb7639c8ce9294" title="Initialize the XMP Toolkit.">initialize()</a> function for more information.</p>
+<p>A function of this type can be passed to <a class="el" href="classExiv2_1_1XmpParser.html#afe08760a1a594e66566cb59a0f87d36e" title="Initialize the XMP Toolkit.">initialize()</a> to make subsequent registration of XMP namespaces thread-safe. See the <a class="el" href="classExiv2_1_1XmpParser.html#afe08760a1a594e66566cb59a0f87d36e" title="Initialize the XMP Toolkit.">initialize()</a> function for more information.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pLockData</td><td>Pointer to the pLockData passed to <a class="el" href="classExiv2_1_1XmpParser.html#aea661a7039adb5a748eb7639c8ce9294" title="Initialize the XMP Toolkit.">initialize()</a> </td></tr>
+    <tr><td class="paramname">pLockData</td><td>Pointer to the pLockData passed to <a class="el" href="classExiv2_1_1XmpParser.html#afe08760a1a594e66566cb59a0f87d36e" title="Initialize the XMP Toolkit.">initialize()</a> </td></tr>
     <tr><td class="paramname">lockUnlock</td><td>Indicates whether to lock (true) or unlock (false) </td></tr>
   </table>
   </dd>
@@ -316,13 +316,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>XmpProperties</b></t
  1 if XMP support has not been compiled-in;<br  />
  2 if the XMP toolkit failed to initialize;<br  />
  3 if the XMP toolkit failed and raised an XMP_Error </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="xmpsample_8cpp-example.html#a23">xmpsample.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="xmpsample_8cpp-example.html#a22">xmpsample.cpp</a>.</dd>
 </dl>
 
 </div>
 </div>
-<a id="aea661a7039adb5a748eb7639c8ce9294"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea661a7039adb5a748eb7639c8ce9294">&#9670;&nbsp;</a></span>initialize()</h2>
+<a id="afe08760a1a594e66566cb59a0f87d36e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe08760a1a594e66566cb59a0f87d36e">&#9670;&nbsp;</a></span>initialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,14 +333,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>XmpProperties</b></t
         <tr>
           <td class="memname">static bool Exiv2::XmpParser::initialize </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classExiv2_1_1XmpParser.html#af6d0864f7237d99a1227b4b73cbaed91">XmpParser::XmpLockFct</a>&#160;</td>
-          <td class="paramname"><em>xmpLockFct</em> = <code>0</code>, </td>
+          <td class="paramtype"><a class="el" href="classExiv2_1_1XmpParser.html#a107c19e5d94912982b1fc05a3a3b33a8">XmpParser::XmpLockFct</a>&#160;</td>
+          <td class="paramname"><em>xmpLockFct</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>pLockData</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>pLockData</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -358,7 +358,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>XmpProperties</b></t
 <p>Initialize the XMP Toolkit. </p>
 <p>Calling this method is usually not needed, as <a class="el" href="classExiv2_1_1XmpParser.html#afad88c80404f9f35b687b33fe9ea9c63" title="Encode (serialize) XMP metadata from xmpData into a string xmpPacket. The XMP packet returned in the ...">encode()</a> and <a class="el" href="classExiv2_1_1XmpParser.html#ac54d21020cdcd70145fdb256a6b75a1d" title="Decode XMP metadata from an XMP packet xmpPacket into xmpData. The format of the XMP packet must foll...">decode()</a> will initialize the XMP Toolkit if necessary.</p>
 <p>The function takes optional pointers to a callback function <em>xmpLockFct</em> and related data <em>pLockData</em> that the parser uses when XMP namespaces are subsequently registered.</p>
-<p>The <a class="el" href="classExiv2_1_1XmpParser.html#aea661a7039adb5a748eb7639c8ce9294" title="Initialize the XMP Toolkit.">initialize()</a> function itself still is not thread-safe and needs to be called in a thread-safe manner (e.g., on program startup), but if used with suitable additional locking parameters, any subsequent registration of namespaces will be thread-safe.</p>
+<p>The <a class="el" href="classExiv2_1_1XmpParser.html#afe08760a1a594e66566cb59a0f87d36e" title="Initialize the XMP Toolkit.">initialize()</a> function itself still is not thread-safe and needs to be called in a thread-safe manner (e.g., on program startup), but if used with suitable additional locking parameters, any subsequent registration of namespaces will be thread-safe.</p>
 <p>Example usage on Windows using a critical section:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> main()</div>
 <div class="line">{</div>
@@ -381,14 +381,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>XmpProperties</b></t
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Pass the locking mechanism to the XMP parser on initialization.</span></div>
 <div class="line">    <span class="comment">// Note however that this call itself is still not thread-safe.</span></div>
-<div class="line">    <a class="code" href="classExiv2_1_1XmpParser.html#aea661a7039adb5a748eb7639c8ce9294">Exiv2::XmpParser::initialize</a>(XmpLock::LockUnlock, &amp;xmpLock);</div>
+<div class="line">    <a class="code" href="classExiv2_1_1XmpParser.html#afe08760a1a594e66566cb59a0f87d36e">Exiv2::XmpParser::initialize</a>(XmpLock::LockUnlock, &amp;xmpLock);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Program continues here, subsequent registrations of XMP</span></div>
 <div class="line">    <span class="comment">// namespaces are serialized using xmpLock.</span></div>
 <div class="line"> </div>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>True if the initialization was successful, else false. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="addmoddel_8cpp-example.html#a0">addmoddel.cpp</a>, <a class="el" href="exifcomment_8cpp-example.html#a0">exifcomment.cpp</a>, <a class="el" href="exifdata_8cpp-example.html#a3">exifdata.cpp</a>, <a class="el" href="exifprint_8cpp-example.html#a0">exifprint.cpp</a>, <a class="el" href="exifvalue_8cpp-example.html#a0">exifvalue.cpp</a>, <a class="el" href="exiv2json_8cpp-example.html#a25">exiv2json.cpp</a>, <a class="el" href="geotag_8cpp-example.html#a2">geotag.cpp</a>, <a class="el" href="iptceasy_8cpp-example.html#a0">iptceasy.cpp</a>, <a class="el" href="iptcprint_8cpp-example.html#a0">iptcprint.cpp</a>, <a class="el" href="metacopy_8cpp-example.html#a0">metacopy.cpp</a>, <a class="el" href="mrwthumb_8cpp-example.html#a0">mrwthumb.cpp</a>, <a class="el" href="xmpparse_8cpp-example.html#a0">xmpparse.cpp</a>, <a class="el" href="xmpprint_8cpp-example.html#a0">xmpprint.cpp</a>, and <a class="el" href="xmpsample_8cpp-example.html#a0">xmpsample.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="addmoddel_8cpp-example.html#a0">addmoddel.cpp</a>, <a class="el" href="exifcomment_8cpp-example.html#a0">exifcomment.cpp</a>, <a class="el" href="exifdata_8cpp-example.html#a3">exifdata.cpp</a>, <a class="el" href="exifprint_8cpp-example.html#a2">exifprint.cpp</a>, <a class="el" href="exifvalue_8cpp-example.html#a0">exifvalue.cpp</a>, <a class="el" href="geotag_8cpp-example.html#a4">geotag.cpp</a>, <a class="el" href="iptceasy_8cpp-example.html#a0">iptceasy.cpp</a>, <a class="el" href="iptcprint_8cpp-example.html#a0">iptcprint.cpp</a>, <a class="el" href="metacopy_8cpp-example.html#a0">metacopy.cpp</a>, <a class="el" href="mrwthumb_8cpp-example.html#a0">mrwthumb.cpp</a>, <a class="el" href="xmpparse_8cpp-example.html#a0">xmpparse.cpp</a>, <a class="el" href="xmpprint_8cpp-example.html#a0">xmpprint.cpp</a>, and <a class="el" href="xmpsample_8cpp-example.html#a0">xmpsample.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -418,7 +418,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>XmpProperties</b></t
 
 <p>Terminate the XMP Toolkit and unregister custom namespaces. </p>
 <p>Call this method when the <a class="el" href="classExiv2_1_1XmpParser.html" title="Stateless parser class for XMP packets. Images use this class to parse and serialize XMP packets....">XmpParser</a> is no longer needed to allow the XMP Toolkit to cleanly shutdown. </p>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="addmoddel_8cpp-example.html#a1">addmoddel.cpp</a>, <a class="el" href="exifcomment_8cpp-example.html#a1">exifcomment.cpp</a>, <a class="el" href="exifdata_8cpp-example.html#a4">exifdata.cpp</a>, <a class="el" href="exifprint_8cpp-example.html#a1">exifprint.cpp</a>, <a class="el" href="exifvalue_8cpp-example.html#a1">exifvalue.cpp</a>, <a class="el" href="exiv2json_8cpp-example.html#a26">exiv2json.cpp</a>, <a class="el" href="geotag_8cpp-example.html#a3">geotag.cpp</a>, <a class="el" href="iptceasy_8cpp-example.html#a1">iptceasy.cpp</a>, <a class="el" href="iptcprint_8cpp-example.html#a1">iptcprint.cpp</a>, <a class="el" href="metacopy_8cpp-example.html#a1">metacopy.cpp</a>, <a class="el" href="mrwthumb_8cpp-example.html#a1">mrwthumb.cpp</a>, <a class="el" href="xmpparse_8cpp-example.html#a1">xmpparse.cpp</a>, <a class="el" href="xmpprint_8cpp-example.html#a1">xmpprint.cpp</a>, and <a class="el" href="xmpsample_8cpp-example.html#a1">xmpsample.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="addmoddel_8cpp-example.html#a1">addmoddel.cpp</a>, <a class="el" href="exifcomment_8cpp-example.html#a1">exifcomment.cpp</a>, <a class="el" href="exifdata_8cpp-example.html#a4">exifdata.cpp</a>, <a class="el" href="exifprint_8cpp-example.html#a3">exifprint.cpp</a>, <a class="el" href="exifvalue_8cpp-example.html#a1">exifvalue.cpp</a>, <a class="el" href="geotag_8cpp-example.html#a5">geotag.cpp</a>, <a class="el" href="iptceasy_8cpp-example.html#a1">iptceasy.cpp</a>, <a class="el" href="iptcprint_8cpp-example.html#a1">iptcprint.cpp</a>, <a class="el" href="metacopy_8cpp-example.html#a1">metacopy.cpp</a>, <a class="el" href="mrwthumb_8cpp-example.html#a1">mrwthumb.cpp</a>, <a class="el" href="xmpparse_8cpp-example.html#a1">xmpparse.cpp</a>, <a class="el" href="xmpprint_8cpp-example.html#a1">xmpprint.cpp</a>, and <a class="el" href="xmpsample_8cpp-example.html#a1">xmpsample.cpp</a>.</dd>
 </dl>
 
 </div>
@@ -427,7 +427,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>XmpProperties</b></t
 <li>xmp_exiv2.hpp</li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclassExiv2_1_1XmpParser_html_aea661a7039adb5a748eb7639c8ce9294"><div class="ttname"><a href="classExiv2_1_1XmpParser.html#aea661a7039adb5a748eb7639c8ce9294">Exiv2::XmpParser::initialize</a></div><div class="ttdeci">static bool initialize(XmpParser::XmpLockFct xmpLockFct=0, void *pLockData=0)</div><div class="ttdoc">Initialize the XMP Toolkit.</div></div>
+<div class="ttc" id="aclassExiv2_1_1XmpParser_html_afe08760a1a594e66566cb59a0f87d36e"><div class="ttname"><a href="classExiv2_1_1XmpParser.html#afe08760a1a594e66566cb59a0f87d36e">Exiv2::XmpParser::initialize</a></div><div class="ttdeci">static bool initialize(XmpParser::XmpLockFct xmpLockFct=nullptr, void *pLockData=nullptr)</div><div class="ttdoc">Initialize the XMP Toolkit.</div></div>
 </div><!-- /.container -->
 <div id="footer">
   <footer>
@@ -435,12 +435,12 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>XmpProperties</b></t
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

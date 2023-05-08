@@ -98,64 +98,58 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Helper class, has methods to deal with Photoshop "Information
-       Resource Blocks" (IRBs).  
+<p>Helper class, has methods to deal with Photoshop "Information Resource Blocks" (IRBs).  
  <a href="structExiv2_1_1Photoshop.html#details">More...</a></p>
 
-<p><code>#include &lt;jpgimage.hpp&gt;</code></p>
+<p><code>#include &lt;photoshop.hpp&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a08d90032f3383eec96ccfd1bc51befac"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a08d90032f3383eec96ccfd1bc51befac">isIrb</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *pPsData, long sizePsData)</td></tr>
-<tr class="memdesc:a08d90032f3383eec96ccfd1bc51befac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks an IRB.  <a href="structExiv2_1_1Photoshop.html#a08d90032f3383eec96ccfd1bc51befac">More...</a><br /></td></tr>
-<tr class="separator:a08d90032f3383eec96ccfd1bc51befac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeec6159fa0a531def64fef55ac8dbc6d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#aeec6159fa0a531def64fef55ac8dbc6d">valid</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *pPsData, long sizePsData)</td></tr>
-<tr class="memdesc:aeec6159fa0a531def64fef55ac8dbc6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates all IRBs.  <a href="structExiv2_1_1Photoshop.html#aeec6159fa0a531def64fef55ac8dbc6d">More...</a><br /></td></tr>
-<tr class="separator:aeec6159fa0a531def64fef55ac8dbc6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4f7ba385f695ca7f3534ab4643ad5a6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#ae4f7ba385f695ca7f3534ab4643ad5a6">locateIrb</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *pPsData, long sizePsData, uint16_t psTag, const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> **record, uint32_t *const sizeHdr, uint32_t *const sizeData)</td></tr>
-<tr class="memdesc:ae4f7ba385f695ca7f3534ab4643ad5a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locates the data for a Photoshop tag in a Photoshop formated memory buffer. Operates on raw data to simplify reuse.  <a href="structExiv2_1_1Photoshop.html#ae4f7ba385f695ca7f3534ab4643ad5a6">More...</a><br /></td></tr>
-<tr class="separator:ae4f7ba385f695ca7f3534ab4643ad5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63788220e2a8f18ae546cd84fa01908c"><td class="memItemLeft" align="right" valign="top"><a id="a63788220e2a8f18ae546cd84fa01908c"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a63788220e2a8f18ae546cd84fa01908c">locateIptcIrb</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *pPsData, long sizePsData, const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> **record, uint32_t *const sizeHdr, uint32_t *const sizeData)</td></tr>
-<tr class="memdesc:a63788220e2a8f18ae546cd84fa01908c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards to <a class="el" href="structExiv2_1_1Photoshop.html#ae4f7ba385f695ca7f3534ab4643ad5a6" title="Locates the data for a Photoshop tag in a Photoshop formated memory buffer. Operates on raw data to s...">locateIrb()</a> with <em>psTag</em> = <em>iptc_</em>. <br /></td></tr>
-<tr class="separator:a63788220e2a8f18ae546cd84fa01908c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49c0505d49340794360c46ced0ec4b68"><td class="memItemLeft" align="right" valign="top"><a id="a49c0505d49340794360c46ced0ec4b68"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a49c0505d49340794360c46ced0ec4b68">locatePreviewIrb</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *pPsData, long sizePsData, const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> **record, uint32_t *const sizeHdr, uint32_t *const sizeData)</td></tr>
-<tr class="memdesc:a49c0505d49340794360c46ced0ec4b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards to <a class="el" href="structExiv2_1_1Photoshop.html#a49c0505d49340794360c46ced0ec4b68" title="Forwards to locatePreviewIrb() with psTag = preview_.">locatePreviewIrb()</a> with <em>psTag</em> = <em>preview_</em>. <br /></td></tr>
-<tr class="separator:a49c0505d49340794360c46ced0ec4b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e0c68308b334a3adb2db245abe0e187"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a1e0c68308b334a3adb2db245abe0e187">setIptcIrb</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *pPsData, long sizePsData, const <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;iptcData)</td></tr>
-<tr class="memdesc:a1e0c68308b334a3adb2db245abe0e187"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the new IPTC IRB, keeps existing IRBs but removes the IPTC block if there is no new IPTC data to write.  <a href="structExiv2_1_1Photoshop.html#a1e0c68308b334a3adb2db245abe0e187">More...</a><br /></td></tr>
-<tr class="separator:a1e0c68308b334a3adb2db245abe0e187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44fdbcba9b5a0d36ff9b616a6ad5d2c9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a44fdbcba9b5a0d36ff9b616a6ad5d2c9">isIrb</a> (const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *pPsData)</td></tr>
+<tr class="memdesc:a44fdbcba9b5a0d36ff9b616a6ad5d2c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks an IRB.  <a href="structExiv2_1_1Photoshop.html#a44fdbcba9b5a0d36ff9b616a6ad5d2c9">More...</a><br /></td></tr>
+<tr class="separator:a44fdbcba9b5a0d36ff9b616a6ad5d2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a196fb1147353e12934f8c1318ff35a54"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a196fb1147353e12934f8c1318ff35a54">valid</a> (const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *pPsData, size_t sizePsData)</td></tr>
+<tr class="memdesc:a196fb1147353e12934f8c1318ff35a54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates all IRBs.  <a href="structExiv2_1_1Photoshop.html#a196fb1147353e12934f8c1318ff35a54">More...</a><br /></td></tr>
+<tr class="separator:a196fb1147353e12934f8c1318ff35a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb5bebaff7b142e88a69d1241b053596"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#abb5bebaff7b142e88a69d1241b053596">locateIrb</a> (const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *pPsData, size_t sizePsData, uint16_t psTag, const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> **record, uint32_t &amp;sizeHdr, uint32_t &amp;sizeData)</td></tr>
+<tr class="memdesc:abb5bebaff7b142e88a69d1241b053596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locates the data for a Photoshop tag in a Photoshop formated memory buffer. Operates on raw data to simplify reuse.  <a href="structExiv2_1_1Photoshop.html#abb5bebaff7b142e88a69d1241b053596">More...</a><br /></td></tr>
+<tr class="separator:abb5bebaff7b142e88a69d1241b053596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ffde732d175fb1614e199288e2a55b"><td class="memItemLeft" align="right" valign="top"><a id="a19ffde732d175fb1614e199288e2a55b"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a19ffde732d175fb1614e199288e2a55b">locateIptcIrb</a> (const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *pPsData, size_t sizePsData, const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> **record, uint32_t &amp;sizeHdr, uint32_t &amp;sizeData)</td></tr>
+<tr class="memdesc:a19ffde732d175fb1614e199288e2a55b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards to <a class="el" href="structExiv2_1_1Photoshop.html#abb5bebaff7b142e88a69d1241b053596" title="Locates the data for a Photoshop tag in a Photoshop formated memory buffer. Operates on raw data to s...">locateIrb()</a> with <em>psTag</em> = <em>iptc_</em>. <br /></td></tr>
+<tr class="separator:a19ffde732d175fb1614e199288e2a55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d07cdb644fdc34ffa69be27c4275918"><td class="memItemLeft" align="right" valign="top"><a id="a5d07cdb644fdc34ffa69be27c4275918"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a5d07cdb644fdc34ffa69be27c4275918">locatePreviewIrb</a> (const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *pPsData, size_t sizePsData, const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> **record, uint32_t &amp;sizeHdr, uint32_t &amp;sizeData)</td></tr>
+<tr class="memdesc:a5d07cdb644fdc34ffa69be27c4275918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards to <a class="el" href="structExiv2_1_1Photoshop.html#a5d07cdb644fdc34ffa69be27c4275918" title="Forwards to locatePreviewIrb() with psTag = preview_.">locatePreviewIrb()</a> with <em>psTag</em> = <em>preview_</em>. <br /></td></tr>
+<tr class="separator:a5d07cdb644fdc34ffa69be27c4275918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bdfed4fa161b013944b176dd50e45c0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structExiv2_1_1DataBuf.html">DataBuf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a0bdfed4fa161b013944b176dd50e45c0">setIptcIrb</a> (const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *pPsData, size_t sizePsData, const <a class="el" href="classExiv2_1_1IptcData.html">IptcData</a> &amp;iptcData)</td></tr>
+<tr class="memdesc:a0bdfed4fa161b013944b176dd50e45c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the new IPTC IRB, keeps existing IRBs but removes the IPTC block if there is no new IPTC data to write.  <a href="structExiv2_1_1Photoshop.html#a0bdfed4fa161b013944b176dd50e45c0">More...</a><br /></td></tr>
+<tr class="separator:a0bdfed4fa161b013944b176dd50e45c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a7cfeaf38d59872d02be313454a45fcff"><td class="memItemLeft" align="right" valign="top"><a id="a7cfeaf38d59872d02be313454a45fcff"></a>
-static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a7cfeaf38d59872d02be313454a45fcff">ps3Id_</a> []</td></tr>
-<tr class="memdesc:a7cfeaf38d59872d02be313454a45fcff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Photoshop marker <br /></td></tr>
-<tr class="separator:a7cfeaf38d59872d02be313454a45fcff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35e0afa169f1ec73f3609eab2b83e32e"><td class="memItemLeft" align="right" valign="top"><a id="a35e0afa169f1ec73f3609eab2b83e32e"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a35e0afa169f1ec73f3609eab2b83e32e">irbId_</a> []</td></tr>
-<tr class="memdesc:a35e0afa169f1ec73f3609eab2b83e32e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Photoshop IRB markers <br /></td></tr>
-<tr class="separator:a35e0afa169f1ec73f3609eab2b83e32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26c4018dcd65619cf55408b08a426f07"><td class="memItemLeft" align="right" valign="top"><a id="a26c4018dcd65619cf55408b08a426f07"></a>
-static const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a26c4018dcd65619cf55408b08a426f07">bimId_</a> []</td></tr>
-<tr class="memdesc:a26c4018dcd65619cf55408b08a426f07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Photoshop IRB marker (deprecated) <br /></td></tr>
-<tr class="separator:a26c4018dcd65619cf55408b08a426f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f901d93824440438f7a015cb2738bd5"><td class="memItemLeft" align="right" valign="top"><a id="a1f901d93824440438f7a015cb2738bd5"></a>
-static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a1f901d93824440438f7a015cb2738bd5">iptc_</a></td></tr>
-<tr class="memdesc:a1f901d93824440438f7a015cb2738bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Photoshop IPTC marker <br /></td></tr>
-<tr class="separator:a1f901d93824440438f7a015cb2738bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41722f55a99aaafa4cf2015068e7924c"><td class="memItemLeft" align="right" valign="top"><a id="a41722f55a99aaafa4cf2015068e7924c"></a>
-static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a41722f55a99aaafa4cf2015068e7924c">preview_</a></td></tr>
-<tr class="memdesc:a41722f55a99aaafa4cf2015068e7924c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Photoshop preview marker <br /></td></tr>
-<tr class="separator:a41722f55a99aaafa4cf2015068e7924c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af60a508464b9eecc1856a86533cffb66"><td class="memItemLeft" align="right" valign="top"><a id="af60a508464b9eecc1856a86533cffb66"></a>
+static constexpr std::array&lt; const char *, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#af60a508464b9eecc1856a86533cffb66">irbId_</a> {&quot;8BIM&quot;, &quot;AgHg&quot;, &quot;DCSR&quot;, &quot;PHUT&quot;}</td></tr>
+<tr class="memdesc:af60a508464b9eecc1856a86533cffb66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Photoshop IRB markers <br /></td></tr>
+<tr class="separator:af60a508464b9eecc1856a86533cffb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82161b1278ab89feb0ec3cfa0eaedef1"><td class="memItemLeft" align="right" valign="top"><a id="a82161b1278ab89feb0ec3cfa0eaedef1"></a>
+static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#a82161b1278ab89feb0ec3cfa0eaedef1">ps3Id_</a> = &quot;Photoshop 3.0\0&quot;</td></tr>
+<tr class="memdesc:a82161b1278ab89feb0ec3cfa0eaedef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Photoshop marker <br /></td></tr>
+<tr class="separator:a82161b1278ab89feb0ec3cfa0eaedef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e6b7b57010859ed5a411c082a4fb3e"><td class="memItemLeft" align="right" valign="top"><a id="ad9e6b7b57010859ed5a411c082a4fb3e"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#ad9e6b7b57010859ed5a411c082a4fb3e">iptc_</a> = 0x0404</td></tr>
+<tr class="memdesc:ad9e6b7b57010859ed5a411c082a4fb3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Photoshop IPTC marker <br /></td></tr>
+<tr class="separator:ad9e6b7b57010859ed5a411c082a4fb3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc127acc39977b3e4be0eeb07ca0a347"><td class="memItemLeft" align="right" valign="top"><a id="acc127acc39977b3e4be0eeb07ca0a347"></a>
+static constexpr uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Photoshop.html#acc127acc39977b3e4be0eeb07ca0a347">preview_</a> = 0x040c</td></tr>
+<tr class="memdesc:acc127acc39977b3e4be0eeb07ca0a347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Photoshop preview marker <br /></td></tr>
+<tr class="separator:acc127acc39977b3e4be0eeb07ca0a347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Helper class, has methods to deal with Photoshop "Information
-       Resource Blocks" (IRBs). </p>
+<div class="textblock"><p>Helper class, has methods to deal with Photoshop "Information Resource Blocks" (IRBs). </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a08d90032f3383eec96ccfd1bc51befac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08d90032f3383eec96ccfd1bc51befac">&#9670;&nbsp;</a></span>isIrb()</h2>
+<a id="a44fdbcba9b5a0d36ff9b616a6ad5d2c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44fdbcba9b5a0d36ff9b616a6ad5d2c9">&#9670;&nbsp;</a></span>isIrb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,19 +160,9 @@ static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a clas
         <tr>
           <td class="memname">static bool Exiv2::Photoshop::isIrb </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
-          <td class="paramname"><em>pPsData</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *&#160;</td>
+          <td class="paramname"><em>pPsData</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>sizePsData</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -191,18 +175,17 @@ static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a clas
 <p>Checks an IRB. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pPsData</td><td>Existing IRB buffer </td></tr>
-    <tr><td class="paramname">sizePsData</td><td>Size of the IRB buffer </td></tr>
+    <tr><td class="paramname">pPsData</td><td>Existing IRB buffer. It is expected to be of size 4. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the IRB marker is known and the buffer is big enough to check this;<br  />
- false otherwise </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the IRB marker is known </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>This should be an implementation detail and not exposed in the API. An attacker could try to pass a smaller buffer or null pointer. </dd></dl>
 
 </div>
 </div>
-<a id="ae4f7ba385f695ca7f3534ab4643ad5a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4f7ba385f695ca7f3534ab4643ad5a6">&#9670;&nbsp;</a></span>locateIrb()</h2>
+<a id="abb5bebaff7b142e88a69d1241b053596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb5bebaff7b142e88a69d1241b053596">&#9670;&nbsp;</a></span>locateIrb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,13 +196,13 @@ static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a clas
         <tr>
           <td class="memname">static int Exiv2::Photoshop::locateIrb </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *&#160;</td>
           <td class="paramname"><em>pPsData</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>sizePsData</em>, </td>
         </tr>
         <tr>
@@ -231,19 +214,19 @@ static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a clas
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> **&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> **&#160;</td>
           <td class="paramname"><em>record</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t *const&#160;</td>
+          <td class="paramtype">uint32_t &amp;&#160;</td>
           <td class="paramname"><em>sizeHdr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t *const&#160;</td>
+          <td class="paramtype">uint32_t &amp;&#160;</td>
           <td class="paramname"><em>sizeData</em>&#160;</td>
         </tr>
         <tr>
@@ -262,7 +245,7 @@ static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a clas
 <p>Locates the data for a Photoshop tag in a Photoshop formated memory buffer. Operates on raw data to simplify reuse. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pPsData</td><td>Pointer to buffer containing entire payload of Photoshop formated data, e.g., from APP13 Jpeg segment. </td></tr>
+    <tr><td class="paramname">pPsData</td><td>Pointer to buffer containing entire payload of Photoshop formated data (from APP13 Jpeg segment) </td></tr>
     <tr><td class="paramname">sizePsData</td><td>Size in bytes of pPsData. </td></tr>
     <tr><td class="paramname">psTag</td><td>Tag number of the block to look for. </td></tr>
     <tr><td class="paramname">record</td><td>Output value that is set to the start of the data block within pPsData (may not be null). </td></tr>
@@ -277,8 +260,8 @@ static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a clas
 
 </div>
 </div>
-<a id="a1e0c68308b334a3adb2db245abe0e187"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e0c68308b334a3adb2db245abe0e187">&#9670;&nbsp;</a></span>setIptcIrb()</h2>
+<a id="a0bdfed4fa161b013944b176dd50e45c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bdfed4fa161b013944b176dd50e45c0">&#9670;&nbsp;</a></span>setIptcIrb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,15 +270,15 @@ static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a clas
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> Exiv2::Photoshop::setIptcIrb </td>
+          <td class="memname">static <a class="el" href="structExiv2_1_1DataBuf.html">DataBuf</a> Exiv2::Photoshop::setIptcIrb </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *&#160;</td>
           <td class="paramname"><em>pPsData</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>sizePsData</em>, </td>
         </tr>
         <tr>
@@ -330,8 +313,8 @@ static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a clas
 
 </div>
 </div>
-<a id="aeec6159fa0a531def64fef55ac8dbc6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeec6159fa0a531def64fef55ac8dbc6d">&#9670;&nbsp;</a></span>valid()</h2>
+<a id="a196fb1147353e12934f8c1318ff35a54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a196fb1147353e12934f8c1318ff35a54">&#9670;&nbsp;</a></span>valid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -342,13 +325,13 @@ static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a clas
         <tr>
           <td class="memname">static bool Exiv2::Photoshop::valid </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *&#160;</td>
           <td class="paramname"><em>pPsData</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>sizePsData</em>&#160;</td>
         </tr>
         <tr>
@@ -378,7 +361,7 @@ static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a clas
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>jpgimage.hpp</li>
+<li>photoshop.hpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- /.container -->
@@ -388,12 +371,12 @@ static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a clas
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

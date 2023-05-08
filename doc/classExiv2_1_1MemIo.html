@@ -117,83 +117,97 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#ab2273b64e44e90f6cdbf785b132d9dc8">MemIo</a> ()</td></tr>
 <tr class="memdesc:ab2273b64e44e90f6cdbf785b132d9dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor that results in an empty object. <br /></td></tr>
 <tr class="separator:ab2273b64e44e90f6cdbf785b132d9dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad65869d43163ab8d38484a1d36448f3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#ad65869d43163ab8d38484a1d36448f3d">MemIo</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *data, long <a class="el" href="classExiv2_1_1MemIo.html#a16291b9cb17b10e5063d835a65e0347c">size</a>)</td></tr>
-<tr class="memdesc:ad65869d43163ab8d38484a1d36448f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that accepts a block of memory. A copy-on-write algorithm allows read operations directly from the original data and will create a copy of the buffer on the first write operation.  <a href="classExiv2_1_1MemIo.html#ad65869d43163ab8d38484a1d36448f3d">More...</a><br /></td></tr>
-<tr class="separator:ad65869d43163ab8d38484a1d36448f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59b4dd4000b308ec816baa168530f963"><td class="memItemLeft" align="right" valign="top"><a id="a59b4dd4000b308ec816baa168530f963"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a59b4dd4000b308ec816baa168530f963">~MemIo</a> ()</td></tr>
-<tr class="memdesc:a59b4dd4000b308ec816baa168530f963"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. Releases all managed memory. <br /></td></tr>
-<tr class="separator:a59b4dd4000b308ec816baa168530f963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bc407f86e90507ca0d6dbee3b063fd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a1bc407f86e90507ca0d6dbee3b063fd4">MemIo</a> (const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *data, size_t <a class="el" href="classExiv2_1_1MemIo.html#adf8d00bb725d8d701cbbb27965a6d8f3">size</a>)</td></tr>
+<tr class="memdesc:a1bc407f86e90507ca0d6dbee3b063fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that accepts a block of memory. A copy-on-write algorithm allows read operations directly from the original data and will create a copy of the buffer on the first write operation.  <a href="classExiv2_1_1MemIo.html#a1bc407f86e90507ca0d6dbee3b063fd4">More...</a><br /></td></tr>
+<tr class="separator:a1bc407f86e90507ca0d6dbee3b063fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72698ade14f6ee21cc1e0fd4dbfa1b99"><td class="memItemLeft" align="right" valign="top"><a id="a72698ade14f6ee21cc1e0fd4dbfa1b99"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a72698ade14f6ee21cc1e0fd4dbfa1b99">~MemIo</a> () override</td></tr>
+<tr class="memdesc:a72698ade14f6ee21cc1e0fd4dbfa1b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. Releases all managed memory. <br /></td></tr>
+<tr class="separator:a72698ade14f6ee21cc1e0fd4dbfa1b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Manipulators</div></td></tr>
-<tr class="memitem:acbc7726037d2eb0dbbdef649f30ebc5c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#acbc7726037d2eb0dbbdef649f30ebc5c">open</a> ()</td></tr>
-<tr class="memdesc:acbc7726037d2eb0dbbdef649f30ebc5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory IO is always open for reading and writing. This method therefore only resets the IO position to the start.  <a href="classExiv2_1_1MemIo.html#acbc7726037d2eb0dbbdef649f30ebc5c">More...</a><br /></td></tr>
-<tr class="separator:acbc7726037d2eb0dbbdef649f30ebc5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2263c6d49984da7ce38daed9f327b1e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#af2263c6d49984da7ce38daed9f327b1e">close</a> ()</td></tr>
-<tr class="memdesc:af2263c6d49984da7ce38daed9f327b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does nothing on <a class="el" href="classExiv2_1_1MemIo.html" title="Provides binary IO on blocks of memory by implementing the BasicIo interface. A copy-on-write impleme...">MemIo</a> objects.  <a href="classExiv2_1_1MemIo.html#af2263c6d49984da7ce38daed9f327b1e">More...</a><br /></td></tr>
-<tr class="separator:af2263c6d49984da7ce38daed9f327b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79993ba49c24c36b30f444c218ce4579"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a79993ba49c24c36b30f444c218ce4579">write</a> (const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *data, long wcount)</td></tr>
-<tr class="memdesc:a79993ba49c24c36b30f444c218ce4579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to the memory block. If needed, the size of the internal memory block is expanded. The IO position is advanced by the number of bytes written.  <a href="classExiv2_1_1MemIo.html#a79993ba49c24c36b30f444c218ce4579">More...</a><br /></td></tr>
-<tr class="separator:a79993ba49c24c36b30f444c218ce4579"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84c854a02e45febea5c0dfc0192e4b6e"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a84c854a02e45febea5c0dfc0192e4b6e">write</a> (<a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;src)</td></tr>
-<tr class="memdesc:a84c854a02e45febea5c0dfc0192e4b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data that is read from another <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> instance to the memory block. If needed, the size of the internal memory block is expanded. The IO position is advanced by the number of bytes written.  <a href="classExiv2_1_1MemIo.html#a84c854a02e45febea5c0dfc0192e4b6e">More...</a><br /></td></tr>
-<tr class="separator:a84c854a02e45febea5c0dfc0192e4b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5999ba245f79d581c9c5a16982d736b6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a5999ba245f79d581c9c5a16982d736b6">putb</a> (<a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> data)</td></tr>
-<tr class="memdesc:a5999ba245f79d581c9c5a16982d736b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write one byte to the memory block. The IO position is advanced by one byte.  <a href="classExiv2_1_1MemIo.html#a5999ba245f79d581c9c5a16982d736b6">More...</a><br /></td></tr>
-<tr class="separator:a5999ba245f79d581c9c5a16982d736b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d45d5be7b0e25c32d37d5055da0adc0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a3d45d5be7b0e25c32d37d5055da0adc0">read</a> (long rcount)</td></tr>
-<tr class="memdesc:a3d45d5be7b0e25c32d37d5055da0adc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from the memory block. Reading starts at the current IO position and the position is advanced by the number of bytes read.  <a href="classExiv2_1_1MemIo.html#a3d45d5be7b0e25c32d37d5055da0adc0">More...</a><br /></td></tr>
-<tr class="separator:a3d45d5be7b0e25c32d37d5055da0adc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7de679e4366d070dc6604db1d22275ce"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a7de679e4366d070dc6604db1d22275ce">read</a> (<a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *buf, long rcount)</td></tr>
-<tr class="memdesc:a7de679e4366d070dc6604db1d22275ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from the memory block. Reading starts at the current IO position and the position is advanced by the number of bytes read.  <a href="classExiv2_1_1MemIo.html#a7de679e4366d070dc6604db1d22275ce">More...</a><br /></td></tr>
-<tr class="separator:a7de679e4366d070dc6604db1d22275ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5d5467941f00e4bb47a411182955d44"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#ab5d5467941f00e4bb47a411182955d44">getb</a> ()</td></tr>
-<tr class="memdesc:ab5d5467941f00e4bb47a411182955d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read one byte from the memory block. The IO position is advanced by one byte.  <a href="classExiv2_1_1MemIo.html#ab5d5467941f00e4bb47a411182955d44">More...</a><br /></td></tr>
-<tr class="separator:ab5d5467941f00e4bb47a411182955d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a223908a596491d75cebbb7a6f9c1559f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a223908a596491d75cebbb7a6f9c1559f">transfer</a> (<a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;src)</td></tr>
-<tr class="memdesc:a223908a596491d75cebbb7a6f9c1559f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the memory block and then transfer data from the <em>src</em> <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> object into a new block of memory.  <a href="classExiv2_1_1MemIo.html#a223908a596491d75cebbb7a6f9c1559f">More...</a><br /></td></tr>
-<tr class="separator:a223908a596491d75cebbb7a6f9c1559f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4a12d5b5ed6f8447c7167942c4aa4ae"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#ab4a12d5b5ed6f8447c7167942c4aa4ae">seek</a> (long offset, <a class="el" href="classExiv2_1_1BasicIo.html#a1d23c3bf7618f2ee6ebb5cf033b10911">Position</a> pos)</td></tr>
-<tr class="memdesc:ab4a12d5b5ed6f8447c7167942c4aa4ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the current IO position.  <a href="classExiv2_1_1MemIo.html#ab4a12d5b5ed6f8447c7167942c4aa4ae">More...</a><br /></td></tr>
-<tr class="separator:ab4a12d5b5ed6f8447c7167942c4aa4ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74a800a88bdd538b66e8c59395e3bd75"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a74a800a88bdd538b66e8c59395e3bd75">mmap</a> (bool=false)</td></tr>
-<tr class="memdesc:a74a800a88bdd538b66e8c59395e3bd75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow direct access to the underlying data buffer. The buffer is not protected against write access in any way, the argument is ignored.  <a href="classExiv2_1_1MemIo.html#a74a800a88bdd538b66e8c59395e3bd75">More...</a><br /></td></tr>
-<tr class="separator:a74a800a88bdd538b66e8c59395e3bd75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace31d0ce66839a7fc4af615887c9f1ce"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#ace31d0ce66839a7fc4af615887c9f1ce">munmap</a> ()</td></tr>
-<tr class="memdesc:ace31d0ce66839a7fc4af615887c9f1ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a mapping established with <a class="el" href="classExiv2_1_1MemIo.html#a74a800a88bdd538b66e8c59395e3bd75" title="Allow direct access to the underlying data buffer. The buffer is not protected against write access i...">mmap()</a>. If the mapped area is writeable, this ensures that changes are written back.  <a href="classExiv2_1_1MemIo.html#ace31d0ce66839a7fc4af615887c9f1ce">More...</a><br /></td></tr>
-<tr class="separator:ace31d0ce66839a7fc4af615887c9f1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ad05a03274b430016fb99b273c52b2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#aa9ad05a03274b430016fb99b273c52b2">open</a> () override</td></tr>
+<tr class="memdesc:aa9ad05a03274b430016fb99b273c52b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory IO is always open for reading and writing. This method therefore only resets the IO position to the start.  <a href="classExiv2_1_1MemIo.html#aa9ad05a03274b430016fb99b273c52b2">More...</a><br /></td></tr>
+<tr class="separator:aa9ad05a03274b430016fb99b273c52b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af747eaacc652f4e32b0c120faf42b49e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#af747eaacc652f4e32b0c120faf42b49e">close</a> () override</td></tr>
+<tr class="memdesc:af747eaacc652f4e32b0c120faf42b49e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does nothing on <a class="el" href="classExiv2_1_1MemIo.html" title="Provides binary IO on blocks of memory by implementing the BasicIo interface. A copy-on-write impleme...">MemIo</a> objects.  <a href="classExiv2_1_1MemIo.html#af747eaacc652f4e32b0c120faf42b49e">More...</a><br /></td></tr>
+<tr class="separator:af747eaacc652f4e32b0c120faf42b49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c110ab9f8cd621425dd3e43e630e6e7"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a4c110ab9f8cd621425dd3e43e630e6e7">write</a> (const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *data, size_t wcount) override</td></tr>
+<tr class="memdesc:a4c110ab9f8cd621425dd3e43e630e6e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to the memory block. If needed, the size of the internal memory block is expanded. The IO position is advanced by the number of bytes written.  <a href="classExiv2_1_1MemIo.html#a4c110ab9f8cd621425dd3e43e630e6e7">More...</a><br /></td></tr>
+<tr class="separator:a4c110ab9f8cd621425dd3e43e630e6e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a441584c0c5e5eb3a26b756ccd0b75b6d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a441584c0c5e5eb3a26b756ccd0b75b6d">write</a> (<a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;src) override</td></tr>
+<tr class="memdesc:a441584c0c5e5eb3a26b756ccd0b75b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data that is read from another <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> instance to the memory block. If needed, the size of the internal memory block is expanded. The IO position is advanced by the number of bytes written.  <a href="classExiv2_1_1MemIo.html#a441584c0c5e5eb3a26b756ccd0b75b6d">More...</a><br /></td></tr>
+<tr class="separator:a441584c0c5e5eb3a26b756ccd0b75b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad13e21891ed3a87432654ba139cb1e7a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#ad13e21891ed3a87432654ba139cb1e7a">putb</a> (<a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> data) override</td></tr>
+<tr class="memdesc:ad13e21891ed3a87432654ba139cb1e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write one byte to the memory block. The IO position is advanced by one byte.  <a href="classExiv2_1_1MemIo.html#ad13e21891ed3a87432654ba139cb1e7a">More...</a><br /></td></tr>
+<tr class="separator:ad13e21891ed3a87432654ba139cb1e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0100c75183772a37a03c1ce186d722cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structExiv2_1_1DataBuf.html">DataBuf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a0100c75183772a37a03c1ce186d722cf">read</a> (size_t rcount) override</td></tr>
+<tr class="memdesc:a0100c75183772a37a03c1ce186d722cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from the memory block. Reading starts at the current IO position and the position is advanced by the number of bytes read.  <a href="classExiv2_1_1MemIo.html#a0100c75183772a37a03c1ce186d722cf">More...</a><br /></td></tr>
+<tr class="separator:a0100c75183772a37a03c1ce186d722cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30e0f465444851ee7cc0438bd21a3acf"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a30e0f465444851ee7cc0438bd21a3acf">read</a> (<a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *buf, size_t rcount) override</td></tr>
+<tr class="memdesc:a30e0f465444851ee7cc0438bd21a3acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from the memory block. Reading starts at the current IO position and the position is advanced by the number of bytes read.  <a href="classExiv2_1_1MemIo.html#a30e0f465444851ee7cc0438bd21a3acf">More...</a><br /></td></tr>
+<tr class="separator:a30e0f465444851ee7cc0438bd21a3acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2d825f42b29546562a0356c8d176f96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#ab2d825f42b29546562a0356c8d176f96">getb</a> () override</td></tr>
+<tr class="memdesc:ab2d825f42b29546562a0356c8d176f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read one byte from the memory block. The IO position is advanced by one byte.  <a href="classExiv2_1_1MemIo.html#ab2d825f42b29546562a0356c8d176f96">More...</a><br /></td></tr>
+<tr class="separator:ab2d825f42b29546562a0356c8d176f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a446454e12edd73d9d4825cb7c35e86d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a446454e12edd73d9d4825cb7c35e86d0">transfer</a> (<a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;src) override</td></tr>
+<tr class="memdesc:a446454e12edd73d9d4825cb7c35e86d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the memory block and then transfer data from the <em>src</em> <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> object into a new block of memory.  <a href="classExiv2_1_1MemIo.html#a446454e12edd73d9d4825cb7c35e86d0">More...</a><br /></td></tr>
+<tr class="separator:a446454e12edd73d9d4825cb7c35e86d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d21d0e2783483dada5ed4361fbc2947"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a6d21d0e2783483dada5ed4361fbc2947">seek</a> (int64_t offset, <a class="el" href="classExiv2_1_1BasicIo.html#a1d23c3bf7618f2ee6ebb5cf033b10911">Position</a> pos) override</td></tr>
+<tr class="memdesc:a6d21d0e2783483dada5ed4361fbc2947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the current IO position.  <a href="classExiv2_1_1MemIo.html#a6d21d0e2783483dada5ed4361fbc2947">More...</a><br /></td></tr>
+<tr class="separator:a6d21d0e2783483dada5ed4361fbc2947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7c68ab72ac862fc8ee40301c5bdd9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a8e7c68ab72ac862fc8ee40301c5bdd9d">mmap</a> (bool=false) override</td></tr>
+<tr class="memdesc:a8e7c68ab72ac862fc8ee40301c5bdd9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow direct access to the underlying data buffer. The buffer is not protected against write access in any way, the argument is ignored.  <a href="classExiv2_1_1MemIo.html#a8e7c68ab72ac862fc8ee40301c5bdd9d">More...</a><br /></td></tr>
+<tr class="separator:a8e7c68ab72ac862fc8ee40301c5bdd9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae09f4dd8bf257486ef83c422b734ba79"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#ae09f4dd8bf257486ef83c422b734ba79">munmap</a> () override</td></tr>
+<tr class="memdesc:ae09f4dd8bf257486ef83c422b734ba79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a mapping established with <a class="el" href="classExiv2_1_1MemIo.html#a8e7c68ab72ac862fc8ee40301c5bdd9d" title="Allow direct access to the underlying data buffer. The buffer is not protected against write access i...">mmap()</a>. If the mapped area is writeable, this ensures that changes are written back.  <a href="classExiv2_1_1MemIo.html#ae09f4dd8bf257486ef83c422b734ba79">More...</a><br /></td></tr>
+<tr class="separator:ae09f4dd8bf257486ef83c422b734ba79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classExiv2_1_1BasicIo"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classExiv2_1_1BasicIo')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td></tr>
-<tr class="memitem:a0c6658dc8caea27ac88def52ce0789bd inherit pub_methods_classExiv2_1_1BasicIo"><td class="memItemLeft" align="right" valign="top"><a id="a0c6658dc8caea27ac88def52ce0789bd"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicIo.html#a0c6658dc8caea27ac88def52ce0789bd">~BasicIo</a> ()</td></tr>
-<tr class="memdesc:a0c6658dc8caea27ac88def52ce0789bd inherit pub_methods_classExiv2_1_1BasicIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
-<tr class="separator:a0c6658dc8caea27ac88def52ce0789bd inherit pub_methods_classExiv2_1_1BasicIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785e9303a21bebcee19d20195ca6eda2 inherit pub_methods_classExiv2_1_1BasicIo"><td class="memItemLeft" align="right" valign="top"><a id="a785e9303a21bebcee19d20195ca6eda2"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicIo.html#a785e9303a21bebcee19d20195ca6eda2">~BasicIo</a> ()=default</td></tr>
+<tr class="memdesc:a785e9303a21bebcee19d20195ca6eda2 inherit pub_methods_classExiv2_1_1BasicIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="separator:a785e9303a21bebcee19d20195ca6eda2 inherit pub_methods_classExiv2_1_1BasicIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a887a037955d932b370ed69b872d7f08b inherit pub_methods_classExiv2_1_1BasicIo"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicIo.html#a887a037955d932b370ed69b872d7f08b">readOrThrow</a> (<a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *buf, size_t rcount, <a class="el" href="namespaceExiv2.html#a2f8222633119f427c209fe2ae0bc340b">ErrorCode</a> err=ErrorCode::kerCorruptedMetadata)</td></tr>
+<tr class="memdesc:a887a037955d932b370ed69b872d7f08b inherit pub_methods_classExiv2_1_1BasicIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe version of <code><a class="el" href="classExiv2_1_1BasicIo.html#ac026d7ba65e30b1ff0a9e3b76d65eb20" title="Read data from the IO source. Reading starts at the current IO position and the position is advanced ...">read()</a></code> that checks for errors and throws an exception if the read was unsuccessful.  <a href="classExiv2_1_1BasicIo.html#a887a037955d932b370ed69b872d7f08b">More...</a><br /></td></tr>
+<tr class="separator:a887a037955d932b370ed69b872d7f08b inherit pub_methods_classExiv2_1_1BasicIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb48a5cb26592ab3643a5c9c71a9e222 inherit pub_methods_classExiv2_1_1BasicIo"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicIo.html#afb48a5cb26592ab3643a5c9c71a9e222">seekOrThrow</a> (int64_t offset, <a class="el" href="classExiv2_1_1BasicIo.html#a1d23c3bf7618f2ee6ebb5cf033b10911">Position</a> pos, <a class="el" href="namespaceExiv2.html#a2f8222633119f427c209fe2ae0bc340b">ErrorCode</a> err)</td></tr>
+<tr class="memdesc:afb48a5cb26592ab3643a5c9c71a9e222 inherit pub_methods_classExiv2_1_1BasicIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Safe version of <code><a class="el" href="classExiv2_1_1BasicIo.html#a97800e07edbc07cd216d9f5a8f280958" title="Move the current IO position.">seek()</a></code> that checks for errors and throws an exception if the seek was unsuccessful.  <a href="classExiv2_1_1BasicIo.html#afb48a5cb26592ab3643a5c9c71a9e222">More...</a><br /></td></tr>
+<tr class="separator:afb48a5cb26592ab3643a5c9c71a9e222 inherit pub_methods_classExiv2_1_1BasicIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Accessors</h2></td></tr>
-<tr class="memitem:ab3a522e04b23cc17c2aadf126d4d222b"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#ab3a522e04b23cc17c2aadf126d4d222b">tell</a> () const</td></tr>
-<tr class="memdesc:ab3a522e04b23cc17c2aadf126d4d222b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current IO position.  <a href="classExiv2_1_1MemIo.html#ab3a522e04b23cc17c2aadf126d4d222b">More...</a><br /></td></tr>
-<tr class="separator:ab3a522e04b23cc17c2aadf126d4d222b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16291b9cb17b10e5063d835a65e0347c"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a16291b9cb17b10e5063d835a65e0347c">size</a> () const</td></tr>
-<tr class="memdesc:a16291b9cb17b10e5063d835a65e0347c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current memory buffer size in bytes.  <a href="classExiv2_1_1MemIo.html#a16291b9cb17b10e5063d835a65e0347c">More...</a><br /></td></tr>
-<tr class="separator:a16291b9cb17b10e5063d835a65e0347c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86d5e1cee9820e21dad1fa204d69d590"><td class="memItemLeft" align="right" valign="top"><a id="a86d5e1cee9820e21dad1fa204d69d590"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a86d5e1cee9820e21dad1fa204d69d590">isopen</a> () const</td></tr>
-<tr class="memdesc:a86d5e1cee9820e21dad1fa204d69d590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always returns true. <br /></td></tr>
-<tr class="separator:a86d5e1cee9820e21dad1fa204d69d590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee890e218f5a0733100c18bbe635166e"><td class="memItemLeft" align="right" valign="top"><a id="aee890e218f5a0733100c18bbe635166e"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#aee890e218f5a0733100c18bbe635166e">error</a> () const</td></tr>
-<tr class="memdesc:aee890e218f5a0733100c18bbe635166e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always returns 0. <br /></td></tr>
-<tr class="separator:aee890e218f5a0733100c18bbe635166e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60b88f009c60c330f3d368b6d9c0f5b3"><td class="memItemLeft" align="right" valign="top"><a id="a60b88f009c60c330f3d368b6d9c0f5b3"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a60b88f009c60c330f3d368b6d9c0f5b3">eof</a> () const</td></tr>
-<tr class="memdesc:a60b88f009c60c330f3d368b6d9c0f5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the IO position has reached the end, otherwise false. <br /></td></tr>
-<tr class="separator:a60b88f009c60c330f3d368b6d9c0f5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a642a3f20a30ea07f66f10b817e4f8447"><td class="memItemLeft" align="right" valign="top"><a id="a642a3f20a30ea07f66f10b817e4f8447"></a>
-virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a642a3f20a30ea07f66f10b817e4f8447">path</a> () const</td></tr>
-<tr class="memdesc:a642a3f20a30ea07f66f10b817e4f8447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a dummy path, indicating that memory access is used. <br /></td></tr>
-<tr class="separator:a642a3f20a30ea07f66f10b817e4f8447"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f55dbdb931de115f5c56c0ef1c85f66"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a8f55dbdb931de115f5c56c0ef1c85f66">populateFakeData</a> ()</td></tr>
-<tr class="memdesc:a8f55dbdb931de115f5c56c0ef1c85f66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark all the bNone blocks to bKnow. This avoids allocating memory for parts of the file that contain image-date (non-metadata/pixel data)  <a href="classExiv2_1_1MemIo.html#a8f55dbdb931de115f5c56c0ef1c85f66">More...</a><br /></td></tr>
-<tr class="separator:a8f55dbdb931de115f5c56c0ef1c85f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4484f3c66ec1682f2f39c7b65ac522f2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a4484f3c66ec1682f2f39c7b65ac522f2">tell</a> () const override</td></tr>
+<tr class="memdesc:a4484f3c66ec1682f2f39c7b65ac522f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current IO position.  <a href="classExiv2_1_1MemIo.html#a4484f3c66ec1682f2f39c7b65ac522f2">More...</a><br /></td></tr>
+<tr class="separator:a4484f3c66ec1682f2f39c7b65ac522f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf8d00bb725d8d701cbbb27965a6d8f3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#adf8d00bb725d8d701cbbb27965a6d8f3">size</a> () const override</td></tr>
+<tr class="memdesc:adf8d00bb725d8d701cbbb27965a6d8f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current memory buffer size in bytes.  <a href="classExiv2_1_1MemIo.html#adf8d00bb725d8d701cbbb27965a6d8f3">More...</a><br /></td></tr>
+<tr class="separator:adf8d00bb725d8d701cbbb27965a6d8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e2cf6b16ccbadd1b70ac0ac7f84c73"><td class="memItemLeft" align="right" valign="top"><a id="a76e2cf6b16ccbadd1b70ac0ac7f84c73"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a76e2cf6b16ccbadd1b70ac0ac7f84c73">isopen</a> () const override</td></tr>
+<tr class="memdesc:a76e2cf6b16ccbadd1b70ac0ac7f84c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always returns true. <br /></td></tr>
+<tr class="separator:a76e2cf6b16ccbadd1b70ac0ac7f84c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ae4dd1b3d61ee5d70d23b4f4640122"><td class="memItemLeft" align="right" valign="top"><a id="ae0ae4dd1b3d61ee5d70d23b4f4640122"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#ae0ae4dd1b3d61ee5d70d23b4f4640122">error</a> () const override</td></tr>
+<tr class="memdesc:ae0ae4dd1b3d61ee5d70d23b4f4640122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always returns 0. <br /></td></tr>
+<tr class="separator:ae0ae4dd1b3d61ee5d70d23b4f4640122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae2d4b78bfc3a96ee4a19567006d61c2"><td class="memItemLeft" align="right" valign="top"><a id="aae2d4b78bfc3a96ee4a19567006d61c2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#aae2d4b78bfc3a96ee4a19567006d61c2">eof</a> () const override</td></tr>
+<tr class="memdesc:aae2d4b78bfc3a96ee4a19567006d61c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the IO position has reached the end, otherwise false. <br /></td></tr>
+<tr class="separator:aae2d4b78bfc3a96ee4a19567006d61c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2daae245ff7cff1db2395e959b891245"><td class="memItemLeft" align="right" valign="top"><a id="a2daae245ff7cff1db2395e959b891245"></a>
+const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#a2daae245ff7cff1db2395e959b891245">path</a> () const noexcept override</td></tr>
+<tr class="memdesc:a2daae245ff7cff1db2395e959b891245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a dummy path, indicating that memory access is used. <br /></td></tr>
+<tr class="separator:a2daae245ff7cff1db2395e959b891245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbca7639a90aceca1084797b983a2ab5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#abbca7639a90aceca1084797b983a2ab5">populateFakeData</a> () override</td></tr>
+<tr class="memdesc:abbca7639a90aceca1084797b983a2ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark all the bNone blocks to bKnow. This avoids allocating memory for parts of the file that contain image-date (non-metadata/pixel data)  <a href="classExiv2_1_1MemIo.html#abbca7639a90aceca1084797b983a2ab5">More...</a><br /></td></tr>
+<tr class="separator:abbca7639a90aceca1084797b983a2ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe89bc5626a5237083b960428f996814"><td class="memItemLeft" align="right" valign="top"><a id="abe89bc5626a5237083b960428f996814"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#abe89bc5626a5237083b960428f996814">MemIo</a> (const <a class="el" href="classExiv2_1_1MemIo.html">MemIo</a> &amp;)=delete</td></tr>
+<tr class="memdesc:abe89bc5626a5237083b960428f996814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. <br /></td></tr>
+<tr class="separator:abe89bc5626a5237083b960428f996814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f599ad1a82b6ca0abafd5608d0db8b"><td class="memItemLeft" align="right" valign="top"><a id="af3f599ad1a82b6ca0abafd5608d0db8b"></a>
+<a class="el" href="classExiv2_1_1MemIo.html">MemIo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html#af3f599ad1a82b6ca0abafd5608d0db8b">operator=</a> (const <a class="el" href="classExiv2_1_1MemIo.html">MemIo</a> &amp;)=delete</td></tr>
+<tr class="memdesc:af3f599ad1a82b6ca0abafd5608d0db8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator. <br /></td></tr>
+<tr class="separator:af3f599ad1a82b6ca0abafd5608d0db8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -204,29 +218,22 @@ Additional Inherited Members</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a1d23c3bf7618f2ee6ebb5cf033b10911"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seek starting positions. <br /></td></tr>
 <tr class="separator:a1d23c3bf7618f2ee6ebb5cf033b10911 inherit pub_types_classExiv2_1_1BasicIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8f989522925b884d8c9d3a257265fa1 inherit pub_types_classExiv2_1_1BasicIo"><td class="memItemLeft" align="right" valign="top"><a id="af8f989522925b884d8c9d3a257265fa1"></a>
-typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicIo.html#af8f989522925b884d8c9d3a257265fa1">AutoPtr</a></td></tr>
-<tr class="memdesc:af8f989522925b884d8c9d3a257265fa1 inherit pub_types_classExiv2_1_1BasicIo"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> auto_ptr type. <br /></td></tr>
-<tr class="separator:af8f989522925b884d8c9d3a257265fa1 inherit pub_types_classExiv2_1_1BasicIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab316d94d3dedf2a569af5c6b7a2496c8 inherit pub_types_classExiv2_1_1BasicIo"><td class="memItemLeft" align="right" valign="top"><a id="ab316d94d3dedf2a569af5c6b7a2496c8"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicIo.html#ab316d94d3dedf2a569af5c6b7a2496c8">UniquePtr</a> = std::unique_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &gt;</td></tr>
+<tr class="memdesc:ab316d94d3dedf2a569af5c6b7a2496c8 inherit pub_types_classExiv2_1_1BasicIo"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> auto_ptr type. <br /></td></tr>
+<tr class="separator:ab316d94d3dedf2a569af5c6b7a2496c8 inherit pub_types_classExiv2_1_1BasicIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classExiv2_1_1BasicIo"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classExiv2_1_1BasicIo')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td></tr>
 <tr class="memitem:a64c13339b4859aa21faf1f79415c1ec5 inherit pub_attribs_classExiv2_1_1BasicIo"><td class="memItemLeft" align="right" valign="top"><a id="a64c13339b4859aa21faf1f79415c1ec5"></a>
-<a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicIo.html#a64c13339b4859aa21faf1f79415c1ec5">bigBlock_</a></td></tr>
+<a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicIo.html#a64c13339b4859aa21faf1f79415c1ec5">bigBlock_</a> {}</td></tr>
 <tr class="memdesc:a64c13339b4859aa21faf1f79415c1ec5 inherit pub_attribs_classExiv2_1_1BasicIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">this is allocated and populated by <a class="el" href="classExiv2_1_1BasicIo.html#a8728349cdeb79d569eba6fa6e26d5e74" title="Direct access to the IO data. For files, this is done by mapping the file into the process&#39;s address ...">mmap()</a> <br /></td></tr>
 <tr class="separator:a64c13339b4859aa21faf1f79415c1ec5 inherit pub_attribs_classExiv2_1_1BasicIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classExiv2_1_1BasicIo"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classExiv2_1_1BasicIo')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classExiv2_1_1BasicIo.html">Exiv2::BasicIo</a></td></tr>
-<tr class="memitem:ac726bef377a5da282b0f2cadb5b779be inherit pro_methods_classExiv2_1_1BasicIo"><td class="memItemLeft" align="right" valign="top"><a id="ac726bef377a5da282b0f2cadb5b779be"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BasicIo.html#ac726bef377a5da282b0f2cadb5b779be">BasicIo</a> ()</td></tr>
-<tr class="memdesc:ac726bef377a5da282b0f2cadb5b779be inherit pro_methods_classExiv2_1_1BasicIo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor. <br /></td></tr>
-<tr class="separator:ac726bef377a5da282b0f2cadb5b779be inherit pro_methods_classExiv2_1_1BasicIo"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides binary IO on blocks of memory by implementing the <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> interface. A copy-on-write implementation ensures that the data passed in is only copied when necessary, i.e., as soon as data is written to the <a class="el" href="classExiv2_1_1MemIo.html" title="Provides binary IO on blocks of memory by implementing the BasicIo interface. A copy-on-write impleme...">MemIo</a>. The original data is only used for reading. If writes are performed, the changed data can be retrieved using the read methods (since the data used in construction is never modified). </p>
 <dl class="section note"><dt>Note</dt><dd>If read only usage of this class is common, it might be worth creating a specialized readonly class or changing this one to have a readonly mode. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="metacopy_8cpp-example.html#_a3">metacopy.cpp</a>.</dd>
-</dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad65869d43163ab8d38484a1d36448f3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad65869d43163ab8d38484a1d36448f3d">&#9670;&nbsp;</a></span>MemIo()</h2>
+<a id="a1bc407f86e90507ca0d6dbee3b063fd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bc407f86e90507ca0d6dbee3b063fd4">&#9670;&nbsp;</a></span>MemIo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,13 +241,13 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
         <tr>
           <td class="memname">Exiv2::MemIo::MemIo </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
@@ -263,8 +270,8 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af2263c6d49984da7ce38daed9f327b1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2263c6d49984da7ce38daed9f327b1e">&#9670;&nbsp;</a></span>close()</h2>
+<a id="af747eaacc652f4e32b0c120faf42b49e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af747eaacc652f4e32b0c120faf42b49e">&#9670;&nbsp;</a></span>close()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,7 +280,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int Exiv2::MemIo::close </td>
+          <td class="memname">int Exiv2::MemIo::close </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -281,7 +288,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -293,8 +300,8 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 
 </div>
 </div>
-<a id="ab5d5467941f00e4bb47a411182955d44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5d5467941f00e4bb47a411182955d44">&#9670;&nbsp;</a></span>getb()</h2>
+<a id="ab2d825f42b29546562a0356c8d176f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d825f42b29546562a0356c8d176f96">&#9670;&nbsp;</a></span>getb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,7 +310,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int Exiv2::MemIo::getb </td>
+          <td class="memname">int Exiv2::MemIo::getb </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -311,7 +318,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -324,8 +331,8 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 
 </div>
 </div>
-<a id="a74a800a88bdd538b66e8c59395e3bd75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74a800a88bdd538b66e8c59395e3bd75">&#9670;&nbsp;</a></span>mmap()</h2>
+<a id="a8e7c68ab72ac862fc8ee40301c5bdd9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7c68ab72ac862fc8ee40301c5bdd9d">&#9670;&nbsp;</a></span>mmap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -334,7 +341,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a>* Exiv2::MemIo::mmap </td>
+          <td class="memname"><a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a>* Exiv2::MemIo::mmap </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"> = <code>false</code></td><td>)</td>
@@ -343,7 +350,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -355,8 +362,8 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 
 </div>
 </div>
-<a id="ace31d0ce66839a7fc4af615887c9f1ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace31d0ce66839a7fc4af615887c9f1ce">&#9670;&nbsp;</a></span>munmap()</h2>
+<a id="ae09f4dd8bf257486ef83c422b734ba79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae09f4dd8bf257486ef83c422b734ba79">&#9670;&nbsp;</a></span>munmap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,7 +372,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int Exiv2::MemIo::munmap </td>
+          <td class="memname">int Exiv2::MemIo::munmap </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -373,12 +380,12 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Remove a mapping established with <a class="el" href="classExiv2_1_1MemIo.html#a74a800a88bdd538b66e8c59395e3bd75" title="Allow direct access to the underlying data buffer. The buffer is not protected against write access i...">mmap()</a>. If the mapped area is writeable, this ensures that changes are written back. </p>
+<p>Remove a mapping established with <a class="el" href="classExiv2_1_1MemIo.html#a8e7c68ab72ac862fc8ee40301c5bdd9d" title="Allow direct access to the underlying data buffer. The buffer is not protected against write access i...">mmap()</a>. If the mapped area is writeable, this ensures that changes are written back. </p>
 <dl class="section return"><dt>Returns</dt><dd>0 if successful;<br  />
  Nonzero if failure; </dd></dl>
 
@@ -386,8 +393,8 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 
 </div>
 </div>
-<a id="acbc7726037d2eb0dbbdef649f30ebc5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbc7726037d2eb0dbbdef649f30ebc5c">&#9670;&nbsp;</a></span>open()</h2>
+<a id="aa9ad05a03274b430016fb99b273c52b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ad05a03274b430016fb99b273c52b2">&#9670;&nbsp;</a></span>open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -396,7 +403,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int Exiv2::MemIo::open </td>
+          <td class="memname">int Exiv2::MemIo::open </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -404,7 +411,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -416,8 +423,8 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 
 </div>
 </div>
-<a id="a8f55dbdb931de115f5c56c0ef1c85f66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f55dbdb931de115f5c56c0ef1c85f66">&#9670;&nbsp;</a></span>populateFakeData()</h2>
+<a id="abbca7639a90aceca1084797b983a2ab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbca7639a90aceca1084797b983a2ab5">&#9670;&nbsp;</a></span>populateFakeData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,7 +433,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Exiv2::MemIo::populateFakeData </td>
+          <td class="memname">void Exiv2::MemIo::populateFakeData </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -434,7 +441,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -442,12 +449,12 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 <p>Mark all the bNone blocks to bKnow. This avoids allocating memory for parts of the file that contain image-date (non-metadata/pixel data) </p>
 <dl class="section note"><dt>Note</dt><dd>This method should be only called after the concerned data (metadata) are all downloaded from the remote file to memory. </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classExiv2_1_1BasicIo.html#a47a081ffd8f8b061abc8711f3a4d38e2">Exiv2::BasicIo</a>.</p>
+<p>Implements <a class="el" href="classExiv2_1_1BasicIo.html#a4b28be3e3adb7c54f0c2d85a64ad83ac">Exiv2::BasicIo</a>.</p>
 
 </div>
 </div>
-<a id="a5999ba245f79d581c9c5a16982d736b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5999ba245f79d581c9c5a16982d736b6">&#9670;&nbsp;</a></span>putb()</h2>
+<a id="ad13e21891ed3a87432654ba139cb1e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad13e21891ed3a87432654ba139cb1e7a">&#9670;&nbsp;</a></span>putb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -456,16 +463,16 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int Exiv2::MemIo::putb </td>
+          <td class="memname">int Exiv2::MemIo::putb </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a>&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -484,8 +491,8 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 
 </div>
 </div>
-<a id="a7de679e4366d070dc6604db1d22275ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7de679e4366d070dc6604db1d22275ce">&#9670;&nbsp;</a></span>read() <span class="overload">[1/2]</span></h2>
+<a id="a30e0f465444851ee7cc0438bd21a3acf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30e0f465444851ee7cc0438bd21a3acf">&#9670;&nbsp;</a></span>read() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -494,15 +501,15 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual long Exiv2::MemIo::read </td>
+          <td class="memname">size_t Exiv2::MemIo::read </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *&#160;</td>
           <td class="paramname"><em>buf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>rcount</em>&#160;</td>
         </tr>
         <tr>
@@ -513,7 +520,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -529,12 +536,12 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 <dl class="section return"><dt>Returns</dt><dd>Number of bytes read from the memory block successfully;<br  />
  0 if failure; </dd></dl>
 
-<p>Implements <a class="el" href="classExiv2_1_1BasicIo.html#aec8cb20c86e72b87577370a28d66a0ca">Exiv2::BasicIo</a>.</p>
+<p>Implements <a class="el" href="classExiv2_1_1BasicIo.html#af34a341bf53dbb37da54f44b1975549e">Exiv2::BasicIo</a>.</p>
 
 </div>
 </div>
-<a id="a3d45d5be7b0e25c32d37d5055da0adc0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d45d5be7b0e25c32d37d5055da0adc0">&#9670;&nbsp;</a></span>read() <span class="overload">[2/2]</span></h2>
+<a id="a0100c75183772a37a03c1ce186d722cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0100c75183772a37a03c1ce186d722cf">&#9670;&nbsp;</a></span>read() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -543,16 +550,16 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a> Exiv2::MemIo::read </td>
+          <td class="memname"><a class="el" href="structExiv2_1_1DataBuf.html">DataBuf</a> Exiv2::MemIo::read </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>rcount</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -564,14 +571,14 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classExiv2_1_1DataBuf.html" title="Utility class containing a character array. All it does is to take care of memory allocation and dele...">DataBuf</a> instance containing the bytes read. Use the <a class="el" href="classExiv2_1_1DataBuf.html#a5e6028d5cdae2e149749667cf66c3e91" title="The current size of the buffer.">DataBuf::size_</a> member to find the number of bytes read. <a class="el" href="classExiv2_1_1DataBuf.html#a5e6028d5cdae2e149749667cf66c3e91" title="The current size of the buffer.">DataBuf::size_</a> will be 0 on failure. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structExiv2_1_1DataBuf.html" title="Utility class containing a character array. All it does is to take care of memory allocation and dele...">DataBuf</a> instance containing the bytes read. Use the DataBuf::size_ member to find the number of bytes read. DataBuf::size_ will be 0 on failure. </dd></dl>
 
-<p>Implements <a class="el" href="classExiv2_1_1BasicIo.html#a8c9e6c7377b642afbb2c14a0e3896917">Exiv2::BasicIo</a>.</p>
+<p>Implements <a class="el" href="classExiv2_1_1BasicIo.html#ac026d7ba65e30b1ff0a9e3b76d65eb20">Exiv2::BasicIo</a>.</p>
 
 </div>
 </div>
-<a id="ab4a12d5b5ed6f8447c7167942c4aa4ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4a12d5b5ed6f8447c7167942c4aa4ae">&#9670;&nbsp;</a></span>seek()</h2>
+<a id="a6d21d0e2783483dada5ed4361fbc2947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d21d0e2783483dada5ed4361fbc2947">&#9670;&nbsp;</a></span>seek()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -580,9 +587,9 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int Exiv2::MemIo::seek </td>
+          <td class="memname">int Exiv2::MemIo::seek </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype">int64_t&#160;</td>
           <td class="paramname"><em>offset</em>, </td>
         </tr>
         <tr>
@@ -599,7 +606,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -607,7 +614,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 <p>Move the current IO position. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">offset</td><td>Number of bytes to move the IO position relative to the starting position specified by <em>pos</em> </td></tr>
+    <tr><td class="paramname">offset</td><td>Number of bytes to move the position relative to the starting position specified by <em>pos</em> </td></tr>
     <tr><td class="paramname">pos</td><td>Position from which the seek should start </td></tr>
   </table>
   </dd>
@@ -615,12 +622,12 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 <dl class="section return"><dt>Returns</dt><dd>0 if successful;<br  />
  Nonzero if failure; </dd></dl>
 
-<p>Implements <a class="el" href="classExiv2_1_1BasicIo.html#a561221bbe1d215b4d6b5ceceaa2e9a97">Exiv2::BasicIo</a>.</p>
+<p>Implements <a class="el" href="classExiv2_1_1BasicIo.html#a97800e07edbc07cd216d9f5a8f280958">Exiv2::BasicIo</a>.</p>
 
 </div>
 </div>
-<a id="a16291b9cb17b10e5063d835a65e0347c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16291b9cb17b10e5063d835a65e0347c">&#9670;&nbsp;</a></span>size()</h2>
+<a id="adf8d00bb725d8d701cbbb27965a6d8f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf8d00bb725d8d701cbbb27965a6d8f3">&#9670;&nbsp;</a></span>size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -629,7 +636,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual size_t Exiv2::MemIo::size </td>
+          <td class="memname">size_t Exiv2::MemIo::size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -637,7 +644,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -650,8 +657,8 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 
 </div>
 </div>
-<a id="ab3a522e04b23cc17c2aadf126d4d222b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3a522e04b23cc17c2aadf126d4d222b">&#9670;&nbsp;</a></span>tell()</h2>
+<a id="a4484f3c66ec1682f2f39c7b65ac522f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4484f3c66ec1682f2f39c7b65ac522f2">&#9670;&nbsp;</a></span>tell()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -660,7 +667,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual long Exiv2::MemIo::tell </td>
+          <td class="memname">size_t Exiv2::MemIo::tell </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -668,7 +675,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -676,12 +683,12 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 <p>Get the current IO position. </p>
 <dl class="section return"><dt>Returns</dt><dd>Offset from the start of the memory block </dd></dl>
 
-<p>Implements <a class="el" href="classExiv2_1_1BasicIo.html#aeb9673a48a7af7376b7018998fb552e6">Exiv2::BasicIo</a>.</p>
+<p>Implements <a class="el" href="classExiv2_1_1BasicIo.html#a74d7321a48778a0f8c8231e66f5c584a">Exiv2::BasicIo</a>.</p>
 
 </div>
 </div>
-<a id="a223908a596491d75cebbb7a6f9c1559f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a223908a596491d75cebbb7a6f9c1559f">&#9670;&nbsp;</a></span>transfer()</h2>
+<a id="a446454e12edd73d9d4825cb7c35e86d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a446454e12edd73d9d4825cb7c35e86d0">&#9670;&nbsp;</a></span>transfer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -690,7 +697,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Exiv2::MemIo::transfer </td>
+          <td class="memname">void Exiv2::MemIo::transfer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;&#160;</td>
           <td class="paramname"><em>src</em></td><td>)</td>
@@ -699,7 +706,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -714,7 +721,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">Error</td><td>In case of failure </td></tr>
+    <tr><td class="paramname"><a class="el" href="classExiv2_1_1Error.html" title="Simple error class used for exceptions. An output operator is provided to print errors to a stream.">Error</a></td><td>In case of failure </td></tr>
   </table>
   </dd>
 </dl>
@@ -723,8 +730,8 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 
 </div>
 </div>
-<a id="a84c854a02e45febea5c0dfc0192e4b6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84c854a02e45febea5c0dfc0192e4b6e">&#9670;&nbsp;</a></span>write() <span class="overload">[1/2]</span></h2>
+<a id="a441584c0c5e5eb3a26b756ccd0b75b6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a441584c0c5e5eb3a26b756ccd0b75b6d">&#9670;&nbsp;</a></span>write() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -733,7 +740,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual long Exiv2::MemIo::write </td>
+          <td class="memname">size_t Exiv2::MemIo::write </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classExiv2_1_1BasicIo.html">BasicIo</a> &amp;&#160;</td>
           <td class="paramname"><em>src</em></td><td>)</td>
@@ -742,7 +749,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -757,12 +764,12 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 <dl class="section return"><dt>Returns</dt><dd>Number of bytes written to the memory block successfully;<br  />
  0 if failure; </dd></dl>
 
-<p>Implements <a class="el" href="classExiv2_1_1BasicIo.html#a31334606e230bbe94d6b8768d3c6d75f">Exiv2::BasicIo</a>.</p>
+<p>Implements <a class="el" href="classExiv2_1_1BasicIo.html#ab06092a8ab262208acb540b23d7b814e">Exiv2::BasicIo</a>.</p>
 
 </div>
 </div>
-<a id="a79993ba49c24c36b30f444c218ce4579"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79993ba49c24c36b30f444c218ce4579">&#9670;&nbsp;</a></span>write() <span class="overload">[2/2]</span></h2>
+<a id="a4c110ab9f8cd621425dd3e43e630e6e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c110ab9f8cd621425dd3e43e630e6e7">&#9670;&nbsp;</a></span>write() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -771,15 +778,15 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual long Exiv2::MemIo::write </td>
+          <td class="memname">size_t Exiv2::MemIo::write </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a16f60a5bd4207fe155f6cf93a15efa72">byte</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>wcount</em>&#160;</td>
         </tr>
         <tr>
@@ -790,7 +797,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -806,7 +813,7 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
 <dl class="section return"><dt>Returns</dt><dd>Number of bytes written to the memory block successfully;<br  />
  0 if failure; </dd></dl>
 
-<p>Implements <a class="el" href="classExiv2_1_1BasicIo.html#ac548d52ef633ac425bd01d17ccd2e7e4">Exiv2::BasicIo</a>.</p>
+<p>Implements <a class="el" href="classExiv2_1_1BasicIo.html#a0767a42aa8f38a34428288338cadb343">Exiv2::BasicIo</a>.</p>
 
 </div>
 </div>
@@ -821,12 +828,12 @@ typedef std::auto_ptr&lt; <a class="el" href="classExiv2_1_1BasicIo.html">BasicI
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

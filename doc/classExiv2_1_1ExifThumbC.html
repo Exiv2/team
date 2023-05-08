@@ -121,12 +121,12 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Accessors</h2></td></tr>
 <tr class="memitem:a90714cf1e4ba74caf94a09db9ca6d6c1"><td class="memItemLeft" align="right" valign="top"><a id="a90714cf1e4ba74caf94a09db9ca6d6c1"></a>
-<a class="el" href="classExiv2_1_1DataBuf.html">DataBuf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumbC.html#a90714cf1e4ba74caf94a09db9ca6d6c1">copy</a> () const</td></tr>
+<a class="el" href="structExiv2_1_1DataBuf.html">DataBuf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumbC.html#a90714cf1e4ba74caf94a09db9ca6d6c1">copy</a> () const</td></tr>
 <tr class="memdesc:a90714cf1e4ba74caf94a09db9ca6d6c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the thumbnail image in a DataBuf. The caller owns the data buffer and DataBuf ensures that it will be deleted. <br /></td></tr>
 <tr class="separator:a90714cf1e4ba74caf94a09db9ca6d6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa97f0111eb9e810548740fe7bf263335"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumbC.html#aa97f0111eb9e810548740fe7bf263335">writeFile</a> (const std::string &amp;path) const</td></tr>
-<tr class="memdesc:aa97f0111eb9e810548740fe7bf263335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the thumbnail image to a file.  <a href="classExiv2_1_1ExifThumbC.html#aa97f0111eb9e810548740fe7bf263335">More...</a><br /></td></tr>
-<tr class="separator:aa97f0111eb9e810548740fe7bf263335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adacf42cdd6d888d76ec4f4b99ec77a07"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumbC.html#adacf42cdd6d888d76ec4f4b99ec77a07">writeFile</a> (const std::string &amp;path) const</td></tr>
+<tr class="memdesc:adacf42cdd6d888d76ec4f4b99ec77a07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the thumbnail image to a file.  <a href="classExiv2_1_1ExifThumbC.html#adacf42cdd6d888d76ec4f4b99ec77a07">More...</a><br /></td></tr>
+<tr class="separator:adacf42cdd6d888d76ec4f4b99ec77a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f7b1ecff1e7614cd826bb8b3005d06f"><td class="memItemLeft" align="right" valign="top"><a id="a3f7b1ecff1e7614cd826bb8b3005d06f"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1ExifThumbC.html#a3f7b1ecff1e7614cd826bb8b3005d06f">mimeType</a> () const</td></tr>
 <tr class="memdesc:a3f7b1ecff1e7614cd826bb8b3005d06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the MIME type of the thumbnail, either <code>"image/tiff"</code> or <code>"image/jpeg"</code>. <br /></td></tr>
@@ -140,14 +140,14 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <div class="textblock"><p>Access to a Exif thumbnail image. This class provides higher level accessors to the thumbnail image that is optionally embedded in IFD1 of the Exif data. These methods do not write to the Exif metadata. Manipulators are provided in subclass <a class="el" href="classExiv2_1_1ExifThumb.html" title="Access and modify an Exif thumbnail image. This class implements manipulators to set and erase the th...">ExifThumb</a>. </p>
 <dl class="section note"><dt>Note</dt><dd>Various other preview and thumbnail images may be contained in an image, depending on its format and the camera make and model. This class only provides access to the Exif thumbnail as specified in the Exif standard. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa97f0111eb9e810548740fe7bf263335"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa97f0111eb9e810548740fe7bf263335">&#9670;&nbsp;</a></span>writeFile()</h2>
+<a id="adacf42cdd6d888d76ec4f4b99ec77a07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adacf42cdd6d888d76ec4f4b99ec77a07">&#9670;&nbsp;</a></span>writeFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">long Exiv2::ExifThumbC::writeFile </td>
+          <td class="memname">size_t Exiv2::ExifThumbC::writeFile </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>
@@ -179,12 +179,12 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.27.6
+          Exiv2 v0.28.0
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-01-19 13:27 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-01-19 13:27 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <!--*- sgml -*-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="author" content="Andreas Huggel and Exiv2 contributors">
+  <meta name="description" content="Open Source Exif, IPTC and XMP metadata library and tools with Exif MakerNote and read/write support">
+  <meta name="keywords" content="exif, iptc, xmp, metadata, makernote, manipulation, manipulate, read and write, write, change, update, jpeg, jpg, ifd, image file directory, thumbnail, thumbnails, tag, tags, canon, fujifilm, sigma/foveon, nikon, open source, opensource, huggel, andreas, andreas huggel">
+  <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+  <link rel="manifest" href="/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Exiv2 - Image metadata library and tools</title>
+  <!-- Doxygen styles -->
+  <link href="doxygen.css" rel="stylesheet" type="text/css">
+  <link href="customdoxygen.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap theme -->
+  <link href="../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../include/exiv2.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../dist/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Custom script to bootstrap (augment) Doxygen-generated HTML -->
+<script type="text/javascript" src="doxy-boot.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="Exiv2" src="../include/exiv2-logo-small.png">
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../getting-started.html">Getting started</a></li>
+        <li><a href="../download.html">Download</a></li>
+        <li><a href="../whatsnew.html">What's New</a></li>
+        <li><a href="../metadata.html">Metadata</a></li>
+        <li><a href="../makernote.html">Makernote</a></li>
+        <li><a href="../doc/examples.html">Examples</a></li>
+        <li><a href="../doc/index.html">API</a></li>
+        <li><a href="../manpage.html">Manual</a></li>
+        <li><a href="book/index.html">Book</a></li>
+        <li><a href="https://github.com/exiv2/exiv2" target="_blank">GitHub</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<div class="container">
+<div><!-- top -->
+<!-- Generated by Doxygen 1.8.17 -->
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceExiv2.html">Exiv2</a></li><li class="navelem"><a class="el" href="structExiv2_1_1DataBuf.html">DataBuf</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="structExiv2_1_1DataBuf-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">Exiv2::DataBuf Struct Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Utility class containing a character array. All it does is to take care of memory allocation and deletion. Its primary use is meant to be as a stack variable in functions that need a temporary data buffer.  
+ <a href="structExiv2_1_1DataBuf.html#details">More...</a></p>
+
+<p><code>#include &lt;types.hpp&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Creators</div></td></tr>
+<tr class="memitem:a035a01b4b6d162c701a67afa3f416e33"><td class="memItemLeft" align="right" valign="top"><a id="a035a01b4b6d162c701a67afa3f416e33"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1DataBuf.html#a035a01b4b6d162c701a67afa3f416e33">DataBuf</a> ()=default</td></tr>
+<tr class="memdesc:a035a01b4b6d162c701a67afa3f416e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
+<tr class="separator:a035a01b4b6d162c701a67afa3f416e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a835d687fc54d51cc0b8f885dca9f4321"><td class="memItemLeft" align="right" valign="top"><a id="a835d687fc54d51cc0b8f885dca9f4321"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1DataBuf.html#a835d687fc54d51cc0b8f885dca9f4321">DataBuf</a> (size_t size)</td></tr>
+<tr class="memdesc:a835d687fc54d51cc0b8f885dca9f4321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with an initial buffer size. <br /></td></tr>
+<tr class="separator:a835d687fc54d51cc0b8f885dca9f4321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a504db71dcbcd76e7fb63d4f5c136176e"><td class="memItemLeft" align="right" valign="top"><a id="a504db71dcbcd76e7fb63d4f5c136176e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1DataBuf.html#a504db71dcbcd76e7fb63d4f5c136176e">DataBuf</a> (const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *pData, size_t size)</td></tr>
+<tr class="memdesc:a504db71dcbcd76e7fb63d4f5c136176e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, copies an existing buffer. <br /></td></tr>
+<tr class="separator:a504db71dcbcd76e7fb63d4f5c136176e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Manipulators</h2></td></tr>
+<tr class="memitem:aeeb62b995cb4aff0782df9988aa86ae4"><td class="memItemLeft" align="right" valign="top"><a id="aeeb62b995cb4aff0782df9988aa86ae4"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b> = std::vector&lt; <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> &gt;::iterator</td></tr>
+<tr class="separator:aeeb62b995cb4aff0782df9988aa86ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc4efbc12c45174fb7959967030a2a61"><td class="memItemLeft" align="right" valign="top"><a id="adc4efbc12c45174fb7959967030a2a61"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b> = std::vector&lt; <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> &gt;::const_iterator</td></tr>
+<tr class="separator:adc4efbc12c45174fb7959967030a2a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3283dd48a5e7cfd7cf0554281421c4a7"><td class="memItemLeft" align="right" valign="top"><a id="a3283dd48a5e7cfd7cf0554281421c4a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1DataBuf.html#a3283dd48a5e7cfd7cf0554281421c4a7">alloc</a> (size_t size)</td></tr>
+<tr class="memdesc:a3283dd48a5e7cfd7cf0554281421c4a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a data buffer of at least the given size. Note that if the requested <em>size</em> is less than the current buffer size, no new memory is allocated and the buffer size doesn't change. <br /></td></tr>
+<tr class="separator:a3283dd48a5e7cfd7cf0554281421c4a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbbfbe1a18bec76e8648cdbdca66215c"><td class="memItemLeft" align="right" valign="top"><a id="acbbfbe1a18bec76e8648cdbdca66215c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1DataBuf.html#acbbfbe1a18bec76e8648cdbdca66215c">resize</a> (size_t size)</td></tr>
+<tr class="memdesc:acbbfbe1a18bec76e8648cdbdca66215c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize the buffer. Existing data is preserved (like std::realloc()). <br /></td></tr>
+<tr class="separator:acbbfbe1a18bec76e8648cdbdca66215c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46715e2b7a42477649b6044d519f43b3"><td class="memItemLeft" align="right" valign="top"><a id="a46715e2b7a42477649b6044d519f43b3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1DataBuf.html#a46715e2b7a42477649b6044d519f43b3">reset</a> ()</td></tr>
+<tr class="memdesc:a46715e2b7a42477649b6044d519f43b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset value. <br /></td></tr>
+<tr class="separator:a46715e2b7a42477649b6044d519f43b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af88e11bcb4dbffcb9548dc6eb2b63209"><td class="memItemLeft" align="right" valign="top"><a id="af88e11bcb4dbffcb9548dc6eb2b63209"></a>
+iterator&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () noexcept</td></tr>
+<tr class="separator:af88e11bcb4dbffcb9548dc6eb2b63209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a109f345c2284b172f1169e3111895ed5"><td class="memItemLeft" align="right" valign="top"><a id="a109f345c2284b172f1169e3111895ed5"></a>
+const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>cbegin</b> () const noexcept</td></tr>
+<tr class="separator:a109f345c2284b172f1169e3111895ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a8c40508571a5884f783086f9c0c0f1"><td class="memItemLeft" align="right" valign="top"><a id="a3a8c40508571a5884f783086f9c0c0f1"></a>
+iterator&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () noexcept</td></tr>
+<tr class="separator:a3a8c40508571a5884f783086f9c0c0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2c8bb692952273a4023d6e7e2b94078"><td class="memItemLeft" align="right" valign="top"><a id="aa2c8bb692952273a4023d6e7e2b94078"></a>
+const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>cend</b> () const noexcept</td></tr>
+<tr class="separator:aa2c8bb692952273a4023d6e7e2b94078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3602552be4b75158a9d4f054b5f319a"><td class="memItemLeft" align="right" valign="top"><a id="af3602552be4b75158a9d4f054b5f319a"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
+<tr class="separator:af3602552be4b75158a9d4f054b5f319a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172a9b14b32338cf74b95db7affe9e67"><td class="memItemLeft" align="right" valign="top"><a id="a172a9b14b32338cf74b95db7affe9e67"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>read_uint8</b> (size_t offset) const</td></tr>
+<tr class="separator:a172a9b14b32338cf74b95db7affe9e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad988698a6588df45ccb66e2d589894"><td class="memItemLeft" align="right" valign="top"><a id="a7ad988698a6588df45ccb66e2d589894"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write_uint8</b> (size_t offset, uint8_t x)</td></tr>
+<tr class="separator:a7ad988698a6588df45ccb66e2d589894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3af5b11fb44cc9cec66d871bfdefbbe"><td class="memItemLeft" align="right" valign="top"><a id="ab3af5b11fb44cc9cec66d871bfdefbbe"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>read_uint16</b> (size_t offset, <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> byteOrder) const</td></tr>
+<tr class="separator:ab3af5b11fb44cc9cec66d871bfdefbbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7661c051cd65ac9dd58595673476f79d"><td class="memItemLeft" align="right" valign="top"><a id="a7661c051cd65ac9dd58595673476f79d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write_uint16</b> (size_t offset, uint16_t x, <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> byteOrder)</td></tr>
+<tr class="separator:a7661c051cd65ac9dd58595673476f79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa708fa05dc9b5fd974699d866a72cf10"><td class="memItemLeft" align="right" valign="top"><a id="aa708fa05dc9b5fd974699d866a72cf10"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>read_uint32</b> (size_t offset, <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> byteOrder) const</td></tr>
+<tr class="separator:aa708fa05dc9b5fd974699d866a72cf10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31df22a0a325db0cbbce9787b640fc5c"><td class="memItemLeft" align="right" valign="top"><a id="a31df22a0a325db0cbbce9787b640fc5c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write_uint32</b> (size_t offset, uint32_t x, <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> byteOrder)</td></tr>
+<tr class="separator:a31df22a0a325db0cbbce9787b640fc5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afac3a0002bb71053544b13eaba22680d"><td class="memItemLeft" align="right" valign="top"><a id="afac3a0002bb71053544b13eaba22680d"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>read_uint64</b> (size_t offset, <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> byteOrder) const</td></tr>
+<tr class="separator:afac3a0002bb71053544b13eaba22680d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5adcd2d4d6ef597a1d37ff506df3367"><td class="memItemLeft" align="right" valign="top"><a id="af5adcd2d4d6ef597a1d37ff506df3367"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>write_uint64</b> (size_t offset, uint64_t x, <a class="el" href="namespaceExiv2.html#a94c225faf6d6c611a3828fae1c28efa6">ByteOrder</a> byteOrder)</td></tr>
+<tr class="separator:af5adcd2d4d6ef597a1d37ff506df3367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1613561da79d6045f470eaeebe7b3ce2"><td class="memItemLeft" align="right" valign="top"><a id="a1613561da79d6045f470eaeebe7b3ce2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1DataBuf.html#a1613561da79d6045f470eaeebe7b3ce2">cmpBytes</a> (size_t offset, const void *buf, size_t bufsize) const</td></tr>
+<tr class="memdesc:a1613561da79d6045f470eaeebe7b3ce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equivalent to: memcmp(&amp;pData_[offset], buf, bufsize) <br /></td></tr>
+<tr class="separator:a1613561da79d6045f470eaeebe7b3ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43782e9cd1b3fe514cdd5881ab67657f"><td class="memItemLeft" align="right" valign="top"><a id="a43782e9cd1b3fe514cdd5881ab67657f"></a>
+<a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1DataBuf.html#a43782e9cd1b3fe514cdd5881ab67657f">data</a> (size_t offset=0)</td></tr>
+<tr class="memdesc:a43782e9cd1b3fe514cdd5881ab67657f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a data pointer. <br /></td></tr>
+<tr class="separator:a43782e9cd1b3fe514cdd5881ab67657f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c1b19cb75dbed462d1d40e878128a49"><td class="memItemLeft" align="right" valign="top"><a id="a7c1b19cb75dbed462d1d40e878128a49"></a>
+const <a class="el" href="namespaceExiv2.html#a40f58c4773587cae91a50aa0b3cf2ed3">byte</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1DataBuf.html#a7c1b19cb75dbed462d1d40e878128a49">c_data</a> (size_t offset=0) const</td></tr>
+<tr class="memdesc:a7c1b19cb75dbed462d1d40e878128a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a (read-only) data pointer. <br /></td></tr>
+<tr class="separator:a7c1b19cb75dbed462d1d40e878128a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7451f0f40a197c7e65fe6525b62a2270"><td class="memItemLeft" align="right" valign="top"><a id="a7451f0f40a197c7e65fe6525b62a2270"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1DataBuf.html#a7451f0f40a197c7e65fe6525b62a2270">c_str</a> (size_t offset=0) const</td></tr>
+<tr class="memdesc:a7451f0f40a197c7e65fe6525b62a2270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a (read-only) C-style string pointer. <br /></td></tr>
+<tr class="separator:a7451f0f40a197c7e65fe6525b62a2270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38758ccf6843e5b63ba76bf0302ad26d"><td class="memItemLeft" align="right" valign="top"><a id="a38758ccf6843e5b63ba76bf0302ad26d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> () const</td></tr>
+<tr class="separator:a38758ccf6843e5b63ba76bf0302ad26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Utility class containing a character array. All it does is to take care of memory allocation and deletion. Its primary use is meant to be as a stack variable in functions that need a temporary data buffer. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="mrwthumb_8cpp-example.html#_a9">mrwthumb.cpp</a>, and <a class="el" href="xmpparse_8cpp-example.html#_a2">xmpparse.cpp</a>.</dd>
+</dl>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>types.hpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- /.container -->
+<div id="footer">
+  <footer>
+    <div class="container">
+      <div class="row">
+       <div class="page-footer">
+        <div class="col-sm-5">
+          Exiv2 v0.28.0
+        </div><!-- /.col-sm-5 -->
+        <div class="col-sm-2"></div><!-- /.col-sm-2 -->
+        <div class="col-sm-5">
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-08 17:35 UTC</p></span>
+        </div><!-- /.col-sm-5 -->
+       </div>
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </footer>
+</div><!-- closes footer -->
+</body>
+</html>
