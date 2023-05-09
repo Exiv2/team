@@ -103,7 +103,208 @@ Reference: <a href="http://www.adobe.com/devnet/xmp.html" title="XMP specificati
 <th>Category</th>
 <th>Description</th>
 </tr></thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>DateCreated</td>
+<td>Date Created</td>
+<td>Date</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The date the intellectual content of the document was created (rather than the creation date of the physical representation), following IIM conventions. For example, a photo taken during the American Civil War would have a creation date during that epoch (1861-1865) rather than the date the photo was digitized for archiving.</td>
+</tr>
+<tr>
+<td>Headline</td>
+<td>Headline</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Headline.</td>
+</tr>
+<tr>
+<td>Country</td>
+<td>Country</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Country/primary location.</td>
+</tr>
+<tr>
+<td>State</td>
+<td>State</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Province/state.</td>
+</tr>
+<tr>
+<td>City</td>
+<td>City</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>City.</td>
+</tr>
+<tr>
+<td>Credit</td>
+<td>Credit</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Credit.</td>
+</tr>
+<tr>
+<td>AuthorsPosition</td>
+<td>Authors Position</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>By-line title.</td>
+</tr>
+<tr>
+<td>CaptionWriter</td>
+<td>Caption Writer</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Writer/editor.</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>Category</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Category. Limited to 3 7-bit ASCII characters.</td>
+</tr>
+<tr>
+<td>Instructions</td>
+<td>Instructions</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Special instructions.</td>
+</tr>
+<tr>
+<td>Source</td>
+<td>Source</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Source.</td>
+</tr>
+<tr>
+<td>SupplementalCategories</td>
+<td>Supplemental Categories</td>
+<td>bag Text</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>Supplemental category.</td>
+</tr>
+<tr>
+<td>TransmissionReference</td>
+<td>Transmission Reference</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Original transmission reference.</td>
+</tr>
+<tr>
+<td>Urgency</td>
+<td>Urgency</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Urgency. Valid range is 1-8.</td>
+</tr>
+<tr>
+<td>ICCProfile</td>
+<td>ICC Profile</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The colour profile, such as AppleRGB, AdobeRGB1998.</td>
+</tr>
+<tr>
+<td>ColorMode</td>
+<td>Color Mode</td>
+<td>Closed Choice of Integer</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The colour mode. One of: 0 = Bitmap, 1 = Grayscale, 2 = Indexed, 3 = RGB, 4 = CMYK, 7 = Multichannel, 8 = Duotone, 9 = Lab.</td>
+</tr>
+<tr>
+<td>AncestorID</td>
+<td>Ancestor ID</td>
+<td>URI</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The unique identifier of a document.</td>
+</tr>
+<tr>
+<td>DocumentAncestors</td>
+<td>Document Ancestors</td>
+<td>bag Ancestor</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>If the source document for a copy-and-paste or place operation has a document ID, that ID is added to this list in the destination document's XMP.</td>
+</tr>
+<tr>
+<td>History</td>
+<td>History</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The history that appears in the FileInfo panel, if activated in the application preferences.</td>
+</tr>
+<tr>
+<td>TextLayers</td>
+<td>Text Layers</td>
+<td>seq Layer</td>
+<td>XmpSeq</td>
+<td>External</td>
+<td>If a document has text layers, this property caches the text for each layer.</td>
+</tr>
+<tr>
+<td>LayerName</td>
+<td>Layer Name</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The identifying name of the text layer.</td>
+</tr>
+<tr>
+<td>LayerText</td>
+<td>Layer Text</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The text content of the text layer.</td>
+</tr>
+<tr>
+<td>EmbeddedXMPDigest</td>
+<td>Embedded XMP Digest</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Embedded XMP Digest.</td>
+</tr>
+<tr>
+<td>LegacyIPTCDigest</td>
+<td>Legacy IPTC Digest</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Legacy IPTC Digest.</td>
+</tr>
+<tr>
+<td>SidecarForExtension</td>
+<td>Sidecar F or Extension</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Filename extension of associated image file.</td>
+</tr>
+</tbody>
 </table>
 
 
@@ -118,8 +319,8 @@ Reference: <a href="http://www.adobe.com/devnet/xmp.html" title="XMP specificati
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 21:42 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 21:42 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 22:06 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 22:06 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

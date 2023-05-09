@@ -111,7 +111,184 @@ Reference: <a href=" https://developers.google.com/photo-sphere/metadata/" title
 <th>Category</th>
 <th>Description</th>
 </tr></thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>UsePanoramaViewer</td>
+<td>Use Panorama Viewer</td>
+<td>Boolean</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Whether to show this image in a panorama viewer rather than as a normal flat image. This may be specified based on user preferences or by the stitching software. The application displaying or ingesting the image may choose to ignore this.</td>
+</tr>
+<tr>
+<td>CaptureSoftware</td>
+<td>Capture Software</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>If capture was done using an application on a mobile device, such as an Android phone, the name of the application that was used (such as "Photo Sphere"). This should be left blank if source images were captured manually, such as by using a DSLR on a tripod.</td>
+</tr>
+<tr>
+<td>StitchingSoftware</td>
+<td>Stitching Software</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The software that was used to create the final panorama. This may sometimes be the same value as that of  GPano:CaptureSoftware.</td>
+</tr>
+<tr>
+<td>ProjectionType</td>
+<td>Projection Type</td>
+<td>Open Choice of Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Projection type used in the image file. Google products currently support the value equirectangular.</td>
+</tr>
+<tr>
+<td>PoseHeadingDegrees</td>
+<td>Pose Heading Degrees</td>
+<td>Real</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Compass heading, measured in degrees, for the center the image. Value must be &gt;= 0 and &lt; 360.</td>
+</tr>
+<tr>
+<td>PosePitchDegrees</td>
+<td>Pose Pitch Degrees</td>
+<td>Real</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Pitch, measured in degrees, for the center in the image. Value must be &gt;= -90 and &lt;= 90.</td>
+</tr>
+<tr>
+<td>PoseRollDegrees</td>
+<td>Pose Roll Degrees</td>
+<td>Real</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Roll, measured in degrees, of the image where level with the horizon is 0. Value must be &gt; -180 and &lt;= 180.</td>
+</tr>
+<tr>
+<td>InitialViewHeadingDegrees</td>
+<td>Initial View Heading Degrees</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The heading angle of the initial view in degrees.</td>
+</tr>
+<tr>
+<td>InitialViewPitchDegrees</td>
+<td>Initial View Pitch Degrees</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The pitch angle of the initial view in degrees.</td>
+</tr>
+<tr>
+<td>InitialViewRollDegrees</td>
+<td>Initial View Roll Degrees</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The roll angle of the initial view in degrees.</td>
+</tr>
+<tr>
+<td>InitialHorizontalFOVDegrees</td>
+<td>Initial Horizontal FOV Degrees</td>
+<td>Real</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The initial horizontal field of view that the viewer should display (in degrees). This is similar to a zoom level.</td>
+</tr>
+<tr>
+<td>FirstPhotoDate</td>
+<td>First Photo Date</td>
+<td>Date</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Date and time for the first image created in the panorama.</td>
+</tr>
+<tr>
+<td>LastPhotoDate</td>
+<td>Last Photo Date</td>
+<td>Date</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Date and time for the last image created in the panorama.</td>
+</tr>
+<tr>
+<td>SourcePhotosCount</td>
+<td>Source Photos Count</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Number of source images used to create the panorama</td>
+</tr>
+<tr>
+<td>ExposureLockUsed</td>
+<td>Exposure Lock Used</td>
+<td>Boolean</td>
+<td>XmpText</td>
+<td>External</td>
+<td>When individual source photographs were captured, whether or not the camera's exposure setting was locked.</td>
+</tr>
+<tr>
+<td>CroppedAreaImageWidthPixels</td>
+<td>Cropped Area Image Width Pixels</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Original width in pixels of the image (equal to the actual image's width for unedited images).</td>
+</tr>
+<tr>
+<td>CroppedAreaImageHeightPixels</td>
+<td>Cropped Area Image Height Pixels</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Original height in pixels of the image (equal to the actual image's height for unedited images).</td>
+</tr>
+<tr>
+<td>FullPanoWidthPixels</td>
+<td>Full Pano Width Pixels</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Original full panorama width from which the image was cropped. Or, if only a partial panorama was captured, this specifies the width of what the full panorama would have been.</td>
+</tr>
+<tr>
+<td>FullPanoHeightPixels</td>
+<td>Full Pano Height Pixels</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Original full panorama height from which the image was cropped. Or, if only a partial panorama was captured, this specifies the height of what the full panorama would have been.</td>
+</tr>
+<tr>
+<td>CroppedAreaLeftPixels</td>
+<td>Cropped Area Left Pixels</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Column where the left edge of the image was cropped from the full sized panorama.</td>
+</tr>
+<tr>
+<td>CroppedAreaTopPixels</td>
+<td>Cropped Area Top Pixels</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Row where the top edge of the image was cropped from the full sized panorama.</td>
+</tr>
+<tr>
+<td>InitialCameraDolly</td>
+<td>Initial Camera Dolly</td>
+<td>Real</td>
+<td>XmpText</td>
+<td>External</td>
+<td>This optional parameter moves the virtual camera position along the line of sight, away from the center of the photo sphere. A rear surface position is represented by the value -1.0, while a front surface position is represented by 1.0. For normal viewing, this parameter should be set to 0.</td>
+</tr>
+</tbody>
 </table>
 
 
@@ -126,8 +303,8 @@ Reference: <a href=" https://developers.google.com/photo-sphere/metadata/" title
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 21:42 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 21:42 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 22:06 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 22:06 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

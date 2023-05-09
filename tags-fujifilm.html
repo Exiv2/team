@@ -97,7 +97,736 @@
 <th>Type</th>
 <th>Tag description</th>
 </tr></thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>0x0000</td>
+<td>0</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.Version</td>
+<td>Undefined</td>
+<td>Fujifilm Makernote version</td>
+</tr>
+<tr>
+<td>0x0010</td>
+<td>16</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.SerialNumber</td>
+<td>Ascii</td>
+<td>This number is unique, and contains the date of manufacture, but is not the same as the number printed on the camera body.</td>
+</tr>
+<tr>
+<td>0x1000</td>
+<td>4096</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.Quality</td>
+<td>Ascii</td>
+<td>Image quality setting</td>
+</tr>
+<tr>
+<td>0x1001</td>
+<td>4097</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.Sharpness</td>
+<td>Short</td>
+<td>Sharpness setting</td>
+</tr>
+<tr>
+<td>0x1002</td>
+<td>4098</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.WhiteBalance</td>
+<td>Short</td>
+<td>White balance setting</td>
+</tr>
+<tr>
+<td>0x1003</td>
+<td>4099</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.Color</td>
+<td>Short</td>
+<td>Chroma saturation setting</td>
+</tr>
+<tr>
+<td>0x1004</td>
+<td>4100</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.Tone</td>
+<td>Short</td>
+<td>Tone (contrast) setting</td>
+</tr>
+<tr>
+<td>0x1005</td>
+<td>4101</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.ColorTemperature</td>
+<td>Short</td>
+<td>Color temperature setting</td>
+</tr>
+<tr>
+<td>0x1006</td>
+<td>4102</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.Contrast</td>
+<td>Short</td>
+<td>Contrast setting</td>
+</tr>
+<tr>
+<td>0x100a</td>
+<td>4106</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.WhiteBalanceFineTune</td>
+<td>SLong</td>
+<td>White balance fine tune setting</td>
+</tr>
+<tr>
+<td>0x100b</td>
+<td>4107</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.NoiseReduction</td>
+<td>Short</td>
+<td>Noise reduction setting</td>
+</tr>
+<tr>
+<td>0x100e</td>
+<td>4110</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.HighIsoNoiseReduction</td>
+<td>Short</td>
+<td>High ISO NR setting</td>
+</tr>
+<tr>
+<td>0x100f</td>
+<td>4111</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.Clarity</td>
+<td>SLong</td>
+<td>Clarity setting</td>
+</tr>
+<tr>
+<td>0x1010</td>
+<td>4112</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FlashMode</td>
+<td>Short</td>
+<td>Flash firing mode setting</td>
+</tr>
+<tr>
+<td>0x1011</td>
+<td>4113</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FlashStrength</td>
+<td>SRational</td>
+<td>Flash firing strength compensation setting</td>
+</tr>
+<tr>
+<td>0x1020</td>
+<td>4128</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.Macro</td>
+<td>Short</td>
+<td>Macro mode setting</td>
+</tr>
+<tr>
+<td>0x1021</td>
+<td>4129</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FocusMode</td>
+<td>Short</td>
+<td>Focusing mode setting</td>
+</tr>
+<tr>
+<td>0x1022</td>
+<td>4130</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FocusArea</td>
+<td>Short</td>
+<td>Focus area setting</td>
+</tr>
+<tr>
+<td>0x1023</td>
+<td>4131</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FocusPoint</td>
+<td>Short</td>
+<td>X and Y coordinate of focus point</td>
+</tr>
+<tr>
+<td>0x102b</td>
+<td>4139</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FocusPrioritySetting</td>
+<td>Short</td>
+<td>Focus priority setting</td>
+</tr>
+<tr>
+<td>0x102d</td>
+<td>4141</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FocusSetting</td>
+<td>Long</td>
+<td>Focus setting</td>
+</tr>
+<tr>
+<td>0x102e</td>
+<td>4142</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.ContinuousFocusSetting</td>
+<td>Long</td>
+<td>AF-C focus setting</td>
+</tr>
+<tr>
+<td>0x1030</td>
+<td>4144</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.SlowSync</td>
+<td>Short</td>
+<td>Slow synchro mode setting</td>
+</tr>
+<tr>
+<td>0x1031</td>
+<td>4145</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.PictureMode</td>
+<td>Short</td>
+<td>Picture mode setting</td>
+</tr>
+<tr>
+<td>0x1032</td>
+<td>4146</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.ExposureCount</td>
+<td>Short</td>
+<td>Number of exposures used for this image</td>
+</tr>
+<tr>
+<td>0x1033</td>
+<td>4147</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.EXRAuto</td>
+<td>Short</td>
+<td>EXR Auto</td>
+</tr>
+<tr>
+<td>0x1034</td>
+<td>4148</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.EXRMode</td>
+<td>Short</td>
+<td>EXR Auto</td>
+</tr>
+<tr>
+<td>0x1040</td>
+<td>4160</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.ShadowTone</td>
+<td>SLong</td>
+<td>Shadow tone</td>
+</tr>
+<tr>
+<td>0x1041</td>
+<td>4161</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.HighlightTone</td>
+<td>SLong</td>
+<td>Highlight tone</td>
+</tr>
+<tr>
+<td>0x1044</td>
+<td>4164</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.DigitalZoom</td>
+<td>Long</td>
+<td>Digital zoom</td>
+</tr>
+<tr>
+<td>0x1045</td>
+<td>4165</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.LensModulationOptimizer</td>
+<td>Long</td>
+<td>Lens modulation optimizer setting</td>
+</tr>
+<tr>
+<td>0x1047</td>
+<td>4167</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.GrainEffectRoughness</td>
+<td>SLong</td>
+<td>Grain effect roughness setting</td>
+</tr>
+<tr>
+<td>0x1048</td>
+<td>4168</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.ColorChromeEffect</td>
+<td>SLong</td>
+<td>Color Chrome Effect</td>
+</tr>
+<tr>
+<td>0x1049</td>
+<td>4169</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.MonochromaticColorWC</td>
+<td>Byte</td>
+<td>Monochromatic color (warm-cool) setting. High value results in warm color shift and low values in cold color shift.</td>
+</tr>
+<tr>
+<td>0x104b</td>
+<td>4171</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.MonochromaticColorMG</td>
+<td>Byte</td>
+<td>Monochromatic color (magenta-green) setting. High value results in magenta color shift and low values in green color shift.</td>
+</tr>
+<tr>
+<td>0x104c</td>
+<td>4172</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.GrainEffectSize</td>
+<td>Short</td>
+<td>Grain effect size setting</td>
+</tr>
+<tr>
+<td>0x104d</td>
+<td>4173</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.CropMode</td>
+<td>Short</td>
+<td>Crop mode</td>
+</tr>
+<tr>
+<td>0x104e</td>
+<td>4174</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.ColorChromeFXBlue</td>
+<td>SLong</td>
+<td>Color Chrome FX Blue</td>
+</tr>
+<tr>
+<td>0x1050</td>
+<td>4176</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.ShutterType</td>
+<td>Short</td>
+<td>Shutter type</td>
+</tr>
+<tr>
+<td>0x1100</td>
+<td>4352</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.Continuous</td>
+<td>Short</td>
+<td>Continuous shooting or auto bracketing setting</td>
+</tr>
+<tr>
+<td>0x1101</td>
+<td>4353</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.SequenceNumber</td>
+<td>Short</td>
+<td>Sequence number</td>
+</tr>
+<tr>
+<td>0x1103</td>
+<td>4355</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.DriveSetting</td>
+<td>Short</td>
+<td>Drive setting</td>
+</tr>
+<tr>
+<td>0x1105</td>
+<td>4357</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.PixelShiftShots</td>
+<td>Short</td>
+<td>Pixel shift shots</td>
+</tr>
+<tr>
+<td>0x1105</td>
+<td>4357</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.PixelShiftOfffset</td>
+<td>SRational</td>
+<td>Pixel shift offset</td>
+</tr>
+<tr>
+<td>0x1153</td>
+<td>4435</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.PanoramaAngle</td>
+<td>Short</td>
+<td>Panorama angle</td>
+</tr>
+<tr>
+<td>0x1154</td>
+<td>4436</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.PanoramaDirection</td>
+<td>Short</td>
+<td>Panorama direction</td>
+</tr>
+<tr>
+<td>0x1201</td>
+<td>4609</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.AdvancedFilter</td>
+<td>Long</td>
+<td>Advanced filter setting</td>
+</tr>
+<tr>
+<td>0x1210</td>
+<td>4624</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FinePixColor</td>
+<td>Short</td>
+<td>Fuji FinePix color setting</td>
+</tr>
+<tr>
+<td>0x1300</td>
+<td>4864</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.BlurWarning</td>
+<td>Short</td>
+<td>Blur warning status</td>
+</tr>
+<tr>
+<td>0x1301</td>
+<td>4865</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FocusWarning</td>
+<td>Short</td>
+<td>Auto Focus warning status</td>
+</tr>
+<tr>
+<td>0x1302</td>
+<td>4866</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.ExposureWarning</td>
+<td>Short</td>
+<td>Auto exposure warning status</td>
+</tr>
+<tr>
+<td>0x1400</td>
+<td>5120</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.DynamicRange</td>
+<td>Short</td>
+<td>Dynamic range</td>
+</tr>
+<tr>
+<td>0x1401</td>
+<td>5121</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FilmMode</td>
+<td>Short</td>
+<td>Film mode</td>
+</tr>
+<tr>
+<td>0x1402</td>
+<td>5122</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.DynamicRangeSetting</td>
+<td>Short</td>
+<td>Dynamic range settings</td>
+</tr>
+<tr>
+<td>0x1403</td>
+<td>5123</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.DevelopmentDynamicRange</td>
+<td>Short</td>
+<td>Development dynamic range</td>
+</tr>
+<tr>
+<td>0x1404</td>
+<td>5124</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.MinFocalLength</td>
+<td>Rational</td>
+<td>Minimum focal length</td>
+</tr>
+<tr>
+<td>0x1405</td>
+<td>5125</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.MaxFocalLength</td>
+<td>Rational</td>
+<td>Maximum focal length</td>
+</tr>
+<tr>
+<td>0x1406</td>
+<td>5126</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.MaxApertureAtMinFocal</td>
+<td>Rational</td>
+<td>Maximum aperture at minimum focal</td>
+</tr>
+<tr>
+<td>0x1407</td>
+<td>5127</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.MaxApertureAtMaxFocal</td>
+<td>Rational</td>
+<td>Maximum aperture at maximum focal</td>
+</tr>
+<tr>
+<td>0x140b</td>
+<td>5131</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.AutoDynamicRange</td>
+<td>Short</td>
+<td>Auto dynamic range</td>
+</tr>
+<tr>
+<td>0x1422</td>
+<td>5154</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.ImageStabilization</td>
+<td>Short</td>
+<td>Image stabilization</td>
+</tr>
+<tr>
+<td>0x1425</td>
+<td>5157</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.SceneRecognition</td>
+<td>Short</td>
+<td>Scene recognition</td>
+</tr>
+<tr>
+<td>0x1431</td>
+<td>5169</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.Rating</td>
+<td>Long</td>
+<td>Rating</td>
+</tr>
+<tr>
+<td>0x1436</td>
+<td>5174</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.ImageGeneration</td>
+<td>Short</td>
+<td>Image generation</td>
+</tr>
+<tr>
+<td>0x1438</td>
+<td>5176</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.ImageNumber</td>
+<td>Short</td>
+<td>Image Number</td>
+</tr>
+<tr>
+<td>0x1443</td>
+<td>5187</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.DRangePriority</td>
+<td>Short</td>
+<td>Dynamic range priority</td>
+</tr>
+<tr>
+<td>0x1444</td>
+<td>5188</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.DRangePriorityFixed</td>
+<td>Short</td>
+<td>Dynamic range priority fixed</td>
+</tr>
+<tr>
+<td>0x1445</td>
+<td>5189</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.DRangePriorityAuto</td>
+<td>Short</td>
+<td>Dynamic range priority auto</td>
+</tr>
+<tr>
+<td>0x4005</td>
+<td>16389</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FaceElementSelected</td>
+<td>Ascii</td>
+<td>Face element selected</td>
+</tr>
+<tr>
+<td>0x4100</td>
+<td>16640</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FacesDetected</td>
+<td>Ascii</td>
+<td>Faces detected</td>
+</tr>
+<tr>
+<td>0x4103</td>
+<td>16643</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FacePositions</td>
+<td>Ascii</td>
+<td>Left, top, right and bottom coordinates in full-sized image for each face detected</td>
+</tr>
+<tr>
+<td>0x4200</td>
+<td>16896</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.NumberFaceElements</td>
+<td>Ascii</td>
+<td>Number of face elements</td>
+</tr>
+<tr>
+<td>0x4201</td>
+<td>16897</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FaceElementTypes</td>
+<td>Ascii</td>
+<td>Type of every face element</td>
+</tr>
+<tr>
+<td>0x4203</td>
+<td>16899</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FaceElementPositions</td>
+<td>Ascii</td>
+<td>Left, top, right and bottom coordinates in full-sized image for each face element)</td>
+</tr>
+<tr>
+<td>0x4282</td>
+<td>17026</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FaceRecInfo</td>
+<td>Ascii</td>
+<td>Face Recognition Information</td>
+</tr>
+<tr>
+<td>0x8000</td>
+<td>32768</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FileSource</td>
+<td>Ascii</td>
+<td>File source</td>
+</tr>
+<tr>
+<td>0x8002</td>
+<td>32770</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.OrderNumber</td>
+<td>Long</td>
+<td>Order number</td>
+</tr>
+<tr>
+<td>0x8003</td>
+<td>32771</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FrameNumber</td>
+<td>Short</td>
+<td>Frame number</td>
+</tr>
+<tr>
+<td>0xf000</td>
+<td>61440</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.FujiIFD</td>
+<td>Undefined</td>
+<td>Fujifilm IFD</td>
+</tr>
+<tr>
+<td>0xf001</td>
+<td>61441</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.RawImageFullWidth</td>
+<td>Undefined</td>
+<td>Raw Image Full Width</td>
+</tr>
+<tr>
+<td>0xf002</td>
+<td>61442</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.RawImageFullHeight</td>
+<td>Undefined</td>
+<td>Raw Image Full Height</td>
+</tr>
+<tr>
+<td>0xf003</td>
+<td>61443</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.BitsPerSample</td>
+<td>Undefined</td>
+<td>Bits Per Sample</td>
+</tr>
+<tr>
+<td>0xf007</td>
+<td>61447</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.StripOffsets</td>
+<td>Undefined</td>
+<td>Strip Offsets</td>
+</tr>
+<tr>
+<td>0xf008</td>
+<td>61448</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.StripByteCounts</td>
+<td>Undefined</td>
+<td>Strip Byte Counts</td>
+</tr>
+<tr>
+<td>0xf00a</td>
+<td>61450</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.BlackLevel</td>
+<td>Undefined</td>
+<td>Black Level</td>
+</tr>
+<tr>
+<td>0xf00b</td>
+<td>61451</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.GeometricDistortionParams</td>
+<td>Undefined</td>
+<td>Geometric Distortion Params</td>
+</tr>
+<tr>
+<td>0xf00c</td>
+<td>61452</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.WB_GRBLevelsStandard</td>
+<td>Undefined</td>
+<td>WB GRB Levels Standard</td>
+</tr>
+<tr>
+<td>0xf00d</td>
+<td>61453</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.WB_GRBLevelsAuto</td>
+<td>Undefined</td>
+<td>WB GRB Levels Auto</td>
+</tr>
+<tr>
+<td>0xf00e</td>
+<td>61454</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.WB_GRBLevels</td>
+<td>Undefined</td>
+<td>WB GRB Levels</td>
+</tr>
+<tr>
+<td>0xf00f</td>
+<td>61455</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.ChromaticAberrationParams</td>
+<td>Undefined</td>
+<td>Chromatic Aberration Params</td>
+</tr>
+<tr>
+<td>0xf010</td>
+<td>61456</td>
+<td>Fujifilm</td>
+<td>Exif.Fujifilm.VignettingParams</td>
+<td>Undefined</td>
+<td>Vignetting Params</td>
+</tr>
+</tbody>
 </table>
 
 
@@ -112,8 +841,8 @@
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 21:42 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 21:42 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 22:06 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 22:06 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

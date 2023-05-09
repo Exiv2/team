@@ -106,7 +106,208 @@ Reference: <a href="http://www.adobe.com/devnet/xmp.html" title="XMP specificati
 <th>Category</th>
 <th>Description</th>
 </tr></thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>ImageWidth</td>
+<td>Image Width</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 256, 0x100. Image width in pixels.</td>
+</tr>
+<tr>
+<td>ImageLength</td>
+<td>Image Length</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 257, 0x101. Image height in pixels.</td>
+</tr>
+<tr>
+<td>BitsPerSample</td>
+<td>Bits Per Sample</td>
+<td>seq Integer</td>
+<td>XmpSeq</td>
+<td>Internal</td>
+<td>TIFF tag 258, 0x102. Number of bits per component in each channel.</td>
+</tr>
+<tr>
+<td>Compression</td>
+<td>Compression</td>
+<td>Closed Choice of Integer</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 259, 0x103. Compression scheme: 1 = uncompressed; 6 = JPEG.</td>
+</tr>
+<tr>
+<td>PhotometricInterpretation</td>
+<td>Photometric Interpretation</td>
+<td>Closed Choice of Integer</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 262, 0x106. Pixel Composition: 2 = RGB; 6 = YCbCr.</td>
+</tr>
+<tr>
+<td>Orientation</td>
+<td>Orientation</td>
+<td>Closed Choice of Integer</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 274, 0x112. Orientation:1 = 0th row at top, 0th column at left 2 = 0th row at top, 0th column at right 3 = 0th row at bottom, 0th column at right 4 = 0th row at bottom, 0th column at left 5 = 0th row at left, 0th column at top 6 = 0th row at right, 0th column at top 7 = 0th row at right, 0th column at bottom 8 = 0th row at left, 0th column at bottom</td>
+</tr>
+<tr>
+<td>SamplesPerPixel</td>
+<td>Samples Per Pixel</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 277, 0x115. Number of components per pixel.</td>
+</tr>
+<tr>
+<td>PlanarConfiguration</td>
+<td>Planar Configuration</td>
+<td>Closed Choice of Integer</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 284, 0x11C. Data layout:1 = chunky; 2 = planar.</td>
+</tr>
+<tr>
+<td>YCbCrSubSampling</td>
+<td>YCbCr Sub Sampling</td>
+<td>Closed Choice of seq Integer</td>
+<td>XmpSeq</td>
+<td>Internal</td>
+<td>TIFF tag 530, 0x212. Sampling ratio of chrominance components: [2, 1] = YCbCr4:2:2; [2, 2] = YCbCr4:2:0</td>
+</tr>
+<tr>
+<td>YCbCrPositioning</td>
+<td>YCbCr Positioning</td>
+<td>Closed Choice of Integer</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 531, 0x213. Position of chrominance vs. luminance components: 1 = centered; 2 = co-sited.</td>
+</tr>
+<tr>
+<td>XResolution</td>
+<td>X Resolution</td>
+<td>Rational</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 282, 0x11A. Horizontal resolution in pixels per unit.</td>
+</tr>
+<tr>
+<td>YResolution</td>
+<td>Y Resolution</td>
+<td>Rational</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 283, 0x11B. Vertical resolution in pixels per unit.</td>
+</tr>
+<tr>
+<td>ResolutionUnit</td>
+<td>Resolution Unit</td>
+<td>Closed Choice of Integer</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 296, 0x128. Unit used for XResolution and YResolution. Value is one of: 2 = inches; 3 = centimeters.</td>
+</tr>
+<tr>
+<td>TransferFunction</td>
+<td>Transfer Function</td>
+<td>seq Integer</td>
+<td>XmpSeq</td>
+<td>Internal</td>
+<td>TIFF tag 301, 0x12D. Transfer function for image described in tabular style with 3 * 256 entries.</td>
+</tr>
+<tr>
+<td>WhitePoint</td>
+<td>White Point</td>
+<td>seq Rational</td>
+<td>XmpSeq</td>
+<td>Internal</td>
+<td>TIFF tag 318, 0x13E. Chromaticity of white point.</td>
+</tr>
+<tr>
+<td>PrimaryChromaticities</td>
+<td>Primary Chromaticities</td>
+<td>seq Rational</td>
+<td>XmpSeq</td>
+<td>Internal</td>
+<td>TIFF tag 319, 0x13F. Chromaticity of the three primary colors.</td>
+</tr>
+<tr>
+<td>YCbCrCoefficients</td>
+<td>YCbCr Coefficients</td>
+<td>seq Rational</td>
+<td>XmpSeq</td>
+<td>Internal</td>
+<td>TIFF tag 529, 0x211. Matrix coefficients for RGB to YCbCr transformation.</td>
+</tr>
+<tr>
+<td>ReferenceBlackWhite</td>
+<td>Reference Black White</td>
+<td>seq Rational</td>
+<td>XmpSeq</td>
+<td>Internal</td>
+<td>TIFF tag 532, 0x214. Reference black and white point values.</td>
+</tr>
+<tr>
+<td>DateTime</td>
+<td>Date and Time</td>
+<td>Date</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 306, 0x132 (primary) and EXIF tag 37520, 0x9290 (subseconds). Date and time of image creation (no time zone in EXIF), stored in ISO 8601 format, not the original EXIF format. This property includes the value for the EXIF SubSecTime attribute. NOTE: This property is stored in XMP as xmp:ModifyDate.</td>
+</tr>
+<tr>
+<td>ImageDescription</td>
+<td>Image Description</td>
+<td>Lang Alt</td>
+<td>LangAlt</td>
+<td>External</td>
+<td>TIFF tag 270, 0x10E. Description of the image. Note: This property is stored in XMP as dc:description.</td>
+</tr>
+<tr>
+<td>Make</td>
+<td>Make</td>
+<td>ProperName</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 271, 0x10F. Manufacturer of recording equipment.</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>Model</td>
+<td>ProperName</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 272, 0x110. Model name or number of equipment.</td>
+</tr>
+<tr>
+<td>Software</td>
+<td>Software</td>
+<td>AgentName</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>TIFF tag 305, 0x131. Software or firmware used to generate image. Note: This property is stored in XMP as xmp:CreatorTool.</td>
+</tr>
+<tr>
+<td>Artist</td>
+<td>Artist</td>
+<td>ProperName</td>
+<td>XmpText</td>
+<td>External</td>
+<td>TIFF tag 315, 0x13B. Camera owner, photographer or image creator. Note: This property is stored in XMP as the first item in the dc:creator array.</td>
+</tr>
+<tr>
+<td>Copyright</td>
+<td>Copyright</td>
+<td>Lang Alt</td>
+<td>LangAlt</td>
+<td>External</td>
+<td>TIFF tag 33432, 0x8298. Copyright information. Note: This property is stored in XMP as dc:rights.</td>
+</tr>
+</tbody>
 </table>
 
 
@@ -121,8 +322,8 @@ Reference: <a href="http://www.adobe.com/devnet/xmp.html" title="XMP specificati
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 21:42 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 21:42 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 22:06 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 22:06 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

@@ -111,7 +111,160 @@ Reference: <a href="http://www.adobe.com/devnet/xmp.html" title="XMP specificati
 <th>Category</th>
 <th>Description</th>
 </tr></thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>DerivedFrom</td>
+<td>Derived From</td>
+<td>ResourceRef</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>A reference to the original document from which this one is derived. It is a minimal reference; missing components can be assumed to be unchanged. For example, a new version might only need to specify the instance ID and version number of the previous version, or a rendition might only need to specify the instance ID and rendition class of the original.</td>
+</tr>
+<tr>
+<td>DocumentID</td>
+<td>Document ID</td>
+<td>URI</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The common identifier for all versions and renditions of a document. It should be based on a UUID; see Document and Instance IDs below.</td>
+</tr>
+<tr>
+<td>History</td>
+<td>History</td>
+<td>seq ResourceEvent</td>
+<td>XmpSeq</td>
+<td>Internal</td>
+<td>An ordered array of high-level user actions that resulted in this resource. It is intended to give human readers a general indication of the steps taken to make the changes from the previous version to this one. The list should be at an abstract level; it is not intended to be an exhaustive keystroke or other detailed history.</td>
+</tr>
+<tr>
+<td>Ingredients</td>
+<td>Ingredients</td>
+<td>bag ResourceRef</td>
+<td>XmpBag</td>
+<td>Internal</td>
+<td>References to resources that were incorporated, by inclusion or reference, into this resource.</td>
+</tr>
+<tr>
+<td>InstanceID</td>
+<td>Instance ID</td>
+<td>URI</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>An identifier for a specific incarnation of a document, updated each time a file is saved. It should be based on a UUID; see Document and Instance IDs below.</td>
+</tr>
+<tr>
+<td>ManagedFrom</td>
+<td>Managed From</td>
+<td>ResourceRef</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>A reference to the document as it was prior to becoming managed. It is set when a managed document is introduced to an asset management system that does not currently own it. It may or may not include references to different management systems.</td>
+</tr>
+<tr>
+<td>Manager</td>
+<td>Manager</td>
+<td>AgentName</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The name of the asset management system that manages this resource. Along with xmpMM: ManagerVariant, it tells applications which asset management system to contact concerning this document.</td>
+</tr>
+<tr>
+<td>ManageTo</td>
+<td>Manage To</td>
+<td>URI</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>A URI identifying the managed resource to the asset management system; the presence of this property is the formal indication that this resource is managed. The form and content of this URI is private to the asset management system.</td>
+</tr>
+<tr>
+<td>ManageUI</td>
+<td>Manage UI</td>
+<td>URI</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>A URI that can be used to access information about the managed resource through a web browser. It might require a custom browser plug-in.</td>
+</tr>
+<tr>
+<td>ManagerVariant</td>
+<td>Manager Variant</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Specifies a particular variant of the asset management system. The format of this property is private to the specific asset management system.</td>
+</tr>
+<tr>
+<td>OriginalDocumentID</td>
+<td>Original Document ID</td>
+<td>URI</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Refer to Part 1, Data Model, Serialization, and Core Properties, for definition.</td>
+</tr>
+<tr>
+<td>Pantry</td>
+<td>Pantry</td>
+<td>bag struct</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Each array item has a structure value with a potentially unique set of fields, containing extracted XMP from a component. Each field is a property from the XMP of a contained resource component, with all substructure preserved. Each pantry entry shall contain an xmpMM:InstanceID. Only one copy of the pantry entry for any given xmpMM:InstanceID shall be retained in the pantry. Nested pantry items shall be removed from the individual pantry item and promoted to the top level of the pantry.</td>
+</tr>
+<tr>
+<td>RenditionClass</td>
+<td>Rendition Class</td>
+<td>RenditionClass</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The rendition class name for this resource. This property should be absent or set to default for a document version that is not a derived rendition.</td>
+</tr>
+<tr>
+<td>RenditionParams</td>
+<td>Rendition Params</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Can be used to provide additional rendition parameters that are too complex or verbose to encode in xmpMM: RenditionClass.</td>
+</tr>
+<tr>
+<td>VersionID</td>
+<td>Version ID</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The document version identifier for this resource. Each version of a document gets a new identifier, usually simply by incrementing integers 1, 2, 3 . . . and so on. Media management systems can have other conventions or support branching which requires a more complex scheme.</td>
+</tr>
+<tr>
+<td>Versions</td>
+<td>Versions</td>
+<td>seq Version</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>The version history associated with this resource. Entry [1] is the oldest known version for this document, entry [last()] is the most recent version. Typically, a media management system would fill in the version information in the metadata on check-in. It is not guaranteed that a complete history  versions from the first to this one will be present in the xmpMM:Versions property. Interior version information can be compressed or eliminated and the version history can be truncated at some point.</td>
+</tr>
+<tr>
+<td>LastURL</td>
+<td>Last URL</td>
+<td>URL</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Deprecated for privacy protection.</td>
+</tr>
+<tr>
+<td>RenditionOf</td>
+<td>Rendition Of</td>
+<td>ResourceRef</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Deprecated in favor of xmpMM:DerivedFrom. A reference to the document of which this is a rendition.</td>
+</tr>
+<tr>
+<td>SaveID</td>
+<td>Save ID</td>
+<td>Integer</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Deprecated. Previously used only to support the xmpMM:LastURL property.</td>
+</tr>
+</tbody>
 </table>
 
 </div><!-- /.container -->
@@ -125,8 +278,8 @@ Reference: <a href="http://www.adobe.com/devnet/xmp.html" title="XMP specificati
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 21:42 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 21:42 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 22:06 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 22:06 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

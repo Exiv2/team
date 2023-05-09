@@ -104,7 +104,88 @@ Reference: <a href="http://www.metadataworkinggroup.org/pdf/mwg_guidance.pdf" ti
 <th>Category</th>
 <th>Description</th>
 </tr></thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>Regions</td>
+<td>Regions</td>
+<td>RegionInfo</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Main structure containing region based information</td>
+</tr>
+<tr>
+<td>AppliedToDimensions</td>
+<td>Applied To Dimensions</td>
+<td>Dimensions</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Width and height of image when storing region data</td>
+</tr>
+<tr>
+<td>RegionList</td>
+<td>Region List</td>
+<td>bag RegionStruct</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>List of Region structures</td>
+</tr>
+<tr>
+<td>Area</td>
+<td>Area</td>
+<td>Area</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Descriptive markers of catalog items by content</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Type</td>
+<td>closed Choice of Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Type purpose of region (Face|Pet|Focus|BarCode)</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Name</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Name/ short description of content in image region</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Description</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Usage scenario for a given focus area (EvaluatedUsed|EvaluatedNotUsed|NotEvaluatedNotUsed)</td>
+</tr>
+<tr>
+<td>FocusUsage</td>
+<td>Focus Usage</td>
+<td>closed Choice of Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Descriptive markers of catalog items by content</td>
+</tr>
+<tr>
+<td>BarCodeValue</td>
+<td>Bar Code Value</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Decoded BarCode value string</td>
+</tr>
+<tr>
+<td>Extensions</td>
+<td>Extensions</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>Internal</td>
+<td>Any top level XMP property to describe the region content</td>
+</tr>
+</tbody>
 </table>
 
 
@@ -119,8 +200,8 @@ Reference: <a href="http://www.metadataworkinggroup.org/pdf/mwg_guidance.pdf" ti
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 21:42 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 21:42 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 22:06 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 22:06 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

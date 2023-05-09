@@ -102,7 +102,789 @@
 <th>Max. bytes</th>
 <th>Tag description</th>
 </tr></thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>0x0000</td>
+<td>0</td>
+<td>Iptc.Envelope.ModelVersion</td>
+<td>Short</td>
+<td>Yes</td>
+<td>No</td>
+<td>2</td>
+<td>2</td>
+<td>A binary number identifying the version of the Information Interchange Model, Part I, utilised by the provider. Version numbers are assigned by IPTC and NAA organizations.</td>
+</tr>
+<tr>
+<td>0x0005</td>
+<td>5</td>
+<td>Iptc.Envelope.Destination</td>
+<td>String</td>
+<td>No</td>
+<td>Yes</td>
+<td>0</td>
+<td>1024</td>
+<td>This DataSet is to accommodate some providers who require routing information above the appropriate OSI layers.</td>
+</tr>
+<tr>
+<td>0x0014</td>
+<td>20</td>
+<td>Iptc.Envelope.FileFormat</td>
+<td>Short</td>
+<td>Yes</td>
+<td>No</td>
+<td>2</td>
+<td>2</td>
+<td>A binary number representing the file format. The file format must be registered with IPTC or NAA with a unique number assigned to it. The information is used to route the data to the appropriate system and to allow the receiving system to perform the appropriate actions there to.</td>
+</tr>
+<tr>
+<td>0x0016</td>
+<td>22</td>
+<td>Iptc.Envelope.FileVersion</td>
+<td>Short</td>
+<td>Yes</td>
+<td>No</td>
+<td>2</td>
+<td>2</td>
+<td>A binary number representing the particular version of the File Format specified by &lt;FileFormat&gt; tag.</td>
+</tr>
+<tr>
+<td>0x001e</td>
+<td>30</td>
+<td>Iptc.Envelope.ServiceId</td>
+<td>String</td>
+<td>Yes</td>
+<td>No</td>
+<td>0</td>
+<td>10</td>
+<td>Identifies the provider and product</td>
+</tr>
+<tr>
+<td>0x0028</td>
+<td>40</td>
+<td>Iptc.Envelope.EnvelopeNumber</td>
+<td>String</td>
+<td>Yes</td>
+<td>No</td>
+<td>8</td>
+<td>8</td>
+<td>The characters form a number that will be unique for the date specified in &lt;DateSent&gt; tag and for the Service Identifier specified by &lt;ServiceIdentifier&gt; tag. If identical envelope numbers appear with the same date and with the same Service Identifier, records 2-9 must be unchanged from the original. This is not intended to be a sequential serial number reception check.</td>
+</tr>
+<tr>
+<td>0x0032</td>
+<td>50</td>
+<td>Iptc.Envelope.ProductId</td>
+<td>String</td>
+<td>No</td>
+<td>Yes</td>
+<td>0</td>
+<td>32</td>
+<td>Allows a provider to identify subsets of its overall service. Used to provide receiving organisation data on which to select, route, or otherwise handle data.</td>
+</tr>
+<tr>
+<td>0x003c</td>
+<td>60</td>
+<td>Iptc.Envelope.EnvelopePriority</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>1</td>
+<td>1</td>
+<td>Specifies the envelope handling priority and not the editorial urgency (see &lt;Urgency&gt; tag). "1" indicates the most urgent, "5" the normal urgency, and "8" the least urgent copy. The numeral "9" indicates a User Defined Priority. The numeral "0" is reserved for future use.</td>
+</tr>
+<tr>
+<td>0x0046</td>
+<td>70</td>
+<td>Iptc.Envelope.DateSent</td>
+<td>Date</td>
+<td>Yes</td>
+<td>No</td>
+<td>8</td>
+<td>8</td>
+<td>Uses the format CCYYMMDD (century, year, month, day) as de-fined in ISO 8601 to indicate year, month and day the service sent the material.</td>
+</tr>
+<tr>
+<td>0x0050</td>
+<td>80</td>
+<td>Iptc.Envelope.TimeSent</td>
+<td>Time</td>
+<td>No</td>
+<td>No</td>
+<td>11</td>
+<td>11</td>
+<td>Uses the format HHMMSS:HHMM where HHMMSS refers to local hour, minute and seconds and HHMM refers to hours and minutes ahead (+) or behind (-) Universal Coordinated Time as described in ISO 8601. This is the time the service sent the material.</td>
+</tr>
+<tr>
+<td>0x005a</td>
+<td>90</td>
+<td>Iptc.Envelope.CharacterSet</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>32</td>
+<td>This tag consisting of one or more control functions used for the announcement, invocation or designation of coded character sets. The control functions follow the ISO 2022 standard and may consist of the escape control character and one or more graphic characters.</td>
+</tr>
+<tr>
+<td>0x0064</td>
+<td>100</td>
+<td>Iptc.Envelope.UNO</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>14</td>
+<td>80</td>
+<td>This tag provide a globally unique identification for objects as specified in the IIM, independent of provider and for any media form. The provider must ensure the UNO is unique. Objects with the same UNO are identical.</td>
+</tr>
+<tr>
+<td>0x0078</td>
+<td>120</td>
+<td>Iptc.Envelope.ARMId</td>
+<td>Short</td>
+<td>No</td>
+<td>No</td>
+<td>2</td>
+<td>2</td>
+<td>The DataSet identifies the Abstract Relationship Method identifier (ARM) which is described in a document registered by the originator of the ARM with the IPTC and NAA organizations.</td>
+</tr>
+<tr>
+<td>0x007a</td>
+<td>122</td>
+<td>Iptc.Envelope.ARMVersion</td>
+<td>Short</td>
+<td>No</td>
+<td>No</td>
+<td>2</td>
+<td>2</td>
+<td>This tag consisting of a binary number representing the particular version of the ARM specified by tag &lt;ARMId&gt;.</td>
+</tr>
+<tr>
+<td>0x0000</td>
+<td>0</td>
+<td>Iptc.Application2.RecordVersion</td>
+<td>Short</td>
+<td>Yes</td>
+<td>No</td>
+<td>2</td>
+<td>2</td>
+<td>A binary number identifying the version of the Information Interchange Model, Part II, utilised by the provider. Version numbers are assigned by IPTC and NAA organizations.</td>
+</tr>
+<tr>
+<td>0x0003</td>
+<td>3</td>
+<td>Iptc.Application2.ObjectType</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>3</td>
+<td>67</td>
+<td>The Object Type is used to distinguish between different types of objects within the IIM. The first part is a number representing a language independent international reference to an Object Type followed by a colon separator. The second part, if used, is a text representation of the Object Type Number consisting of graphic characters plus spaces either in English or in the language of the service as indicated in tag &lt;LanguageIdentifier&gt;</td>
+</tr>
+<tr>
+<td>0x0004</td>
+<td>4</td>
+<td>Iptc.Application2.ObjectAttribute</td>
+<td>String</td>
+<td>No</td>
+<td>Yes</td>
+<td>4</td>
+<td>68</td>
+<td>The Object Attribute defines the nature of the object independent of the Subject. The first part is a number representing a language independent international reference to an Object Attribute followed by a colon separator. The second part, if used, is a text representation of the Object Attribute Number consisting of graphic characters plus spaces either in English, or in the language of the service as indicated in tag &lt;LanguageIdentifier&gt;</td>
+</tr>
+<tr>
+<td>0x0005</td>
+<td>5</td>
+<td>Iptc.Application2.ObjectName</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>64</td>
+<td>Used as a shorthand reference for the object. Changes to exist-ing data, such as updated stories or new crops on photos, should be identified in tag &lt;EditStatus&gt;.</td>
+</tr>
+<tr>
+<td>0x0007</td>
+<td>7</td>
+<td>Iptc.Application2.EditStatus</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>64</td>
+<td>Status of the object data, according to the practice of the provider.</td>
+</tr>
+<tr>
+<td>0x0008</td>
+<td>8</td>
+<td>Iptc.Application2.EditorialUpdate</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>2</td>
+<td>2</td>
+<td>Indicates the type of update that this object provides to a previous object. The link to the previous object is made using the tags &lt;ARMIdentifier&gt; and &lt;ARMVersion&gt;, according to the practices of the provider.</td>
+</tr>
+<tr>
+<td>0x000a</td>
+<td>10</td>
+<td>Iptc.Application2.Urgency</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>1</td>
+<td>1</td>
+<td>Specifies the editorial urgency of content and not necessarily the envelope handling priority (see tag &lt;EnvelopePriority&gt;). The "1" is most urgent, "5" normal and "8" denotes the least-urgent copy.</td>
+</tr>
+<tr>
+<td>0x000c</td>
+<td>12</td>
+<td>Iptc.Application2.Subject</td>
+<td>String</td>
+<td>No</td>
+<td>Yes</td>
+<td>13</td>
+<td>236</td>
+<td>The Subject Reference is a structured definition of the subject matter.</td>
+</tr>
+<tr>
+<td>0x000f</td>
+<td>15</td>
+<td>Iptc.Application2.Category</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>3</td>
+<td>Identifies the subject of the object data in the opinion of the provider. A list of categories will be maintained by a regional registry, where available, otherwise by the provider.</td>
+</tr>
+<tr>
+<td>0x0014</td>
+<td>20</td>
+<td>Iptc.Application2.SuppCategory</td>
+<td>String</td>
+<td>No</td>
+<td>Yes</td>
+<td>0</td>
+<td>32</td>
+<td>Supplemental categories further refine the subject of an object data. A supplemental category may include any of the recognised categories as used in tag &lt;Category&gt;. Otherwise, selection of supplemental categories are left to the provider.</td>
+</tr>
+<tr>
+<td>0x0016</td>
+<td>22</td>
+<td>Iptc.Application2.FixtureId</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>32</td>
+<td>Identifies object data that recurs often and predictably. Enables users to immediately find or recall such an object.</td>
+</tr>
+<tr>
+<td>0x0019</td>
+<td>25</td>
+<td>Iptc.Application2.Keywords</td>
+<td>String</td>
+<td>No</td>
+<td>Yes</td>
+<td>0</td>
+<td>64</td>
+<td>Used to indicate specific information retrieval words. It is expected that a provider of various types of data that are related in subject matter uses the same keyword, enabling the receiving system or subsystems to search across all types of data for related material.</td>
+</tr>
+<tr>
+<td>0x001a</td>
+<td>26</td>
+<td>Iptc.Application2.LocationCode</td>
+<td>String</td>
+<td>No</td>
+<td>Yes</td>
+<td>3</td>
+<td>3</td>
+<td>Indicates the code of a country/geographical location referenced by the content of the object. Where ISO has established an appropriate country code under ISO 3166, that code will be used. When ISO 3166 does not adequately provide for identification of a location or a country, e.g. ships at sea, space, IPTC will assign an appropriate three-character code under the provisions of ISO 3166 to avoid conflicts.</td>
+</tr>
+<tr>
+<td>0x001b</td>
+<td>27</td>
+<td>Iptc.Application2.LocationName</td>
+<td>String</td>
+<td>No</td>
+<td>Yes</td>
+<td>0</td>
+<td>64</td>
+<td>Provides a full, publishable name of a country/geographical location referenced by the content of the object, according to guidelines of the provider.</td>
+</tr>
+<tr>
+<td>0x001e</td>
+<td>30</td>
+<td>Iptc.Application2.ReleaseDate</td>
+<td>Date</td>
+<td>No</td>
+<td>No</td>
+<td>8</td>
+<td>8</td>
+<td>Designates in the form CCYYMMDD the earliest date the provider intends the object to be used. Follows ISO 8601 standard.</td>
+</tr>
+<tr>
+<td>0x0023</td>
+<td>35</td>
+<td>Iptc.Application2.ReleaseTime</td>
+<td>Time</td>
+<td>No</td>
+<td>No</td>
+<td>11</td>
+<td>11</td>
+<td>Designates in the form HHMMSS:HHMM the earliest time the provider intends the object to be used. Follows ISO 8601 standard.</td>
+</tr>
+<tr>
+<td>0x0025</td>
+<td>37</td>
+<td>Iptc.Application2.ExpirationDate</td>
+<td>Date</td>
+<td>No</td>
+<td>No</td>
+<td>8</td>
+<td>8</td>
+<td>Designates in the form CCYYMMDD the latest date the provider or owner intends the object data to be used. Follows ISO 8601 standard.</td>
+</tr>
+<tr>
+<td>0x0026</td>
+<td>38</td>
+<td>Iptc.Application2.ExpirationTime</td>
+<td>Time</td>
+<td>No</td>
+<td>No</td>
+<td>11</td>
+<td>11</td>
+<td>Designates in the form HHMMSS:HHMM the latest time the provider or owner intends the object data to be used. Follows ISO 8601 standard.</td>
+</tr>
+<tr>
+<td>0x0028</td>
+<td>40</td>
+<td>Iptc.Application2.SpecialInstructions</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>256</td>
+<td>Other editorial instructions concerning the use of the object data, such as embargoes and warnings.</td>
+</tr>
+<tr>
+<td>0x002a</td>
+<td>42</td>
+<td>Iptc.Application2.ActionAdvised</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>2</td>
+<td>2</td>
+<td>Indicates the type of action that this object provides to a previous object. The link to the previous object is made using tags &lt;ARMIdentifier&gt; and &lt;ARMVersion&gt;, according to the practices of the provider.</td>
+</tr>
+<tr>
+<td>0x002d</td>
+<td>45</td>
+<td>Iptc.Application2.ReferenceService</td>
+<td>String</td>
+<td>No</td>
+<td>Yes</td>
+<td>0</td>
+<td>10</td>
+<td>Identifies the Service Identifier of a prior envelope to which the current object refers.</td>
+</tr>
+<tr>
+<td>0x002f</td>
+<td>47</td>
+<td>Iptc.Application2.ReferenceDate</td>
+<td>Date</td>
+<td>No</td>
+<td>Yes</td>
+<td>8</td>
+<td>8</td>
+<td>Identifies the date of a prior envelope to which the current object refers.</td>
+</tr>
+<tr>
+<td>0x0032</td>
+<td>50</td>
+<td>Iptc.Application2.ReferenceNumber</td>
+<td>String</td>
+<td>No</td>
+<td>Yes</td>
+<td>8</td>
+<td>8</td>
+<td>Identifies the Envelope Number of a prior envelope to which the current object refers.</td>
+</tr>
+<tr>
+<td>0x0037</td>
+<td>55</td>
+<td>Iptc.Application2.DateCreated</td>
+<td>Date</td>
+<td>No</td>
+<td>No</td>
+<td>8</td>
+<td>8</td>
+<td>Represented in the form CCYYMMDD to designate the date the intellectual content of the object data was created rather than the date of the creation of the physical representation. Follows ISO 8601 standard.</td>
+</tr>
+<tr>
+<td>0x003c</td>
+<td>60</td>
+<td>Iptc.Application2.TimeCreated</td>
+<td>Time</td>
+<td>No</td>
+<td>No</td>
+<td>11</td>
+<td>11</td>
+<td>Represented in the form HHMMSS:HHMM to designate the time the intellectual content of the object data current source material was created rather than the creation of the physical representation. Follows ISO 8601 standard.</td>
+</tr>
+<tr>
+<td>0x003e</td>
+<td>62</td>
+<td>Iptc.Application2.DigitizationDate</td>
+<td>Date</td>
+<td>No</td>
+<td>No</td>
+<td>8</td>
+<td>8</td>
+<td>Represented in the form CCYYMMDD to designate the date the digital representation of the object data was created. Follows ISO 8601 standard.</td>
+</tr>
+<tr>
+<td>0x003f</td>
+<td>63</td>
+<td>Iptc.Application2.DigitizationTime</td>
+<td>Time</td>
+<td>No</td>
+<td>No</td>
+<td>11</td>
+<td>11</td>
+<td>Represented in the form HHMMSS:HHMM to designate the time the digital representation of the object data was created. Follows ISO 8601 standard.</td>
+</tr>
+<tr>
+<td>0x0041</td>
+<td>65</td>
+<td>Iptc.Application2.Program</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>32</td>
+<td>Identifies the type of program used to originate the object data.</td>
+</tr>
+<tr>
+<td>0x0046</td>
+<td>70</td>
+<td>Iptc.Application2.ProgramVersion</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>10</td>
+<td>Used to identify the version of the program mentioned in tag &lt;Program&gt;.</td>
+</tr>
+<tr>
+<td>0x004b</td>
+<td>75</td>
+<td>Iptc.Application2.ObjectCycle</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>1</td>
+<td>1</td>
+<td>Used to identify the editorial cycle of object data.</td>
+</tr>
+<tr>
+<td>0x0050</td>
+<td>80</td>
+<td>Iptc.Application2.Byline</td>
+<td>String</td>
+<td>No</td>
+<td>Yes</td>
+<td>0</td>
+<td>32</td>
+<td>Contains name of the creator of the object data, e.g. writer, photographer or graphic artist.</td>
+</tr>
+<tr>
+<td>0x0055</td>
+<td>85</td>
+<td>Iptc.Application2.BylineTitle</td>
+<td>String</td>
+<td>No</td>
+<td>Yes</td>
+<td>0</td>
+<td>32</td>
+<td>A by-line title is the title of the creator or creators of an object data. Where used, a by-line title should follow the by-line it modifies.</td>
+</tr>
+<tr>
+<td>0x005a</td>
+<td>90</td>
+<td>Iptc.Application2.City</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>32</td>
+<td>Identifies city of object data origin according to guidelines established by the provider.</td>
+</tr>
+<tr>
+<td>0x005c</td>
+<td>92</td>
+<td>Iptc.Application2.SubLocation</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>32</td>
+<td>Identifies the location within a city from which the object data originates, according to guidelines established by the provider.</td>
+</tr>
+<tr>
+<td>0x005f</td>
+<td>95</td>
+<td>Iptc.Application2.ProvinceState</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>32</td>
+<td>Identifies Province/State of origin according to guidelines established by the provider.</td>
+</tr>
+<tr>
+<td>0x0064</td>
+<td>100</td>
+<td>Iptc.Application2.CountryCode</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>3</td>
+<td>3</td>
+<td>Indicates the code of the country/primary location where the intellectual property of the object data was created, e.g. a photo was taken, an event occurred. Where ISO has established an appropriate country code under ISO 3166, that code will be used. When ISO 3166 does not adequately provide for identification of a location or a new country, e.g. ships at sea, space, IPTC will assign an appropriate three-character code under the provisions of ISO 3166 to avoid conflicts.</td>
+</tr>
+<tr>
+<td>0x0065</td>
+<td>101</td>
+<td>Iptc.Application2.CountryName</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>64</td>
+<td>Provides full, publishable, name of the country/primary location where the intellectual property of the object data was created, according to guidelines of the provider.</td>
+</tr>
+<tr>
+<td>0x0067</td>
+<td>103</td>
+<td>Iptc.Application2.TransmissionReference</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>32</td>
+<td>A code representing the location of original transmission according to practices of the provider.</td>
+</tr>
+<tr>
+<td>0x0069</td>
+<td>105</td>
+<td>Iptc.Application2.Headline</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>256</td>
+<td>A publishable entry providing a synopsis of the contents of the object data.</td>
+</tr>
+<tr>
+<td>0x006e</td>
+<td>110</td>
+<td>Iptc.Application2.Credit</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>32</td>
+<td>Identifies the provider of the object data, not necessarily the owner/creator.</td>
+</tr>
+<tr>
+<td>0x0073</td>
+<td>115</td>
+<td>Iptc.Application2.Source</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>32</td>
+<td>Identifies the original owner of the intellectual content of the object data. This could be an agency, a member of an agency or an individual.</td>
+</tr>
+<tr>
+<td>0x0074</td>
+<td>116</td>
+<td>Iptc.Application2.Copyright</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>128</td>
+<td>Contains any necessary copyright notice.</td>
+</tr>
+<tr>
+<td>0x0076</td>
+<td>118</td>
+<td>Iptc.Application2.Contact</td>
+<td>String</td>
+<td>No</td>
+<td>Yes</td>
+<td>0</td>
+<td>128</td>
+<td>Identifies the person or organisation which can provide further background information on the object data.</td>
+</tr>
+<tr>
+<td>0x0078</td>
+<td>120</td>
+<td>Iptc.Application2.Caption</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>2000</td>
+<td>A textual description of the object data.</td>
+</tr>
+<tr>
+<td>0x007a</td>
+<td>122</td>
+<td>Iptc.Application2.Writer</td>
+<td>String</td>
+<td>No</td>
+<td>Yes</td>
+<td>0</td>
+<td>32</td>
+<td>Identification of the name of the person involved in the writing, editing or correcting the object data or caption/abstract.</td>
+</tr>
+<tr>
+<td>0x007d</td>
+<td>125</td>
+<td>Iptc.Application2.RasterizedCaption</td>
+<td>Undefined</td>
+<td>No</td>
+<td>No</td>
+<td>7360</td>
+<td>7360</td>
+<td>Contains the rasterized object data description and is used where characters that have not been coded are required for the caption.</td>
+</tr>
+<tr>
+<td>0x0082</td>
+<td>130</td>
+<td>Iptc.Application2.ImageType</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>2</td>
+<td>2</td>
+<td>Indicates the color components of an image.</td>
+</tr>
+<tr>
+<td>0x0083</td>
+<td>131</td>
+<td>Iptc.Application2.ImageOrientation</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>1</td>
+<td>1</td>
+<td>Indicates the layout of an image.</td>
+</tr>
+<tr>
+<td>0x0087</td>
+<td>135</td>
+<td>Iptc.Application2.Language</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>2</td>
+<td>3</td>
+<td>Describes the major national language of the object, according to the 2-letter codes of ISO 639:1988. Does not define or imply any coded character set, but is used for internal routing, e.g. to various editorial desks.</td>
+</tr>
+<tr>
+<td>0x0096</td>
+<td>150</td>
+<td>Iptc.Application2.AudioType</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>2</td>
+<td>2</td>
+<td>Indicates the type of an audio content.</td>
+</tr>
+<tr>
+<td>0x0097</td>
+<td>151</td>
+<td>Iptc.Application2.AudioRate</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>6</td>
+<td>6</td>
+<td>Indicates the sampling rate in Hertz of an audio content.</td>
+</tr>
+<tr>
+<td>0x0098</td>
+<td>152</td>
+<td>Iptc.Application2.AudioResolution</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>2</td>
+<td>2</td>
+<td>Indicates the sampling resolution of an audio content.</td>
+</tr>
+<tr>
+<td>0x0099</td>
+<td>153</td>
+<td>Iptc.Application2.AudioDuration</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>6</td>
+<td>6</td>
+<td>Indicates the duration of an audio content.</td>
+</tr>
+<tr>
+<td>0x009a</td>
+<td>154</td>
+<td>Iptc.Application2.AudioOutcue</td>
+<td>String</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>64</td>
+<td>Identifies the content of the end of an audio object data, according to guidelines established by the provider.</td>
+</tr>
+<tr>
+<td>0x00c8</td>
+<td>200</td>
+<td>Iptc.Application2.PreviewFormat</td>
+<td>Short</td>
+<td>No</td>
+<td>No</td>
+<td>2</td>
+<td>2</td>
+<td>A binary number representing the file format of the object data preview. The file format must be registered with IPTC or NAA organizations with a unique number assigned to it.</td>
+</tr>
+<tr>
+<td>0x00c9</td>
+<td>201</td>
+<td>Iptc.Application2.PreviewVersion</td>
+<td>Short</td>
+<td>No</td>
+<td>No</td>
+<td>2</td>
+<td>2</td>
+<td>A binary number representing the particular version of the object data preview file format specified in tag &lt;PreviewFormat&gt;.</td>
+</tr>
+<tr>
+<td>0x00ca</td>
+<td>202</td>
+<td>Iptc.Application2.Preview</td>
+<td>Undefined</td>
+<td>No</td>
+<td>No</td>
+<td>0</td>
+<td>256000</td>
+<td>Binary image preview data.</td>
+</tr>
+</tbody>
 </table>
 
 
@@ -117,8 +899,8 @@
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 21:42 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 21:42 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 22:06 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 22:06 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

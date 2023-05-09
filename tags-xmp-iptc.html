@@ -106,7 +106,136 @@ Reference: <a href="http://www.iptc.org/std/photometadata/specification/IPTC-Pho
 <th>Category</th>
 <th>Description</th>
 </tr></thead>
-<tbody></tbody>
+<tbody>
+<tr>
+<td>AltTextAccessibility</td>
+<td>Alternative Text (Accessibility)</td>
+<td>Lang Alt</td>
+<td>LangAlt</td>
+<td>External</td>
+<td>A brief textual description of the purpose and meaning of an image that can be accessed by assistive technology or displayed when the image is disabled in the browser. It should not exceed 250 characters.</td>
+</tr>
+<tr>
+<td>CreatorContactInfo</td>
+<td>Creator's Contact Info</td>
+<td>ContactInfo</td>
+<td>XmpText</td>
+<td>External</td>
+<td>The creator's contact information provides all necessary information to get in contact with the creator of this image and comprises a set of sub-properties for proper addressing.</td>
+</tr>
+<tr>
+<td>CiAdrExtadr</td>
+<td>Contact Info: Address (deprecated)</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Deprecated, use the CiAdrExtadr tag in ContactInfo struct instead. sub-key Creator Contact Info: address. Comprises an optional company name and all required information to locate the building or postbox to which mail should be sent.</td>
+</tr>
+<tr>
+<td>CiAdrCity</td>
+<td>Contact Info-City (deprecated)</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Deprecated, use the CiAdrCity tag in ContactInfo struct instead. sub-key Creator Contact Info: The contact information city part.</td>
+</tr>
+<tr>
+<td>CiAdrRegion</td>
+<td>Contact Info-State/Province (deprecated)</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Deprecated, use the CiAdrRegion tag in ContactInfo struct instead. sub-key Creator Contact Info: state or province.</td>
+</tr>
+<tr>
+<td>CiAdrPcode</td>
+<td>Contact Info-Postal Code (deprecated)</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Deprecated, use the CiAdrPcode tag in ContactInfo struct instead. sub-key Creator Contact Info: local postal code.</td>
+</tr>
+<tr>
+<td>CiAdrCtry</td>
+<td>Contact Info-Country (deprecated)</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Deprecated, use the CiAdrCtry tag in ContactInfo struct instead. sub-key Creator Contact Info: country.</td>
+</tr>
+<tr>
+<td>CiEmailWork</td>
+<td>Contact Info-Email (deprecated)</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Deprecated, use the CiEmailWork tag in ContactInfo struct instead. sub-key Creator Contact Info: email address.</td>
+</tr>
+<tr>
+<td>CiTelWork</td>
+<td>Contact Info-Phone (deprecated)</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Deprecated, use the CiTelWork tag in ContactInfo struct instead. sub-key Creator Contact Info: phone number.</td>
+</tr>
+<tr>
+<td>CiUrlWork</td>
+<td>Contact Info-Web URL (deprecated)</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Deprecated, use the CiUrlWork tag in ContactInfo struct instead. sub-key Creator Contact Info: web address.</td>
+</tr>
+<tr>
+<td>ExtDescrAccessibility</td>
+<td>Extended Description (Accessibility)</td>
+<td>Lang Alt</td>
+<td>LangAlt</td>
+<td>External</td>
+<td>A more detailed textual description of the purpose and meaning of an image that elaborates on the information provided by the Alt Text (Accessibility) property. This property does not have a character limitation and is not required if the Alt Text (Accessibility) field sufficiently describes the image.</td>
+</tr>
+<tr>
+<td>IntellectualGenre</td>
+<td>Intellectual Genre</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>Describes the nature, intellectual, artistic or journalistic characteristic of an image.</td>
+</tr>
+<tr>
+<td>Scene</td>
+<td>IPTC Scene Code</td>
+<td>bag closed Choice of Text</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>Describes the scene of a photo content. Specifies one or more terms from the IPTC "Scene-NewsCodes". Each Scene is represented as a string of 6 digits in an unordered list.</td>
+</tr>
+<tr>
+<td>SubjectCode</td>
+<td>IPTC Subject Code</td>
+<td>bag closed Choice of Text</td>
+<td>XmpBag</td>
+<td>External</td>
+<td>Specifies one or more Subjects from the IPTC "Subject-NewsCodes" taxonomy to categorize the image. Each Subject is represented as a string of 8 digits in an unordered list.</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Sublocation (legacy)</td>
+<td>Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>(legacy) Exact name of the sublocation shown in the image. This sublocation name could either be the name of a sublocation to a city or the name of a well known location or (natural) monument outside a city. In the sense of a sublocation to a city this element is at the fourth level of a top-down geographical hierarchy.</td>
+</tr>
+<tr>
+<td>CountryCode</td>
+<td>Country Code (legacy)</td>
+<td>closed Choice of Text</td>
+<td>XmpText</td>
+<td>External</td>
+<td>(legacy) Code of the country of the location shown in the image. This element is at the top/first level of a top-down geographical hierarchy. The code should be taken from ISO 3166 two or three letter code. The full name of a country should go in the "Country" element.</td>
+</tr>
+</tbody>
 </table>
 
 
@@ -121,8 +250,8 @@ Reference: <a href="http://www.iptc.org/std/photometadata/specification/IPTC-Pho
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 21:42 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 21:42 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-05-09 22:06 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-05-09 22:06 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->
