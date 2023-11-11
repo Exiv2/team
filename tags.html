@@ -2076,6 +2076,54 @@
 <td>This tag specifies color transforms that can be applied to masked image regions. Color transforms are specified using RGB-to-RGB color lookup tables. These tables are associated with Semantic Masks to limit the color transform to a sub-region of the image. The overall color transform is a linear combination of the color tables, weighted by their corresponding Semantic Masks.</td>
 </tr>
 <tr>
+<td>0xcd40</td>
+<td>52544</td>
+<td>Image</td>
+<td>Exif.Image.ProfileGainTableMap2</td>
+<td>Undefined</td>
+<td>This tag is an extended version of ProfileGainTableMap.</td>
+</tr>
+<tr>
+<td>0xcd43</td>
+<td>52547</td>
+<td>Image</td>
+<td>Exif.Image.ColumnInterleaveFactor</td>
+<td>Long</td>
+<td>This tag specifies that columns of the image are stored in interleaved order. The value of the tag specifies the number of interleaved fields. The use of a non-default value for this tag requires setting the DNGBackwardVersion tag to at least 1.7.0.0.</td>
+</tr>
+<tr>
+<td>0xcd44</td>
+<td>52548</td>
+<td>Image</td>
+<td>Exif.Image.ImageSequenceInfo</td>
+<td>Undefined</td>
+<td>This is an informative tag that describes how the image file relates to other image files captured in a sequence. Applications include focus stacking, merging multiple frames to reduce noise, time lapses, exposure brackets, stitched images for super resolution, and so on.</td>
+</tr>
+<tr>
+<td>0xcd46</td>
+<td>52550</td>
+<td>Image</td>
+<td>Exif.Image.ImageStats</td>
+<td>Undefined</td>
+<td>This is an informative tag that provides basic statistical information about the pixel values of the image in this IFD. Possible applications include normalizing brightness of images when multiple images are displayed together (especially when mixing Standard Dynamic Range and High Dynamic Range images), identifying underexposed or overexposed images, and so on.</td>
+</tr>
+<tr>
+<td>0xcd47</td>
+<td>52551</td>
+<td>Image</td>
+<td>Exif.Image.ProfileDynamicRange</td>
+<td>Undefined</td>
+<td>This tag describes the intended rendering output dynamic range for a given camera profile.</td>
+</tr>
+<tr>
+<td>0xcd48</td>
+<td>52552</td>
+<td>Image</td>
+<td>Exif.Image.ProfileGroupName</td>
+<td>Ascii</td>
+<td>A UTF-8 encoded string containing the 'group name' of the camera profile. The purpose of this tag is to associate two or more related camera profiles into a common group.</td>
+</tr>
+<tr>
 <td>0x829a</td>
 <td>33434</td>
 <td>Photo</td>
@@ -2700,6 +2748,62 @@
 <td>This tag records the serial number of the interchangeable lens that was used in photography as an ASCII string.</td>
 </tr>
 <tr>
+<td>0xa436</td>
+<td>42038</td>
+<td>Photo</td>
+<td>Exif.Photo.ImageTitle</td>
+<td>Ascii</td>
+<td>This tag records the title of the image.</td>
+</tr>
+<tr>
+<td>0xa437</td>
+<td>42039</td>
+<td>Photo</td>
+<td>Exif.Photo.Photographer</td>
+<td>Ascii</td>
+<td>This tag records the name of the photographer.</td>
+</tr>
+<tr>
+<td>0xa438</td>
+<td>42040</td>
+<td>Photo</td>
+<td>Exif.Photo.ImageEditor</td>
+<td>Ascii</td>
+<td>This tag records the name of the main person who edited the image. Preferably, a single name is written (individual name, group/organization name, etc.), but multiple main editors may be entered.</td>
+</tr>
+<tr>
+<td>0xa439</td>
+<td>42041</td>
+<td>Photo</td>
+<td>Exif.Photo.CameraFirmware</td>
+<td>Ascii</td>
+<td>This tag records the name and version of the software or firmware of the camera used to generate the image.</td>
+</tr>
+<tr>
+<td>0xa43a</td>
+<td>42042</td>
+<td>Photo</td>
+<td>Exif.Photo.RAWDevelopingSoftware</td>
+<td>Ascii</td>
+<td>This tag records the name and version of the software used to develop the RAW image.</td>
+</tr>
+<tr>
+<td>0xa43b</td>
+<td>42043</td>
+<td>Photo</td>
+<td>Exif.Photo.ImageEditingSoftware</td>
+<td>Ascii</td>
+<td>This tag records the name and version of the main software used for processing and editing the image. Preferably, a single software is written, but multiple main software may be entered.</td>
+</tr>
+<tr>
+<td>0xa43c</td>
+<td>42044</td>
+<td>Photo</td>
+<td>Exif.Photo.MetadataEditingSoftware</td>
+<td>Ascii</td>
+<td>This tag records the name and version of one software used to edit the metadata of the image without processing or editing of the image data itself.</td>
+</tr>
+<tr>
 <td>0xa460</td>
 <td>42080</td>
 <td>Photo</td>
@@ -3089,7 +3193,7 @@
 <td>MpfInfo</td>
 <td>Exif.MpfInfo.MPFPanOverlapH</td>
 <td>Long</td>
-<td>MPF Pan Overlap Horizonal</td>
+<td>MPF Pan Overlap Horizontal</td>
 </tr>
 <tr>
 <td>0xb203</td>
@@ -3190,12 +3294,12 @@
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.28.0
+          Exiv2 v0.28.1
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-05-14 13:52 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-05-14 13:52 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2023-11-11 19:31 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2023-11-11 19:31 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->
