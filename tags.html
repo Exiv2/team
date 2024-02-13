@@ -2089,7 +2089,7 @@
 <td>Image</td>
 <td>Exif.Image.ColumnInterleaveFactor</td>
 <td>Long</td>
-<td>This tag specifies that columns of the image are stored in interleaved order. The value of the tag specifies the number of interleaved fields. The use of a non-default value for this tag requires setting the DNGBackwardVersion tag to at least 1.7.0.0.</td>
+<td>This tag specifies that columns of the image are stored in interleaved order. The value of the tag specifies the number of interleaved fields. The use of a non-default value for this tag requires setting the DNGBackwardVersion tag to at least 1.7.1.0.</td>
 </tr>
 <tr>
 <td>0xcd44</td>
@@ -2122,6 +2122,30 @@
 <td>Exif.Image.ProfileGroupName</td>
 <td>Ascii</td>
 <td>A UTF-8 encoded string containing the 'group name' of the camera profile. The purpose of this tag is to associate two or more related camera profiles into a common group.</td>
+</tr>
+<tr>
+<td>0xcd49</td>
+<td>52553</td>
+<td>Image</td>
+<td>Exif.Image.JXLDistance</td>
+<td>Float</td>
+<td>This optional tag specifies the distance parameter used to encode the JPEG XL data in this IFD. A value of 0.0 means lossless compression, while values greater than 0.0 means lossy compression.</td>
+</tr>
+<tr>
+<td>0xcd4a</td>
+<td>52554</td>
+<td>Image</td>
+<td>Exif.Image.JXLEffort</td>
+<td>Long</td>
+<td>This optional tag specifies the effort parameter used to encode the JPEG XL data in this IFD. Values range from 1 (low) to 9 (high).</td>
+</tr>
+<tr>
+<td>0xcd4b</td>
+<td>52555</td>
+<td>Image</td>
+<td>Exif.Image.JXLDecodeSpeed</td>
+<td>Long</td>
+<td>This optional tag specifies the decode speed parameter used to encode the JPEG XL data in this IFD. Values range from 1 (slow) to 4 (fast).</td>
 </tr>
 <tr>
 <td>0x829a</td>
@@ -3294,12 +3318,12 @@
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.28.1
+          Exiv2 v0.28.2
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-11-11 19:31 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-11-11 19:31 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2024-02-13 18:02 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2024-02-13 18:02 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

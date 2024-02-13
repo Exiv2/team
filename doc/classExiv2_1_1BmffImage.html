@@ -113,9 +113,9 @@ Inheritance diagram for Exiv2::BmffImage:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Creators</div></td></tr>
-<tr class="memitem:ac3050586d1e1b8415c25fe9423022aff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BmffImage.html#ac3050586d1e1b8415c25fe9423022aff">BmffImage</a> (<a class="el" href="classExiv2_1_1BasicIo.html#ab316d94d3dedf2a569af5c6b7a2496c8">BasicIo::UniquePtr</a> <a class="el" href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">io</a>, bool create)</td></tr>
-<tr class="memdesc:ac3050586d1e1b8415c25fe9423022aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to open a BMFF image. Since the constructor can not return a result, callers should check the <a class="el" href="classExiv2_1_1Image.html#a5b9b0050e69f898b1226e7655f0c799f" title="Check if the Image instance is valid. Use after object construction.">good()</a> method after object construction to determine success or failure.  <a href="classExiv2_1_1BmffImage.html#ac3050586d1e1b8415c25fe9423022aff">More...</a><br /></td></tr>
-<tr class="separator:ac3050586d1e1b8415c25fe9423022aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad62a7353dc8df69bc4b554ca01f1267b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1BmffImage.html#ad62a7353dc8df69bc4b554ca01f1267b">BmffImage</a> (<a class="el" href="classExiv2_1_1BasicIo.html#ab316d94d3dedf2a569af5c6b7a2496c8">BasicIo::UniquePtr</a> <a class="el" href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">io</a>, bool create, size_t max_box_depth=1000)</td></tr>
+<tr class="memdesc:ad62a7353dc8df69bc4b554ca01f1267b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to open a BMFF image. Since the constructor can not return a result, callers should check the <a class="el" href="classExiv2_1_1Image.html#a5b9b0050e69f898b1226e7655f0c799f" title="Check if the Image instance is valid. Use after object construction.">good()</a> method after object construction to determine success or failure.  <a href="classExiv2_1_1BmffImage.html#ad62a7353dc8df69bc4b554ca01f1267b">More...</a><br /></td></tr>
+<tr class="separator:ad62a7353dc8df69bc4b554ca01f1267b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7d79a73bada41a9ca5065a280bb9cee"><td class="memItemLeft" align="right" valign="top"><a id="ac7d79a73bada41a9ca5065a280bb9cee"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>parseTiff</b> (uint32_t root_tag, uint64_t length)</td></tr>
 <tr class="separator:ac7d79a73bada41a9ca5065a280bb9cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -423,8 +423,8 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to access BMFF images. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac3050586d1e1b8415c25fe9423022aff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3050586d1e1b8415c25fe9423022aff">&#9670;&nbsp;</a></span>BmffImage()</h2>
+<a id="ad62a7353dc8df69bc4b554ca01f1267b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad62a7353dc8df69bc4b554ca01f1267b">&#9670;&nbsp;</a></span>BmffImage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -439,7 +439,13 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>create</em>&#160;</td>
+          <td class="paramname"><em>create</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>max_box_depth</em> = <code>1000</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -897,12 +903,12 @@ You may need to put the stream into binary mode (see src/actions.cpp) </dd></dl>
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.28.1
+          Exiv2 v0.28.2
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-11-11 19:31 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-11-11 19:31 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2024-02-13 18:02 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2024-02-13 18:02 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

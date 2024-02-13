@@ -113,9 +113,9 @@ Inheritance diagram for Exiv2::QuickTimeVideo:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Creators</div></td></tr>
-<tr class="memitem:a246fae1a2e7b152a4d9094eb241417e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1QuickTimeVideo.html#a246fae1a2e7b152a4d9094eb241417e7">QuickTimeVideo</a> (<a class="el" href="classExiv2_1_1BasicIo.html#ab316d94d3dedf2a569af5c6b7a2496c8">BasicIo::UniquePtr</a> <a class="el" href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">io</a>)</td></tr>
-<tr class="memdesc:a246fae1a2e7b152a4d9094eb241417e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for a QuickTime video. Since the constructor can not return a result, callers should check the <a class="el" href="classExiv2_1_1Image.html#a5b9b0050e69f898b1226e7655f0c799f" title="Check if the Image instance is valid. Use after object construction.">good()</a> method after object construction to determine success or failure.  <a href="classExiv2_1_1QuickTimeVideo.html#a246fae1a2e7b152a4d9094eb241417e7">More...</a><br /></td></tr>
-<tr class="separator:a246fae1a2e7b152a4d9094eb241417e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded3b788d733a33a4e747c196cc0ebdb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1QuickTimeVideo.html#aded3b788d733a33a4e747c196cc0ebdb">QuickTimeVideo</a> (<a class="el" href="classExiv2_1_1BasicIo.html#ab316d94d3dedf2a569af5c6b7a2496c8">BasicIo::UniquePtr</a> <a class="el" href="classExiv2_1_1Image.html#a62345361501892f42c6bbc86514bf5c6">io</a>, size_t max_recursion_depth=1000)</td></tr>
+<tr class="memdesc:aded3b788d733a33a4e747c196cc0ebdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for a QuickTime video. Since the constructor can not return a result, callers should check the <a class="el" href="classExiv2_1_1Image.html#a5b9b0050e69f898b1226e7655f0c799f" title="Check if the Image instance is valid. Use after object construction.">good()</a> method after object construction to determine success or failure.  <a href="classExiv2_1_1QuickTimeVideo.html#aded3b788d733a33a4e747c196cc0ebdb">More...</a><br /></td></tr>
+<tr class="separator:aded3b788d733a33a4e747c196cc0ebdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Manipulators</div></td></tr>
 <tr class="memitem:aabbfa771e2a7ce1094e9af46def5b717"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1QuickTimeVideo.html#aabbfa771e2a7ce1094e9af46def5b717">readMetadata</a> () override</td></tr>
 <tr class="memdesc:aabbfa771e2a7ce1094e9af46def5b717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all metadata supported by a specific image format from the image. Before this method is called, the image metadata will be cleared.  <a href="classExiv2_1_1QuickTimeVideo.html#aabbfa771e2a7ce1094e9af46def5b717">More...</a><br /></td></tr>
@@ -288,13 +288,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a5599952c50b0019118486d8d0559a305"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1QuickTimeVideo.html#a5599952c50b0019118486d8d0559a305">mimeType</a> () const override</td></tr>
 <tr class="memdesc:a5599952c50b0019118486d8d0559a305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the MIME type of the image.  <a href="classExiv2_1_1QuickTimeVideo.html#a5599952c50b0019118486d8d0559a305">More...</a><br /></td></tr>
 <tr class="separator:a5599952c50b0019118486d8d0559a305"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a090a5d585f297b656ed8d177cf51da5a"><td class="memItemLeft" align="right" valign="top"><a id="a090a5d585f297b656ed8d177cf51da5a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1QuickTimeVideo.html#a090a5d585f297b656ed8d177cf51da5a">decodeBlock</a> (std::string const &amp;entered_from=&quot;&quot;)</td></tr>
-<tr class="memdesc:a090a5d585f297b656ed8d177cf51da5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for a valid tag and decode the block at the current IO position. Calls <a class="el" href="classExiv2_1_1QuickTimeVideo.html#a1741bed8874569398701efac3da6a125" title="Interpret tag information, and call the respective function to save it in the respective XMP containe...">tagDecoder()</a> or skips to next tag, if required. <br /></td></tr>
-<tr class="separator:a090a5d585f297b656ed8d177cf51da5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1741bed8874569398701efac3da6a125"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1QuickTimeVideo.html#a1741bed8874569398701efac3da6a125">tagDecoder</a> (<a class="el" href="structExiv2_1_1DataBuf.html">Exiv2::DataBuf</a> &amp;buf, size_t size)</td></tr>
-<tr class="memdesc:a1741bed8874569398701efac3da6a125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpret tag information, and call the respective function to save it in the respective XMP container. Decodes a Tag Information and saves it in the respective XMP container, if the block size is small.  <a href="classExiv2_1_1QuickTimeVideo.html#a1741bed8874569398701efac3da6a125">More...</a><br /></td></tr>
-<tr class="separator:a1741bed8874569398701efac3da6a125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de7294f86fa616b4269fdf62d0d7e76"><td class="memItemLeft" align="right" valign="top"><a id="a1de7294f86fa616b4269fdf62d0d7e76"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1QuickTimeVideo.html#a1de7294f86fa616b4269fdf62d0d7e76">decodeBlock</a> (size_t recursion_depth, std::string const &amp;entered_from=&quot;&quot;)</td></tr>
+<tr class="memdesc:a1de7294f86fa616b4269fdf62d0d7e76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for a valid tag and decode the block at the current IO position. Calls <a class="el" href="classExiv2_1_1QuickTimeVideo.html#a7f32755fcb8959aae8223a3f2e715956" title="Interpret tag information, and call the respective function to save it in the respective XMP containe...">tagDecoder()</a> or skips to next tag, if required. <br /></td></tr>
+<tr class="separator:a1de7294f86fa616b4269fdf62d0d7e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f32755fcb8959aae8223a3f2e715956"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1QuickTimeVideo.html#a7f32755fcb8959aae8223a3f2e715956">tagDecoder</a> (<a class="el" href="structExiv2_1_1DataBuf.html">Exiv2::DataBuf</a> &amp;buf, size_t size, size_t recursion_depth)</td></tr>
+<tr class="memdesc:a7f32755fcb8959aae8223a3f2e715956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpret tag information, and call the respective function to save it in the respective XMP container. Decodes a Tag Information and saves it in the respective XMP container, if the block size is small.  <a href="classExiv2_1_1QuickTimeVideo.html#a7f32755fcb8959aae8223a3f2e715956">More...</a><br /></td></tr>
+<tr class="separator:a7f32755fcb8959aae8223a3f2e715956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -415,8 +415,8 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to access QuickTime video files. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a246fae1a2e7b152a4d9094eb241417e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a246fae1a2e7b152a4d9094eb241417e7">&#9670;&nbsp;</a></span>QuickTimeVideo()</h2>
+<a id="aded3b788d733a33a4e747c196cc0ebdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aded3b788d733a33a4e747c196cc0ebdb">&#9670;&nbsp;</a></span>QuickTimeVideo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -428,8 +428,18 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
           <td class="memname">Exiv2::QuickTimeVideo::QuickTimeVideo </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classExiv2_1_1BasicIo.html#ab316d94d3dedf2a569af5c6b7a2496c8">BasicIo::UniquePtr</a>&#160;</td>
-          <td class="paramname"><em>io</em></td><td>)</td>
+          <td class="paramname"><em>io</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>max_recursion_depth</em> = <code>1000</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -516,8 +526,8 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 
 </div>
 </div>
-<a id="a1741bed8874569398701efac3da6a125"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1741bed8874569398701efac3da6a125">&#9670;&nbsp;</a></span>tagDecoder()</h2>
+<a id="a7f32755fcb8959aae8223a3f2e715956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f32755fcb8959aae8223a3f2e715956">&#9670;&nbsp;</a></span>tagDecoder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -535,7 +545,13 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>recursion_depth</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -608,12 +624,12 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.28.1
+          Exiv2 v0.28.2
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2023-11-11 19:31 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2023-11-11 19:31 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2024-02-13 18:02 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2024-02-13 18:02 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->
