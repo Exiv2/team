@@ -509,13 +509,6 @@
 <div class="line">  <span class="keywordflow">return</span> dir + std::string(EXV_SEPARATOR_STR) + file;</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span>* makePath(<span class="keyword">const</span> <span class="keywordtype">char</span>* dir, <span class="keyword">const</span> <span class="keywordtype">char</span>* file) {</div>
-<div class="line">  <span class="keyword">static</span> <span class="keywordtype">char</span> result[_MAX_PATH];</div>
-<div class="line">  std::string r = makePath(std::string(dir), std::string(file));</div>
-<div class="line">  strcpy(result, r.c_str());</div>
-<div class="line">  <span class="keywordflow">return</span> result;</div>
-<div class="line">}</div>
-<div class="line"> </div>
 <div class="line"><span class="comment">// file utilities</span></div>
 <div class="line"><span class="keywordtype">bool</span> readDir(<span class="keyword">const</span> <span class="keywordtype">char</span>* path, Options&amp; options) {</div>
 <div class="line">  <span class="keywordtype">bool</span> bResult = <span class="keyword">false</span>;</div>
@@ -541,7 +534,7 @@
 <div class="line">        <span class="keywordflow">if</span> (ffd.dwFileAttributes &amp; FILE_ATTRIBUTE_DIRECTORY) {</div>
 <div class="line">          <span class="comment">// _tprintf(TEXT(&quot;  %s   &lt;DIR&gt;\n&quot;), ffd.cFileName);</span></div>
 <div class="line">        } <span class="keywordflow">else</span> {</div>
-<div class="line">          std::string pathName = makePath(path, std::string(ffd.cFileName));</div>
+<div class="line">          std::string pathName = makePath(path, ffd.cFileName);</div>
 <div class="line">          <span class="keywordflow">if</span> (getFileType(pathName, options) == typeImage) {</div>
 <div class="line">            gFiles.push_back(pathName);</div>
 <div class="line">          }</div>
@@ -787,9 +780,6 @@
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span>* argv[]) {</div>
 <div class="line">  <a name="a2"></a><a class="code" href="classExiv2_1_1XmpParser.html#afe08760a1a594e66566cb59a0f87d36e">Exiv2::XmpParser::initialize</a>();</div>
 <div class="line">  ::atexit(<a name="a3"></a><a class="code" href="classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2">Exiv2::XmpParser::terminate</a>);</div>
-<div class="line"><span class="preprocessor">#ifdef EXV_ENABLE_BMFF</span></div>
-<div class="line">  Exiv2::enableBMFF();</div>
-<div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordtype">int</span> result = 0;</div>
 <div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span>* program = argv[0];</div>
@@ -984,7 +974,7 @@
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// That&#39;s all Folks!</span></div>
-<div class="ttc" id="aclassExiv2_1_1ExifData_html"><div class="ttname"><a href="classExiv2_1_1ExifData.html">Exiv2::ExifData</a></div><div class="ttdoc">A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...</div><div class="ttdef"><b>Definition:</b> exif.hpp:373</div></div>
+<div class="ttc" id="aclassExiv2_1_1ExifData_html"><div class="ttname"><a href="classExiv2_1_1ExifData.html">Exiv2::ExifData</a></div><div class="ttdoc">A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...</div><div class="ttdef"><b>Definition:</b> exif.hpp:379</div></div>
 <div class="ttc" id="aclassExiv2_1_1ImageFactory_html_ac1412e83e334ea32e2a1301619eff39c"><div class="ttname"><a href="classExiv2_1_1ImageFactory.html#ac1412e83e334ea32e2a1301619eff39c">Exiv2::ImageFactory::open</a></div><div class="ttdeci">static Image::UniquePtr open(const std::string &amp;path, bool useCurl=true)</div><div class="ttdoc">Create an Image subclass of the appropriate type by reading the specified file. Image type is derived...</div></div>
 <div class="ttc" id="aclassExiv2_1_1Image_html_ae19135d23c1bfb24aa08d2704cc59702"><div class="ttname"><a href="classExiv2_1_1Image.html#ae19135d23c1bfb24aa08d2704cc59702">Exiv2::Image::UniquePtr</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; UniquePtr</div><div class="ttdoc">Image auto_ptr type.</div><div class="ttdef"><b>Definition:</b> image.hpp:53</div></div>
 <div class="ttc" id="aclassExiv2_1_1XmpParser_html_a46ff7c85b860ef81310e0ac8dd6b62a2"><div class="ttname"><a href="classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2">Exiv2::XmpParser::terminate</a></div><div class="ttdeci">static void terminate()</div><div class="ttdoc">Terminate the XMP Toolkit and unregister custom namespaces.</div></div>
@@ -1002,12 +992,12 @@
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.28.2
+          Exiv2 v0.28.3
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2024-02-14 10:33 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2024-02-14 10:33 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2024-07-08 07:09 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2024-07-08 07:09 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

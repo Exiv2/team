@@ -102,9 +102,6 @@
 <div class="line">  <span class="keywordflow">try</span> {</div>
 <div class="line">    <a name="a0"></a><a class="code" href="classExiv2_1_1XmpParser.html#afe08760a1a594e66566cb59a0f87d36e">Exiv2::XmpParser::initialize</a>();</div>
 <div class="line">    ::atexit(<a name="a1"></a><a class="code" href="classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2">Exiv2::XmpParser::terminate</a>);</div>
-<div class="line"><span class="preprocessor">#ifdef EXV_ENABLE_BMFF</span></div>
-<div class="line">    Exiv2::enableBMFF();</div>
-<div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">if</span> (argc != 2) {</div>
 <div class="line">      std::cout &lt;&lt; <span class="stringliteral">&quot;Usage: &quot;</span> &lt;&lt; argv[0] &lt;&lt; <span class="stringliteral">&quot; file\n&quot;</span>;</div>
@@ -205,11 +202,11 @@
 <div class="line">  }</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassExiv2_1_1Error_html"><div class="ttname"><a href="classExiv2_1_1Error.html">Exiv2::Error</a></div><div class="ttdoc">Simple error class used for exceptions. An output operator is provided to print errors to a stream.</div><div class="ttdef"><b>Definition:</b> error.hpp:235</div></div>
-<div class="ttc" id="aclassExiv2_1_1ExifData_html"><div class="ttname"><a href="classExiv2_1_1ExifData.html">Exiv2::ExifData</a></div><div class="ttdoc">A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...</div><div class="ttdef"><b>Definition:</b> exif.hpp:373</div></div>
+<div class="ttc" id="aclassExiv2_1_1ExifData_html"><div class="ttname"><a href="classExiv2_1_1ExifData.html">Exiv2::ExifData</a></div><div class="ttdoc">A container for Exif data. This is a top-level class of the Exiv2 library. The container holds Exifda...</div><div class="ttdef"><b>Definition:</b> exif.hpp:379</div></div>
 <div class="ttc" id="aclassExiv2_1_1ExifData_html_a710a66ca8be51192c15729c541b72fb5"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a710a66ca8be51192c15729c541b72fb5">Exiv2::ExifData::erase</a></div><div class="ttdeci">iterator erase(iterator pos)</div><div class="ttdoc">Delete the Exifdatum at iterator position pos, return the position of the next exifdatum....</div></div>
 <div class="ttc" id="aclassExiv2_1_1ExifData_html_a91d231cd1b9fefc311c5166e30ab66eb"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a91d231cd1b9fefc311c5166e30ab66eb">Exiv2::ExifData::add</a></div><div class="ttdeci">void add(const ExifKey &amp;key, const Value *pValue)</div><div class="ttdoc">Add an Exifdatum from the supplied key and value pair. This method copies (clones) key and value....</div></div>
 <div class="ttc" id="aclassExiv2_1_1ExifData_html_a96c38cbd300ebdfa05f849864b380690"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a96c38cbd300ebdfa05f849864b380690">Exiv2::ExifData::findKey</a></div><div class="ttdeci">iterator findKey(const ExifKey &amp;key)</div><div class="ttdoc">Find the first Exifdatum with the given key, return an iterator to it.</div></div>
-<div class="ttc" id="aclassExiv2_1_1ExifData_html_a9c15177b03489e3d4bb81e9acc1165fe"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe">Exiv2::ExifData::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdoc">End of the metadata.</div><div class="ttdef"><b>Definition:</b> exif.hpp:433</div></div>
+<div class="ttc" id="aclassExiv2_1_1ExifData_html_a9c15177b03489e3d4bb81e9acc1165fe"><div class="ttname"><a href="classExiv2_1_1ExifData.html#a9c15177b03489e3d4bb81e9acc1165fe">Exiv2::ExifData::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdoc">End of the metadata.</div><div class="ttdef"><b>Definition:</b> exif.hpp:439</div></div>
 <div class="ttc" id="aclassExiv2_1_1ExifKey_html"><div class="ttname"><a href="classExiv2_1_1ExifKey.html">Exiv2::ExifKey</a></div><div class="ttdoc">Concrete keys for Exif metadata and access to Exif tag reference data.</div><div class="ttdef"><b>Definition:</b> tags.hpp:271</div></div>
 <div class="ttc" id="aclassExiv2_1_1Exifdatum_html"><div class="ttname"><a href="classExiv2_1_1Exifdatum.html">Exiv2::Exifdatum</a></div><div class="ttdoc">An Exif metadatum, consisting of an ExifKey and a Value and methods to manipulate these.</div><div class="ttdef"><b>Definition:</b> exif.hpp:41</div></div>
 <div class="ttc" id="aclassExiv2_1_1Exifdatum_html_a39783a2591779fea580f514a18e5428a"><div class="ttname"><a href="classExiv2_1_1Exifdatum.html#a39783a2591779fea580f514a18e5428a">Exiv2::Exifdatum::value</a></div><div class="ttdeci">const Value &amp; value() const override</div><div class="ttdoc">Return a constant reference to the value.</div></div>
@@ -234,12 +231,12 @@
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.28.2
+          Exiv2 v0.28.3
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2024-02-14 10:33 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2024-02-14 10:33 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2024-07-08 07:09 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2024-07-08 07:09 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

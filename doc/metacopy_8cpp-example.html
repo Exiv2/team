@@ -103,9 +103,6 @@
 <div class="line">  <span class="keywordflow">try</span> {</div>
 <div class="line">    <a name="a0"></a><a class="code" href="classExiv2_1_1XmpParser.html#afe08760a1a594e66566cb59a0f87d36e">Exiv2::XmpParser::initialize</a>();</div>
 <div class="line">    ::atexit(<a name="a1"></a><a class="code" href="classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2">Exiv2::XmpParser::terminate</a>);</div>
-<div class="line"><span class="preprocessor">#ifdef EXV_ENABLE_BMFF</span></div>
-<div class="line">    Exiv2::enableBMFF();</div>
-<div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Handle command line arguments</span></div>
 <div class="line">    Params params;</div>
@@ -119,11 +116,11 @@
 <div class="line">    }</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Use MemIo to increase test coverage.</span></div>
-<div class="line">    <a name="_a2"></a><a class="code" href="classExiv2_1_1FileIo.html">Exiv2::FileIo</a> fileIo(params.read_);</div>
+<div class="line">    Exiv2::FileIo fileIo(params.read_);</div>
 <div class="line">    <span class="keyword">auto</span> memIo = std::make_unique&lt;Exiv2::MemIo&gt;();</div>
 <div class="line">    memIo-&gt;transfer(fileIo);</div>
 <div class="line"> </div>
-<div class="line">    <span class="keyword">auto</span> readImg = <a name="a3"></a><a class="code" href="classExiv2_1_1ImageFactory.html#ac1412e83e334ea32e2a1301619eff39c">Exiv2::ImageFactory::open</a>(std::move(memIo));</div>
+<div class="line">    <span class="keyword">auto</span> readImg = <a name="a2"></a><a class="code" href="classExiv2_1_1ImageFactory.html#ac1412e83e334ea32e2a1301619eff39c">Exiv2::ImageFactory::open</a>(std::move(memIo));</div>
 <div class="line">    readImg-&gt;readMetadata();</div>
 <div class="line"> </div>
 <div class="line">    <span class="keyword">auto</span> writeImg = <a class="code" href="classExiv2_1_1ImageFactory.html#ac1412e83e334ea32e2a1301619eff39c">Exiv2::ImageFactory::open</a>(params.write_);</div>
@@ -145,7 +142,7 @@
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">try</span> {</div>
 <div class="line">      writeImg-&gt;writeMetadata();</div>
-<div class="line">    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a name="_a4"></a><a class="code" href="classExiv2_1_1Error.html">Exiv2::Error</a>&amp;) {</div>
+<div class="line">    } <span class="keywordflow">catch</span> (<span class="keyword">const</span> <a name="_a3"></a><a class="code" href="classExiv2_1_1Error.html">Exiv2::Error</a>&amp;) {</div>
 <div class="line">      std::cerr &lt;&lt; params.progname() &lt;&lt; <span class="stringliteral">&quot;: Could not write metadata to (&quot;</span> &lt;&lt; params.write_ &lt;&lt; <span class="stringliteral">&quot;)\n&quot;</span>;</div>
 <div class="line">      <span class="keywordflow">return</span> EXIT_FAILURE;</div>
 <div class="line">    }</div>
@@ -261,7 +258,6 @@
 <div class="line">     &lt;&lt; <span class="stringliteral">&quot;   -h      Display this help and exit.\n\n&quot;</span>;</div>
 <div class="line">}  <span class="comment">// Params::help</span></div>
 <div class="ttc" id="aclassExiv2_1_1Error_html"><div class="ttname"><a href="classExiv2_1_1Error.html">Exiv2::Error</a></div><div class="ttdoc">Simple error class used for exceptions. An output operator is provided to print errors to a stream.</div><div class="ttdef"><b>Definition:</b> error.hpp:235</div></div>
-<div class="ttc" id="aclassExiv2_1_1FileIo_html"><div class="ttname"><a href="classExiv2_1_1FileIo.html">Exiv2::FileIo</a></div><div class="ttdoc">Provides binary file IO by implementing the BasicIo interface.</div><div class="ttdef"><b>Definition:</b> basicio.hpp:283</div></div>
 <div class="ttc" id="aclassExiv2_1_1ImageFactory_html_ac1412e83e334ea32e2a1301619eff39c"><div class="ttname"><a href="classExiv2_1_1ImageFactory.html#ac1412e83e334ea32e2a1301619eff39c">Exiv2::ImageFactory::open</a></div><div class="ttdeci">static Image::UniquePtr open(const std::string &amp;path, bool useCurl=true)</div><div class="ttdoc">Create an Image subclass of the appropriate type by reading the specified file. Image type is derived...</div></div>
 <div class="ttc" id="aclassExiv2_1_1XmpParser_html_a46ff7c85b860ef81310e0ac8dd6b62a2"><div class="ttname"><a href="classExiv2_1_1XmpParser.html#a46ff7c85b860ef81310e0ac8dd6b62a2">Exiv2::XmpParser::terminate</a></div><div class="ttdeci">static void terminate()</div><div class="ttdoc">Terminate the XMP Toolkit and unregister custom namespaces.</div></div>
 <div class="ttc" id="aclassExiv2_1_1XmpParser_html_afe08760a1a594e66566cb59a0f87d36e"><div class="ttname"><a href="classExiv2_1_1XmpParser.html#afe08760a1a594e66566cb59a0f87d36e">Exiv2::XmpParser::initialize</a></div><div class="ttdeci">static bool initialize(XmpParser::XmpLockFct xmpLockFct=nullptr, void *pLockData=nullptr)</div><div class="ttdoc">Initialize the XMP Toolkit.</div></div>
@@ -273,12 +269,12 @@
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.28.2
+          Exiv2 v0.28.3
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2024-02-14 10:33 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2024-02-14 10:33 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2024-07-08 07:09 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2024-07-08 07:09 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

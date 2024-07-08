@@ -118,20 +118,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1IoCloser.html">IoCloser</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility class that closes a <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> instance upon destruction. Meant to be used as a stack variable in functions that need to ensure <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> instances get closed. Useful when functions return errors from many locations.  <a href="classExiv2_1_1IoCloser.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1FileIo.html">FileIo</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides binary file IO by implementing the <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> interface.  <a href="classExiv2_1_1FileIo.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1MemIo.html">MemIo</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides binary IO on blocks of memory by implementing the <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> interface. A copy-on-write implementation ensures that the data passed in is only copied when necessary, i.e., as soon as data is written to the <a class="el" href="classExiv2_1_1MemIo.html" title="Provides binary IO on blocks of memory by implementing the BasicIo interface. A copy-on-write impleme...">MemIo</a>. The original data is only used for reading. If writes are performed, the changed data can be retrieved using the read methods (since the data used in construction is never modified).  <a href="classExiv2_1_1MemIo.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1XPathIo.html">XPathIo</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides binary IO for the data from stdin and data uri path.  <a href="classExiv2_1_1XPathIo.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1RemoteIo.html">RemoteIo</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides remote binary file IO by implementing the <a class="el" href="classExiv2_1_1BasicIo.html" title="An interface for simple binary IO.">BasicIo</a> interface. This is an abstract class. The logics for remote access are implemented in <a class="el" href="classExiv2_1_1HttpIo.html" title="Provides the http read/write access for the RemoteIo.">HttpIo</a>, CurlIo, SshIo which are the derived classes of <a class="el" href="classExiv2_1_1RemoteIo.html" title="Provides remote binary file IO by implementing the BasicIo interface. This is an abstract class....">RemoteIo</a>.  <a href="classExiv2_1_1RemoteIo.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides binary IO for the data from stdin and data uri path.  <a href="classExiv2_1_1RemoteIo.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1HttpIo.html">HttpIo</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the http read/write access for the <a class="el" href="classExiv2_1_1RemoteIo.html" title="Provides remote binary file IO by implementing the BasicIo interface. This is an abstract class....">RemoteIo</a>.  <a href="classExiv2_1_1HttpIo.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the http read/write access for the <a class="el" href="classExiv2_1_1RemoteIo.html" title="Provides binary IO for the data from stdin and data uri path.">RemoteIo</a>.  <a href="classExiv2_1_1HttpIo.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExiv2_1_1Iloc.html">Iloc</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3515,12 +3509,12 @@ template&lt;typename T &gt; </div>
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.28.2
+          Exiv2 v0.28.3
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2024-02-14 10:33 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2024-02-14 10:33 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2024-07-08 07:09 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2024-07-08 07:09 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->
