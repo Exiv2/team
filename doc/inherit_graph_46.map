@@ -1,3 +1,27 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structExiv2_1_1XmpNsInfo.html" title="Structure mapping XMP namespaces and (preferred) prefixes." alt="" coords="5,5,144,32"/>
+<area shape="rect" id="Node000000" href="$classExiv2_1_1Value.html" title="Common interface for all types of values used with metadata." alt="" coords="5,129,108,155"/>
+<area shape="rect" id="Node000001" href="$classExiv2_1_1DataValue.html" title="Value for an undefined data type." alt="" coords="175,5,309,31"/>
+<area shape="poly" id="edge48_Node000000_Node000001" title=" " alt="" coords="73,117,108,77,130,57,155,40,180,28,182,33,157,44,133,61,112,81,77,120"/>
+<area shape="rect" id="Node000002" href="$classExiv2_1_1DateValue.html" title="Value for simple ISO 8601 dates" alt="" coords="175,55,309,80"/>
+<area shape="poly" id="edge49_Node000000_Node000002" title=" " alt="" coords="90,120,155,89,189,78,190,83,157,94,93,125"/>
+<area shape="rect" id="Node000003" href="$classExiv2_1_1StringValueBase.html" title="Abstract base class for a string based Value type." alt="" coords="156,104,328,129"/>
+<area shape="poly" id="edge50_Node000000_Node000003" title=" " alt="" coords="122,130,155,126,156,131,122,136"/>
+<area shape="rect" id="Node000007" href="$classExiv2_1_1TimeValue.html" title="Value for simple ISO 8601 times." alt="" coords="175,153,309,179"/>
+<area shape="poly" id="edge54_Node000000_Node000007" title=" " alt="" coords="122,148,175,155,174,160,121,153"/>
+<area shape="rect" id="Node000008" href="$classExiv2_1_1ValueType.html" title="Template for a Value of a basic type. This is used for unsigned and signed short, long and rationals." alt="" coords="157,203,327,228"/>
+<area shape="poly" id="edge55_Node000000_Node000008" title=" " alt="" coords="94,159,157,188,194,200,192,205,155,192,92,163"/>
+<area shape="rect" id="Node000009" href="$classExiv2_1_1XmpValue.html" title="Base class for all Exiv2 values used to store XMP property values." alt="" coords="176,252,308,277"/>
+<area shape="poly" id="edge56_Node000000_Node000009" title=" " alt="" coords="78,164,113,202,157,237,185,249,183,254,155,242,109,206,74,168"/>
+<area shape="rect" id="Node000004" href="$classExiv2_1_1AsciiValue.html" title="Value for an Ascii string type." alt="" coords="393,55,526,80"/>
+<area shape="poly" id="edge51_Node000003_Node000004" title=" " alt="" coords="311,98,402,77,403,83,312,104"/>
+<area shape="rect" id="Node000005" href="$classExiv2_1_1CommentValue.html" title="Value for an Exif comment." alt="" coords="376,104,543,129"/>
+<area shape="poly" id="edge52_Node000003_Node000005" title=" " alt="" coords="342,114,376,114,376,119,342,119"/>
+<area shape="rect" id="Node000006" href="$classExiv2_1_1StringValue.html" title="Value for string type." alt="" coords="389,153,529,179"/>
+<area shape="poly" id="edge53_Node000003_Node000006" title=" " alt="" coords="312,130,403,151,402,156,311,135"/>
+<area shape="rect" id="Node000010" href="$classExiv2_1_1LangAltValue.html" title="Value type for XMP language alternative properties." alt="" coords="384,203,535,228"/>
+<area shape="poly" id="edge57_Node000009_Node000010" title=" " alt="" coords="311,246,402,225,403,231,312,252"/>
+<area shape="rect" id="Node000011" href="$classExiv2_1_1XmpArrayValue.html" title="Value type for simple arrays. Each item in the array is a simple value, without qualifiers...." alt="" coords="376,252,543,277"/>
+<area shape="poly" id="edge58_Node000009_Node000011" title=" " alt="" coords="322,262,376,262,376,267,322,267"/>
+<area shape="rect" id="Node000012" href="$classExiv2_1_1XmpTextValue.html" title="Value type suitable for simple XMP properties and XMP nodes of complex types which are not parsed int..." alt="" coords="380,301,539,327"/>
+<area shape="poly" id="edge59_Node000009_Node000012" title=" " alt="" coords="312,278,403,299,402,304,311,283"/>
 </map>

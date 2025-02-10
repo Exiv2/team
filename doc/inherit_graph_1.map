@@ -1,6 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classExiv2_1_1BasicIo.html" title="An interface for simple binary IO." alt="" coords="5,31,119,57"/>
-<area shape="rect" id="node2" href="$classExiv2_1_1MemIo.html" title="Provides binary IO on blocks of memory by implementing the BasicIo interface. A copy&#45;on&#45;write impleme..." alt="" coords="176,5,287,32"/>
-<area shape="rect" id="node3" href="$classExiv2_1_1RemoteIo.html" title="Provides binary IO for the data from stdin and data uri path." alt="" coords="167,56,296,83"/>
-<area shape="rect" id="node4" href="$classExiv2_1_1HttpIo.html" title="Provides the http read/write access for the RemoteIo." alt="" coords="344,56,451,83"/>
+<area shape="rect" id="Node000000" href="$classExiv2_1_1BasicIo.html" title="An interface for simple binary IO." alt="" coords="5,31,119,56"/>
+<area shape="rect" id="Node000001" href="$classExiv2_1_1MemIo.html" title="Provides binary IO on blocks of memory by implementing the BasicIo interface. A copy&#45;on&#45;write impleme..." alt="" coords="176,5,287,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="132,30,175,24,176,29,132,36"/>
+<area shape="rect" id="Node000002" href="$classExiv2_1_1RemoteIo.html" title="Provides binary IO for the data from stdin and data uri path." alt="" coords="167,55,296,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="133,51,166,55,166,61,132,56"/>
+<area shape="rect" id="Node000003" href="$classExiv2_1_1HttpIo.html" title="Provides the http read/write access for the RemoteIo." alt="" coords="344,55,451,80"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="310,65,344,65,344,70,310,70"/>
 </map>

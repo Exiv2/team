@@ -1,4 +1,5 @@
 <map id="Exiv2::ExifThumbC" name="Exiv2::ExifThumbC">
-<area shape="rect" id="node1" title="Access to a Exif thumbnail image. This class provides higher level accessors to the thumbnail image t..." alt="" coords="5,5,151,32"/>
-<area shape="rect" id="node2" href="$classExiv2_1_1ExifThumb.html" title="Access and modify an Exif thumbnail image. This class implements manipulators to set and erase the th..." alt="" coords="10,80,146,107"/>
+<area shape="rect" id="Node000001" title="Access to a Exif thumbnail image. This class provides higher level accessors to the thumbnail image t..." alt="" coords="5,5,151,31"/>
+<area shape="rect" id="Node000002" href="$classExiv2_1_1ExifThumb.html" title="Access and modify an Exif thumbnail image. This class implements manipulators to set and erase the th..." alt="" coords="10,79,146,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,44,81,79,75,79,75,44"/>
 </map>

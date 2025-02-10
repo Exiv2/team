@@ -1,6 +1,9 @@
 <map id="Exiv2::BasicIo" name="Exiv2::BasicIo">
-<area shape="rect" id="node1" title="An interface for simple binary IO." alt="" coords="76,5,189,32"/>
-<area shape="rect" id="node2" href="$classExiv2_1_1MemIo.html" title="Provides binary IO on blocks of memory by implementing the BasicIo interface. A copy&#45;on&#45;write impleme..." alt="" coords="5,80,116,107"/>
-<area shape="rect" id="node3" href="$classExiv2_1_1RemoteIo.html" title="Provides binary IO for the data from stdin and data uri path." alt="" coords="140,80,269,107"/>
-<area shape="rect" id="node4" href="$classExiv2_1_1HttpIo.html" title="Provides the http read/write access for the RemoteIo." alt="" coords="151,155,258,181"/>
+<area shape="rect" id="Node000001" title="An interface for simple binary IO." alt="" coords="76,5,189,31"/>
+<area shape="rect" id="Node000002" href="$classExiv2_1_1MemIo.html" title="Provides binary IO on blocks of memory by implementing the BasicIo interface. A copy&#45;on&#45;write impleme..." alt="" coords="5,79,116,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,43,74,80,70,77,109,39"/>
+<area shape="rect" id="Node000003" href="$classExiv2_1_1RemoteIo.html" title="Provides binary IO for the data from stdin and data uri path." alt="" coords="140,79,269,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,39,195,77,191,80,153,43"/>
+<area shape="rect" id="Node000004" href="$classExiv2_1_1HttpIo.html" title="Provides the http read/write access for the RemoteIo." alt="" coords="151,152,258,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="207,118,207,152,202,152,202,118"/>
 </map>

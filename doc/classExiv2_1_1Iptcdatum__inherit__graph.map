@@ -1,4 +1,5 @@
 <map id="Exiv2::Iptcdatum" name="Exiv2::Iptcdatum">
-<area shape="rect" id="node1" title="An IPTC metadatum (&quot;dataset&quot;), consisting of an IptcKey and a Value and methods to manipulate these." alt="" coords="10,80,142,107"/>
-<area shape="rect" id="node2" href="$classExiv2_1_1Metadatum.html" title="Abstract base class defining the interface to access information related to one metadata tag." alt="" coords="5,5,147,32"/>
+<area shape="rect" id="Node000001" title="An IPTC metadatum (&quot;dataset&quot;), consisting of an IptcKey and a Value and methods to manipulate these." alt="" coords="10,79,142,104"/>
+<area shape="rect" id="Node000002" href="$classExiv2_1_1Metadatum.html" title="Abstract base class defining the interface to access information related to one metadata tag." alt="" coords="5,5,147,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,44,79,79,73,79,73,44"/>
 </map>

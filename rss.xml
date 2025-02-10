@@ -4,457 +4,464 @@
     <title>What's new in Exiv2</title>
     <link>http://www.exiv2.org/</link>
     <description>News from the Exiv2 project.</description>
-    <lastBuildDate>Mon, 08 Jul 2024 07:09:16 +0000
+    <lastBuildDate>Mon, 10 Feb 2025 22:44:04 +0000
     </lastBuildDate>
     <language>en-us</language>
     <atom:link href="http://www.exiv2.org/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Exiv2 v0.28.3</title>
+      <title>Exiv2 v0.28.4</title>
       <link>http://exiv2.org/whatsnew.html#item1</link>
       <guid>http://exiv2.org/whatsnew.html#item1</guid>
-      <pubDate>?, 20 ? 34427 00:00:00 +0800</pubDate>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <description>Exiv2 v0.28.4</description>
+    </item>
+    <item>
+      <title>Exiv2 v0.28.3</title>
+      <link>http://exiv2.org/whatsnew.html#item2</link>
+      <guid>http://exiv2.org/whatsnew.html#item2</guid>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.28.3</description>
     </item>
     <item>
       <title>Exiv2 v0.28.2</title>
-      <link>http://exiv2.org/whatsnew.html#item2</link>
-      <guid>http://exiv2.org/whatsnew.html#item2</guid>
-      <pubDate>Sun, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item3</link>
+      <guid>http://exiv2.org/whatsnew.html#item3</guid>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.28.2</description>
     </item>
     <item>
       <title>Exiv2 v0.28.1</title>
-      <link>http://exiv2.org/whatsnew.html#item3</link>
-      <guid>http://exiv2.org/whatsnew.html#item3</guid>
-      <pubDate>Sun, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item4</link>
+      <guid>http://exiv2.org/whatsnew.html#item4</guid>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.28.1</description>
     </item>
     <item>
       <title>Exiv2 v0.27.7</title>
-      <link>http://exiv2.org/whatsnew.html#item4</link>
-      <guid>http://exiv2.org/whatsnew.html#item4</guid>
-      <pubDate>Sun, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item5</link>
+      <guid>http://exiv2.org/whatsnew.html#item5</guid>
+      <pubDate>?, 20 ? 34537 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.7</description>
     </item>
     <item>
       <title>Exiv2 v0.28.0</title>
-      <link>http://exiv2.org/whatsnew.html#item5</link>
-      <guid>http://exiv2.org/whatsnew.html#item5</guid>
-      <pubDate>?, 20 ? 34521 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item6</link>
+      <guid>http://exiv2.org/whatsnew.html#item6</guid>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.28.0</description>
     </item>
     <item>
       <title>Exiv2 v0.27.6</title>
-      <link>http://exiv2.org/whatsnew.html#item6</link>
-      <guid>http://exiv2.org/whatsnew.html#item6</guid>
-      <pubDate>?, 20 ? 34538 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item7</link>
+      <guid>http://exiv2.org/whatsnew.html#item7</guid>
+      <pubDate>?, 20 ? 34490 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.6</description>
     </item>
     <item>
       <title>Exiv2 v0.27.5</title>
-      <link>http://exiv2.org/whatsnew.html#item7</link>
-      <guid>http://exiv2.org/whatsnew.html#item7</guid>
-      <pubDate>Sun, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item8</link>
+      <guid>http://exiv2.org/whatsnew.html#item8</guid>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.5</description>
     </item>
     <item>
       <title>Exiv2 v0.27.5 RC3</title>
-      <link>http://exiv2.org/whatsnew.html#item8</link>
-      <guid>http://exiv2.org/whatsnew.html#item8</guid>
-      <pubDate>Sun, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item9</link>
+      <guid>http://exiv2.org/whatsnew.html#item9</guid>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.5 RC3</description>
     </item>
     <item>
       <title>Exiv2 v0.27.5 RC2</title>
-      <link>http://exiv2.org/whatsnew.html#item9</link>
-      <guid>http://exiv2.org/whatsnew.html#item9</guid>
-      <pubDate>?, 20 ? 34553 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item10</link>
+      <guid>http://exiv2.org/whatsnew.html#item10</guid>
+      <pubDate>?, 20 ? 34500 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.5 RC2</description>
     </item>
     <item>
       <title>Exiv2 v0.27.5 RC1</title>
-      <link>http://exiv2.org/whatsnew.html#item10</link>
-      <guid>http://exiv2.org/whatsnew.html#item10</guid>
-      <pubDate>Sun, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item11</link>
+      <guid>http://exiv2.org/whatsnew.html#item11</guid>
+      <pubDate>?, 20 ? 34649 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.5 RC1</description>
     </item>
     <item>
       <title>Exiv2 v0.27.4</title>
-      <link>http://exiv2.org/whatsnew.html#item11</link>
-      <guid>http://exiv2.org/whatsnew.html#item11</guid>
-      <pubDate>?, 20 ? 34651 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item12</link>
+      <guid>http://exiv2.org/whatsnew.html#item12</guid>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.4</description>
     </item>
     <item>
       <title>Exiv2 v0.27.4 RC3</title>
-      <link>http://exiv2.org/whatsnew.html#item12</link>
-      <guid>http://exiv2.org/whatsnew.html#item12</guid>
-      <pubDate>Sun, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item13</link>
+      <guid>http://exiv2.org/whatsnew.html#item13</guid>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.4 RC3</description>
     </item>
     <item>
       <title>Exiv2 v0.27.4 RC2</title>
-      <link>http://exiv2.org/whatsnew.html#item13</link>
-      <guid>http://exiv2.org/whatsnew.html#item13</guid>
-      <pubDate>Sat, 20 Mar 1900 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item14</link>
+      <guid>http://exiv2.org/whatsnew.html#item14</guid>
+      <pubDate>?, 20 ? 34454 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.4 RC2</description>
     </item>
     <item>
       <title>Exiv2 v0.27.4 RC1</title>
-      <link>http://exiv2.org/whatsnew.html#item14</link>
-      <guid>http://exiv2.org/whatsnew.html#item14</guid>
-      <pubDate>Sat, 20 Mar 1900 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item15</link>
+      <guid>http://exiv2.org/whatsnew.html#item15</guid>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.4 RC1</description>
     </item>
     <item>
       <title>Exiv2 v0.27.3</title>
-      <link>http://exiv2.org/whatsnew.html#item15</link>
-      <guid>http://exiv2.org/whatsnew.html#item15</guid>
-      <pubDate>Sat, 20 Mar 1900 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item16</link>
+      <guid>http://exiv2.org/whatsnew.html#item16</guid>
+      <pubDate>?, 20 ? 34419 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.3</description>
     </item>
     <item>
       <title>Exiv2 v0.27.3 RC2</title>
-      <link>http://exiv2.org/whatsnew.html#item16</link>
-      <guid>http://exiv2.org/whatsnew.html#item16</guid>
-      <pubDate>Sat, 20 Mar 1900 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item17</link>
+      <guid>http://exiv2.org/whatsnew.html#item17</guid>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.3 RC2</description>
     </item>
     <item>
       <title>Exiv2 v0.27.3 RC1</title>
-      <link>http://exiv2.org/whatsnew.html#item17</link>
-      <guid>http://exiv2.org/whatsnew.html#item17</guid>
-      <pubDate>Sun, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item18</link>
+      <guid>http://exiv2.org/whatsnew.html#item18</guid>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.3 RC1</description>
     </item>
     <item>
       <title>Exiv2 v0.27.2</title>
-      <link>http://exiv2.org/whatsnew.html#item18</link>
-      <guid>http://exiv2.org/whatsnew.html#item18</guid>
-      <pubDate>?, 20 ? 34649 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item19</link>
+      <guid>http://exiv2.org/whatsnew.html#item19</guid>
+      <pubDate>?, 20 ? 34532 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.2</description>
     </item>
     <item>
       <title>Exiv2 v0.27.2 RC3 (0.27.2.3)</title>
-      <link>http://exiv2.org/whatsnew.html#item19</link>
-      <guid>http://exiv2.org/whatsnew.html#item19</guid>
-      <pubDate>?, 20 ? 34487 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item20</link>
+      <guid>http://exiv2.org/whatsnew.html#item20</guid>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.2 RC3</description>
     </item>
     <item>
       <title>Exiv2 v0.27.2 RC2 (0.27.2.2)</title>
-      <link>http://exiv2.org/whatsnew.html#item20</link>
-      <guid>http://exiv2.org/whatsnew.html#item20</guid>
-      <pubDate>Sat, 20 Mar 1900 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item21</link>
+      <guid>http://exiv2.org/whatsnew.html#item21</guid>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.2 RC2</description>
     </item>
     <item>
       <title>Exiv2 v0.27.2 RC1 (0.27.2.1)</title>
-      <link>http://exiv2.org/whatsnew.html#item21</link>
-      <guid>http://exiv2.org/whatsnew.html#item21</guid>
-      <pubDate>Sun, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <link>http://exiv2.org/whatsnew.html#item22</link>
+      <guid>http://exiv2.org/whatsnew.html#item22</guid>
+      <pubDate>?, 20 ? 34653 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.2 RC1</description>
     </item>
     <item>
       <title>Exiv2 v0.27.1 (0.27.1)</title>
-      <link>http://exiv2.org/whatsnew.html#item22</link>
-      <guid>http://exiv2.org/whatsnew.html#item22</guid>
+      <link>http://exiv2.org/whatsnew.html#item23</link>
+      <guid>http://exiv2.org/whatsnew.html#item23</guid>
       <pubDate>Fri, 26 Apr 2019 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.1</description>
     </item>
     <item>
       <title>Exiv2 v0.27.1 RC1 (0.27.1.1)</title>
-      <link>http://exiv2.org/whatsnew.html#item23</link>
-      <guid>http://exiv2.org/whatsnew.html#item23</guid>
+      <link>http://exiv2.org/whatsnew.html#item24</link>
+      <guid>http://exiv2.org/whatsnew.html#item24</guid>
       <pubDate>Fri, 29 Mar 2019 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.1 RC1</description>
     </item>
     <item>
       <title>Exiv2 v0.27.0a</title>
-      <link>http://exiv2.org/whatsnew.html#item24</link>
-      <guid>http://exiv2.org/whatsnew.html#item24</guid>
+      <link>http://exiv2.org/whatsnew.html#item25</link>
+      <guid>http://exiv2.org/whatsnew.html#item25</guid>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27 Release Source Repackaging</description>
     </item>
     <item>
       <title>Exiv2 v0.27</title>
-      <link>http://exiv2.org/whatsnew.html#item25</link>
-      <guid>http://exiv2.org/whatsnew.html#item25</guid>
+      <link>http://exiv2.org/whatsnew.html#item26</link>
+      <guid>http://exiv2.org/whatsnew.html#item26</guid>
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27 Release</description>
     </item>
     <item>
       <title>Exiv2 v0.27 RC3</title>
-      <link>http://exiv2.org/whatsnew.html#item26</link>
-      <guid>http://exiv2.org/whatsnew.html#item26</guid>
+      <link>http://exiv2.org/whatsnew.html#item27</link>
+      <guid>http://exiv2.org/whatsnew.html#item27</guid>
       <pubDate>Fri, 07 Dec 2018 00:00:00 +0800</pubDate>
       <description>Release Candidate 3</description>
     </item>
     <item>
       <title>Exiv2 v0.27 RC2</title>
-      <link>http://exiv2.org/whatsnew.html#item27</link>
-      <guid>http://exiv2.org/whatsnew.html#item27</guid>
+      <link>http://exiv2.org/whatsnew.html#item28</link>
+      <guid>http://exiv2.org/whatsnew.html#item28</guid>
       <pubDate>Thu, 15 Nov 2018 00:00:00 +0800</pubDate>
       <description>Release Candidate 2</description>
     </item>
     <item>
       <title>Exiv2 v0.27 RC1</title>
-      <link>http://exiv2.org/whatsnew.html#item28</link>
-      <guid>http://exiv2.org/whatsnew.html#item28</guid>
+      <link>http://exiv2.org/whatsnew.html#item29</link>
+      <guid>http://exiv2.org/whatsnew.html#item29</guid>
       <pubDate>Sat, 27 Oct 2018 00:00:00 +0800</pubDate>
       <description>Release Candidate 1</description>
     </item>
     <item>
       <title>Exiv2 v0.26 slipstream</title>
-      <link>http://exiv2.org/whatsnew.html#item29</link>
-      <guid>http://exiv2.org/whatsnew.html#item29</guid>
+      <link>http://exiv2.org/whatsnew.html#item30</link>
+      <guid>http://exiv2.org/whatsnew.html#item30</guid>
       <pubDate>Wed, 17 May 2017 00:00:00 +0800</pubDate>
       <description>Release</description>
     </item>
     <item>
       <title>Exiv2 v0.26</title>
-      <link>http://exiv2.org/whatsnew.html#item30</link>
-      <guid>http://exiv2.org/whatsnew.html#item30</guid>
+      <link>http://exiv2.org/whatsnew.html#item31</link>
+      <guid>http://exiv2.org/whatsnew.html#item31</guid>
       <pubDate>Fri, 28 Apr 2017 00:00:00 +0800</pubDate>
       <description>Release
   </description>
     </item>
     <item>
       <title>Window dressing</title>
-      <link>http://exiv2.org/whatsnew.html#item31</link>
-      <guid>http://exiv2.org/whatsnew.html#item31</guid>
+      <link>http://exiv2.org/whatsnew.html#item32</link>
+      <guid>http://exiv2.org/whatsnew.html#item32</guid>
       <pubDate>Sat, 10 Oct 2015 00:00:00 +0800</pubDate>
       <description>New and more functional web pages.
   </description>
     </item>
     <item>
       <title>Exiv2 0.25 released</title>
-      <link>http://exiv2.org/whatsnew.html#item32</link>
-      <guid>http://exiv2.org/whatsnew.html#item32</guid>
+      <link>http://exiv2.org/whatsnew.html#item33</link>
+      <guid>http://exiv2.org/whatsnew.html#item33</guid>
       <pubDate>Sun, 21 Jun 2015 00:00:00 +0800</pubDate>
       <description>A large collection of new features, new lenses and bugfixes.
   </description>
     </item>
     <item>
       <title>We have moved</title>
-      <link>http://exiv2.org/whatsnew.html#item33</link>
-      <guid>http://exiv2.org/whatsnew.html#item33</guid>
+      <link>http://exiv2.org/whatsnew.html#item34</link>
+      <guid>http://exiv2.org/whatsnew.html#item34</guid>
       <pubDate>Fri, 03 Oct 2014 00:00:00 +0800</pubDate>
       <description>The Exiv2 website and Redmine sites have moved.
   </description>
     </item>
     <item>
       <title>Exiv2 0.24 released</title>
-      <link>http://exiv2.org/whatsnew.html#item34</link>
-      <guid>http://exiv2.org/whatsnew.html#item34</guid>
+      <link>http://exiv2.org/whatsnew.html#item35</link>
+      <guid>http://exiv2.org/whatsnew.html#item35</guid>
       <pubDate>Mon, 02 Dec 2013 00:00:00 +0800</pubDate>
       <description>Support for reading video metadata, makernote updates, bugfixes.
   </description>
     </item>
     <item>
       <title>GIMP meets (g)exiv2</title>
-      <link>http://exiv2.org/whatsnew.html#item35</link>
-      <guid>http://exiv2.org/whatsnew.html#item35</guid>
+      <link>http://exiv2.org/whatsnew.html#item36</link>
+      <guid>http://exiv2.org/whatsnew.html#item36</guid>
       <pubDate>Mon, 02 Dec 2013 00:00:00 +0800</pubDate>
       <description>GIMP gets advanced Exif, XMP, IPTC metadata support
   </description>
     </item>
     <item>
       <title>Exiv2 0.23 released</title>
-      <link>http://exiv2.org/whatsnew.html#item36</link>
-      <guid>http://exiv2.org/whatsnew.html#item36</guid>
+      <link>http://exiv2.org/whatsnew.html#item37</link>
+      <guid>http://exiv2.org/whatsnew.html#item37</guid>
       <pubDate>Mon, 23 Apr 2012 00:00:00 +0800</pubDate>
       <description>Write support for Canon CR2 raw images, bugfixes.
   </description>
     </item>
     <item>
       <title>Exiv2 0.22 released</title>
-      <link>http://exiv2.org/whatsnew.html#item37</link>
-      <guid>http://exiv2.org/whatsnew.html#item37</guid>
+      <link>http://exiv2.org/whatsnew.html#item38</link>
+      <guid>http://exiv2.org/whatsnew.html#item38</guid>
       <pubDate>Sun, 18 Sep 2011 00:00:00 +0800</pubDate>
       <description>Postscript (EPS) support, MSVC 64 bit project.
   </description>
     </item>
     <item>
       <title>Exiv2 0.21.1 released</title>
-      <link>http://exiv2.org/whatsnew.html#item38</link>
-      <guid>http://exiv2.org/whatsnew.html#item38</guid>
+      <link>http://exiv2.org/whatsnew.html#item39</link>
+      <guid>http://exiv2.org/whatsnew.html#item39</guid>
       <pubDate>Mon, 14 Feb 2011 00:00:00 +0800</pubDate>
       <description>Bugfixes.
   </description>
     </item>
     <item>
       <title>Exiv2 0.21 released</title>
-      <link>http://exiv2.org/whatsnew.html#item39</link>
-      <guid>http://exiv2.org/whatsnew.html#item39</guid>
+      <link>http://exiv2.org/whatsnew.html#item40</link>
+      <guid>http://exiv2.org/whatsnew.html#item40</guid>
       <pubDate>Wed, 01 Dec 2010 00:00:00 +0800</pubDate>
       <description>Samsung SRW and Makernote support, API changes.
   </description>
     </item>
     <item>
       <title>Exiv2 0.20 released</title>
-      <link>http://exiv2.org/whatsnew.html#item40</link>
-      <guid>http://exiv2.org/whatsnew.html#item40</guid>
+      <link>http://exiv2.org/whatsnew.html#item41</link>
+      <guid>http://exiv2.org/whatsnew.html#item41</guid>
       <pubDate>Sun, 30 May 2010 00:00:00 +0800</pubDate>
       <description>Makernote updates, ORF write support.
   </description>
     </item>
     <item>
       <title>Exiv2 0.19 released</title>
-      <link>http://exiv2.org/whatsnew.html#item41</link>
-      <guid>http://exiv2.org/whatsnew.html#item41</guid>
+      <link>http://exiv2.org/whatsnew.html#item42</link>
+      <guid>http://exiv2.org/whatsnew.html#item42</guid>
       <pubDate>Wed, 30 Dec 2009 00:00:00 +0800</pubDate>
       <description>TIFF performance improvements and Nikon updates.
   </description>
     </item>
     <item>
       <title>Exiv2 0.18.2 released</title>
-      <link>http://exiv2.org/whatsnew.html#item42</link>
-      <guid>http://exiv2.org/whatsnew.html#item42</guid>
+      <link>http://exiv2.org/whatsnew.html#item43</link>
+      <guid>http://exiv2.org/whatsnew.html#item43</guid>
       <pubDate>Wed, 24 Jun 2009 00:00:00 +0800</pubDate>
       <description>Bugfix release.
   </description>
     </item>
     <item>
       <title>Exiv2 0.18.1 released</title>
-      <link>http://exiv2.org/whatsnew.html#item43</link>
-      <guid>http://exiv2.org/whatsnew.html#item43</guid>
+      <link>http://exiv2.org/whatsnew.html#item44</link>
+      <guid>http://exiv2.org/whatsnew.html#item44</guid>
       <pubDate>Mon, 06 Apr 2009 00:00:00 +0800</pubDate>
       <description>Writes to PSD and reads from RW2 images.
   </description>
     </item>
     <item>
       <title>Community website</title>
-      <link>http://exiv2.org/whatsnew.html#item44</link>
-      <guid>http://exiv2.org/whatsnew.html#item44</guid>
+      <link>http://exiv2.org/whatsnew.html#item45</link>
+      <guid>http://exiv2.org/whatsnew.html#item45</guid>
       <pubDate>Thu, 08 Jan 2009 00:00:00 +0800</pubDate>
       <description>dev.exiv2.org hosts all project resources.
   </description>
     </item>
     <item>
       <title>Exiv2 0.18 released</title>
-      <link>http://exiv2.org/whatsnew.html#item45</link>
-      <guid>http://exiv2.org/whatsnew.html#item45</guid>
+      <link>http://exiv2.org/whatsnew.html#item46</link>
+      <guid>http://exiv2.org/whatsnew.html#item46</guid>
       <pubDate>Thu, 18 Dec 2008 00:00:00 +0800</pubDate>
       <description>It's official: Exiv2 writes to TIFF images.
   </description>
     </item>
     <item>
       <title>Exiv2 0.18-pre2</title>
-      <link>http://exiv2.org/whatsnew.html#item46</link>
-      <guid>http://exiv2.org/whatsnew.html#item46</guid>
+      <link>http://exiv2.org/whatsnew.html#item47</link>
+      <guid>http://exiv2.org/whatsnew.html#item47</guid>
       <pubDate>Tue, 04 Nov 2008 00:00:00 +0800</pubDate>
       <description>Windows DLL, image previews.
   </description>
     </item>
     <item>
       <title>Exiv2 0.18-pre1</title>
-      <link>http://exiv2.org/whatsnew.html#item47</link>
-      <guid>http://exiv2.org/whatsnew.html#item47</guid>
+      <link>http://exiv2.org/whatsnew.html#item48</link>
+      <guid>http://exiv2.org/whatsnew.html#item48</guid>
       <pubDate>Thu, 11 Sep 2008 00:00:00 +0800</pubDate>
       <description>Write-support for TIFF, PNG and JP2 images.
   </description>
     </item>
     <item>
       <title>Exiv2 0.17.1 released</title>
-      <link>http://exiv2.org/whatsnew.html#item48</link>
-      <guid>http://exiv2.org/whatsnew.html#item48</guid>
+      <link>http://exiv2.org/whatsnew.html#item49</link>
+      <guid>http://exiv2.org/whatsnew.html#item49</guid>
       <pubDate>Thu, 19 Jun 2008 00:00:00 +0800</pubDate>
       <description>Important bugfixes.
   </description>
     </item>
     <item>
       <title>Exiv2 0.17 released</title>
-      <link>http://exiv2.org/whatsnew.html#item49</link>
-      <guid>http://exiv2.org/whatsnew.html#item49</guid>
+      <link>http://exiv2.org/whatsnew.html#item50</link>
+      <guid>http://exiv2.org/whatsnew.html#item50</guid>
       <pubDate>Fri, 06 Jun 2008 00:00:00 +0800</pubDate>
       <description>Conversion of Exif and IPTC to/from XMP, JP2 and PSD support.
   </description>
     </item>
     <item>
       <title>API documentation</title>
-      <link>http://exiv2.org/whatsnew.html#item50</link>
-      <guid>http://exiv2.org/whatsnew.html#item50</guid>
+      <link>http://exiv2.org/whatsnew.html#item51</link>
+      <guid>http://exiv2.org/whatsnew.html#item51</guid>
       <pubDate>Thu, 06 Mar 2008 00:00:00 +0800</pubDate>
       <description>The complete API documentation is now available online.
   </description>
     </item>
     <item>
       <title>Exiv2 0.16 released</title>
-      <link>http://exiv2.org/whatsnew.html#item51</link>
-      <guid>http://exiv2.org/whatsnew.html#item51</guid>
+      <link>http://exiv2.org/whatsnew.html#item52</link>
+      <guid>http://exiv2.org/whatsnew.html#item52</guid>
       <pubDate>Thu, 10 Jan 2008 00:00:00 +0800</pubDate>
       <description>XMP support also for MSVC, bugfixes, enhancements.
   </description>
     </item>
     <item>
       <title>Exiv2 0.16-pre1</title>
-      <link>http://exiv2.org/whatsnew.html#item52</link>
-      <guid>http://exiv2.org/whatsnew.html#item52</guid>
+      <link>http://exiv2.org/whatsnew.html#item53</link>
+      <guid>http://exiv2.org/whatsnew.html#item53</guid>
       <pubDate>Fri, 09 Nov 2007 00:00:00 +0800</pubDate>
       <description>XMP support, Olympus ORF format and Pentax makernotes.
   </description>
     </item>
     <item>
       <title>XMP testing</title>
-      <link>http://exiv2.org/whatsnew.html#item53</link>
-      <guid>http://exiv2.org/whatsnew.html#item53</guid>
+      <link>http://exiv2.org/whatsnew.html#item54</link>
+      <guid>http://exiv2.org/whatsnew.html#item54</guid>
       <pubDate>Mon, 24 Sep 2007 00:00:00 +0800</pubDate>
       <description>XMP support is ready for testing.
   </description>
     </item>
     <item>
       <title>XMP support</title>
-      <link>http://exiv2.org/whatsnew.html#item54</link>
-      <guid>http://exiv2.org/whatsnew.html#item54</guid>
+      <link>http://exiv2.org/whatsnew.html#item55</link>
+      <guid>http://exiv2.org/whatsnew.html#item55</guid>
       <pubDate>Fri, 31 Aug 2007 00:00:00 +0800</pubDate>
       <description>Support for XMP metadata is being developed.
   </description>
     </item>
     <item>
       <title>Exiv2 0.15 released</title>
-      <link>http://exiv2.org/whatsnew.html#item55</link>
-      <guid>http://exiv2.org/whatsnew.html#item55</guid>
+      <link>http://exiv2.org/whatsnew.html#item56</link>
+      <guid>http://exiv2.org/whatsnew.html#item56</guid>
       <pubDate>Tue, 10 Jul 2007 00:00:00 +0800</pubDate>
       <description>Maintenance release, support for Minolta G500 RAW files.
   </description>
     </item>
     <item>
       <title>Exiv2 0.14 released</title>
-      <link>http://exiv2.org/whatsnew.html#item56</link>
-      <guid>http://exiv2.org/whatsnew.html#item56</guid>
+      <link>http://exiv2.org/whatsnew.html#item57</link>
+      <guid>http://exiv2.org/whatsnew.html#item57</guid>
       <pubDate>Mon, 19 Mar 2007 00:00:00 +0800</pubDate>
       <description>Proper library versioning, small fixes and features.
   </description>
     </item>
     <item>
       <title>Exiv2 0.13 released</title>
-      <link>http://exiv2.org/whatsnew.html#item57</link>
-      <guid>http://exiv2.org/whatsnew.html#item57</guid>
+      <link>http://exiv2.org/whatsnew.html#item58</link>
+      <guid>http://exiv2.org/whatsnew.html#item58</guid>
       <pubDate>Sat, 03 Mar 2007 00:00:00 +0800</pubDate>
       <description>National Language Support, Fujifilm RAF read-support, ...
   </description>
     </item>
     <item>
       <title>Internationalisation</title>
-      <link>http://exiv2.org/whatsnew.html#item58</link>
-      <guid>http://exiv2.org/whatsnew.html#item58</guid>
+      <link>http://exiv2.org/whatsnew.html#item59</link>
+      <guid>http://exiv2.org/whatsnew.html#item59</guid>
       <pubDate>Wed, 06 Dec 2006 00:00:00 +0800</pubDate>
       <description>Exiv2 with NLS is ready to be translated.
   </description>
     </item>
     <item>
       <title>Exiv2 0.12 released</title>
-      <link>http://exiv2.org/whatsnew.html#item59</link>
-      <guid>http://exiv2.org/whatsnew.html#item59</guid>
+      <link>http://exiv2.org/whatsnew.html#item60</link>
+      <guid>http://exiv2.org/whatsnew.html#item60</guid>
       <pubDate>Mon, 27 Nov 2006 00:00:00 +0800</pubDate>
       <description>Maintenance release with bugfixes and minor features.
   </description>
     </item>
     <item>
       <title>Exiv2 0.11 released</title>
-      <link>http://exiv2.org/whatsnew.html#item60</link>
-      <guid>http://exiv2.org/whatsnew.html#item60</guid>
+      <link>http://exiv2.org/whatsnew.html#item61</link>
+      <guid>http://exiv2.org/whatsnew.html#item61</guid>
       <pubDate>Sat, 16 Sep 2006 00:00:00 +0800</pubDate>
       <description>Adds PNG and ARW support, a Canon makernote update,
    performance improvements and more.
@@ -462,8 +469,8 @@
     </item>
     <item>
       <title>Duallicensing</title>
-      <link>http://exiv2.org/whatsnew.html#item61</link>
-      <guid>http://exiv2.org/whatsnew.html#item61</guid>
+      <link>http://exiv2.org/whatsnew.html#item62</link>
+      <guid>http://exiv2.org/whatsnew.html#item62</guid>
       <pubDate>Mon, 21 Aug 2006 00:00:00 +0800</pubDate>
       <description>Exiv2 is now also available with a licence for use in closed-source
   projects.
@@ -471,8 +478,8 @@
     </item>
     <item>
       <title>Exiv2 0.10 released</title>
-      <link>http://exiv2.org/whatsnew.html#item62</link>
-      <guid>http://exiv2.org/whatsnew.html#item62</guid>
+      <link>http://exiv2.org/whatsnew.html#item63</link>
+      <guid>http://exiv2.org/whatsnew.html#item63</guid>
       <pubDate>Sat, 03 Jun 2006 00:00:00 +0800</pubDate>
       <description>Read support for TIFF, NEF, CR2, PEF, SR2, DNG and MRW images.
    Minolta makernote support.
@@ -480,16 +487,16 @@
     </item>
     <item>
       <title>Announcing exiv2.org</title>
-      <link>http://exiv2.org/whatsnew.html#item63</link>
-      <guid>http://exiv2.org/whatsnew.html#item63</guid>
+      <link>http://exiv2.org/whatsnew.html#item64</link>
+      <guid>http://exiv2.org/whatsnew.html#item64</guid>
       <pubDate>Wed, 08 Mar 2006 00:00:00 +0800</pubDate>
       <description>The Exiv2 project now has its own domain, www.exiv2.org
   </description>
     </item>
     <item>
       <title>Exiv2 0.9.1 released</title>
-      <link>http://exiv2.org/whatsnew.html#item64</link>
-      <guid>http://exiv2.org/whatsnew.html#item64</guid>
+      <link>http://exiv2.org/whatsnew.html#item65</link>
+      <guid>http://exiv2.org/whatsnew.html#item65</guid>
       <pubDate>Sat, 04 Feb 2006 00:00:00 +0800</pubDate>
       <description>Fixes a bug which could cause an invalid Exif user comment tag
    to be written to images.
@@ -497,8 +504,8 @@
     </item>
     <item>
       <title>Exiv2 0.9 released</title>
-      <link>http://exiv2.org/whatsnew.html#item65</link>
-      <guid>http://exiv2.org/whatsnew.html#item65</guid>
+      <link>http://exiv2.org/whatsnew.html#item66</link>
+      <guid>http://exiv2.org/whatsnew.html#item66</guid>
       <pubDate>Thu, 26 Jan 2006 00:00:00 +0800</pubDate>
       <description>Adds Canon CRW write support and new utility features to
    manipulate image file timestamps and fix Nikon ISO settings.
@@ -506,8 +513,8 @@
     </item>
     <item>
       <title>Exiv2 0.8 released</title>
-      <link>http://exiv2.org/whatsnew.html#item66</link>
-      <guid>http://exiv2.org/whatsnew.html#item66</guid>
+      <link>http://exiv2.org/whatsnew.html#item67</link>
+      <guid>http://exiv2.org/whatsnew.html#item67</guid>
       <pubDate>Sat, 19 Nov 2005 00:00:00 +0800</pubDate>
       <description>Canon CRW read support, bugfixes and other incremental
    improvements. Added a manual page for the utility.
@@ -515,8 +522,8 @@
     </item>
     <item>
       <title>Vizrea agreement</title>
-      <link>http://exiv2.org/whatsnew.html#item67</link>
-      <guid>http://exiv2.org/whatsnew.html#item67</guid>
+      <link>http://exiv2.org/whatsnew.html#item68</link>
+      <guid>http://exiv2.org/whatsnew.html#item68</guid>
       <pubDate>Sun, 09 Oct 2005 00:00:00 +0800</pubDate>
       <description>A license agreement allows Vizrea to use Exiv2 in their
    proprietary products. In return, they will make their changes available
@@ -525,8 +532,8 @@
     </item>
     <item>
       <title>Exiv2 0.7 released</title>
-      <link>http://exiv2.org/whatsnew.html#item68</link>
-      <guid>http://exiv2.org/whatsnew.html#item68</guid>
+      <link>http://exiv2.org/whatsnew.html#item69</link>
+      <guid>http://exiv2.org/whatsnew.html#item69</guid>
       <pubDate>Wed, 15 Jun 2005 00:00:00 +0800</pubDate>
       <description>Design changes in the library, new Olympus, Panasonic and basic
    Sony makernotes and updated Canon and Nikon makernotes.
@@ -534,16 +541,16 @@
     </item>
     <item>
       <title>Exiv2 0.6.2 released</title>
-      <link>http://exiv2.org/whatsnew.html#item69</link>
-      <guid>http://exiv2.org/whatsnew.html#item69</guid>
+      <link>http://exiv2.org/whatsnew.html#item70</link>
+      <guid>http://exiv2.org/whatsnew.html#item70</guid>
       <pubDate>Sun, 06 Mar 2005 00:00:00 +0800</pubDate>
       <description>New utility features, some bugfixes, and an improved build environment.
   </description>
     </item>
     <item>
       <title>Exiv2 0.6.1 released</title>
-      <link>http://exiv2.org/whatsnew.html#item70</link>
-      <guid>http://exiv2.org/whatsnew.html#item70</guid>
+      <link>http://exiv2.org/whatsnew.html#item71</link>
+      <guid>http://exiv2.org/whatsnew.html#item71</guid>
       <pubDate>Mon, 17 Jan 2005 00:00:00 +0800</pubDate>
       <description>Fixes a bug that could lose the thumbnail when Exif
    tags were modified and adds metadata write support to the utility.
@@ -551,16 +558,16 @@
     </item>
     <item>
       <title>Support forum added</title>
-      <link>http://exiv2.org/whatsnew.html#item71</link>
-      <guid>http://exiv2.org/whatsnew.html#item71</guid>
+      <link>http://exiv2.org/whatsnew.html#item72</link>
+      <guid>http://exiv2.org/whatsnew.html#item72</guid>
       <pubDate>Sun, 09 Jan 2005 00:00:00 +0800</pubDate>
       <description>There is now a Yahoo! group for Exiv2 help and discussions.
   </description>
     </item>
     <item>
       <title>Exiv2 0.6 released</title>
-      <link>http://exiv2.org/whatsnew.html#item72</link>
-      <guid>http://exiv2.org/whatsnew.html#item72</guid>
+      <link>http://exiv2.org/whatsnew.html#item73</link>
+      <guid>http://exiv2.org/whatsnew.html#item73</guid>
       <pubDate>Sun, 12 Dec 2004 00:00:00 +0800</pubDate>
       <description>More IPTC functions in the utility, library support for the
    creation of all Exif metadata from scratch and more.
@@ -568,8 +575,8 @@
     </item>
     <item>
       <title>Source online</title>
-      <link>http://exiv2.org/whatsnew.html#item73</link>
-      <guid>http://exiv2.org/whatsnew.html#item73</guid>
+      <link>http://exiv2.org/whatsnew.html#item74</link>
+      <guid>http://exiv2.org/whatsnew.html#item74</guid>
       <pubDate>Sat, 30 Oct 2004 00:00:00 +0800</pubDate>
       <description>The Exiv2 source code repository and a public bug tracking
    system are now online.
@@ -577,8 +584,8 @@
     </item>
     <item>
       <title>Exiv2 0.5 released</title>
-      <link>http://exiv2.org/whatsnew.html#item74</link>
-      <guid>http://exiv2.org/whatsnew.html#item74</guid>
+      <link>http://exiv2.org/whatsnew.html#item75</link>
+      <guid>http://exiv2.org/whatsnew.html#item75</guid>
       <pubDate>Mon, 13 Sep 2004 00:00:00 +0800</pubDate>
       <description>IPTC metadata read and write support, an autoconf configure
    script, MSVC project files.
@@ -586,8 +593,8 @@
     </item>
     <item>
       <title>Exif keys changed</title>
-      <link>http://exiv2.org/whatsnew.html#item75</link>
-      <guid>http://exiv2.org/whatsnew.html#item75</guid>
+      <link>http://exiv2.org/whatsnew.html#item76</link>
+      <guid>http://exiv2.org/whatsnew.html#item76</guid>
       <pubDate>Mon, 13 Sep 2004 00:00:00 +0800</pubDate>
       <description>With release 0.5 all Exif key values in existing applications
    need to be updated.
@@ -595,8 +602,8 @@
     </item>
     <item>
       <title>Exiv2 0.4 released</title>
-      <link>http://exiv2.org/whatsnew.html#item76</link>
-      <guid>http://exiv2.org/whatsnew.html#item76</guid>
+      <link>http://exiv2.org/whatsnew.html#item77</link>
+      <guid>http://exiv2.org/whatsnew.html#item77</guid>
       <pubDate>Sat, 03 Jul 2004 00:00:00 +0800</pubDate>
       <description>Support for Nikon makernotes, improved handling of corrupt IFDs,
    more intuitive command line parsing for the Exiv2 utility and more.
@@ -604,8 +611,8 @@
     </item>
     <item>
       <title>Nikon tags added</title>
-      <link>http://exiv2.org/whatsnew.html#item77</link>
-      <guid>http://exiv2.org/whatsnew.html#item77</guid>
+      <link>http://exiv2.org/whatsnew.html#item78</link>
+      <guid>http://exiv2.org/whatsnew.html#item78</guid>
       <pubDate>Sat, 03 Jul 2004 00:00:00 +0800</pubDate>
       <description>Tags for three different Nikon makernote formats are now supported
    and available on the website.
