@@ -94,6 +94,11 @@ jobs:
         if: contains(matrix.EXIV2TAG, 'RC')
         run: sed -E '/PreRelease.png/s/\/\*|\*\//  /g' -i $EXIV2WEB/html/include/exiv2.css
 
+      - name: List all files before deploy
+        run: |
+          cd $EXIV2WEB
+          find . -type f
+
       - name: Deploy static content for exiv2.org
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main' && !contains(matrix.EXIV2TAG, 'RC')
