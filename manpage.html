@@ -1292,13 +1292,25 @@ character sequences are also provided:</p>
 <td style="text-align: left;">Original filename without extension</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">:basesuffix:</td>
+<td style="text-align: left;">Suffix in original filename, starts with
+first dot and ends before extension, e.g. PANO, MP, NIGHT added by
+Google Camera app</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">:dirname:</td>
 <td style="text-align: left;">Name of the directory holding the original
 file</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">:parentname:</td>
 <td style="text-align: left;">Name of parent directory</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">:<em>ExifTagName</em>:</td>
+<td style="text-align: left;">Placeholder will be replaced by translated
+value of tag, characters not allowed in file name are replaced by
+underscore</td>
 </tr>
 </tbody>
 </table>
@@ -1342,6 +1354,11 @@ $ exiv2 --verbose --rename &#39;:basename:_%d_%b_%Y&#39; Stonehenge.jpg
 File 1/1: Stonehenge.jpg
 exiv2.exe: File `./Stonehenge_16_Jul_2015.jpg&#39; exists. [O]verwrite, [r]ename or [s]kip? r
 Renaming file to ./Stonehenge_16_Jul_2015_1.jpg</code></pre>
+<p>If the filename contains a suffix, which shall be included in new
+filename:</p>
+<pre><code>$ exiv2 --verbose --rename &#39;%d_%b_%Y:basesuffix:&#39; Stonehenge.PANO.jpg
+File 1/1: Stonehenge.PANO.jpg
+Renaming file to &#39;16_Jul_2015.PANO&#39;.jpg</code></pre>
 <div id="adjust_time">
 
 <h3 id="-a-time---adjust-time"><strong>-a</strong> <em>time</em>,
@@ -1611,10 +1628,10 @@ output as follows:</p>
 </tbody>
 </table>
 <p>For example,</p>
-<div class="sourceCode" id="cb9"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> curl <span class="at">--silent</span> <span class="at">-O</span> https://www.exiv2.org/Stonehenge.jpg</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> exiv2 <span class="at">--Print</span> xVgknldycsvt <span class="at">-K</span> Exif.Nikon3.Quality Stonehenge.jpg</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">0x0004</span> set Nikon3       Exif.Nikon3.Quality                          Quality                     Quality                        Image quality setting          Ascii       8   8  NORMAL   NORMAL</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> curl <span class="at">--silent</span> <span class="at">-O</span> https://www.exiv2.org/Stonehenge.jpg</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> exiv2 <span class="at">--Print</span> xVgknldycsvt <span class="at">-K</span> Exif.Nikon3.Quality Stonehenge.jpg</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ex">0x0004</span> set Nikon3       Exif.Nikon3.Quality                          Quality                     Quality                        Image quality setting          Ascii       8   8  NORMAL   NORMAL</span></code></pre></div>
 <div id="delete_tgt1">
 
 <h3 id="-d-tgt1---delete-tgt1"><strong>-d</strong> <em>tgt1</em>*,
@@ -2258,7 +2275,9 @@ and <a href="#mod_cmd_format">'Modify' command format</a></td>
 <td style="text-align: left;">XmpText</td>
 <td style="text-align: left;">A string of text</td>
 <td style="text-align: left;">Single</td>
-<td style="text-align: left;">-</td>
+<td style="text-align: left;">Value type suitable for simple XMP
+properties and XMP nodes of complex types which are not parsed into
+specific values.</td>
 </tr>
 </tbody>
 </table>
@@ -3272,12 +3291,12 @@ href="https://github.com/Exiv2/exiv2/graphs/contributors">https://github.com/Exi
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.28.5
+          Exiv2 v0.28.6
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2025-02-21 19:30 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2025-02-21 19:30 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2025-08-29 20:30 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2025-08-29 20:30 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

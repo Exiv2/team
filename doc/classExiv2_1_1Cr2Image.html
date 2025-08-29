@@ -239,14 +239,21 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>clearComment<
 <tr class="memitem:a7f0c33da949b99bcf0b6c63d47ca6f33 inherit pub_methods_classExiv2_1_1Image" id="r_a7f0c33da949b99bcf0b6c63d47ca6f33"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a7f0c33da949b99bcf0b6c63d47ca6f33">setIccProfile</a> (<a class="el" href="structExiv2_1_1DataBuf.html">DataBuf</a> &amp;&amp;<a class="el" href="classExiv2_1_1Image.html#a6f09e532af94b0a7b9b9f407352554cb">iccProfile</a>, bool bTestValid=true)</td></tr>
 <tr class="memdesc:a7f0c33da949b99bcf0b6c63d47ca6f33 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the image iccProfile. The new profile is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <br /></td></tr>
 <tr class="separator:a7f0c33da949b99bcf0b6c63d47ca6f33 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80841123161835206a317011b87f6a76 inherit pub_methods_classExiv2_1_1Image" id="r_a80841123161835206a317011b87f6a76"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a80841123161835206a317011b87f6a76">appendIccProfile</a> (const uint8_t *bytes, size_t size, bool bTestValid)</td></tr>
+<tr class="memdesc:a80841123161835206a317011b87f6a76 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append more bytes to the iccProfile.  <br /></td></tr>
+<tr class="separator:a80841123161835206a317011b87f6a76 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55e85aa0a9deb6218b43e1336934d5de inherit pub_methods_classExiv2_1_1Image" id="r_a55e85aa0a9deb6218b43e1336934d5de"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>checkIccProfile</b> ()</td></tr>
+<tr class="memdesc:a55e85aa0a9deb6218b43e1336934d5de inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throw an exception if the size at the beginning of the iccProfile isn't correct. <br /></td></tr>
+<tr class="separator:a55e85aa0a9deb6218b43e1336934d5de inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabd1d072afad0d58be252b994c78bc1d inherit pub_methods_classExiv2_1_1Image" id="r_aabd1d072afad0d58be252b994c78bc1d"><td class="memItemLeft" align="right" valign="top">
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>clearIccProfile</b> ()</td></tr>
 <tr class="memdesc:aabd1d072afad0d58be252b994c78bc1d inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase iccProfile. the profile is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. <br /></td></tr>
 <tr class="separator:aabd1d072afad0d58be252b994c78bc1d inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abce46df193c9796de47c31c863da941c inherit pub_methods_classExiv2_1_1Image" id="r_abce46df193c9796de47c31c863da941c"><td class="memItemLeft" align="right" valign="top">
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>iccProfileDefined</b> ()</td></tr>
-<tr class="memdesc:abce46df193c9796de47c31c863da941c inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the status of the ICC profile in the image instance. <br /></td></tr>
-<tr class="separator:abce46df193c9796de47c31c863da941c inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a316fb5b11f902cadeb2c7aedc6e7c004 inherit pub_methods_classExiv2_1_1Image" id="r_a316fb5b11f902cadeb2c7aedc6e7c004"><td class="memItemLeft" align="right" valign="top">
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>iccProfileDefined</b> () const</td></tr>
+<tr class="memdesc:a316fb5b11f902cadeb2c7aedc6e7c004 inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the status of the ICC profile in the image instance. <br /></td></tr>
+<tr class="separator:a316fb5b11f902cadeb2c7aedc6e7c004 inherit pub_methods_classExiv2_1_1Image"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f09e532af94b0a7b9b9f407352554cb inherit pub_methods_classExiv2_1_1Image" id="r_a6f09e532af94b0a7b9b9f407352554cb"><td class="memItemLeft" align="right" valign="top">
 virtual const <a class="el" href="structExiv2_1_1DataBuf.html">DataBuf</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>iccProfile</b> () const</td></tr>
 <tr class="memdesc:a6f09e532af94b0a7b9b9f407352554cb inherit pub_methods_classExiv2_1_1Image"><td class="mdescLeft">&#160;</td><td class="mdescRight">return iccProfile <br /></td></tr>
@@ -696,12 +703,12 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>pixelHeight_</b> 
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.28.5
+          Exiv2 v0.28.6
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2025-02-21 19:30 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2025-02-21 19:30 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2025-08-29 20:30 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2025-08-29 20:30 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->

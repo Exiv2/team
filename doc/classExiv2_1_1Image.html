@@ -342,14 +342,21 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>clearComment<
 <tr class="memitem:a7f0c33da949b99bcf0b6c63d47ca6f33" id="r_a7f0c33da949b99bcf0b6c63d47ca6f33"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a7f0c33da949b99bcf0b6c63d47ca6f33">setIccProfile</a> (<a class="el" href="structExiv2_1_1DataBuf.html">DataBuf</a> &amp;&amp;<a class="el" href="classExiv2_1_1Image.html#a6f09e532af94b0a7b9b9f407352554cb">iccProfile</a>, bool bTestValid=true)</td></tr>
 <tr class="memdesc:a7f0c33da949b99bcf0b6c63d47ca6f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the image iccProfile. The new profile is not written to the image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called.  <br /></td></tr>
 <tr class="separator:a7f0c33da949b99bcf0b6c63d47ca6f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80841123161835206a317011b87f6a76" id="r_a80841123161835206a317011b87f6a76"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExiv2_1_1Image.html#a80841123161835206a317011b87f6a76">appendIccProfile</a> (const uint8_t *bytes, size_t size, bool bTestValid)</td></tr>
+<tr class="memdesc:a80841123161835206a317011b87f6a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append more bytes to the iccProfile.  <br /></td></tr>
+<tr class="separator:a80841123161835206a317011b87f6a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55e85aa0a9deb6218b43e1336934d5de" id="r_a55e85aa0a9deb6218b43e1336934d5de"><td class="memItemLeft" align="right" valign="top"><a id="a55e85aa0a9deb6218b43e1336934d5de" name="a55e85aa0a9deb6218b43e1336934d5de"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>checkIccProfile</b> ()</td></tr>
+<tr class="memdesc:a55e85aa0a9deb6218b43e1336934d5de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throw an exception if the size at the beginning of the iccProfile isn't correct. <br /></td></tr>
+<tr class="separator:a55e85aa0a9deb6218b43e1336934d5de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabd1d072afad0d58be252b994c78bc1d" id="r_aabd1d072afad0d58be252b994c78bc1d"><td class="memItemLeft" align="right" valign="top"><a id="aabd1d072afad0d58be252b994c78bc1d" name="aabd1d072afad0d58be252b994c78bc1d"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>clearIccProfile</b> ()</td></tr>
 <tr class="memdesc:aabd1d072afad0d58be252b994c78bc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase iccProfile. the profile is not removed from the actual image until the <a class="el" href="classExiv2_1_1Image.html#af9f7e86aac2f656473e456e16550ab58" title="Write metadata back to the image.">writeMetadata()</a> method is called. <br /></td></tr>
 <tr class="separator:aabd1d072afad0d58be252b994c78bc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abce46df193c9796de47c31c863da941c" id="r_abce46df193c9796de47c31c863da941c"><td class="memItemLeft" align="right" valign="top"><a id="abce46df193c9796de47c31c863da941c" name="abce46df193c9796de47c31c863da941c"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>iccProfileDefined</b> ()</td></tr>
-<tr class="memdesc:abce46df193c9796de47c31c863da941c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the status of the ICC profile in the image instance. <br /></td></tr>
-<tr class="separator:abce46df193c9796de47c31c863da941c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a316fb5b11f902cadeb2c7aedc6e7c004" id="r_a316fb5b11f902cadeb2c7aedc6e7c004"><td class="memItemLeft" align="right" valign="top"><a id="a316fb5b11f902cadeb2c7aedc6e7c004" name="a316fb5b11f902cadeb2c7aedc6e7c004"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>iccProfileDefined</b> () const</td></tr>
+<tr class="memdesc:a316fb5b11f902cadeb2c7aedc6e7c004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the status of the ICC profile in the image instance. <br /></td></tr>
+<tr class="separator:a316fb5b11f902cadeb2c7aedc6e7c004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f09e532af94b0a7b9b9f407352554cb" id="r_a6f09e532af94b0a7b9b9f407352554cb"><td class="memItemLeft" align="right" valign="top"><a id="a6f09e532af94b0a7b9b9f407352554cb" name="a6f09e532af94b0a7b9b9f407352554cb"></a>
 virtual const <a class="el" href="structExiv2_1_1DataBuf.html">DataBuf</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>iccProfile</b> () const</td></tr>
 <tr class="memdesc:a6f09e532af94b0a7b9b9f407352554cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">return iccProfile <br /></td></tr>
@@ -449,6 +456,58 @@ static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>byteSwap8<
 <p><a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> has containers to store image metadata and subclasses implement read and save metadata from and to specific image formats.<br  />
  Most client apps will obtain an <a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> instance by calling a static <a class="el" href="classExiv2_1_1ImageFactory.html" title="Returns an Image instance of the specified type.">ImageFactory</a> method. The <a class="el" href="classExiv2_1_1Image.html" title="Abstract base class defining the interface for an image. This is the top-level interface to the Exiv2...">Image</a> class can then be used to to read, write, and save metadata. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a80841123161835206a317011b87f6a76" name="a80841123161835206a317011b87f6a76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80841123161835206a317011b87f6a76">&#9670;&#160;</a></span>appendIccProfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Exiv2::Image::appendIccProfile </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>bytes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bTestValid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Append more bytes to the iccProfile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bytes</td><td>array of bytes to append </td></tr>
+    <tr><td class="paramname">size</td><td>number of bytes to append </td></tr>
+    <tr><td class="paramname">bTestValid</td><td>- tests that iccProfile contains credible data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a9044deeee647a5c646d90d4285ecde66" name="a9044deeee647a5c646d90d4285ecde66"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9044deeee647a5c646d90d4285ecde66">&#9670;&#160;</a></span>checkMode()</h2>
 
@@ -1334,12 +1393,12 @@ You may need to put the stream into binary mode (see src/actions.cpp) </dd></dl>
       <div class="row">
        <div class="page-footer">
         <div class="col-sm-5">
-          Exiv2 v0.28.5
+          Exiv2 v0.28.6
         </div><!-- /.col-sm-5 -->
         <div class="col-sm-2"></div><!-- /.col-sm-2 -->
         <div class="col-sm-5">
-          <span class="visible-xs-block text-center"><p>Last modified 2025-02-21 19:30 UTC</p></span>
-          <span class="hidden-xs pull-right"><p>Last modified 2025-02-21 19:30 UTC</p></span>
+          <span class="visible-xs-block text-center"><p>Last modified 2025-08-29 20:30 UTC</p></span>
+          <span class="hidden-xs pull-right"><p>Last modified 2025-08-29 20:30 UTC</p></span>
         </div><!-- /.col-sm-5 -->
        </div>
       </div><!-- /.row -->
