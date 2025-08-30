@@ -4,7 +4,7 @@
     <title>What's new in Exiv2</title>
     <link>http://www.exiv2.org/</link>
     <description>News from the Exiv2 project.</description>
-    <lastBuildDate>Sat, 30 Aug 2025 08:22:38 +0000
+    <lastBuildDate>Sat, 30 Aug 2025 08:53:42 +0000
     </lastBuildDate>
     <language>en-us</language>
     <atom:link href="http://www.exiv2.org/rss.xml" rel="self" type="application/rss+xml"/>
@@ -12,7 +12,7 @@
       <title>Exiv2 v0.28.6</title>
       <link>http://exiv2.org/whatsnew.html#item1</link>
       <guid>http://exiv2.org/whatsnew.html#item1</guid>
-      <pubDate>?, 20 ? 34456 00:00:00 +0800</pubDate>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.28.6</description>
     </item>
     <item>
@@ -33,7 +33,7 @@
       <title>Exiv2 v0.28.3</title>
       <link>http://exiv2.org/whatsnew.html#item4</link>
       <guid>http://exiv2.org/whatsnew.html#item4</guid>
-      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <pubDate>?, 20 ? 34582 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.28.3</description>
     </item>
     <item>
@@ -47,7 +47,7 @@
       <title>Exiv2 v0.28.1</title>
       <link>http://exiv2.org/whatsnew.html#item6</link>
       <guid>http://exiv2.org/whatsnew.html#item6</guid>
-      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <pubDate>?, 20 ? 34436 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.28.1</description>
     </item>
     <item>
@@ -68,7 +68,7 @@
       <title>Exiv2 v0.27.6</title>
       <link>http://exiv2.org/whatsnew.html#item9</link>
       <guid>http://exiv2.org/whatsnew.html#item9</guid>
-      <pubDate>?, 20 ? 34447 00:00:00 +0800</pubDate>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.6</description>
     </item>
     <item>
@@ -96,14 +96,14 @@
       <title>Exiv2 v0.27.5 RC1</title>
       <link>http://exiv2.org/whatsnew.html#item13</link>
       <guid>http://exiv2.org/whatsnew.html#item13</guid>
-      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <pubDate>?, 20 ? 34596 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.5 RC1</description>
     </item>
     <item>
       <title>Exiv2 v0.27.4</title>
       <link>http://exiv2.org/whatsnew.html#item14</link>
       <guid>http://exiv2.org/whatsnew.html#item14</guid>
-      <pubDate>?, 20 ? 34423 00:00:00 +0800</pubDate>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.4</description>
     </item>
     <item>
@@ -117,35 +117,35 @@
       <title>Exiv2 v0.27.4 RC2</title>
       <link>http://exiv2.org/whatsnew.html#item16</link>
       <guid>http://exiv2.org/whatsnew.html#item16</guid>
-      <pubDate>?, 20 ? 34612 00:00:00 +0800</pubDate>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.4 RC2</description>
     </item>
     <item>
       <title>Exiv2 v0.27.4 RC1</title>
       <link>http://exiv2.org/whatsnew.html#item17</link>
       <guid>http://exiv2.org/whatsnew.html#item17</guid>
-      <pubDate>?, 20 ? 34409 00:00:00 +0800</pubDate>
+      <pubDate>?, 20 ? 34532 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.4 RC1</description>
     </item>
     <item>
       <title>Exiv2 v0.27.3</title>
       <link>http://exiv2.org/whatsnew.html#item18</link>
       <guid>http://exiv2.org/whatsnew.html#item18</guid>
-      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <pubDate>?, 20 ? 34572 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.3</description>
     </item>
     <item>
       <title>Exiv2 v0.27.3 RC2</title>
       <link>http://exiv2.org/whatsnew.html#item19</link>
       <guid>http://exiv2.org/whatsnew.html#item19</guid>
-      <pubDate>?, 20 ? 34430 00:00:00 +0800</pubDate>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.3 RC2</description>
     </item>
     <item>
       <title>Exiv2 v0.27.3 RC1</title>
       <link>http://exiv2.org/whatsnew.html#item20</link>
       <guid>http://exiv2.org/whatsnew.html#item20</guid>
-      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
+      <pubDate>?, 20 ? 34562 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.3 RC1</description>
     </item>
     <item>
@@ -159,7 +159,7 @@
       <title>Exiv2 v0.27.2 RC3 (0.27.2.3)</title>
       <link>http://exiv2.org/whatsnew.html#item22</link>
       <guid>http://exiv2.org/whatsnew.html#item22</guid>
-      <pubDate>?, 20 ? 34625 00:00:00 +0800</pubDate>
+      <pubDate>?, 20 Jan 1900 00:00:00 +0800</pubDate>
       <description>Exiv2 v0.27.2 RC3</description>
     </item>
     <item>
