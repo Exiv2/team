@@ -2,6 +2,21 @@
 <news>
 
  <newsitem>
+  <date>2026-03-01</date>
+  <title>Exiv2 v0.28.8</title>
+  <abstract>Exiv2 v0.28.8</abstract>
+  <desc>
+   <ol>
+    <li>Fixes for various minor bugs</li>
+    <li>Fix for CVE-2026-25884: Out-of-bounds read in CrwMap::decode0x0805</li>
+    <li>Fix for CVE-2026-27596: Integer overflow in LoaderNative::getData() causes out-of-bounds read</li>
+    <li>Fix for CVE-2026-27631: Uncaught exception: cannot create std::vector larger than max_size()</li>
+   </ol>
+   <p>More details: <a href="https://github.com/Exiv2/exiv2/issues/3467" _target="_blank">Change List</a></p>
+  </desc>
+ </newsitem>
+
+ <newsitem>
   <date>2025-08-31</date>
   <title>Exiv2 v0.28.7</title>
   <abstract>Exiv2 v0.28.7</abstract>
